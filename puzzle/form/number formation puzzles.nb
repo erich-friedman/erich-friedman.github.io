@@ -1,0 +1,3134 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     66983,       3125]
+NotebookOptionsPosition[     65749,       3081]
+NotebookOutlinePosition[     66089,       3096]
+CellTagsIndexPosition[     66046,       3093]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ StyleBox[
+  RowBox[{"Off", "[", 
+   RowBox[{"General", "::", "dbyz"}], "]"}],
+  FontColor->GrayLevel[0]], "\n", 
+ StyleBox[
+  RowBox[{"Off", "[", 
+   RowBox[{"Infinity", "::", "indet"}], "]"}],
+  FontColor->GrayLevel[0]], "\n", 
+ StyleBox[
+  RowBox[{"Off", "[", 
+   RowBox[{"Power", "::", "infy"}], "]"}],
+  FontColor->GrayLevel[0]], "\n", 
+ StyleBox[
+  RowBox[{"Off", "[", 
+   RowBox[{"Power", "::", "indet"}], "]"}],
+  FontColor->GrayLevel[0]], "\n", 
+ StyleBox[
+  RowBox[{"Off", "[", 
+   RowBox[{"Greater", "::", "nord"}], "]"}],
+  FontColor->GrayLevel[0]], "\n", 
+ RowBox[{
+  StyleBox[
+   RowBox[{"Off", "[", 
+    RowBox[{"Less", "::", "nord"}], "]"}],
+   FontColor->GrayLevel[0]], "\n", "\t"}], "\n", 
+ RowBox[{
+  RowBox[{"base", "=", "10"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nextdigit", "[", 
+    RowBox[{"a_", ",", "b_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"base", " ", "a"}], "+", "b"}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"subsets", "[", "A_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"subsets", "[", "A", "]"}], "=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"len", ",", "num"}], "}"}], ",", "\n", "  ", 
+      RowBox[{
+       RowBox[{"len", "=", 
+        RowBox[{"Length", "[", "A", "]"}]}], ";", "  ", 
+       RowBox[{"num", "=", 
+        RowBox[{"2", "^", 
+         RowBox[{"(", 
+          RowBox[{"len", "-", "1"}], ")"}]}]}], ";", "\n", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"A", "[", 
+            RowBox[{"[", 
+             RowBox[{"d", "=", 
+              RowBox[{"Flatten", "[", 
+               RowBox[{"Position", "[", 
+                RowBox[{
+                 RowBox[{"IntegerDigits", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"2", "num"}], "-", "i", "-", "1"}], ",", "2"}], 
+                  "]"}], ",", "1"}], "]"}], "]"}]}], "]"}], "]"}], ",", "\n", 
+           "  ", 
+           RowBox[{"A", "[", 
+            RowBox[{"[", 
+             RowBox[{"Complement", "[", 
+              RowBox[{
+               RowBox[{"Range", "[", "len", "]"}], ",", "d"}], "]"}], "]"}], 
+            "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "1", ",", 
+           RowBox[{"num", "-", "1"}]}], "}"}]}], "]"}]}]}], "]"}]}]}], "\n", 
+  "\t\t\t"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"div", "[", 
+    RowBox[{"a_", ",", "b_"}], "]"}], ":=", 
+   RowBox[{"Divide", "[", 
+    RowBox[{"b", ",", "a"}], "]"}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sub", "[", 
+    RowBox[{"a_", ",", "b_"}], "]"}], ":=", 
+   RowBox[{"Subtract", "[", 
+    RowBox[{"b", ",", "a"}], "]"}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"pow1", "[", 
+    RowBox[{"a_", ",", "b_"}], "]"}], ":=", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"ReleaseHold", "[", 
+        RowBox[{"ReleaseHold", "[", 
+         RowBox[{"ReleaseHold", "[", "a", "]"}], "]"}], "]"}], ">", "0"}], "&&", 
+      RowBox[{
+       RowBox[{"N", "[", 
+        RowBox[{
+         RowBox[{"Log", "[", 
+          RowBox[{"ReleaseHold", "[", 
+           RowBox[{"ReleaseHold", "[", 
+            RowBox[{"ReleaseHold", "[", "b", "]"}], "]"}], "]"}], "]"}], "*", 
+         
+         RowBox[{"ReleaseHold", "[", 
+          RowBox[{"ReleaseHold", "[", 
+           RowBox[{"ReleaseHold", "[", "a", "]"}], "]"}], "]"}]}], "]"}], "<",
+        "10"}]}], ",", 
+     RowBox[{"Power", "[", 
+      RowBox[{"b", ",", "a"}], "]"}], ",", "12.34"}], "]"}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"pow2", "[", 
+    RowBox[{"a_", ",", "b_"}], "]"}], ":=", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"ReleaseHold", "[", 
+        RowBox[{"ReleaseHold", "[", 
+         RowBox[{"ReleaseHold", "[", "b", "]"}], "]"}], "]"}], ">", "0"}], "&&", 
+      RowBox[{
+       RowBox[{"N", "[", 
+        RowBox[{
+         RowBox[{"Log", "[", 
+          RowBox[{"ReleaseHold", "[", 
+           RowBox[{"ReleaseHold", "[", 
+            RowBox[{"ReleaseHold", "[", "a", "]"}], "]"}], "]"}], "]"}], "*", 
+         
+         RowBox[{"ReleaseHold", "[", 
+          RowBox[{"ReleaseHold", "[", 
+           RowBox[{"ReleaseHold", "[", "b", "]"}], "]"}], "]"}]}], "]"}], "<",
+        "10"}]}], ",", 
+     RowBox[{"Power", "[", 
+      RowBox[{"a", ",", "b"}], "]"}], ",", "12.34"}], "]"}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Clear", "[", 
+    RowBox[{"g", ",", "f", ",", "h"}], "]"}], ";"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"{", "n_", "}"}], "]"}], ":=", 
+   RowBox[{"{", "n", "}"}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "n_List", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"f", "[", "n", "]"}], "=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"l", ",", "a", ",", "b", ",", "c", ",", "e", ",", "m"}], "}"}],
+       ",", "\n", "  ", 
+      RowBox[{
+       RowBox[{"l", "=", 
+        RowBox[{"Length", "[", "n", "]"}]}], ";", "\n", "  ", 
+       RowBox[{"m", "=", 
+        RowBox[{"Sort", "[", 
+         RowBox[{"n", ",", 
+          RowBox[{
+           RowBox[{"#1", ">", "#2"}], "&"}]}], "]"}]}], ";", "\n", "  ", 
+       RowBox[{"a", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "Plus", ",", "Subtract", ",", "Times", ",", "Divide", ",", "div", 
+          ",", "sub", ",", "pow1", ",", "pow2"}], "}"}]}], ";", "\n", "  ", 
+       RowBox[{"e", "=", 
+        RowBox[{"subsets", "[", 
+         RowBox[{"Map", "[", 
+          RowBox[{"HoldForm", ",", "m"}], "]"}], "]"}]}], ";", "\n", "  ", 
+       RowBox[{"b", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Outer", "[", 
+           RowBox[{
+            RowBox[{"a", "[", 
+             RowBox[{"[", "j", "]"}], "]"}], ",", 
+            RowBox[{"f", "[", 
+             RowBox[{"e", "[", 
+              RowBox[{"[", 
+               RowBox[{"i", ",", "1"}], "]"}], "]"}], "]"}], ",", 
+            RowBox[{"f", "[", 
+             RowBox[{"e", "[", 
+              RowBox[{"[", 
+               RowBox[{"i", ",", "2"}], "]"}], "]"}], "]"}]}], "]"}], ",", 
+          "\n", "    ", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "1", ",", 
+            RowBox[{"Length", "[", "e", "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"j", ",", "1", ",", "8"}], "}"}]}], "]"}]}], ";", "\n", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{"b", "=", 
+          RowBox[{"{", 
+           RowBox[{"b", ",", 
+            RowBox[{"Map", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Fold", "[", 
+                RowBox[{"nextdigit", ",", "0", ",", "#"}], "]"}], "&"}], ",", 
+              
+              RowBox[{"Permutations", "[", "m", "]"}]}], "]"}]}], "}"}]}], 
+         ";"}], "*)"}], "\n", "  ", 
+       RowBox[{"Flatten", "[", "b", "]"}]}]}], "]"}]}]}], "\n", "  "}], "\n", 
+
+ RowBox[{
+  RowBox[{
+   RowBox[{"g", "[", "n_List", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"g", "[", "n", "]"}], "=", 
+    RowBox[{"Select", "[", 
+     RowBox[{
+      RowBox[{"Select", "[", 
+       RowBox[{
+        RowBox[{"Union", "[", 
+         RowBox[{"Nest", "[", 
+          RowBox[{"ReleaseHold", ",", 
+           RowBox[{"f", "[", "n", "]"}], ",", 
+           RowBox[{
+            RowBox[{"Length", "[", "n", "]"}], "-", "1"}]}], "]"}], "]"}], 
+        ",", "IntegerQ"}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"#", ">=", "0"}], "&"}]}], "]"}]}]}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"h", "[", 
+    RowBox[{"n_", ",", "z_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"h", "[", 
+     RowBox[{"n", ",", "z"}], "]"}], "=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"F", ",", "R", ",", "P"}], "}"}], ",", "\n", "  ", 
+      RowBox[{
+       RowBox[{"F", "=", 
+        RowBox[{"f", "[", "n", "]"}]}], ";", "  ", 
+       RowBox[{"R", "=", 
+        RowBox[{"F", "//.", 
+         RowBox[{
+          RowBox[{"HoldForm", "[", "dd_Integer", "]"}], "->", "dd"}]}]}], ";", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{"Nest", "[", 
+          RowBox[{"ReleaseHold", ",", "F", ",", 
+           RowBox[{
+            RowBox[{"Length", "[", "n", "]"}], "-", "2"}]}], "]"}], ";"}], 
+        " ", "*)"}], " ", 
+       RowBox[{"P", "=", 
+        RowBox[{
+         RowBox[{"Select", "[", 
+          RowBox[{
+           RowBox[{"Position", "[", 
+            RowBox[{"R", ",", "z"}], "]"}], ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Length", "[", "#", "]"}], "==", "1"}], "&"}]}], "]"}], 
+         "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], ";", " ", 
+       RowBox[{
+        RowBox[{"F", "[", 
+         RowBox[{"[", "P", "]"}], "]"}], "[", 
+        RowBox[{"[", "1", "]"}], "]"}]}]}], " ", "]"}]}]}], "\n", 
+  "  "}], "\n", 
+ RowBox[{
+  RowBox[{"G", "[", "n_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "gg", "}"}], ",", "\n", "  ", 
+    RowBox[{
+     RowBox[{"gg", "=", 
+      RowBox[{"g", "[", "n", "]"}]}], ";", " ", 
+     RowBox[{"Print", "[", "gg", "]"}], ";", " ", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"h", "[", 
+        RowBox[{"n", ",", 
+         RowBox[{"gg", "[", 
+          RowBox[{"[", "q", "]"}], "]"}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"q", ",", "1", ",", 
+         RowBox[{"Length", "[", "gg", "]"}]}], "}"}]}], "]"}]}]}], " ", 
+   "]"}]}]}], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["f[{11,20,2}]", "Input",
+ AspectRatioFixed->True],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    TagBox["2",
+     HoldForm], "+", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], "-", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], "+", 
+    RowBox[{
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], "+", 
+    FractionBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], "+", 
+    FractionBox[
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], "+", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], "-", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    StyleBox["12.3399999999999998`",
+     StyleBoxAutoDelete->True,
+     PrintPrecision->4], "\[InvisibleSpace]", "+", 
+    TagBox["2",
+     HoldForm]}], ",", 
+   RowBox[{
+    StyleBox["12.3399999999999998`",
+     StyleBoxAutoDelete->True,
+     PrintPrecision->4], "\[InvisibleSpace]", "+", 
+    TagBox["2",
+     HoldForm]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["2",
+      HoldForm]}], "+", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["2",
+      HoldForm]}], "-", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["2",
+      HoldForm]}], "+", 
+    RowBox[{
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["2",
+      HoldForm]}], "+", 
+    FractionBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["2",
+      HoldForm]}], "+", 
+    FractionBox[
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["2",
+      HoldForm]}], "+", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], "-", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    StyleBox["12.3399999999999998`",
+     StyleBoxAutoDelete->True,
+     PrintPrecision->4], "\[InvisibleSpace]", "-", 
+    TagBox["2",
+     HoldForm]}], ",", 
+   RowBox[{
+    StyleBox["12.3399999999999998`",
+     StyleBoxAutoDelete->True,
+     PrintPrecision->4], "\[InvisibleSpace]", "-", 
+    TagBox["2",
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm], "+", 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]}], ")"}]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       TagBox[
+        TagBox["11",
+         HoldForm],
+        HoldForm]}], "+", 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]}], ")"}]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], " ", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], " ", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox["2",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}], 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm]], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox["2",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}], 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm], "-", 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]}], ")"}]}], ",", 
+   RowBox[{
+    StyleBox["12.3399999999999998`",
+     StyleBoxAutoDelete->True,
+     PrintPrecision->4], " ", 
+    TagBox["2",
+     HoldForm]}], ",", 
+   RowBox[{
+    StyleBox["12.3399999999999998`",
+     StyleBoxAutoDelete->True,
+     PrintPrecision->4], " ", 
+    TagBox["2",
+     HoldForm]}], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], "+", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["2",
+     HoldForm]], ",", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"-", 
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm]}], "+", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["2",
+     HoldForm]], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["2",
+     HoldForm]], ",", 
+   FractionBox[
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm], 
+    RowBox[{
+     TagBox["2",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}]], ",", 
+   FractionBox[
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], 
+    RowBox[{
+     TagBox["2",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], "-", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["2",
+     HoldForm]], ",", 
+   FractionBox[
+    StyleBox["12.3399999999999998`",
+     StyleBoxAutoDelete->True,
+     PrintPrecision->4], 
+    TagBox["2",
+     HoldForm]], ",", 
+   FractionBox[
+    StyleBox["12.3399999999999998`",
+     StyleBoxAutoDelete->True,
+     PrintPrecision->4], 
+    TagBox["2",
+     HoldForm]], ",", 
+   FractionBox[
+    TagBox["2",
+     HoldForm], 
+    RowBox[{
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], "+", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]], ",", 
+   FractionBox[
+    TagBox["2",
+     HoldForm], 
+    RowBox[{
+     RowBox[{"-", 
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm]}], "+", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]], ",", 
+   FractionBox[
+    TagBox["2",
+     HoldForm], 
+    RowBox[{
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox["2",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}], 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox["2",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}], 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm]], ",", 
+   FractionBox[
+    TagBox["2",
+     HoldForm], 
+    RowBox[{
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], "-", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]], ",", 
+   RowBox[{"0.0810372771474878561`", " ", 
+    TagBox["2",
+     HoldForm]}], ",", 
+   RowBox[{"0.0810372771474878561`", " ", 
+    TagBox["2",
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], "-", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], "-", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], "+", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], "-", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], "-", 
+    RowBox[{
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], "-", 
+    FractionBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], "-", 
+    FractionBox[
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], "-", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     StyleBox["12.3399999999999998`",
+      StyleBoxAutoDelete->True,
+      PrintPrecision->4]}], "+", 
+    TagBox["2",
+     HoldForm]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     StyleBox["12.3399999999999998`",
+      StyleBoxAutoDelete->True,
+      PrintPrecision->4]}], "+", 
+    TagBox["2",
+     HoldForm]}], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   SuperscriptBox[
+    TagBox["2",
+     HoldForm], 
+    RowBox[{
+     RowBox[{"-", 
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm]}], "+", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   SuperscriptBox[
+    TagBox["2",
+     HoldForm], 
+    FractionBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]]], ",", 
+   SuperscriptBox[
+    TagBox["2",
+     HoldForm], 
+    FractionBox[
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]]], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   SuperscriptBox[
+    TagBox["2",
+     HoldForm], 
+    StyleBox["12.3399999999999998`",
+     StyleBoxAutoDelete->True,
+     PrintPrecision->4]], ",", 
+   SuperscriptBox[
+    TagBox["2",
+     HoldForm], 
+    StyleBox["12.3399999999999998`",
+     StyleBoxAutoDelete->True,
+     PrintPrecision->4]], ",", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm], "+", 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]}], ")"}], 
+    TagBox["2",
+     HoldForm]], ",", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       TagBox[
+        TagBox["11",
+         HoldForm],
+        HoldForm]}], "+", 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]}], ")"}], 
+    TagBox["2",
+     HoldForm]], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     FractionBox[
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm], 
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm]], ")"}], 
+    TagBox["2",
+     HoldForm]], ",", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     FractionBox[
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm], 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]], ")"}], 
+    TagBox["2",
+     HoldForm]], ",", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"4.39444915467243912`", "\[InvisibleSpace]"}], "+", 
+       RowBox[{"6.28318530717958623`", " ", "I"}]}], "<", "10"}], ",", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        TagBox[
+         TagBox["11",
+          HoldForm],
+         HoldForm], "-", 
+        TagBox[
+         TagBox["20",
+          HoldForm],
+         HoldForm]}], ")"}], 
+      TagBox["2",
+       HoldForm]], ",", 
+     StyleBox["12.3399999999999998`",
+      StyleBoxAutoDelete->True,
+      PrintPrecision->4]}], "]"}], ",", 
+   SuperscriptBox[
+    StyleBox["12.3399999999999998`",
+     StyleBoxAutoDelete->True,
+     PrintPrecision->4], 
+    TagBox["2",
+     HoldForm]], ",", 
+   SuperscriptBox[
+    StyleBox["12.3399999999999998`",
+     StyleBoxAutoDelete->True,
+     PrintPrecision->4], 
+    TagBox["2",
+     HoldForm]], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "+", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "-", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "+", 
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "+", 
+    FractionBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "+", 
+    FractionBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "+", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "-", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    StyleBox["12.3399999999999998`",
+     StyleBoxAutoDelete->True,
+     PrintPrecision->4], "\[InvisibleSpace]", "+", 
+    TagBox["11",
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "+", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["11",
+      HoldForm]}], "+", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["11",
+      HoldForm]}], "-", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["11",
+      HoldForm]}], "+", 
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["11",
+      HoldForm]}], "+", 
+    FractionBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["11",
+      HoldForm]}], "+", 
+    FractionBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["11",
+      HoldForm]}], "+", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "-", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    StyleBox["12.3399999999999998`",
+     StyleBoxAutoDelete->True,
+     PrintPrecision->4], "\[InvisibleSpace]", "-", 
+    TagBox["11",
+     HoldForm]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["11",
+      HoldForm]}], "+", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      TagBox[
+       TagBox["2",
+        HoldForm],
+       HoldForm], "+", 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]}], ")"}]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       TagBox[
+        TagBox["2",
+         HoldForm],
+        HoldForm]}], "+", 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]}], ")"}]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], " ", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], " ", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox["11",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}], 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm]], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox["11",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]}], 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      TagBox[
+       TagBox["2",
+        HoldForm],
+       HoldForm], "-", 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]}], ")"}]}], ",", 
+   RowBox[{
+    StyleBox["12.3399999999999998`",
+     StyleBoxAutoDelete->True,
+     PrintPrecision->4], " ", 
+    TagBox["11",
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], " ", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], "+", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["11",
+     HoldForm]], ",", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"-", 
+      TagBox[
+       TagBox["2",
+        HoldForm],
+       HoldForm]}], "+", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["11",
+     HoldForm]], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["11",
+     HoldForm]], ",", 
+   FractionBox[
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm], 
+    RowBox[{
+     TagBox["11",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]}]], ",", 
+   FractionBox[
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], 
+    RowBox[{
+     TagBox["11",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], "-", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["11",
+     HoldForm]], ",", 
+   FractionBox[
+    StyleBox["12.3399999999999998`",
+     StyleBoxAutoDelete->True,
+     PrintPrecision->4], 
+    TagBox["11",
+     HoldForm]], ",", 
+   FractionBox[
+    SuperscriptBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]], 
+    TagBox["11",
+     HoldForm]], ",", 
+   FractionBox[
+    TagBox["11",
+     HoldForm], 
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], "+", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]], ",", 
+   FractionBox[
+    TagBox["11",
+     HoldForm], 
+    RowBox[{
+     RowBox[{"-", 
+      TagBox[
+       TagBox["2",
+        HoldForm],
+       HoldForm]}], "+", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]], ",", 
+   FractionBox[
+    TagBox["11",
+     HoldForm], 
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox["11",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]}], 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox["11",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}], 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm]], ",", 
+   FractionBox[
+    TagBox["11",
+     HoldForm], 
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], "-", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]], ",", 
+   RowBox[{"0.0810372771474878561`", " ", 
+    TagBox["11",
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], " ", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     RowBox[{"-", 
+      TagBox[
+       TagBox["2",
+        HoldForm],
+       HoldForm]}]]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "-", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "-", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "+", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "-", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "-", 
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "-", 
+    FractionBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "-", 
+    FractionBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "-", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     StyleBox["12.3399999999999998`",
+      StyleBoxAutoDelete->True,
+      PrintPrecision->4]}], "+", 
+    TagBox["11",
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "-", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   SuperscriptBox[
+    TagBox["11",
+     HoldForm], 
+    FractionBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]]], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     FractionBox[
+      TagBox[
+       TagBox["2",
+        HoldForm],
+       HoldForm], 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]], ")"}], 
+    TagBox["11",
+     HoldForm]], ",", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"31.794089336857807`", "\[InvisibleSpace]"}], "+", 
+       RowBox[{"34.5575191894877198`", " ", "I"}]}], "<", "10"}], ",", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        TagBox[
+         TagBox["2",
+          HoldForm],
+         HoldForm], "-", 
+        TagBox[
+         TagBox["20",
+          HoldForm],
+         HoldForm]}], ")"}], 
+      TagBox["11",
+       HoldForm]], ",", 
+     StyleBox["12.3399999999999998`",
+      StyleBoxAutoDelete->True,
+      PrintPrecision->4]}], "]"}], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "+", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "-", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "+", 
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "+", 
+    FractionBox[
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "+", 
+    FractionBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "+", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "-", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "+", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "+", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "-", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "-", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "+", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "-", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "-", 
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "-", 
+    FractionBox[
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "-", 
+    FractionBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "-", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "-", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "-", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      TagBox[
+       TagBox["2",
+        HoldForm],
+       HoldForm], "+", 
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm]}], ")"}]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       TagBox[
+        TagBox["2",
+         HoldForm],
+        HoldForm]}], "+", 
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm]}], ")"}]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], " ", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], " ", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm]}], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox["20",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}], 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm]], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox["20",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]}], 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm]], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      TagBox[
+       TagBox["2",
+        HoldForm],
+       HoldForm], "-", 
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm]}], ")"}]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], " ", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], " ", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   FractionBox[
+    TagBox["20",
+     HoldForm], 
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], "+", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}]], ",", 
+   FractionBox[
+    TagBox["20",
+     HoldForm], 
+    RowBox[{
+     RowBox[{"-", 
+      TagBox[
+       TagBox["2",
+        HoldForm],
+       HoldForm]}], "+", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}]], ",", 
+   FractionBox[
+    TagBox["20",
+     HoldForm], 
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}]], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox["20",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]}], 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm]], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox["20",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}], 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm]], ",", 
+   FractionBox[
+    TagBox["20",
+     HoldForm], 
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], "-", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}]], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], " ", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     RowBox[{"-", 
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm]}]]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], " ", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], 
+     RowBox[{"-", 
+      TagBox[
+       TagBox["2",
+        HoldForm],
+       HoldForm]}]]}], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], "+", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["20",
+     HoldForm]], ",", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"-", 
+      TagBox[
+       TagBox["2",
+        HoldForm],
+       HoldForm]}], "+", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["20",
+     HoldForm]], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["20",
+     HoldForm]], ",", 
+   FractionBox[
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], 
+    RowBox[{
+     TagBox["20",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]}]], ",", 
+   FractionBox[
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], 
+    RowBox[{
+     TagBox["20",
+      HoldForm], " ", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}]], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], "-", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["20",
+     HoldForm]], ",", 
+   FractionBox[
+    SuperscriptBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]], 
+    TagBox["20",
+     HoldForm]], ",", 
+   FractionBox[
+    SuperscriptBox[
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]], 
+    TagBox["20",
+     HoldForm]], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["20",
+      HoldForm]}], "+", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["20",
+      HoldForm]}], "-", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["20",
+      HoldForm]}], "+", 
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["20",
+      HoldForm]}], "+", 
+    FractionBox[
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["20",
+      HoldForm]}], "+", 
+    FractionBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["20",
+      HoldForm]}], "+", 
+    TagBox[
+     TagBox["2",
+      HoldForm],
+     HoldForm], "-", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["20",
+      HoldForm]}], "+", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["20",
+      HoldForm]}], "+", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     FractionBox[
+      TagBox[
+       TagBox["2",
+        HoldForm],
+       HoldForm], 
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm]], ")"}], 
+    TagBox["20",
+     HoldForm]], ",", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"43.9444915467243912`", "\[InvisibleSpace]"}], "+", 
+       RowBox[{"62.8318530717958623`", " ", "I"}]}], "<", "10"}], ",", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        TagBox[
+         TagBox["2",
+          HoldForm],
+         HoldForm], "-", 
+        TagBox[
+         TagBox["11",
+          HoldForm],
+         HoldForm]}], ")"}], 
+      TagBox["20",
+       HoldForm]], ",", 
+     StyleBox["12.3399999999999998`",
+      StyleBoxAutoDelete->True,
+      PrintPrecision->4]}], "]"}], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   SuperscriptBox[
+    TagBox["20",
+     HoldForm], 
+    FractionBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]]], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4], ",", 
+   StyleBox["12.3399999999999998`",
+    StyleBoxAutoDelete->True,
+    PrintPrecision->4]}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"g", "[", 
+  RowBox[{"{", 
+   RowBox[{"11", ",", "20", ",", "2"}], "}"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "2", ",", "7", ",", "11", ",", "18", ",", "21", ",", "29", ",", 
+   "33", ",", "42", ",", "51", ",", "62", ",", "81", ",", "101", ",", "110", 
+   ",", "141", ",", "180", ",", "198", ",", "218", ",", "222", ",", "242", 
+   ",", "260", ",", "389", ",", "411", ",", "440", ",", "512", ",", "961", 
+   ",", "2028", ",", "2068", ",", "2420", ",", "4400", ",", "40960"}], 
+  "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["h[{11,20,2},2]", "Input",
+ AspectRatioFixed->True],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   TagBox[
+    TagBox["2",
+     HoldForm],
+    HoldForm], "+", 
+   TagBox[
+    TagBox["20",
+     HoldForm],
+    HoldForm]}], 
+  TagBox["11",
+   HoldForm]]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["G[{11,20,2}]", "Input",
+ AspectRatioFixed->True],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "2", ",", "7", ",", "11", ",", "18", ",", "21", ",", "29", ",", 
+   "33", ",", "42", ",", "51", ",", "62", ",", "81", ",", "101", ",", "110", 
+   ",", "141", ",", "180", ",", "198", ",", "218", ",", "222", ",", "242", 
+   ",", "260", ",", "389", ",", "411", ",", "440", ",", "512", ",", "961", 
+   ",", "2028", ",", "2068", ",", "2420", ",", "4400", ",", "40960"}], 
+  "}"}]], "Print"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    TagBox["11",
+     HoldForm], "-", 
+    FractionBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], "+", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["11",
+     HoldForm]], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["2",
+      HoldForm]}], "-", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], "-", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       TagBox[
+        TagBox["11",
+         HoldForm],
+        HoldForm]}], "+", 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]}], ")"}]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "+", 
+    FractionBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["2",
+      HoldForm]}], "+", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], "+", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "+", 
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]}]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "+", 
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm], "+", 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]}], ")"}]}], ",", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       TagBox[
+        TagBox["11",
+         HoldForm],
+        HoldForm]}], "+", 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]}], ")"}], 
+    TagBox["2",
+     HoldForm]], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["20",
+      HoldForm]}], "+", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   FractionBox[
+    RowBox[{
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["2",
+     HoldForm]], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "+", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       TagBox[
+        TagBox["2",
+         HoldForm],
+        HoldForm]}], "+", 
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm]}], ")"}]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       TagBox[
+        TagBox["2",
+         HoldForm],
+        HoldForm]}], "+", 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["2",
+      HoldForm]}], "+", 
+    RowBox[{
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], "+", 
+    RowBox[{
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      TagBox[
+       TagBox["2",
+        HoldForm],
+       HoldForm], "+", 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]}], ")"}]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      TagBox[
+       TagBox["2",
+        HoldForm],
+       HoldForm], "+", 
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm]}], ")"}]}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["11",
+      HoldForm]}], "+", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], "+", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["2",
+     HoldForm], " ", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], " ", 
+    TagBox[
+     TagBox["20",
+      HoldForm],
+     HoldForm]}], ",", 
+   SuperscriptBox[
+    TagBox["2",
+     HoldForm], 
+    RowBox[{
+     RowBox[{"-", 
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm]}], "+", 
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm]}]], ",", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      TagBox[
+       TagBox["11",
+        HoldForm],
+       HoldForm], "+", 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]}], ")"}], 
+    TagBox["2",
+     HoldForm]], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["20",
+      HoldForm]}], "+", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], "+", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], " ", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["11",
+     HoldForm], " ", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["20",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm]]}], ",", 
+   RowBox[{
+    TagBox["20",
+     HoldForm], " ", 
+    SuperscriptBox[
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm]]}]}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[" "], "Input",
+ Background->RGBColor[1, 0, 0]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"y", "=", "1"}], ",", 
+   RowBox[{"y", ">", "0"}], ",", 
+   RowBox[{"y", "++"}], ",", 
+   RowBox[{
+    RowBox[{"c1", "=", 
+     RowBox[{"RandomInteger", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "30"}], "}"}], ",", "3"}], "]"}]}], ";", 
+    RowBox[{"g1", "=", 
+     RowBox[{"g", "[", "c1", "]"}]}], ";", 
+    RowBox[{"c2", "=", 
+     RowBox[{"RandomInteger", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"10", ",", "40"}], "}"}], ",", "3"}], "]"}]}], ";", 
+    RowBox[{"g2", "=", 
+     RowBox[{"g", "[", "c2", "]"}]}], ";", 
+    RowBox[{"c3", "=", 
+     RowBox[{"RandomInteger", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"20", ",", "50"}], "}"}], ",", "3"}], "]"}]}], ";", 
+    RowBox[{"g3", "=", 
+     RowBox[{"g", "[", "c3", "]"}]}], ";", 
+    RowBox[{"ttt", "=", 
+     RowBox[{"g1", "\[Intersection]", "g2", "\[Intersection]", "g3"}]}], ";", 
+    
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Length", "[", "ttt", "]"}], "\[Equal]", "1"}], "&&", 
+       RowBox[{
+        RowBox[{"ttt", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+         ">", "1"}]}], ",", 
+      RowBox[{
+       RowBox[{"Print", "[", 
+        RowBox[{
+         RowBox[{"h", "[", 
+          RowBox[{"c1", ",", 
+           RowBox[{
+           "ttt", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+          "]"}], ",", "\"\<  \>\"", ",", 
+         RowBox[{"h", "[", 
+          RowBox[{"c2", ",", 
+           RowBox[{
+           "ttt", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+          "]"}], ",", "\"\<  \>\"", ",", 
+         RowBox[{"h", "[", 
+          RowBox[{"c3", ",", 
+           RowBox[{
+           "ttt", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+          "]"}], ",", "\"\<  \>\"", ",", 
+         RowBox[{
+         "ttt", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+        "]"}], ";"}]}], "]"}]}]}], "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    TagBox["3",
+     HoldForm], "+", 
+    TagBox[
+     TagBox["7",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["27",
+      HoldForm],
+     HoldForm]}], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["11",
+      HoldForm]}], "+", 
+    RowBox[{"2", " ", 
+     TagBox[
+      TagBox["24",
+       HoldForm],
+      HoldForm]}]}], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    TagBox["37",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       TagBox[
+        TagBox["29",
+         HoldForm],
+        HoldForm]}], "+", 
+      TagBox[
+       TagBox["30",
+        HoldForm],
+       HoldForm]}], ")"}]}], "\[InvisibleSpace]", "\<\"  \"\>", 
+   "\[InvisibleSpace]", "37"}],
+  SequenceForm[HoldForm[3] + HoldForm[
+     HoldForm[7]] + HoldForm[
+     HoldForm[27]], "  ", -HoldForm[11] + 2 HoldForm[
+      HoldForm[24]], "  ", HoldForm[37] (-HoldForm[
+       HoldForm[29]] + HoldForm[
+      HoldForm[30]]), "  ", 37],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4553978118741293`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["2",
+      HoldForm]}], "-", 
+    TagBox[
+     TagBox["11",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["15",
+      HoldForm],
+     HoldForm]}], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    RowBox[{"-", 
+     TagBox["10",
+      HoldForm]}], "-", 
+    TagBox[
+     TagBox["28",
+      HoldForm],
+     HoldForm], "+", 
+    TagBox[
+     TagBox["40",
+      HoldForm],
+     HoldForm]}], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    TagBox["46",
+     HoldForm], 
+    RowBox[{
+     RowBox[{"-", 
+      TagBox[
+       TagBox["20",
+        HoldForm],
+       HoldForm]}], "+", 
+     TagBox[
+      TagBox["43",
+       HoldForm],
+      HoldForm]}]], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   "2"}],
+  SequenceForm[-HoldForm[2] - HoldForm[
+    HoldForm[11]] + HoldForm[
+     HoldForm[15]], "  ", -HoldForm[10] - HoldForm[
+    HoldForm[28]] + HoldForm[
+     HoldForm[40]], "  ", HoldForm[46]/(-HoldForm[
+      HoldForm[20]] + HoldForm[
+     HoldForm[43]]), "  ", 2],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.455397812216016*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    TagBox["2",
+     HoldForm], "+", 
+    FractionBox[
+     TagBox[
+      TagBox["25",
+       HoldForm],
+      HoldForm], 
+     TagBox[
+      TagBox["5",
+       HoldForm],
+      HoldForm]]}], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{
+     TagBox[
+      TagBox["34",
+       HoldForm],
+      HoldForm], "+", 
+     TagBox[
+      TagBox["36",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["10",
+     HoldForm]], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    TagBox["26",
+     HoldForm], "+", 
+    TagBox[
+     TagBox["30",
+      HoldForm],
+     HoldForm], "-", 
+    TagBox[
+     TagBox["49",
+      HoldForm],
+     HoldForm]}], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   "7"}],
+  SequenceForm[HoldForm[2] + HoldForm[
+       HoldForm[5]]^(-1) HoldForm[
+      HoldForm[25]], "  ", HoldForm[10]^(-1) (HoldForm[
+      HoldForm[34]] + HoldForm[
+      HoldForm[36]]), "  ", HoldForm[26] + HoldForm[
+     HoldForm[30]] - HoldForm[
+    HoldForm[49]], "  ", 7],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.455397817780291*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    TagBox["4",
+     HoldForm], "+", 
+    TagBox[
+     TagBox["8",
+      HoldForm],
+     HoldForm], "-", 
+    TagBox[
+     TagBox["9",
+      HoldForm],
+     HoldForm]}], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{
+     TagBox[
+      TagBox["19",
+       HoldForm],
+      HoldForm], "+", 
+     TagBox[
+      TagBox["26",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["15",
+     HoldForm]], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    TagBox["39",
+     HoldForm], 
+    RowBox[{
+     RowBox[{"-", 
+      TagBox[
+       TagBox["22",
+        HoldForm],
+       HoldForm]}], "+", 
+     TagBox[
+      TagBox["35",
+       HoldForm],
+      HoldForm]}]], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   "3"}],
+  SequenceForm[HoldForm[4] + HoldForm[
+     HoldForm[8]] - HoldForm[
+    HoldForm[9]], "  ", HoldForm[15]^(-1) (HoldForm[
+      HoldForm[19]] + HoldForm[
+      HoldForm[26]]), "  ", HoldForm[39]/(-HoldForm[
+      HoldForm[22]] + HoldForm[
+     HoldForm[35]]), "  ", 3],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.455397819924082*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     TagBox[
+      TagBox["11",
+       HoldForm],
+      HoldForm], "+", 
+     TagBox[
+      TagBox["15",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["13",
+     HoldForm]], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    TagBox["10",
+     HoldForm], "+", 
+    TagBox[
+     TagBox["14",
+      HoldForm],
+     HoldForm], "-", 
+    TagBox[
+     TagBox["22",
+      HoldForm],
+     HoldForm]}], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    RowBox[{
+     TagBox[
+      TagBox["21",
+       HoldForm],
+      HoldForm], "+", 
+     TagBox[
+      TagBox["27",
+       HoldForm],
+      HoldForm]}], 
+    TagBox["24",
+     HoldForm]], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", "2"}],
+  SequenceForm[HoldForm[13]^(-1) (HoldForm[
+      HoldForm[11]] + HoldForm[
+      HoldForm[15]]), "  ", HoldForm[10] + HoldForm[
+     HoldForm[14]] - HoldForm[
+    HoldForm[22]], "  ", HoldForm[24]^(-1) (HoldForm[
+      HoldForm[21]] + HoldForm[
+      HoldForm[27]]), "  ", 2],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.455397823823106*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    TagBox["7",
+     HoldForm], "+", 
+    RowBox[{
+     TagBox[
+      TagBox["2",
+       HoldForm],
+      HoldForm], " ", 
+     TagBox[
+      TagBox["9",
+       HoldForm],
+      HoldForm]}]}], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    TagBox["30",
+     HoldForm], "+", 
+    TagBox[
+     TagBox["34",
+      HoldForm],
+     HoldForm], "-", 
+    TagBox[
+     TagBox["39",
+      HoldForm],
+     HoldForm]}], "\[InvisibleSpace]", "\<\"  \"\>", "\[InvisibleSpace]", 
+   RowBox[{
+    TagBox["25",
+     HoldForm], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", 
+       TagBox[
+        TagBox["22",
+         HoldForm],
+        HoldForm]}], "+", 
+      TagBox[
+       TagBox["23",
+        HoldForm],
+       HoldForm]}], ")"}]}], "\[InvisibleSpace]", "\<\"  \"\>", 
+   "\[InvisibleSpace]", "25"}],
+  SequenceForm[HoldForm[7] + HoldForm[
+      HoldForm[2]] HoldForm[
+      HoldForm[9]], "  ", HoldForm[30] + HoldForm[
+     HoldForm[34]] - HoldForm[
+    HoldForm[39]], "  ", HoldForm[25] (-HoldForm[
+       HoldForm[22]] + HoldForm[
+      HoldForm[23]]), "  ", 25],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.455397824336718*^9}]
+}, Open  ]],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.455396330622864*^9, 3.455396660187025*^9, 
+  3.455397308799327*^9, 3.455397827844309*^9}]
+}, Open  ]],
+
+Cell[BoxData["keep"], "Input"]
+},
+WindowSize->{620, 686},
+WindowMargins->{{45, Automatic}, {13, Automatic}},
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 9448, 287, 838, "Input"],
+Cell[CellGroupData[{
+Cell[10018, 311, 54, 1, 27, "Input"],
+Cell[10075, 314, 37687, 1948, 967, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47799, 2267, 113, 3, 27, "Input"],
+Cell[47915, 2272, 438, 8, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[48390, 2285, 56, 1, 27, "Input"],
+Cell[48449, 2288, 205, 12, 46, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[48691, 2305, 54, 1, 27, "Input"],
+Cell[48748, 2308, 437, 8, 36, "Print"],
+Cell[49188, 2318, 7078, 388, 144, "Output"]
+}, Open  ]],
+Cell[56281, 2709, 59, 1, 43, "Input"],
+Cell[CellGroupData[{
+Cell[56365, 2714, 2025, 59, 103, "Input"],
+Cell[CellGroupData[{
+Cell[58415, 2777, 1159, 45, 20, "Print"],
+Cell[59577, 2824, 1207, 49, 40, "Print"],
+Cell[60787, 2875, 1167, 47, 40, "Print"],
+Cell[61957, 2924, 1186, 48, 40, "Print"],
+Cell[63146, 2974, 1168, 46, 40, "Print"],
+Cell[64317, 3022, 1222, 49, 20, "Print"]
+}, Open  ]],
+Cell[65554, 3074, 146, 2, 27, "Output"]
+}, Open  ]],
+Cell[65715, 3079, 30, 0, 27, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,5510 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[    182221,       5501]
+NotebookOptionsPosition[    178684,       5406]
+NotebookOutlinePosition[    179146,       5424]
+CellTagsIndexPosition[    179103,       5421]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->600],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4792461064892483`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[3, 2]}, {0.6000000000000001, 
+        1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[5, 2]}, {0.6000000000000001, 
+        2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], {}, InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[1, 2]}, {4.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->60],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->600],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.47924610660833*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pic", "[", "L_", "]"}], ":=", 
+  RowBox[{"Style", "[", 
+   RowBox[{
+    RowBox[{"Graphics", "[", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"StyleForm", "[", 
+             RowBox[{
+              RowBox[{"L", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", ",", "j"}], "]"}], "]"}], ",", 
+              RowBox[{"FontSize", "\[Rule]", "20"}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"2", "i"}], "-", "1"}], ",", 
+              RowBox[{"j", "-", 
+               RowBox[{"1", "/", "2"}]}]}], "}"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "1", ",", "3"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Line", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "3"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"6", ",", "3"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"6", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"6", ",", "1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"6", ",", "2"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "2"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"2", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"2", ",", "3"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"4", ",", "3"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"4", ",", "0"}], "}"}]}], "}"}], "]"}]}], 
+       "\[IndentingNewLine]", "}"}], ",", 
+      RowBox[{"ImageSize", "\[Rule]", "200"}]}], "]"}], ",", 
+    RowBox[{"Antialiasing", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.444299590918857*^9, 3.444299629567216*^9}, {
+   3.444299854240706*^9, 3.444299912147408*^9}, {3.4442999951935368`*^9, 
+   3.444300116820696*^9}, 3.444300162200818*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"answer", "[", 
+   RowBox[{"s_", ",", "rows_"}], "]"}], ":=", 
+  RowBox[{"Style", "[", 
+   RowBox[{
+    RowBox[{"Graphics", "[", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"StyleForm", "[", 
+             RowBox[{
+              RowBox[{"s", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", ",", "j"}], "]"}], "]"}], ",", 
+              RowBox[{"FontSize", "\[Rule]", "20"}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"2", "i"}], "-", "1"}], ",", 
+              RowBox[{"j", "-", 
+               RowBox[{"1", "/", "2"}]}]}], "}"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "1", ",", "3"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Line", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "3"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"6", ",", "3"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"6", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"6", ",", "1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"6", ",", "2"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "2"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"2", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"2", ",", "3"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"4", ",", "3"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"4", ",", "0"}], "}"}]}], "}"}], "]"}], ",", 
+        "\[IndentingNewLine]", "Red", ",", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"s", "[", 
+              RowBox[{"[", 
+               RowBox[{"i", ",", "j"}], "]"}], "]"}], "\[Equal]", 
+             RowBox[{"rows", "[", 
+              RowBox[{"[", 
+               RowBox[{"i", ",", "j"}], "]"}], "]"}]}], ",", 
+            RowBox[{"{", "}"}], ",", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"s", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", ",", "j"}], "]"}], "]"}], "==", 
+               RowBox[{"Mod", "[", 
+                RowBox[{
+                 RowBox[{"rows", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"i", ",", "j"}], "]"}], "]"}], ",", "10"}], 
+                "]"}]}], ",", 
+              RowBox[{"Text", "[", 
+               RowBox[{
+                RowBox[{"StyleForm", "[", 
+                 RowBox[{
+                  RowBox[{"Floor", "[", 
+                   RowBox[{
+                    RowBox[{"rows", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}], "/", "10"}], "]"}],
+                   ",", 
+                  RowBox[{"FontSize", "\[Rule]", "20"}]}], "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"2", "i"}], "-", "1.4"}], ",", 
+                  RowBox[{"j", "-", 
+                   RowBox[{"1", "/", "2"}]}]}], "}"}]}], "]"}], ",", 
+              RowBox[{"Text", "[", 
+               RowBox[{
+                RowBox[{"StyleForm", "[", 
+                 RowBox[{
+                  RowBox[{"Mod", "[", 
+                   RowBox[{
+                    RowBox[{"rows", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "j"}], "]"}], "]"}], ",", "10"}], "]"}],
+                   ",", 
+                  RowBox[{"FontSize", "\[Rule]", "20"}]}], "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"2", "i"}], "-", ".6"}], ",", 
+                  RowBox[{"j", "-", 
+                   RowBox[{"1", "/", "2"}]}]}], "}"}]}], "]"}]}], "]"}]}], 
+           "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "1", ",", "3"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}]}], 
+       "\[IndentingNewLine]", "}"}], ",", 
+      RowBox[{"ImageSize", "\[Rule]", "200"}]}], "]"}], ",", 
+    RowBox[{"Antialiasing", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.444300206216709*^9, 3.4443002274924183`*^9}, 
+   3.444300260602332*^9, {3.444300295892411*^9, 3.444300609642199*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"strip", "[", "n_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "t", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"t", "=", 
+      RowBox[{"IntegerDigits", "[", "n", "]"}]}], ";", "\[IndentingNewLine]", 
+     
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Mod", "[", 
+         RowBox[{"n", ",", "10"}], "]"}], "\[Equal]", "0"}], ",", 
+       RowBox[{"n", "/", "10"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"t", "[", 
+        RowBox[{"[", 
+         RowBox[{"RandomInteger", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", 
+            RowBox[{"Length", "[", "t", "]"}]}], "}"}], "]"}], "]"}], "]"}]}],
+       "]"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.444297862057434*^9, 3.4442979271690187`*^9}, {
+  3.444300908083305*^9, 3.444300933011063*^9}, {3.4443009755903997`*^9, 
+  3.4443009771242332`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"poss", "[", "n_", "]"}], ":=", 
+  RowBox[{"Union", "[", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"10", "i"}], "+", "n"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "0", ",", "9"}], "}"}]}], "]"}], "~", "Join", "~", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"10", "n"}], "+", "i"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "0", ",", "9"}], "}"}]}], "]"}]}], "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.444298053914706*^9, 3.4442981324161777`*^9}, 
+   3.45165786874631*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"unique", "[", "L_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "m1", ",", "s1", ",", "m2", ",", "s2", ",", "m3", ",", "s3", ",", "out", 
+      ",", "out2"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"m1", "=", 
+      RowBox[{"Map", "[", 
+       RowBox[{"poss", ",", 
+        RowBox[{"L", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], ",", "2"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"s1", "=", 
+      RowBox[{"Select", "[", 
+       RowBox[{
+        RowBox[{"Flatten", "[", 
+         RowBox[{
+          RowBox[{"Outer", "[", 
+           RowBox[{"List", ",", 
+            RowBox[{"Apply", "[", 
+             RowBox[{"Sequence", ",", "m1"}], "]"}]}], "]"}], ",", "2"}], 
+         "]"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Total", "[", "#", "]"}], "\[Equal]", "100"}], "&"}]}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"m2", "=", 
+      RowBox[{"Map", "[", 
+       RowBox[{"poss", ",", 
+        RowBox[{"L", "[", 
+         RowBox[{"[", "2", "]"}], "]"}], ",", "2"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"s2", "=", 
+      RowBox[{"Select", "[", 
+       RowBox[{
+        RowBox[{"Flatten", "[", 
+         RowBox[{
+          RowBox[{"Outer", "[", 
+           RowBox[{"List", ",", 
+            RowBox[{"Apply", "[", 
+             RowBox[{"Sequence", ",", "m2"}], "]"}]}], "]"}], ",", "2"}], 
+         "]"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Total", "[", "#", "]"}], "\[Equal]", "100"}], "&"}]}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"m3", "=", 
+      RowBox[{"Map", "[", 
+       RowBox[{"poss", ",", 
+        RowBox[{"L", "[", 
+         RowBox[{"[", "3", "]"}], "]"}], ",", "2"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"s3", "=", 
+      RowBox[{"Select", "[", 
+       RowBox[{
+        RowBox[{"Flatten", "[", 
+         RowBox[{
+          RowBox[{"Outer", "[", 
+           RowBox[{"List", ",", 
+            RowBox[{"Apply", "[", 
+             RowBox[{"Sequence", ",", "m3"}], "]"}]}], "]"}], ",", "2"}], 
+         "]"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Total", "[", "#", "]"}], "\[Equal]", "100"}], "&"}]}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"out", "=", 
+      RowBox[{"Flatten", "[", 
+       RowBox[{
+        RowBox[{"Outer", "[", 
+         RowBox[{"List", ",", "s1", ",", "s2", ",", "s3", ",", "1"}], "]"}], 
+        ",", "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"out2", "=", 
+      RowBox[{"Select", "[", 
+       RowBox[{"out", ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Total", "[", "#", "]"}], "\[Equal]", 
+          RowBox[{"{", 
+           RowBox[{"100", ",", "100", ",", "100"}], "}"}]}], "&"}]}], 
+       "]"}]}]}]}], "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.444298021297166*^9, 3.444298034195588*^9}, {
+   3.444298164865905*^9, 3.44429817305649*^9}, {3.4442982430533667`*^9, 
+   3.444298243538681*^9}, {3.444298454860449*^9, 3.4442985114649076`*^9}, {
+   3.444298553316193*^9, 3.444298573230451*^9}, {3.4442986076968517`*^9, 
+   3.4442986363119507`*^9}, {3.444299212635778*^9, 3.444299260620841*^9}, {
+   3.451658341044364*^9, 3.451658429791307*^9}, 3.451658507001019*^9}],
+
+Cell[BoxData[
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "1"}], ",", 
+   RowBox[{"i", ">", "0"}], ",", 
+   RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"c", "=", "2"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"While", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"c", "=!=", "1"}], "||", 
+       RowBox[{
+        RowBox[{"Length", "[", 
+         RowBox[{"Select", "[", 
+          RowBox[{
+           RowBox[{"Flatten", "[", "rows", "]"}], ",", 
+           RowBox[{
+            RowBox[{"#", "<", "10"}], "&"}]}], "]"}], "]"}], ">", "2"}]}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"rows", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{"0", ",", 
+          RowBox[{"{", "3", "}"}], ",", 
+          RowBox[{"{", "3", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"While", "[", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"9", "<", 
+           RowBox[{"Min", "[", 
+            RowBox[{"Flatten", "[", "rows", "]"}], "]"}]}], "||"}], "*)"}], 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"Min", "[", 
+            RowBox[{"Flatten", "[", "rows", "]"}], "]"}], "\[LessEqual]", 
+           "0"}], "||", 
+          RowBox[{
+           RowBox[{"Length", "[", 
+            RowBox[{"Union", "[", 
+             RowBox[{"Flatten", "[", "rows", "]"}], "]"}], "]"}], "<", "9"}], 
+          "||", 
+          RowBox[{
+           RowBox[{"Total", "[", 
+            RowBox[{"rows", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], "=!=", "100"}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"r1", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "97"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"r2", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", 
+              RowBox[{"98", "-", "r1"}]}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"row1", "=", 
+           RowBox[{"{", 
+            RowBox[{"r1", ",", "r2", ",", 
+             RowBox[{"100", "-", "r1", "-", "r2"}]}], "}"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"r3", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "97"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"r4", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", 
+              RowBox[{"98", "-", "r3"}]}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"row2", "=", 
+           RowBox[{"{", 
+            RowBox[{"r3", ",", "r4", ",", 
+             RowBox[{"100", "-", "r3", "-", "r4"}]}], "}"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"row3", "=", 
+           RowBox[{"100", "-", "row1", "-", "row2"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"rows", "=", 
+           RowBox[{"Transpose", "[", 
+            RowBox[{"{", 
+             RowBox[{"row1", ",", "row2", ",", "row3"}], "}"}], "]"}]}]}]}], 
+        "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Random", "[", "]"}], "<", 
+          RowBox[{"1", "/", "3"}]}], ",", 
+         RowBox[{"rows", "=", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"rows", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], ",", 
+            RowBox[{"rows", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], ",", 
+            RowBox[{"rows", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], "}"}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Random", "[", "]"}], "<", 
+          RowBox[{"1", "/", "3"}]}], ",", 
+         RowBox[{"rows", "=", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"rows", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", 
+            RowBox[{"rows", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], ",", 
+            RowBox[{"rows", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], "}"}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"s", "=", 
+        RowBox[{"Map", "[", 
+         RowBox[{"strip", ",", "rows", ",", 
+          RowBox[{"{", "2", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"u", "=", 
+        RowBox[{"unique", "[", "s", "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"c", "=", 
+        RowBox[{"Length", "[", "u", "]"}]}]}]}], "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Print", "[", 
+     RowBox[{"pic", "[", "s", "]"}], "]"}], ";", 
+    RowBox[{"Print", "[", 
+     RowBox[{"answer", "[", 
+      RowBox[{"s", ",", "rows"}], "]"}], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4442974075812397`*^9, 3.4442976122851152`*^9}, {
+   3.4442976626137857`*^9, 3.444297797215518*^9}, {3.4442993151826563`*^9, 
+   3.444299478773612*^9}, {3.444299664600914*^9, 3.444299681361389*^9}, {
+   3.444299732668283*^9, 3.444299808177047*^9}, {3.444299920232967*^9, 
+   3.444299926520527*^9}, {3.444300236794321*^9, 3.44430024765871*^9}, {
+   3.444300664571692*^9, 3.444300713508026*^9}, {3.444300793193203*^9, 
+   3.444300796390894*^9}, {3.444301174381485*^9, 3.444301192387698*^9}, {
+   3.444301222927977*^9, 3.444301237983721*^9}, {3.44430515483099*^9, 
+   3.444305158345821*^9}, {3.45165766882547*^9, 3.451657670942403*^9}, 
+   3.451657931662092*^9, {3.45165851545866*^9, 3.451658537227984*^9}, {
+   3.4516585765643578`*^9, 3.45165859430161*^9}, 3.451658643944722*^9, {
+   3.4575681395301857`*^9, 3.457568174077911*^9}, {3.457568281465263*^9, 
+   3.457568291708838*^9}, 3.4575684619363823`*^9, {3.4792445588453712`*^9, 
+   3.479244562554042*^9}, {3.479244703795395*^9, 3.479244711626099*^9}, 
+   3.479244940381481*^9}],
+
+Cell[BoxData[
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "1"}], ",", 
+   RowBox[{"i", ">", "0"}], ",", 
+   RowBox[{"i", "++"}], ",", 
+   RowBox[{"(*", " ", 
+    RowBox[{"all", " ", "two", " ", "digits"}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"c", "=", "2"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"While", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"c", "=!=", "1"}], "||", 
+       RowBox[{
+        RowBox[{"Length", "[", 
+         RowBox[{"Select", "[", 
+          RowBox[{
+           RowBox[{"Flatten", "[", "rows", "]"}], ",", 
+           RowBox[{
+            RowBox[{"#", "<", "10"}], "&"}]}], "]"}], "]"}], ">", "2"}]}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"rows", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{"0", ",", 
+          RowBox[{"{", "3", "}"}], ",", 
+          RowBox[{"{", "3", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"10", ">", 
+           RowBox[{"Min", "[", 
+            RowBox[{"Flatten", "[", "rows", "]"}], "]"}]}], "||", 
+          RowBox[{
+           RowBox[{"Min", "[", 
+            RowBox[{"Flatten", "[", "rows", "]"}], "]"}], "\[LessEqual]", 
+           "0"}], "||", 
+          RowBox[{
+           RowBox[{"Length", "[", 
+            RowBox[{"Union", "[", 
+             RowBox[{"Flatten", "[", "rows", "]"}], "]"}], "]"}], "<", "9"}], 
+          "||", 
+          RowBox[{
+           RowBox[{"Total", "[", 
+            RowBox[{"rows", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], "=!=", "100"}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"r1", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "97"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"r2", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", 
+              RowBox[{"98", "-", "r1"}]}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"row1", "=", 
+           RowBox[{"{", 
+            RowBox[{"r1", ",", "r2", ",", 
+             RowBox[{"100", "-", "r1", "-", "r2"}]}], "}"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"r3", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "97"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"r4", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", 
+              RowBox[{"98", "-", "r3"}]}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"row2", "=", 
+           RowBox[{"{", 
+            RowBox[{"r3", ",", "r4", ",", 
+             RowBox[{"100", "-", "r3", "-", "r4"}]}], "}"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"row3", "=", 
+           RowBox[{"100", "-", "row1", "-", "row2"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"rows", "=", 
+           RowBox[{"Transpose", "[", 
+            RowBox[{"{", 
+             RowBox[{"row1", ",", "row2", ",", "row3"}], "}"}], "]"}]}]}]}], 
+        "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Random", "[", "]"}], "<", 
+          RowBox[{"1", "/", "3"}]}], ",", 
+         RowBox[{"rows", "=", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"rows", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], ",", 
+            RowBox[{"rows", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], ",", 
+            RowBox[{"rows", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], "}"}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Random", "[", "]"}], "<", 
+          RowBox[{"1", "/", "3"}]}], ",", 
+         RowBox[{"rows", "=", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"rows", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", 
+            RowBox[{"rows", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], ",", 
+            RowBox[{"rows", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], "}"}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"s", "=", 
+        RowBox[{"Map", "[", 
+         RowBox[{"strip", ",", "rows", ",", 
+          RowBox[{"{", "2", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"u", "=", 
+        RowBox[{"unique", "[", "s", "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"c", "=", 
+        RowBox[{"Length", "[", "u", "]"}]}]}]}], "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Print", "[", 
+     RowBox[{"pic", "[", "s", "]"}], "]"}], ";", 
+    RowBox[{"Print", "[", 
+     RowBox[{"answer", "[", 
+      RowBox[{"s", ",", "rows"}], "]"}], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4442974075812397`*^9, 3.4442976122851152`*^9}, {
+   3.4442976626137857`*^9, 3.444297797215518*^9}, {3.4442993151826563`*^9, 
+   3.444299478773612*^9}, {3.444299664600914*^9, 3.444299681361389*^9}, {
+   3.444299732668283*^9, 3.444299808177047*^9}, {3.444299920232967*^9, 
+   3.444299926520527*^9}, {3.444300236794321*^9, 3.44430024765871*^9}, {
+   3.444300664571692*^9, 3.444300713508026*^9}, {3.444300793193203*^9, 
+   3.444300796390894*^9}, {3.444301174381485*^9, 3.444301192387698*^9}, {
+   3.444301222927977*^9, 3.444301237983721*^9}, {3.44430515483099*^9, 
+   3.444305158345821*^9}, {3.45165766882547*^9, 3.451657670942403*^9}, 
+   3.451657931662092*^9, {3.45165851545866*^9, 3.451658537227984*^9}, {
+   3.4516585765643578`*^9, 3.45165859430161*^9}, 3.451658643944722*^9, {
+   3.4575681395301857`*^9, 3.457568174077911*^9}, {3.457568281465263*^9, 
+   3.457568291708838*^9}, 3.4575684619363823`*^9, {3.4792445588453712`*^9, 
+   3.479244562554042*^9}, {3.479244703795395*^9, 3.479244711626099*^9}, 
+   3.479244940381481*^9, {3.49912319250042*^9, 3.4991232138816433`*^9}, {
+   3.499123305035445*^9, 3.499123309249401*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["no single digits", "Section",
+ CellChangeTimes->{{3.499122687988139*^9, 3.499122688278887*^9}, {
+  3.4991232362699623`*^9, 3.4991232404061203`*^9}, {3.499123534087037*^9, 
+  3.499123535917664*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.499123246083254*^9, 3.499123674378982*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[5, 2]}, {0.6000000000000001, 
+        2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[5, 2]}, {2.6, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[1, 2]}, {4.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.499123246083254*^9, 3.4991236744083557`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.499123246083254*^9, 3.4991236548614197`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[5, 2]}, {0.6000000000000001, 
+        2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[1, 2]}, {5.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[3, 2]}, {4.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.499123246083254*^9, 3.499123654892809*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.499123246083254*^9, 3.499123475542782*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[5, 2]}, {0.6000000000000001, 
+        2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[1, 2]}, {4.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.499123246083254*^9, 3.49912347557447*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.499123246083254*^9, 3.49912381061665*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[3, 2]}, {0.6000000000000001, 
+        1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[5, 2]}, {1.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[1, 2]}, {2.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[3, 2]}, {3.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[5, 2]}, {2.6, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[1, 2]}, {5.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.499123246083254*^9, 3.499123810654975*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.499123246083254*^9, 3.4991238142634697`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[1, 2]}, {0.6000000000000001, 
+        0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[5, 2]}, {1.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[1, 2]}, {4.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[3, 2]}, {4.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[5, 2]}, {5.4, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.499123246083254*^9, 3.499123814295703*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.499123246083254*^9, 3.4991239291956787`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[3, 2]}, {0.6000000000000001, 
+        1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[5, 2]}, {0.6000000000000001, 
+        2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[1, 2]}, {2.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[1, 2]}, {5.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[3, 2]}, {4.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[5, 2]}, {5.4, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.499123246083254*^9, 3.499123929229391*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.499123246083254*^9, 3.4991239480967083`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[3, 2]}, {0.6000000000000001, 
+        1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[5, 2]}, {1.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[3, 2]}, {3.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[5, 2]}, {2.6, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[1, 2]}, {4.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[3, 2]}, {4.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[5, 2]}, {5.4, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.499123246083254*^9, 3.4991239481278553`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510328850593451*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[3, 2]}, {0.6000000000000001, 
+        1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[5, 2]}, {0.6000000000000001, 
+        2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[1, 2]}, {2.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[1, 2]}, {4.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[5, 2]}, {5.4, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510328850619258*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.5103288703341007`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[1, 2]}, {0.6000000000000001, 
+        0.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[5, 2]}, {0.6000000000000001, 
+        2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[5, 2]}, {2.6, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[1, 2]}, {5.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[5, 2]}, {5.4, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510328870354656*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.5103288740740356`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[3, 2]}, {0.6000000000000001, 
+        1.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[5, 2]}, {1.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[1, 2]}, {2.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[5, 2]}, {2.6, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[1, 2]}, {4.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[5, 2]}, {5.4, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510328874098732*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510328951757351*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[5, 2]}, {0.6000000000000001, 
+        2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[1, 2]}, {4.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[3, 2]}, {4.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510328951774502*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.5103290878098927`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[5, 2]}, {0.6000000000000001, 
+        2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[1, 2]}, {2.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[5, 2]}, {2.6, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[1, 2]}, {5.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[3, 2]}, {4.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[5, 2]}, {5.4, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510329087834126*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510329162433659*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[3, 2]}, {0.6000000000000001, 
+        1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[5, 2]}, {0.6000000000000001, 
+        2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[1, 2]}, {2.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[3, 2]}, {3.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[5, 2]}, {2.6, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[1, 2]}, {5.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510329162463604*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510329204909137*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[1, 2]}, {0.6000000000000001, 
+        0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[3, 2]}, {0.6000000000000001, 
+        1.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[5, 2]}, {1.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[1, 2]}, {5.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[3, 2]}, {4.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510329204914524*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510329213537154*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[1, 2]}, {0.6000000000000001, 
+        0.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[5, 2]}, {1.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[1, 2]}, {2.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[5, 2]}, {2.6, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[1, 2]}, {5.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510329213560213*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510329245243689*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[3, 2]}, {0.6000000000000001, 
+        1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[5, 2]}, {1.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[3, 2]}, {3.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[5, 2]}, {2.6, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[1, 2]}, {4.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[3, 2]}, {4.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510329245277198*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510329245925415*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[3, 2]}, {0.6000000000000001, 
+        1.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[5, 2]}, {1.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[3, 2]}, {3.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[5, 2]}, {2.6, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[1, 2]}, {4.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.5103292459461393`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510329378001527*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[5, 2]}, {0.6000000000000001, 
+        2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[1, 2]}, {4.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[3, 2]}, {4.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510329378027166*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.554736829846588*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[1, 2]}, {0.6000000000000001, 
+        0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[5, 2]}, {0.6000000000000001, 
+        2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[1, 2]}, {2.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[1, 2]}, {5.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.554736830036133*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.55473687880396*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[1, 2]}, {0.6000000000000001, 
+        0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[3, 2]}, {0.6000000000000001, 
+        1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[5, 2]}, {1.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[1, 2]}, {4.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.554736878825292*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["one single digit", "Section",
+ CellChangeTimes->{{3.499122687988139*^9, 3.499122688278887*^9}, {
+  3.4991232362699623`*^9, 3.4991232404061203`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510329658917129*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[3, 2]}, {0.6000000000000001, 
+        1.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[5, 2]}, {1.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], {}, InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[5, 2]}, {2.6, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[1, 2]}, {5.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510329658946013*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.5103296103969507`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[5, 2]}, {1.4, 2.5}]]}, {{}, InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[1, 2]}, {4.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.510329610424733*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.479245179888229*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[1, 2]}, {1.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[5, 2]}, {0.6000000000000001, 
+        2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[1, 2]}, {2.6, 0.5}]], {}, InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[1, 2]}, {4.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.479245179919919*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.479245227055654*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[1, 2]}, {0.6000000000000001, 
+        0.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[5, 2]}, {1.4, 2.5}]]}, {{}, InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[1, 2]}, {5.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[3, 2]}, {4.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.479245227116729*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4792455047618237`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["8",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[1, 2]}, {0.6000000000000001, 
+        0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[3, 2]}, {0.6000000000000001, 
+        1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[5, 2]}, {1.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], {}, InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[1, 2]}, {4.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.479245504771336*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.479245746652389*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[1, 2]}, {0.6000000000000001, 
+        0.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[5, 2]}, {0.6000000000000001, 
+        2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[3, 2]}, {3.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[5, 2]}, {2.6, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[1, 2]}, {5.4, 0.5}]], {}, InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[5, 2]}, {5.4, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4792457466846237`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4792457565477743`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[1, 2]}, {0.6000000000000001, 
+        0.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[5, 2]}, {1.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[1, 2]}, {3.4, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[5, 2]}, {2.6, 2.5}]]}, {{}, InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[3, 2]}, {5.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.479245756586356*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.479246052744244*^9},
+ ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJztWzGTpDYWxu6e9db+iO3x7a59dwH/oZO7yMUfINlyHWUHV0fZTkjJCMnI
+OiLqqCOiTohISEhICEhICKgyCVUmeCchPYmZEUxDd+J1TxXMFC2evvf09PTp
+U88Pn3/76T///fzbzz9+fvz3L5/tn37+8dfHf/3vF/Jo85WmaX+Qy33UtuRv
+IH+Obn8A+Zn/taW/fqetH0YPtA19AvxH++GKZ5u72bvZu9kvzuwH/qxtKijL
+CtoetO8vNPs43B+g7xqoypK8X0JBrqbttb8vg/G34U4/acHXh7IHTlSpkHzL
+n3V5CDqvkNvhTtvZkHVjk0/f3fFnSWABVtcNv+uWB0nZDi0+rQniFrLAZGat
+I/QA3006+obceqiSA6IATXcga3pVx++H+zvyRg4mNh8uE8I4gyI7g4MxO2Yr
+sfflUVhNWyX2D3y8ASrweIeaEZAhU0fsvWjfQ+zbYBgmuEEEFcmxr8WA1+Ab
+zJZ7rj6uA0+tICI3rufBt3DgHWr7afDfvYiLDUUPHxRNZwB+fJ4Z9olmhqrD
+tQABGvD3rL2fNisBSjctOoNuC1C29+J6JcDxEHtJc1OAXQYWn1SGny4EiJZx
+iHUnUva2Fl12MMWUXz6+nxTjm/egmmdLAX7i7bOjM6pJGoRFp61ESSuLqwtf
+b4ESlwHoWyjSCFxTFyVfs4bZ+KTdhYixxKQ46m6s3QLuDjvucvAsC0xjT97G
+dcqipXlkdyFckgbFq9VsNeK+APvZeqxbPhQc8cLSjmabsoCaL+lbcZdpEmTt
+LbxgXOYN5CEyAx0MywY/PEFWNioiMgP+vQDaQ0h7N0MgPjzwpjil916iHEgJ
+Xpb218HTpEnBGPjHSfvnmnBvoU0DBs0OIMmLDRRFQZAUhBpmR5uHxoFyYsYw
+cvYNlJEHhn2A+HxAkjbrwbe8+8Q32OQ/xZAk8QbiOKZ8La9F04UTdScaiJzR
+3vL0POTdixiqqGbfVhAFg/eEuPDJyIjP0EKV2vgu1GfYv6CpxixNnXEHYco8
+1Ui4mVkjyGbdEWnVCXcI7/RJks0NCgXTQ2TrQy9Yi6xj8aLdQheo2bZt6UVc
+oPcNVuNJFxBmT7YrRdk8eaau+p3o42veR9t1UMYHcMNsaRn9c+3t7mb/smbv
+UuDd7N3sX8jsbrjTGd9BHAZwOJ0hK8pBz/uHov14W1RVJVR1u1Sz2/FnKipC
+5aySt1PRg50w3kMSumDoklmZtg9xwdb2aQmNUlWf9+sQbgcLKbpA0FcoQAle
+6CeNaKdiISjitXUOB3uP3oPpRZQTThOS7UDRUcQ7Ft1C0I84yn0JHt/VGMGJ
+0OyItIyiiLx1Cn22CTCPdM+hiv5HbqYgLB2xa+YBalBzWanO9nBiRJCSzYXg
+kePTre2gV5IcyXvAptDEZKugQ9KqUwblhvIk5QbdiShlnNlEbaGOuZO6Rx1U
+ZdQlwnSTsKiSZCO7BmzaEy6JCsI0X2XT8mhJjYTsWmdByzTR4VT2C0GjlQ53
++3ufzpBpWfQtdJQkozMt+kr13QNNadUuRYqvJCsslhXmIV+IFfW9CofJCqfm
+EGZFnR3B5Fs5VjQewHJdiZlcYd4pt1bYXR27IjSNursLND9UfwwvntmYfyOd
+w0LheuC5zlD2NrzoWGH+7D01clL3uKc6RJXyxOAipa0Gj0sLzqlUzfrdcH8Y
+zh2sEXjnVHD5ni838jCFVIV0Nuw0V3AeEIcXgkcVq0mw8hu0XKgmEoLvskBG
+nh3L8B4eoC/CUfkbFJqZykNy5sxzhm39FwpaY7UZVwAzzKfBb8crK43sFoM+
+ssDzdxa3zJg9nOuluHf8Wd/UUDWdGMgX6ho/CZo+d9tCyuUdepFFFvW8NjuI
+x3s3VlmQeSsLqX0sVvpShBSHN0RO+iJFRd0e1s5ZX2QSknKettIXmXCGn6os
+vEeYXQ1FUYv+n+bYUHcX6hPoHxWdqOzmRKXwr0lGNYhnzZx/XS4HxY1r9G88
+hITAzPnXFQdRi9E/mbt7iJt1/r0dsiA0ObZjSlnu8Cw/BzBikiT+4tVpFvpM
+ZzVZkRAVblz9eJGYdpodxwUGczCIku0goG6hLFNUx8E+lQv9xvWAnnnz4I9O
+BUxxKqACxt59J8kAzYsjX2sI+T2Y8jg5rmeK6QYqTE5txPRZTCZj/Coh3ECT
+R2Cx8IvVUNNtiCtWbVSQkEy2BXkXz6I1XaizewfSup98HT0aja70iAQC1dmF
+Ho1P9+sio+o1nM8xpHk1dewrX+mgzBJI0gzS+AxJVk69gtnQd60QN98IcVNI
+qEvB//k3wXezd7Przd4107vZu9kv1Czyhb5toK5rdjWtSvK8QW870aCGkAmE
+ktkQYuiF8eSpK767RlZ9FP3SXdKzE9uRvrDqDP3dIAztkQuTy3ACiLMc0ijg
+p/wWnKtuWky4Tm7tO8JWudBEL/uYTVGkC77pQMfm6DnguMSJvN7g4zrmm+Xh
+i3Aq8sgwXq3CCoFSsmqqCy7Uz1CEzQ8sXXT3PEuYV6qvQlIcbW/9tFkFdrS3
+1F0qTKrS8UrhFfG2N8FbCc15EJzm1NCLNddrsbHmbPMq93ADvlkJ7gKh9TYA
+mWWys+lKCExZNWYG/VJd9TYAMcXKcwCO54Pv2jAhyM7Ka69LqbfEu4GuziH0
+rCeryt45ia8jqSK7QDq9DVgpVxcQWPyMzDi+9j3cV5TRW2Ym/aQVC4oTzYjg
+16mftwG9Ew06qKtmhGRclS1aJOcUj2ukzxs70iUDazgWvXBEnum+ouxfp3EK
+R0Ya7lpH2KFGZLPox1UvlEOy0rr7p4V52qGbiZqPiIqyE9OEIIrhYAtljLgp
+mi5Uz5nlNyLy9DPLJXWTsKgRQH7QOjSeFiSvETPZ9waqLAJ7VK+v8AzjOFIT
+R3ydjOqMlHiNiol5OLiC/yKRrFsXUEKM4XQ6Ddc5yee/jrBIqMSQDqHPCyDF
+UPn1jC9my3g3ezd7W7NjhXHuv7m1r/4P+LstgQ==\
+\>"]],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["7",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[1, 2]}, {0.6000000000000001, 
+        0.5}]], InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[5, 2]}, {1.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[1, 2]}, {2.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[3, 2]}, {2.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[1, 2]}, {5.4, 0.5}]], {}, InsetBox[
+       TagBox[
+        StyleBox["4",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[5, 2]}, {4.6, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.479246060386039*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}]},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.479246170890436*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{{InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[1, 2]}, {1, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[3, 2]}, {1, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1, Rational[5, 2]}, {1, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[1, 2]}, {3, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[3, 2]}, {3, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3, Rational[5, 2]}, {3, 2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[1, 2]}, {5, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[3, 2]}, {5, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5, Rational[5, 2]}, {5, 2.5}]]}}, 
+    LineBox[{{0, 0}, {0, 3}, {6, 3}, {6, 0}, {0, 0}, {0, 1}, {6, 1}, {6, 2}, {
+     0, 2}, {0, 0}, {2, 0}, {2, 3}, {4, 3}, {4, 0}}], 
+    {RGBColor[1, 0, 0], {InsetBox[
+       TagBox[
+        StyleBox["6",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[1, 2]}, {0.6000000000000001, 
+        0.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{1.4, Rational[3, 2]}, {1.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["1",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{0.6000000000000001, Rational[5, 2]}, {0.6000000000000001, 
+        2.5}]]}, {InsetBox[
+       TagBox[
+        StyleBox["3",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{2.6, Rational[1, 2]}, {2.6, 0.5}]], InsetBox[
+       TagBox[
+        StyleBox["0",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[3, 2]}, {3.4, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["9",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{3.4, Rational[5, 2]}, {3.4, 2.5}]]}, {{}, InsetBox[
+       TagBox[
+        StyleBox["2",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{4.6, Rational[3, 2]}, {4.6, 1.5}]], InsetBox[
+       TagBox[
+        StyleBox["5",
+         FontSize->20],
+        StyleForm[#, FontSize -> 20]& ], 
+       NCache[{5.4, Rational[5, 2]}, {5.4, 2.5}]]}}},
+   ImageSize->200],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.47924617095956*^9}]
+}, Open  ]]
+}, Closed]]
+},
+WindowSize->{1001, 860},
+WindowMargins->{{402, Automatic}, {28, Automatic}},
+ShowSelection->True,
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.5, 1.5 Inherited],
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 1743, 53, 479, "Print"],
+Cell[2313, 77, 3166, 96, 479, "Print"]
+}, Open  ]],
+Cell[5494, 176, 2489, 66, 157, "Input"],
+Cell[7986, 244, 4963, 130, 272, "Input"],
+Cell[12952, 376, 927, 25, 111, "Input"],
+Cell[13882, 403, 598, 19, 42, "Input"],
+Cell[14483, 424, 3338, 90, 249, "Input"],
+Cell[17824, 516, 5936, 147, 501, "Input"],
+Cell[23763, 665, 6072, 149, 478, "Input"],
+Cell[CellGroupData[{
+Cell[29860, 818, 203, 3, 100, "Section"],
+Cell[CellGroupData[{
+Cell[30088, 825, 1763, 53, 168, "Print"],
+Cell[31854, 880, 3312, 100, 168, "Print"],
+Cell[35169, 982, 1765, 53, 168, "Print"],
+Cell[36937, 1037, 3310, 100, 168, "Print"],
+Cell[40250, 1139, 1763, 53, 168, "Print"],
+Cell[42016, 1194, 3309, 100, 168, "Print"],
+Cell[45328, 1296, 1762, 53, 168, "Print"],
+Cell[47093, 1351, 3310, 100, 168, "Print"],
+Cell[50406, 1453, 1765, 53, 168, "Print"],
+Cell[52174, 1508, 3310, 100, 168, "Print"],
+Cell[55487, 1610, 1765, 53, 168, "Print"],
+Cell[57255, 1665, 3349, 101, 168, "Print"],
+Cell[60607, 1768, 1765, 53, 168, "Print"],
+Cell[62375, 1823, 3312, 100, 168, "Print"],
+Cell[65690, 1925, 1741, 53, 168, "Print"],
+Cell[67434, 1980, 3327, 101, 168, "Print"],
+Cell[70764, 2083, 1743, 53, 262, "Print"],
+Cell[72510, 2138, 3327, 101, 262, "Print"],
+Cell[75840, 2241, 1743, 53, 262, "Print"],
+Cell[77586, 2296, 3288, 100, 262, "Print"],
+Cell[80877, 2398, 1741, 53, 262, "Print"],
+Cell[82621, 2453, 3288, 100, 262, "Print"],
+Cell[85912, 2555, 1743, 53, 262, "Print"],
+Cell[87658, 2610, 3288, 100, 262, "Print"],
+Cell[90949, 2712, 1741, 53, 262, "Print"],
+Cell[92693, 2767, 3327, 101, 262, "Print"],
+Cell[96023, 2870, 1741, 53, 262, "Print"],
+Cell[97767, 2925, 3327, 101, 262, "Print"],
+Cell[101097, 3028, 1741, 53, 262, "Print"],
+Cell[102841, 3083, 3288, 100, 262, "Print"],
+Cell[106132, 3185, 1741, 53, 262, "Print"],
+Cell[107876, 3240, 3288, 100, 262, "Print"],
+Cell[111167, 3342, 1741, 53, 168, "Print"],
+Cell[112911, 3397, 3290, 100, 168, "Print"],
+Cell[116204, 3499, 1741, 53, 168, "Print"],
+Cell[117948, 3554, 3288, 100, 168, "Print"],
+Cell[121239, 3656, 1741, 53, 168, "Print"],
+Cell[122983, 3711, 3327, 101, 168, "Print"],
+Cell[126313, 3814, 1740, 53, 168, "Print"],
+Cell[128056, 3869, 3327, 101, 168, "Print"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[131432, 3976, 154, 2, 53, "Section"],
+Cell[CellGroupData[{
+Cell[131611, 3982, 1741, 53, 168, "Print"],
+Cell[133355, 4037, 3128, 95, 168, "Print"],
+Cell[136486, 4134, 1743, 53, 168, "Print"],
+Cell[138232, 4189, 3089, 94, 168, "Print"],
+Cell[141324, 4285, 1741, 53, 168, "Print"],
+Cell[143068, 4340, 3128, 95, 168, "Print"],
+Cell[146199, 4437, 1741, 53, 168, "Print"],
+Cell[147943, 4492, 3128, 95, 168, "Print"],
+Cell[151074, 4589, 1743, 53, 168, "Print"],
+Cell[152820, 4644, 3167, 96, 168, "Print"],
+Cell[155990, 4742, 1741, 53, 168, "Print"],
+Cell[157734, 4797, 3169, 96, 168, "Print"],
+Cell[160906, 4895, 1743, 53, 168, "Print"],
+Cell[162652, 4950, 3128, 95, 168, "Print"],
+Cell[165783, 5047, 4829, 105, 168, 1699, 52, "CachedBoxData", "BoxData", \
+"Print"],
+Cell[170615, 5154, 3128, 95, 168, "Print"],
+Cell[173746, 5251, 1741, 53, 168, "Print"],
+Cell[175490, 5306, 3166, 96, 168, "Print"]
+}, Open  ]]
+}, Closed]]
+}
+]
+*)
+
+(* End of internal cache information *)

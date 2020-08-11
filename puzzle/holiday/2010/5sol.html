@@ -1,0 +1,14 @@
+<HTML>
+<font size=+2>
+First trip: send elf A to workshop #1, elf B to workshop #2, and elf C to workshop #3.<br>
+Second trip: send elf B to workshop #1, elf C to workshop #2, and elf A to workshop #3.<p>
+If 2 elves agree that a workshop has lost power, it has and we are done.<br>
+If no elf says a workshop has lost power, then they are all telling the truth.<br>
+ &nbsp; In this case, for the third trip, send all 3 elves to workshop #4 for a majority vote.<br>
+If the elves disagree about 2 different workshops, the elf that visited both has lied twice.<br>
+ &nbsp; In this case, for the third trip, send a truthful elf to visit workshop #4.<br>
+The hardest case is when the elves only disagree about one workshop, say workshop #1.<br>
+ &nbsp; In this case, send the elf who has not yet visited workshop #1 to visit it,<br>
+ &nbsp; &nbsp; and send the other two elves to workshop #4 and workshop #5.<br>
+ &nbsp; The answer from the first elf will tell you which answer from the other two you can trust.
+

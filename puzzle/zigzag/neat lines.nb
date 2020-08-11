@@ -1,0 +1,205 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      6892,        162]*)
+(*NotebookOutlinePosition[      7530,        184]*)
+(*  CellTagsIndexPosition[      7486,        180]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell[BoxData[
+    \(\(r := Random[Integer, {1, size}];\)\)], "Input"],
+
+Cell[BoxData[
+    \(cr[{x1_, y1_}, {x2_, y2_}, {x3_, y3_}, {x4_, y4_}] := 
+      Module[{g, h}, 
+        g[x_, y_] := \((y - y1)\)\ \((x2 - x1)\) - \((y2 - y1)\) \((x - 
+                  x1)\); \[IndentingNewLine]h[x_, 
+            y_] := \((y - y3)\)\ \((x4 - x3)\) - \((y4 - y3)\) \((x - 
+                  x3)\); \[IndentingNewLine]\((g[x3, y3]*g[x4, y4] <= 
+              0)\) && \((h[x1, y1]*h[x2, y2] <= 0)\)]\)], "Input"],
+
+Cell[BoxData[
+    \(crany[L_] := 
+      Module[{}, 
+        l2 = Last[L]; \[IndentingNewLine]l1 = 
+          L[\([\(-2\)]\)]; \[IndentingNewLine]dy = \((l2[\([2]\)] - 
+              l1[\([2]\)])\); \[IndentingNewLine]dx = \((l2[\([1]\)] - 
+              l1[\([1]\)])\); \[IndentingNewLine]len = 
+          Length[L]; \[IndentingNewLine]Not[
+            Apply[Or, 
+              Table[cr[L[\([i]\)], L[\([i + 1]\)], l1, l2], {i, 1, 
+                  len - 3}]]] && \((Abs[dy] =!= Abs[dx])\) && \((dx*dy =!= 
+              0)\)]\)], "Input"],
+
+Cell[BoxData[
+    \(pic := 
+      Module[{}, 
+        Map[Show[
+              Graphics[{GrayLevel[ .8], 
+                  Table[Line[{{i, 1}, {i, size}}], {i, 1, size}], 
+                  Table[Line[{{1, i}, {size, i}}], {i, 1, size}], 
+                  GrayLevel[1], Map[Disk[#,  .3] &, #], GrayLevel[0], 
+                  Map[Circle[#,  .3] &, #], 
+                  Text[StyleForm["\<S\>", FontSize \[Rule] 20], p]}], 
+              AspectRatio \[Rule] Automatic, ImageSize \[Rule] 30\ size, 
+              PlotRange \[Rule] {{1/2, size + 1/2}, {1/2, size + 1/2}}] &, 
+          s]; \[IndentingNewLine]Map[
+          Show[Graphics[{GrayLevel[ .8], 
+                  Table[Line[{{i, 1}, {i, size}}], {i, 1, size}], 
+                  Table[Line[{{1, i}, {size, i}}], {i, 1, size}], 
+                  GrayLevel[1], Map[Disk[#,  .3] &, #], GrayLevel[0], 
+                  Map[Circle[#,  .3] &, #], AbsoluteThickness[2], Line[#]}], 
+              AspectRatio \[Rule] Automatic, ImageSize \[Rule] 30\ size, 
+              PlotRange \[Rule] {{1/2, size + 1/2}, {1/2, size + 1/2}}] &, 
+          s];]\)], "Input"],
+
+Cell[BoxData[
+    \(picc := 
+      Module[{}, 
+        Map[Show[
+              Graphics[{GrayLevel[ .8], 
+                  Table[Line[{{i, 1}, {i, size}}], {i, 1, size}], 
+                  Table[Line[{{1, i}, {size, i}}], {i, 1, size}], 
+                  GrayLevel[1], Map[Disk[#,  .3] &, #], GrayLevel[0], 
+                  Map[Circle[#,  .3] &, #], 
+                  Text[StyleForm["\<S\>", FontSize \[Rule] 20], p1], 
+                  Text[StyleForm["\<F\>", FontSize \[Rule] 20], p2]}], 
+              AspectRatio \[Rule] Automatic, ImageSize \[Rule] 30\ size, 
+              PlotRange \[Rule] {{1/2, size + 1/2}, {1/2, size + 1/2}}] &, 
+          s]; \[IndentingNewLine]Map[
+          Show[Graphics[{GrayLevel[ .8], 
+                  Table[Line[{{i, 1}, {i, size}}], {i, 1, size}], 
+                  Table[Line[{{1, i}, {size, i}}], {i, 1, size}], 
+                  GrayLevel[1], Map[Disk[#,  .3] &, #], GrayLevel[0], 
+                  Map[Circle[#,  .3] &, #], AbsoluteThickness[2], Line[#]}], 
+              AspectRatio \[Rule] Automatic, ImageSize \[Rule] 30\ size, 
+              PlotRange \[Rule] {{1/2, size + 1/2}, {1/2, size + 1/2}}] &, 
+          s];]\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(While[
+      0 \[Equal] 0, \[IndentingNewLine]n = 14; \[IndentingNewLine]size = 
+        8; \[IndentingNewLine]pts = {{1, r}, {r, 1}, {size, r}, {r, 
+            size}}; \[IndentingNewLine]While[Length[pts] < n, 
+        t = {r, r}; \[IndentingNewLine]While[MemberQ[pts, t], 
+          t = {r, r}]; \[IndentingNewLine]AppendTo[pts, 
+          t]]; \[IndentingNewLine]A = 
+        Map[List, 
+          pts]; \[IndentingNewLine]solns = {}; \[IndentingNewLine]While[
+        Length[A] > 0, 
+        path = First[A]; \[IndentingNewLine]A = 
+          Rest[A]; \[IndentingNewLine]pos = 
+          Map[Append[path, #] &, 
+            Complement[pts, path]]; \[IndentingNewLine]new = 
+          Select[pos, crany]; \[IndentingNewLine]A = 
+          A~Join~new; \[IndentingNewLine]If[new =!= {}, 
+          If[Length[new[\([1]\)]] \[Equal] n, 
+            solns = solns~Join~new]]]; \[IndentingNewLine]For[j = 1, 
+        j \[LessEqual] n, \(j++\), 
+        p = pts[\([j]\)]; \[IndentingNewLine]s = 
+          Select[solns, First[#] \[Equal] p &]; \[IndentingNewLine]If[
+          Length[s] \[Equal] 1, \(pic;\)]]; \[IndentingNewLine] (*\(For[
+            j = 1, j \[LessEqual] n, \(j++\), 
+            p1 = pts[\([j]\)]; \[IndentingNewLine]For[k = 1, 
+              k \[LessEqual] n, \(k++\), 
+              p2 = pts[\([k]\)]; \[IndentingNewLine]s = 
+                Select[solns, 
+                  First[#] \[Equal] p1 && 
+                      Last[#] \[Equal] p2 &]; \[IndentingNewLine]If[
+                Length[s] \[Equal] 1, \(picc;\)]]];\)*) \[IndentingNewLine]If[
+        solns =!= {}, 
+        Print["\<===================================================\>"]]]\)],\
+ "Input"],
+
+Cell[BoxData[
+    \($Aborted\)], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for Macintosh",
+ScreenRectangle->{{0, 1440}, {0, 826}},
+WindowSize->{620, 713},
+WindowMargins->{{Automatic, 405}, {Automatic, 25}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1754, 51, 69, 1, 43, "Input"],
+Cell[1826, 54, 429, 7, 91, "Input"],
+Cell[2258, 63, 540, 11, 139, "Input"],
+Cell[2801, 76, 1116, 20, 331, "Input"],
+Cell[3920, 98, 1188, 21, 347, "Input"],
+
+Cell[CellGroupData[{
+Cell[5133, 123, 1698, 33, 427, "Input"],
+Cell[6834, 158, 42, 1, 27, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

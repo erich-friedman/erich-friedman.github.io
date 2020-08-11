@@ -1,0 +1,4063 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[    172234,       4054]
+NotebookOptionsPosition[    166407,       3903]
+NotebookOutlinePosition[    166868,       3921]
+CellTagsIndexPosition[    166825,       3918]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 2.25}, {0.25, 2.75}, {0.75, 2.75}, {0.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 4.25}, {0.25, 4.75}, {0.75, 4.75}, {0.75, 
+        4.25}}]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 0.25}, {1.25, 0.75}, {1.75, 0.75}, {1.75, 
+        0.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, {}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{2.5, 0.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 1.2}, {2.8, 1.2}, {2.5, 1.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 2.25}, {2.25, 2.75}, {2.75, 2.75}, {2.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 4.5}, 0.3]}}, {
+      {Hue[0.35, 0.5], DiskBox[{3.5, 0.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 1.2}, {3.8, 1.2}, {3.5, 1.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 2.25}, {3.25, 2.75}, {3.75, 2.75}, {3.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 3.2}, {3.8, 3.2}, {3.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 0.25}, {4.25, 0.75}, {4.75, 0.75}, {4.75, 
+        0.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 1.5}, 0.3]}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 4.25}, {4.25, 4.75}, {4.75, 4.75}, {4.75, 
+        4.25}}]}}}},
+   ImageSize->{69.33333333333317, Automatic}],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484255621272891*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"poss", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Outer", "[", 
+      RowBox[{"List", ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", "3"}], "]"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", "3"}], "]"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", "3"}], "]"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", "3"}], "]"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", "3"}], "]"}]}], "]"}], ",", "4"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.4842342544302263`*^9, 3.484234286601026*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"poss", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Outer", "[", 
+      RowBox[{"List", ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", "3"}], "]"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", "3"}], "]"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", "3"}], "]"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", "3"}], "]"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", "3"}], "]"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", "3"}], "]"}]}], "]"}], ",", "5"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.4842342544302263`*^9, 3.484234286601026*^9}, {
+   3.515343902990419*^9, 3.5153439056925907`*^9}, 3.5153441522303753`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"symmetric", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"poss", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"sym", "[", "#", "]"}], "\[Equal]", 
+       RowBox[{"Reverse", "[", 
+        RowBox[{"sym", "[", "#", "]"}], "]"}]}], "&"}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.484234295649723*^9, 3.484234299474532*^9}, {
+   3.484234336309717*^9, 3.484234354292679*^9}, {3.484234388782124*^9, 
+   3.484234406167226*^9}, {3.4842344379279222`*^9, 3.48423447001719*^9}, 
+   3.4842388530494204`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", "A_", "]"}], ":=", 
+  RowBox[{"Select", "[", 
+   RowBox[{"symmetric", ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"A", "*", 
+       RowBox[{"(", 
+        RowBox[{"A", "-", "#"}], ")"}]}], "\[Equal]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}]}], 
+     "&"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.484244902268819*^9, 3.484244957870173*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", "A_", "]"}], ":=", 
+  RowBox[{"Select", "[", 
+   RowBox[{"symmetric", ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"A", "+", "1"}], ")"}], "*", 
+       RowBox[{"(", 
+        RowBox[{"A", "-", "#"}], ")"}]}], "\[Equal]", 
+      RowBox[{"Table", "[", 
+       RowBox[{"0", ",", 
+        RowBox[{"{", "dim", "}"}]}], "]"}]}], "&"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.484244902268819*^9, 3.484244957870173*^9}, {
+  3.515341814941998*^9, 3.51534184696552*^9}, {3.515342016106668*^9, 
+  3.515342075124468*^9}, {3.51534393629467*^9, 3.5153439402203827`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sym", "[", "L_", "]"}], ":=", 
+  RowBox[{"Select", "[", 
+   RowBox[{"L", ",", 
+    RowBox[{
+     RowBox[{"#", ">", "0"}], "&"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.484234415349393*^9, 3.484234427847024*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"symQ", "[", "L_", "]"}], ":=", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"sym", "[", "L", "]"}], "\[Equal]", 
+    RowBox[{"Reverse", "[", 
+     RowBox[{"sym", "[", "L", "]"}], "]"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.484239679048655*^9, 3.4842397051070557`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"shape", "[", 
+   RowBox[{
+    RowBox[{"-", "1"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x_", ",", "y_"}], "}"}]}], "]"}], ":=", 
+  RowBox[{"{", "}"}]}]], "Input",
+ CellChangeTimes->{{3.4842422686486807`*^9, 3.484242276981717*^9}, {
+  3.515343033373246*^9, 3.515343033467576*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"shape", "[", 
+   RowBox[{"0", ",", 
+    RowBox[{"{", 
+     RowBox[{"x_", ",", "y_"}], "}"}]}], "]"}], ":=", 
+  RowBox[{"{", "}"}]}]], "Input",
+ CellChangeTimes->{{3.4842422686486807`*^9, 3.484242276981717*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"shape", "[", 
+   RowBox[{"1", ",", 
+    RowBox[{"{", 
+     RowBox[{"x_", ",", "y_"}], "}"}]}], "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Hue", "[", 
+     RowBox[{"0", ",", ".5"}], "]"}], ",", 
+    RowBox[{"Polygon", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "+", ".25"}], ",", 
+         RowBox[{"y", "+", ".25"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "+", ".25"}], ",", 
+         RowBox[{"y", "+", ".75"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "+", ".75"}], ",", 
+         RowBox[{"y", "+", ".75"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "+", ".75"}], ",", 
+         RowBox[{"y", "+", ".25"}]}], "}"}]}], "}"}], "]"}]}], 
+   "}"}]}]], "Input",
+ CellChangeTimes->{{3.484168835117559*^9, 3.4841690205014544`*^9}, {
+  3.484170179369515*^9, 3.484170180377572*^9}, {3.484241907031849*^9, 
+  3.484241927471374*^9}, {3.48424196604642*^9, 3.484241973398767*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"shape", "[", 
+   RowBox[{"2", ",", 
+    RowBox[{"{", 
+     RowBox[{"x_", ",", "y_"}], "}"}]}], "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Hue", "[", 
+     RowBox[{".35", ",", ".5"}], "]"}], ",", 
+    RowBox[{"Disk", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"x", "+", ".5"}], ",", 
+        RowBox[{"y", "+", ".5"}]}], "}"}], ",", ".3"}], "]"}]}], 
+   "}"}]}]], "Input",
+ CellChangeTimes->{{3.484168835117559*^9, 3.4841690205014544`*^9}, {
+  3.484170179369515*^9, 3.484170180377572*^9}, {3.484241907031849*^9, 
+  3.4842419831653748`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"shape", "[", 
+   RowBox[{"3", ",", 
+    RowBox[{"{", 
+     RowBox[{"x_", ",", "y_"}], "}"}]}], "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Hue", "[", 
+     RowBox[{".6", ",", ".5"}], "]"}], ",", 
+    RowBox[{"Polygon", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "+", ".2"}], ",", 
+         RowBox[{"y", "+", ".2"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "+", ".8"}], ",", 
+         RowBox[{"y", "+", ".2"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "+", ".5"}], ",", 
+         RowBox[{"y", "+", ".8"}]}], "}"}]}], "}"}], "]"}]}], 
+   "}"}]}]], "Input",
+ CellChangeTimes->{{3.484168835117559*^9, 3.4841690205014544`*^9}, {
+   3.484170179369515*^9, 3.484170180377572*^9}, {3.484241907031849*^9, 
+   3.484242017231929*^9}, 3.4842421345974827`*^9, {3.4842421649664593`*^9, 
+   3.484242170012622*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"shape", "[", 
+   RowBox[{"1", ",", 
+    RowBox[{"{", 
+     RowBox[{"x_", ",", "y_"}], "}"}]}], "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"GrayLevel", "[", ".7", "]"}], ",", 
+    RowBox[{"Polygon", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "+", ".25"}], ",", 
+         RowBox[{"y", "+", ".25"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "+", ".25"}], ",", 
+         RowBox[{"y", "+", ".75"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "+", ".75"}], ",", 
+         RowBox[{"y", "+", ".75"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "+", ".75"}], ",", 
+         RowBox[{"y", "+", ".25"}]}], "}"}]}], "}"}], "]"}]}], 
+   "}"}]}]], "Input",
+ CellChangeTimes->{{3.484168835117559*^9, 3.4841690205014544`*^9}, {
+   3.484170179369515*^9, 3.484170180377572*^9}, {3.484241907031849*^9, 
+   3.484241927471374*^9}, {3.48424196604642*^9, 3.484241973398767*^9}, {
+   3.515325298702423*^9, 3.515325326475615*^9}, 3.515325523005125*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"shape", "[", 
+   RowBox[{"2", ",", 
+    RowBox[{"{", 
+     RowBox[{"x_", ",", "y_"}], "}"}]}], "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{"Disk", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x", "+", ".5"}], ",", 
+       RowBox[{"y", "+", ".5"}]}], "}"}], ",", ".3"}], "]"}], 
+   "}"}]}]], "Input",
+ CellChangeTimes->{{3.484168835117559*^9, 3.4841690205014544`*^9}, {
+   3.484170179369515*^9, 3.484170180377572*^9}, {3.484241907031849*^9, 
+   3.4842419831653748`*^9}, 3.515325286359057*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"shape", "[", 
+   RowBox[{"3", ",", 
+    RowBox[{"{", 
+     RowBox[{"x_", ",", "y_"}], "}"}]}], "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{"Line", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"x", "+", ".2"}], ",", 
+        RowBox[{"y", "+", ".2"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"x", "+", ".8"}], ",", 
+        RowBox[{"y", "+", ".2"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"x", "+", ".5"}], ",", 
+        RowBox[{"y", "+", ".8"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"x", "+", ".2"}], ",", 
+        RowBox[{"y", "+", ".2"}]}], "}"}]}], "}"}], "]"}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.484168835117559*^9, 3.4841690205014544`*^9}, {
+   3.484170179369515*^9, 3.484170180377572*^9}, {3.484241907031849*^9, 
+   3.484242017231929*^9}, 3.4842421345974827`*^9, {3.4842421649664593`*^9, 
+   3.484242170012622*^9}, {3.5153253319021*^9, 3.515325332411141*^9}, {
+   3.51532550517525*^9, 3.515325505557803*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pic", "[", "L_", "]"}], ":=", 
+  RowBox[{"Style", "[", 
+   RowBox[{
+    RowBox[{"Graphics", "[", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Line", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "i"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"dim", ",", "i"}], "}"}]}], "}"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "0", ",", "dim"}], "}"}]}], "]"}], ",", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Line", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"i", ",", "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "dim"}], "}"}]}], "}"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "0", ",", "dim"}], "}"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"MapIndexed", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"shape", "[", 
+            RowBox[{"#1", ",", 
+             RowBox[{"#2", "-", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "1"}], "}"}]}]}], "]"}], "&"}], ",", "L", 
+          ",", 
+          RowBox[{"{", "2", "}"}]}], "]"}]}], "\[IndentingNewLine]", "}"}], 
+      ",", 
+      RowBox[{"ImageSize", "\[Rule]", 
+       RowBox[{"20", "dim"}]}]}], "]"}], ",", 
+    RowBox[{"Antialiasing", "\[Rule]", "False"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.484241813798411*^9, 3.484241886500605*^9}, {
+  3.484242024113265*^9, 3.484242054595951*^9}, {3.4842421209832783`*^9, 
+  3.484242122463649*^9}, {3.484242285324687*^9, 3.484242288282486*^9}, {
+  3.5153438552558527`*^9, 3.515343866540091*^9}, {3.5153439505988817`*^9, 
+  3.5153439517587423`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dim", "=", "6"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"initialize", ":=", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"A", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", 
+       RowBox[{"{", "dim", "}"}], ",", 
+       RowBox[{"{", "dim", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"For", "[", 
+     RowBox[{
+      RowBox[{"n", "=", "1"}], ",", 
+      RowBox[{"n", "\[LessEqual]", "5"}], ",", 
+      RowBox[{"n", "++"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"m", "=", "1"}], ",", 
+        RowBox[{"m", "\[LessEqual]", "3"}], ",", 
+        RowBox[{"m", "++"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"r", "=", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"RandomInteger", "[", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", "dim"}], "}"}], "]"}], ",", 
+            RowBox[{"RandomInteger", "[", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", "dim"}], "}"}], "]"}]}], "}"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"While", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Extract", "[", 
+             RowBox[{"A", ",", "r"}], "]"}], ">", "0"}], ",", 
+           RowBox[{"r", "=", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"RandomInteger", "[", 
+               RowBox[{"{", 
+                RowBox[{"1", ",", "dim"}], "}"}], "]"}], ",", 
+              RowBox[{"RandomInteger", "[", 
+               RowBox[{"{", 
+                RowBox[{"1", ",", "dim"}], "}"}], "]"}]}], "}"}]}]}], "]"}], 
+         ";", "\[IndentingNewLine]", 
+         RowBox[{"A", "=", 
+          RowBox[{"ReplacePart", "[", 
+           RowBox[{"A", ",", 
+            RowBox[{"r", "\[Rule]", "m"}]}], "]"}]}]}]}], "]"}]}], "]"}], 
+    ";"}], ")"}]}]}], "Input",
+ CellChangeTimes->{{3.484244325402074*^9, 3.484244339269747*^9}, {
+   3.515343010264502*^9, 3.5153430103905373`*^9}, {3.515343827920383*^9, 
+   3.515343846277197*^9}, {3.515343955004901*^9, 3.5153439685205936`*^9}, {
+   3.515344136448674*^9, 3.5153441613268538`*^9}, 3.515344791624591*^9, 
+   3.515344928744728*^9, 3.5153449716007223`*^9, {3.515347748647316*^9, 
+   3.5153477561765127`*^9}, {3.5153480600552673`*^9, 3.515348063831258*^9}, 
+   3.515542781455187*^9, 3.515542846495386*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"initialize", ";", 
+  RowBox[{"pic", "[", "A", "]"}]}]], "Input",
+ CellChangeTimes->{{3.51534040412015*^9, 3.515340419194887*^9}}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {6, 0}}], LineBox[{{0, 1}, {6, 1}}], 
+     LineBox[{{0, 2}, {6, 2}}], LineBox[{{0, 3}, {6, 3}}], 
+     LineBox[{{0, 4}, {6, 4}}], LineBox[{{0, 5}, {6, 5}}], 
+     LineBox[{{0, 6}, {6, 6}}]}, {LineBox[{{0, 0}, {0, 6}}], 
+     LineBox[{{1, 0}, {1, 6}}], LineBox[{{2, 0}, {2, 6}}], 
+     LineBox[{{3, 0}, {3, 6}}], LineBox[{{4, 0}, {4, 6}}], 
+     LineBox[{{5, 0}, {5, 6}}], LineBox[{{6, 0}, {6, 6}}]}, {{
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 0.25}, {0.25, 0.75}, {0.75, 0.75}, {0.75, 
+        0.25}}]}, {}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 4.5}, 0.3]}, {}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 3.2}, {1.8, 3.2}, {1.5, 3.8}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 5.5}, 0.3]}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 2.25}, {2.25, 2.75}, {2.75, 2.75}, {2.75, 
+        2.25}}]}, {}, {}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 0.25}, {3.25, 0.75}, {3.75, 0.75}, {3.75, 
+        0.25}}]}, {}, {}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{3.2, 4.2}, {3.8, 4.2}, {3.5, 4.8}}]}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 1.25}, {4.25, 1.75}, {4.75, 1.75}, {4.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{4.2, 2.2}, {4.8, 2.2}, {4.5, 2.8}}]}, {}, {}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{5.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 1.25}, {5.25, 1.75}, {5.75, 1.75}, {5.75, 
+        1.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{5.5, 3.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{5.2, 5.2}, {5.8, 5.2}, {5.5, 5.8}}]}}}},
+   ImageSize->120],
+  StripOnInput->False,
+  Antialiasing->False]], "Output",
+ CellChangeTimes->{{3.5153404200206842`*^9, 3.515340429447432*^9}, {
+   3.5153430168665667`*^9, 3.515343036943451*^9}, {3.5153439589252787`*^9, 
+   3.5153439708423243`*^9}, 3.515344144552499*^9, 3.5153447935916862`*^9, 
+   3.515344930770419*^9, 3.51534497346106*^9, 3.515346203460837*^9, {
+   3.51534775295677*^9, 3.515347758820241*^9}, 3.5153480657115726`*^9, 
+   3.51553564231434*^9, 3.5155427889957438`*^9, 3.515542849511238*^9, {
+   3.566745895926835*^9, 3.56674591704277*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"allsolns", "[", "A_", "]"}], ":=", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"q", "=", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{"Outer", "[", 
+        RowBox[{"List", ",", 
+         RowBox[{"Apply", "[", 
+          RowBox[{"Sequence", ",", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{"f", "[", 
+              RowBox[{"A", "[", 
+               RowBox[{"[", "n", "]"}], "]"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"n", ",", "1", ",", "5"}], "}"}]}], "]"}]}], "]"}], ",",
+          "1"}], "]"}], ",", "4"}], "]"}]}], ";", "\n", 
+    RowBox[{"qt", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{"Transpose", ",", "q"}], "]"}]}], ";", "\n", 
+    RowBox[{"Map", "[", 
+     RowBox[{"Transpose", ",", 
+      RowBox[{"Select", "[", 
+       RowBox[{"qt", ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"symQ", "[", 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "&&", 
+          RowBox[{"symQ", "[", 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "]"}], "&&", 
+          RowBox[{"symQ", "[", 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "]"}], "&&", 
+          RowBox[{"symQ", "[", 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "4", "]"}], "]"}], "]"}], "&&", 
+          RowBox[{"symQ", "[", 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "5", "]"}], "]"}], "]"}]}], "&"}]}], "]"}]}], 
+     "]"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.484246350976468*^9, 3.484246413114739*^9}, {
+  3.4842464891593847`*^9, 3.48424650148737*^9}, {3.484246811332635*^9, 
+  3.484246821483172*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"allsolns", "[", "A_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"stac", "=", 
+      RowBox[{"{", "A", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"solns", "=", 
+      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Length", "[", "stac", "]"}], ">", "0"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"top", "=", 
+         RowBox[{"First", "[", "stac", "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"stac", "=", 
+         RowBox[{"Rest", "[", "stac", "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"o1", "=", 
+         RowBox[{"Min", "[", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"Length", "[", 
+             RowBox[{"f", "[", 
+              RowBox[{"top", "[", 
+               RowBox[{"[", "kkk", "]"}], "]"}], "]"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"kkk", ",", "1", ",", "dim"}], "}"}]}], "]"}], "]"}]}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{"o2", "=", 
+         RowBox[{"Min", "[", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"Length", "[", 
+             RowBox[{"f", "[", 
+              RowBox[{
+               RowBox[{"Transpose", "[", "top", "]"}], "[", 
+               RowBox[{"[", "kkk", "]"}], "]"}], "]"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"kkk", ",", "1", ",", "dim"}], "}"}]}], "]"}], "]"}]}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"o1", "\[Equal]", "0"}], "||", 
+           RowBox[{"o2", "\[Equal]", "0"}]}], ",", 
+          RowBox[{"Return", "[", 
+           RowBox[{"{", "}"}], "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"o1", "<", "o2"}], ",", 
+          RowBox[{
+           RowBox[{"order", "=", 
+            RowBox[{
+             RowBox[{"Transpose", "[", 
+              RowBox[{"Sort", "[", 
+               RowBox[{"Table", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Length", "[", 
+                    RowBox[{"f", "[", 
+                    RowBox[{"top", "[", 
+                    RowBox[{"[", "kkk", "]"}], "]"}], "]"}], "]"}], ",", 
+                   "kkk"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"kkk", ",", "1", ",", "dim"}], "}"}]}], "]"}], 
+               "]"}], "]"}], "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], ";", 
+           RowBox[{"ord", "=", "1"}]}], ",", 
+          RowBox[{
+           RowBox[{"order", "=", 
+            RowBox[{
+             RowBox[{"Transpose", "[", 
+              RowBox[{"Sort", "[", 
+               RowBox[{"Table", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Length", "[", 
+                    RowBox[{"f", "[", 
+                    RowBox[{
+                    RowBox[{"Transpose", "[", "top", "]"}], "[", 
+                    RowBox[{"[", "kkk", "]"}], "]"}], "]"}], "]"}], ",", 
+                   "kkk"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"kkk", ",", "1", ",", "dim"}], "}"}]}], "]"}], 
+               "]"}], "]"}], "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], ";", 
+           RowBox[{"ord", "=", "2"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"z", "=", 
+         RowBox[{"Sort", "[", 
+          RowBox[{
+           RowBox[{"Position", "[", 
+            RowBox[{"top", ",", 
+             RowBox[{"-", "1"}]}], "]"}], ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Position", "[", 
+               RowBox[{"order", ",", 
+                RowBox[{"#1", "[", 
+                 RowBox[{"[", "ord", "]"}], "]"}]}], "]"}], "[", 
+              RowBox[{"[", 
+               RowBox[{"1", ",", "1"}], "]"}], "]"}], "<", 
+             RowBox[{
+              RowBox[{"Position", "[", 
+               RowBox[{"order", ",", 
+                RowBox[{"#2", "[", 
+                 RowBox[{"[", "ord", "]"}], "]"}]}], "]"}], "[", 
+              RowBox[{"[", 
+               RowBox[{"1", ",", "1"}], "]"}], "]"}]}], "&"}]}], "]"}]}], ";",
+         "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"z", "\[Equal]", 
+           RowBox[{"{", "}"}]}], ",", 
+          RowBox[{"AppendTo", "[", 
+           RowBox[{"solns", ",", "top"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"pos", "=", 
+            RowBox[{"First", "[", "z", "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"new", "=", 
+            RowBox[{"Select", "[", 
+             RowBox[{
+              RowBox[{"Table", "[", 
+               RowBox[{
+                RowBox[{"ReplacePart", "[", 
+                 RowBox[{"top", ",", 
+                  RowBox[{"pos", "\[Rule]", "h"}]}], "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"h", ",", "0", ",", "3"}], "}"}]}], "]"}], ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Length", "[", 
+                  RowBox[{"f", "[", 
+                   RowBox[{"#", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"pos", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}], "]"}], 
+                  "]"}], ">", "0"}], "&&", 
+                RowBox[{
+                 RowBox[{"Length", "[", 
+                  RowBox[{"f", "[", 
+                   RowBox[{
+                    RowBox[{"Transpose", "[", "#", "]"}], "[", 
+                    RowBox[{"[", 
+                    RowBox[{"pos", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], "]"}], 
+                  "]"}], ">", "0"}]}], "&"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"stac", "=", 
+            RowBox[{"new", "~", "Join", "~", "stac"}]}]}]}], "]"}]}]}], "]"}],
+      ";", 
+     RowBox[{"Print", "[", 
+      RowBox[{"Length", "[", "solns", "]"}], "]"}], ";", "solns"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.515340942812414*^9, 3.515341082247429*^9}, {
+   3.515341156167789*^9, 3.515341373462454*^9}, {3.515341487375692*^9, 
+   3.515341507451083*^9}, 3.5153415932582283`*^9, {3.515341924216928*^9, 
+   3.515341938440969*^9}, {3.515342552514299*^9, 3.515342599922021*^9}, {
+   3.515342665291862*^9, 3.5153427118629017`*^9}, {3.51534274497816*^9, 
+   3.515342761729376*^9}, {3.515342806266142*^9, 3.515342832681128*^9}, {
+   3.515342892066422*^9, 3.5153428932326803`*^9}, {3.5153434934103622`*^9, 
+   3.515343500296976*^9}, {3.515343534402472*^9, 3.515343540896974*^9}, {
+   3.515345124802802*^9, 3.5153451296339893`*^9}, {3.515345192064334*^9, 
+   3.515345201334661*^9}, {3.515345824603279*^9, 3.515345841195307*^9}, 
+   3.515345962942153*^9, {3.515346304306148*^9, 3.515346435871976*^9}, {
+   3.515346492153411*^9, 3.51534651035611*^9}, {3.515347369495624*^9, 
+   3.515347395972521*^9}, {3.51534778478563*^9, 3.515347794968463*^9}, 
+   3.515348102131074*^9, 3.515509065448145*^9, {3.5155356202333183`*^9, 
+   3.515535625072075*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"ct", "=", "1"}], ",", 
+   RowBox[{"ct", ">", "0"}], ",", 
+   RowBox[{"ct", "++"}], ",", 
+   RowBox[{
+    RowBox[{"Print", "[", "ct", "]"}], ";", "\[IndentingNewLine]", 
+    "initialize", ";", "\[IndentingNewLine]", 
+    RowBox[{"w", "=", 
+     RowBox[{"allsolns", "[", "A", "]"}]}], ";", "\n", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", "[", "w", "]"}], ">", "1"}], ",", 
+      RowBox[{
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "w", "]"}], ">", "1"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"m", "=", "Infinity"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"For", "[", 
+           RowBox[{
+            RowBox[{"i", "=", "1"}], ",", 
+            RowBox[{"i", "\[LessEqual]", "dim"}], ",", 
+            RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"For", "[", 
+             RowBox[{
+              RowBox[{"j", "=", "1"}], ",", 
+              RowBox[{"j", "\[LessEqual]", "dim"}], ",", 
+              RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Extract", "[", 
+                  RowBox[{"A", ",", 
+                   RowBox[{"{", 
+                    RowBox[{"i", ",", "j"}], "}"}]}], "]"}], "\[Equal]", 
+                 RowBox[{"-", "1"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"For", "[", 
+                 RowBox[{
+                  RowBox[{"k", "=", "1"}], ",", 
+                  RowBox[{"k", "\[LessEqual]", "3"}], ",", 
+                  RowBox[{"k", "++"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{"s", "=", 
+                    RowBox[{"Select", "[", 
+                    RowBox[{"w", ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Extract", "[", 
+                    RowBox[{"#", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", "j"}], "}"}]}], "]"}], "\[Equal]", 
+                    "k"}], "&"}]}], "]"}]}], ";", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"0", "<", 
+                    RowBox[{"Length", "[", "s", "]"}], "<", "m"}], ",", 
+                    RowBox[{
+                    RowBox[{"m", "=", 
+                    RowBox[{"Length", "[", "s", "]"}]}], ";", 
+                    RowBox[{"ss", "=", "s"}], ";", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"ii", ",", "jj", ",", "kk"}], "}"}], "=", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", "j", ",", "k"}], "}"}]}]}]}], "]"}]}]}],
+                  "]"}]}], "]"}]}], "]"}]}], "]"}], ";", 
+          RowBox[{"w", "=", "ss"}], ";", 
+          RowBox[{"A", "=", 
+           RowBox[{"ReplacePart", "[", 
+            RowBox[{"A", ",", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"ii", ",", "jj"}], "}"}], "\[Rule]", "kk"}]}], 
+            "]"}]}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"For", "[", 
+        RowBox[{
+         RowBox[{"i", "=", "1"}], ",", 
+         RowBox[{"i", "\[LessEqual]", "dim"}], ",", 
+         RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"For", "[", 
+          RowBox[{
+           RowBox[{"j", "=", "1"}], ",", 
+           RowBox[{"j", "\[LessEqual]", "dim"}], ",", 
+           RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Extract", "[", 
+               RowBox[{"A", ",", 
+                RowBox[{"{", 
+                 RowBox[{"i", ",", "j"}], "}"}]}], "]"}], ">", "0"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Length", "[", 
+                 RowBox[{"allsolns", "[", 
+                  RowBox[{"ReplacePart", "[", 
+                   RowBox[{"A", ",", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", "j"}], "}"}], "\[Rule]", 
+                    RowBox[{"-", "1"}]}]}], "]"}], "]"}], "]"}], "\[Equal]", 
+                "1"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"A", "=", 
+                RowBox[{"ReplacePart", "[", 
+                 RowBox[{"A", ",", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"i", ",", "j"}], "}"}], "\[Rule]", 
+                   RowBox[{"-", "1"}]}]}], "]"}]}]}], "]"}]}], "]"}]}], 
+          "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"Print", "[", 
+        RowBox[{"pic", "[", "A", "]"}], "]"}], ";", 
+       RowBox[{"Print", "[", 
+        RowBox[{"pic", "[", 
+         RowBox[{"w", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}], ";", 
+       RowBox[{"Print", "[", 
+        RowBox[{
+         RowBox[{"Length", "[", 
+          RowBox[{"Select", "[", 
+           RowBox[{
+            RowBox[{"Flatten", "[", "A", "]"}], ",", 
+            RowBox[{
+             RowBox[{"#", ">", "0"}], "&"}]}], "]"}], "]"}], ",", 
+         "\"\< / \>\"", ",", 
+         RowBox[{"Length", "[", 
+          RowBox[{"Select", "[", 
+           RowBox[{
+            RowBox[{"Flatten", "[", 
+             RowBox[{"w", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
+            RowBox[{
+             RowBox[{"#", ">", "0"}], "&"}]}], "]"}], "]"}]}], "]"}]}]}], 
+     "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.484238858136333*^9, 3.484238923698254*^9}, {
+   3.484238973534197*^9, 3.4842390279689617`*^9}, {3.484242442280879*^9, 
+   3.484242502217209*^9}, {3.484242569817205*^9, 3.484242607114259*^9}, {
+   3.484242661541239*^9, 3.4842426791884003`*^9}, {3.484242875102684*^9, 
+   3.484242954279665*^9}, {3.48424300117772*^9, 3.484243037322639*^9}, {
+   3.484243089358458*^9, 3.484243104490086*^9}, {3.484243284024521*^9, 
+   3.4842433033561*^9}, {3.484244335006317*^9, 3.484244345763711*^9}, {
+   3.484244556446783*^9, 3.484244600644951*^9}, {3.4842450266703157`*^9, 
+   3.484245117110273*^9}, {3.48424516201715*^9, 3.484245171806774*^9}, {
+   3.484245318534451*^9, 3.484245323837323*^9}, {3.484245399025823*^9, 
+   3.484245447699092*^9}, {3.4842454915638657`*^9, 3.4842454919856997`*^9}, 
+   3.48424557778386*^9, {3.484245808337467*^9, 3.4842458479633007`*^9}, {
+   3.4842459598583612`*^9, 3.4842459884032393`*^9}, {3.48424603016079*^9, 
+   3.484246048037068*^9}, {3.484246139244117*^9, 3.484246199154245*^9}, {
+   3.484246393021193*^9, 3.484246410811879*^9}, {3.484246558340652*^9, 
+   3.4842465750043087`*^9}, {3.484246610805223*^9, 3.484246682285829*^9}, {
+   3.4842468579139338`*^9, 3.484246871921526*^9}, {3.4842469145314074`*^9, 
+   3.48424693002367*^9}, {3.484246967477653*^9, 3.484246975678974*^9}, {
+   3.4842470461117077`*^9, 3.4842470584253283`*^9}, {3.484247421399219*^9, 
+   3.484247429400148*^9}, {3.4842546531469584`*^9, 3.484254653448195*^9}, {
+   3.5153431659467583`*^9, 3.51534316650569*^9}, {3.515343398210902*^9, 
+   3.5153434232935038`*^9}, {3.515344020769915*^9, 3.515344034384714*^9}, {
+   3.515344279427718*^9, 3.51534428028671*^9}, {3.515344321918619*^9, 
+   3.515344375654442*^9}, {3.515344697154216*^9, 3.515344714017408*^9}, {
+   3.515346597618038*^9, 3.515346599403532*^9}, {3.566746276294613*^9, 
+   3.566746281197608*^9}}],
+
+Cell[BoxData["1"], "Print",
+ CellChangeTimes->{3.5667462843803253`*^9}],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.566746264902965*^9, 3.566749758598827*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["5x5", "Section",
+ CellChangeTimes->{{3.484259663113378*^9, 3.484259663352928*^9}, 
+   3.48430511092117*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 1.5}, 0.3]}, {}, {}, {}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, {}, {}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 0.2}, {2.8, 0.2}, {2.5, 0.8}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 2.25}, {2.25, 2.75}, {2.75, 2.75}, {2.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, {}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 2.25}, {3.25, 2.75}, {3.75, 2.75}, {3.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, {}}, {{}, {}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 3.2}, {4.8, 3.2}, {4.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 4.25}, {4.25, 4.75}, {4.75, 4.75}, {4.75, 
+        4.25}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484255559680498*^9},
+ ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJztnEtuwjAQhgPhFR6ldNeuOE276iEiVAkWVSvKPhfophsO0gu6mVGsUNW2
+kMk0Jv4jQeIM0f8Fm3jGM+I5P2xfXvPDbpOvn/b5+3a3+Vg/vu3LU2kvSZIj
+vdbJoDxW5eHJ21GVm2XXp90XfSw9OVE26OJqSx7OPHd/wbU9yF+1PA+flSq+
+1RAgYYEM6H1JICOAcIs7ZEEgY4BwiztkRiATgHCLOyQjkAwg3OIOGRPIFCDc
+4g4ZEsgMINziDkkJZA4QbukOKUn+nIvTVYR8B+QRM0I+UHmeDEeqUJ+m56zb
+KoTEPtyURE0+nNsqhMSO9oJETaGH2yqExNHQjU3UbRVC4pD1lkRNIavbGhnS
+ikRNSx1uqxAST013NlG3FUhACnx4h/oQCAspwAmF735Ooqb1Lbc1HueEo/cB
+iZqid7e1m04t5COSR3ANecifK1+5FqoorI7H0mm1Xgs4wAEOcIADHOAA1xm4
+uB1GyHdUHnEz5K9cntd9PZPXOjlirjhuqjjTc6VYHE7X0voktOtabdOE21Tp
+s2cmQqdOxODSSsAnc1PXdJvQW4bT36ssnGdmsK79NuV6GoDjaz0zqToRFS7c
+zFYR3TKcfgqGC5fZKqdb/kHwSJtIw3k+Suqac9PM2zKcdgvE4C6ZvuradFO2
+tqmJ3zOlrlPJYnCXuEx1DftCBi6r7t4nzc4jrS8IF3ccAPkm5LEgAHnI/4d8
+vaAtFGoBBCAAAQhAAAKQUEHidoIgD3mb/Gko+vs/uJLeD0LQZFk=\
+\>"]],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 0.2}, {0.8, 0.2}, {0.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 1.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 3.8}}]}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 0.25}, {1.25, 0.75}, {1.75, 0.75}, {1.75, 
+        0.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 4.25}, {1.25, 4.75}, {1.75, 4.75}, {1.75, 
+        4.25}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 0.2}, {2.8, 0.2}, {2.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 2.25}, {2.25, 2.75}, {2.75, 2.75}, {2.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 4.2}, {2.8, 4.2}, {2.5, 4.8}}]}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 2.25}, {3.25, 2.75}, {3.75, 2.75}, {3.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, {}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 2.25}, {4.25, 2.75}, {4.75, 2.75}, {4.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 3.2}, {4.8, 3.2}, {4.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 4.25}, {4.25, 4.75}, {4.75, 4.75}, {4.75, 
+        4.25}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484255559874042*^9},
+ ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJztnM1OwkAUhQulQAF/cKcrnkZXPgQxJrAwGmXPC3TjhgfxBcfOVFKMM9fe
+mV6dwiFRoNfT8yVIO39n7peb1ePTcrN+WC7uXpcvq/XD2+L2+bU8lPaSJNnp
+n0UyKF+r8uXBr50qH46nvn5613+WHhwo32jx1yO5aXjsOkDbg32U9ubf4kpt
+P1TW8GRGMecouo80IA1M9VKp7Xb4b3CX2sBmT8OZ6oVL2wJcRhrEAHeuDUZs
+OKM9c2lbgBuSBjHAzbTBmA1njk1d2hbgRqRBDHATbZCz4Yw2d2lbgBuTBjHA
+jbXBhA1ntCOXtgW4nDSIAW6oDaZsOKPNXNoW4CakQQxwA20wY8MZberStgA3
+JQ1igOtrg7OGJ9t/hKXkx7HjanTD/oTs0fuGfaT2+3aBKmzXWbo6DtB6NplV
+YWtZ0tVhgNazw6YKW6eLrmYBWs9OLwHirA4CtJ6jGqogBg4c1TRAe8SYc30y
+5wCWs5oGaD2H/ggQZ7UfoAUmMH/D7MhXqEsXpPgxO3Kz3A/HqsI2aklXswDt
+cTbk9oM+qrCNjdDVPEDbrc4D7E/IHoMYsId9U/tG09pUtYHW1moAJjCBCUxg
+AhOYwARmt9uRsIe9hD1687CP1J5e/C+3JIH29QaWG9P2BqazDHLLFOochO22
+7Z1vkJuDoX1DMw8Cc1t1XoLZ9GmUgxAApn3DshEic7F1rsI2G+adl5Cb46Z9
+vTMUwsBTV4rAO1chB0z7emcthIFzV9ogLH8h8qWjfUMzGQKXtTrPYWtphOY0
+BIBpX+/shtytuc592ObRvfMccgslaF/vjIdc87LOh9jiG965D7nFE7RvvB0e
+2J+QPQZeYN9xe/HtDPjTBXykP5zLiBqOv8MC4Koqf4cFwFVV/g4LgKuq/B0W
+AFdV+TssAK6q8ndYAFxV5e+wIL50QXzTh6anwFYPsD9C+8Pu/fd9GJPeJxPm
+pEU=\
+\>"]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "10", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "19"}],
+  SequenceForm[10, " / ", 19],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4842555600958242`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 2.25}, {0.25, 2.75}, {0.75, 2.75}, {0.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 
+        3.8}}]}, {}}, {{}, {}, {}, {}, {}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 2.25}, {2.25, 2.75}, {2.75, 2.75}, {2.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 4.5}, 0.3]}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 2.25}, {3.25, 2.75}, {3.75, 2.75}, {3.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 3.2}, {3.8, 3.2}, {3.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 1.5}, 0.3]}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 4.25}, {4.25, 4.75}, {4.75, 4.75}, {4.75, 
+        4.25}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484255621134757*^9},
+ ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJztnEtuwkAQRM3X2HwC2SUrTpOscggLRYJFlIiw5wLZZMNBckHH3cKCKNM9
+tMDygAspA1h01RMfT4+nlJdss3x9yzarRTZ/Xmcfy9Xic/70vi4OdVpRFO3o
+bx51i8d58fBo2OXFTbhr0903vaxzdKB4QsX7W/R44rGHM2pbsIc97GEPe9jD
+Hvawhz3sYX+z9lh1wb4h9gmN/Xybfw3rBYlpTAkkqRekT+OYQOJ6QXo0TgIA
+6dI4JZA+QA4gMwLp1QvCk9Q9QAAivy6YL2tYP98QQII5xfP7MCKQQb0gwbQB
+KY1dAhnVC9Ls/hT2mj0WqrCHvcueZ9a7PN9uXVO82BSIFfuWwaAHOMABDnCA
+AxzgABc8XLMbRtg3yB7rZtgHal9uG/zkrqv1LjGumEkVdr1rhSv3OS4FZ9fz
+wU1JzDjzCxV2PX9bcjE4u54PbkJirj0SlxhXjKUKu54CV4YFLgVn1/PBjUjM
+tanjEuOKoVRh11PgYtXKDmfX88GlJObahXKJcUUiVdj1FLiBamWHs+v54AYk
+lp4oxhWxVGHXU+AS1coOZ9fzwfVJzJXEcolxRU+qsOspcKlqZYez6/nguiTm
+2qp1iXFFR6qw6ylwQ9XKDmfX88G1SWx8olj5cRUl/46dpxxuSw77Btnj0gDs
+r9yemxYx060nvitC4t5djHXpoa/DJfCKQnLlksydwtPz4JXDsYEYEdQDhJXD
+8XlSDFLqMUvAyaFcPbJbORzXitFlPdgMOMDd3A8i/FNJqHBBT19sL6be9Ux8
+5XDntEwVdXFsJWbi9cT8bbbasL8B++Ml/9//wRW1fgFHsWcF\
+\>"]],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 2.25}, {0.25, 2.75}, {0.75, 2.75}, {0.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 4.25}, {0.25, 4.75}, {0.75, 4.75}, {0.75, 
+        4.25}}]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 0.25}, {1.25, 0.75}, {1.75, 0.75}, {1.75, 
+        0.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, {}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{2.5, 0.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 1.2}, {2.8, 1.2}, {2.5, 1.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 2.25}, {2.25, 2.75}, {2.75, 2.75}, {2.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 4.5}, 0.3]}}, {
+      {Hue[0.35, 0.5], DiskBox[{3.5, 0.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 1.2}, {3.8, 1.2}, {3.5, 1.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 2.25}, {3.25, 2.75}, {3.75, 2.75}, {3.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 3.2}, {3.8, 3.2}, {3.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 0.25}, {4.25, 0.75}, {4.75, 0.75}, {4.75, 
+        0.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 1.5}, 0.3]}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 4.25}, {4.25, 4.75}, {4.75, 4.75}, {4.75, 
+        4.25}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484255621272891*^9},
+ ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJztnE1u2zAQheXI/07itrt25dM0qxzCCAokiyBFmr0v0E03OYguyIpsCTgp
+36NHomlTHQORHU303mc7IoccSrfbl/tvj9uXh7vt5uZ5+/3+4e7H5uvTc7ur
+HlVV9Wp/NtW4fW3al3ubV9M+wNOFffpl/6ze29H+Yg/++6i+HLjvc49jR2pf
+tP3cbqdmZ36uAtEFjR4JaWq3S2u6CERnNJoAaWy3H4zZ7aaB6MRur6z9DKHD
+qFNeW+VQNCmmi14jkAmNZsSs/0RbEPgmeFQx32N+tCATdCyP5sF0Kp8QSE2j
+iqmYegoV1SCdP2YhnaUDubQg80B0SqMZMfukb0kxQ/uc6djaXwaiSxod5gBA
+7QdgrzMBal+QPZ9W8DlYY1iqGI5yZSEm76v6YHJlISafdOCYPgdrDOzKobIQ
+86A8CoBwTK7cLbnhWWkEpDHwLULlpJh+lioMkhsTjpg4ps9oGwMzWqgsxOTj
+TweyQiAckytnxPRNTmNgY5YH04EsEEghmO4Tntvo8tiY/B/dgcwQCMdMegrx
+ZoNj+l67MaFeO2O76UAmCCQjJu/SOKYfxTYmNIpN2lnySQcHUiMQjsmVkyZy
+HNN9whc2eiVWFmLy6Qf/Vbck/+w7HJh7lDWMUPuB2ut0htqrfcje9d5rWsjg
+ZY6OxyqmYiqmYiqmYiqmYipm2Xmk2qt9Lnsdzav9mdrzKj0sGnWs+g8JzteO
+UsHJ9WJwcLkALAt1XH7QLUFJBifXi8HBpQGwUtVxqYEQzi9HSQUn14vBwWUA
+sHjWcVmBEG5GreRwcr0YHCz5w3pexyUEQrg5tZLDyfVicLC8HxLrs1xACLeg
+VnI4uV4MDpbyQ2J9lgYI4ZbUSg4n14vBwbJ9SKzPMgAh3IpayeHkejE4WJgP
+iaUp+ZeVkqv9f2SvUwNqX7h9xhso8KltmMXnvhZPjnmSmyrIMU9ynagc8yRX
+3Q4bM/cV4XLMk1xfr5iKOZxTqKQG6fwxC+ksz+amCqnTtyOlu3oDBbUfoP3+
+RMTbOy1Wo98jmY5z\
+\>"]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "10", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "19"}],
+  SequenceForm[10, " / ", 19],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4842556213435497`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], 
+     LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 4.5}, 0.3]}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 1.25}, {1.25, 1.75}, {1.75, 1.75}, {1.75, 
+        1.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, {}, {}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 0.2}, {2.8, 0.2}, {2.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 2.25}, {2.25, 2.75}, {2.75, 2.75}, {2.75, 
+        2.25}}]}, {}, {}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 2.25}, {3.25, 2.75}, {3.75, 2.75}, {3.75, 
+        2.25}}]}, {}, {}}, {{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 1.2}, {4.8, 1.2}, {4.5, 1.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 2.2}, {4.8, 2.2}, {4.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 3.5}, 0.3]}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484257371001898*^9},
+ ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJztnEtuwjAQhgMJ71dh1644TbvqISJUCRZVK8o+F2DTDQfpBd3MCCtUtV1H
+DpOhHqQCDiX/V9lJ5rOjPueH7ctrftht8vXTPn/f7jYf68e3fbkp7SRJcoKf
+dZKV71X59uLppMqH5aULL5/wa+nFhrIBXz4/kgfPbfcB3+1I/E3H4/BZquJL
+9QSEF0gGzwsA6QsItrBDZgAyEBBsYYdMAGQoINjCDhkByEhAsIUdMgCQsYBg
+CzukByATAcEWdkgKIFMBwZbukJLk17Y4S0WJ/wfx4owSf+PxWEb0VaGOvudj
+HO8rm9LVREIbulOqKEw2hNvGAOdb9RHCaW1RR19tqWTYtL9G4fDTeR248/4o
+4NJzlDr6KnAlzaY/p2U4HAhzOrglwPlOp1RybVLJRuFwL6s6cLiXKWe4iU05
+W4bDkTbmDDeyqWnLBwSOtCEdXK1TSSX1pqtxy3A40vokcPUvX5X8m1S3+Qv/
+FOB8Z+dwpGUkcPVLpmqSYBYOZ+2aDJB8ZyFwfHWviBR3zS/xTcSL/Et8JPHU
+4rpwfvpnMcgck9C0gzFpnDsEk9C+gzFpPDwEk9DIgzFp3DwEk9DSgzFpfD0E
+k9DcgzFpHD4Ek9rmQzBpvD4Ek9DwgzGv6fq+FSUbwzfdmdBAF95wsS/xrnix
+fomPJF5XCOZbAwhBdBltntMmBMFLqnXJnxBES2/rIHouw7yKFC2IdUWSetLO
+um4rIALCaLDyOnw5gLA5xespQfNyd4xlgJZ984J2PAWixDOOF1GVeKbxbrEk
+BHFfUQhB3GJJCOKuOghB3HVYtCC1bnW9EojbXgREQBgNVl6HLwcQNqd4t1jG
+WAa4xTKeAlHiI4q/FNWf/5cr6XwDxG919Q==\
+\>"]],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0.35, 0.5], DiskBox[{0.5, 0.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 1.2}, {0.8, 1.2}, {0.5, 1.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 2.2}, {0.8, 2.2}, {0.5, 2.8}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 4.5}, 0.3]}}, {
+      {Hue[0.35, 0.5], DiskBox[{1.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 1.25}, {1.25, 1.75}, {1.75, 1.75}, {1.75, 
+        1.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 3.5}, 0.3]}, {}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 0.2}, {2.8, 0.2}, {2.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 2.25}, {2.25, 2.75}, {2.75, 2.75}, {2.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 4.2}, {2.8, 4.2}, {2.5, 4.8}}]}}, {
+      {Hue[0.35, 0.5], DiskBox[{3.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 2.25}, {3.25, 2.75}, {3.75, 2.75}, {3.75, 
+        2.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}}, {
+      {Hue[0.35, 0.5], DiskBox[{4.5, 0.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 1.2}, {4.8, 1.2}, {4.5, 1.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 2.2}, {4.8, 2.2}, {4.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 3.5}, 0.3]}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484257374420805*^9},
+ ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJztnMFy0zAQhp0mTeqmoYQbnPI0cOIhMh1m2gNTpvSeF+DCpQ/CCxqviCcB
+tL+0Wq+tJuoMbmux+3/1ONbqt6TP2+f7L1+3zw93282np+23+4e775uPj0/t
+qemkqqoX+repZu3PTfvj0eGlab+Ybxf07Sf9t+nRifYXCt5/VR8iz71XxE6K
+fJbyNR3nza75sRS3ultq3ex+NZc9ZwbACzpeU2AtbsXAmswAeE7HFQUuxK0Y
+WJMZADupN1wgbp3R8ZaA5z1nBsBO9C0F+kQjWllgTWYjYHeVVgTMXn8j4DUF
++u5D3BoBnJgZALsPzjsuELe6a7Mk4KueMxfgP63uRqgJmH1KF2DVR8PdCAsC
+vu45s9FjLQI4r+ewuxEuCdhXwBgBazpQDGzUNbu/74YCfY8m3OpuhCkB3/Sc
+2ai8xMBG5aUTnVGgTxS3djdCS/zfub408h36FPkzki8eSJHPVL4rEP2DfF8y
+16ex5okvAmskw+0LmWa38xUy7hzbp+HYZOCuek0B7oaqwNvAwGvOSIgoQqED
+wYi6VmzG4FhWN1SEhiwTdJVCdTECvuWMhIiqGVomBsBYN8IyTAbGY7vg/e83
+EiLKfH8gFnX52PFxxBOG1Q2V+axlYgy85IyEiHGJP9AOGOsCYHddWcvEGLjm
+jIQQ8FXAgTD40GHd0KubkGVi8Fg7WDXCVzfdOx9omRgAY93Q2Drk8Rh0zQer
+Rjii7obi/sCIhz9rmeBYrAuA3XVlLRO78vJg1awSgC+4QF/pXe+vjd8e8UVg
+jXwHMkX+jOSLoVLkM5XHFoAGRDfIT3Ql9uNePIzPzpVIBB7FlVADD+1KaIBH
+cSXUwEO7EhrgUVwJNfDQroQGeBRXQg08tCuhAR7FlVADD+1KaIDHcyU0wEO7
+EhrgUVwJNfAwrkRsxZvsRXRXLjS3RA33j0aZg1LkOfniWRT5VySP18jIJ4Ek
+r7nxJcMTFrE3L88nhMNrX/A0D3k+IVzEChq2VZ5PCIenJuO3cPJ8JwfHvgPG
+b4jl+YRweBECft8uz1fgClzmH4j8HyW5wmXdfeF1H3iKgzzfKZVMeBWHfBJD
+WRVS5LOXL4ZAkc9UHg/W8eQE+XYcQjjc88jh5PmSN9yQw8nzJa/gZYu3xC01
+UibOyCvLxO0zzOE0W2WkwIlGM5ptMYRweFTHlr2JO0qcN5xmp4hTgpPfwJot
+K8wfJZrtKczhNFtRmHdfmm0nUjp+0fBes8WEecmk2U5CCIcH675k/Wwd8bpK
+8iJ/RvLH1sDfe2pWk9+UDu04\
+\>"]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "10", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "21"}],
+  SequenceForm[10, " / ", 21],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.484257374792048*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 0.25}, {0.25, 0.75}, {0.75, 0.75}, {0.75, 
+        0.25}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 2.25}, {0.25, 2.75}, {0.75, 2.75}, {0.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 3.8}}]}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{1.5, 0.5}, 0.3]}, {}, {}, {}, {}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 2.25}, {2.25, 2.75}, {2.75, 2.75}, {2.75, 
+        2.25}}]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 4.2}, {2.8, 4.2}, {2.5, 4.8}}]}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 1.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{3.2, 3.2}, {3.8, 3.2}, {3.5, 3.8}}]}, {}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 2.25}, {4.25, 2.75}, {4.75, 2.75}, {4.75, 
+        2.25}}]}, {}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484259798558989*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 0.25}, {0.25, 0.75}, {0.75, 0.75}, {0.75, 
+        0.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 1.2}, {0.8, 1.2}, {0.5, 1.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 2.25}, {0.25, 2.75}, {0.75, 2.75}, {0.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 4.25}, {0.25, 4.75}, {0.75, 4.75}, {0.75, 
+        4.25}}]}}, {
+      {Hue[0.35, 0.5], DiskBox[{1.5, 0.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 4.5}, 0.3]}}, {{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 1.2}, {2.8, 1.2}, {2.5, 1.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 2.25}, {2.25, 2.75}, {2.75, 2.75}, {2.75, 
+        2.25}}]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 4.2}, {2.8, 4.2}, {2.5, 4.8}}]}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 1.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 3.2}, {3.8, 3.2}, {3.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 0.25}, {4.25, 0.75}, {4.75, 0.75}, {4.75, 
+        0.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 1.2}, {4.8, 1.2}, {4.5, 1.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 2.25}, {4.25, 2.75}, {4.75, 2.75}, {4.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 3.2}, {4.8, 3.2}, {4.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 4.25}, {4.25, 4.75}, {4.75, 4.75}, {4.75, 
+        4.25}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484259804641592*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"9", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "19"}],
+  SequenceForm[9, " / ", 19],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.484259805117485*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{0.2, 2.2}, {0.8, 2.2}, {0.5, 2.8}}]}, {}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{1.5, 0.5}, 0.3]}, {}, {}, {}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 1.25}, {2.25, 1.75}, {2.75, 1.75}, {2.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 0.25}, {3.25, 0.75}, {3.75, 0.75}, {3.75, 
+        0.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 1.2}, {3.8, 1.2}, {3.5, 1.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, {}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 1.25}, {4.25, 1.75}, {4.75, 1.75}, {4.75, 
+        1.25}}]}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 4.5}, 0.3]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4842598936122437`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 1.25}, {0.25, 1.75}, {0.75, 1.75}, {0.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 2.2}, {0.8, 2.2}, {0.5, 2.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 3.25}, {0.25, 3.75}, {0.75, 3.75}, {0.75, 
+        3.25}}]}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{1.5, 0.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 1.2}, {1.8, 1.2}, {1.5, 1.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 3.2}, {1.8, 3.2}, {1.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 4.5}, 0.3]}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 1.25}, {2.25, 1.75}, {2.75, 1.75}, {2.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 4.25}, {2.25, 4.75}, {2.75, 4.75}, {2.75, 
+        4.25}}]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 0.25}, {3.25, 0.75}, {3.75, 0.75}, {3.75, 
+        0.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 1.2}, {3.8, 1.2}, {3.5, 1.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 3.2}, {3.8, 3.2}, {3.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 4.25}, {3.25, 4.75}, {3.75, 4.75}, {3.75, 
+        4.25}}]}}, {
+      {Hue[0.35, 0.5], DiskBox[{4.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 1.25}, {4.25, 1.75}, {4.75, 1.75}, {4.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 2.2}, {4.8, 2.2}, {4.5, 2.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 3.25}, {4.25, 3.75}, {4.75, 3.75}, {4.75, 
+        3.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 4.5}, 0.3]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484259893783557*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "10", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "22"}],
+  SequenceForm[10, " / ", 22],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.484259893915114*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0.35, 0.5], DiskBox[{0.5, 0.5}, 0.3]}, {}, {}, {}, {}}, {{}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{1.2, 1.2}, {1.8, 1.2}, {1.5, 1.8}}]}, {}, {}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 0.25}, {2.25, 0.75}, {2.75, 0.75}, {2.75, 
+        0.25}}]}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, {}}, {{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 1.2}, {3.8, 1.2}, {3.5, 1.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 2.2}, {3.8, 2.2}, {3.5, 2.8}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 2.25}, {4.25, 2.75}, {4.75, 2.75}, {4.75, 
+        2.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 3.25}, {4.25, 3.75}, {4.75, 3.75}, {4.75, 
+        3.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 4.25}, {4.25, 4.75}, {4.75, 4.75}, {4.75, 
+        4.25}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484260389354032*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0.35, 0.5], DiskBox[{0.5, 0.5}, 0.3]}, {}, {}, {}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 0.25}, {1.25, 0.75}, {1.75, 0.75}, {1.75, 
+        0.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 1.2}, {1.8, 1.2}, {1.5, 1.8}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 3.25}, {1.25, 3.75}, {1.75, 3.75}, {1.75, 
+        3.25}}]}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 0.25}, {2.25, 0.75}, {2.75, 0.75}, {2.75, 
+        0.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 2.25}, {2.25, 2.75}, {2.75, 2.75}, {2.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 4.25}, {2.25, 4.75}, {2.75, 4.75}, {2.75, 
+        4.25}}]}}, {
+      {Hue[0.35, 0.5], DiskBox[{3.5, 0.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 1.2}, {3.8, 1.2}, {3.5, 1.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 2.2}, {3.8, 2.2}, {3.5, 2.8}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 2.25}, {4.25, 2.75}, {4.75, 2.75}, {4.75, 
+        2.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 3.25}, {4.25, 3.75}, {4.75, 3.75}, {4.75, 
+        3.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 4.25}, {4.25, 4.75}, {4.75, 4.75}, {4.75, 
+        4.25}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4842603917706413`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "10", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "16"}],
+  SequenceForm[10, " / ", 16],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.484260392247425*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{0.2, 2.2}, {0.8, 2.2}, {0.5, 2.8}}]}, {}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 0.25}, {1.25, 0.75}, {1.75, 0.75}, {1.75, 
+        0.25}}]}, {}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 3.2}, {1.8, 3.2}, {1.5, 3.8}}]}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 0.25}, {2.25, 0.75}, {2.75, 0.75}, {2.75, 
+        0.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 1.25}, {2.25, 1.75}, {2.75, 1.75}, {2.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, {}, {}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 1.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, {}, {}}, {{}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 3.5}, 0.3]}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484260825532485*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 0.2}, {0.8, 0.2}, {0.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 1.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 2.2}, {0.8, 2.2}, {0.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 4.2}, {0.8, 4.2}, {0.5, 4.8}}]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 0.25}, {1.25, 0.75}, {1.75, 0.75}, {1.75, 
+        0.25}}]}, {}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 3.2}, {1.8, 3.2}, {1.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 4.25}, {1.25, 4.75}, {1.75, 4.75}, {1.75, 
+        4.25}}]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 0.25}, {2.25, 0.75}, {2.75, 0.75}, {2.75, 
+        0.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 1.25}, {2.25, 1.75}, {2.75, 1.75}, {2.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 3.25}, {2.25, 3.75}, {2.75, 3.75}, {2.75, 
+        3.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 4.25}, {2.25, 4.75}, {2.75, 4.75}, {2.75, 
+        4.25}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 0.2}, {3.8, 0.2}, {3.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 1.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{3.2, 3.2}, {3.8, 3.2}, {3.5, 3.8}}]}, {}}, {{}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 2.2}, {4.8, 2.2}, {4.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 4.2}, {4.8, 4.2}, {4.5, 4.8}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484260834912202*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"9", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "20"}],
+  SequenceForm[9, " / ", 20],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.484260836556464*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], 
+     LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 4.5}, 0.3]}}, {{}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 2.5}, 0.3]}, {}, {}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 0.2}, {2.8, 0.2}, {2.5, 0.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 1.25}, {2.25, 1.75}, {2.75, 1.75}, {2.75, 
+        1.25}}]}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, {}}, {{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 1.2}, {3.8, 1.2}, {3.5, 1.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 2.25}, {3.25, 2.75}, {3.75, 2.75}, {3.75, 
+        2.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 3.25}, {3.25, 3.75}, {3.75, 3.75}, {3.75, 
+        3.25}}]}, {}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 1.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 3.2}, {4.8, 3.2}, {4.5, 3.8}}]}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4842608802018557`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 2.25}, {0.25, 2.75}, {0.75, 2.75}, {0.75, 
+        2.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 4.5}, 0.3]}}, {{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 1.2}, {1.8, 1.2}, {1.5, 1.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 2.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 4.2}, {1.8, 4.2}, {1.5, 4.8}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 0.2}, {2.8, 0.2}, {2.5, 0.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 1.25}, {2.25, 1.75}, {2.75, 1.75}, {2.75, 
+        1.25}}]}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, {}}, {{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 1.2}, {3.8, 1.2}, {3.5, 1.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 2.25}, {3.25, 2.75}, {3.75, 2.75}, {3.75, 
+        2.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 3.25}, {3.25, 3.75}, {3.75, 3.75}, {3.75, 
+        3.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 4.2}, {3.8, 4.2}, {3.5, 4.8}}]}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 1.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 3.2}, {4.8, 3.2}, {4.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 4.5}, 0.3]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4842608806688843`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "10", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "16"}],
+  SequenceForm[10, " / ", 16],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.484260880801237*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 2.25}, {0.25, 2.75}, {0.75, 2.75}, {0.75, 
+        2.25}}]}, {}, {}}, {{}, {}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{1.2, 3.2}, {1.8, 3.2}, {1.5, 3.8}}]}, {}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 1.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 2.2}, {3.8, 2.2}, {3.5, 2.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 3.25}, {3.25, 3.75}, {3.75, 3.75}, {3.75, 
+        3.25}}]}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 1.25}, {4.25, 1.75}, {4.75, 1.75}, {4.75, 
+        1.25}}]}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 4.5}, 0.3]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484261151801633*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0.35, 0.5], DiskBox[{0.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 1.25}, {0.25, 1.75}, {0.75, 1.75}, {0.75, 
+        1.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 2.25}, {0.25, 2.75}, {0.75, 2.75}, {0.75, 
+        2.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 3.25}, {0.25, 3.75}, {0.75, 3.75}, {0.75, 
+        3.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 4.5}, 0.3]}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 1.25}, {1.25, 1.75}, {1.75, 1.75}, {1.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 2.2}, {1.8, 2.2}, {1.5, 2.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 3.2}, {1.8, 3.2}, {1.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 4.25}, {1.25, 4.75}, {1.75, 4.75}, {1.75, 
+        4.25}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 0.2}, {2.8, 0.2}, {2.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 1.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 2.2}, {3.8, 2.2}, {3.5, 2.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 3.25}, {3.25, 3.75}, {3.75, 3.75}, {3.75, 
+        3.25}}]}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{4.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 1.25}, {4.25, 1.75}, {4.75, 1.75}, {4.75, 
+        1.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 2.25}, {4.25, 2.75}, {4.75, 2.75}, {4.75, 
+        2.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 4.5}, 0.3]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484261154002553*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "10", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "20"}],
+  SequenceForm[10, " / ", 20],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.48426115434787*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 3.5}, 0.3]}, {}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 3.2}, {1.8, 3.2}, {1.5, 3.8}}]}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 0.25}, {2.25, 0.75}, {2.75, 0.75}, {2.75, 
+        0.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, {}}, {{}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{3.2, 2.2}, {3.8, 2.2}, {3.5, 2.8}}]}, {}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 0.25}, {4.25, 0.75}, {4.75, 0.75}, {4.75, 
+        0.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 1.25}, {4.25, 1.75}, {4.75, 1.75}, {4.75, 
+        1.25}}]}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 4.25}, {4.25, 4.75}, {4.75, 4.75}, {4.75, 
+        4.25}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484263221435004*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 1.25}, {0.25, 1.75}, {0.75, 1.75}, {0.75, 
+        1.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 4.25}, {0.25, 4.75}, {0.75, 4.75}, {0.75, 
+        4.25}}]}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 2.2}, {1.8, 2.2}, {1.5, 2.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 3.2}, {1.8, 3.2}, {1.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 4.5}, 0.3]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 0.25}, {2.25, 0.75}, {2.75, 0.75}, {2.75, 
+        0.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 1.2}, {2.8, 1.2}, {2.5, 1.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 4.25}, {2.25, 4.75}, {2.75, 4.75}, {2.75, 
+        4.25}}]}}, {
+      {Hue[0.35, 0.5], DiskBox[{3.5, 0.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 1.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 2.2}, {3.8, 2.2}, {3.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 0.25}, {4.25, 0.75}, {4.75, 0.75}, {4.75, 
+        0.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 1.25}, {4.25, 1.75}, {4.75, 1.75}, {4.75, 
+        1.25}}]}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 4.25}, {4.25, 4.75}, {4.75, 4.75}, {4.75, 
+        4.25}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4842632220839767`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "10", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "20"}],
+  SequenceForm[10, " / ", 20],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4842632235655327`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 1.25}, {0.25, 1.75}, {0.75, 1.75}, {0.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 3.5}, 0.3]}, {}}, {{}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 2.2}, {1.8, 2.2}, {1.5, 2.8}}]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{1.2, 3.2}, {1.8, 3.2}, {1.5, 3.8}}]}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 1.25}, {2.25, 1.75}, {2.75, 1.75}, {2.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 
+        3.8}}]}, {}}, {{}, {}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 0.25}, {4.25, 0.75}, {4.75, 0.75}, {4.75, 
+        0.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 1.25}, {4.25, 1.75}, {4.75, 1.75}, {4.75, 
+        1.25}}]}, {}, {}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4842660429087143`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 1.25}, {0.25, 1.75}, {0.75, 1.75}, {0.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 4.25}, {0.25, 4.75}, {0.75, 4.75}, {0.75, 
+        4.25}}]}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 2.2}, {1.8, 2.2}, {1.5, 2.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 3.2}, {1.8, 3.2}, {1.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 4.5}, 0.3]}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 1.25}, {2.25, 1.75}, {2.75, 1.75}, {2.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 4.25}, {2.25, 4.75}, {2.75, 4.75}, {2.75, 
+        4.25}}]}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 1.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 0.25}, {4.25, 0.75}, {4.75, 0.75}, {4.75, 
+        0.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 1.25}, {4.25, 1.75}, {4.75, 1.75}, {4.75, 
+        1.25}}]}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 4.25}, {4.25, 4.75}, {4.75, 4.75}, {4.75, 
+        4.25}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4842660452934513`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "11", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "19"}],
+  SequenceForm[11, " / ", 19],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4842660455465593`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 4.2}, {0.8, 4.2}, {0.5, 4.8}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 0.2}, {1.8, 0.2}, {1.5, 0.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 1.25}, {1.25, 1.75}, {1.75, 1.75}, {1.75, 
+        1.25}}]}, {}, {}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 1.25}, {2.25, 1.75}, {2.75, 1.75}, {2.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 4.5}, 0.3]}}, {
+      {Hue[0.35, 0.5], DiskBox[{3.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, {}, {}, {}}, {{}, {}, {}, {}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484266165074123*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 1.2}, {0.8, 1.2}, {0.5, 1.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 4.2}, {0.8, 4.2}, {0.5, 4.8}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 0.2}, {1.8, 0.2}, {1.5, 0.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 1.25}, {1.25, 1.75}, {1.75, 1.75}, {1.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{1.2, 2.2}, {1.8, 2.2}, {1.5, 2.8}}]}, {}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{2.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 1.25}, {2.25, 1.75}, {2.75, 1.75}, {2.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 3.25}, {2.25, 3.75}, {2.75, 3.75}, {2.75, 
+        3.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 4.5}, 0.3]}}, {
+      {Hue[0.35, 0.5], DiskBox[{3.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, {}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 0.2}, {4.8, 0.2}, {4.5, 0.8}}]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{4.2, 1.2}, {4.8, 1.2}, {4.5, 1.8}}]}, {}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 4.2}, {4.8, 4.2}, {4.5, 4.8}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484266166278792*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "10", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "18"}],
+  SequenceForm[10, " / ", 18],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4842661670728817`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{0.2, 0.2}, {0.8, 0.2}, {0.5, 
+        0.8}}]}, {}, {}, {}, {}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, {}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 1.25}, {2.25, 1.75}, {2.75, 1.75}, {2.75, 
+        1.25}}]}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 4.5}, 0.3]}}, {{}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 2.2}, {3.8, 2.2}, {3.5, 2.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 3.2}, {3.8, 3.2}, {3.5, 3.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 4.2}, {3.8, 4.2}, {3.5, 4.8}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 0.2}, {4.8, 0.2}, {4.5, 0.8}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 2.25}, {4.25, 2.75}, {4.75, 2.75}, {4.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 3.5}, 0.3]}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484268665959113*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{0.2, 0.2}, {0.8, 0.2}, {0.5, 0.8}}]}, {}, {}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 4.2}, {0.8, 4.2}, {0.5, 4.8}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 0.2}, {1.8, 0.2}, {1.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 4.2}, {1.8, 4.2}, {1.5, 4.8}}]}}, {
+      {Hue[0.35, 0.5], DiskBox[{2.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 1.25}, {2.25, 1.75}, {2.75, 1.75}, {2.75, 
+        1.25}}]}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 4.5}, 0.3]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 0.2}, {3.8, 0.2}, {3.5, 0.8}}]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 2.2}, {3.8, 2.2}, {3.5, 2.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 3.2}, {3.8, 3.2}, {3.5, 3.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 4.2}, {3.8, 4.2}, {3.5, 4.8}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 0.2}, {4.8, 0.2}, {4.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 2.25}, {4.25, 2.75}, {4.75, 2.75}, {4.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 4.2}, {4.8, 4.2}, {4.5, 4.8}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484268666007736*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "11", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "19"}],
+  SequenceForm[11, " / ", 19],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4842686660753193`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 1.2}, {0.8, 1.2}, {0.5, 1.8}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 3.5}, 0.3]}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{1.5, 0.5}, 0.3]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, {}, {}}, {{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 1.2}, {2.8, 1.2}, {2.5, 1.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 4.25}, {3.25, 4.75}, {3.75, 4.75}, {3.75, 
+        4.25}}]}}, {{}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 3.5}, 0.3]}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484273191690939*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 1.2}, {0.8, 1.2}, {0.5, 1.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 4.2}, {0.8, 4.2}, {0.5, 4.8}}]}}, {
+      {Hue[0.35, 0.5], DiskBox[{1.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 1.25}, {1.25, 1.75}, {1.75, 1.75}, {1.75, 
+        1.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 3.5}, 0.3]}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{2.5, 0.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 1.2}, {2.8, 1.2}, {2.5, 1.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 2.25}, {3.25, 2.75}, {3.75, 2.75}, {3.75, 
+        2.25}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 4.25}, {3.25, 4.75}, {3.75, 4.75}, {3.75, 
+        4.25}}]}}, {{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 1.2}, {4.8, 1.2}, {4.5, 1.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 4.2}, {4.8, 4.2}, {4.5, 4.8}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4842731917378063`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "11", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "19"}],
+  SequenceForm[11, " / ", 19],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.484273191751957*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 2.5}, 0.3]}, {}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 0.25}, {1.25, 0.75}, {1.75, 0.75}, {1.75, 
+        0.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 2.5}, 0.3]}, {}, {}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 2.25}, {2.25, 2.75}, {2.75, 2.75}, {2.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, {}}, {
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{4.2, 0.2}, {4.8, 0.2}, {4.5, 0.8}}]}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 3.25}, {4.25, 3.75}, {4.75, 3.75}, {4.75, 
+        3.25}}]}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484273254252481*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 0.2}, {0.8, 0.2}, {0.5, 0.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 1.25}, {0.25, 1.75}, {0.75, 1.75}, {0.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 2.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 3.25}, {0.25, 3.75}, {0.75, 3.75}, {0.75, 
+        3.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 4.2}, {0.8, 4.2}, {0.5, 4.8}}]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 0.25}, {1.25, 0.75}, {1.75, 0.75}, {1.75, 
+        0.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 4.25}, {1.25, 4.75}, {1.75, 4.75}, {1.75, 
+        4.25}}]}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 2.25}, {2.25, 2.75}, {2.75, 2.75}, {2.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 4.25}, {2.25, 4.75}, {2.75, 4.75}, {2.75, 
+        4.25}}]}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 4.25}, {3.25, 4.75}, {3.75, 4.75}, {3.75, 
+        4.25}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 0.2}, {4.8, 0.2}, {4.5, 0.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 1.25}, {4.25, 1.75}, {4.75, 1.75}, {4.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 2.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 3.25}, {4.25, 3.75}, {4.75, 3.75}, {4.75, 
+        3.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 4.2}, {4.8, 4.2}, {4.5, 4.8}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4842732543031893`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"9", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "21"}],
+  SequenceForm[9, " / ", 21],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.484273254317287*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 1.5}, 0.3]}, {}, {}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 1.25}, {1.25, 1.75}, {1.75, 1.75}, {1.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 3.5}, 0.3]}, {}}, {{}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 0.25}, {3.25, 0.75}, {3.75, 0.75}, {3.75, 
+        0.25}}]}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{3.2, 2.2}, {3.8, 2.2}, {3.5, 
+        2.8}}]}, {}, {}}, {{}, {}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 4.25}, {4.25, 4.75}, {4.75, 4.75}, {4.75, 
+        4.25}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484273757336421*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 0.25}, {0.25, 0.75}, {0.75, 0.75}, {0.75, 
+        0.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 1.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 2.2}, {0.8, 2.2}, {0.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 4.25}, {0.25, 4.75}, {0.75, 4.75}, {0.75, 
+        4.25}}]}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 1.25}, {1.25, 1.75}, {1.75, 1.75}, {1.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 4.25}, {1.25, 4.75}, {1.75, 4.75}, {1.75, 
+        4.25}}]}}, {{}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 4.5}, 0.3]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 0.25}, {3.25, 0.75}, {3.75, 0.75}, {3.75, 
+        0.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 1.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 2.2}, {3.8, 2.2}, {3.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 4.25}, {3.25, 4.75}, {3.75, 4.75}, {3.75, 
+        4.25}}]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 0.25}, {4.25, 0.75}, {4.75, 0.75}, {4.75, 
+        0.25}}]}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 4.25}, {4.25, 4.75}, {4.75, 4.75}, {4.75, 
+        4.25}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484273758687204*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"9", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "20"}],
+  SequenceForm[9, " / ", 20],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4842737589005613`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 1.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 4.5}, 0.3]}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, {}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 0.25}, {2.25, 0.75}, {2.75, 0.75}, {2.75, 
+        0.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, {}, {}}, {{}, {}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 3.2}, {3.8, 3.2}, {3.5, 3.8}}]}, {}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 0.2}, {4.8, 0.2}, {4.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 1.5}, 0.3]}, {}, {}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4842744841921797`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 1.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 4.5}, 0.3]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 0.2}, {1.8, 0.2}, {1.5, 0.8}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 3.2}, {1.8, 3.2}, {1.5, 3.8}}]}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 0.25}, {2.25, 0.75}, {2.75, 0.75}, {2.75, 
+        0.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 3.25}, {2.25, 3.75}, {2.75, 3.75}, {2.75, 
+        3.25}}]}, {}}, {{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 1.2}, {3.8, 1.2}, {3.5, 1.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 2.25}, {3.25, 2.75}, {3.75, 2.75}, {3.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 3.2}, {3.8, 3.2}, {3.5, 3.8}}]}, {}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 0.2}, {4.8, 0.2}, {4.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 1.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 3.2}, {4.8, 3.2}, {4.5, 3.8}}]}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4842744897330313`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"9", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "15"}],
+  SequenceForm[9, " / ", 15],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.4842744924297323`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 2.25}, {0.25, 2.75}, {0.75, 2.75}, {0.75, 
+        2.25}}]}, {}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 0.25}, {1.25, 0.75}, {1.75, 0.75}, {1.75, 
+        0.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 1.25}, {1.25, 1.75}, {1.75, 1.75}, {1.75, 
+        1.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, {}, {}}, {
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{2.2, 0.2}, {2.8, 0.2}, {2.5, 0.8}}]}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, {}}, {{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 1.2}, {3.8, 1.2}, {3.5, 1.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 2.25}, {3.25, 2.75}, {3.75, 2.75}, {3.75, 
+        2.25}}]}, {}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{4.5, 0.5}, 0.3]}, {}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 3.2}, {4.8, 3.2}, {4.5, 3.8}}]}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484274602884165*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0.35, 0.5], DiskBox[{0.5, 0.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 1.2}, {0.8, 1.2}, {0.5, 1.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 2.25}, {0.25, 2.75}, {0.75, 2.75}, {0.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 4.5}, 0.3]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 0.25}, {1.25, 0.75}, {1.75, 0.75}, {1.75, 
+        0.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 1.25}, {1.25, 1.75}, {1.75, 1.75}, {1.75, 
+        1.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, {}, {}}, {
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{2.2, 0.2}, {2.8, 0.2}, {2.5, 0.8}}]}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 4.2}, {2.8, 4.2}, {2.5, 4.8}}]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 0.25}, {3.25, 0.75}, {3.75, 0.75}, {3.75, 
+        0.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 1.2}, {3.8, 1.2}, {3.5, 1.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 2.25}, {3.25, 2.75}, {3.75, 2.75}, {3.75, 
+        2.25}}]}, {}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{4.5, 0.5}, 0.3]}, {}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 3.2}, {4.8, 3.2}, {4.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 4.5}, 0.3]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484274603281517*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "10", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "17"}],
+  SequenceForm[10, " / ", 17],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.484274604421163*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 1.25}, {0.25, 1.75}, {0.75, 1.75}, {0.75, 
+        1.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 2.25}, {0.25, 2.75}, {0.75, 2.75}, {0.75, 
+        2.25}}]}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{0.2, 4.2}, {0.8, 4.2}, {0.5, 4.8}}]}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, {}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 0.25}, {2.25, 0.75}, {2.75, 0.75}, {2.75, 
+        0.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 1.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, {}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 1.5}, 0.3]}, {}, {}, {}}, {{}, {}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 3.2}, {4.8, 3.2}, {4.5, 3.8}}]}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484274744115903*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 0.2}, {0.8, 0.2}, {0.5, 0.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 1.25}, {0.25, 1.75}, {0.75, 1.75}, {0.75, 
+        1.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 2.25}, {0.25, 2.75}, {0.75, 2.75}, {0.75, 
+        2.25}}]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 4.2}, {0.8, 4.2}, {0.5, 4.8}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 0.2}, {1.8, 0.2}, {1.5, 0.8}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 3.2}, {1.8, 3.2}, {1.5, 3.8}}]}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 0.25}, {2.25, 0.75}, {2.75, 0.75}, {2.75, 
+        0.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 1.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 4.25}, {2.25, 4.75}, {2.75, 4.75}, {2.75, 
+        4.25}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 0.2}, {3.8, 0.2}, {3.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 2.25}, {3.25, 2.75}, {3.75, 2.75}, {3.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 4.2}, {3.8, 4.2}, {3.5, 4.8}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 0.2}, {4.8, 0.2}, {4.5, 0.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 1.25}, {4.25, 1.75}, {4.75, 1.75}, {4.75, 
+        1.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 2.25}, {4.25, 2.75}, {4.75, 2.75}, {4.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 3.2}, {4.8, 3.2}, {4.5, 3.8}}]}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484274747334145*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "10", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "21"}],
+  SequenceForm[10, " / ", 21],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.484274749259652*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], 
+     LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, {}, {}, {}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 0.2}, {1.8, 0.2}, {1.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 2.5}, 0.3]}, {}, {}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 0.2}, {2.8, 0.2}, {2.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 1.5}, 0.3]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, {}, {}}, {{}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 2.2}, {3.8, 2.2}, {3.5, 2.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 3.2}, {3.8, 3.2}, {3.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 0.25}, {4.25, 0.75}, {4.75, 0.75}, {4.75, 
+        0.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 1.25}, {4.25, 1.75}, {4.75, 1.75}, {4.75, 
+        1.25}}]}, {}, {}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4842747580943213`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 0.25}, {0.25, 0.75}, {0.75, 0.75}, {0.75, 
+        0.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 1.25}, {0.25, 1.75}, {0.75, 1.75}, {0.75, 
+        1.25}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 3.25}, {0.25, 3.75}, {0.75, 3.75}, {0.75, 
+        3.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 4.25}, {0.25, 4.75}, {0.75, 4.75}, {0.75, 
+        4.25}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 0.2}, {1.8, 0.2}, {1.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 3.2}, {1.8, 3.2}, {1.5, 3.8}}]}, {}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 0.2}, {2.8, 0.2}, {2.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 1.5}, 0.3]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, {}, {}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 1.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 2.2}, {3.8, 2.2}, {3.5, 2.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 3.2}, {3.8, 3.2}, {3.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 0.25}, {4.25, 0.75}, {4.75, 0.75}, {4.75, 
+        0.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 1.25}, {4.25, 1.75}, {4.75, 1.75}, {4.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 2.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 3.25}, {4.25, 3.75}, {4.75, 3.75}, {4.75, 
+        3.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 4.25}, {4.25, 4.75}, {4.75, 4.75}, {4.75, 
+        4.25}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4842747581424837`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "11", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "20"}],
+  SequenceForm[11, " / ", 20],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.484274758156617*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], 
+     LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, {}, {}, {}}, {{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 1.2}, {1.8, 1.2}, {1.5, 1.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 2.2}, {1.8, 2.2}, {1.5, 2.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 3.25}, {1.25, 3.75}, {1.75, 3.75}, {1.75, 
+        3.25}}]}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 1.25}, {2.25, 1.75}, {2.75, 1.75}, {2.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, {}, {}}, {{}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, {}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{4.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 1.25}, {4.25, 1.75}, {4.75, 1.75}, {4.75, 
+        1.25}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 3.25}, {4.25, 3.75}, {4.75, 3.75}, {4.75, 
+        3.25}}]}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4842753502487507`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0.35, 0.5], DiskBox[{0.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 1.25}, {0.25, 1.75}, {0.75, 1.75}, {0.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 2.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 3.25}, {0.25, 3.75}, {0.75, 3.75}, {0.75, 
+        3.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 4.5}, 0.3]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 0.25}, {1.25, 0.75}, {1.75, 0.75}, {1.75, 
+        0.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 1.2}, {1.8, 1.2}, {1.5, 1.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 2.2}, {1.8, 2.2}, {1.5, 2.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 3.25}, {1.25, 3.75}, {1.75, 3.75}, {1.75, 
+        3.25}}]}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 1.25}, {2.25, 1.75}, {2.75, 1.75}, {2.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 3.25}, {2.25, 3.75}, {2.75, 3.75}, {2.75, 
+        3.25}}]}, {}}, {{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 1.2}, {3.8, 1.2}, {3.5, 1.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 4.2}, {3.8, 4.2}, {3.5, 4.8}}]}}, {
+      {Hue[0.35, 0.5], DiskBox[{4.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 1.25}, {4.25, 1.75}, {4.75, 1.75}, {4.75, 
+        1.25}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 3.25}, {4.25, 3.75}, {4.75, 3.75}, {4.75, 
+        3.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 4.5}, 0.3]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484275351528921*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"9", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "19"}],
+  SequenceForm[9, " / ", 19],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.484275351904416*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], 
+     LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 4.25}, {0.25, 4.75}, {0.75, 4.75}, {0.75, 
+        4.25}}]}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{1.2, 2.2}, {1.8, 2.2}, {1.5, 2.8}}]}, {}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{2.5, 0.5}, 0.3]}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 3.25}, {2.25, 3.75}, {2.75, 3.75}, {2.75, 
+        3.25}}]}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{3.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{3.2, 2.2}, {3.8, 2.2}, {3.5, 2.8}}]}, {}, {}}, {{}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 2.2}, {4.8, 2.2}, {4.5, 2.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 3.2}, {4.8, 3.2}, {4.5, 3.8}}]}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484275435698608*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 0.25}, {0.25, 0.75}, {0.75, 0.75}, {0.75, 
+        0.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 1.25}, {0.25, 1.75}, {0.75, 1.75}, {0.75, 
+        1.25}}]}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 4.25}, {0.25, 4.75}, {0.75, 4.75}, {0.75, 
+        4.25}}]}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 2.2}, {1.8, 2.2}, {1.5, 2.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 3.2}, {1.8, 3.2}, {1.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 4.5}, 0.3]}}, {
+      {Hue[0.35, 0.5], DiskBox[{2.5, 0.5}, 0.3]}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 3.25}, {2.25, 3.75}, {2.75, 3.75}, {2.75, 
+        3.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 4.5}, 0.3]}}, {
+      {Hue[0.35, 0.5], DiskBox[{3.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 2.2}, {3.8, 2.2}, {3.5, 2.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 3.25}, {3.25, 3.75}, {3.75, 3.75}, {3.75, 
+        3.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 0.25}, {4.25, 0.75}, {4.75, 0.75}, {4.75, 
+        0.25}}]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 2.2}, {4.8, 2.2}, {4.5, 2.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 3.2}, {4.8, 3.2}, {4.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 4.25}, {4.25, 4.75}, {4.75, 4.75}, {4.75, 
+        4.25}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484275435746167*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "10", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "19"}],
+  SequenceForm[10, " / ", 19],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.484275435782117*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], 
+     LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, {}, {}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{1.5, 0.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, {}, {}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 0.2}, {2.8, 0.2}, {2.5, 0.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 1.25}, {2.25, 1.75}, {2.75, 1.75}, {2.75, 
+        1.25}}]}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, {}}, {{}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}}, {{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 1.2}, {4.8, 1.2}, {4.5, 1.8}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 3.25}, {4.25, 3.75}, {4.75, 3.75}, {4.75, 
+        3.25}}]}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484275993168747*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 1.2}, {0.8, 1.2}, {0.5, 1.8}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 3.25}, {0.25, 3.75}, {0.75, 3.75}, {0.75, 
+        3.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 4.2}, {0.8, 4.2}, {0.5, 4.8}}]}}, {
+      {Hue[0.35, 0.5], DiskBox[{1.5, 0.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 3.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 4.5}, 0.3]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 0.2}, {2.8, 0.2}, {2.5, 0.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 1.25}, {2.25, 1.75}, {2.75, 1.75}, {2.75, 
+        1.25}}]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{3.5, 0.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 1.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}}, {{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 1.2}, {4.8, 1.2}, {4.5, 1.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 2.25}, {4.25, 2.75}, {4.75, 2.75}, {4.75, 
+        2.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 3.25}, {4.25, 3.75}, {4.75, 3.75}, {4.75, 
+        3.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 4.2}, {4.8, 4.2}, {4.5, 4.8}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484275993202571*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "10", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "20"}],
+  SequenceForm[10, " / ", 20],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.484275993216601*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 0.2}, {0.8, 0.2}, {0.5, 0.8}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 2.5}, 0.3]}, {}, {}}, {{}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{1.2, 1.2}, {1.8, 1.2}, {1.5, 
+        1.8}}]}, {}, {}, {}}, {{}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{3.5, 0.5}, 0.3]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 3.25}, {3.25, 3.75}, {3.75, 3.75}, {3.75, 
+        3.25}}]}, {}}, {{}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{4.2, 1.2}, {4.8, 1.2}, {4.5, 1.8}}]}, {}, {}, {}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484277247268346*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 0.2}, {0.8, 0.2}, {0.5, 0.8}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 3.8}}]}, {}}, {{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 1.2}, {1.8, 1.2}, {1.5, 1.8}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 3.25}, {1.25, 3.75}, {1.75, 3.75}, {1.75, 
+        3.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 4.2}, {1.8, 4.2}, {1.5, 4.8}}]}}, {
+      {Hue[0.35, 0.5], DiskBox[{2.5, 0.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{3.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 3.25}, {3.25, 3.75}, {3.75, 3.75}, {3.75, 
+        3.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 0.2}, {4.8, 0.2}, {4.5, 0.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 1.2}, {4.8, 1.2}, {4.5, 1.8}}]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 3.2}, {4.8, 3.2}, {4.5, 3.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 4.2}, {4.8, 4.2}, {4.5, 4.8}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484277249426402*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"9", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "18"}],
+  SequenceForm[9, " / ", 18],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.48427724967196*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{{}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{0.2, 2.2}, {0.8, 2.2}, {0.5, 2.8}}]}, {}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 0.25}, {1.25, 0.75}, {1.75, 0.75}, {1.75, 
+        0.25}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 3.5}, 0.3]}, {}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 1.5}, 0.3]}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 4.25}, {2.25, 4.75}, {2.75, 4.75}, {2.75, 
+        4.25}}]}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, {}}, {{}, {}, {}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 4.2}, {4.8, 4.2}, {4.5, 4.8}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.484277358979628*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {5, 0}}], LineBox[{{0, 1}, {5, 1}}], 
+     LineBox[{{0, 2}, {5, 2}}], LineBox[{{0, 3}, {5, 3}}], 
+     LineBox[{{0, 4}, {5, 4}}], LineBox[{{0, 5}, {5, 5}}]}, {
+     LineBox[{{0, 0}, {0, 5}}], LineBox[{{1, 0}, {1, 5}}], 
+     LineBox[{{2, 0}, {2, 5}}], LineBox[{{3, 0}, {3, 5}}], 
+     LineBox[{{4, 0}, {4, 5}}], LineBox[{{5, 0}, {5, 5}}]}, {{
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 0.2}, {0.8, 0.2}, {0.5, 0.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 1.25}, {0.25, 1.75}, {0.75, 1.75}, {0.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 2.2}, {0.8, 2.2}, {0.5, 2.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 3.25}, {0.25, 3.75}, {0.75, 3.75}, {0.75, 
+        3.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 4.2}, {0.8, 4.2}, {0.5, 4.8}}]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 0.25}, {1.25, 0.75}, {1.75, 0.75}, {1.75, 
+        0.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 4.25}, {1.25, 4.75}, {1.75, 4.75}, {1.75, 
+        4.25}}]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 0.25}, {2.25, 0.75}, {2.75, 0.75}, {2.75, 
+        0.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 1.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 4.25}, {2.25, 4.75}, {2.75, 4.75}, {2.75, 
+        4.25}}]}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 4.25}, {3.25, 4.75}, {3.75, 4.75}, {3.75, 
+        4.25}}]}}, {
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{4.2, 0.2}, {4.8, 0.2}, {4.5, 0.8}}]}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 3.25}, {4.25, 3.75}, {4.75, 3.75}, {4.75, 
+        3.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 4.2}, {4.8, 4.2}, {4.5, 4.8}}]}}}},
+   ImageSize->100],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.4842773598106613`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"9", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "21"}],
+  SequenceForm[9, " / ", 21],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.484277360006806*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["6x6", "Section",
+ CellChangeTimes->{{3.484259663113378*^9, 3.484259663352928*^9}, 
+   3.48430511092117*^9, {3.515422926924004*^9, 3.51542292712932*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {6, 0}}], LineBox[{{0, 1}, {6, 1}}], 
+     LineBox[{{0, 2}, {6, 2}}], LineBox[{{0, 3}, {6, 3}}], 
+     LineBox[{{0, 4}, {6, 4}}], LineBox[{{0, 5}, {6, 5}}], 
+     LineBox[{{0, 6}, {6, 6}}]}, {LineBox[{{0, 0}, {0, 6}}], 
+     LineBox[{{1, 0}, {1, 6}}], LineBox[{{2, 0}, {2, 6}}], 
+     LineBox[{{3, 0}, {3, 6}}], LineBox[{{4, 0}, {4, 6}}], 
+     LineBox[{{5, 0}, {5, 6}}], LineBox[{{6, 0}, {6, 6}}]}, {{{}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 1.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 
+        3.8}}]}, {}, {}}, {{}, {}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 4.5}, 0.3]}, {}}, {{}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 3.25}, {2.25, 3.75}, {2.75, 3.75}, {2.75, 
+        3.25}}]}, {}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 0.25}, {3.25, 0.75}, {3.75, 0.75}, {3.75, 
+        0.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{3.2, 4.2}, {3.8, 4.2}, {3.5, 4.8}}]}, {}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 2.25}, {4.25, 2.75}, {4.75, 2.75}, {4.75, 
+        2.25}}]}, {}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{4.2, 5.2}, {4.8, 5.2}, {4.5, 5.8}}]}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 2.25}, {5.25, 2.75}, {5.75, 2.75}, {5.75, 
+        2.25}}]}, {}, {}, {}}}},
+   ImageSize->120],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{
+  3.5153452054841633`*^9, 3.515345969405328*^9, 3.515346456105485*^9, 
+   3.515346518700156*^9, 3.515346599958858*^9, 3.515346931043305*^9, 
+   3.5153474065923367`*^9, 3.515347476241559*^9, 3.515347763533042*^9, {
+   3.515347811961624*^9, 3.5153478397932*^9}, 3.515348076535158*^9, 
+   3.51540493381396*^9, 3.515409569341769*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {6, 0}}], LineBox[{{0, 1}, {6, 1}}], 
+     LineBox[{{0, 2}, {6, 2}}], LineBox[{{0, 3}, {6, 3}}], 
+     LineBox[{{0, 4}, {6, 4}}], LineBox[{{0, 5}, {6, 5}}], 
+     LineBox[{{0, 6}, {6, 6}}]}, {LineBox[{{0, 0}, {0, 6}}], 
+     LineBox[{{1, 0}, {1, 6}}], LineBox[{{2, 0}, {2, 6}}], 
+     LineBox[{{3, 0}, {3, 6}}], LineBox[{{4, 0}, {4, 6}}], 
+     LineBox[{{5, 0}, {5, 6}}], LineBox[{{6, 0}, {6, 6}}]}, {{{}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 2.25}, {0.25, 2.75}, {0.75, 2.75}, {0.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 4.25}, {0.25, 4.75}, {0.75, 4.75}, {0.75, 
+        4.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{0.5, 5.5}, 0.3]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 0.2}, {1.8, 0.2}, {1.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 4.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 5.2}, {1.8, 5.2}, {1.5, 5.8}}]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 0.25}, {2.25, 0.75}, {2.75, 0.75}, {2.75, 
+        0.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 3.25}, {2.25, 3.75}, {2.75, 3.75}, {2.75, 
+        3.25}}]}, {}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 0.25}, {3.25, 0.75}, {3.75, 0.75}, {3.75, 
+        0.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 1.2}, {3.8, 1.2}, {3.5, 1.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 4.2}, {3.8, 4.2}, {3.5, 4.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 5.25}, {3.25, 5.75}, {3.75, 5.75}, {3.75, 
+        5.25}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 0.2}, {4.8, 0.2}, {4.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 2.25}, {4.25, 2.75}, {4.75, 2.75}, {4.75, 
+        2.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 3.25}, {4.25, 3.75}, {4.75, 3.75}, {4.75, 
+        3.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 4.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 5.2}, {4.8, 5.2}, {4.5, 5.8}}]}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{5.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 2.25}, {5.25, 2.75}, {5.75, 2.75}, {5.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{5.2, 3.2}, {5.8, 3.2}, {5.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 4.25}, {5.25, 4.75}, {5.75, 4.75}, {5.75, 
+        4.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{5.5, 5.5}, 0.3]}}}},
+   ImageSize->120],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{
+  3.5153452054841633`*^9, 3.515345969405328*^9, 3.515346456105485*^9, 
+   3.515346518700156*^9, 3.515346599958858*^9, 3.515346931043305*^9, 
+   3.5153474065923367`*^9, 3.515347476241559*^9, 3.515347763533042*^9, {
+   3.515347811961624*^9, 3.5153478397932*^9}, 3.515348076535158*^9, 
+   3.51540493381396*^9, 3.515409569377225*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "12", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "30"}],
+  SequenceForm[12, " / ", 30],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.5153452054841633`*^9, 3.515345969405328*^9, 3.515346456105485*^9, 
+   3.515346518700156*^9, 3.515346599958858*^9, 3.515346931043305*^9, 
+   3.5153474065923367`*^9, 3.515347476241559*^9, 3.515347763533042*^9, {
+   3.515347811961624*^9, 3.5153478397932*^9}, 3.515348076535158*^9, 
+   3.51540493381396*^9, 3.515409569388014*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {6, 0}}], LineBox[{{0, 1}, {6, 1}}], 
+     LineBox[{{0, 2}, {6, 2}}], LineBox[{{0, 3}, {6, 3}}], 
+     LineBox[{{0, 4}, {6, 4}}], LineBox[{{0, 5}, {6, 5}}], 
+     LineBox[{{0, 6}, {6, 6}}]}, {LineBox[{{0, 0}, {0, 6}}], 
+     LineBox[{{1, 0}, {1, 6}}], LineBox[{{2, 0}, {2, 6}}], 
+     LineBox[{{3, 0}, {3, 6}}], LineBox[{{4, 0}, {4, 6}}], 
+     LineBox[{{5, 0}, {5, 6}}], LineBox[{{6, 0}, {6, 6}}]}, {{{}, {}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 3.8}}]}, {}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 0.25}, {1.25, 0.75}, {1.75, 0.75}, {1.75, 
+        0.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, {}, {}, {}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 0.25}, {2.25, 0.75}, {2.75, 0.75}, {2.75, 
+        0.25}}]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, {}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 3.2}, {3.8, 3.2}, {3.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 0.25}, {4.25, 0.75}, {4.75, 0.75}, {4.75, 
+        0.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 3.5}, 0.3]}, {}, {}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{5.2, 0.2}, {5.8, 0.2}, {5.5, 0.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 1.25}, {5.25, 1.75}, {5.75, 1.75}, {5.75, 
+        1.25}}]}, {}, {}, {}, {}}}},
+   ImageSize->120],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{
+  3.5153452054841633`*^9, 3.515345969405328*^9, 3.515346456105485*^9, 
+   3.515346518700156*^9, 3.515346599958858*^9, 3.515346931043305*^9, 
+   3.5153474065923367`*^9, 3.515347476241559*^9, 3.515347763533042*^9, {
+   3.515347811961624*^9, 3.5153478397932*^9}, 3.515348076535158*^9, 
+   3.51540493381396*^9, 3.515415992846965*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {6, 0}}], LineBox[{{0, 1}, {6, 1}}], 
+     LineBox[{{0, 2}, {6, 2}}], LineBox[{{0, 3}, {6, 3}}], 
+     LineBox[{{0, 4}, {6, 4}}], LineBox[{{0, 5}, {6, 5}}], 
+     LineBox[{{0, 6}, {6, 6}}]}, {LineBox[{{0, 0}, {0, 6}}], 
+     LineBox[{{1, 0}, {1, 6}}], LineBox[{{2, 0}, {2, 6}}], 
+     LineBox[{{3, 0}, {3, 6}}], LineBox[{{4, 0}, {4, 6}}], 
+     LineBox[{{5, 0}, {5, 6}}], LineBox[{{6, 0}, {6, 6}}]}, {{
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 0.2}, {0.8, 0.2}, {0.5, 0.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 1.25}, {0.25, 1.75}, {0.75, 1.75}, {0.75, 
+        1.25}}]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 4.25}, {0.25, 4.75}, {0.75, 4.75}, {0.75, 
+        4.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 5.2}, {0.8, 5.2}, {0.5, 5.8}}]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 0.25}, {1.25, 0.75}, {1.75, 0.75}, {1.75, 
+        0.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 4.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 5.25}, {1.25, 5.75}, {1.75, 5.75}, {1.75, 
+        5.25}}]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 0.25}, {2.25, 0.75}, {2.75, 0.75}, {2.75, 
+        0.25}}]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 4.2}, {2.8, 4.2}, {2.5, 4.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 5.25}, {2.25, 5.75}, {2.75, 5.75}, {2.75, 
+        5.25}}]}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 3.2}, {3.8, 3.2}, {3.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 5.25}, {3.25, 5.75}, {3.75, 5.75}, {3.75, 
+        5.25}}]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 0.25}, {4.25, 0.75}, {4.75, 0.75}, {4.75, 
+        0.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 1.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 3.5}, 0.3]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 5.25}, {4.25, 5.75}, {4.75, 5.75}, {4.75, 
+        5.25}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{5.2, 0.2}, {5.8, 0.2}, {5.5, 0.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 1.25}, {5.25, 1.75}, {5.75, 1.75}, {5.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{5.2, 2.2}, {5.8, 2.2}, {5.5, 2.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{5.2, 3.2}, {5.8, 3.2}, {5.5, 3.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 4.25}, {5.25, 4.75}, {5.75, 4.75}, {5.75, 
+        4.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{5.2, 5.2}, {5.8, 5.2}, {5.5, 5.8}}]}}}},
+   ImageSize->120],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{
+  3.5153452054841633`*^9, 3.515345969405328*^9, 3.515346456105485*^9, 
+   3.515346518700156*^9, 3.515346599958858*^9, 3.515346931043305*^9, 
+   3.5153474065923367`*^9, 3.515347476241559*^9, 3.515347763533042*^9, {
+   3.515347811961624*^9, 3.5153478397932*^9}, 3.515348076535158*^9, 
+   3.51540493381396*^9, 3.515415992882433*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "14", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "30"}],
+  SequenceForm[14, " / ", 30],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.5153452054841633`*^9, 3.515345969405328*^9, 3.515346456105485*^9, 
+   3.515346518700156*^9, 3.515346599958858*^9, 3.515346931043305*^9, 
+   3.5153474065923367`*^9, 3.515347476241559*^9, 3.515347763533042*^9, {
+   3.515347811961624*^9, 3.5153478397932*^9}, 3.515348076535158*^9, 
+   3.51540493381396*^9, 3.515415992892778*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {6, 0}}], LineBox[{{0, 1}, {6, 1}}], 
+     LineBox[{{0, 2}, {6, 2}}], LineBox[{{0, 3}, {6, 3}}], 
+     LineBox[{{0, 4}, {6, 4}}], LineBox[{{0, 5}, {6, 5}}], 
+     LineBox[{{0, 6}, {6, 6}}]}, {LineBox[{{0, 0}, {0, 6}}], 
+     LineBox[{{1, 0}, {1, 6}}], LineBox[{{2, 0}, {2, 6}}], 
+     LineBox[{{3, 0}, {3, 6}}], LineBox[{{4, 0}, {4, 6}}], 
+     LineBox[{{5, 0}, {5, 6}}], LineBox[{{6, 0}, {6, 6}}]}, {{{}, {}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 
+        3.8}}]}, {}, {}}, {{}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 3.25}, {1.25, 3.75}, {1.75, 3.75}, {1.75, 
+        3.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 4.5}, 0.3]}, {}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 1.5}, 0.3]}, {}, {}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 5.2}, {2.8, 5.2}, {2.5, 5.8}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 0.2}, {3.8, 0.2}, {3.5, 0.8}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 3.25}, {3.25, 3.75}, {3.75, 3.75}, {3.75, 
+        3.25}}]}, {}, {}}, {{}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 2.2}, {4.8, 2.2}, {4.5, 2.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 3.25}, {4.25, 3.75}, {4.75, 3.75}, {4.75, 
+        3.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 5.5}, 0.3]}}, {{}, {}, {}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{5.2, 4.2}, {5.8, 4.2}, {5.5, 4.8}}]}, {}}}},
+   ImageSize->120],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{
+  3.5153452054841633`*^9, 3.515345969405328*^9, 3.515346456105485*^9, 
+   3.515346518700156*^9, 3.515346599958858*^9, 3.515346931043305*^9, 
+   3.5153474065923367`*^9, 3.515347476241559*^9, 3.515347763533042*^9, {
+   3.515347811961624*^9, 3.5153478397932*^9}, 3.515348076535158*^9, 
+   3.51540493381396*^9, 3.515425922219584*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {6, 0}}], LineBox[{{0, 1}, {6, 1}}], 
+     LineBox[{{0, 2}, {6, 2}}], LineBox[{{0, 3}, {6, 3}}], 
+     LineBox[{{0, 4}, {6, 4}}], LineBox[{{0, 5}, {6, 5}}], 
+     LineBox[{{0, 6}, {6, 6}}]}, {LineBox[{{0, 0}, {0, 6}}], 
+     LineBox[{{1, 0}, {1, 6}}], LineBox[{{2, 0}, {2, 6}}], 
+     LineBox[{{3, 0}, {3, 6}}], LineBox[{{4, 0}, {4, 6}}], 
+     LineBox[{{5, 0}, {5, 6}}], LineBox[{{6, 0}, {6, 6}}]}, {{{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 1.25}, {0.25, 1.75}, {0.75, 1.75}, {0.75, 
+        1.25}}]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 3.2}, {0.8, 3.2}, {0.5, 3.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 4.2}, {0.8, 4.2}, {0.5, 4.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 5.25}, {0.25, 5.75}, {0.75, 5.75}, {0.75, 
+        5.25}}]}}, {
+      {Hue[0.35, 0.5], DiskBox[{1.5, 0.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 2.25}, {1.25, 2.75}, {1.75, 2.75}, {1.75, 
+        2.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{1.25, 3.25}, {1.25, 3.75}, {1.75, 3.75}, {1.75, 
+        3.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 4.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 5.5}, 0.3]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 0.2}, {2.8, 0.2}, {2.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 1.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 4.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 5.2}, {2.8, 5.2}, {2.5, 5.8}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 0.2}, {3.8, 0.2}, {3.5, 0.8}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 3.25}, {3.25, 3.75}, {3.75, 3.75}, {3.75, 
+        3.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 4.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 5.2}, {3.8, 5.2}, {3.5, 5.8}}]}}, {
+      {Hue[0.35, 0.5], DiskBox[{4.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 1.25}, {4.25, 1.75}, {4.75, 1.75}, {4.75, 
+        1.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 2.2}, {4.8, 2.2}, {4.5, 2.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 3.25}, {4.25, 3.75}, {4.75, 3.75}, {4.75, 
+        3.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 5.5}, 0.3]}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 2.25}, {5.25, 2.75}, {5.75, 2.75}, {5.75, 
+        2.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{5.2, 3.2}, {5.8, 3.2}, {5.5, 3.8}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{5.2, 4.2}, {5.8, 4.2}, {5.5, 4.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 5.25}, {5.25, 5.75}, {5.75, 5.75}, {5.75, 
+        5.25}}]}}}},
+   ImageSize->120],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{
+  3.5153452054841633`*^9, 3.515345969405328*^9, 3.515346456105485*^9, 
+   3.515346518700156*^9, 3.515346599958858*^9, 3.515346931043305*^9, 
+   3.5153474065923367`*^9, 3.515347476241559*^9, 3.515347763533042*^9, {
+   3.515347811961624*^9, 3.5153478397932*^9}, 3.515348076535158*^9, 
+   3.51540493381396*^9, 3.5154259222436438`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "12", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "29"}],
+  SequenceForm[12, " / ", 29],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.5153452054841633`*^9, 3.515345969405328*^9, 3.515346456105485*^9, 
+   3.515346518700156*^9, 3.515346599958858*^9, 3.515346931043305*^9, 
+   3.5153474065923367`*^9, 3.515347476241559*^9, 3.515347763533042*^9, {
+   3.515347811961624*^9, 3.5153478397932*^9}, 3.515348076535158*^9, 
+   3.51540493381396*^9, 3.5154259222540503`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {6, 0}}], LineBox[{{0, 1}, {6, 1}}], 
+     LineBox[{{0, 2}, {6, 2}}], LineBox[{{0, 3}, {6, 3}}], 
+     LineBox[{{0, 4}, {6, 4}}], LineBox[{{0, 5}, {6, 5}}], 
+     LineBox[{{0, 6}, {6, 6}}]}, {LineBox[{{0, 0}, {0, 6}}], 
+     LineBox[{{1, 0}, {1, 6}}], LineBox[{{2, 0}, {2, 6}}], 
+     LineBox[{{3, 0}, {3, 6}}], LineBox[{{4, 0}, {4, 6}}], 
+     LineBox[{{5, 0}, {5, 6}}], LineBox[{{6, 0}, {6, 6}}]}, {{
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 0.25}, {0.25, 0.75}, {0.75, 0.75}, {0.75, 
+        0.25}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 2.25}, {0.25, 2.75}, {0.75, 2.75}, {0.75, 
+        2.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 3.25}, {0.25, 3.75}, {0.75, 3.75}, {0.75, 
+        3.25}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 5.25}, {0.25, 5.75}, {0.75, 5.75}, {0.75, 
+        5.25}}]}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 4.5}, 0.3]}, {}}, {{}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 4.5}, 0.3]}, {}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{3.2, 5.2}, {3.8, 5.2}, {3.5, 5.8}}]}}, {{}, {}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 3.2}, {4.8, 3.2}, {4.5, 3.8}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 5.5}, 0.3]}}, {{}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 1.25}, {5.25, 1.75}, {5.75, 1.75}, {5.75, 
+        1.25}}]}, {}, {}, {}, {}}}},
+   ImageSize->120],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{
+  3.5153452054841633`*^9, 3.515345969405328*^9, 3.515346456105485*^9, 
+   3.515346518700156*^9, 3.515346599958858*^9, 3.515346931043305*^9, 
+   3.5153474065923367`*^9, 3.515347476241559*^9, 3.515347763533042*^9, {
+   3.515347811961624*^9, 3.5153478397932*^9}, 3.515348076535158*^9, 
+   3.51540493381396*^9, 3.515426708836671*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {6, 0}}], LineBox[{{0, 1}, {6, 1}}], 
+     LineBox[{{0, 2}, {6, 2}}], LineBox[{{0, 3}, {6, 3}}], 
+     LineBox[{{0, 4}, {6, 4}}], LineBox[{{0, 5}, {6, 5}}], 
+     LineBox[{{0, 6}, {6, 6}}]}, {LineBox[{{0, 0}, {0, 6}}], 
+     LineBox[{{1, 0}, {1, 6}}], LineBox[{{2, 0}, {2, 6}}], 
+     LineBox[{{3, 0}, {3, 6}}], LineBox[{{4, 0}, {4, 6}}], 
+     LineBox[{{5, 0}, {5, 6}}], LineBox[{{6, 0}, {6, 6}}]}, {{
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 0.25}, {0.25, 0.75}, {0.75, 0.75}, {0.75, 
+        0.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 1.25}, {0.25, 1.75}, {0.75, 1.75}, {0.75, 
+        1.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 2.25}, {0.25, 2.75}, {0.75, 2.75}, {0.75, 
+        2.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 3.25}, {0.25, 3.75}, {0.75, 3.75}, {0.75, 
+        3.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 4.25}, {0.25, 4.75}, {0.75, 4.75}, {0.75, 
+        4.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 5.25}, {0.25, 5.75}, {0.75, 5.75}, {0.75, 
+        5.25}}]}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 3.2}, {1.8, 3.2}, {1.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 4.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 5.5}, 0.3]}}, {{}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 2.2}, {2.8, 2.2}, {2.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 4.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 5.2}, {2.8, 5.2}, {2.5, 5.8}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 0.2}, {3.8, 0.2}, {3.5, 0.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 4.25}, {3.25, 4.75}, {3.75, 4.75}, {3.75, 
+        4.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 5.2}, {3.8, 5.2}, {3.5, 5.8}}]}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 1.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 3.2}, {4.8, 3.2}, {4.5, 3.8}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 5.5}, 0.3]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 0.25}, {5.25, 0.75}, {5.75, 0.75}, {5.75, 
+        0.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 1.25}, {5.25, 1.75}, {5.75, 1.75}, {5.75, 
+        1.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 2.25}, {5.25, 2.75}, {5.75, 2.75}, {5.75, 
+        2.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 3.25}, {5.25, 3.75}, {5.75, 3.75}, {5.75, 
+        3.25}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 5.25}, {5.25, 5.75}, {5.75, 5.75}, {5.75, 
+        5.25}}]}}}},
+   ImageSize->120],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{
+  3.5153452054841633`*^9, 3.515345969405328*^9, 3.515346456105485*^9, 
+   3.515346518700156*^9, 3.515346599958858*^9, 3.515346931043305*^9, 
+   3.5153474065923367`*^9, 3.515347476241559*^9, 3.515347763533042*^9, {
+   3.515347811961624*^9, 3.5153478397932*^9}, 3.515348076535158*^9, 
+   3.51540493381396*^9, 3.5154267088728113`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "15", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "29"}],
+  SequenceForm[15, " / ", 29],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.5153452054841633`*^9, 3.515345969405328*^9, 3.515346456105485*^9, 
+   3.515346518700156*^9, 3.515346599958858*^9, 3.515346931043305*^9, 
+   3.5153474065923367`*^9, 3.515347476241559*^9, 3.515347763533042*^9, {
+   3.515347811961624*^9, 3.5153478397932*^9}, 3.515348076535158*^9, 
+   3.51540493381396*^9, 3.515426708883687*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {6, 0}}], LineBox[{{0, 1}, {6, 1}}], 
+     LineBox[{{0, 2}, {6, 2}}], LineBox[{{0, 3}, {6, 3}}], 
+     LineBox[{{0, 4}, {6, 4}}], LineBox[{{0, 5}, {6, 5}}], 
+     LineBox[{{0, 6}, {6, 6}}]}, {LineBox[{{0, 0}, {0, 6}}], 
+     LineBox[{{1, 0}, {1, 6}}], LineBox[{{2, 0}, {2, 6}}], 
+     LineBox[{{3, 0}, {3, 6}}], LineBox[{{4, 0}, {4, 6}}], 
+     LineBox[{{5, 0}, {5, 6}}], 
+     LineBox[{{6, 0}, {6, 6}}]}, {{{}, {}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 4.25}, {0.25, 4.75}, {0.75, 4.75}, {0.75, 
+        4.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 5.25}, {0.25, 5.75}, {0.75, 5.75}, {0.75, 
+        5.25}}]}}, {{}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{1.2, 1.2}, {1.8, 1.2}, {1.5, 1.8}}]}, {}, {}, {}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{2.5, 0.5}, 0.3]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, {}, {}}, {
+      {Hue[0.35, 0.5], DiskBox[{3.5, 0.5}, 0.3]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 4.25}, {3.25, 4.75}, {3.75, 4.75}, {3.75, 
+        4.25}}]}, {}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 0.2}, {4.8, 0.2}, {4.5, 0.8}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 3.5}, 0.3]}, {}, {}}, {{}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{5.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{5.2, 3.2}, {5.8, 3.2}, {5.5, 3.8}}]}, {}, {}}}},
+   ImageSize->120],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.5155502798107033`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {6, 0}}], LineBox[{{0, 1}, {6, 1}}], 
+     LineBox[{{0, 2}, {6, 2}}], LineBox[{{0, 3}, {6, 3}}], 
+     LineBox[{{0, 4}, {6, 4}}], LineBox[{{0, 5}, {6, 5}}], 
+     LineBox[{{0, 6}, {6, 6}}]}, {LineBox[{{0, 0}, {0, 6}}], 
+     LineBox[{{1, 0}, {1, 6}}], LineBox[{{2, 0}, {2, 6}}], 
+     LineBox[{{3, 0}, {3, 6}}], LineBox[{{4, 0}, {4, 6}}], 
+     LineBox[{{5, 0}, {5, 6}}], LineBox[{{6, 0}, {6, 6}}]}, {{
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 0.25}, {0.25, 0.75}, {0.75, 0.75}, {0.75, 
+        0.25}}]}, {}, {}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 4.25}, {0.25, 4.75}, {0.75, 4.75}, {0.75, 
+        4.25}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 5.25}, {0.25, 5.75}, {0.75, 5.75}, {0.75, 
+        5.25}}]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 0.2}, {1.8, 0.2}, {1.5, 0.8}}]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{1.2, 1.2}, {1.8, 1.2}, {1.5, 1.8}}]}, {}, {}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{1.2, 5.2}, {1.8, 5.2}, {1.5, 5.8}}]}}, {
+      {Hue[0.35, 0.5], DiskBox[{2.5, 0.5}, 0.3]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 3.2}, {2.8, 3.2}, {2.5, 3.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 4.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 5.5}, 0.3]}}, {
+      {Hue[0.35, 0.5], DiskBox[{3.5, 0.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 1.25}, {3.25, 1.75}, {3.75, 1.75}, {3.75, 
+        1.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 4.25}, {3.25, 4.75}, {3.75, 4.75}, {3.75, 
+        4.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 5.5}, 0.3]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 0.2}, {4.8, 0.2}, {4.5, 0.8}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 2.5}, 0.3]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 3.5}, 0.3]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 5.2}, {4.8, 5.2}, {4.5, 5.8}}]}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 0.25}, {5.25, 0.75}, {5.75, 0.75}, {5.75, 
+        0.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{5.2, 1.2}, {5.8, 1.2}, {5.5, 1.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{5.5, 2.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{5.2, 3.2}, {5.8, 3.2}, {5.5, 3.8}}]}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 5.25}, {5.25, 5.75}, {5.75, 5.75}, {5.75, 
+        5.25}}]}}}},
+   ImageSize->120],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.515550279843789*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "15", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "26"}],
+  SequenceForm[15, " / ", 26],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.5155502798537683`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {6, 0}}], LineBox[{{0, 1}, {6, 1}}], 
+     LineBox[{{0, 2}, {6, 2}}], LineBox[{{0, 3}, {6, 3}}], 
+     LineBox[{{0, 4}, {6, 4}}], LineBox[{{0, 5}, {6, 5}}], 
+     LineBox[{{0, 6}, {6, 6}}]}, {LineBox[{{0, 0}, {0, 6}}], 
+     LineBox[{{1, 0}, {1, 6}}], LineBox[{{2, 0}, {2, 6}}], 
+     LineBox[{{3, 0}, {3, 6}}], LineBox[{{4, 0}, {4, 6}}], 
+     LineBox[{{5, 0}, {5, 6}}], LineBox[{{6, 0}, {6, 6}}]}, {{
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 0.25}, {0.25, 0.75}, {0.75, 0.75}, {0.75, 
+        0.25}}]}, {}, {}, {}, {}, {}}, {{}, {}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{1.2, 2.2}, {1.8, 2.2}, {1.5, 2.8}}]}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 5.5}, 0.3]}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 2.25}, {2.25, 2.75}, {2.75, 2.75}, {2.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, {}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 0.25}, {3.25, 0.75}, {3.75, 0.75}, {3.75, 
+        0.25}}]}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, {}, {}}, {{}, {}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 2.25}, {4.25, 2.75}, {4.75, 2.75}, {4.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{4.2, 4.2}, {4.8, 4.2}, {4.5, 4.8}}]}, {}}, {{}, 
+      {Hue[0.6, 0.5], PolygonBox[{{5.2, 1.2}, {5.8, 1.2}, {5.5, 1.8}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{5.5, 3.5}, 0.3]}, {}, {}}}},
+   ImageSize->120],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.515624197697461*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  GraphicsBox[{{LineBox[{{0, 0}, {6, 0}}], LineBox[{{0, 1}, {6, 1}}], 
+     LineBox[{{0, 2}, {6, 2}}], LineBox[{{0, 3}, {6, 3}}], 
+     LineBox[{{0, 4}, {6, 4}}], LineBox[{{0, 5}, {6, 5}}], 
+     LineBox[{{0, 6}, {6, 6}}]}, {LineBox[{{0, 0}, {0, 6}}], 
+     LineBox[{{1, 0}, {1, 6}}], LineBox[{{2, 0}, {2, 6}}], 
+     LineBox[{{3, 0}, {3, 6}}], LineBox[{{4, 0}, {4, 6}}], 
+     LineBox[{{5, 0}, {5, 6}}], LineBox[{{6, 0}, {6, 6}}]}, {{
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 0.25}, {0.25, 0.75}, {0.75, 0.75}, {0.75, 
+        0.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 1.2}, {0.8, 1.2}, {0.5, 1.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 2.25}, {0.25, 2.75}, {0.75, 2.75}, {0.75, 
+        2.25}}]}, {}, 
+      {Hue[0.6, 0.5], PolygonBox[{{0.2, 4.2}, {0.8, 4.2}, {0.5, 4.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{0.25, 5.25}, {0.25, 5.75}, {0.75, 5.75}, {0.75, 
+        5.25}}]}}, {{}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 1.5}, 0.3]}, 
+      {Hue[0.6, 0.5], 
+       PolygonBox[{{1.2, 2.2}, {1.8, 2.2}, {1.5, 2.8}}]}, {}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{1.5, 5.5}, 0.3]}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 0.2}, {2.8, 0.2}, {2.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{2.25, 2.25}, {2.25, 2.75}, {2.75, 2.75}, {2.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{2.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{2.2, 4.2}, {2.8, 4.2}, {2.5, 4.8}}]}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 0.25}, {3.25, 0.75}, {3.75, 0.75}, {3.75, 
+        0.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 1.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{3.2, 2.2}, {3.8, 2.2}, {3.5, 2.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{3.5, 3.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{3.25, 4.25}, {3.25, 4.75}, {3.75, 4.75}, {3.75, 
+        4.25}}]}, {}}, {
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 0.2}, {4.8, 0.2}, {4.5, 0.8}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 1.5}, 0.3]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{4.25, 2.25}, {4.25, 2.75}, {4.75, 2.75}, {4.75, 
+        2.25}}]}, 
+      {Hue[0.35, 0.5], DiskBox[{4.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{4.2, 4.2}, {4.8, 4.2}, {4.5, 4.8}}]}, {}}, {
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 0.25}, {5.25, 0.75}, {5.75, 0.75}, {5.75, 
+        0.25}}]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{5.2, 1.2}, {5.8, 1.2}, {5.5, 1.8}}]}, {}, 
+      {Hue[0.35, 0.5], DiskBox[{5.5, 3.5}, 0.3]}, 
+      {Hue[0.6, 0.5], PolygonBox[{{5.2, 4.2}, {5.8, 4.2}, {5.5, 4.8}}]}, 
+      {Hue[0, 0.5], 
+       PolygonBox[{{5.25, 5.25}, {5.25, 5.75}, {5.75, 5.75}, {5.75, 
+        5.25}}]}}}},
+   ImageSize->120],
+  StripOnInput->False,
+  Antialiasing->False]], "Print",
+ CellChangeTimes->{3.515624197731431*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+  "12", "\[InvisibleSpace]", "\<\" / \"\>", "\[InvisibleSpace]", "28"}],
+  SequenceForm[12, " / ", 28],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.515624197741489*^9}]
+}, Open  ]]
+}, Closed]]
+},
+WindowSize->{799, 789},
+WindowMargins->{{Automatic, 310}, {Automatic, 17}},
+ShowSelection->True,
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.5, 1.5 Inherited],
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 2128, 46, 116, "Print"],
+Cell[2676, 68, 636, 18, 64, "Input"],
+Cell[3315, 88, 788, 21, 64, "Input"],
+Cell[4106, 111, 546, 14, 40, "Input"],
+Cell[4655, 127, 438, 13, 42, "Input"],
+Cell[5096, 142, 643, 17, 42, "Input"],
+Cell[5742, 161, 250, 7, 42, "Input"],
+Cell[5995, 170, 305, 8, 42, "Input"],
+Cell[6303, 180, 314, 9, 42, "Input"],
+Cell[6620, 191, 245, 7, 42, "Input"],
+Cell[6868, 200, 1073, 32, 111, "Input"],
+Cell[7944, 234, 614, 19, 42, "Input"],
+Cell[8561, 255, 970, 29, 88, "Input"],
+Cell[9534, 286, 1127, 32, 111, "Input"],
+Cell[10664, 320, 547, 16, 42, "Input"],
+Cell[11214, 338, 1082, 30, 88, "Input"],
+Cell[12299, 370, 1885, 50, 134, "Input"],
+Cell[14187, 422, 2387, 59, 202, "Input"],
+Cell[CellGroupData[{
+Cell[16599, 485, 153, 3, 40, "Input"],
+Cell[16755, 490, 2302, 45, 202, "Output"]
+}, Open  ]],
+Cell[19072, 538, 1708, 47, 249, "Input"],
+Cell[20783, 587, 7326, 175, 640, "Input"],
+Cell[CellGroupData[{
+Cell[28134, 766, 7498, 166, 501, "Input"],
+Cell[35635, 934, 71, 1, 30, "Print"],
+Cell[35709, 937, 99, 1, 40, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35845, 943, 113, 2, 100, "Section"],
+Cell[CellGroupData[{
+Cell[35983, 949, 2220, 44, 546, 1335, 28, "CachedBoxData", "BoxData", "Print"],
+Cell[38206, 995, 3082, 63, 546, 2001, 43, "CachedBoxData", "BoxData", "Print"],
+Cell[41291, 1060, 222, 6, 100, "Print"],
+Cell[41516, 1068, 2317, 47, 546, 1375, 30, "CachedBoxData", "BoxData", \
+"Print"],
+Cell[43836, 1117, 3213, 66, 546, 2059, 45, "CachedBoxData", "BoxData", \
+"Print"],
+Cell[47052, 1185, 222, 6, 100, "Print"],
+Cell[47277, 1193, 2355, 47, 546, 1364, 29, "CachedBoxData", "BoxData", \
+"Print"],
+Cell[49635, 1242, 3408, 66, 546, 2002, 41, "CachedBoxData", "BoxData", \
+"Print"],
+Cell[53046, 1310, 220, 6, 100, "Print"],
+Cell[53269, 1318, 1361, 29, 546, "Print"],
+Cell[54633, 1349, 2089, 44, 546, "Print"],
+Cell[56725, 1395, 215, 5, 100, "Print"],
+Cell[56943, 1402, 1375, 28, 546, "Print"],
+Cell[58321, 1432, 2311, 49, 546, "Print"],
+Cell[60635, 1483, 220, 6, 100, "Print"],
+Cell[60858, 1491, 1408, 30, 546, "Print"],
+Cell[62269, 1523, 1916, 43, 546, "Print"],
+Cell[64188, 1568, 220, 6, 100, "Print"],
+Cell[64411, 1576, 1280, 27, 546, "Print"],
+Cell[65694, 1605, 2109, 44, 546, "Print"],
+Cell[67806, 1651, 215, 5, 100, "Print"],
+Cell[68024, 1658, 1381, 29, 546, "Print"],
+Cell[69408, 1689, 1784, 36, 546, "Print"],
+Cell[71195, 1727, 220, 6, 100, "Print"],
+Cell[71418, 1735, 1416, 31, 546, "Print"],
+Cell[72837, 1768, 2214, 50, 546, "Print"],
+Cell[75054, 1820, 219, 6, 100, "Print"],
+Cell[75276, 1828, 1416, 31, 546, "Print"],
+Cell[76695, 1861, 2092, 45, 546, "Print"],
+Cell[78790, 1908, 222, 6, 100, "Print"],
+Cell[79015, 1916, 1497, 33, 546, "Print"],
+Cell[80515, 1951, 2022, 44, 546, "Print"],
+Cell[82540, 1997, 222, 6, 100, "Print"],
+Cell[82765, 2005, 1319, 27, 546, "Print"],
+Cell[84087, 2034, 1884, 39, 546, "Print"],
+Cell[85974, 2075, 222, 6, 100, "Print"],
+Cell[86199, 2083, 1452, 30, 546, "Print"],
+Cell[87654, 2115, 1934, 37, 546, "Print"],
+Cell[89591, 2154, 222, 6, 100, "Print"],
+Cell[89816, 2162, 1389, 28, 546, "Print"],
+Cell[91208, 2192, 1952, 40, 546, "Print"],
+Cell[93163, 2234, 220, 6, 100, "Print"],
+Cell[93386, 2242, 1346, 30, 546, "Print"],
+Cell[94735, 2274, 2313, 52, 546, "Print"],
+Cell[97051, 2328, 215, 5, 100, "Print"],
+Cell[97269, 2335, 1289, 28, 546, "Print"],
+Cell[98561, 2365, 2102, 47, 546, "Print"],
+Cell[100666, 2414, 217, 5, 100, "Print"],
+Cell[100886, 2421, 1239, 24, 546, "Print"],
+Cell[102128, 2447, 1729, 34, 546, "Print"],
+Cell[103860, 2483, 217, 5, 100, "Print"],
+Cell[104080, 2490, 1466, 32, 546, "Print"],
+Cell[105549, 2524, 1922, 41, 546, "Print"],
+Cell[107474, 2567, 220, 6, 100, "Print"],
+Cell[107697, 2575, 1385, 30, 546, "Print"],
+Cell[109085, 2607, 2264, 48, 546, "Print"],
+Cell[111352, 2657, 220, 6, 100, "Print"],
+Cell[111575, 2665, 1393, 28, 546, "Print"],
+Cell[112971, 2695, 2181, 48, 546, "Print"],
+Cell[115155, 2745, 220, 6, 100, "Print"],
+Cell[115378, 2753, 1369, 30, 546, "Print"],
+Cell[116750, 2785, 2101, 46, 546, "Print"],
+Cell[118854, 2833, 215, 5, 100, "Print"],
+Cell[119072, 2840, 1387, 30, 546, "Print"],
+Cell[120462, 2872, 2101, 46, 546, "Print"],
+Cell[122566, 2920, 220, 6, 100, "Print"],
+Cell[122789, 2928, 1356, 29, 546, "Print"],
+Cell[124148, 2959, 1997, 41, 546, "Print"],
+Cell[126148, 3002, 220, 6, 100, "Print"],
+Cell[126371, 3010, 1227, 25, 546, "Print"],
+Cell[127601, 3037, 1864, 36, 546, "Print"],
+Cell[129468, 3075, 214, 5, 100, "Print"],
+Cell[129685, 3082, 1338, 29, 546, "Print"],
+Cell[131026, 3113, 2344, 53, 546, "Print"],
+Cell[133373, 3168, 215, 5, 100, "Print"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[133637, 3179, 158, 2, 53, "Section"],
+Cell[CellGroupData[{
+Cell[133820, 3185, 1941, 41, 192, "Print"],
+Cell[135764, 3228, 3275, 69, 192, "Print"],
+Cell[139042, 3299, 528, 11, 30, "Print"],
+Cell[139573, 3312, 2091, 42, 192, "Print"],
+Cell[141667, 3356, 3379, 71, 192, "Print"],
+Cell[145049, 3429, 528, 11, 45, "Print"],
+Cell[145580, 3442, 1913, 37, 288, "Print"],
+Cell[147496, 3481, 3160, 64, 288, "Print"],
+Cell[150659, 3547, 530, 11, 45, "Print"],
+Cell[151192, 3560, 2173, 45, 288, "Print"],
+Cell[153368, 3607, 3300, 72, 432, "Print"],
+Cell[156671, 3681, 528, 11, 30, "Print"],
+Cell[157202, 3694, 1738, 37, 192, "Print"],
+Cell[158943, 3733, 2555, 53, 192, "Print"],
+Cell[161501, 3788, 222, 6, 30, "Print"],
+Cell[161726, 3796, 1616, 34, 192, "Print"],
+Cell[163345, 3832, 2811, 59, 192, "Print"],
+Cell[166159, 3893, 220, 6, 30, "Print"]
+}, Open  ]]
+}, Closed]]
+}
+]
+*)
+
+(* End of internal cache information *)

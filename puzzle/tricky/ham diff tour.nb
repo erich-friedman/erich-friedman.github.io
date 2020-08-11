@@ -1,0 +1,3329 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[    153497,       3320]
+NotebookOptionsPosition[    144651,       3088]
+NotebookOutlinePosition[    145110,       3106]
+CellTagsIndexPosition[    145067,       3103]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"choose", "[", 
+   RowBox[{"k_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"t", ",", "r"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"t", "=", 
+      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Length", "[", "t", "]"}], "<", "k"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"r", "=", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "n"}], "}"}], "]"}], ",", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "n"}], "}"}], "]"}]}], "}"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"While", "[", 
+         RowBox[{
+          RowBox[{"MemberQ", "[", 
+           RowBox[{"t", ",", "r"}], "]"}], ",", 
+          RowBox[{"r", "=", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"RandomInteger", "[", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "n"}], "}"}], "]"}], ",", 
+             RowBox[{"RandomInteger", "[", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "n"}], "}"}], "]"}]}], "}"}]}]}], "]"}], ";",
+         "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"t", ",", "r"}], "]"}]}]}], "]"}], ";", "t"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.4799429177723217`*^9, 3.479943037793288*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"d", "[", 
+   RowBox[{"{", 
+    RowBox[{"x_", ",", "y_"}], "}"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"x", "-", "y"}], ")"}], ".", 
+   RowBox[{"(", 
+    RowBox[{"x", "-", "y"}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.479943063103983*^9, 3.479943097526895*^9}, {
+  3.479943401760847*^9, 3.4799434031608477`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"others", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x1_", ",", "y1_"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x2_", ",", "y2_"}], "}"}]}], "}"}], "]"}], ":=", 
+  RowBox[{"Which", "[", 
+   RowBox[{
+    RowBox[{"x1", "\[Equal]", "x2"}], ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x1", ",", "y"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", 
+        RowBox[{
+         RowBox[{"Min", "[", 
+          RowBox[{"y1", ",", "y2"}], "]"}], "+", "1"}], ",", 
+        RowBox[{
+         RowBox[{"Max", "[", 
+          RowBox[{"y1", ",", "y2"}], "]"}], "-", "1"}]}], "}"}]}], "]"}], ",",
+     "\[IndentingNewLine]", 
+    RowBox[{"y1", "\[Equal]", "y2"}], ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", 
+        RowBox[{
+         RowBox[{"Min", "[", 
+          RowBox[{"x1", ",", "x2"}], "]"}], "+", "1"}], ",", 
+        RowBox[{
+         RowBox[{"Max", "[", 
+          RowBox[{"x1", ",", "x2"}], "]"}], "-", "1"}]}], "}"}]}], "]"}], ",",
+     "True", ",", 
+    RowBox[{
+     RowBox[{"temp", "=", 
+      RowBox[{"GCD", "[", 
+       RowBox[{
+        RowBox[{"Abs", "[", 
+         RowBox[{"x2", "-", "x1"}], "]"}], ",", 
+        RowBox[{"Abs", "[", 
+         RowBox[{"y2", "-", "y1"}], "]"}]}], "]"}]}], ";", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"t", 
+           RowBox[{"{", 
+            RowBox[{"x1", ",", "y1"}], "}"}]}], "+", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"temp", "-", "t"}], ")"}], 
+           RowBox[{"{", 
+            RowBox[{"x2", ",", "y2"}], "}"}]}]}], ")"}], "/", "temp"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", "1", ",", 
+         RowBox[{"temp", "-", "1"}]}], "}"}]}], "]"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.4799455123820753`*^9, 3.479945525757036*^9}, {
+  3.479945569415429*^9, 3.479945706912479*^9}, {3.4799457509238873`*^9, 
+  3.4799457661865396`*^9}, {3.479945805877159*^9, 3.479945808940254*^9}, {
+  3.479945852048332*^9, 3.479945892854601*^9}, {3.479946043537488*^9, 
+  3.4799460975522833`*^9}, {3.4799461567250338`*^9, 3.479946156780628*^9}, {
+  3.479946212390462*^9, 3.479946216209597*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"check", "[", "L_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Length", "[", 
+      RowBox[{"Union", "[", 
+       RowBox[{"Map", "[", 
+        RowBox[{"d", ",", 
+         RowBox[{"Partition", "[", 
+          RowBox[{"L", ",", "2", ",", "1"}], "]"}]}], "]"}], "]"}], "]"}], 
+     "\[Equal]", 
+     RowBox[{
+      RowBox[{"Length", "[", "L", "]"}], "-", "1"}]}], ")"}], "&&", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Intersection", "[", 
+      RowBox[{
+       RowBox[{"Union", "[", "L", "]"}], ",", 
+       RowBox[{"Union", "[", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{
+          RowBox[{"Map", "[", 
+           RowBox[{"others", ",", 
+            RowBox[{"Partition", "[", 
+             RowBox[{"L", ",", "2", ",", "1"}], "]"}]}], "]"}], ",", "1"}], 
+         "]"}], "]"}]}], "]"}], "==", 
+     RowBox[{"{", "}"}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.479943359214158*^9, 3.479943449810893*^9}, {
+  3.47994472931953*^9, 3.479944746212886*^9}, {3.479944776222876*^9, 
+  3.479944785471036*^9}, {3.4799448864529676`*^9, 3.4799448914823427`*^9}, {
+  3.479944996904756*^9, 3.479945011710593*^9}, {3.479945220108698*^9, 
+  3.479945257936419*^9}, {3.479946275136839*^9, 3.479946306207962*^9}, {
+  3.479946342925272*^9, 3.479946364595664*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pic1", "[", "L_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"x", "=", 
+      RowBox[{
+       RowBox[{"Transpose", "[", "L", "]"}], "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"y", "=", 
+      RowBox[{
+       RowBox[{"Transpose", "[", "L", "]"}], "[", 
+       RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"xmin", "=", 
+      RowBox[{"Min", "[", "x", "]"}]}], ";", 
+     RowBox[{"xmax", "=", 
+      RowBox[{"Max", "[", "x", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"ymin", "=", 
+      RowBox[{"Min", "[", "y", "]"}]}], ";", 
+     RowBox[{"ymax", "=", 
+      RowBox[{"Max", "[", "y", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Line", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"xmin", "-", 
+               RowBox[{"1", "/", "2"}]}], ",", 
+              RowBox[{"ymin", "-", 
+               RowBox[{"1", "/", "2"}]}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"xmax", "+", 
+               RowBox[{"1", "/", "2"}]}], ",", 
+              RowBox[{"ymin", "-", 
+               RowBox[{"1", "/", "2"}]}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"xmax", "+", 
+               RowBox[{"1", "/", "2"}]}], ",", 
+              RowBox[{"ymax", "+", 
+               RowBox[{"1", "/", "2"}]}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"xmin", "-", 
+               RowBox[{"1", "/", "2"}]}], ",", 
+              RowBox[{"ymax", "+", 
+               RowBox[{"1", "/", "2"}]}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"xmin", "-", 
+               RowBox[{"1", "/", "2"}]}], ",", 
+              RowBox[{"ymin", "-", 
+               RowBox[{"1", "/", "2"}]}]}], "}"}]}], "}"}], "]"}], ",", 
+         RowBox[{"AbsolutePointSize", "[", "7", "]"}], ",", 
+         RowBox[{"Map", "[", 
+          RowBox[{"Point", ",", "L"}], "]"}]}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"xmin", "-", "1"}], ",", 
+            RowBox[{"xmax", "+", "1"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"ymin", "-", "1"}], ",", 
+            RowBox[{"ymax", "+", "1"}]}], "}"}]}], "}"}]}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", 
+        RowBox[{"20", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"xmax", "-", "xmin", "+", "2"}], ",", 
+           RowBox[{"ymax", "-", "ymin", "+", "2"}]}], "}"}]}]}]}], "]"}]}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.479943557381345*^9, 3.4799435958710413`*^9}, {
+  3.479944060970067*^9, 3.4799440790557137`*^9}, {3.479944119707053*^9, 
+  3.479944166940894*^9}, {3.4799443884077253`*^9, 3.479944605017618*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pic2", "[", "L_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"x", "=", 
+      RowBox[{
+       RowBox[{"Transpose", "[", "L", "]"}], "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"y", "=", 
+      RowBox[{
+       RowBox[{"Transpose", "[", "L", "]"}], "[", 
+       RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"xmin", "=", 
+      RowBox[{"Min", "[", "x", "]"}]}], ";", 
+     RowBox[{"xmax", "=", 
+      RowBox[{"Max", "[", "x", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"ymin", "=", 
+      RowBox[{"Min", "[", "y", "]"}]}], ";", 
+     RowBox[{"ymax", "=", 
+      RowBox[{"Max", "[", "y", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Line", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"xmin", "-", 
+               RowBox[{"1", "/", "2"}]}], ",", 
+              RowBox[{"ymin", "-", 
+               RowBox[{"1", "/", "2"}]}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"xmax", "+", 
+               RowBox[{"1", "/", "2"}]}], ",", 
+              RowBox[{"ymin", "-", 
+               RowBox[{"1", "/", "2"}]}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"xmax", "+", 
+               RowBox[{"1", "/", "2"}]}], ",", 
+              RowBox[{"ymax", "+", 
+               RowBox[{"1", "/", "2"}]}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"xmin", "-", 
+               RowBox[{"1", "/", "2"}]}], ",", 
+              RowBox[{"ymax", "+", 
+               RowBox[{"1", "/", "2"}]}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"xmin", "-", 
+               RowBox[{"1", "/", "2"}]}], ",", 
+              RowBox[{"ymin", "-", 
+               RowBox[{"1", "/", "2"}]}]}], "}"}]}], "}"}], "]"}], ",", "Red",
+          ",", 
+         RowBox[{"AbsoluteThickness", "[", "2", "]"}], ",", 
+         RowBox[{"Line", "[", "L", "]"}], ",", "Black", ",", 
+         RowBox[{"AbsolutePointSize", "[", "7", "]"}], ",", 
+         RowBox[{"Map", "[", 
+          RowBox[{"Point", ",", "L"}], "]"}]}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"xmin", "-", "1"}], ",", 
+            RowBox[{"xmax", "+", "1"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"ymin", "-", "1"}], ",", 
+            RowBox[{"ymax", "+", "1"}]}], "}"}]}], "}"}]}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", 
+        RowBox[{"20", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"xmax", "-", "xmin", "+", "2"}], ",", 
+           RowBox[{"ymax", "-", "ymin", "+", "2"}]}], "}"}]}]}]}], "]"}]}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.479943610886393*^9, 3.479943622754616*^9}, {
+   3.479943662620586*^9, 3.4799436663935337`*^9}, 3.479944085531886*^9, 
+   3.479944120905319*^9, 3.4799441738985863`*^9, {3.4799446256463747`*^9, 
+   3.47994464815947*^9}, {3.479946548250568*^9, 3.47994658245122*^9}, {
+   3.4799466686804934`*^9, 3.479946670208353*^9}, {3.4799467058110847`*^9, 
+   3.4799467122253933`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "1"}], ",", 
+   RowBox[{"i", ">", "0"}], ",", 
+   RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"a", "=", 
+     RowBox[{"choose", "[", 
+      RowBox[{"8", ",", "4"}], "]"}]}], ";", 
+    RowBox[{"L", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"First", "[", "a", "]"}], "}"}], "~", "Join", "~", "#", "~",
+          "Join", "~", 
+         RowBox[{"{", 
+          RowBox[{"First", "[", "a", "]"}], "}"}]}], "&"}], ",", 
+       RowBox[{"Permutations", "[", 
+        RowBox[{"Rest", "[", "a", "]"}], "]"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"s", "=", 
+     RowBox[{"Select", "[", 
+      RowBox[{"L", ",", "check"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", "[", "s", "]"}], "\[Equal]", "2"}], ",", 
+      RowBox[{
+       RowBox[{"Print", "[", 
+        RowBox[{"pic1", "[", 
+         RowBox[{"s", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}], ";", 
+       RowBox[{"Print", "[", 
+        RowBox[{"pic2", "[", 
+         RowBox[{"s", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}]}]}], "]"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.479943676814022*^9, 3.4799437812069893`*^9}, {
+   3.4799438134564533`*^9, 3.479944002779948*^9}, {3.479945046116021*^9, 
+   3.479945051339994*^9}, 3.479945315870461*^9, {3.479945348158052*^9, 
+   3.479945358750289*^9}, {3.4799464270249023`*^9, 3.4799464295528316`*^9}, 
+   3.47994710351939*^9, {3.479947137819332*^9, 3.47994713957078*^9}, 
+   3.479947184074317*^9, {3.4799472381969423`*^9, 3.479947238331702*^9}, {
+   3.479947487315085*^9, 3.479947491328034*^9}, {3.479949055103863*^9, 
+   3.479949055684684*^9}, {3.479981986204446*^9, 3.479981986354032*^9}, {
+   3.47998851535225*^9, 3.479988517553602*^9}, 3.479988615418201*^9, {
+   3.479988841202591*^9, 3.479988844401263*^9}, {3.479989869131364*^9, 
+   3.4799898711705427`*^9}, {3.47998996071913*^9, 3.479989962813274*^9}, 
+   3.4799929095290318`*^9, {3.480008678716155*^9, 3.480008699526895*^9}, 
+   3.480009049132284*^9, {3.48000927706299*^9, 3.480009280238538*^9}, {
+   3.480009313074155*^9, 3.480009365524637*^9}, {3.480010056715321*^9, 
+   3.480010059929235*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["9 in 5x5", "Section",
+ CellChangeTimes->{{3.4799468285684013`*^9, 3.479946829813684*^9}, {
+  3.479947225223531*^9, 3.4799472284186363`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 3}], PointBox[{4, 3}], 
+    PointBox[{2, 1}], PointBox[{4, 5}], PointBox[{5, 2}], PointBox[{2, 2}], 
+    PointBox[{3, 4}], PointBox[{4, 4}], PointBox[{1, 2}], PointBox[{2, 3}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.47994887702771*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 3}, {4, 3}, {2, 1}, {4, 5}, {5, 2}, {2, 2}, {3, 4}, {4, 4}, {
+     1, 2}, {2, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 3}], PointBox[{4, 3}], 
+     PointBox[{2, 1}], PointBox[{4, 5}], PointBox[{5, 2}], PointBox[{2, 2}], 
+     PointBox[{3, 4}], PointBox[{4, 4}], PointBox[{1, 2}], PointBox[{2, 3}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799488775937443`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 1}], PointBox[{3, 4}], 
+    PointBox[{4, 1}], PointBox[{5, 5}], PointBox[{1, 2}], PointBox[{4, 2}], 
+    PointBox[{2, 4}], PointBox[{4, 3}], PointBox[{5, 3}], PointBox[{5, 1}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.47994714058462*^9, 3.479947199638494*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 1}, {3, 4}, {4, 1}, {5, 5}, {1, 2}, {4, 2}, {2, 4}, {4, 3}, {
+     5, 3}, {5, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 1}], PointBox[{3, 4}], 
+     PointBox[{4, 1}], PointBox[{5, 5}], PointBox[{1, 2}], PointBox[{4, 2}], 
+     PointBox[{2, 4}], PointBox[{4, 3}], PointBox[{5, 3}], PointBox[{5, 1}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.47994714058462*^9, 3.479947199664217*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 3}], PointBox[{2, 1}], 
+    PointBox[{5, 3}], PointBox[{5, 2}], PointBox[{1, 5}], PointBox[{4, 2}], 
+    PointBox[{2, 2}], PointBox[{4, 1}], PointBox[{3, 4}], PointBox[{4, 3}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479971720110778*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 3}, {2, 1}, {5, 3}, {5, 2}, {1, 5}, {4, 2}, {2, 2}, {4, 1}, {
+     3, 4}, {4, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 3}], PointBox[{2, 1}], 
+     PointBox[{5, 3}], PointBox[{5, 2}], PointBox[{1, 5}], PointBox[{4, 2}], 
+     PointBox[{2, 2}], PointBox[{4, 1}], PointBox[{3, 4}], PointBox[{4, 3}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.47997172014104*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{3, 1}], PointBox[{3, 4}], 
+    PointBox[{4, 3}], PointBox[{5, 5}], PointBox[{5, 3}], PointBox[{2, 5}], 
+    PointBox[{1, 5}], PointBox[{5, 2}], PointBox[{4, 5}], PointBox[{3, 1}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799746948145123`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{3, 1}, {3, 4}, {4, 3}, {5, 5}, {5, 3}, {2, 5}, {1, 5}, {5, 2}, {
+     4, 5}, {3, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{3, 1}], PointBox[{3, 4}], 
+     PointBox[{4, 3}], PointBox[{5, 5}], PointBox[{5, 3}], PointBox[{2, 5}], 
+     PointBox[{1, 5}], PointBox[{5, 2}], PointBox[{4, 5}], PointBox[{3, 1}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.47997469483569*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{1, 5}], PointBox[{2, 2}], 
+    PointBox[{3, 4}], PointBox[{1, 1}], PointBox[{5, 4}], PointBox[{1, 2}], 
+    PointBox[{5, 3}], PointBox[{2, 3}], PointBox[{2, 4}], PointBox[{1, 5}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479976010124085*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{1, 5}, {2, 2}, {3, 4}, {1, 1}, {5, 4}, {1, 2}, {5, 3}, {2, 3}, {
+     2, 4}, {1, 5}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{1, 5}], PointBox[{2, 2}], 
+     PointBox[{3, 4}], PointBox[{1, 1}], PointBox[{5, 4}], PointBox[{1, 2}], 
+     PointBox[{5, 3}], PointBox[{2, 3}], PointBox[{2, 4}], PointBox[{1, 5}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479976010145286*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{1, 1}], 
+    PointBox[{5, 2}], PointBox[{4, 1}], PointBox[{2, 2}], PointBox[{5, 5}], 
+    PointBox[{1, 2}], PointBox[{3, 4}], PointBox[{3, 2}], PointBox[{4, 2}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479977704902783*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 2}, {1, 1}, {5, 2}, {4, 1}, {2, 2}, {5, 5}, {1, 2}, {3, 4}, {
+     3, 2}, {4, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{1, 1}], 
+     PointBox[{5, 2}], PointBox[{4, 1}], PointBox[{2, 2}], PointBox[{5, 5}], 
+     PointBox[{1, 2}], PointBox[{3, 4}], PointBox[{3, 2}], PointBox[{4, 2}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479977704925167*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 4}], PointBox[{1, 4}], 
+    PointBox[{5, 5}], PointBox[{3, 1}], PointBox[{5, 3}], PointBox[{3, 3}], 
+    PointBox[{5, 2}], PointBox[{4, 5}], PointBox[{5, 4}], PointBox[{4, 4}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479978862442708*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 4}, {1, 4}, {5, 5}, {3, 1}, {5, 3}, {3, 3}, {5, 2}, {4, 5}, {
+     5, 4}, {4, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 4}], PointBox[{1, 4}], 
+     PointBox[{5, 5}], PointBox[{3, 1}], PointBox[{5, 3}], PointBox[{3, 3}], 
+     PointBox[{5, 2}], PointBox[{4, 5}], PointBox[{5, 4}], PointBox[{4, 4}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479978862464122*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{1, 1}], PointBox[{2, 4}], 
+    PointBox[{3, 3}], PointBox[{5, 1}], PointBox[{3, 1}], PointBox[{1, 5}], 
+    PointBox[{2, 1}], PointBox[{2, 2}], PointBox[{3, 4}], PointBox[{1, 1}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479979059161086*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{1, 1}, {2, 4}, {3, 3}, {5, 1}, {3, 1}, {1, 5}, {2, 1}, {2, 2}, {
+     3, 4}, {1, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{1, 1}], PointBox[{2, 4}], 
+     PointBox[{3, 3}], PointBox[{5, 1}], PointBox[{3, 1}], PointBox[{1, 5}], 
+     PointBox[{2, 1}], PointBox[{2, 2}], PointBox[{3, 4}], PointBox[{1, 1}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479979059182271*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 1}], PointBox[{1, 4}], 
+    PointBox[{5, 5}], PointBox[{3, 5}], PointBox[{4, 3}], PointBox[{3, 4}], 
+    PointBox[{4, 4}], PointBox[{2, 2}], PointBox[{5, 4}], PointBox[{5, 1}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799791718868933`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 1}, {1, 4}, {5, 5}, {3, 5}, {4, 3}, {3, 4}, {4, 4}, {2, 2}, {
+     5, 4}, {5, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 1}], PointBox[{1, 4}], 
+     PointBox[{5, 5}], PointBox[{3, 5}], PointBox[{4, 3}], PointBox[{3, 4}], 
+     PointBox[{4, 4}], PointBox[{2, 2}], PointBox[{5, 4}], PointBox[{5, 1}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799791719081583`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 1}], PointBox[{2, 4}], 
+    PointBox[{3, 3}], PointBox[{2, 5}], PointBox[{3, 2}], PointBox[{1, 5}], 
+    PointBox[{5, 2}], PointBox[{3, 4}], PointBox[{3, 5}], PointBox[{2, 1}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479981052164926*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 1}, {2, 4}, {3, 3}, {2, 5}, {3, 2}, {1, 5}, {5, 2}, {3, 4}, {
+     3, 5}, {2, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 1}], PointBox[{2, 4}], 
+     PointBox[{3, 3}], PointBox[{2, 5}], PointBox[{3, 2}], PointBox[{1, 5}], 
+     PointBox[{5, 2}], PointBox[{3, 4}], PointBox[{3, 5}], PointBox[{2, 1}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479981052202684*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 4}], PointBox[{2, 5}], 
+    PointBox[{2, 1}], PointBox[{4, 4}], PointBox[{4, 1}], PointBox[{1, 4}], 
+    PointBox[{3, 4}], PointBox[{3, 3}], PointBox[{4, 5}], PointBox[{5, 4}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799601811662273`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 4}, {2, 5}, {2, 1}, {4, 4}, {4, 1}, {1, 4}, {3, 4}, {3, 3}, {
+     4, 5}, {5, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 4}], PointBox[{2, 5}], 
+     PointBox[{2, 1}], PointBox[{4, 4}], PointBox[{4, 1}], PointBox[{1, 4}], 
+     PointBox[{3, 4}], PointBox[{3, 3}], PointBox[{4, 5}], PointBox[{5, 4}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479960181219357*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 3}], PointBox[{5, 4}], 
+    PointBox[{4, 4}], PointBox[{5, 1}], PointBox[{3, 3}], PointBox[{3, 5}], 
+    PointBox[{5, 2}], PointBox[{1, 2}], PointBox[{5, 5}], PointBox[{4, 3}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799632164553556`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 3}, {5, 4}, {4, 4}, {5, 1}, {3, 3}, {3, 5}, {5, 2}, {1, 2}, {
+     5, 5}, {4, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 3}], PointBox[{5, 4}], 
+     PointBox[{4, 4}], PointBox[{5, 1}], PointBox[{3, 3}], PointBox[{3, 5}], 
+     PointBox[{5, 2}], PointBox[{1, 2}], PointBox[{5, 5}], PointBox[{4, 3}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479963216476675*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 5}], PointBox[{5, 3}], 
+    PointBox[{1, 4}], PointBox[{3, 2}], PointBox[{5, 2}], PointBox[{4, 4}], 
+    PointBox[{4, 3}], PointBox[{3, 4}], PointBox[{4, 1}], PointBox[{2, 5}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479963253611415*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 5}, {5, 3}, {1, 4}, {3, 2}, {5, 2}, {4, 4}, {4, 3}, {3, 4}, {
+     4, 1}, {2, 5}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 5}], PointBox[{5, 3}], 
+     PointBox[{1, 4}], PointBox[{3, 2}], PointBox[{5, 2}], PointBox[{4, 4}], 
+     PointBox[{4, 3}], PointBox[{3, 4}], PointBox[{4, 1}], PointBox[{2, 5}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479963253632622*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{3, 4}], PointBox[{3, 1}], 
+    PointBox[{4, 4}], PointBox[{5, 2}], PointBox[{4, 3}], PointBox[{4, 2}], 
+    PointBox[{2, 5}], PointBox[{4, 1}], PointBox[{1, 4}], PointBox[{3, 4}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479966324784624*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{3, 4}, {3, 1}, {4, 4}, {5, 2}, {4, 3}, {4, 2}, {2, 5}, {4, 1}, {
+     1, 4}, {3, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{3, 4}], PointBox[{3, 1}], 
+     PointBox[{4, 4}], PointBox[{5, 2}], PointBox[{4, 3}], PointBox[{4, 2}], 
+     PointBox[{2, 5}], PointBox[{4, 1}], PointBox[{1, 4}], PointBox[{3, 4}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799663248056726`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 4}], PointBox[{1, 1}], 
+    PointBox[{3, 1}], PointBox[{3, 4}], PointBox[{2, 4}], PointBox[{5, 1}], 
+    PointBox[{3, 5}], PointBox[{4, 4}], PointBox[{2, 3}], PointBox[{5, 4}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479966504115489*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 4}, {1, 1}, {3, 1}, {3, 4}, {2, 4}, {5, 1}, {3, 5}, {4, 4}, {
+     2, 3}, {5, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 4}], PointBox[{1, 1}], 
+     PointBox[{3, 1}], PointBox[{3, 4}], PointBox[{2, 4}], PointBox[{5, 1}], 
+     PointBox[{3, 5}], PointBox[{4, 4}], PointBox[{2, 3}], PointBox[{5, 4}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479966504148994*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{1, 4}], PointBox[{3, 2}], 
+    PointBox[{3, 4}], PointBox[{1, 1}], PointBox[{4, 2}], PointBox[{4, 3}], 
+    PointBox[{3, 1}], PointBox[{2, 2}], PointBox[{5, 5}], PointBox[{1, 4}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479969123616242*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{1, 4}, {3, 2}, {3, 4}, {1, 1}, {4, 2}, {4, 3}, {3, 1}, {2, 2}, {
+     5, 5}, {1, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{1, 4}], PointBox[{3, 2}], 
+     PointBox[{3, 4}], PointBox[{1, 1}], PointBox[{4, 2}], PointBox[{4, 3}], 
+     PointBox[{3, 1}], PointBox[{2, 2}], PointBox[{5, 5}], PointBox[{1, 4}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479969123638393*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 2}], PointBox[{1, 5}], 
+    PointBox[{3, 5}], PointBox[{5, 1}], PointBox[{2, 3}], PointBox[{4, 5}], 
+    PointBox[{3, 1}], PointBox[{2, 1}], PointBox[{3, 3}], PointBox[{2, 2}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479969762611516*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 2}, {1, 5}, {3, 5}, {5, 1}, {2, 3}, {4, 5}, {3, 1}, {2, 1}, {
+     3, 3}, {2, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 2}], PointBox[{1, 5}], 
+     PointBox[{3, 5}], PointBox[{5, 1}], PointBox[{2, 3}], PointBox[{4, 5}], 
+     PointBox[{3, 1}], PointBox[{2, 1}], PointBox[{3, 3}], PointBox[{2, 2}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479969762645472*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{1, 5}], PointBox[{4, 4}], 
+    PointBox[{3, 3}], PointBox[{1, 1}], PointBox[{1, 3}], PointBox[{5, 5}], 
+    PointBox[{1, 4}], PointBox[{2, 4}], PointBox[{4, 3}], PointBox[{1, 5}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.47995849879569*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{1, 5}, {4, 4}, {3, 3}, {1, 1}, {1, 3}, {5, 5}, {1, 4}, {2, 4}, {
+     4, 3}, {1, 5}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{1, 5}], PointBox[{4, 4}], 
+     PointBox[{3, 3}], PointBox[{1, 1}], PointBox[{1, 3}], PointBox[{5, 5}], 
+     PointBox[{1, 4}], PointBox[{2, 4}], PointBox[{4, 3}], PointBox[{1, 5}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479958498820407*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{3, 2}], PointBox[{1, 3}], 
+    PointBox[{4, 2}], PointBox[{1, 5}], PointBox[{5, 3}], PointBox[{2, 3}], 
+    PointBox[{5, 1}], PointBox[{3, 1}], PointBox[{2, 2}], PointBox[{3, 2}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479950343797455*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{3, 2}, {1, 3}, {4, 2}, {1, 5}, {5, 3}, {2, 3}, {5, 1}, {3, 1}, {
+     2, 2}, {3, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{3, 2}], PointBox[{1, 3}], 
+     PointBox[{4, 2}], PointBox[{1, 5}], PointBox[{5, 3}], PointBox[{2, 3}], 
+     PointBox[{5, 1}], PointBox[{3, 1}], PointBox[{2, 2}], PointBox[{3, 2}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479950343817875*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{1, 5}], PointBox[{4, 1}], 
+    PointBox[{2, 4}], PointBox[{2, 3}], PointBox[{3, 4}], PointBox[{2, 2}], 
+    PointBox[{5, 3}], PointBox[{3, 3}], PointBox[{5, 5}], PointBox[{1, 5}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479950461560053*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{1, 5}, {4, 1}, {2, 4}, {2, 3}, {3, 4}, {2, 2}, {5, 3}, {3, 3}, {
+     5, 5}, {1, 5}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{1, 5}], PointBox[{4, 1}], 
+     PointBox[{2, 4}], PointBox[{2, 3}], PointBox[{3, 4}], PointBox[{2, 2}], 
+     PointBox[{5, 3}], PointBox[{3, 3}], PointBox[{5, 5}], PointBox[{1, 5}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479950461602578*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{3, 4}], PointBox[{1, 5}], 
+    PointBox[{3, 5}], PointBox[{4, 1}], PointBox[{4, 4}], PointBox[{1, 2}], 
+    PointBox[{5, 5}], PointBox[{2, 4}], PointBox[{3, 3}], PointBox[{3, 4}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799512555987473`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{3, 4}, {1, 5}, {3, 5}, {4, 1}, {4, 4}, {1, 2}, {5, 5}, {2, 4}, {
+     3, 3}, {3, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{3, 4}], PointBox[{1, 5}], 
+     PointBox[{3, 5}], PointBox[{4, 1}], PointBox[{4, 4}], PointBox[{1, 2}], 
+     PointBox[{5, 5}], PointBox[{2, 4}], PointBox[{3, 3}], PointBox[{3, 4}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.47995125562252*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 3}], PointBox[{5, 5}], 
+    PointBox[{2, 4}], PointBox[{5, 4}], PointBox[{1, 1}], PointBox[{2, 5}], 
+    PointBox[{4, 3}], PointBox[{2, 2}], PointBox[{3, 3}], PointBox[{2, 3}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479952451060474*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 3}, {5, 5}, {2, 4}, {5, 4}, {1, 1}, {2, 5}, {4, 3}, {2, 2}, {
+     3, 3}, {2, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 3}], PointBox[{5, 5}], 
+     PointBox[{2, 4}], PointBox[{5, 4}], PointBox[{1, 1}], PointBox[{2, 5}], 
+     PointBox[{4, 3}], PointBox[{2, 2}], PointBox[{3, 3}], PointBox[{2, 3}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479952451097467*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{1, 5}], PointBox[{2, 2}], 
+    PointBox[{5, 5}], PointBox[{4, 5}], PointBox[{1, 1}], PointBox[{2, 5}], 
+    PointBox[{1, 4}], PointBox[{3, 5}], PointBox[{3, 1}], PointBox[{1, 5}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799531740506163`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{1, 5}, {2, 2}, {5, 5}, {4, 5}, {1, 1}, {2, 5}, {1, 4}, {3, 5}, {
+     3, 1}, {1, 5}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{1, 5}], PointBox[{2, 2}], 
+     PointBox[{5, 5}], PointBox[{4, 5}], PointBox[{1, 1}], PointBox[{2, 5}], 
+     PointBox[{1, 4}], PointBox[{3, 5}], PointBox[{3, 1}], PointBox[{1, 5}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.47995317408125*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 1}], PointBox[{3, 1}], 
+    PointBox[{2, 2}], PointBox[{4, 1}], PointBox[{2, 5}], PointBox[{5, 1}], 
+    PointBox[{1, 5}], PointBox[{1, 1}], PointBox[{5, 2}], PointBox[{2, 1}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479957312564168*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 1}, {3, 1}, {2, 2}, {4, 1}, {2, 5}, {5, 1}, {1, 5}, {1, 1}, {
+     5, 2}, {2, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 1}], PointBox[{3, 1}], 
+     PointBox[{2, 2}], PointBox[{4, 1}], PointBox[{2, 5}], PointBox[{5, 1}], 
+     PointBox[{1, 5}], PointBox[{1, 1}], PointBox[{5, 2}], PointBox[{2, 1}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479957312620154*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{4, 1}], 
+    PointBox[{5, 4}], PointBox[{4, 3}], PointBox[{5, 1}], PointBox[{4, 5}], 
+    PointBox[{1, 2}], PointBox[{4, 4}], PointBox[{2, 2}], PointBox[{4, 2}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799579755231657`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 2}, {4, 1}, {5, 4}, {4, 3}, {5, 1}, {4, 5}, {1, 2}, {4, 4}, {
+     2, 2}, {4, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{4, 1}], 
+     PointBox[{5, 4}], PointBox[{4, 3}], PointBox[{5, 1}], PointBox[{4, 5}], 
+     PointBox[{1, 2}], PointBox[{4, 4}], PointBox[{2, 2}], PointBox[{4, 2}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479957975544259*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 3}], PointBox[{5, 4}], 
+    PointBox[{1, 1}], PointBox[{5, 3}], PointBox[{3, 3}], PointBox[{5, 5}], 
+    PointBox[{1, 4}], PointBox[{1, 3}], PointBox[{3, 4}], PointBox[{2, 3}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479958402315535*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 3}, {5, 4}, {1, 1}, {5, 3}, {3, 3}, {5, 5}, {1, 4}, {1, 3}, {
+     3, 4}, {2, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 3}], PointBox[{5, 4}], 
+     PointBox[{1, 1}], PointBox[{5, 3}], PointBox[{3, 3}], PointBox[{5, 5}], 
+     PointBox[{1, 4}], PointBox[{1, 3}], PointBox[{3, 4}], PointBox[{2, 3}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479958402349669*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{2, 5}], 
+    PointBox[{4, 1}], PointBox[{2, 3}], PointBox[{5, 3}], PointBox[{5, 5}], 
+    PointBox[{4, 4}], PointBox[{3, 4}], PointBox[{1, 3}], PointBox[{4, 2}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.480006497111926*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 2}, {2, 5}, {4, 1}, {2, 3}, {5, 3}, {5, 5}, {4, 4}, {3, 4}, {
+     1, 3}, {4, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{2, 5}], 
+     PointBox[{4, 1}], PointBox[{2, 3}], PointBox[{5, 3}], PointBox[{5, 5}], 
+     PointBox[{4, 4}], PointBox[{3, 4}], PointBox[{1, 3}], PointBox[{4, 2}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.480006497163546*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 4}], PointBox[{5, 4}], 
+    PointBox[{3, 3}], PointBox[{1, 1}], PointBox[{3, 5}], PointBox[{4, 1}], 
+    PointBox[{3, 4}], PointBox[{2, 5}], PointBox[{4, 2}], PointBox[{4, 4}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479996591814918*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 4}, {5, 4}, {3, 3}, {1, 1}, {3, 5}, {4, 1}, {3, 4}, {2, 5}, {
+     4, 2}, {4, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 4}], PointBox[{5, 4}], 
+     PointBox[{3, 3}], PointBox[{1, 1}], PointBox[{3, 5}], PointBox[{4, 1}], 
+     PointBox[{3, 4}], PointBox[{2, 5}], PointBox[{4, 2}], PointBox[{4, 4}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479996591834797*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 4}], PointBox[{1, 5}], 
+    PointBox[{3, 5}], PointBox[{3, 4}], PointBox[{5, 2}], PointBox[{4, 5}], 
+    PointBox[{3, 3}], PointBox[{4, 4}], PointBox[{2, 1}], PointBox[{5, 4}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479996643822123*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 4}, {1, 5}, {3, 5}, {3, 4}, {5, 2}, {4, 5}, {3, 3}, {4, 4}, {
+     2, 1}, {5, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 4}], PointBox[{1, 5}], 
+     PointBox[{3, 5}], PointBox[{3, 4}], PointBox[{5, 2}], PointBox[{4, 5}], 
+     PointBox[{3, 3}], PointBox[{4, 4}], PointBox[{2, 1}], PointBox[{5, 4}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.47999664384153*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 3}], PointBox[{2, 4}], 
+    PointBox[{3, 2}], PointBox[{2, 3}], PointBox[{4, 3}], PointBox[{1, 1}], 
+    PointBox[{5, 5}], PointBox[{1, 3}], PointBox[{1, 4}], PointBox[{5, 3}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479996748116919*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 3}, {2, 4}, {3, 2}, {2, 3}, {4, 3}, {1, 1}, {5, 5}, {1, 3}, {
+     1, 4}, {5, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 3}], PointBox[{2, 4}], 
+     PointBox[{3, 2}], PointBox[{2, 3}], PointBox[{4, 3}], PointBox[{1, 1}], 
+     PointBox[{5, 5}], PointBox[{1, 3}], PointBox[{1, 4}], PointBox[{5, 3}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.47999674813704*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 5}], PointBox[{5, 1}], 
+    PointBox[{1, 2}], PointBox[{3, 4}], PointBox[{4, 2}], PointBox[{3, 3}], 
+    PointBox[{3, 2}], PointBox[{1, 5}], PointBox[{2, 2}], PointBox[{2, 5}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799969177359257`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 5}, {5, 1}, {1, 2}, {3, 4}, {4, 2}, {3, 3}, {3, 2}, {1, 5}, {
+     2, 2}, {2, 5}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 5}], PointBox[{5, 1}], 
+     PointBox[{1, 2}], PointBox[{3, 4}], PointBox[{4, 2}], PointBox[{3, 3}], 
+     PointBox[{3, 2}], PointBox[{1, 5}], PointBox[{2, 2}], PointBox[{2, 5}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479996917756033*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 1}], PointBox[{1, 1}], 
+    PointBox[{3, 4}], PointBox[{3, 3}], PointBox[{1, 5}], PointBox[{1, 2}], 
+    PointBox[{3, 2}], PointBox[{2, 3}], PointBox[{3, 5}], PointBox[{5, 1}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799971092304583`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 1}, {1, 1}, {3, 4}, {3, 3}, {1, 5}, {1, 2}, {3, 2}, {2, 3}, {
+     3, 5}, {5, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 1}], PointBox[{1, 1}], 
+     PointBox[{3, 4}], PointBox[{3, 3}], PointBox[{1, 5}], PointBox[{1, 2}], 
+     PointBox[{3, 2}], PointBox[{2, 3}], PointBox[{3, 5}], PointBox[{5, 1}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479997109250554*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 2}], PointBox[{4, 3}], 
+    PointBox[{1, 2}], PointBox[{1, 4}], PointBox[{5, 4}], PointBox[{5, 3}], 
+    PointBox[{2, 1}], PointBox[{5, 5}], PointBox[{3, 3}], PointBox[{2, 2}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479997317282805*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 2}, {4, 3}, {1, 2}, {1, 4}, {5, 4}, {5, 3}, {2, 1}, {5, 5}, {
+     3, 3}, {2, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 2}], PointBox[{4, 3}], 
+     PointBox[{1, 2}], PointBox[{1, 4}], PointBox[{5, 4}], PointBox[{5, 3}], 
+     PointBox[{2, 1}], PointBox[{5, 5}], PointBox[{3, 3}], PointBox[{2, 2}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799973173032227`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 5}], PointBox[{1, 2}], 
+    PointBox[{2, 3}], PointBox[{1, 1}], PointBox[{4, 3}], PointBox[{4, 2}], 
+    PointBox[{2, 2}], PointBox[{4, 4}], PointBox[{1, 4}], PointBox[{5, 5}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.480000207974657*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 5}, {1, 2}, {2, 3}, {1, 1}, {4, 3}, {4, 2}, {2, 2}, {4, 4}, {
+     1, 4}, {5, 5}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 5}], PointBox[{1, 2}], 
+     PointBox[{2, 3}], PointBox[{1, 1}], PointBox[{4, 3}], PointBox[{4, 2}], 
+     PointBox[{2, 2}], PointBox[{4, 4}], PointBox[{1, 4}], PointBox[{5, 5}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.480000207994116*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 2}], PointBox[{5, 5}], 
+    PointBox[{2, 4}], PointBox[{4, 3}], PointBox[{3, 4}], PointBox[{4, 4}], 
+    PointBox[{2, 2}], PointBox[{4, 5}], PointBox[{1, 1}], PointBox[{5, 2}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.48000268473147*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 2}, {5, 5}, {2, 4}, {4, 3}, {3, 4}, {4, 4}, {2, 2}, {4, 5}, {
+     1, 1}, {5, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 2}], PointBox[{5, 5}], 
+     PointBox[{2, 4}], PointBox[{4, 3}], PointBox[{3, 4}], PointBox[{4, 4}], 
+     PointBox[{2, 2}], PointBox[{4, 5}], PointBox[{1, 1}], PointBox[{5, 2}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.480002684751964*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 5}], PointBox[{1, 2}], 
+    PointBox[{5, 5}], PointBox[{2, 3}], PointBox[{2, 4}], PointBox[{1, 3}], 
+    PointBox[{3, 4}], PointBox[{3, 1}], PointBox[{4, 5}], PointBox[{2, 5}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.480003034406526*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 5}, {1, 2}, {5, 5}, {2, 3}, {2, 4}, {1, 3}, {3, 4}, {3, 1}, {
+     4, 5}, {2, 5}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 5}], PointBox[{1, 2}], 
+     PointBox[{5, 5}], PointBox[{2, 3}], PointBox[{2, 4}], PointBox[{1, 3}], 
+     PointBox[{3, 4}], PointBox[{3, 1}], PointBox[{4, 5}], PointBox[{2, 5}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.480003034426609*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{1, 2}], PointBox[{3, 3}], 
+    PointBox[{2, 3}], PointBox[{4, 1}], PointBox[{1, 1}], PointBox[{5, 4}], 
+    PointBox[{1, 3}], PointBox[{2, 2}], PointBox[{3, 5}], PointBox[{1, 2}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799955702619867`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{1, 2}, {3, 3}, {2, 3}, {4, 1}, {1, 1}, {5, 4}, {1, 3}, {2, 2}, {
+     3, 5}, {1, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{1, 2}], PointBox[{3, 3}], 
+     PointBox[{2, 3}], PointBox[{4, 1}], PointBox[{1, 1}], PointBox[{5, 4}], 
+     PointBox[{1, 3}], PointBox[{2, 2}], PointBox[{3, 5}], PointBox[{1, 2}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479995570281434*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 5}], PointBox[{1, 3}], 
+    PointBox[{5, 2}], PointBox[{1, 2}], PointBox[{3, 4}], PointBox[{4, 1}], 
+    PointBox[{4, 3}], PointBox[{4, 4}], PointBox[{3, 3}], PointBox[{4, 5}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479996007399638*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 5}, {1, 3}, {5, 2}, {1, 2}, {3, 4}, {4, 1}, {4, 3}, {4, 4}, {
+     3, 3}, {4, 5}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 5}], PointBox[{1, 3}], 
+     PointBox[{5, 2}], PointBox[{1, 2}], PointBox[{3, 4}], PointBox[{4, 1}], 
+     PointBox[{4, 3}], PointBox[{4, 4}], PointBox[{3, 3}], PointBox[{4, 5}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479996007419221*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 4}], PointBox[{2, 1}], 
+    PointBox[{4, 4}], PointBox[{2, 3}], PointBox[{3, 4}], PointBox[{2, 4}], 
+    PointBox[{5, 5}], PointBox[{1, 4}], PointBox[{5, 1}], PointBox[{5, 4}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479996347241407*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 4}, {2, 1}, {4, 4}, {2, 3}, {3, 4}, {2, 4}, {5, 5}, {1, 4}, {
+     5, 1}, {5, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 4}], PointBox[{2, 1}], 
+     PointBox[{4, 4}], PointBox[{2, 3}], PointBox[{3, 4}], PointBox[{2, 4}], 
+     PointBox[{5, 5}], PointBox[{1, 4}], PointBox[{5, 1}], PointBox[{5, 4}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799963472616577`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{1, 3}], PointBox[{5, 5}], 
+    PointBox[{1, 2}], PointBox[{1, 1}], PointBox[{4, 3}], PointBox[{3, 1}], 
+    PointBox[{4, 5}], PointBox[{1, 5}], PointBox[{3, 3}], PointBox[{1, 3}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799941153276787`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{1, 3}, {5, 5}, {1, 2}, {1, 1}, {4, 3}, {3, 1}, {4, 5}, {1, 5}, {
+     3, 3}, {1, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{1, 3}], PointBox[{5, 5}], 
+     PointBox[{1, 2}], PointBox[{1, 1}], PointBox[{4, 3}], PointBox[{3, 1}], 
+     PointBox[{4, 5}], PointBox[{1, 5}], PointBox[{3, 3}], PointBox[{1, 3}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799941153472033`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 4}], PointBox[{3, 1}], 
+    PointBox[{5, 3}], PointBox[{1, 5}], PointBox[{1, 1}], PointBox[{5, 2}], 
+    PointBox[{3, 2}], PointBox[{4, 3}], PointBox[{3, 3}], PointBox[{5, 4}]}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479993695778714*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 4}, {3, 1}, {5, 3}, {1, 5}, {1, 1}, {5, 2}, {3, 2}, {4, 3}, {
+     3, 3}, {5, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 4}], PointBox[{3, 1}], 
+     PointBox[{5, 3}], PointBox[{1, 5}], PointBox[{1, 1}], PointBox[{5, 2}], 
+     PointBox[{3, 2}], PointBox[{4, 3}], PointBox[{3, 3}], PointBox[{5, 4}]}}},
+  ImageSize->{120, 120},
+  PlotRange->{{0, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479993696087184*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["9 in 4x5", "Section",
+ CellChangeTimes->{{3.4799468285684013`*^9, 3.479946829813684*^9}, {
+   3.479947225223531*^9, 3.4799472284186363`*^9}, 3.479982015943577*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 4}], PointBox[{1, 4}], 
+    PointBox[{2, 3}], PointBox[{4, 3}], PointBox[{4, 2}], PointBox[{3, 5}], 
+    PointBox[{1, 3}], PointBox[{4, 5}], PointBox[{1, 1}], PointBox[{4, 4}]}},
+  ImageSize->{100, 120},
+  PlotRange->{{0, 5}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799991660621*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 4}, {1, 4}, {2, 3}, {4, 3}, {4, 2}, {3, 5}, {1, 3}, {4, 5}, {
+     1, 1}, {4, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 4}], PointBox[{1, 4}], 
+     PointBox[{2, 3}], PointBox[{4, 3}], PointBox[{4, 2}], PointBox[{3, 5}], 
+     PointBox[{1, 3}], PointBox[{4, 5}], PointBox[{1, 1}], PointBox[{4, 4}]}}},
+  ImageSize->{100, 120},
+  PlotRange->{{0, 5}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479999166081294*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 1}], PointBox[{2, 4}], 
+    PointBox[{1, 2}], PointBox[{4, 3}], PointBox[{4, 4}], PointBox[{2, 2}], 
+    PointBox[{1, 1}], PointBox[{4, 5}], PointBox[{2, 1}], PointBox[{4, 1}]}},
+  ImageSize->{100, 120},
+  PlotRange->{{0, 5}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479956378107531*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 1}, {2, 4}, {1, 2}, {4, 3}, {4, 4}, {2, 2}, {1, 1}, {4, 5}, {
+     2, 1}, {4, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 1}], PointBox[{2, 4}], 
+     PointBox[{1, 2}], PointBox[{4, 3}], PointBox[{4, 4}], PointBox[{2, 2}], 
+     PointBox[{1, 1}], PointBox[{4, 5}], PointBox[{2, 1}], PointBox[{4, 1}]}}},
+  ImageSize->{100, 120},
+  PlotRange->{{0, 5}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.47995637814986*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[3, 2], Rational[11, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {1.5, 5.5}, {1.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{3, 4}], PointBox[{3, 3}], 
+    PointBox[{5, 3}], PointBox[{3, 1}], PointBox[{5, 5}], PointBox[{3, 2}], 
+    PointBox[{2, 4}], PointBox[{3, 5}], PointBox[{4, 1}], PointBox[{3, 4}]}},
+  ImageSize->{100, 120},
+  PlotRange->{{1, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479957862994877*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[3, 2], Rational[11, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {1.5, 5.5}, {1.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{3, 4}, {3, 3}, {5, 3}, {3, 1}, {5, 5}, {3, 2}, {2, 4}, {3, 5}, {
+     4, 1}, {3, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{3, 4}], PointBox[{3, 3}], 
+     PointBox[{5, 3}], PointBox[{3, 1}], PointBox[{5, 5}], PointBox[{3, 2}], 
+     PointBox[{2, 4}], PointBox[{3, 5}], PointBox[{4, 1}], PointBox[{3, 4}]}}},
+  ImageSize->{100, 120},
+  PlotRange->{{1, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479957863038604*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 2}], PointBox[{3, 2}], 
+    PointBox[{3, 1}], PointBox[{4, 4}], PointBox[{2, 2}], PointBox[{1, 1}], 
+    PointBox[{3, 4}], PointBox[{5, 3}], PointBox[{1, 4}], PointBox[{5, 2}]}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479966361957035*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 2}, {3, 2}, {3, 1}, {4, 4}, {2, 2}, {1, 1}, {3, 4}, {5, 3}, {
+     1, 4}, {5, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 2}], PointBox[{3, 2}], 
+     PointBox[{3, 1}], PointBox[{4, 4}], PointBox[{2, 2}], PointBox[{1, 1}], 
+     PointBox[{3, 4}], PointBox[{5, 3}], PointBox[{1, 4}], PointBox[{5, 2}]}}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479966361978073*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 1}], PointBox[{1, 4}], 
+    PointBox[{4, 2}], PointBox[{3, 1}], PointBox[{4, 4}], PointBox[{3, 4}], 
+    PointBox[{3, 2}], PointBox[{1, 3}], PointBox[{5, 4}], PointBox[{5, 1}]}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.480001694112705*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 1}, {1, 4}, {4, 2}, {3, 1}, {4, 4}, {3, 4}, {3, 2}, {1, 3}, {
+     5, 4}, {5, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 1}], PointBox[{1, 4}], 
+     PointBox[{4, 2}], PointBox[{3, 1}], PointBox[{4, 4}], PointBox[{3, 4}], 
+     PointBox[{3, 2}], PointBox[{1, 3}], PointBox[{5, 4}], PointBox[{5, 1}]}}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.480001694132629*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{1, 2}], PointBox[{3, 5}], 
+    PointBox[{4, 1}], PointBox[{1, 4}], PointBox[{4, 5}], PointBox[{4, 3}], 
+    PointBox[{3, 3}], PointBox[{2, 5}], PointBox[{3, 4}], PointBox[{1, 2}]}},
+  ImageSize->{100, 120},
+  PlotRange->{{0, 5}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.47997039057997*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{1, 2}, {3, 5}, {4, 1}, {1, 4}, {4, 5}, {4, 3}, {3, 3}, {2, 5}, {
+     3, 4}, {1, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{1, 2}], PointBox[{3, 5}], 
+     PointBox[{4, 1}], PointBox[{1, 4}], PointBox[{4, 5}], PointBox[{4, 3}], 
+     PointBox[{3, 3}], PointBox[{2, 5}], PointBox[{3, 4}], PointBox[{1, 2}]}}},
+  ImageSize->{100, 120},
+  PlotRange->{{0, 5}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479970390626072*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[3, 2], Rational[11, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {1.5, 5.5}, {1.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 1}], PointBox[{5, 1}], 
+    PointBox[{2, 5}], PointBox[{4, 3}], PointBox[{3, 3}], PointBox[{4, 4}], 
+    PointBox[{2, 3}], PointBox[{5, 2}], PointBox[{3, 5}], PointBox[{2, 1}]}},
+  ImageSize->{100, 120},
+  PlotRange->{{1, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479970487424184*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[3, 2], Rational[11, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {1.5, 5.5}, {1.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 1}, {5, 1}, {2, 5}, {4, 3}, {3, 3}, {4, 4}, {2, 3}, {5, 2}, {
+     3, 5}, {2, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 1}], PointBox[{5, 1}], 
+     PointBox[{2, 5}], PointBox[{4, 3}], PointBox[{3, 3}], PointBox[{4, 4}], 
+     PointBox[{2, 3}], PointBox[{5, 2}], PointBox[{3, 5}], PointBox[{2, 1}]}}},
+  ImageSize->{100, 120},
+  PlotRange->{{1, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479970487471245*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[3, 2]}, {
+      Rational[11, 2], Rational[3, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[3, 2]}}, {{
+     0.5, 1.5}, {5.5, 1.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 1.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 4}], PointBox[{1, 5}], 
+    PointBox[{2, 4}], PointBox[{4, 5}], PointBox[{1, 2}], PointBox[{5, 5}], 
+    PointBox[{3, 2}], PointBox[{3, 5}], PointBox[{2, 5}], PointBox[{5, 4}]}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {1, 6}}]], "Print",
+ CellChangeTimes->{3.4799773668505907`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[3, 2]}, {
+      Rational[11, 2], Rational[3, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[3, 2]}}, {{
+     0.5, 1.5}, {5.5, 1.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 1.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 4}, {1, 5}, {2, 4}, {4, 5}, {1, 2}, {5, 5}, {3, 2}, {3, 5}, {
+     2, 5}, {5, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 4}], PointBox[{1, 5}], 
+     PointBox[{2, 4}], PointBox[{4, 5}], PointBox[{1, 2}], PointBox[{5, 5}], 
+     PointBox[{3, 2}], PointBox[{3, 5}], PointBox[{2, 5}], PointBox[{5, 4}]}}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {1, 6}}]], "Print",
+ CellChangeTimes->{3.4799773668863*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[3, 2], Rational[11, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {1.5, 5.5}, {1.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 1}], PointBox[{4, 1}], 
+    PointBox[{4, 5}], PointBox[{2, 2}], PointBox[{3, 5}], PointBox[{2, 3}], 
+    PointBox[{3, 4}], PointBox[{3, 3}], PointBox[{5, 5}], PointBox[{2, 1}]}},
+  ImageSize->{100, 120},
+  PlotRange->{{1, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479960286405238*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[3, 2], Rational[11, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {1.5, 5.5}, {1.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 1}, {4, 1}, {4, 5}, {2, 2}, {3, 5}, {2, 3}, {3, 4}, {3, 3}, {
+     5, 5}, {2, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 1}], PointBox[{4, 1}], 
+     PointBox[{4, 5}], PointBox[{2, 2}], PointBox[{3, 5}], PointBox[{2, 3}], 
+     PointBox[{3, 4}], PointBox[{3, 3}], PointBox[{5, 5}], PointBox[{2, 1}]}}},
+  ImageSize->{100, 120},
+  PlotRange->{{1, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479960286456592*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[3, 2], Rational[11, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {1.5, 5.5}, {1.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 2}], PointBox[{3, 4}], 
+    PointBox[{3, 2}], PointBox[{4, 5}], PointBox[{2, 1}], PointBox[{3, 5}], 
+    PointBox[{4, 4}], PointBox[{2, 3}], PointBox[{2, 4}], PointBox[{5, 2}]}},
+  ImageSize->{100, 120},
+  PlotRange->{{1, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479960995170341*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[3, 2], Rational[11, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {1.5, 5.5}, {1.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 2}, {3, 4}, {3, 2}, {4, 5}, {2, 1}, {3, 5}, {4, 4}, {2, 3}, {
+     2, 4}, {5, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 2}], PointBox[{3, 4}], 
+     PointBox[{3, 2}], PointBox[{4, 5}], PointBox[{2, 1}], PointBox[{3, 5}], 
+     PointBox[{4, 4}], PointBox[{2, 3}], PointBox[{2, 4}], PointBox[{5, 2}]}}},
+  ImageSize->{100, 120},
+  PlotRange->{{1, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479960995214259*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[3, 2], Rational[11, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {1.5, 5.5}, {1.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 4}], PointBox[{5, 3}], 
+    PointBox[{3, 3}], PointBox[{5, 5}], PointBox[{4, 1}], PointBox[{4, 5}], 
+    PointBox[{2, 2}], PointBox[{3, 4}], PointBox[{2, 3}], PointBox[{2, 4}]}},
+  ImageSize->{100, 120},
+  PlotRange->{{1, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799629551597357`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[3, 2], Rational[11, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {1.5, 5.5}, {1.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 4}, {5, 3}, {3, 3}, {5, 5}, {4, 1}, {4, 5}, {2, 2}, {3, 4}, {
+     2, 3}, {2, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 4}], PointBox[{5, 3}], 
+     PointBox[{3, 3}], PointBox[{5, 5}], PointBox[{4, 1}], PointBox[{4, 5}], 
+     PointBox[{2, 2}], PointBox[{3, 4}], PointBox[{2, 3}], PointBox[{2, 4}]}}},
+  ImageSize->{100, 120},
+  PlotRange->{{1, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479962955181423*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 1}], PointBox[{3, 1}], 
+    PointBox[{1, 3}], PointBox[{4, 1}], PointBox[{3, 2}], PointBox[{5, 1}], 
+    PointBox[{1, 4}], PointBox[{5, 3}], PointBox[{2, 3}], PointBox[{2, 1}]}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479979291466515*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 1}, {3, 1}, {1, 3}, {4, 1}, {3, 2}, {5, 1}, {1, 4}, {5, 3}, {
+     2, 3}, {2, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 1}], PointBox[{3, 1}], 
+     PointBox[{1, 3}], PointBox[{4, 1}], PointBox[{3, 2}], PointBox[{5, 1}], 
+     PointBox[{1, 4}], PointBox[{5, 3}], PointBox[{2, 3}], PointBox[{2, 1}]}}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479979291487862*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[3, 2], Rational[11, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {1.5, 5.5}, {1.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 3}], PointBox[{5, 4}], 
+    PointBox[{2, 3}], PointBox[{2, 4}], PointBox[{4, 4}], PointBox[{2, 1}], 
+    PointBox[{5, 5}], PointBox[{2, 5}], PointBox[{3, 1}], PointBox[{4, 3}]}},
+  ImageSize->{100, 120},
+  PlotRange->{{1, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479979989096641*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[3, 2], Rational[11, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {1.5, 5.5}, {1.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 3}, {5, 4}, {2, 3}, {2, 4}, {4, 4}, {2, 1}, {5, 5}, {2, 5}, {
+     3, 1}, {4, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 3}], PointBox[{5, 4}], 
+     PointBox[{2, 3}], PointBox[{2, 4}], PointBox[{4, 4}], PointBox[{2, 1}], 
+     PointBox[{5, 5}], PointBox[{2, 5}], PointBox[{3, 1}], PointBox[{4, 3}]}}},
+  ImageSize->{100, 120},
+  PlotRange->{{1, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.479979989117819*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[3, 2]}, {
+      Rational[11, 2], Rational[3, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[3, 2]}}, {{
+     0.5, 1.5}, {5.5, 1.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 1.5}}]], 
+   {AbsolutePointSize[7], PointBox[{1, 4}], PointBox[{5, 3}], 
+    PointBox[{1, 5}], PointBox[{4, 4}], PointBox[{2, 4}], PointBox[{3, 3}], 
+    PointBox[{2, 5}], PointBox[{4, 2}], PointBox[{3, 2}], PointBox[{1, 4}]}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {1, 6}}]], "Print",
+ CellChangeTimes->{3.479980243120964*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[3, 2]}, {
+      Rational[11, 2], Rational[3, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[3, 2]}}, {{
+     0.5, 1.5}, {5.5, 1.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 1.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{1, 4}, {5, 3}, {1, 5}, {4, 4}, {2, 4}, {3, 3}, {2, 5}, {4, 2}, {
+     3, 2}, {1, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{1, 4}], PointBox[{5, 3}], 
+     PointBox[{1, 5}], PointBox[{4, 4}], PointBox[{2, 4}], PointBox[{3, 3}], 
+     PointBox[{2, 5}], PointBox[{4, 2}], PointBox[{3, 2}], PointBox[{1, 4}]}}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {1, 6}}]], "Print",
+ CellChangeTimes->{3.479980243157771*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{2, 4}], 
+    PointBox[{4, 1}], PointBox[{3, 1}], PointBox[{4, 3}], PointBox[{5, 2}], 
+    PointBox[{1, 1}], PointBox[{5, 3}], PointBox[{2, 2}], PointBox[{4, 2}]}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479964339283525*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 2}, {2, 4}, {4, 1}, {3, 1}, {4, 3}, {5, 2}, {1, 1}, {5, 3}, {
+     2, 2}, {4, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{2, 4}], 
+     PointBox[{4, 1}], PointBox[{3, 1}], PointBox[{4, 3}], PointBox[{5, 2}], 
+     PointBox[{1, 1}], PointBox[{5, 3}], PointBox[{2, 2}], PointBox[{4, 2}]}}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.4799643393045187`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[3, 2], Rational[11, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {1.5, 5.5}, {1.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 1}], PointBox[{5, 2}], 
+    PointBox[{4, 2}], PointBox[{5, 1}], PointBox[{3, 5}], PointBox[{3, 2}], 
+    PointBox[{5, 5}], PointBox[{2, 2}], PointBox[{4, 1}], PointBox[{2, 1}]}},
+  ImageSize->{100, 120},
+  PlotRange->{{1, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.480005470981691*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[3, 2], Rational[11, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {1.5, 5.5}, {1.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 1}, {5, 2}, {4, 2}, {5, 1}, {3, 5}, {3, 2}, {5, 5}, {2, 2}, {
+     4, 1}, {2, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 1}], PointBox[{5, 2}], 
+     PointBox[{4, 2}], PointBox[{5, 1}], PointBox[{3, 5}], PointBox[{3, 2}], 
+     PointBox[{5, 5}], PointBox[{2, 2}], PointBox[{4, 1}], PointBox[{2, 1}]}}},
+  ImageSize->{100, 120},
+  PlotRange->{{1, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.480005471033682*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[3, 2]}, {
+      Rational[11, 2], Rational[3, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[3, 2]}}, {{
+     0.5, 1.5}, {5.5, 1.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 1.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 4}], PointBox[{2, 4}], 
+    PointBox[{5, 2}], PointBox[{1, 5}], PointBox[{3, 5}], PointBox[{2, 2}], 
+    PointBox[{1, 4}], PointBox[{2, 3}], PointBox[{1, 3}], PointBox[{5, 4}]}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {1, 6}}]], "Print",
+ CellChangeTimes->{3.480006207725992*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[3, 2]}, {
+      Rational[11, 2], Rational[3, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[3, 2]}}, {{
+     0.5, 1.5}, {5.5, 1.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 1.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 4}, {2, 4}, {5, 2}, {1, 5}, {3, 5}, {2, 2}, {1, 4}, {2, 3}, {
+     1, 3}, {5, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 4}], PointBox[{2, 4}], 
+     PointBox[{5, 2}], PointBox[{1, 5}], PointBox[{3, 5}], PointBox[{2, 2}], 
+     PointBox[{1, 4}], PointBox[{2, 3}], PointBox[{1, 3}], PointBox[{5, 4}]}}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {1, 6}}]], "Print",
+ CellChangeTimes->{3.480006207754157*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[3, 2]}, {
+      Rational[11, 2], Rational[3, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[3, 2]}}, {{
+     0.5, 1.5}, {5.5, 1.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 1.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 5}], PointBox[{5, 4}], 
+    PointBox[{1, 5}], PointBox[{1, 2}], PointBox[{5, 5}], PointBox[{2, 3}], 
+    PointBox[{4, 4}], PointBox[{3, 4}], PointBox[{4, 5}], PointBox[{2, 5}]}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {1, 6}}]], "Print",
+ CellChangeTimes->{3.480006323605426*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[3, 2]}, {
+      Rational[11, 2], Rational[3, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[3, 2]}}, {{
+     0.5, 1.5}, {5.5, 1.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 1.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 5}, {5, 4}, {1, 5}, {1, 2}, {5, 5}, {2, 3}, {4, 4}, {3, 4}, {
+     4, 5}, {2, 5}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 5}], PointBox[{5, 4}], 
+     PointBox[{1, 5}], PointBox[{1, 2}], PointBox[{5, 5}], PointBox[{2, 3}], 
+     PointBox[{4, 4}], PointBox[{3, 4}], PointBox[{4, 5}], PointBox[{2, 5}]}}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {1, 6}}]], "Print",
+ CellChangeTimes->{3.4800063236334743`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[3, 2]}, {
+      Rational[11, 2], Rational[3, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[3, 2]}}, {{
+     0.5, 1.5}, {5.5, 1.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 1.5}}]], 
+   {AbsolutePointSize[7], PointBox[{1, 3}], PointBox[{1, 5}], 
+    PointBox[{2, 2}], PointBox[{2, 3}], PointBox[{4, 5}], PointBox[{3, 3}], 
+    PointBox[{4, 4}], PointBox[{1, 2}], PointBox[{5, 5}], PointBox[{1, 3}]}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {1, 6}}]], "Print",
+ CellChangeTimes->{3.4800064296842413`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[3, 2]}, {
+      Rational[11, 2], Rational[3, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[3, 2]}}, {{
+     0.5, 1.5}, {5.5, 1.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 1.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{1, 3}, {1, 5}, {2, 2}, {2, 3}, {4, 5}, {3, 3}, {4, 4}, {1, 2}, {
+     5, 5}, {1, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{1, 3}], PointBox[{1, 5}], 
+     PointBox[{2, 2}], PointBox[{2, 3}], PointBox[{4, 5}], PointBox[{3, 3}], 
+     PointBox[{4, 4}], PointBox[{1, 2}], PointBox[{5, 5}], PointBox[{1, 3}]}}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {1, 6}}]], "Print",
+ CellChangeTimes->{3.480006429706707*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 4}], PointBox[{3, 2}], 
+    PointBox[{3, 4}], PointBox[{2, 1}], PointBox[{1, 3}], PointBox[{2, 2}], 
+    PointBox[{2, 3}], PointBox[{5, 3}], PointBox[{1, 2}], PointBox[{5, 4}]}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.4800036663356524`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 4}, {3, 2}, {3, 4}, {2, 1}, {1, 3}, {2, 2}, {2, 3}, {5, 3}, {
+     1, 2}, {5, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 4}], PointBox[{3, 2}], 
+     PointBox[{3, 4}], PointBox[{2, 1}], PointBox[{1, 3}], PointBox[{2, 2}], 
+     PointBox[{2, 3}], PointBox[{5, 3}], PointBox[{1, 2}], PointBox[{5, 4}]}}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.4800036663557587`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[3, 2], Rational[11, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {1.5, 5.5}, {1.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{3, 1}], PointBox[{4, 5}], 
+    PointBox[{2, 1}], PointBox[{4, 4}], PointBox[{3, 2}], PointBox[{4, 3}], 
+    PointBox[{4, 2}], PointBox[{5, 5}], PointBox[{5, 1}], PointBox[{3, 1}]}},
+  ImageSize->{100, 120},
+  PlotRange->{{1, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.47999524561757*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[3, 2], Rational[11, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 5.5}, {1.5, 5.5}, {1.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{3, 1}, {4, 5}, {2, 1}, {4, 4}, {3, 2}, {4, 3}, {4, 2}, {5, 5}, {
+     5, 1}, {3, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{3, 1}], PointBox[{4, 5}], 
+     PointBox[{2, 1}], PointBox[{4, 4}], PointBox[{3, 2}], PointBox[{4, 3}], 
+     PointBox[{4, 2}], PointBox[{5, 5}], PointBox[{5, 1}], PointBox[{3, 1}]}}},
+  ImageSize->{100, 120},
+  PlotRange->{{1, 6}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4799952456370993`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{5, 2}], PointBox[{1, 1}], 
+    PointBox[{5, 4}], PointBox[{4, 3}], PointBox[{4, 4}], PointBox[{3, 2}], 
+    PointBox[{3, 4}], PointBox[{5, 1}], PointBox[{2, 1}], PointBox[{5, 2}]}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479996495524078*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{5, 2}, {1, 1}, {5, 4}, {4, 3}, {4, 4}, {3, 2}, {3, 4}, {5, 1}, {
+     2, 1}, {5, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{5, 2}], PointBox[{1, 1}], 
+     PointBox[{5, 4}], PointBox[{4, 3}], PointBox[{4, 4}], PointBox[{3, 2}], 
+     PointBox[{3, 4}], PointBox[{5, 1}], PointBox[{2, 1}], PointBox[{5, 2}]}}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.4799964955431557`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{3, 4}], PointBox[{1, 3}], 
+    PointBox[{5, 1}], PointBox[{1, 2}], PointBox[{2, 3}], PointBox[{2, 2}], 
+    PointBox[{4, 2}], PointBox[{2, 4}], PointBox[{1, 1}], PointBox[{3, 4}]}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479993975436624*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{3, 4}, {1, 3}, {5, 1}, {1, 2}, {2, 3}, {2, 2}, {4, 2}, {2, 4}, {
+     1, 1}, {3, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{3, 4}], PointBox[{1, 3}], 
+     PointBox[{5, 1}], PointBox[{1, 2}], PointBox[{2, 3}], PointBox[{2, 2}], 
+     PointBox[{4, 2}], PointBox[{2, 4}], PointBox[{1, 1}], PointBox[{3, 4}]}}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479993975456949*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[3, 2]}, {
+      Rational[11, 2], Rational[3, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[3, 2]}}, {{
+     0.5, 1.5}, {5.5, 1.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 1.5}}]], 
+   {AbsolutePointSize[7], PointBox[{1, 2}], PointBox[{5, 3}], 
+    PointBox[{2, 4}], PointBox[{3, 2}], PointBox[{3, 3}], PointBox[{4, 2}], 
+    PointBox[{2, 5}], PointBox[{4, 3}], PointBox[{4, 5}], PointBox[{1, 2}]}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {1, 6}}]], "Print",
+ CellChangeTimes->{3.4800074276511106`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[3, 2]}, {
+      Rational[11, 2], Rational[3, 2]}, {Rational[11, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[3, 2]}}, {{
+     0.5, 1.5}, {5.5, 1.5}, {5.5, 5.5}, {0.5, 5.5}, {0.5, 1.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{1, 2}, {5, 3}, {2, 4}, {3, 2}, {3, 3}, {4, 2}, {2, 5}, {4, 3}, {
+     4, 5}, {1, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{1, 2}], PointBox[{5, 3}], 
+     PointBox[{2, 4}], PointBox[{3, 2}], PointBox[{3, 3}], PointBox[{4, 2}], 
+     PointBox[{2, 5}], PointBox[{4, 3}], PointBox[{4, 5}], PointBox[{1, 2}]}}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {1, 6}}]], "Print",
+ CellChangeTimes->{3.480007428462666*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{3, 3}], PointBox[{1, 3}], 
+    PointBox[{3, 5}], PointBox[{4, 1}], PointBox[{3, 4}], PointBox[{2, 2}], 
+    PointBox[{3, 1}], PointBox[{1, 5}], PointBox[{3, 2}], PointBox[{3, 3}]}},
+  ImageSize->{100, 120},
+  PlotRange->{{0, 5}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.48000774054846*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[11, 2]}, {
+      Rational[1, 2], Rational[11, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 5.5}, {0.5, 5.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{3, 3}, {1, 3}, {3, 5}, {4, 1}, {3, 4}, {2, 2}, {3, 1}, {1, 5}, {
+     3, 2}, {3, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{3, 3}], PointBox[{1, 3}], 
+     PointBox[{3, 5}], PointBox[{4, 1}], PointBox[{3, 4}], PointBox[{2, 2}], 
+     PointBox[{3, 1}], PointBox[{1, 5}], PointBox[{3, 2}], PointBox[{3, 3}]}}},
+  ImageSize->{100, 120},
+  PlotRange->{{0, 5}, {0, 6}}]], "Print",
+ CellChangeTimes->{3.4800077405865507`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 4}], PointBox[{2, 1}], 
+    PointBox[{5, 4}], PointBox[{1, 1}], PointBox[{4, 2}], PointBox[{2, 2}], 
+    PointBox[{3, 3}], PointBox[{1, 2}], PointBox[{3, 4}], PointBox[{4, 4}]}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.480008120126301*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 4}, {2, 1}, {5, 4}, {1, 1}, {4, 2}, {2, 2}, {3, 3}, {1, 2}, {
+     3, 4}, {4, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 4}], PointBox[{2, 1}], 
+     PointBox[{5, 4}], PointBox[{1, 1}], PointBox[{4, 2}], PointBox[{2, 2}], 
+     PointBox[{3, 3}], PointBox[{1, 2}], PointBox[{3, 4}], PointBox[{4, 4}]}}},
+  ImageSize->{120, 100},
+  PlotRange->{{0, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.48000812015574*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["9 in 4x4", "Section",
+ CellChangeTimes->{{3.4799468285684013`*^9, 3.479946829813684*^9}, {
+   3.479947225223531*^9, 3.4799472284186363`*^9}, 3.479982015943577*^9, 
+   3.480008648536035*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[3, 2], Rational[9, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {1.5, 4.5}, {1.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 2}], PointBox[{3, 1}], 
+    PointBox[{2, 3}], PointBox[{5, 1}], PointBox[{5, 2}], PointBox[{2, 1}], 
+    PointBox[{5, 4}], PointBox[{2, 4}], PointBox[{4, 2}], PointBox[{2, 2}]}},
+  ImageSize->{100, 100},
+  PlotRange->{{1, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.480004770475933*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[11, 2], Rational[1, 2]}, {Rational[11, 2], Rational[9, 2]}, {
+      Rational[3, 2], Rational[9, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {5.5, 0.5}, {5.5, 4.5}, {1.5, 4.5}, {1.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 2}, {3, 1}, {2, 3}, {5, 1}, {5, 2}, {2, 1}, {5, 4}, {2, 4}, {
+     4, 2}, {2, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 2}], PointBox[{3, 1}], 
+     PointBox[{2, 3}], PointBox[{5, 1}], PointBox[{5, 2}], PointBox[{2, 1}], 
+     PointBox[{5, 4}], PointBox[{2, 4}], PointBox[{4, 2}], PointBox[{2, 2}]}}},
+  ImageSize->{100, 100},
+  PlotRange->{{1, 6}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.48000477071382*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["8 in 4x4", "Section",
+ CellChangeTimes->{{3.4799468285684013`*^9, 3.479946829813684*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{1, 3}], PointBox[{4, 3}], 
+    PointBox[{1, 1}], PointBox[{2, 4}], PointBox[{1, 2}], PointBox[{3, 2}], 
+    PointBox[{4, 2}], PointBox[{3, 1}], PointBox[{1, 3}]}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479946642880389*^9, 3.479946674721946*^9, 
+  3.4799468475286293`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{1, 3}, {4, 3}, {1, 1}, {2, 4}, {1, 2}, {3, 2}, {4, 2}, {3, 1}, {
+     1, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{1, 3}], PointBox[{4, 3}], 
+     PointBox[{1, 1}], PointBox[{2, 4}], PointBox[{1, 2}], PointBox[{3, 2}], 
+     PointBox[{4, 2}], PointBox[{3, 1}], PointBox[{1, 3}]}}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479946642880389*^9, 3.479946674721946*^9, 
+  3.479946847568109*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{3, 2}], PointBox[{1, 4}], 
+    PointBox[{4, 2}], PointBox[{1, 3}], PointBox[{1, 2}], PointBox[{2, 4}], 
+    PointBox[{2, 1}], PointBox[{4, 1}], PointBox[{3, 2}]}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479946642880389*^9, 3.479946674721946*^9, 
+  3.479946857863556*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{3, 2}, {1, 4}, {4, 2}, {1, 3}, {1, 2}, {2, 4}, {2, 1}, {4, 1}, {
+     3, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{3, 2}], PointBox[{1, 4}], 
+     PointBox[{4, 2}], PointBox[{1, 3}], PointBox[{1, 2}], PointBox[{2, 4}], 
+     PointBox[{2, 1}], PointBox[{4, 1}], PointBox[{3, 2}]}}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479946642880389*^9, 3.479946674721946*^9, 
+  3.479946857882609*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[3, 2], Rational[9, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {1.5, 4.5}, {1.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{3, 1}], PointBox[{4, 2}], 
+    PointBox[{3, 4}], PointBox[{4, 1}], PointBox[{2, 4}], PointBox[{2, 1}], 
+    PointBox[{4, 3}], PointBox[{3, 3}], PointBox[{3, 1}]}},
+  ImageSize->{80, 100},
+  PlotRange->{{1, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479946642880389*^9, 3.479946674721946*^9, 
+  3.47994695128179*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[3, 2], Rational[9, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {1.5, 4.5}, {1.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{3, 1}, {4, 2}, {3, 4}, {4, 1}, {2, 4}, {2, 1}, {4, 3}, {3, 3}, {
+     3, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{3, 1}], PointBox[{4, 2}], 
+     PointBox[{3, 4}], PointBox[{4, 1}], PointBox[{2, 4}], PointBox[{2, 1}], 
+     PointBox[{4, 3}], PointBox[{3, 3}], PointBox[{3, 1}]}}},
+  ImageSize->{80, 100},
+  PlotRange->{{1, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479946642880389*^9, 3.479946674721946*^9, 
+  3.4799469513144484`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{3, 4}], PointBox[{2, 1}], 
+    PointBox[{2, 3}], PointBox[{3, 1}], PointBox[{3, 2}], PointBox[{4, 1}], 
+    PointBox[{4, 4}], PointBox[{1, 1}], PointBox[{3, 4}]}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479946642880389*^9, 3.479946674721946*^9, 
+  3.4799469713101053`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{3, 4}, {2, 1}, {2, 3}, {3, 1}, {3, 2}, {4, 1}, {4, 4}, {1, 1}, {
+     3, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{3, 4}], PointBox[{2, 1}], 
+     PointBox[{2, 3}], PointBox[{3, 1}], PointBox[{3, 2}], PointBox[{4, 1}], 
+     PointBox[{4, 4}], PointBox[{1, 1}], PointBox[{3, 4}]}}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479946642880389*^9, 3.479946674721946*^9, 
+  3.479946971370941*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{3, 3}], PointBox[{1, 1}], 
+    PointBox[{4, 1}], PointBox[{1, 2}], PointBox[{4, 4}], PointBox[{4, 2}], 
+    PointBox[{2, 3}], PointBox[{3, 2}], PointBox[{3, 3}]}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479946642880389*^9, 3.479946674721946*^9, 
+  3.4799467385779247`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{3, 3}, {1, 1}, {4, 1}, {1, 2}, {4, 4}, {4, 2}, {2, 3}, {3, 2}, {
+     3, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{3, 3}], PointBox[{1, 1}], 
+     PointBox[{4, 1}], PointBox[{1, 2}], PointBox[{4, 4}], PointBox[{4, 2}], 
+     PointBox[{2, 3}], PointBox[{3, 2}], PointBox[{3, 3}]}}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479946642880389*^9, 3.479946674721946*^9, 
+  3.4799467386196413`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 1}], PointBox[{2, 4}], 
+    PointBox[{4, 3}], PointBox[{3, 4}], PointBox[{4, 4}], PointBox[{1, 3}], 
+    PointBox[{3, 3}], PointBox[{1, 1}], PointBox[{4, 1}]}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479946642880389*^9, 3.479946674721946*^9, 
+  3.479946742071773*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 1}, {2, 4}, {4, 3}, {3, 4}, {4, 4}, {1, 3}, {3, 3}, {1, 1}, {
+     4, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 1}], PointBox[{2, 4}], 
+     PointBox[{4, 3}], PointBox[{3, 4}], PointBox[{4, 4}], PointBox[{1, 3}], 
+     PointBox[{3, 3}], PointBox[{1, 1}], PointBox[{4, 1}]}}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479946642880389*^9, 3.479946674721946*^9, 
+  3.4799467420886717`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{2, 2}], 
+    PointBox[{1, 4}], PointBox[{2, 3}], PointBox[{1, 3}], PointBox[{4, 1}], 
+    PointBox[{1, 1}], PointBox[{2, 4}], PointBox[{4, 2}]}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479946642880389*^9, 3.479946674721946*^9, 
+  3.479946760616044*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 2}, {2, 2}, {1, 4}, {2, 3}, {1, 3}, {4, 1}, {1, 1}, {2, 4}, {
+     4, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{2, 2}], 
+     PointBox[{1, 4}], PointBox[{2, 3}], PointBox[{1, 3}], PointBox[{4, 1}], 
+     PointBox[{1, 1}], PointBox[{2, 4}], PointBox[{4, 2}]}}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479946642880389*^9, 3.479946674721946*^9, 
+  3.479946760630925*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["7 in 4x4", "Section",
+ CellChangeTimes->{{3.4799468285684013`*^9, 3.479946829813684*^9}, 
+   3.479988543805088*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 4}], PointBox[{2, 1}], 
+    PointBox[{4, 1}], PointBox[{4, 2}], PointBox[{1, 3}], PointBox[{4, 3}], 
+    PointBox[{3, 2}], PointBox[{4, 4}]}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479988560337242*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 4}, {2, 1}, {4, 1}, {4, 2}, {1, 3}, {4, 3}, {3, 2}, {4, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 4}], PointBox[{2, 1}], 
+     PointBox[{4, 1}], PointBox[{4, 2}], PointBox[{1, 3}], PointBox[{4, 3}], 
+     PointBox[{3, 2}], PointBox[{4, 4}]}}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479988560385208*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{4, 4}], 
+    PointBox[{1, 1}], PointBox[{3, 2}], PointBox[{2, 1}], PointBox[{3, 1}], 
+    PointBox[{1, 3}], PointBox[{4, 2}]}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479988569105996*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 2}, {4, 4}, {1, 1}, {3, 2}, {2, 1}, {3, 1}, {1, 3}, {4, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{4, 4}], 
+     PointBox[{1, 1}], PointBox[{3, 2}], PointBox[{2, 1}], PointBox[{3, 1}], 
+     PointBox[{1, 3}], PointBox[{4, 2}]}}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479988569123357*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 1}], PointBox[{4, 4}], 
+    PointBox[{1, 1}], PointBox[{4, 2}], PointBox[{3, 1}], PointBox[{4, 1}], 
+    PointBox[{2, 3}], PointBox[{2, 1}]}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479988570084362*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 1}, {4, 4}, {1, 1}, {4, 2}, {3, 1}, {4, 1}, {2, 3}, {2, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 1}], PointBox[{4, 4}], 
+     PointBox[{1, 1}], PointBox[{4, 2}], PointBox[{3, 1}], PointBox[{4, 1}], 
+     PointBox[{2, 3}], PointBox[{2, 1}]}}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479988570101408*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{3, 1}], 
+    PointBox[{4, 3}], PointBox[{1, 3}], PointBox[{4, 1}], PointBox[{3, 4}], 
+    PointBox[{3, 2}], PointBox[{4, 2}]}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.4799885785507803`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 2}, {3, 1}, {4, 3}, {1, 3}, {4, 1}, {3, 4}, {3, 2}, {4, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{3, 1}], 
+     PointBox[{4, 3}], PointBox[{1, 3}], PointBox[{4, 1}], PointBox[{3, 4}], 
+     PointBox[{3, 2}], PointBox[{4, 2}]}}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.47998857856775*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{1, 3}], PointBox[{3, 4}], 
+    PointBox[{1, 2}], PointBox[{4, 4}], PointBox[{4, 1}], PointBox[{1, 4}], 
+    PointBox[{2, 4}], PointBox[{1, 3}]}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479988581990906*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{1, 3}, {3, 4}, {1, 2}, {4, 4}, {4, 1}, {1, 4}, {2, 4}, {1, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{1, 3}], PointBox[{3, 4}], 
+     PointBox[{1, 2}], PointBox[{4, 4}], PointBox[{4, 1}], PointBox[{1, 4}], 
+     PointBox[{2, 4}], PointBox[{1, 3}]}}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479988582007777*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 1}], PointBox[{3, 4}], 
+    PointBox[{3, 1}], PointBox[{1, 3}], PointBox[{2, 1}], PointBox[{4, 4}], 
+    PointBox[{4, 2}], PointBox[{4, 1}]}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479988518281465*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 1}, {3, 4}, {3, 1}, {1, 3}, {2, 1}, {4, 4}, {4, 2}, {4, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 1}], PointBox[{3, 4}], 
+     PointBox[{3, 1}], PointBox[{1, 3}], PointBox[{2, 1}], PointBox[{4, 4}], 
+     PointBox[{4, 2}], PointBox[{4, 1}]}}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479988518374846*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{3, 1}], PointBox[{3, 4}], 
+    PointBox[{4, 4}], PointBox[{1, 1}], PointBox[{2, 4}], PointBox[{1, 2}], 
+    PointBox[{1, 4}], PointBox[{3, 1}]}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479988536434186*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{3, 1}, {3, 4}, {4, 4}, {1, 1}, {2, 4}, {1, 2}, {1, 4}, {3, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{3, 1}], PointBox[{3, 4}], 
+     PointBox[{4, 4}], PointBox[{1, 1}], PointBox[{2, 4}], PointBox[{1, 2}], 
+     PointBox[{1, 4}], PointBox[{3, 1}]}}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479988536440359*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{1, 1}], 
+    PointBox[{4, 3}], PointBox[{4, 4}], PointBox[{1, 4}], PointBox[{4, 1}], 
+    PointBox[{3, 3}], PointBox[{4, 2}]}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479988539988614*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 2}, {1, 1}, {4, 3}, {4, 4}, {1, 4}, {4, 1}, {3, 3}, {4, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{1, 1}], 
+     PointBox[{4, 3}], PointBox[{4, 4}], PointBox[{1, 4}], PointBox[{4, 1}], 
+     PointBox[{3, 3}], PointBox[{4, 2}]}}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479988540029048*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 1}], PointBox[{1, 4}], 
+    PointBox[{3, 3}], PointBox[{2, 4}], PointBox[{3, 4}], PointBox[{1, 2}], 
+    PointBox[{4, 3}], PointBox[{4, 1}]}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479988544395732*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 1}, {1, 4}, {3, 3}, {2, 4}, {3, 4}, {1, 2}, {4, 3}, {4, 1}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 1}], PointBox[{1, 4}], 
+     PointBox[{3, 3}], PointBox[{2, 4}], PointBox[{3, 4}], PointBox[{1, 2}], 
+     PointBox[{4, 3}], PointBox[{4, 1}]}}},
+  ImageSize->{100, 100},
+  PlotRange->{{0, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.479988544438018*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["6 in 3x4", "Section",
+ CellChangeTimes->{{3.4799468285684013`*^9, 3.479946829813684*^9}, {
+   3.479988543805088*^9, 3.479988559692272*^9}, 3.479988636094701*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[3, 2], Rational[9, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {1.5, 4.5}, {1.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 3}], PointBox[{2, 1}], 
+    PointBox[{3, 4}], PointBox[{2, 4}], PointBox[{4, 1}], PointBox[{4, 4}], 
+    PointBox[{2, 3}]}},
+  ImageSize->{80, 100},
+  PlotRange->{{1, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.480009050490808*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[3, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[3, 2], Rational[9, 2]}, {Rational[3, 2], Rational[1, 2]}}, {{
+     1.5, 0.5}, {4.5, 0.5}, {4.5, 4.5}, {1.5, 4.5}, {1.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 3}, {2, 1}, {3, 4}, {2, 4}, {4, 1}, {4, 4}, {2, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 3}], PointBox[{2, 1}], 
+     PointBox[{3, 4}], PointBox[{2, 4}], PointBox[{4, 1}], PointBox[{4, 4}], 
+     PointBox[{2, 3}]}}},
+  ImageSize->{80, 100},
+  PlotRange->{{1, 5}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.4800090505094976`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[7, 2]}, {
+      Rational[1, 2], Rational[7, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 3.5}, {0.5, 3.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{2, 3}], PointBox[{3, 2}], 
+    PointBox[{3, 3}], PointBox[{1, 1}], PointBox[{1, 3}], PointBox[{4, 2}], 
+    PointBox[{2, 3}]}},
+  ImageSize->{100, 80},
+  PlotRange->{{0, 5}, {0, 4}}]], "Print",
+ CellChangeTimes->{3.4800090508551188`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[7, 2]}, {
+      Rational[1, 2], Rational[7, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 3.5}, {0.5, 3.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{2, 3}, {3, 2}, {3, 3}, {1, 1}, {1, 3}, {4, 2}, {2, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{2, 3}], PointBox[{3, 2}], 
+     PointBox[{3, 3}], PointBox[{1, 1}], PointBox[{1, 3}], PointBox[{4, 2}], 
+     PointBox[{2, 3}]}}},
+  ImageSize->{100, 80},
+  PlotRange->{{0, 5}, {0, 4}}]], "Print",
+ CellChangeTimes->{3.480009050872581*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[7, 2], Rational[1, 2]}, {Rational[7, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {3.5, 0.5}, {3.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{1, 4}], PointBox[{2, 1}], 
+    PointBox[{2, 2}], PointBox[{1, 3}], PointBox[{3, 4}], PointBox[{3, 1}], 
+    PointBox[{1, 4}]}},
+  ImageSize->{80, 100},
+  PlotRange->{{0, 4}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.480009050905251*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[7, 2], Rational[1, 2]}, {Rational[7, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {3.5, 0.5}, {3.5, 4.5}, {0.5, 4.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{1, 4}, {2, 1}, {2, 2}, {1, 3}, {3, 4}, {3, 1}, {1, 4}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{1, 4}], PointBox[{2, 1}], 
+     PointBox[{2, 2}], PointBox[{1, 3}], PointBox[{3, 4}], PointBox[{3, 1}], 
+     PointBox[{1, 4}]}}},
+  ImageSize->{80, 100},
+  PlotRange->{{0, 4}, {0, 5}}]], "Print",
+ CellChangeTimes->{3.480009050938795*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[3, 2]}, {
+      Rational[9, 2], Rational[3, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[3, 2]}}, {{
+     0.5, 1.5}, {4.5, 1.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 1.5}}]], 
+   {AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{2, 2}], 
+    PointBox[{4, 4}], PointBox[{1, 2}], PointBox[{4, 3}], PointBox[{3, 4}], 
+    PointBox[{4, 2}]}},
+  ImageSize->{100, 80},
+  PlotRange->{{0, 5}, {1, 5}}]], "Print",
+ CellChangeTimes->{3.4800090511972017`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[3, 2]}, {
+      Rational[9, 2], Rational[3, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[3, 2]}}, {{
+     0.5, 1.5}, {4.5, 1.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 1.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{4, 2}, {2, 2}, {4, 4}, {1, 2}, {4, 3}, {3, 4}, {4, 2}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{4, 2}], PointBox[{2, 2}], 
+     PointBox[{4, 4}], PointBox[{1, 2}], PointBox[{4, 3}], PointBox[{3, 4}], 
+     PointBox[{4, 2}]}}},
+  ImageSize->{100, 80},
+  PlotRange->{{0, 5}, {1, 5}}]], "Print",
+ CellChangeTimes->{3.480009051214911*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[7, 2]}, {
+      Rational[1, 2], Rational[7, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 3.5}, {0.5, 3.5}, {0.5, 0.5}}]], 
+   {AbsolutePointSize[7], PointBox[{1, 3}], PointBox[{4, 2}], 
+    PointBox[{2, 2}], PointBox[{3, 1}], PointBox[{2, 1}], PointBox[{4, 3}], 
+    PointBox[{1, 3}]}},
+  ImageSize->{100, 80},
+  PlotRange->{{0, 5}, {0, 4}}]], "Print",
+ CellChangeTimes->{3.4800090515980988`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[1, 2]}, {
+      Rational[9, 2], Rational[1, 2]}, {Rational[9, 2], Rational[7, 2]}, {
+      Rational[1, 2], Rational[7, 2]}, {Rational[1, 2], Rational[1, 2]}}, {{
+     0.5, 0.5}, {4.5, 0.5}, {4.5, 3.5}, {0.5, 3.5}, {0.5, 0.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{1, 3}, {4, 2}, {2, 2}, {3, 1}, {2, 1}, {4, 3}, {1, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{1, 3}], PointBox[{4, 2}], 
+     PointBox[{2, 2}], PointBox[{3, 1}], PointBox[{2, 1}], PointBox[{4, 3}], 
+     PointBox[{1, 3}]}}},
+  ImageSize->{100, 80},
+  PlotRange->{{0, 5}, {0, 4}}]], "Print",
+ CellChangeTimes->{3.480009051624337*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[3, 2]}, {
+      Rational[9, 2], Rational[3, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[3, 2]}}, {{
+     0.5, 1.5}, {4.5, 1.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 1.5}}]], 
+   {AbsolutePointSize[7], PointBox[{3, 3}], PointBox[{3, 2}], 
+    PointBox[{1, 4}], PointBox[{1, 2}], PointBox[{4, 3}], PointBox[{2, 2}], 
+    PointBox[{3, 3}]}},
+  ImageSize->{100, 80},
+  PlotRange->{{0, 5}, {1, 5}}]], "Print",
+ CellChangeTimes->{3.479988620988162*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   LineBox[NCache[{{Rational[1, 2], Rational[3, 2]}, {
+      Rational[9, 2], Rational[3, 2]}, {Rational[9, 2], Rational[9, 2]}, {
+      Rational[1, 2], Rational[9, 2]}, {Rational[1, 2], Rational[3, 2]}}, {{
+     0.5, 1.5}, {4.5, 1.5}, {4.5, 4.5}, {0.5, 4.5}, {0.5, 1.5}}]], 
+   {RGBColor[1, 0, 0], AbsoluteThickness[2], 
+    LineBox[{{3, 3}, {3, 2}, {1, 4}, {1, 2}, {4, 3}, {2, 2}, {3, 3}}], 
+    {GrayLevel[0], AbsolutePointSize[7], PointBox[{3, 3}], PointBox[{3, 2}], 
+     PointBox[{1, 4}], PointBox[{1, 2}], PointBox[{4, 3}], PointBox[{2, 2}], 
+     PointBox[{3, 3}]}}},
+  ImageSize->{100, 80},
+  PlotRange->{{0, 5}, {1, 5}}]], "Print",
+ CellChangeTimes->{3.479988621006114*^9}]
+}, Open  ]]
+}, Closed]]
+},
+WindowSize->{586, 696},
+WindowMargins->{{5, Automatic}, {Automatic, 10}},
+ShowSelection->True,
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.5, 1.5 Inherited],
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 1555, 44, 226, "Input"],
+Cell[2103, 66, 367, 11, 42, "Input"],
+Cell[2473, 79, 2375, 68, 249, "Input"],
+Cell[4851, 149, 1317, 34, 203, "Input"],
+Cell[6171, 185, 3172, 84, 387, "Input"],
+Cell[9346, 271, 3493, 90, 433, "Input"],
+Cell[12842, 363, 2353, 54, 225, "Input"],
+Cell[CellGroupData[{
+Cell[15220, 421, 146, 2, 100, "Section"],
+Cell[CellGroupData[{
+Cell[15391, 427, 633, 11, 288, "Print"],
+Cell[16027, 440, 802, 14, 288, "Print"],
+Cell[16832, 456, 655, 11, 288, "Print"],
+Cell[17490, 469, 821, 14, 648, "Print"],
+Cell[18314, 485, 634, 11, 640, "Print"],
+Cell[18951, 498, 799, 14, 648, "Print"],
+Cell[19753, 514, 636, 11, 648, "Print"],
+Cell[20392, 527, 799, 14, 648, "Print"],
+Cell[21194, 543, 634, 11, 648, "Print"],
+Cell[21831, 556, 800, 14, 648, "Print"],
+Cell[22634, 572, 634, 11, 648, "Print"],
+Cell[23271, 585, 800, 14, 648, "Print"],
+Cell[24074, 601, 634, 11, 648, "Print"],
+Cell[24711, 614, 800, 14, 648, "Print"],
+Cell[25514, 630, 634, 11, 648, "Print"],
+Cell[26151, 643, 800, 14, 648, "Print"],
+Cell[26954, 659, 636, 11, 648, "Print"],
+Cell[27593, 672, 802, 14, 648, "Print"],
+Cell[28398, 688, 634, 11, 648, "Print"],
+Cell[29035, 701, 800, 14, 648, "Print"],
+Cell[29838, 717, 636, 11, 648, "Print"],
+Cell[30477, 730, 800, 14, 648, "Print"],
+Cell[31280, 746, 636, 11, 648, "Print"],
+Cell[31919, 759, 800, 14, 648, "Print"],
+Cell[32722, 775, 634, 11, 648, "Print"],
+Cell[33359, 788, 800, 14, 648, "Print"],
+Cell[34162, 804, 634, 11, 648, "Print"],
+Cell[34799, 817, 802, 14, 648, "Print"],
+Cell[35604, 833, 634, 11, 648, "Print"],
+Cell[36241, 846, 800, 14, 648, "Print"],
+Cell[37044, 862, 634, 11, 648, "Print"],
+Cell[37681, 875, 800, 14, 648, "Print"],
+Cell[38484, 891, 634, 11, 648, "Print"],
+Cell[39121, 904, 800, 14, 648, "Print"],
+Cell[39924, 920, 633, 11, 648, "Print"],
+Cell[40560, 933, 800, 14, 648, "Print"],
+Cell[41363, 949, 634, 11, 648, "Print"],
+Cell[42000, 962, 800, 14, 648, "Print"],
+Cell[42803, 978, 634, 11, 648, "Print"],
+Cell[43440, 991, 800, 14, 648, "Print"],
+Cell[44243, 1007, 636, 11, 648, "Print"],
+Cell[44882, 1020, 799, 14, 648, "Print"],
+Cell[45684, 1036, 634, 11, 648, "Print"],
+Cell[46321, 1049, 800, 14, 648, "Print"],
+Cell[47124, 1065, 636, 11, 648, "Print"],
+Cell[47763, 1078, 799, 14, 648, "Print"],
+Cell[48565, 1094, 634, 11, 648, "Print"],
+Cell[49202, 1107, 800, 14, 648, "Print"],
+Cell[50005, 1123, 636, 11, 648, "Print"],
+Cell[50644, 1136, 800, 14, 288, "Print"],
+Cell[51447, 1152, 634, 11, 288, "Print"],
+Cell[52084, 1165, 800, 14, 288, "Print"],
+Cell[52887, 1181, 634, 11, 288, "Print"],
+Cell[53524, 1194, 800, 14, 288, "Print"],
+Cell[54327, 1210, 634, 11, 285, "Print"],
+Cell[54964, 1223, 800, 14, 288, "Print"],
+Cell[55767, 1239, 634, 11, 288, "Print"],
+Cell[56404, 1252, 799, 14, 288, "Print"],
+Cell[57206, 1268, 634, 11, 288, "Print"],
+Cell[57843, 1281, 799, 14, 288, "Print"],
+Cell[58645, 1297, 636, 11, 288, "Print"],
+Cell[59284, 1310, 800, 14, 288, "Print"],
+Cell[60087, 1326, 636, 11, 288, "Print"],
+Cell[60726, 1339, 800, 14, 288, "Print"],
+Cell[61529, 1355, 634, 11, 288, "Print"],
+Cell[62166, 1368, 802, 14, 288, "Print"],
+Cell[62971, 1384, 634, 11, 288, "Print"],
+Cell[63608, 1397, 800, 14, 288, "Print"],
+Cell[64411, 1413, 633, 11, 288, "Print"],
+Cell[65047, 1426, 800, 14, 288, "Print"],
+Cell[65850, 1442, 634, 11, 288, "Print"],
+Cell[66487, 1455, 800, 14, 288, "Print"],
+Cell[67290, 1471, 636, 11, 285, "Print"],
+Cell[67929, 1484, 800, 14, 288, "Print"],
+Cell[68732, 1500, 634, 11, 288, "Print"],
+Cell[69369, 1513, 800, 14, 288, "Print"],
+Cell[70172, 1529, 634, 11, 288, "Print"],
+Cell[70809, 1542, 802, 14, 288, "Print"],
+Cell[71614, 1558, 636, 11, 288, "Print"],
+Cell[72253, 1571, 802, 14, 288, "Print"],
+Cell[73058, 1587, 634, 11, 288, "Print"],
+Cell[73695, 1600, 800, 14, 288, "Print"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[74544, 1620, 169, 2, 53, "Section"],
+Cell[CellGroupData[{
+Cell[74738, 1626, 630, 11, 192, "Print"],
+Cell[75371, 1639, 798, 14, 192, "Print"],
+Cell[76172, 1655, 632, 11, 192, "Print"],
+Cell[76807, 1668, 797, 14, 192, "Print"],
+Cell[77607, 1684, 634, 11, 192, "Print"],
+Cell[78244, 1697, 800, 14, 192, "Print"],
+Cell[79047, 1713, 632, 11, 162, "Print"],
+Cell[79682, 1726, 798, 14, 162, "Print"],
+Cell[80483, 1742, 632, 11, 162, "Print"],
+Cell[81118, 1755, 798, 14, 162, "Print"],
+Cell[81919, 1771, 631, 11, 192, "Print"],
+Cell[82553, 1784, 798, 14, 192, "Print"],
+Cell[83354, 1800, 634, 11, 288, "Print"],
+Cell[83991, 1813, 800, 14, 288, "Print"],
+Cell[84794, 1829, 636, 11, 243, "Print"],
+Cell[85433, 1842, 798, 14, 243, "Print"],
+Cell[86234, 1858, 634, 11, 288, "Print"],
+Cell[86871, 1871, 800, 14, 288, "Print"],
+Cell[87674, 1887, 634, 11, 288, "Print"],
+Cell[88311, 1900, 800, 14, 288, "Print"],
+Cell[89114, 1916, 636, 11, 288, "Print"],
+Cell[89753, 1929, 800, 14, 288, "Print"],
+Cell[90556, 1945, 632, 11, 243, "Print"],
+Cell[91191, 1958, 798, 14, 243, "Print"],
+Cell[91992, 1974, 634, 11, 288, "Print"],
+Cell[92629, 1987, 800, 14, 288, "Print"],
+Cell[93432, 2003, 634, 11, 243, "Print"],
+Cell[94069, 2016, 800, 14, 243, "Print"],
+Cell[94872, 2032, 632, 11, 243, "Print"],
+Cell[95507, 2045, 800, 14, 243, "Print"],
+Cell[96310, 2061, 634, 11, 288, "Print"],
+Cell[96947, 2074, 800, 14, 288, "Print"],
+Cell[97750, 2090, 634, 11, 243, "Print"],
+Cell[98387, 2103, 800, 14, 243, "Print"],
+Cell[99190, 2119, 634, 11, 243, "Print"],
+Cell[99827, 2132, 802, 14, 243, "Print"],
+Cell[100632, 2148, 636, 11, 243, "Print"],
+Cell[101271, 2161, 800, 14, 243, "Print"],
+Cell[102074, 2177, 634, 11, 243, "Print"],
+Cell[102711, 2190, 800, 14, 243, "Print"],
+Cell[103514, 2206, 633, 11, 288, "Print"],
+Cell[104150, 2219, 802, 14, 288, "Print"],
+Cell[104955, 2235, 632, 11, 243, "Print"],
+Cell[105590, 2248, 800, 14, 243, "Print"],
+Cell[106393, 2264, 632, 11, 243, "Print"],
+Cell[107028, 2277, 798, 14, 243, "Print"],
+Cell[107829, 2293, 636, 11, 162, "Print"],
+Cell[108468, 2306, 800, 14, 162, "Print"],
+Cell[109271, 2322, 631, 11, 192, "Print"],
+Cell[109905, 2335, 800, 14, 192, "Print"],
+Cell[110708, 2351, 632, 11, 162, "Print"],
+Cell[111343, 2364, 797, 14, 162, "Print"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[112189, 2384, 195, 3, 53, "Section"],
+Cell[CellGroupData[{
+Cell[112409, 2391, 632, 11, 243, "Print"],
+Cell[113044, 2404, 797, 14, 243, "Print"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[113890, 2424, 95, 1, 53, "Section"],
+Cell[CellGroupData[{
+Cell[114010, 2429, 661, 12, 162, "Print"],
+Cell[114674, 2443, 817, 15, 162, "Print"],
+Cell[115494, 2460, 659, 12, 162, "Print"],
+Cell[116156, 2474, 817, 15, 162, "Print"],
+Cell[116976, 2491, 657, 12, 162, "Print"],
+Cell[117636, 2505, 818, 15, 162, "Print"],
+Cell[118457, 2522, 661, 12, 162, "Print"],
+Cell[119121, 2536, 817, 15, 162, "Print"],
+Cell[119941, 2553, 661, 12, 162, "Print"],
+Cell[120605, 2567, 819, 15, 162, "Print"],
+Cell[121427, 2584, 659, 12, 162, "Print"],
+Cell[122089, 2598, 819, 15, 162, "Print"],
+Cell[122911, 2615, 659, 12, 162, "Print"],
+Cell[123573, 2629, 817, 15, 162, "Print"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[124439, 2650, 121, 2, 53, "Section"],
+Cell[CellGroupData[{
+Cell[124585, 2656, 594, 11, 162, "Print"],
+Cell[125182, 2669, 738, 13, 162, "Print"],
+Cell[125923, 2684, 594, 11, 162, "Print"],
+Cell[126520, 2697, 738, 13, 162, "Print"],
+Cell[127261, 2712, 594, 11, 162, "Print"],
+Cell[127858, 2725, 738, 13, 162, "Print"],
+Cell[128599, 2740, 596, 11, 162, "Print"],
+Cell[129198, 2753, 737, 13, 162, "Print"],
+Cell[129938, 2768, 594, 11, 162, "Print"],
+Cell[130535, 2781, 738, 13, 162, "Print"],
+Cell[131276, 2796, 594, 11, 162, "Print"],
+Cell[131873, 2809, 738, 13, 162, "Print"],
+Cell[132614, 2824, 594, 11, 162, "Print"],
+Cell[133211, 2837, 738, 13, 162, "Print"],
+Cell[133952, 2852, 594, 11, 162, "Print"],
+Cell[134549, 2865, 738, 13, 162, "Print"],
+Cell[135290, 2880, 594, 11, 162, "Print"],
+Cell[135887, 2893, 738, 13, 162, "Print"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[136674, 2912, 167, 2, 53, "Section"],
+Cell[CellGroupData[{
+Cell[136866, 2918, 575, 11, 162, "Print"],
+Cell[137444, 2931, 713, 13, 162, "Print"],
+Cell[138160, 2946, 577, 11, 132, "Print"],
+Cell[138740, 2959, 711, 13, 132, "Print"],
+Cell[139454, 2974, 575, 11, 162, "Print"],
+Cell[140032, 2987, 711, 13, 162, "Print"],
+Cell[140746, 3002, 577, 11, 132, "Print"],
+Cell[141326, 3015, 711, 13, 132, "Print"],
+Cell[142040, 3030, 577, 11, 132, "Print"],
+Cell[142620, 3043, 711, 13, 132, "Print"],
+Cell[143334, 3058, 575, 11, 132, "Print"],
+Cell[143912, 3071, 711, 13, 132, "Print"]
+}, Open  ]]
+}, Closed]]
+}
+]
+*)
+
+(* End of internal cache information *)

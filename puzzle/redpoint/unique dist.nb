@@ -1,0 +1,160 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      4434,        118]*)
+(*NotebookOutlinePosition[      5071,        140]*)
+(*  CellTagsIndexPosition[      5027,        136]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell[BoxData[
+    \(pairs[L_] := 
+      Flatten[Table[{L[\([i]\)], L[\([j]\)]}, {i, 1, Length[L] - 1}, {j, 
+            i + 1, Length[L]}], 1]\)], "Input"],
+
+Cell[BoxData[
+    \(dist[{{x1_, y1_}, {x2_, 
+            y2_}}] := \((x1 - x2)\)^2 + \((y1 - y2)\)^2\)], "Input"],
+
+Cell[BoxData[
+    \(unique[L_] := 
+      Length[Union[Map[dist, pairs[L]]]] \[Equal] 
+        Length[L] \((Length[L] - 1)\)/2\)], "Input"],
+
+Cell[BoxData[{
+    \(combinations[L_, k_] := {L} /; Length[L] == k\), "\n", 
+    \(\(combinations[L_, 0] := {{}};\)\), "\n", 
+    \(combinations[L_, k_] := 
+      Sort[Join[combinations[Rest[L], k], 
+          Map[Prepend[#, First[L]] &, 
+            combinations[Rest[L], k - 1]]]]\)}], "Input"],
+
+Cell[BoxData[
+    \(choose[n_, k_] := 
+      Module[{}, \[IndentingNewLine]A = {}; \[IndentingNewLine]While[
+          Length[A] < 
+            n, \[IndentingNewLine]r = {Random[Integer, {1, k}], 
+              Random[Integer, {1, k}]}; \[IndentingNewLine]A = 
+            Union[A, {r}]]; A]\)], "Input"],
+
+Cell[BoxData[
+    \(pic[L_] := 
+      Module[{}, \[IndentingNewLine]t = Transpose[L]; \[IndentingNewLine]a1 = 
+          Min[t[\([1]\)]] - 1/2; \[IndentingNewLine]a2 = 
+          Max[t[\([1]\)]] + 1/2; \[IndentingNewLine]a3 = 
+          Min[t[\([2]\)]] - 1/2; \[IndentingNewLine]a4 = 
+          Max[t[\([2]\)]] + 1/2; 
+        Show[Graphics[{Line[{{a1, a3}, {a1, a4}, {a2, a4}, {a2, a3}, {a1, 
+                    a3}}], AbsolutePointSize[30], Map[Point, L]}], 
+          AspectRatio \[Rule] Automatic, 
+          PlotRange \[Rule] {{a1, a2}, {a3, a4}}, 
+          ImageSize \[Rule] 40 {a2 - a1, a4 - a3}];]\)], "Input"],
+
+Cell[BoxData[
+    \(Clear[d]\)], "Input"],
+
+Cell[BoxData[
+    \(ppic[L_, L2_] := 
+      Module[{}, \[IndentingNewLine]t = Transpose[L]; \[IndentingNewLine]a1 = 
+          Min[t[\([1]\)]] - 1/2; \[IndentingNewLine]a2 = 
+          Max[t[\([1]\)]] + 1/2; \[IndentingNewLine]a3 = 
+          Min[t[\([2]\)]] - 1/2; \[IndentingNewLine]a4 = 
+          Max[t[\([2]\)]] + 1/2; 
+        Show[Graphics[{Line[{{a1, a3}, {a1, a4}, {a2, a4}, {a2, a3}, {a1, 
+                    a3}}], AbsolutePointSize[30], Map[Point, L], Hue[0], 
+              Map[Point, L2]}], AspectRatio \[Rule] Automatic, 
+          PlotRange \[Rule] {{a1, a2}, {a3, a4}}, 
+          ImageSize \[Rule] 40 {a2 - a1, a4 - a3}];]\)], "Input"],
+
+Cell[BoxData[
+    \(For[trial = 1, 
+      trial < 10000, \(trial++\), \[IndentingNewLine]b = 
+        choose[12, 6]; \[IndentingNewLine]c = 
+        combinations[b, 5]; \[IndentingNewLine]d = 
+        Select[c, unique[#] == True &]; \[IndentingNewLine]If[
+        Length[d] \[Equal] 1, pic[b]; ppic[b, Flatten[d, 1]]]]\)], "Input"]
+},
+FrontEndVersion->"5.2 for Macintosh",
+ScreenRectangle->{{0, 1440}, {0, 825}},
+WindowSize->{520, 703},
+WindowMargins->{{14, Automatic}, {Automatic, 21}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1754, 51, 155, 3, 75, "Input"],
+Cell[1912, 56, 113, 2, 59, "Input"],
+Cell[2028, 60, 138, 3, 59, "Input"],
+Cell[2169, 65, 296, 6, 123, "Input"],
+Cell[2468, 73, 304, 6, 123, "Input"],
+Cell[2775, 81, 620, 11, 235, "Input"],
+Cell[3398, 94, 41, 1, 43, "Input"],
+Cell[3442, 97, 654, 11, 251, "Input"],
+Cell[4099, 110, 331, 6, 107, "Input"]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+
