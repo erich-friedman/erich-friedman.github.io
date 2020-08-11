@@ -1,0 +1,4043 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.0'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[    156115,       3955]*)
+(*NotebookOutlinePosition[    156816,       3979]*)
+(*  CellTagsIndexPosition[    156772,       3975]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell[BoxData[
+    \(unitsquare[x_, y_, \[Theta]_:  0] := {GrayLevel[0.75], 
+        Polygon[{{x, y}, {x + Cos[\[Theta]], 
+              y + Sin[\[Theta]]}, {x + Cos[\[Theta]] - Sin[\[Theta]], 
+              y + Sin[\[Theta]] + Cos[\[Theta]]}, {x - Sin[\[Theta]], 
+              y + Cos[\[Theta]]}}], GrayLevel[0], 
+        Line[{{x, y}, {x + Cos[\[Theta]], 
+              y + Sin[\[Theta]]}, {x + Cos[\[Theta]] - Sin[\[Theta]], 
+              y + Sin[\[Theta]] + Cos[\[Theta]]}, {x - Sin[\[Theta]], 
+              y + Cos[\[Theta]]}, {x, y}}]}; 
+    square[s_] := Line[{{0, 0}, {s, 0}, {s, s}, {0, s}, {0, 0}}]; 
+    lowerlefttriangle[n_] := 
+      Flatten[Table[unitsquare[i, j], {i, 0, n - 1}, {j, 0, n - 1 - i}]]; 
+    upperrighttriangle[n_, s_] := 
+      Flatten[Table[
+          unitsquare[s - 1 - i, s - 1 - j], {i, 0, n - 1}, {j, 0, 
+            n - 1 - i}]]; 
+    lowerrighttriangle[n_, s_] := 
+      Flatten[Table[
+          unitsquare[s - 1 - i, j], {i, 0, n - 1}, {j, 0, n - 1 - i}]]; 
+    upperlefttriangle[n_, s_] := 
+      Flatten[Table[
+          unitsquare[i, s - 1 - j], {i, 0, n - 1}, {j, 0, 
+            n - 1 - i}]]\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+A packing of 29 unit squares in a square of side length s = 5.9465+\
+\>", "Section",
+  FontSize->24],
+
+Cell[TextData[{
+  "Observation: Looking at this packing, as well as that of Bidwell, you'll \
+notice that, omitting the rightmost column, the rest is a symmetric packing \
+of ",
+  Cell[BoxData[
+      \(TraditionalForm\`\((n - Floor[\@n])\)\)]],
+  " squares in an s by (s - 1) rectangle, which is also true for several \
+other packings, such as one of the packings for n = 18 and your packing for n \
+= 26."
+}], "Text",
+  FontSize->24],
+
+Cell["\<\
+Humor: Back in 2002, I'd spent so much effort trying to improve Bidwell's \
+packing that I became convinced that such efforts were futile. To avoid such \
+futility in the future, I'd written \"Do not revisit the packing of 29 \
+squares.\" in very large type in my old notebook. Glad I ignored my old \
+advice!\
+\>", "Text",
+  FontSize->24],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(m = Root[\(-5\) + 10\ #1 - #1\^2 + 10\ #1\^3 + 3\ #1\^4 &, 2]; 
+    s = \(2 + 5\ m + 4\ \@\(1 + m\^2\)\)\/\(1 + m\); 
+    a = \(-1\) - 1\/\@\(1 + m\^2\) + m\ \((\(-2\) - m\/\@\(1 + m\^2\))\) + s; 
+    p = \(-1\) - 2\ m + s; 
+    Show[Graphics[{unitsquare[0, 0], unitsquare[0, 1], unitsquare[1, 0], 
+          unitsquare[0, s - 1], unitsquare[1, s - 1], 
+          unitsquare[s - 3, s - 1], unitsquare[s - 2, s - 1], 
+          unitsquare[s - 1, 1], unitsquare[s - 1, 2], 
+          unitsquare[s - 2, s - 2], unitsquare[s - 1, 3], 
+          unitsquare[s - 1, 4], unitsquare[s - 3, 0], unitsquare[s - 2, 0], 
+          unitsquare[s - 1, 0], unitsquare[0, a, ArcTan[m] - \[Pi]\/2], 
+          unitsquare[0 + 1\/\@\(1 + m\^2\), a + m\/\@\(1 + m\^2\), 
+            ArcTan[m] - \[Pi]\/2], 
+          unitsquare[0 + 2\/\@\(1 + m\^2\), a + \(2  m\)\/\@\(1 + m\^2\), 
+            ArcTan[m] - \[Pi]\/2], 
+          unitsquare[0 + 3\/\@\(1 + m\^2\), a + \(3  m\)\/\@\(1 + m\^2\), 
+            ArcTan[m] - \[Pi]\/2], \
+\[IndentingNewLine]\[IndentingNewLine]unitsquare[0, p, ArcTan[m] - \[Pi]\/2], 
+          unitsquare[0 + 1\/\@\(1 + m\^2\), p + m\/\@\(1 + m\^2\), 
+            ArcTan[m] - \[Pi]\/2], 
+          unitsquare[0 + 2\/\@\(1 + m\^2\), p + \(2  m\)\/\@\(1 + m\^2\), 
+            ArcTan[m] - \[Pi]\/2], 
+          unitsquare[s - 1, s - a, ArcTan[m] + \[Pi]\/2], 
+          unitsquare[s - 1 - 1\/\@\(1 + m\^2\), 
+            s - \((a + m\/\@\(1 + m\^2\))\), ArcTan[m] + \[Pi]\/2], 
+          unitsquare[s - 1 - 2\/\@\(1 + m\^2\), 
+            s - \((a + \(2  m\)\/\@\(1 + m\^2\))\), ArcTan[m] + \[Pi]\/2], 
+          unitsquare[s - 1 - 3\/\@\(1 + m\^2\), 
+            s - \((a + \(3  m\)\/\@\(1 + m\^2\))\), ArcTan[m] + \[Pi]\/2], 
+          unitsquare[s - 1, s - p, ArcTan[m] + \[Pi]\/2], 
+          unitsquare[s - 1 - 1\/\@\(1 + m\^2\), 
+            s - \((p + m\/\@\(1 + m\^2\))\), ArcTan[m] + \[Pi]\/2], 
+          unitsquare[s - 1 - 2\/\@\(1 + m\^2\), 
+            s - \((p + \(2  m\)\/\@\(1 + m\^2\))\), ArcTan[m] + \[Pi]\/2], 
+          square[s]}], AspectRatio \[Rule] Automatic, 
+      ImageSize \[Rule] {171, 171}, 
+      PlotRange \[Rule] {{0, s}, {0, s}}]\)], "Input"],
+
+Cell[GraphicsData["PostScript", "\<\
+%!
+%%Creator: Mathematica
+%%AspectRatio: 1 
+%%ImageSize: 171 171 
+MathPictureStart
+/Mabs {
+Mgmatrix idtransform
+Mtmatrix dtransform
+} bind def
+/Mabsadd { Mabs
+3 -1 roll add
+3 1 roll add
+exch } bind def
+%% Graphics
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10  scalefont  setfont
+% Scaling calculations
+-3.16744e-17 0.168164 0 0.168164 [
+[ 0 0 0 0 ]
+[ 1 1 0 0 ]
+] MathScale
+% Start of Graphics
+1 setlinecap
+1 setlinejoin
+newpath
+0 0 m
+1 0 L
+1 1 L
+0 1 L
+closepath
+clip
+newpath
+.75 g
+0 0 m
+.16816 0 L
+.16816 .16816 L
+0 .16816 L
+F
+0 g
+.5 Mabswid
+[ ] 0 setdash
+0 0 m
+.16816 0 L
+.16816 .16816 L
+0 .16816 L
+0 0 L
+s
+.75 g
+0 .16816 m
+.16816 .16816 L
+.16816 .33633 L
+0 .33633 L
+F
+0 g
+0 .16816 m
+.16816 .16816 L
+.16816 .33633 L
+0 .33633 L
+0 .16816 L
+s
+.75 g
+.16816 0 m
+.33633 0 L
+.33633 .16816 L
+.16816 .16816 L
+F
+0 g
+.16816 0 m
+.33633 0 L
+.33633 .16816 L
+.16816 .16816 L
+.16816 0 L
+s
+.75 g
+0 .83184 m
+.16816 .83184 L
+.16816 1 L
+0 1 L
+F
+0 g
+0 .83184 m
+.16816 .83184 L
+.16816 1 L
+0 1 L
+0 .83184 L
+s
+.75 g
+.16816 .83184 m
+.33633 .83184 L
+.33633 1 L
+.16816 1 L
+F
+0 g
+.16816 .83184 m
+.33633 .83184 L
+.33633 1 L
+.16816 1 L
+.16816 .83184 L
+s
+.75 g
+.49551 .83184 m
+.66367 .83184 L
+.66367 1 L
+.49551 1 L
+F
+0 g
+.49551 .83184 m
+.66367 .83184 L
+.66367 1 L
+.49551 1 L
+.49551 .83184 L
+s
+.75 g
+.66367 .83184 m
+.83184 .83184 L
+.83184 1 L
+.66367 1 L
+F
+0 g
+.66367 .83184 m
+.83184 .83184 L
+.83184 1 L
+.66367 1 L
+.66367 .83184 L
+s
+.75 g
+.83184 .16816 m
+1 .16816 L
+1 .33633 L
+.83184 .33633 L
+F
+0 g
+.83184 .16816 m
+1 .16816 L
+1 .33633 L
+.83184 .33633 L
+.83184 .16816 L
+s
+.75 g
+.83184 .33633 m
+1 .33633 L
+1 .50449 L
+.83184 .50449 L
+F
+0 g
+.83184 .33633 m
+1 .33633 L
+1 .50449 L
+.83184 .50449 L
+.83184 .33633 L
+s
+.75 g
+.66367 .66367 m
+.83184 .66367 L
+.83184 .83184 L
+.66367 .83184 L
+F
+0 g
+.66367 .66367 m
+.83184 .66367 L
+.83184 .83184 L
+.66367 .83184 L
+.66367 .66367 L
+s
+.75 g
+.83184 .50449 m
+1 .50449 L
+1 .67266 L
+.83184 .67266 L
+F
+0 g
+.83184 .50449 m
+1 .50449 L
+1 .67266 L
+.83184 .67266 L
+.83184 .50449 L
+s
+.75 g
+.83184 .67266 m
+1 .67266 L
+1 .84082 L
+.83184 .84082 L
+F
+0 g
+.83184 .67266 m
+1 .67266 L
+1 .84082 L
+.83184 .84082 L
+.83184 .67266 L
+s
+.75 g
+.49551 0 m
+.66367 0 L
+.66367 .16816 L
+.49551 .16816 L
+F
+0 g
+.49551 0 m
+.66367 0 L
+.66367 .16816 L
+.49551 .16816 L
+.49551 0 L
+s
+.75 g
+.66367 0 m
+.83184 0 L
+.83184 .16816 L
+.66367 .16816 L
+F
+0 g
+.66367 0 m
+.83184 0 L
+.83184 .16816 L
+.66367 .16816 L
+.66367 0 L
+s
+.75 g
+.83184 0 m
+1 0 L
+1 .16816 L
+.83184 .16816 L
+F
+0 g
+.83184 0 m
+1 0 L
+1 .16816 L
+.83184 .16816 L
+.83184 0 L
+s
+.75 g
+0 .50449 m
+.06632 .34996 L
+.22086 .41628 L
+.15453 .57081 L
+F
+0 g
+0 .50449 m
+.06632 .34996 L
+.22086 .41628 L
+.15453 .57081 L
+0 .50449 L
+s
+.75 g
+.15453 .57081 m
+.22086 .41628 L
+.37539 .48261 L
+.30907 .63714 L
+F
+0 g
+.15453 .57081 m
+.22086 .41628 L
+.37539 .48261 L
+.30907 .63714 L
+.15453 .57081 L
+s
+.75 g
+.30907 .63714 m
+.37539 .48261 L
+.52992 .54893 L
+.4636 .70346 L
+F
+0 g
+.30907 .63714 m
+.37539 .48261 L
+.52992 .54893 L
+.4636 .70346 L
+.30907 .63714 L
+s
+.75 g
+.4636 .70346 m
+.52992 .54893 L
+.68445 .61525 L
+.61813 .76978 L
+F
+0 g
+.4636 .70346 m
+.52992 .54893 L
+.68445 .61525 L
+.61813 .76978 L
+.4636 .70346 L
+s
+.75 g
+0 .68749 m
+.06632 .53296 L
+.22086 .59928 L
+.15453 .75381 L
+F
+0 g
+0 .68749 m
+.06632 .53296 L
+.22086 .59928 L
+.15453 .75381 L
+0 .68749 L
+s
+.75 g
+.15453 .75381 m
+.22086 .59928 L
+.37539 .6656 L
+.30907 .82014 L
+F
+0 g
+.15453 .75381 m
+.22086 .59928 L
+.37539 .6656 L
+.30907 .82014 L
+.15453 .75381 L
+s
+.75 g
+.30907 .82014 m
+.37539 .6656 L
+.52992 .73193 L
+.4636 .88646 L
+F
+0 g
+.30907 .82014 m
+.37539 .6656 L
+.52992 .73193 L
+.4636 .88646 L
+.30907 .82014 L
+s
+.75 g
+.83184 .49551 m
+.76551 .65004 L
+.61098 .58372 L
+.6773 .42919 L
+F
+0 g
+.83184 .49551 m
+.76551 .65004 L
+.61098 .58372 L
+.6773 .42919 L
+.83184 .49551 L
+s
+.75 g
+.6773 .42919 m
+.61098 .58372 L
+.45645 .51739 L
+.52277 .36286 L
+F
+0 g
+.6773 .42919 m
+.61098 .58372 L
+.45645 .51739 L
+.52277 .36286 L
+.6773 .42919 L
+s
+.75 g
+.52277 .36286 m
+.45645 .51739 L
+.30192 .45107 L
+.36824 .29654 L
+F
+0 g
+.52277 .36286 m
+.45645 .51739 L
+.30192 .45107 L
+.36824 .29654 L
+.52277 .36286 L
+s
+.75 g
+.36824 .29654 m
+.30192 .45107 L
+.14738 .38475 L
+.21371 .23022 L
+F
+0 g
+.36824 .29654 m
+.30192 .45107 L
+.14738 .38475 L
+.21371 .23022 L
+.36824 .29654 L
+s
+.75 g
+.83184 .31251 m
+.76551 .46704 L
+.61098 .40072 L
+.6773 .24619 L
+F
+0 g
+.83184 .31251 m
+.76551 .46704 L
+.61098 .40072 L
+.6773 .24619 L
+.83184 .31251 L
+s
+.75 g
+.6773 .24619 m
+.61098 .40072 L
+.45645 .3344 L
+.52277 .17986 L
+F
+0 g
+.6773 .24619 m
+.61098 .40072 L
+.45645 .3344 L
+.52277 .17986 L
+.6773 .24619 L
+s
+.75 g
+.52277 .17986 m
+.45645 .3344 L
+.30192 .26807 L
+.36824 .11354 L
+F
+0 g
+.52277 .17986 m
+.45645 .3344 L
+.30192 .26807 L
+.36824 .11354 L
+.52277 .17986 L
+s
+0 0 m
+1 0 L
+1 1 L
+0 1 L
+0 0 L
+s
+% End of Graphics
+MathPictureEnd
+\
+\>"], "Graphics",
+  ImageSize->{171, 171},
+  ImageCache->GraphicsData["Bitmap", "\<\
+CF5dJ6E]HGAYHf4PAg9QL6QYHg<PAVmbKF5d0`40002[0000Zb000`400?l00000o`00003oZol00000
+0003o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003oooooooooo`0Hoooo
+o`03o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003o_knookno_`0Jokno
+_`7o000000000ol0003o_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000oooooooo
+ool06?ooool00ol0003o_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000okno_ono
+_kl06_no_kl1o`00000000?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03o`00
+0?oooooooooo01Sooooo00?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03o`00
+0?no_koo_kno01[o_kno0Ol000000003o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no
+_kl00ol0003oooooooooo`0Hooooo`03o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no
+_kl00ol0003o_knookno_`0Jokno_`7o000000000ol0003o_knookno_`0Iokno_`03o`000?no_koo
+_kno01[o_kno00?o0000ooooooooool06?ooool00ol0003o_knookno_`0Iokno_`03o`000?no_koo
+_kno01[o_kno00?o0000okno_ono_kl06_no_kl1o`00000000?o0000okno_ono_kl06Ono_kl00ol0
+003o_knookno_`0Jokno_`03o`000?oooooooooo01Sooooo00?o0000okno_ono_kl06Ono_kl00ol0
+003o_knookno_`0Jokno_`03o`000?no_koo_kno01[o_kno0Ol000000003o`000?no_koo_kno01Wo
+_kno00?o0000okno_ono_kl06_no_kl00ol0003oooooooooo`0Hooooo`03o`000?no_koo_kno01Wo
+_kno00?o0000okno_ono_kl06_no_kl00ol0003o_knookno_`0Jokno_`7o000000000ol0003o_kno
+okno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000ooooooooool06?ooool00ol0003o_kno
+okno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000okno_ono_kl06_no_kl1o`00000000?o
+0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03o`000?oooooooooo01Sooooo00?o
+0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03o`000?no_koo_kno01[o_kno0Ol0
+00000003o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003oooooooooo`0H
+ooooo`03o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003o_knookno_`0J
+okno_`7o000000000ol0003o_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000oooo
+ooooool06?ooool00ol0003o_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000okno
+_ono_kl06_no_kl1o`00000000?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03
+o`000?oooooooooo01Sooooo00?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03
+o`000?no_koo_kno01[o_kno0Ol000000003o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl0
+6_no_kl00ol0003oooooooooo`0Hooooo`03o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl0
+6_no_kl00ol0003o_knookno_`0Jokno_`7o000000000ol0003o_knookno_`0Iokno_`03o`000?no
+_koo_kno01[o_kno00?o0000ooooooooool06?ooool00ol0003o_knookno_`0Iokno_`03o`000?no
+_koo_kno01[o_kno00?o0000okno_ono_kl06_no_kl1o`00000000?o0000okno_ono_kl06Ono_kl0
+0ol0003o_knookno_`0Jokno_`03o`000?oooooooooo01Sooooo00?o0000okno_ono_kl06Ono_kl0
+0ol0003o_knookno_`0Jokno_`03o`000?no_koo_kno01[o_kno0Ol000000003o`000?no_koo_kno
+01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003oooooooooo`0Hooooo`03o`000?no_koo_kno
+01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003o_knookno_`0Jokno_`7o000000000ol0003o
+_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000ooooooooool06?ooool00ol0003o
+_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000okno_ono_kl06_no_kl1o`000000
+00?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03o`000?oooooooooo01Sooooo
+00?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03o`000?no_koo_kno01[o_kno
+0Ol000000003o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003ooooooooo
+o`0Hooooo`03o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003o_knookno
+_`0Jokno_`7o000000000ol0003o_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000
+ooooooooool00_ooool2o`0001Cooooo00?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0J
+okno_`03o`000?no_koo_kno01[o_kno0Ol000000003o`000?no_koo_kno01Wo_kno00?o0000okno
+_ono_kl06_no_kl00ol0003oooooooooo`02ooooo`03o`00002o_koo000000;o00004Oooool00ol0
+003o_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000okno_ono_kl06_no_kl1o`00
+000000?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`05o`000?oooooooooooooo
+ool000001@2o_kl2o`0000oooooo00?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno
+_`03o`000?no_koo_kno01[o_kno0Ol000000003o`000?no_koo_kno01Wo_kno00?o0000okno_ono
+_kl06_no_kl01Ol0003ooooooooooooooooo000000L0_kno0_l0000=ooooo`03o`000?no_koo_kno
+01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003o_knookno_`0Jokno_`7o000000000ol0003o
+_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00Go0000ooooooooooooooooo`0000090;no
+_`?o00002_ooool00ol0003o_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000okno
+_ono_kl06_no_kl1o`00000000?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`04
+o`000?ooooooooooo`0000d0_kno0_l00008ooooo`03o`000?no_koo_kno01Wo_kno00?o0000okno
+_ono_kl06_no_kl00ol0003o_knookno_`0Jokno_`7o000000000ol0003o_knookno_`0Iokno_`03
+o`000?no_koo_kno01[o_kno00Co0000oooooooooooo00003`2o_kl2o`0000Kooooo00?o0000okno
+_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03o`000?no_koo_kno01[o_kno0Ol000000003
+o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003oooooo`00000B0;no_`?o
+00000oooool00ol0003o_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000okno_ono
+_kl06_no_kl1o`00000000?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03o`00
+0?oooooo000001D0_kno0_l000000ooooooo0000okno_`0Jokno_`03o`000?no_koo_kno01[o_kno
+00?o0000okno_ono_kl06_no_kl1o`000000>ol0000H0;no_eSo000000000ol0003o_knookno_`0I
+okno_`03o`000?oooooooooo01_ooooo00?o00000;no_`2o_kl0602o_kl3o`0003Gooooo00?o0000
+okno_ono_kl06_no_kl1o`00000000?o0000okno_ono_kl06Ono_kl00ol0003oooooooooo`0Koooo
+o`03o`00002o_kl0_kno01/0_kno0_l0000cooooo`03o`000?no_koo_kno01[o_kno0Ol000000003
+o`000?no_koo_kno01Wo_kno00?o0000ooooooooool06_ooool00ol00000_kno0;no_`0L0;no_`03
+o`00002o_koo000000;o0000<?ooool00ol0003o_knookno_`0Jokno_`7o000000000ol0003o_kno
+okno_`0Iokno_`03o`000?oooooooooo01[ooooo00?o00000;no_`2o_kl06`2o_kl00ol00000_kno
+0;no_`030;no_`;o0000;_ooool00ol0003o_knookno_`0Jokno_`7o000000000ol0003o_knookno
+_`0Iokno_`03o`000?oooooooooo01Wooooo00?o00000;no_`2o_kl0702o_kl00ol00000_kno0;no
+_`050;no_`?o0000:oooool00ol0003o_knookno_`0Jokno_`7o000000000ol0003o_knookno_`0I
+okno_`03o`000?oooooooooo01Wooooo00?o00000;no_`2o_kl0702o_kl00ol00000_kno0;no_`08
+0;no_`;o0000:Oooool00ol0003o_knookno_`0Jokno_`7o000000000ol0003o_knookno_`0Iokno
+_`03o`000?oooooooooo01Sooooo00?o00000;no_`2o_kl0702o_kl00ol00000_kno0;no_`0;0;no
+_`?o00009_ooool00ol0003o_knookno_`0Jokno_`7o000000000ol0003o_knookno_`0Iokno_`03
+o`000?oooooooooo01Sooooo00?o00000;no_`2o_kl0702o_kl00ol00000_kno0;no_`0>0;no_`;o
+00009?ooool00ol0003o_knookno_`0Jokno_`7o000000000ol0003o_knookno_`0Iokno_`03o`00
+0?oooooooooo01Sooooo00?o00000;no_`2o_kl06`2o_kl00ol00000_kno0;no_`0A0;no_`;o0000
+8_ooool00ol0003o_knookno_`0Jokno_`7o000000000ol0003o_knookno_`0Iokno_`03o`000?oo
+oooooooo01Oooooo00?o00000;no_`2o_kl0702o_kl00ol00000_kno0;no_`0C0;no_`?o00007ooo
+ool00ol0003o_knookno_`0Jokno_`7o000000000ol0003o_knookno_`0Iokno_`03o`000?oooooo
+oooo00Gooooo0_l0000@ooooo`03o`00002o_kl0_kno01/0_kno00?o00000;no_`2o_kl05`2o_kl2
+o`0001gooooo00?o0000okno_ono_kl06_no_kl1o`00000000?o0000okno_ono_kl06Ono_kl00ol0
+003oooooooooo`05ooooo`03o`00002o_koo000000;o00003?ooool00ol00000_kno0;no_`0L0;no
+_`03o`00002o_kl0_kno01T0_kno0ol0000Jooooo`03o`000?no_koo_kno01[o_kno0Ol000000003
+o`000?no_koo_kno01Wo_kno00?o0000ooooooooool01?ooool00ol00000_kno0;no_`030;no_`;o
+00002_ooool00ol00000_kno0;no_`0L0;no_`03o`00002o_kl0_kno01`0_kno0_l0000Hooooo`03
+o`000?no_koo_kno01[o_kno0Ol000000003o`000?no_koo_kno01Wo_kno00?o0000ooooooooool0
+1?ooool00ol00000_kno0;no_`050;no_`;o00001oooool00ol00000_kno0;no_`0L0;no_`03o`00
+002o_kl0_kno01d0_kno00Co00000;no_ol0003o00005_ooool00ol0003o_knookno_`0Jokno_`7o
+000000000ol0003o_knookno_`0Iokno_`03o`000?oooooooooo00Cooooo00?o00000;no_`2o_kl0
+1`2o_kl3o`0000Cooooo00?o00000;no_`2o_kl0702o_kl00ol00000_kno0;no_`0L0;no_`03o`00
+002o_kl0_kno0080_kno0_l0000Dooooo`03o`000?no_koo_kno01[o_kno0Ol000000003o`000?no
+_koo_kno01Wo_kno00?o0000ooooooooool00oooool00ol00000_kno0;no_`0;0;no_`;o00000_oo
+ool00ol00000_kno0;no_`0K0;no_`03o`00002o_kl0_kno01d0_kno00?o00000;no_`2o_kl0102o
+_kl3o`00017ooooo00?o0000okno_ono_kl06_no_kl1o`00000000?o0000okno_ono_kl06Ono_kl0
+0ol0003oooooooooo`03ooooo`03o`00002o_kl0_kno00d0_kno0ol0000M0;no_`03o`00002o_kl0
+_kno01`0_kno00?o00000;no_`2o_kl0202o_kl2o`0000oooooo00?o0000okno_ono_kl06_no_kl1
+o`00000000?o0000okno_ono_kl06Ono_kl00ol0003oooooooooo`02ooooo`03o`00002o_kl0_kno
+0100_kno1?l0000I0;no_`03o`00002o_kl0_kno01d0_kno00?o00000;no_`2o_kl02P2o_kl2o`00
+00gooooo00?o0000okno_ono_kl06_no_kl1o`00000000?o0000okno_ono_kl06Ono_kl00ol0003o
+ooooooooo`02ooooo`03o`00002o_kl0_kno01<0_kno0ol0000G0;no_`03o`00002o_kl0_kno01d0
+_kno00?o00000;no_`2o_kl0302o_kl2o`0000_ooooo00?o0000okno_ono_kl06_no_kl1o`000000
+00?o0000okno_ono_kl06Ono_kl01Ol0003ooooooooooooooooo000001P0_kno0ol0000E0;no_`03
+o`00002o_kl0_kno01`0_kno00?o00000;no_`2o_kl03`2o_kl2o`0000Wooooo00?o0000okno_ono
+_kl06_no_kl1o`00000000?o0000okno_ono_kl06Ono_kl01Ol0003ooooooooooooooooo000001X0
+_kno1?l0000A0;no_`03o`00002o_kl0_kno01d0_kno00?o00000;no_`2o_kl04@2o_kl2o`0000Oo
+oooo00?o0000okno_ono_kl06_no_kl1o`00000000?o0000okno_ono_kl06Ono_kl01Ol0003ooooo
+oooooooooooo000001d0_kno0ol0000?0;no_`03o`00002o_kl0_kno01`0_kno00?o00000;no_`2o
+_kl0502o_kl3o`0000Cooooo00?o0000okno_ono_kl06_no_kl1o`00000000?o0000okno_ono_kl0
+6Ono_kl01?l0003oooooooooool0000N0;no_`03o`00002o_koo000000;o0000302o_kl00ol00000
+_kno0;no_`0M0;no_`03o`00002o_kl0_kno01L0_kno0_l00002ooooo`03o`000?no_koo_kno01[o
+_kno0Ol000000003o`000?no_koo_kno01Wo_kno00Co0000oooooooooooo00007@2o_kl00ol00000
+_kno0;no_`030;no_`?o00002@2o_kl00ol00000_kno0;no_`0L0;no_`03o`00002o_kl0_kno01X0
+_kno0ol0000Lokno_`7o000000000ol0003o_knookno_`0Iokno_`03o`000?oooooo000001h0_kno
+00?o00000;no_`2o_kl01@2o_kl3o`0000H0_kno00?o00000;no_`2o_kl07@2o_kl00ol00000_kno
+0;no_`0L0;no_`03o`000?no_koo_kno01[o_kno0Ol000000003o`000?no_koo_kno01Wo_kno00?o
+0000ooooool000007P2o_kl00ol00000_kno0;no_`070;no_`?o0000102o_kl00ol00000_kno0;no
+_`0L0;no_`03o`00002o_kl0_kno01d0_kno00?o0000okno_ono_kl06_no_kl1o`00000000?o0000
+okno_ono_kl06Ono_kl2o`0001h0_kno00?o00000;no_`2o_kl02`2o_kl3o`0000030;no_ol00000
+_kno01d0_kno00?o00000;no_`2o_kl0702o_kl2o`0001co_kno0Ol000000003o`000?no_koo_kno
+01Wo_kno0_l0000N0;no_`03o`00002o_kl0_kno00d0_kno0ol0000N0;no_`03o`00002o_kl0_kno
+01`0_kno0_l0000Lokno_`7o0000000No`0001d0_kno00?o00000;no_`2o_kl0402o_kl3o`0001/0
+_kno00?o00000;no_`2o_kl07@2o_klOo`00000000?o0000ooooooooool06Oooool00ol00000_kno
+0;no_`0L0;no_`03o`00002o_kl0_kno01<0_kno0_l0000I0;no_`03o`00002o_kl0_kno01`0_kno
+00?o0000ooooool000007?no_kl1o`00000000?o0000ooooooooool02?ooool2o`0000oooooo00?o
+00000;no_`2o_kl06`2o_kl00ol00000_kno0;no_`0F0;no_`?o00005@2o_kl00ol00000_kno0;no
+_`0M0;no_`03o`000?oooooo000001co_kno0Ol000000003o`000?oooooooooo00Sooooo00?o0000
+0;no_ol000000_l0000;ooooo`03o`00002o_kl0_kno01`0_kno00?o00000;no_`2o_kl0602o_kl3
+o`0001<0_kno00?o00000;no_`2o_kl0702o_kl01?l0003oooooooooool0000Lokno_`7o00000000
+0ol0003oooooooooo`07ooooo`03o`00002o_kl0_kno00<0_kno0_l00009ooooo`03o`00002o_kl0
+_kno01`0_kno00?o00000;no_`2o_kl06`2o_kl2o`000100_kno00?o00000;no_`2o_kl07@2o_kl0
+1?l0003oooooooooool0000Lokno_`7o000000000ol0003oooooooooo`07ooooo`03o`00002o_kl0
+_kno00D0_kno0_l00006ooooo`03o`00002o_kl0_kno01`0_kno00?o00000;no_`2o_kl0702o_kl0
+1?l00000_knoo`000?l0000>0;no_`03o`00002o_kl0_kno01`0_kno00Go0000oooooooooooooooo
+o`00000Lokno_`7o000000000ol0003oooooooooo`07ooooo`03o`00002o_kl0_kno00L0_kno0ol0
+0003ooooo`03o`00002o_kl0_kno01`0_kno00?o00000;no_`2o_kl06`2o_kl00ol00000_kno0;no
+_`020;no_`;o00002`2o_kl00ol00000_kno0;no_`0M0;no_`05o`000?ooooooooooooooool00000
+7?no_kl1o`00000000?o0000ooooooooool01_ooool00ol00000_kno0;no_`0;0;no_`;o000000?o
+ooooo`00002o_kl0702o_kl00ol00000_kno0;no_`0L0;no_`03o`00002o_kl0_kno00@0_kno0_l0
+00090;no_`03o`00002o_kl0_kno01d0_kno00Go0000ooooooooooooooooo`00000Lokno_`7o0000
+00000ol0003oooooooooo`06ooooo`03o`00002o_kl0_kno00d0_kno0_l0000M0;no_`03o`00002o
+_kl0_kno01`0_kno00?o00000;no_`2o_kl01P2o_kl3o`0000H0_kno00?o00000;no_`2o_kl0702o
+_kl00ol0003oooooooooo`02ooooo`03o`000?no_koo_kno01[o_kno0Ol000000003o`000?oooooo
+oooo00Gooooo00?o00000;no_`2o_kl0402o_kl3o`0001T0_kno00?o00000;no_`2o_kl0702o_kl0
+0ol00000_kno0;no_`0:0;no_`;o00000`2o_kl00ol00000_kno0;no_`0M0;no_`03o`000?oooooo
+oooo00;ooooo00?o0000okno_ono_kl06_no_kl1o`00000000?o0000ooooooooool01Oooool00ol0
+0000_kno0;no_`0C0;no_`;o00005`2o_kl00ol00000_kno0;no_`0L0;no_`03o`00002o_kl0_kno
+00`0_kno0_l000000`2o_koo00000;no_`0M0;no_`03o`000?oooooooooo00?ooooo00?o0000okno
+_ono_kl06_no_kl1o`00000000?o0000ooooooooool01?ooool00ol00000_kno0;no_`0F0;no_`;o
+00005@2o_kl00ol00000_kno0;no_`0K0;no_`03o`00002o_kl0_kno00l0_kno0_l0000N0;no_`03
+o`000?oooooooooo00?ooooo00?o0000okno_ono_kl06_no_kl1o`00000000?o0000ooooooooool0
+1?ooool00ol00000_kno0;no_`0H0;no_`?o00004@2o_kl00ol00000_kno0;no_`0L0;no_`03o`00
+002o_kl0_kno0140_kno0ol0000J0;no_`03o`000?oooooooooo00Cooooo00?o0000okno_ono_kl0
+6_no_kl1o`00000000?o0000ooooooooool01?ooool00ol00000_kno0;no_`0K0;no_`;o00003`2o
+_kl00ol00000_kno0;no_`0K0;no_`03o`00002o_kl0_kno01D0_kno0_l0000H0;no_`03o`000?oo
+oooooooo00Cooooo00?o0000okno_ono_kl06_no_kl1o`00000000?o0000ooooooooool00oooool0
+0ol00000_kno0;no_`0L0;no_`04o`00002o_koo0000o`0000`0_kno00?o00000;no_`2o_kl0702o
+_kl00ol00000_kno0;no_`0G0;no_`?o00005@2o_kl00ol0003oooooooooo`04ooooo`03o`000?no
+_koo_kno01[o_kno0Ol000000003o`000?oooooooooo00?ooooo00?o00000;no_`2o_kl06`2o_kl0
+0ol00000_kno0;no_`020;no_`?o00002@2o_kl00ol00000_kno0;no_`0L0;no_`03o`00002o_kl0
+_kno01X0_kno0_l0000B0;no_`03o`000?oooooooooo00Gooooo00?o0000okno_ono_kl06_no_kl1
+o`00000000?o0000ooooooooool00_ooool00ol00000_kno0;no_`0L0;no_`03o`00002o_kl0_kno
+00@0_kno0ol000060;no_`03o`00002o_kl0_kno01`0_kno00?o00000;no_`2o_kl07@2o_kl3o`00
+00l0_kno00?o0000ooooooooool01Oooool00ol0003o_knookno_`0Jokno_`7o000000000ol0003o
+ooooooooo`02ooooo`03o`00002o_kl0_kno01`0_kno00?o00000;no_`2o_kl01`2o_kl2o`0000@0
+_kno00?o00000;no_`2o_kl0702o_kl00ol00000_kno0;no_`0L0;no_`04o`00002o_kl0_kno0;no
+_`;o0000302o_kl00ol0003oooooooooo`06ooooo`03o`000?no_koo_kno01[o_kno0Ol000000005
+o`000?ooooooooooooooool000007P2o_kl00ol00000_kno0;no_`0:0;no_`?o000000<0_knoo`00
+002o_kl0702o_kl00ol00000_kno0;no_`0M0;no_`03o`00002o_kl0_kno00<0_kno0_l0000:0;no
+_`03o`000?oooooooooo00Kooooo00?o0000okno_ono_kl06_no_kl1o`00000000Go0000oooooooo
+ooooooooo`00000N0;no_`03o`00002o_kl0_kno00`0_kno0ol0000M0;no_`03o`00002o_kl0_kno
+01`0_kno00?o00000;no_`2o_kl01P2o_kl3o`0000H0_kno00?o0000ooooooooool01oooool00ol0
+003o_knookno_`0Jokno_`7o000000001Ol0003ooooooooooooooooo000001d0_kno00?o00000;no
+_`2o_kl03`2o_kl4o`0001T0_kno00?o00000;no_`2o_kl07@2o_kl00ol00000_kno0;no_`090;no
+_`;o0000102o_kl00ol0003oooooooooo`07ooooo`03o`000?no_koo_kno01[o_kno0Ol000000004
+o`000?ooooooooooo`0001h0_kno00?o00000;no_`2o_kl04@2o_kl4o`0001L0_kno00?o00000;no
+_`2o_kl07@2o_kl00ol00000_kno0;no_`0;0;no_`?o000000<0_knoo`000?ooool02?ooool00ol0
+003o_knookno_`0Jokno_`7o000000001?l0003oooooooooool0000N0;no_`03o`00002o_kl0_kno
+01<0_kno1?l0000E0;no_`03o`00002o_kl0_kno01`0_kno00?o00000;no_`2o_kl03`2o_kl2o`00
+00Wooooo00?o0000okno_ono_kl06_no_kl1o`00000000?o0000ooooool000007P2o_kl00ol00000
+_kno0;no_`0G0;no_`Co00004@2o_kl00ol00000_kno0;no_`0M0;no_`03o`00002o_kl0_kno0140
+_kno0_l00007ooooo`03o`000?no_koo_kno01[o_kno0Ol000000003o`000?oooooo000001h0_kno
+00?o00000;no_`2o_kl06@2o_kl4o`0000l0_kno00?o00000;no_`2o_kl0702o_kl00ol00000_kno
+0;no_`0D0;no_`?o00001?ooool00ol0003o_knookno_`0Jokno_`7o00000002o`0001h0_kno00?o
+00000;no_`2o_kl0702o_kl4o`0000`0_kno00?o00000;no_`2o_kl07@2o_kl00ol00000_kno0;no
+_`0G0;no_`;o00000_ooool00ol0003o_knookno_`0Jokno_`7o00000002o`0001h0_kno00?o0000
+0;no_`2o_kl0702o_kl00ol00000_knoo`000004o`0000T0_kno00?o00000;no_`2o_kl0702o_kl0
+0ol00000_kno0;no_`0J0;no_`?o00007?no_kl1o`0000000_l0000M0;no_`03o`00002o_kl0_kno
+01`0_kno00?o00000;no_`2o_kl00`2o_kl4o`0000H0_kno00?o00000;no_`2o_kl07@2o_kl00ol0
+0000_kno0;no_`0L0;no_`03o`000?no_koo_kno01[o_kno0Ol0000000;o00007@2o_kl00ol00000
+_kno0;no_`0L0;no_`03o`00002o_kl0_kno00D0_kno1?l000040;no_`03o`00002o_kl0_kno01`0
+_kno00?o00000;no_`2o_kl07@2o_klNo`00000000Co0000ooooool0003o00006`2o_kl00ol00000
+_kno0;no_`0L0;no_`03o`00002o_kl0_kno00P0_kno1?l000000`2o_koo00000;no_`0M0;no_`03
+o`00002o_kl0_kno01`0_kno0_l0000Lokno_`7o000000001?l0003oooooooooooooool2o`0001P0
+_kno00?o00000;no_`2o_kl0702o_kl00ol00000_kno0;no_`0;0;no_`Co00007P2o_kl00ol00000
+_kno0;no_`0L0;no_`;o00007?no_kl1o`00000000?o0000ooooooooool00oooool3o`0001D0_kno
+00?o00000;no_`2o_kl0702o_kl00ol00000_kno0;no_`0>0;no_`?o00006`2o_kl00ol00000_kno
+0;no_`0M0;no_`;o00007?no_kl1o`00000000?o0000ooooooooool01_ooool2o`000180_kno00?o
+00000;no_`2o_kl0702o_kl00ol00000_kno0;no_`0A0;no_`?o00006@2o_kl00ol00000_kno0;no
+_`0L0;no_`03o`000?oooooo000001co_kno0Ol000000003o`000?oooooooooo00Sooooo0_l0000@
+0;no_`03o`00002o_kl0_kno01`0_kno00?o00000;no_`2o_kl04`2o_kl4o`0001D0_kno00?o0000
+0;no_`2o_kl07@2o_kl00ol0003oooooo`00000Lokno_`7o000000000ol0003oooooooooo`08oooo
+o`03o`00002o_koo000000;o00003@2o_kl00ol00000_kno0;no_`0K0;no_`03o`00002o_kl0_kno
+01L0_kno0ol0000C0;no_`03o`00002o_kl0_kno01`0_kno00Co0000oooooooooooo00007?no_kl1
+o`00000000?o0000ooooooooool01oooool00ol00000_kno0;no_`030;no_`;o00002P2o_kl00ol0
+0000_kno0;no_`0L0;no_`03o`00002o_kl0_kno01T0_kno0ol0000@0;no_`03o`00002o_kl0_kno
+01d0_kno00Co0000oooooooooooo00007?no_kl1o`00000000?o0000ooooooooool01oooool00ol0
+0000_kno0;no_`050;no_`;o0000202o_kl00ol00000_kno0;no_`0L0;no_`03o`00002o_kl0_kno
+01`0_kno0_l0000>0;no_`03o`00002o_kl0_kno01`0_kno00Go0000ooooooooooooooooo`00000L
+okno_`7o000000000ol0003oooooooooo`07ooooo`03o`00002o_kl0_kno00L0_kno0ol000040;no
+_`03o`00002o_kl0_kno01`0_kno00?o00000;no_`2o_kl07@2o_kl01?l00000_knoo`000?l0000;
+0;no_`03o`00002o_kl0_kno01d0_kno00Go0000ooooooooooooooooo`00000Lokno_`7o00000000
+0ol0003oooooooooo`06ooooo`03o`00002o_kl0_kno00/0_kno0_l000020;no_`03o`00002o_kl0
+_kno01`0_kno00?o00000;no_`2o_kl0702o_kl00ol00000_kno0;no_`020;no_`;o00002@2o_kl0
+0ol00000_kno0;no_`0M0;no_`05o`000?ooooooooooooooool000007?no_kl1o`00000000?o0000
+ooooooooool01_ooool00ol00000_kno0;no_`0=0;no_`?o00007@2o_kl00ol00000_kno0;no_`0M
+0;no_`03o`00002o_kl0_kno00@0_kno0ol000060;no_`03o`00002o_kl0_kno01`0_kno00?o0000
+ooooooooool00_ooool00ol0003o_knookno_`0Jokno_`7o000000000ol0003oooooooooo`05oooo
+o`03o`00002o_kl0_kno0100_kno0ol0000K0;no_`03o`00002o_kl0_kno01`0_kno00?o00000;no
+_`2o_kl0202o_kl2o`0000<0_kno00?o00000;no_`2o_kl07@2o_kl00ol0003oooooooooo`02oooo
+o`03o`000?no_koo_kno01[o_kno0Ol000000003o`000?oooooooooo00Gooooo00?o00000;no_`2o
+_kl04`2o_kl2o`0001P0_kno00?o00000;no_`2o_kl07@2o_kl00ol00000_kno0;no_`0:0;no_`;o
+000000<0_knoo`00002o_kl07@2o_kl00ol0003oooooooooo`03ooooo`03o`000?no_koo_kno01[o
+_kno0Ol000000003o`000?oooooooooo00Cooooo00?o00000;no_`2o_kl05P2o_kl2o`0001H0_kno
+00?o00000;no_`2o_kl0702o_kl00ol00000_kno0;no_`0=0;no_`;o00007P2o_kl00ol0003ooooo
+ooooo`03ooooo`03o`000?no_koo_kno01[o_kno0Ol000000003o`000?oooooooooo00Cooooo00?o
+00000;no_`2o_kl0602o_kl3o`0001<0_kno00?o00000;no_`2o_kl0702o_kl00ol00000_kno0;no
+_`0?0;no_`?o00006P2o_kl00ol0003oooooooooo`04ooooo`03o`000?no_koo_kno01[o_kno0Ol0
+00000003o`000?oooooooooo00Cooooo00?o00000;no_`2o_kl06`2o_kl2o`000100_kno00?o0000
+0;no_`2o_kl07@2o_kl00ol00000_kno0;no_`0B0;no_`;o0000602o_kl00ol0003oooooooooo`04
+ooooo`03o`000?no_koo_kno01[o_kno0Ol000000003o`000?oooooooooo00?ooooo00?o00000;no
+_`2o_kl0702o_kl01?l00000_knoo`000?l0000>0;no_`03o`00002o_kl0_kno01`0_kno00?o0000
+0;no_`2o_kl05@2o_kl3o`0001D0_kno00?o0000ooooooooool01?ooool00ol0003o_knookno_`0J
+okno_`7o000000000ol0003oooooooooo`03ooooo`03o`00002o_kl0_kno01/0_kno00?o00000;no
+_`2o_kl00P2o_kl2o`0000/0_kno00?o00000;no_`2o_kl07@2o_kl00ol00000_kno0;no_`0H0;no
+_`;o00004P2o_kl00ol0003oooooooooo`05ooooo`03o`000?no_koo_kno01[o_kno0Ol000000003
+o`000?oooooooooo00;ooooo00?o00000;no_`2o_kl0702o_kl00ol00000_kno0;no_`040;no_`?o
+0000202o_kl00ol00000_kno0;no_`0L0;no_`03o`00002o_kl0_kno01/0_kno0ol0000?0;no_`03
+o`000?oooooooooo00Gooooo00?o0000okno_ono_kl06_no_kl1o`00000000?o0000ooooooooool0
+0_ooool00ol00000_kno0;no_`0L0;no_`03o`00002o_kl0_kno00L0_kno0_l000050;no_`03o`00
+002o_kl0_kno01d0_kno00?o00000;no_`2o_kl0702o_kl01?l0003oooooo`000?l0000<0;no_`03
+o`000?oooooooooo00Kooooo00?o0000okno_ono_kl06_no_kl1o`00000000Go0000oooooooooooo
+ooooo`00000N0;no_`03o`00002o_kl0_kno00X0_kno0_l000030;no_`03o`00002o_kl0_kno01`0
+_kno00?o00000;no_`2o_kl0702o_kl00ol0003oooooooooo`02ooooo`;o00002P2o_kl00ol0003o
+ooooooooo`06ooooo`03o`000?no_koo_kno01[o_kno0Ol000000005o`000?ooooooooooooooool0
+00007P2o_kl00ol00000_kno0;no_`0<0;no_`;o000000<0_knoo`00002o_kl07@2o_kl00ol00000
+_kno0;no_`0L0;no_`03o`000?oooooooooo00Cooooo0ol000060;no_`03o`000?oooooooooo00Oo
+oooo00?o0000okno_ono_kl06_no_kl1o`00000000Go0000ooooooooooooooooo`00000M0;no_`03
+o`00002o_kl0_kno00l0_kno0_l0000M0;no_`03o`00002o_kl0_kno01d0_kno00?o0000oooooooo
+ool01oooool2o`0000@0_kno00?o0000ooooooooool01oooool00ol0003o_knookno_`0Jokno_`7o
+000000001?l0003oooooooooool0000N0;no_`03o`00002o_kl0_kno0140_kno0ol0000J0;no_`03
+o`00002o_kl0_kno01`0_kno00?o0000ooooooooool02_ooool3o`0000030;no_ol0003ooooo00So
+oooo00?o0000okno_ono_kl06_no_kl1o`00000000Co0000oooooooooooo00007P2o_kl00ol00000
+_kno0;no_`0C0;no_`?o00005`2o_kl00ol00000_kno0;no_`0M0;no_`03o`000?oooooooooo00go
+oooo00?o0000ooooooooool02?ooool00ol0003o_knookno_`0Jokno_`7o000000000ol0003ooooo
+o`00000N0;no_`03o`00002o_kl0_kno01L0_kno0_l0000E0;no_`03o`00002o_kl0_kno01`0_kno
+00?o0000ooooooooool06Oooool00ol0003o_knookno_`0Jokno_`7o000000000ol0003oooooo`00
+000N0;no_`03o`00002o_kl0_kno01T0_kno0ol0000A0;no_`03o`00002o_kl0_kno01d0_kno7Ol0
+000Lokno_`7o00000002o`0001h0_kno00?o00000;no_`2o_kl0702o_kl3o`0000l0_kno00?o0000
+0;no_`2o_kl0702o_kl00ol0003o_knookno_`0Jokno_`03o`000?no_koo_kno01[o_kno0Ol00000
+00;o00007P2o_kl00ol00000_kno0;no_`0L0;no_`03o`00002o_koo000000;o00003@2o_kl00ol0
+0000_kno0;no_`0L0;no_`03o`000?no_koo_kno01[o_kno7_l0000000;o00007@2o_kl00ol00000
+_kno0;no_`0L0;no_`03o`00002o_kl0_kno00<0_kno0ol000090;no_`03o`00002o_kl0_kno01d0
+_kno00?o0000okno_ono_kl06_no_kl00ol0003o_knookno_`0Jokno_`7o00000002o`0001d0_kno
+00?o00000;no_`2o_kl0702o_kl00ol00000_kno0;no_`050;no_`?o00001`2o_kl00ol00000_kno
+0;no_`0L0;no_`;o00007?no_kl00ol0003o_knookno_`0Jokno_`7o000000001?l0003oooooo`00
+0?l0000K0;no_`03o`00002o_kl0_kno01`0_kno00?o00000;no_`2o_kl0202o_kl2o`0000@0_kno
+00?o00000;no_`2o_kl07@2o_kl2o`0001co_kno00?o0000okno_ono_kl06_no_kl1o`00000000Co
+0000oooooooooooooooo0_l0000H0;no_`03o`00002o_kl0_kno01`0_kno00?o00000;no_`2o_kl0
+2`2o_kl3o`0000030;no_ol00000_kno01d0_kno00?o0000ooooool000007?no_kl00ol0003o_kno
+okno_`0Jokno_`7o000000000ol0003oooooooooo`03ooooo`?o00005@2o_kl00ol00000_kno0;no
+_`0L0;no_`03o`00002o_kl0_kno00h0_kno0_l0000N0;no_`03o`000?oooooo000001co_kno00?o
+0000okno_ono_kl06_no_kl1o`00000000?o0000ooooooooool01_ooool2o`000180_kno00?o0000
+0;no_`2o_kl0702o_kl00ol00000_kno0;no_`0A0;no_`?o00006P2o_kl01?l0003oooooooooool0
+000Lokno_`03o`000?no_koo_kno01[o_kno0Ol000000003o`000?oooooooooo00Sooooo0_l0000@
+0;no_`03o`00002o_kl0_kno01`0_kno00?o00000;no_`2o_kl04`2o_kl3o`0001P0_kno00Co0000
+oooooooooooo00007?no_kl00ol0003o_knookno_`0Jokno_`7o000000000ol0003oooooooooo`0:
+ooooo`;o00003P2o_kl00ol00000_kno0;no_`0K0;no_`03o`00002o_kl0_kno01L0_kno0ol0000E
+0;no_`04o`000?ooooooooooo`0001co_kno00?o0000okno_ono_kl06_no_kl1o`00000000?o0000
+ooooooooool03?ooool2o`0000/0_kno00?o00000;no_`2o_kl0702o_kl00ol00000_kno0;no_`0I
+0;no_`?o00004P2o_kl01Ol0003ooooooooooooooooo000001co_kno00?o0000okno_ono_kl06_no
+_kl1o`00000000?o0000ooooooooool03_ooool2o`0000T0_kno00?o00000;no_`2o_kl0702o_kl0
+0ol00000_kno0;no_`0L0;no_`?o00003`2o_kl01Ol0003ooooooooooooooooo000001co_kno00?o
+0000okno_ono_kl06_no_kl1o`00000000?o0000ooooooooool04?ooool3o`0000D0_kno00?o0000
+0;no_`2o_kl0702o_kl00ol00000_kno0;no_`0M0;no_`03o`000?oooooooooo00;o0000302o_kl0
+0ol0003oooooooooo`02ooooo`03o`000?no_koo_kno01[o_kno00?o0000okno_ono_kl06_no_kl1
+o`00000000?o0000ooooooooool04oooool2o`0000<0_kno00?o00000;no_`2o_kl0702o_kl00ol0
+0000_kno0;no_`0L0;no_`03o`000?oooooooooo00?ooooo0_l0000:0;no_`03o`000?oooooooooo
+00;ooooo00?o0000okno_ono_kl06_no_kl00ol0003o_knookno_`0Jokno_`7o000000000ol0003o
+ooooooooo`0Eooooo`;o000000<0_knoo`00002o_kl0702o_kl00ol00000_kno0;no_`0M0;no_`03
+o`000?oooooooooo00Gooooo0ol000060;no_`03o`000?oooooooooo00?ooooo00?o0000okno_ono
+_kl06_no_kl00ol0003o_knookno_`0Jokno_`7o000000000ol0003oooooooooo`0Gooooo`;o0000
+7@2o_kl00ol00000_kno0;no_`0L0;no_`03o`000?oooooooooo00Wooooo0_l000040;no_`03o`00
+0?oooooooooo00?ooooo00?o0000okno_ono_kl06_no_kl00ol0003o_knookno_`0Jokno_`7o0000
+00000ol0003oooooooooo`0Iooooo`?o00006@2o_kl00ol00000_kno0;no_`0M0;no_`03o`000?oo
+oooooooo00_ooooo0ol000000`2o_koo0000ooooo`04ooooo`03o`000?no_koo_kno01[o_kno00?o
+0000okno_ono_kl06_no_kl1o`00000000?o0000ooooooooool07?ooool2o`0001L0_kno00?o0000
+0;no_`2o_kl0702o_kl00ol0003oooooooooo`0?ooooo`03o`000?oooooooooo00Cooooo00?o0000
+okno_ono_kl06_no_kl00ol0003o_knookno_`0Jokno_`7o000000000ol0003oooooooooo`0Noooo
+o`;o00005@2o_kl00ol00000_kno0;no_`0L0;no_`03o`000?oooooooooo01Kooooo00?o0000okno
+_ono_kl06_no_kl00ol0003o_knookno_`0Jokno_`7o000000000ol0003oooooooooo`0Pooooo`?o
+00004@2o_kl00ol00000_kno0;no_`0M0;no_`03o`000?oooooooooo01Kooooo00?o0000okno_ono
+_kl06_no_kl00ol0003o_knookno_`0Jokno_`7o000000000ol0003oooooooooo`0Sooooo`;o0000
+3`2o_kl00ol00000_kno0;no_`0L0;no_`03o`000?oooooooooo01Oooooo00?o0000okno_ono_kl0
+6_no_kl00ol0003o_knookno_`0Jokno_`7o000000000ol0003oooooooooo`0Uooooo`;o0000302o
+_kl00ol00000_kno0;no_`0M0;no_`03o`000?oooooooooo01Oooooo00?o0000okno_ono_kl06_no
+_kl00ol0003o_knookno_`0Jokno_`7o000000000ol0003oooooooooo`0Wooooo`?o00002@2o_kl0
+0ol00000_kno0;no_`0L0;no_`03o`000?oooooooooo01Sooooo00?o0000okno_ono_kl06_no_kl0
+0ol0003o_knookno_`0Jokno_`7o000000000ol0003oooooooooo`0Zooooo`;o00001P2o_kl00ol0
+0000_kno0;no_`0M0;no_`03o`000?oooooooooo01Sooooo00?o0000okno_ono_kl06_no_kl00ol0
+003o_knookno_`0Jokno_`7o000000000ol0003oooooooooo`0/ooooo`;o0000102o_kl00ol00000
+_kno0;no_`0L0;no_`03o`000?oooooooooo01Wooooo00?o0000okno_ono_kl06_no_kl00ol0003o
+_knookno_`0Jokno_`7o000000000ol0003oooooooooo`0^ooooo`?o000000<0_knoo`00002o_kl0
+7@2o_kl00ol0003oooooooooo`0Iooooo`03o`000?no_koo_kno01[o_kno00?o0000okno_ono_kl0
+6_no_kl1o`00000000?o0000ooooooooool0<Oooool2o`0001d0_kno00?o0000ooooooooool06_oo
+ool00ol0003o_knookno_`0Jokno_`03o`000?no_koo_kno01[o_kno0Ol000000003o`000?oooooo
+oooo03?ooooo0ol0000J0;no_`03o`000?oooooooooo01[ooooo00?o0000okno_ono_kl06_no_kl0
+0ol0003o_knookno_`0Jokno_`7o0000000ko`0001L0_kno00?o0000ooooool00000>Ol0000Lokno
+_`7o000000000ol0003o_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00Co0000ooooool0
+003o00005@2o_kl00ol0003oooooo`00000Kokno_`03o`000?no_koo_kno01[o_kno7_l000000003
+o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no_kl01?l0003oooooooooooooool3o`00
+0140_kno00Co0000oooooooooooo00006ono_kl00ol0003o_knookno_`0Jokno_`03o`000?oooooo
+oooo01[ooooo0Ol000000003o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0
+003oooooooooo`04ooooo`;o00003`2o_kl01?l0003oooooooooool0000Kokno_`03o`000?no_koo
+_kno01[o_kno00?o0000ooooooooool06_ooool1o`00000000?o0000okno_ono_kl06Ono_kl00ol0
+003o_knookno_`0Jokno_`03o`000?oooooooooo00Kooooo0_l0000=0;no_`04o`000?oooooooooo
+o`0001_o_kno00?o0000okno_ono_kl06_no_kl00ol0003oooooooooo`0Jooooo`7o000000000ol0
+003o_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000ooooooooool02?ooool3o`00
+00T0_kno00Go0000ooooooooooooooooo`00000Kokno_`03o`000?no_koo_kno01[o_kno00?o0000
+ooooooooool06_ooool1o`00000000?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno
+_`03o`000?oooooooooo00_ooooo0_l000070;no_`05o`000?ooooooooooooooool000006ono_kl0
+0ol0003o_knookno_`0Jokno_`03o`000?oooooooooo01[ooooo0Ol000000003o`000?no_koo_kno
+01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003oooooooooo`0=ooooo`;o0000102o_kl00ol0
+003oooooooooo`02ooooo`03o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0
+003oooooooooo`0Jooooo`7o000000000ol0003o_knookno_`0Iokno_`03o`000?no_koo_kno01[o
+_kno00?o0000ooooooooool03oooool3o`0000030;no_ol0003ooooo00?ooooo00?o0000okno_ono
+_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03o`000?oooooooooo01[ooooo0Ol000000003o`00
+0?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003oooooooooo`0Booooo`03o`00
+0?oooooooooo00?ooooo00?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03o`00
+0?oooooooooo01[ooooo0Ol000000003o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no
+_kl00ol0003oooooooooo`0Hooooo`03o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no
+_kl00ol0003oooooooooo`0Jooooo`7o000000000ol0003o_knookno_`0Iokno_`03o`000?no_koo
+_kno01[o_kno00?o0000ooooooooool06?ooool00ol0003o_knookno_`0Iokno_`03o`000?no_koo
+_kno01[o_kno00?o0000ooooooooool06_ooool1o`00000000?o0000okno_ono_kl06Ono_kl00ol0
+003o_knookno_`0Jokno_`03o`000?oooooooooo01Sooooo00?o0000okno_ono_kl06Ono_kl00ol0
+003o_knookno_`0Jokno_`03o`000?oooooooooo01[ooooo0Ol000000003o`000?no_koo_kno01Wo
+_kno00?o0000okno_ono_kl06_no_kl00ol0003oooooooooo`0Hooooo`03o`000?no_koo_kno01Wo
+_kno00?o0000okno_ono_kl06_no_kl00ol0003oooooooooo`0Jooooo`7o000000000ol0003o_kno
+okno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000ooooooooool06?ooool00ol0003o_kno
+okno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000ooooooooool06_ooool1o`00000000?o
+0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03o`000?oooooooooo01Sooooo00?o
+0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03o`000?oooooooooo01[ooooo0Ol0
+00000003o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003oooooooooo`0H
+ooooo`03o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003oooooooooo`0J
+ooooo`7o000000000ol0003o_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000oooo
+ooooool06?ooool00ol0003o_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000oooo
+ooooool06_ooool1o`00000000?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03
+o`000?oooooooooo01Sooooo00?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03
+o`000?oooooooooo01[ooooo0Ol000000003o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl0
+6_no_kl00ol0003oooooooooo`0Hooooo`03o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl0
+6_no_kl00ol0003oooooooooo`0Jooooo`7o000000000ol0003o_knookno_`0Iokno_`03o`000?no
+_koo_kno01[o_kno00?o0000ooooooooool06?ooool00ol0003o_knookno_`0Iokno_`03o`000?no
+_koo_kno01[o_kno00?o0000ooooooooool06_ooool1o`00000000?o0000okno_ono_kl06Ono_kl0
+0ol0003o_knookno_`0Jokno_`03o`000?oooooooooo01Sooooo00?o0000okno_ono_kl06Ono_kl0
+0ol0003o_knookno_`0Jokno_`03o`000?oooooooooo01[ooooo0Ol000000003o`000?no_koo_kno
+01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003oooooooooo`0Hooooo`03o`000?no_koo_kno
+01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003oooooooooo`0Jooooo`7o000000000ol0003o
+_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000ooooooooool06?ooool00ol0003o
+_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000ooooooooool06_ooool1o`000000
+00?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03o`000?oooooooooo01Sooooo
+00?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno_`03o`000?oooooooooo01[ooooo
+0Ol000000003o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003ooooooooo
+o`0Hooooo`03o`000?no_koo_kno01Wo_kno00?o0000okno_ono_kl06_no_kl00ol0003ooooooooo
+o`0Jooooo`7o000000000ol0003o_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000
+ooooooooool06?ooool00ol0003o_knookno_`0Iokno_`03o`000?no_koo_kno01[o_kno00?o0000
+ooooooooool06_ooool1o`00000000?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno
+_`03o`000?oooooooooo01Sooooo00?o0000okno_ono_kl06Ono_kl00ol0003o_knookno_`0Jokno
+_`03o`000?oooooooooo01[ooooo0Ol000000:_o00000000\
+\>"],
+  ImageRangeCache->{{{0, 170}, {170, 0}} -> {-2.97332*^-5, -2.97332*^-5, \
+0.0349802, 0.0349802}}],
+
+Cell[BoxData[
+    TagBox[\(\[SkeletonIndicator]  Graphics  \[SkeletonIndicator]\),
+      False,
+      Editable->False]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(N[s]\)], "Input"],
+
+Cell[BoxData[
+    \(5.946579943455105`\)], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+A packing of 55 unit squares in a square of side length s = 7.9870+\
+\>", "Section",
+  FontSize->24],
+
+Cell["This replaces my previous asymmetric packing.", "Text",
+  FontSize->24],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Clear[s, \[Delta]]; 
+    m = \(s - 7 + \[Delta]\)\/\@\(4 - \((s - 7 + \[Delta])\)\^2\); 
+    b = \(-4\) - 1\/\@\(1 + m\^2\) + 
+        s - \(\(-8\) - m\ \((\(-5\) + s)\) + s + \[Delta]\)\/\(1 + m\^2\); 
+    c = 4 + \(2\ m\)\/\@\(1 + m\^2\) + \(1 + m\ \((\(-2\) + \
+\[Delta])\)\)\/\(1 + m\^2\); 
+    FindRoot[{c + \(m + 3\)\/\@\(1 + m\^2\) \[Equal] s, 
+        b - \(3  m + 1\)\/\@\(1 + m\^2\) \[Equal] 2}, {s, 7.98}, {\[Delta], 
+        0.07}]\)], "Input"],
+
+Cell[BoxData[
+    \({s \[Rule] 7.987011989659728`, \[Delta] \[Rule] 
+        0.07343033612306377`}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(s = 7.987011989659728`; \[Delta] = 0.07343033612306377`; 
+    m = \(s - 7 + \[Delta]\)\/\@\(4 - \((s - 7 + \[Delta])\)\^2\); 
+    a = 4 + m\/\@\(1 + m\^2\) + \(\(-5\) + s + m\ \((\(-8\) + s + \[Delta])\)\
+\)\/\(1 + m\^2\); 
+    b = \(-4\) - 1\/\@\(1 + m\^2\) + 
+        s - \(\(-8\) - m\ \((\(-5\) + s)\) + s + \[Delta]\)\/\(1 + m\^2\); 
+    c = 4 + \(2\ m\)\/\@\(1 + m\^2\) + \(1 + m\ \((\(-2\) + \
+\[Delta])\)\)\/\(1 + m\^2\); 
+    d = 2 - 2\/\@\(1 + m\^2\) + \(2 + m - \[Delta]\)\/\(1 + m\^2\); 
+    e = 4 + \(3\ m\)\/\@\(1 + m\^2\) + \(2 + m\ \((\(-3\) + \
+\[Delta])\)\)\/\(1 + m\^2\); 
+    f = 1 - 3\/\@\(1 + m\^2\) + \(3 + 2\ m - \[Delta]\)\/\(1 + m\^2\);\), "\
+\[IndentingNewLine]", 
+    \(Show[
+      Graphics[{lowerlefttriangle[6], upperrighttriangle[4, s], 
+          unitsquare[3, 3], unitsquare[s - 3, s - 3], unitsquare[s - 1, 0], 
+          unitsquare[0, s - 1], 
+          unitsquare[4, 4 - \[Delta], ArcTan[m] - \[Pi]\/2], 
+          unitsquare[4 + 1\/\@\(1 + m\^2\), 4 - \[Delta] + m\/\@\(1 + m\^2\), 
+            ArcTan[m] - \[Pi]\/2], unitsquare[a, b, ArcTan[m] + \[Pi]], 
+          unitsquare[a - 1\/\@\(1 + m\^2\), b - m\/\@\(1 + m\^2\), 
+            ArcTan[m] + \[Pi]], 
+          unitsquare[a - 2\/\@\(1 + m\^2\), b - \(2  m\)\/\@\(1 + m\^2\), 
+            ArcTan[m] + \[Pi]], unitsquare[c, d, ArcTan[m] - \[Pi]\/2], 
+          unitsquare[c + 1\/\@\(1 + m\^2\), d + m\/\@\(1 + m\^2\), 
+            ArcTan[m] - \[Pi]\/2], 
+          unitsquare[c + 2\/\@\(1 + m\^2\), d + \(2  m\)\/\@\(1 + m\^2\), 
+            ArcTan[m] - \[Pi]\/2], unitsquare[e, f, ArcTan[m] - \[Pi]\/2], 
+          unitsquare[e + 1\/\@\(1 + m\^2\), f + m\/\@\(1 + m\^2\), 
+            ArcTan[m] - \[Pi]\/2], 
+          unitsquare[4 - \[Delta], 4, \(-ArcTan[m]\) + \[Pi]\/2], 
+          unitsquare[4 - \[Delta] + m\/\@\(1 + m\^2\), 
+            4 + 1\/\@\(1 + m\^2\), \(-ArcTan[m]\) + \[Pi]\/2], 
+          unitsquare[b, a, \(-ArcTan[m]\) - \[Pi]], 
+          unitsquare[b - m\/\@\(1 + m\^2\), 
+            a - 1\/\@\(1 + m\^2\), \(-ArcTan[m]\) - \[Pi]], 
+          unitsquare[b - \(2  m\)\/\@\(1 + m\^2\), 
+            a - 2\/\@\(1 + m\^2\), \(-ArcTan[m]\) - \[Pi]], 
+          unitsquare[d, c, \(-ArcTan[m]\) + \[Pi]\/2], 
+          unitsquare[d + m\/\@\(1 + m\^2\), 
+            c + 1\/\@\(1 + m\^2\), \(-ArcTan[m]\) + \[Pi]\/2], 
+          unitsquare[d + \(2  m\)\/\@\(1 + m\^2\), 
+            c + 2\/\@\(1 + m\^2\), \(-ArcTan[m]\) + \[Pi]\/2], 
+          unitsquare[f, e, \(-ArcTan[m]\) + \[Pi]\/2], 
+          unitsquare[f + m\/\@\(1 + m\^2\), 
+            e + 1\/\@\(1 + m\^2\), \(-ArcTan[
+                  m]\) + \[Pi]\/2], \[IndentingNewLine]square[s]}], 
+      AspectRatio \[Rule] Automatic, ImageSize \[Rule] {171, 171}, 
+      PlotRange \[Rule] {{0, s}, {0, s}}]\)}], "Input"],
+
+Cell[GraphicsData["PostScript", "\<\
+%!
+%%Creator: Mathematica
+%%AspectRatio: 1 
+%%ImageSize: 171 171 
+MathPictureStart
+/Mabs {
+Mgmatrix idtransform
+Mtmatrix dtransform
+} bind def
+/Mabsadd { Mabs
+3 -1 roll add
+3 1 roll add
+exch } bind def
+%% Graphics
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10  scalefont  setfont
+% Scaling calculations
+1.18844e-17 0.125203 0 0.125203 [
+[ 0 0 0 0 ]
+[ 1 1 0 0 ]
+] MathScale
+% Start of Graphics
+1 setlinecap
+1 setlinejoin
+newpath
+0 0 m
+1 0 L
+1 1 L
+0 1 L
+closepath
+clip
+newpath
+.75 g
+0 0 m
+.1252 0 L
+.1252 .1252 L
+0 .1252 L
+F
+0 g
+.5 Mabswid
+[ ] 0 setdash
+0 0 m
+.1252 0 L
+.1252 .1252 L
+0 .1252 L
+0 0 L
+s
+.75 g
+0 .1252 m
+.1252 .1252 L
+.1252 .25041 L
+0 .25041 L
+F
+0 g
+0 .1252 m
+.1252 .1252 L
+.1252 .25041 L
+0 .25041 L
+0 .1252 L
+s
+.75 g
+0 .25041 m
+.1252 .25041 L
+.1252 .37561 L
+0 .37561 L
+F
+0 g
+0 .25041 m
+.1252 .25041 L
+.1252 .37561 L
+0 .37561 L
+0 .25041 L
+s
+.75 g
+0 .37561 m
+.1252 .37561 L
+.1252 .50081 L
+0 .50081 L
+F
+0 g
+0 .37561 m
+.1252 .37561 L
+.1252 .50081 L
+0 .50081 L
+0 .37561 L
+s
+.75 g
+0 .50081 m
+.1252 .50081 L
+.1252 .62602 L
+0 .62602 L
+F
+0 g
+0 .50081 m
+.1252 .50081 L
+.1252 .62602 L
+0 .62602 L
+0 .50081 L
+s
+.75 g
+0 .62602 m
+.1252 .62602 L
+.1252 .75122 L
+0 .75122 L
+F
+0 g
+0 .62602 m
+.1252 .62602 L
+.1252 .75122 L
+0 .75122 L
+0 .62602 L
+s
+.75 g
+.1252 0 m
+.25041 0 L
+.25041 .1252 L
+.1252 .1252 L
+F
+0 g
+.1252 0 m
+.25041 0 L
+.25041 .1252 L
+.1252 .1252 L
+.1252 0 L
+s
+.75 g
+.1252 .1252 m
+.25041 .1252 L
+.25041 .25041 L
+.1252 .25041 L
+F
+0 g
+.1252 .1252 m
+.25041 .1252 L
+.25041 .25041 L
+.1252 .25041 L
+.1252 .1252 L
+s
+.75 g
+.1252 .25041 m
+.25041 .25041 L
+.25041 .37561 L
+.1252 .37561 L
+F
+0 g
+.1252 .25041 m
+.25041 .25041 L
+.25041 .37561 L
+.1252 .37561 L
+.1252 .25041 L
+s
+.75 g
+.1252 .37561 m
+.25041 .37561 L
+.25041 .50081 L
+.1252 .50081 L
+F
+0 g
+.1252 .37561 m
+.25041 .37561 L
+.25041 .50081 L
+.1252 .50081 L
+.1252 .37561 L
+s
+.75 g
+.1252 .50081 m
+.25041 .50081 L
+.25041 .62602 L
+.1252 .62602 L
+F
+0 g
+.1252 .50081 m
+.25041 .50081 L
+.25041 .62602 L
+.1252 .62602 L
+.1252 .50081 L
+s
+.75 g
+.25041 0 m
+.37561 0 L
+.37561 .1252 L
+.25041 .1252 L
+F
+0 g
+.25041 0 m
+.37561 0 L
+.37561 .1252 L
+.25041 .1252 L
+.25041 0 L
+s
+.75 g
+.25041 .1252 m
+.37561 .1252 L
+.37561 .25041 L
+.25041 .25041 L
+F
+0 g
+.25041 .1252 m
+.37561 .1252 L
+.37561 .25041 L
+.25041 .25041 L
+.25041 .1252 L
+s
+.75 g
+.25041 .25041 m
+.37561 .25041 L
+.37561 .37561 L
+.25041 .37561 L
+F
+0 g
+.25041 .25041 m
+.37561 .25041 L
+.37561 .37561 L
+.25041 .37561 L
+.25041 .25041 L
+s
+.75 g
+.25041 .37561 m
+.37561 .37561 L
+.37561 .50081 L
+.25041 .50081 L
+F
+0 g
+.25041 .37561 m
+.37561 .37561 L
+.37561 .50081 L
+.25041 .50081 L
+.25041 .37561 L
+s
+.75 g
+.37561 0 m
+.50081 0 L
+.50081 .1252 L
+.37561 .1252 L
+F
+0 g
+.37561 0 m
+.50081 0 L
+.50081 .1252 L
+.37561 .1252 L
+.37561 0 L
+s
+.75 g
+.37561 .1252 m
+.50081 .1252 L
+.50081 .25041 L
+.37561 .25041 L
+F
+0 g
+.37561 .1252 m
+.50081 .1252 L
+.50081 .25041 L
+.37561 .25041 L
+.37561 .1252 L
+s
+.75 g
+.37561 .25041 m
+.50081 .25041 L
+.50081 .37561 L
+.37561 .37561 L
+F
+0 g
+.37561 .25041 m
+.50081 .25041 L
+.50081 .37561 L
+.37561 .37561 L
+.37561 .25041 L
+s
+.75 g
+.50081 0 m
+.62602 0 L
+.62602 .1252 L
+.50081 .1252 L
+F
+0 g
+.50081 0 m
+.62602 0 L
+.62602 .1252 L
+.50081 .1252 L
+.50081 0 L
+s
+.75 g
+.50081 .1252 m
+.62602 .1252 L
+.62602 .25041 L
+.50081 .25041 L
+F
+0 g
+.50081 .1252 m
+.62602 .1252 L
+.62602 .25041 L
+.50081 .25041 L
+.50081 .1252 L
+s
+.75 g
+.62602 0 m
+.75122 0 L
+.75122 .1252 L
+.62602 .1252 L
+F
+0 g
+.62602 0 m
+.75122 0 L
+.75122 .1252 L
+.62602 .1252 L
+.62602 0 L
+s
+.75 g
+.8748 .8748 m
+1 .8748 L
+1 1 L
+.8748 1 L
+F
+0 g
+.8748 .8748 m
+1 .8748 L
+1 1 L
+.8748 1 L
+.8748 .8748 L
+s
+.75 g
+.8748 .74959 m
+1 .74959 L
+1 .8748 L
+.8748 .8748 L
+F
+0 g
+.8748 .74959 m
+1 .74959 L
+1 .8748 L
+.8748 .8748 L
+.8748 .74959 L
+s
+.75 g
+.8748 .62439 m
+1 .62439 L
+1 .74959 L
+.8748 .74959 L
+F
+0 g
+.8748 .62439 m
+1 .62439 L
+1 .74959 L
+.8748 .74959 L
+.8748 .62439 L
+s
+.75 g
+.8748 .49919 m
+1 .49919 L
+1 .62439 L
+.8748 .62439 L
+F
+0 g
+.8748 .49919 m
+1 .49919 L
+1 .62439 L
+.8748 .62439 L
+.8748 .49919 L
+s
+.75 g
+.74959 .8748 m
+.8748 .8748 L
+.8748 1 L
+.74959 1 L
+F
+0 g
+.74959 .8748 m
+.8748 .8748 L
+.8748 1 L
+.74959 1 L
+.74959 .8748 L
+s
+.75 g
+.74959 .74959 m
+.8748 .74959 L
+.8748 .8748 L
+.74959 .8748 L
+F
+0 g
+.74959 .74959 m
+.8748 .74959 L
+.8748 .8748 L
+.74959 .8748 L
+.74959 .74959 L
+s
+.75 g
+.74959 .62439 m
+.8748 .62439 L
+.8748 .74959 L
+.74959 .74959 L
+F
+0 g
+.74959 .62439 m
+.8748 .62439 L
+.8748 .74959 L
+.74959 .74959 L
+.74959 .62439 L
+s
+.75 g
+.62439 .8748 m
+.74959 .8748 L
+.74959 1 L
+.62439 1 L
+F
+0 g
+.62439 .8748 m
+.74959 .8748 L
+.74959 1 L
+.62439 1 L
+.62439 .8748 L
+s
+.75 g
+.62439 .74959 m
+.74959 .74959 L
+.74959 .8748 L
+.62439 .8748 L
+F
+0 g
+.62439 .74959 m
+.74959 .74959 L
+.74959 .8748 L
+.62439 .8748 L
+.62439 .74959 L
+s
+.75 g
+.49919 .8748 m
+.62439 .8748 L
+.62439 1 L
+.49919 1 L
+F
+0 g
+.49919 .8748 m
+.62439 .8748 L
+.62439 1 L
+.49919 1 L
+.49919 .8748 L
+s
+.75 g
+.37561 .37561 m
+.50081 .37561 L
+.50081 .50081 L
+.37561 .50081 L
+F
+0 g
+.37561 .37561 m
+.50081 .37561 L
+.50081 .50081 L
+.37561 .50081 L
+.37561 .37561 L
+s
+.75 g
+.62439 .62439 m
+.74959 .62439 L
+.74959 .74959 L
+.62439 .74959 L
+F
+0 g
+.62439 .62439 m
+.74959 .62439 L
+.74959 .74959 L
+.62439 .74959 L
+.62439 .62439 L
+s
+.75 g
+.8748 0 m
+1 0 L
+1 .1252 L
+.8748 .1252 L
+F
+0 g
+.8748 0 m
+1 0 L
+1 .1252 L
+.8748 .1252 L
+.8748 0 L
+s
+.75 g
+0 .8748 m
+.1252 .8748 L
+.1252 1 L
+0 1 L
+F
+0 g
+0 .8748 m
+.1252 .8748 L
+.1252 1 L
+0 1 L
+0 .8748 L
+s
+.75 g
+.50081 .49162 m
+.5672 .38546 L
+.67335 .45185 L
+.60697 .558 L
+F
+0 g
+.50081 .49162 m
+.5672 .38546 L
+.67335 .45185 L
+.60697 .558 L
+.50081 .49162 L
+s
+.75 g
+.60697 .558 m
+.67335 .45185 L
+.77951 .51824 L
+.71312 .62439 L
+F
+0 g
+.60697 .558 m
+.67335 .45185 L
+.77951 .51824 L
+.71312 .62439 L
+.60697 .558 L
+s
+.75 g
+.83944 .55572 m
+.73329 .48933 L
+.79968 .38318 L
+.90583 .44956 L
+F
+0 g
+.83944 .55572 m
+.73329 .48933 L
+.79968 .38318 L
+.90583 .44956 L
+.83944 .55572 L
+s
+.75 g
+.73329 .48933 m
+.62713 .42295 L
+.69352 .31679 L
+.79968 .38318 L
+F
+0 g
+.73329 .48933 m
+.62713 .42295 L
+.69352 .31679 L
+.79968 .38318 L
+.73329 .48933 L
+s
+.75 g
+.62713 .42295 m
+.52098 .35656 L
+.58737 .25041 L
+.69352 .31679 L
+F
+0 g
+.62713 .42295 m
+.52098 .35656 L
+.58737 .25041 L
+.69352 .31679 L
+.62713 .42295 L
+s
+.75 g
+.61515 .26778 m
+.68154 .16163 L
+.78769 .22801 L
+.72131 .33417 L
+F
+0 g
+.61515 .26778 m
+.68154 .16163 L
+.78769 .22801 L
+.72131 .33417 L
+.61515 .26778 L
+s
+.75 g
+.72131 .33417 m
+.78769 .22801 L
+.89385 .2944 L
+.82746 .40055 L
+F
+0 g
+.72131 .33417 m
+.78769 .22801 L
+.89385 .2944 L
+.82746 .40055 L
+.72131 .33417 L
+s
+.75 g
+.82746 .40055 m
+.89385 .2944 L
+1 .36078 L
+.93361 .46694 L
+F
+0 g
+.82746 .40055 m
+.89385 .2944 L
+1 .36078 L
+.93361 .46694 L
+.82746 .40055 L
+s
+.75 g
+.71525 .18271 m
+.78164 .07656 L
+.88779 .14294 L
+.82141 .2491 L
+F
+0 g
+.71525 .18271 m
+.78164 .07656 L
+.88779 .14294 L
+.82141 .2491 L
+.71525 .18271 L
+s
+.75 g
+.82141 .2491 m
+.88779 .14294 L
+.99395 .20933 L
+.92756 .31548 L
+F
+0 g
+.82141 .2491 m
+.88779 .14294 L
+.99395 .20933 L
+.92756 .31548 L
+.82141 .2491 L
+s
+.75 g
+.49162 .50081 m
+.558 .60697 L
+.45185 .67335 L
+.38546 .5672 L
+F
+0 g
+.49162 .50081 m
+.558 .60697 L
+.45185 .67335 L
+.38546 .5672 L
+.49162 .50081 L
+s
+.75 g
+.558 .60697 m
+.62439 .71312 L
+.51824 .77951 L
+.45185 .67335 L
+F
+0 g
+.558 .60697 m
+.62439 .71312 L
+.51824 .77951 L
+.45185 .67335 L
+.558 .60697 L
+s
+.75 g
+.55572 .83944 m
+.44956 .90583 L
+.38318 .79968 L
+.48933 .73329 L
+F
+0 g
+.55572 .83944 m
+.44956 .90583 L
+.38318 .79968 L
+.48933 .73329 L
+.55572 .83944 L
+s
+.75 g
+.48933 .73329 m
+.38318 .79968 L
+.31679 .69352 L
+.42295 .62713 L
+F
+0 g
+.48933 .73329 m
+.38318 .79968 L
+.31679 .69352 L
+.42295 .62713 L
+.48933 .73329 L
+s
+.75 g
+.42295 .62713 m
+.31679 .69352 L
+.25041 .58737 L
+.35656 .52098 L
+F
+0 g
+.42295 .62713 m
+.31679 .69352 L
+.25041 .58737 L
+.35656 .52098 L
+.42295 .62713 L
+s
+.75 g
+.26778 .61515 m
+.33417 .72131 L
+.22801 .78769 L
+.16163 .68154 L
+F
+0 g
+.26778 .61515 m
+.33417 .72131 L
+.22801 .78769 L
+.16163 .68154 L
+.26778 .61515 L
+s
+.75 g
+.33417 .72131 m
+.40055 .82746 L
+.2944 .89385 L
+.22801 .78769 L
+F
+0 g
+.33417 .72131 m
+.40055 .82746 L
+.2944 .89385 L
+.22801 .78769 L
+.33417 .72131 L
+s
+.75 g
+.40055 .82746 m
+.46694 .93361 L
+.36078 1 L
+.2944 .89385 L
+F
+0 g
+.40055 .82746 m
+.46694 .93361 L
+.36078 1 L
+.2944 .89385 L
+.40055 .82746 L
+s
+.75 g
+.18271 .71525 m
+.2491 .82141 L
+.14294 .88779 L
+.07656 .78164 L
+F
+0 g
+.18271 .71525 m
+.2491 .82141 L
+.14294 .88779 L
+.07656 .78164 L
+.18271 .71525 L
+s
+.75 g
+.2491 .82141 m
+.31548 .92756 L
+.20933 .99395 L
+.14294 .88779 L
+F
+0 g
+.2491 .82141 m
+.31548 .92756 L
+.20933 .99395 L
+.14294 .88779 L
+.2491 .82141 L
+s
+0 0 m
+1 0 L
+1 1 L
+0 1 L
+0 0 L
+s
+% End of Graphics
+MathPictureEnd
+\
+\>"], "Graphics",
+  ImageSize->{171, 171},
+  ImageCache->GraphicsData["Bitmap", "\<\
+CF5dJ6E]HGAYHf4PAg9QL6QYHg<PAVmbKF5d0`40002[0000Zb000`400?l00000o`00003oZol00000
+0003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno
+_`03o`000?no_koo_kno01?o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno
+_`03o`00003oool0oooo0180oooo00?o0000okno_ono_kl04ono_kl1o`00000000?o0000okno_ono
+_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono
+_kl04ono_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o00000?ooo`3o
+ool04P3oool00ol0003o_knookno_`0Cokno_`7o000000000ol0003o_knookno_`0Bokno_`03o`00
+0?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03o`00
+0?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol00000oooo0?ooo`0B0?ooo`03o`00
+0?no_koo_kno01?o_kno0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no
+_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o0000okno_ono_kl04_no
+_kl00ol0003o_knookno_`0Bokno_`03o`00003oool0oooo0180oooo00?o0000okno_ono_kl04ono
+_kl1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo
+_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo
+_kno01;o_kno00?o00000?ooo`3oool04P3oool00ol0003o_knookno_`0Cokno_`7o000000000ol0
+003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0
+003o_knookno_`0Cokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0
+0000oooo0?ooo`0B0?ooo`03o`000?no_koo_kno01?o_kno0Ol000000003o`000?no_koo_kno01;o
+_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o
+_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`00003oool0oooo0180
+oooo00?o0000okno_ono_kl04ono_kl1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_kno
+okno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol0003o_kno
+okno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o00000?ooo`3oool04P3oool00ol0003o_kno
+okno_`0Cokno_`7o000000000ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o
+0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03o`000?no_koo_kno01;o_kno00?o
+0000okno_ono_kl04_no_kl00ol00000oooo0?ooo`0B0?ooo`03o`000?no_koo_kno01?o_kno0Ol0
+00000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0B
+okno_`03o`000?no_koo_kno01?o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0B
+okno_`03o`00003oool0oooo0180oooo00?o0000okno_ono_kl04ono_kl1o`00000000?o0000okno
+_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno
+_ono_kl04ono_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o00000?oo
+o`3oool04P3oool00ol0003o_knookno_`0Cokno_`7o000000000ol0003o_knookno_`0Bokno_`03
+o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03
+o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol00000oooo0?ooo`0B0?ooo`03
+o`000?no_koo_kno01?o_kno0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl0
+4_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o0000okno_ono_kl0
+4_no_kl00ol0003o_knookno_`0Bokno_`03o`00003oool0oooo0180oooo00?o0000okno_ono_kl0
+4ono_kl1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no
+_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol0003o_knookno_`0Bokno_`03o`000?no
+_koo_kno01;o_kno00?o00000?ooo`3oool00P3oool2o`0000h0oooo00?o0000okno_ono_kl04ono
+_kl1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo
+_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo
+_kno01;o_kno00?o00000?ooo`3oool00P3oool00ol00000_knoo`00000=0?ooo`03o`000?no_koo
+_kno01?o_kno0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0
+003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o0000okno_ono_kl04_no_kl00ol0
+003o_knookno_`0Bokno_`05o`00003oool0oooo0?ooool000000`2o_kl2o`0000/0oooo00?o0000
+okno_ono_kl04ono_kl1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno
+_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol0003o_knookno_`0Bokno
+_`03o`000?no_koo_kno01;o_kno00Co00000?ooo`3ooooo00001P2o_kl2o`0000T0oooo00?o0000
+okno_ono_kl04ono_kl1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno
+_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol0003o_knookno_`0Bokno
+_`03o`000?no_koo_kno01;o_kno00Co00000?ooo`3ooooo0000202o_kl00ol00000oooo0?ooo`06
+0?ooo`03o`000?no_koo_kno01?o_kno0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno
+_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o0000okno
+_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`00003ooooo000000X0_kno0_l000060?oo
+o`03o`000?no_koo_kno01?o_kno0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono
+_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o0000okno_ono
+_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`00003ooooo000000`0_kno0_l000040?ooo`03
+o`000?no_koo_kno01?o_kno0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl0
+4_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o0000okno_ono_kl0
+4_no_kl00ol0003o_knookno_`0Bokno_`;o00003`2o_kl01Ol00000oooo0?ooo`3ooooo000001Go
+_kno0Ol00000083o00004@2o_kl2o`0000030?ooool0003o000001Go000000000ol0003o_knookno
+_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno
+_`0Cokno_`03o`000?no_koo_kno01;o_kno00?o00000?ooo`3oool04P3oool00ol00000_kno0;no
+_`0A0;no_`;o00005@3oool1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0B
+okno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol0003o_knookno_`0B
+okno_`03o`00003oool0oooo0140oooo00?o00000;no_`2o_kl0502o_kl00ol00000oooo0?ooo`0B
+0?ooo`7o000000000ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno
+_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03o`000?no_koo_kno01;o_kno00?o00000?oo
+o`3oool04@3oool00ol00000_kno0;no_`0E0;no_`;o00004P3oool1o`00000000?o0000okno_ono
+_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono
+_kl04ono_kl00ol0003o_knookno_`0Bokno_`03o`00003oool0oooo0100oooo00?o00000;no_`2o
+_kl05P2o_kl00ol00000_knoo`00000A0?ooo`7o000000000ol0003o_knookno_`0Bokno_`03o`00
+0?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03o`00
+0?no_koo_kno01;o_kno00?o00000?ooo`3oool03`3oool00ol00000_kno0;no_`0F0;no_`04o`00
+002o_kl0_kno0;no_`;o00003`3oool1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_kno
+okno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol0003o_kno
+okno_`0Bokno_`03o`00003oool0oooo00H0oooo0_l000070?ooo`03o`00002o_kl0_kno01D0_kno
+00?o00000;no_`2o_kl0102o_kl2o`0000d0oooo0Ol000000003o`000?no_koo_kno01;o_kno00?o
+0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o
+0000okno_ono_kl04_no_kl00ol00000oooo0?ooo`060?ooo`03o`00002o_koo000000D0oooo00?o
+00000;no_`2o_kl05P2o_kl00ol00000_kno0;no_`060;no_`03o`00003oool0oooo00X0oooo0Ol0
+00000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0B
+okno_`03o`000?no_koo_kno01?o_kno00?o0000okno_ono_kl04_no_kl00ol00000oooo0?ooo`05
+0?ooo`04o`00002o_kl0_kno0;no_`;o00000`3oool00ol00000_kno0;no_`0E0;no_`03o`00002o
+_kl0_kno00P0_kno0_l0000:0?ooo`7o000000000ol0003o_knookno_`0Bokno_`03o`000?no_koo
+_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03o`000?no_koo
+_kno01;o_kno00?o00000?ooo`3oool0103oool00ol00000_kno0;no_`040;no_`?o0000602o_kl0
+0ol00000_kno0;no_`0:0;no_`;o0000203oool1o`00000000?o0000okno_ono_kl04_no_kl00ol0
+003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol0
+003o_knookno_`0Bokno_`03o`00003oool0oooo00@0oooo00?o00000;no_`2o_kl01@2o_kl2o`00
+01L0_kno00?o00000;no_`2o_kl03@2o_kl00ol00000oooo0?ooo`050?ooo`7o000000000ol0003o
+_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o
+_knookno_`0Cokno_`03o`000?no_koo_kno01;o_kno00?o00000?ooo`3oool00`3oool00ol00000
+_kno0;no_`080;no_`03o`00002o_kl0_kno01<0_kno00?o00000;no_`2o_kl03`2o_kl2o`0000D0
+oooo0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_kno
+okno_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o0000okno_ono_kl04_no_kl00ol00000oooo
+0?ooo`030?ooo`03o`00002o_kl0_kno00T0_kno0_l0000C0;no_`03o`00002o_kl0_kno0140_kno
+0_l000030?ooo`7o000000000ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o
+0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03o`000?no_koo_kno01;o_kno00?o
+00000?ooo`3oool00P3oool00ol00000_kno0;no_`0<0;no_`;o0000402o_kl00ol00000_kno0;no
+_`0D0;no_`03o`00003oool0oooo007o000000000ol0003o_knookno_`0Bokno_`03o`000?no_koo
+_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03o`000?no_koo
+_kno01;o_kno00Go00000?ooo`3oool0ooooo`00000A0;no_`03o`00002o_kl0_kno00d0_kno00?o
+00000;no_`2o_kl05@2o_kl1o`000040oooo0Ol000000003o`000?no_koo_kno01;o_kno00?o0000
+okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o0000
+okno_ono_kl04_no_kl01Ol00000oooo0?ooo`3ooooo00000180_kno0_l0000<0;no_`03o`00002o
+_kl0_kno01H0_kno0Ol000010?ooo`7o000000000ol0003o_knookno_`0Bokno_`03o`000?no_koo
+_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03o`000?no_koo
+_kno01;o_kno00Co00000?ooo`3ooooo00005@2o_kl2o`0000T0_kno00?o00000;no_`2o_kl05P2o
+_kl00ol00000oooo0?ooo`01o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0B
+okno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol0003o_knookno_`0B
+okno_`04o`00003oool0ooooo`0001L0_kno00?o00000;no_`2o_kl01P2o_kl00ol00000_kno0;no
+_`0E0;no_`04o`00003oool0oooo0?ooo`7o000000000ol0003o_knookno_`0Bokno_`03o`000?no
+_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03o`000?no
+_koo_kno01;o_kno00?o00000?ooool00000602o_kl3o`0000D0_kno00?o00000;no_`2o_kl05P2o
+_kl01?l00000oooo0?ooo`3oool1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno
+_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol0003o_knookno
+_`0Bokno_`;o0000602o_kl01?l00000_kno0;no_`2o_kl2o`0000<0_kno00?o00000;no_`2o_kl0
+5@2o_kl00ol00000oooo0?ooo`020?ooo`7o000000000ol0003o_knookno_`0Bokno_`03o`000?no
+_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03o`000?no
+_koo_kno01;o_kno0_l0000G0;no_`03o`00002o_kl0_kno00@0_kno00?o00000;no_ol00000602o
+_kl00ol00000oooo0?ooo`020?ooo`7o0000001[o`0001P0_kno00?o00000;no_`2o_kl01@2o_kl2
+o`0001L0_kno00?o00000?ooo`3oool00`3oool1o`00000000?o0000okno_ono_kl04_no_kl00ol0
+003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol0
+0000oooo0?ooo`0;0?ooo`03o`00002o_koo000000@0oooo00?o00000;no_`2o_kl05@2o_kl00ol0
+0000_kno0;no_`080;no_`03o`00002o_kl0_kno01<0_kno00?o00000?ooo`3oool0103oool1o`00
+000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o
+_kno00?o0000okno_ono_kl04ono_kl00ol00000oooo0?ooo`0:0?ooo`04o`00002o_kl0_kno0;no
+_`;o000000<0ooooo`00002o_kl05`2o_kl00ol00000_kno0;no_`090;no_`;o00004`2o_kl00ol0
+0000oooo0?ooo`040?ooo`7o000000000ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o
+_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03o`00003oool0oooo00T0
+oooo00?o00000;no_`2o_kl0102o_kl2o`0001L0_kno00?o00000;no_`2o_kl0302o_kl2o`000100
+_kno00?o00000?ooo`3oool01@3oool1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_kno
+okno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol00000oooo
+0?ooo`090?ooo`03o`00002o_kl0_kno00H0_kno00?o00000;no_`2o_kl04`2o_kl00ol00000_kno
+0;no_`0>0;no_`;o00003`2o_kl00ol00000oooo0?ooo`050?ooo`7o000000000ol0003o_knookno
+_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno
+_`0Cokno_`03o`00003oool0oooo00P0oooo00?o00000;no_`2o_kl0202o_kl2o`0001<0_kno00?o
+00000;no_`2o_kl0402o_kl2o`0000`0_kno00?o00000?ooo`3oool01P3oool1o`00000000?o0000
+okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000
+okno_ono_kl04ono_kl00ol00000oooo0?ooo`080?ooo`03o`00002o_kl0_kno00X0_kno0_l0000@
+0;no_`03o`00002o_kl0_kno0180_kno0ol000090;no_`03o`00003oool0oooo00L0oooo0Ol00000
+0003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno
+_`03o`000?no_koo_kno01?o_kno00?o00000?ooo`3oool01`3oool00ol00000_kno0;no_`0=0;no
+_`03o`00002o_kl0_kno00d0_kno00?o00000;no_`2o_kl0502o_kl2o`0000P0_kno00?o00000?oo
+o`3oool01`3oool1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03
+o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol00000oooo0?ooo`060?ooo`03
+o`00002o_kl0_kno00l0_kno0_l0000<0;no_`03o`00002o_kl0_kno01H0_kno0ol000050;no_`03
+o`00003oool0oooo00P0oooo0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl0
+4_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o00000?ooo`3oool0
+1P3oool00ol00000_kno0;no_`0A0;no_`;o00002@2o_kl00ol00000_kno0;no_`0G0;no_`03o`00
+002o_koo000000;o00000`2o_kl00ol00000oooo0?ooo`080?ooo`7o000000000ol0003o_knookno
+_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno
+_`0Cokno_`03o`00003oool0oooo00D0oooo00?o00000;no_`2o_kl0502o_kl00ol00000_kno0;no
+_`060;no_`03o`00002o_kl0_kno01H0_kno00?o00000;no_`2o_kl00P2o_kl2o`0000030;no_ol0
+0000oooo00X0oooo0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl0
+0ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o00000?ooo`3oool01@3oool0
+0ol00000_kno0;no_`0E0;no_`;o00001@2o_kl00ol00000_kno0;no_`0F0;no_`03o`00002o_kl0
+_kno00@0_kno0_l0000<0?ooo`7o000000000ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno
+01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03o`00003oool0oooo
+00@0oooo00?o00000;no_`2o_kl05P2o_kl01?l00000_knoo`000?l000030;no_`03o`00002o_kl0
+_kno01H0_kno00?o00000;no_`2o_kl01P2o_kl2o`0000X0oooo0Ol000000003o`000?no_koo_kno
+01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno
+01?o_kno00?o00000?ooo`3oool00`3oool00ol00000_kno0;no_`0F0;no_`04o`00002o_kl0_kno
+0;no_`;o000000<0_knoo`00002o_kl05`2o_kl00ol00000_kno0;no_`090;no_`;o0000203oool1
+o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno
+01;o_kno00?o0000okno_ono_kl04ono_kl00ol00000oooo0?ooo`030?ooo`03o`00002o_kl0_kno
+01D0_kno00?o00000;no_`2o_kl0102o_kl2o`0001P0_kno00?o00000;no_`2o_kl02`2o_kl00ol0
+0000oooo0?ooo`050?ooo`7o000000000ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o
+_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03o`00003oool0oooo0080
+oooo00?o00000;no_`2o_kl05P2o_kl00ol00000_kno0;no_`050;no_`;o00005P2o_kl00ol00000
+_kno0;no_`0=0;no_`;o00001@3oool1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_kno
+okno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol00000oooo
+0?ooo`020?ooo`03o`00002o_kl0_kno01D0_kno00?o00000;no_`2o_kl0202o_kl2o`0001<0_kno
+00?o00000;no_`2o_kl0402o_kl2o`0000<0oooo0Ol000000003o`000?no_koo_kno01;o_kno00?o
+0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno00Go
+00000?ooo`3oool0ooooo`00000H0;no_`03o`00002o_kl0_kno00T0_kno0_l0000B0;no_`03o`00
+002o_kl0_kno0180_kno00?o00000?ooo`3oool00Ol000000003o`000?no_koo_kno01;o_kno00?o
+0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o
+00000?ooo`3oool00_l0000G0;no_`03o`00002o_kl0_kno00`0_kno0_l0000?0;no_`03o`00002o
+_kl0_kno01@0_kno0ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl0
+0ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o00000?ooo`3oool00P3oool0
+0ol00000_kno0;no_`0C0;no_`03o`00002o_kl0_kno00h0_kno0_l0000>0;no_`03o`00002o_kl0
+_kno01H0_kno0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0
+003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o00000?ooo`3oool00`3oool2o`00
+01<0_kno00?o00000;no_`2o_kl0402o_kl2o`0000/0_kno00?o00000;no_`2o_kl05`2o_kl1o`00
+0000E_l000070?ooo`;o0000402o_kl00ol00000_kno0;no_`0B0;no_`;o00002@2o_kl00ol00000
+_kno0;no_`0G0;no_`;o000000000ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno
+00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03o`00003oool0oooo00L0oooo
+00?o00000;no_`2o_kl03@2o_kl00ol00000_kno0;no_`0D0;no_`;o00001`2o_kl00ol00000_kno
+0;no_`0F0;no_`7o00000@3oool1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno
+_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol00000oooo0?oo
+o`080?ooo`;o0000302o_kl00ol00000_kno0;no_`0F0;no_`;o00001@2o_kl00ol00000_kno0;no
+_`0G0;no_`7o00000@3oool1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0B
+okno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol00000oooo0?ooo`08
+0?ooo`04o`00002o_koo0000o`0000T0_kno00?o00000;no_`2o_kl05`2o_kl01?l00000_knoo`00
+0?l000030;no_`03o`00002o_kl0_kno01H0_kno00?o00000?ooo`3oool00Ol000000003o`000?no
+_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no
+_koo_kno01?o_kno00?o00000?ooo`3oool01`3oool01?l00000_kno0;no_`2o_kl2o`0000P0_kno
+00?o00000;no_`2o_kl05P2o_kl01?l00000_kno0;no_`2o_kl2o`0000030;no_ol00000_kno01L0
+_kno00Co00000?ooo`3oool0oooo0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono
+_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o00000?ooo`3o
+ool01P3oool00ol00000_kno0;no_`040;no_`;o00001@2o_kl00ol00000_kno0;no_`0F0;no_`03
+o`00002o_kl0_kno00@0_kno0_l0000H0;no_`04o`00003oool0oooo0?ooo`7o000000000ol0003o
+_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o
+_knookno_`0Cokno_`03o`00003oool0oooo00H0oooo00?o00000;no_`2o_kl01P2o_kl2o`0000<0
+_kno00?o00000;no_`2o_kl05P2o_kl00ol00000_kno0;no_`060;no_`03o`00002o_kl0_kno01@0
+_kno00?o00000?ooo`3oool00P3oool1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_kno
+okno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol00000oooo
+0?ooo`050?ooo`03o`00002o_kl0_kno00P0_kno0_l000000`2o_koo00000;no_`0G0;no_`03o`00
+002o_kl0_kno00P0_kno0_l0000C0;no_`03o`00003oool0oooo00<0oooo0Ol000000003o`000?no
+_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no
+_koo_kno01?o_kno00?o00000?ooo`3oool01@3oool00ol00000_kno0;no_`0:0;no_`;o0000602o
+_kl00ol00000_kno0;no_`0:0;no_`;o00004@2o_kl00ol00000oooo0?ooo`030?ooo`7o00000000
+0ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl0
+0ol0003o_knookno_`0Cokno_`03o`00003oool0oooo00@0oooo00?o00000;no_`2o_kl03@2o_kl0
+0ol00000_kno0;no_`0D0;no_`03o`00002o_kl0_kno00d0_kno00?o00000;no_`2o_kl03@2o_kl0
+0ol00000oooo0?ooo`040?ooo`7o000000000ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno
+01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03o`00003oool0oooo
+00<0oooo00?o00000;no_`2o_kl03`2o_kl2o`0001<0_kno00?o00000;no_`2o_kl03`2o_kl2o`00
+00`0_kno00?o00000?ooo`3oool01@3oool1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o
+_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol00000
+oooo0?ooo`030?ooo`03o`00002o_kl0_kno0140_kno00?o00000;no_`2o_kl0402o_kl00ol00000
+_kno0;no_`0A0;no_`;o00002P2o_kl00ol00000oooo0?ooo`050?ooo`7o000000000ol0003o_kno
+okno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_kno
+okno_`0Cokno_`03o`00003oool0oooo0080oooo00?o00000;no_`2o_kl04`2o_kl2o`0000l0_kno
+00?o00000;no_`2o_kl0502o_kl00ol00000_kno0;no_`060;no_`03o`00003oool0oooo00H0oooo
+0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno
+_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o00000?ooo`3oool00P3oool00ol00000_kno0;no
+_`0E0;no_`03o`00002o_kl0_kno00`0_kno00?o00000;no_`2o_kl05@2o_kl2o`0000D0_kno00?o
+00000?ooo`3oool01`3oool1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0B
+okno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl01Ol00000oooo0?ooo`3o
+oooo000001P0_kno0ol0000;0;no_`03o`00002o_kl0_kno01H0_kno00Co00000?ooool0003o0000
+0`2o_kl00ol00000oooo0?ooo`070?ooo`7o000000000ol0003o_knookno_`0Bokno_`03o`000?no
+_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`04o`00003o
+ool0ooooo`0001P0_kno00Go00000;no_`2o_kl0_knoo`0000090;no_`03o`00002o_kl0_kno01H0
+_kno00?o00000?ooo`3oool00P3oool00ol00000_knoo`00000:0?ooo`7o000000000ol0003o_kno
+okno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_kno
+okno_`0Cokno_`04o`00003oool0ooooo`0001L0_kno00?o00000;no_`2o_kl00`2o_kl2o`0000L0
+_kno00?o00000;no_`2o_kl05@2o_kl00ol00000oooo0?ooo`040?ooo`03o`00003oool0oooo00T0
+oooo0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_kno
+okno_`0Bokno_`03o`000?no_koo_kno01?o_kno00?o00000?ooool00000602o_kl00ol00000_kno
+0;no_`050;no_`03o`00002o_kl0_kno00<0_kno00?o00000;no_`2o_kl05P2o_kl00ol00000oooo
+0?ooo`0@0?ooo`7o000000000ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o
+0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`03o`00003ooooo000001L0_kno00?o
+00000;no_`2o_kl01`2o_kl2o`0000<0_kno00?o00000;no_`2o_kl05@2o_kl00ol00000oooo0?oo
+o`0A0?ooo`7o000000000ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000
+okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`;o0000602o_kl00ol00000_kno0;no_`09
+0;no_`03o`00002o_koo000001P0_kno00?o00000?ooo`3oool04@3oool1o`00000000?o0000okno
+_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno
+_ono_kl04ono_kl2o`0001L0_kno00?o00000;no_`2o_kl02`2o_kl2o`0001L0_kno00?o00000?oo
+o`3oool04P3oool1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03
+o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl00ol00000ooooo`00000E0;no_`03
+o`00002o_kl0_kno00h0_kno00?o00000;no_`2o_kl04`2o_klGo`000000E_l000020?ooo`;o0000
+4`2o_kl00ol00000_kno0;no_`0?0;no_`;o00004`2o_kl00ol0003o_knookno_`0Cokno_`7o0000
+00000ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o00000?ooo`3oool0903o
+ool00ol00000_knoo`0000060?ooo`;o0000402o_kl00ol00000_kno0;no_`0B0;no_`;o0000402o
+_kl2o`0001Go_kno0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl0
+0ol00000oooo0?ooo`0R0?ooo`;o00000`2o_kl00ol00000oooo0?ooo`050?ooo`03o`00002o_kl0
+_kno00d0_kno00?o00000;no_`2o_kl0502o_kl00ol00000_kno0;no_`0=0;no_`;o00005Ono_kl1
+o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`00003oool0oooo
+00h0oooo0_l0000@0?ooo`;o00001P2o_kl00ol00000oooo0?ooo`050?ooo`;o0000302o_kl00ol0
+0000_kno0;no_`0F0;no_`;o0000302o_kl00ol00000ooooo`00000Eokno_`7o000000000ol0003o
+_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o00000?ooo`3oool03@3oool00ol00000
+_knoo`00000?0?ooo`03o`00002o_kl0_kno00H0_kno00?o00000?ooo`3oool01`3oool2o`0000T0
+_kno00?o00000;no_`2o_kl05`2o_kl01?l00000ooooo`000?l000090;no_`04o`00003oool0oooo
+o`0001Go_kno0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0
+0000oooo0?ooo`0;0?ooo`;o00000`2o_kl00ol00000oooo0?ooo`0:0?ooo`;o00002P2o_kl00ol0
+0000oooo0?ooo`080?ooo`03o`00002o_kl0_kno00H0_kno00?o00000;no_`2o_kl05P2o_kl00ol0
+0000oooo0?ooo`020?ooo`03o`00002o_kl0_kno00H0_kno00Co00000?ooo`3ooooo00005Ono_kl1
+o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`00003oool0oooo
+00T0oooo0_l000060;no_`03o`00003oool0oooo00L0oooo0_l0000<0;no_`03o`00003oool0oooo
+00T0oooo0_l000050;no_`03o`00002o_kl0_kno01H0_kno00?o00000?ooo`3oool0103oool2o`00
+00D0_kno00Go00000?ooo`3oool0ooooo`00000Eokno_`7o000000000ol0003o_knookno_`0Bokno
+_`03o`000?no_koo_kno01;o_kno00?o00000?ooo`3oool0203oool00ol00000_kno0;no_`060;no
+_`03o`00003oool0oooo00H0oooo00?o00000;no_`2o_kl03@2o_kl00ol00000oooo0?ooo`0:0?oo
+o`;o00000`2o_kl00ol00000_kno0;no_`0F0;no_`03o`00003oool0oooo00H0oooo0_l000030;no
+_`05o`00003oool0oooo0?ooool000005Ono_kl1o`00000000?o0000okno_ono_kl04_no_kl00ol0
+003o_knookno_`0Bokno_`03o`00003oool0oooo00H0oooo0_l0000:0;no_`03o`00003oool0oooo
+00<0oooo0_l0000A0;no_`03o`00003oool0oooo00/0oooo00?o00000;no_ol00000602o_kl00ol0
+0000oooo0?ooo`090?ooo`03o`00002o_koo000000@0oooo00?o0000okno_ono_kl04ono_kl1o`00
+000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`00003oool0oooo00@0
+oooo0_l0000<0;no_`04o`00003oool0oooo0?ooo`;o00004`2o_kl00ol00000oooo0?ooo`0<0?oo
+o`;o0000602o_kl00ol00000oooo0?ooo`0:0?ooo`03o`00003oool0oooo00<0oooo00?o0000okno
+_ono_kl04ono_kl1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03
+o`00003oool0oooo00<0oooo00?o00000;no_`2o_kl03@2o_kl00ol00000ooooo`00000F0;no_`03
+o`00003oool0oooo00d0oooo00?o00000;no_`2o_kl0502o_kl00ol00000oooo0?ooo`0A0?ooo`03
+o`000?no_koo_kno01?o_kno0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl0
+4_no_kl01?l00000oooo0?ooo`3oool2o`000140_kno00?o00000;no_`2o_kl05@2o_kl00ol00000
+oooo0?ooo`0>0?ooo`;o00004`2o_kl00ol00000oooo0?ooo`0B0?ooo`03o`000?no_koo_kno01?o
+_kno0Ol000000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl01?l00000oooo
+o`000?l0000C0;no_`03o`00002o_kl0_kno01H0_kno00?o00000?ooo`3oool03`3oool00ol00000
+_kno0;no_`0@0;no_`03o`00003oool0oooo0180oooo00?o0000okno_ono_kl04ono_kl1o`000000
+00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`;o00005P2o_kl00ol00000_kno
+0;no_`0F0;no_`03o`00003oool0oooo00l0oooo0_l0000?0;no_`03o`00003oool0oooo01<0oooo
+00?o0000okno_ono_kl04ono_kl1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno
+_`0Bokno_`03o`00002o_kl0_kno01D0_kno0_l0000G0;no_`03o`00003oool0oooo0140oooo00?o
+00000;no_`2o_kl0302o_kl00ol00000oooo0?ooo`0C0?ooo`03o`000?no_koo_kno01?o_kno0Ol0
+00000003o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol00000_kno0;no_`0F
+0;no_`03o`00002o_kl0_kno01H0_kno00?o00000?ooo`3oool04@3oool2o`0000/0_kno00?o0000
+0?ooo`3oool0503oool00ol0003o_knookno_`0Cokno_`7o000000000ol0003o_knookno_`0Bokno
+_`03o`000?no_koo_kno01;o_kno0_l0000H0;no_`03o`00002o_kl0_kno01D0_kno00?o00000?oo
+o`3oool04`3oool00ol00000_kno0;no_`070;no_`03o`00003oool0oooo01D0oooo00?o0000okno
+_ono_kl04ono_kl1o`00000000?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03
+o`00003ooooo000001L0_kno00?o00000;no_`2o_kl05P2o_kl00ol00000oooo0?ooo`0C0?ooo`;o
+00001`2o_kl00ol00000oooo0?ooo`0E0?ooo`03o`000?no_koo_kno01?o_kno0Ol000000003o`00
+0?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol00000ooooo`00000H0;no_`03o`00
+002o_kl0_kno01D0_kno0_l0000F0?ooo`03o`00002o_kl0_kno00<0_kno00?o00000?ooo`3oool0
+5P3oool00ol0003o_knookno_`0Cokno_`7o000000000ol0003o_knookno_`0Bokno_`03o`000?no
+_koo_kno01;o_kno00Co00000?ooool0003o00005`2o_kl2o`0001D0_kno00?o00000;no_ol00000
+5`3oool2o`0000<0_kno00?o00000?ooo`3oool05P3oool00ol0003o_knookno_`0Cokno_`7o0000
+00000ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno0_l000000`2o_koo00000;no
+_`0G0;no_`03o`00002o_kl0_kno0140_kno0_l000030;no_`03o`00003oool0oooo01H0oooo00?o
+00000;no_ol000006@3oool00ol0003o_knookno_`0Cokno_`7o0000000[o`0000<0_kno00?o0000
+0;no_`2o_kl05@2o_kl2o`000100_kno0_l000060;no_`03o`00003oool0oooo00L0oooo@Ol00000
+0003o`000?no_koo_kno01;o_kno00?o00000?ooo`3oool03`3oool2o`0000H0_kno00?o00000;no
+_`2o_kl04`2o_kl00ol00000_knoo`00000?0;no_`03o`00002o_kl0_kno00H0_kno00?o00000?oo
+o`3oool01`3oool00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno
+_ono_kl04ono_kl1o`00000000?o0000okno_ono_kl04_no_kl00ol00000oooo0?ooo`0>0?ooo`03
+o`00002o_kl0_kno00H0_kno00?o00000;no_`2o_kl04@2o_kl2o`0000<0_kno00?o00000;no_`2o
+_kl02P2o_kl2o`0000X0_kno00?o00000?ooo`3oool01P3oool00ol0003o_knookno_`0Bokno_`03
+o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl1o`00000000?o0000okno_ono_kl0
+4_no_kl00ol00000oooo0?ooo`0<0?ooo`;o00002P2o_kl00ol00000_kno0;no_`0>0;no_`;o0000
+1P2o_kl00ol00000_kno0;no_`070;no_`;o00003@2o_kl00ol00000oooo0?ooo`050?ooo`03o`00
+0?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`7o0000
+00000ol0003o_knookno_`0Bokno_`03o`00003oool0oooo00X0oooo0_l0000<0;no_`03o`00002o
+_kl0_kno00d0_kno00?o00000;no_`2o_kl01P2o_kl00ol00000_kno0;no_`060;no_`03o`00002o
+_kl0_kno00d0_kno00?o00000?ooo`3oool01@3oool00ol0003o_knookno_`0Bokno_`03o`000?no
+_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl1o`00000000?o0000okno_ono_kl04_no_kl0
+0ol00000oooo0?ooo`090?ooo`03o`00002o_kl0_kno00d0_kno00?o00000;no_`2o_kl02P2o_kl2
+o`0000X0_kno00?o00000;no_`2o_kl00`2o_kl2o`000140_kno00?o00000?ooo`3oool0103oool0
+0ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl1
+o`00000000?o0000okno_ono_kl04_no_kl00ol00000oooo0?ooo`070?ooo`;o00004@2o_kl00ol0
+0000_kno0;no_`070;no_`;o00003@2o_kl00ol00000_kno0;no_`02o`0001@0_kno00?o00000?oo
+o`3oool00`3oool00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno
+_ono_kl04ono_kl1o`00000000?o0000okno_ono_kl04_no_kl00ol00000oooo0?ooo`050?ooo`;o
+00004`2o_kl00ol00000_kno0;no_`060;no_`03o`00002o_kl0_kno00d0_kno00?o00000;no_ol0
+00005P2o_kl00ol00000oooo0?ooo`030?ooo`03o`000?no_koo_kno01;o_kno00?o0000okno_ono
+_kl04_no_kl00ol0003o_knookno_`0Cokno_`7o000000000ol0003o_knookno_`0Bokno_`03o`00
+003oool0oooo00@0oooo00?o00000;no_`2o_kl0502o_kl00ol00000_kno0;no_`030;no_`;o0000
+4@2o_kl00ol00000_kno0;no_`0F0;no_`03o`00003oool0oooo0080oooo00?o0000okno_ono_kl0
+4_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno0Ol000000003o`000?no
+_koo_kno01;o_kno00?o00000?ooo`3oool00`3oool00ol00000_kno0;no_`0E0;no_`04o`00002o
+_kl0_kno0;no_`;o0000502o_kl00ol00000_kno0;no_`0F0;no_`05o`00003oool0oooo0?ooool0
+00005?no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno0Ol000000003o`00
+0?no_koo_kno01;o_kno00?o00000?ooo`3oool00`3oool00ol00000_kno0;no_`0F0;no_`03o`00
+002o_koo000001H0_kno00?o00000;no_`2o_kl05P2o_kl01Ol00000oooo0?ooo`3ooooo000001Co
+_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`7o000000000ol0003o_kno
+okno_`0Bokno_`03o`00003oool0oooo00@0oooo00?o00000;no_`2o_kl05P2o_kl00ol00000_kno
+0;no_`0F0;no_`03o`00002o_kl0_kno01H0_kno00Co00000?ooo`3ooooo00005?no_kl00ol0003o
+_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno0Ol000000003o`000?no_koo_kno01;o_kno
+00?o00000?ooo`3oool01@3oool00ol00000_kno0;no_`0E0;no_`03o`00002o_kl0_kno01L0_kno
+00?o00000;no_`2o_kl05P2o_kl00ol00000ooooo`00000Dokno_`03o`000?no_koo_kno01;o_kno
+00?o0000okno_ono_kl04ono_kl1o`00000000?o0000okno_ono_kl04_no_kl00ol00000oooo0?oo
+o`050?ooo`03o`00002o_kl0_kno01H0_kno00?o00000;no_`2o_kl05P2o_kl00ol00000_kno0;no
+_`0F0;no_`03o`00003ooooo000001Co_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno
+_`0Cokno_`7o000000000ol0003o_knookno_`0Bokno_`03o`00003oool0oooo00H0oooo00?o0000
+0;no_`2o_kl05@2o_kl2o`0001P0_kno00?o00000;no_`2o_kl05P2o_kl2o`0001Co_kno00?o0000
+okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`7o000000000ol0003o_knookno_`0Bokno
+_`03o`00003oool0oooo00H0oooo0_l0000G0;no_`03o`00002o_kl0_kno01L0_kno00?o00000;no
+_`2o_kl05@2o_kl2o`0001Co_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno
+_`7o000000000ol0003o_knookno_`0Bokno_`03o`00003oool0oooo00D0oooo00?o00000;no_ol0
+00005`2o_kl2o`0001P0_kno00?o00000;no_`2o_kl0502o_kl00ol00000ooooo`00000Dokno_`03
+o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl1o`00000000?o0000okno_ono_kl0
+4_no_kl00ol00000oooo0?ooo`030?ooo`;o00000`2o_kl00ol00000_kno0;no_`0C0;no_`04o`00
+002o_koo0000o`0001P0_kno00?o00000;no_`2o_kl04@2o_kl2o`000080oooo00?o0000okno_ono
+_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno0Ol000000003o`00
+0?no_koo_kno01;o_kno00Co00000?ooo`3oool0oooo0_l000060;no_`03o`00002o_kl0_kno0100
+_kno0_l000030;no_`03o`00002o_kl0_kno01H0_kno0_l0000@0;no_`;o0000103oool00ol0003o
+_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl1o`000000
+00?o0000okno_ono_kl04_no_kl01?l00000oooo0?ooool000080;no_`03o`00002o_kl0_kno00h0
+_kno0_l000060;no_`03o`00002o_kl0_kno01@0_kno00?o00000;no_ol000003`2o_kl00ol00000
+oooo0?ooo`040?ooo`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o
+_knookno_`0Cokno_`7o000000000ol0003o_knookno_`0Bokno_`?o00002P2o_kl00ol00000_kno
+0;no_`0<0;no_`03o`00002o_kl0_kno00H0_kno0_l0000C0;no_`;o00000`2o_kl00ol00000_kno
+0;no_`0:0;no_`;o00001`3oool00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno
+00?o0000okno_ono_kl04ono_kl1o`0000005_l0000<0;no_`03o`00002o_kl0_kno00X0_kno0_l0
+000:0;no_`03o`00002o_kl0_kno00l0_kno0_l000060;no_`03o`00002o_kl0_kno00L0_kno0_l0
+00090?oood7o000000000ol00000oooo0?ooo`0@0?ooo`03o`00002o_kl0_kno00d0_kno00?o0000
+0;no_`2o_kl01`2o_kl2o`0000d0_kno00?o00000;no_`2o_kl03@2o_kl00ol00000_kno0;no_`06
+0;no_`03o`00002o_kl0_kno00H0_kno00?o00000?ooo`3oool02@3oool00ol0003o_knookno_`0B
+okno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl1o`00000000?o00000?oo
+o`3oool03P3oool2o`000140_kno00?o00000;no_`2o_kl01@2o_kl00ol00000_kno0;no_`0=0;no
+_`;o0000302o_kl2o`0000X0_kno00?o00000;no_`2o_kl00`2o_kl2o`0000`0oooo00?o0000okno
+_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno0Ol000000003
+o`00003oool0oooo00`0oooo0_l0000C0;no_`03o`00002o_kl0_kno00<0_kno0_l0000A0;no_`03
+o`00002o_kl0_kno00P0_kno0_l0000<0;no_`04o`00002o_kl0_kno0;no_`;o00003P3oool00ol0
+003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl1o`00
+000000?o00000?ooo`3oool02`3oool00ol00000_kno0;no_`0D0;no_`03o`00002o_kl0_kno00;o
+0000502o_kl00ol00000_kno0;no_`060;no_`03o`00002o_kl0_kno00d0_kno00?o00000;no_ol0
+0000403oool00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono
+_kl04ono_kl1o`00000000?o00000?ooo`3oool02P3oool00ol00000_kno0;no_`0E0;no_`03o`00
+002o_koo000001H0_kno0_l000050;no_`;o00004@2o_kl00ol00000oooo0?ooo`0?0?ooo`03o`00
+0?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`7o0000
+00000ol00000oooo0?ooo`0:0?ooo`03o`00002o_kl0_kno01H0_kno00?o00000;no_`2o_kl05P2o
+_kl01?l00000_kno0;no_`2o_kl2o`0001<0_kno00?o00000?ooo`3oool03`3oool00ol0003o_kno
+okno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl1o`00000000?o
+00000?ooo`3oool02`3oool00ol00000_kno0;no_`0F0;no_`03o`00002o_kl0_kno01H0_kno00?o
+00000;no_ol000005P2o_kl00ol00000oooo0?ooo`0>0?ooo`03o`000?no_koo_kno01;o_kno00?o
+0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`7o000000000ol00000oooo0?ooo`0<
+0?ooo`03o`00002o_kl0_kno01D0_kno00?o00000;no_`2o_kl05P2o_kl2o`0001L0_kno00?o0000
+0?ooo`3oool03P3oool00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000
+okno_ono_kl04ono_kl1o`00000000?o00000?ooo`3oool0303oool00ol00000_kno0;no_`0F0;no
+_`03o`00002o_kl0_kno01H0_kno00?o00000;no_`2o_kl05P2o_kl00ol00000oooo0?ooo`0=0?oo
+o`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno
+_`7o000000000ol00000oooo0?ooo`0=0?ooo`03o`00002o_kl0_kno01D0_kno00?o00000;no_`2o
+_kl05`2o_kl00ol00000_kno0;no_`0F0;no_`03o`00003oool0oooo00`0oooo00?o0000okno_ono
+_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno0Ol000000003o`00
+003oool0oooo00d0oooo00?o00000;no_`2o_kl05P2o_kl00ol00000_kno0;no_`0F0;no_`;o0000
+5`2o_kl00ol00000oooo0?ooo`0<0?ooo`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl0
+4_no_kl00ol0003o_knookno_`0Cokno_`7o000000000ol00000oooo0?ooo`0>0?ooo`03o`00002o
+_kl0_kno01D0_kno0_l0000H0;no_`03o`00002o_kl0_kno01H0_kno00?o00000?ooo`3oool02`3o
+ool00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono
+_kl1o`00000000?o00000?ooo`3oool03`3oool00ol00000_kno0;no_`0C0;no_`03o`00002o_koo
+000001P0_kno0_l0000G0;no_`03o`00003oool0oooo00/0oooo00?o0000okno_ono_kl04_no_kl0
+0ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno0Ol000000003o`00003oool0oooo
+00l0oooo00?o00000;no_`2o_kl04@2o_kl2o`0000<0_kno00?o00000;no_`2o_kl0502o_kl00ol0
+0000_knoo`00000H0;no_`03o`00003oool0oooo00X0oooo00?o0000okno_ono_kl04_no_kl00ol0
+003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno0Ol000000003o`00003oool0oooo0100
+oooo00?o00000;no_`2o_kl03P2o_kl2o`0000H0_kno00?o00000;no_`2o_kl04@2o_kl2o`0000<0
+_kno00?o00000;no_`2o_kl05@2o_kl2o`0000/0oooo00?o0000okno_ono_kl04_no_kl00ol0003o
+_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno0Ol000000003o`00003oool0oooo0100oooo
+00?o00000;no_`2o_kl03@2o_kl00ol00000_kno0;no_`060;no_`03o`00002o_kl0_kno00l0_kno
+0_l000060;no_`03o`00002o_kl0_kno01<0_kno00?o00000?ooo`3oool02`3oool00ol0003o_kno
+okno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl1o`00000000?o
+00000?ooo`3oool04@3oool00ol00000_kno0;no_`0:0;no_`;o00002P2o_kl00ol00000_kno0;no
+_`0=0;no_`03o`00002o_kl0_kno00H0_kno00?o00000;no_`2o_kl04@2o_kl2o`0000h0oooo00?o
+0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno0Ol0
+00000003o`00003oool0oooo0180oooo00?o00000;no_`2o_kl01`2o_kl2o`0000`0_kno0_l0000<
+0;no_`;o00002P2o_kl00ol00000_kno0;no_`0>0;no_`;o0000403oool00ol0003o_knookno_`0B
+okno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl1o`00000000?o00000?oo
+o`3oool04P3oool00ol00000_kno0;no_`060;no_`03o`00002o_kl0_kno00d0_kno00?o00000;no
+_`2o_kl0202o_kl2o`0000`0_kno00?o00000;no_`2o_kl03@2o_kl00ol00000oooo0?ooo`0@0?oo
+o`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno
+_`7o000000000ol00000oooo0?ooo`0C0?ooo`03o`00002o_kl0_kno00<0_kno0_l0000A0;no_`03
+o`00002o_kl0_kno00H0_kno00?o00000;no_`2o_kl03@2o_kl00ol00000_kno0;no_`0:0;no_`;o
+00004`3oool00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono
+_kl04ono_kl1o`0000005ol000030;no_`;o00004`2o_kl2o`0000D0_kno0_l0000A0;no_`03o`00
+002o_kl0_kno00L0_knoF?l000000003o`000?no_koo_kno01;o_kno00Go00000?ooool00000_kno
+o`00000F0;no_`04o`00002o_kl0_kno0;no_`;o00004`2o_kl00ol00000_kno0;no_`060;no_`03
+o`00003ooooo000001Go_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03
+o`000?no_koo_kno01?o_kno0Ol000000003o`000?no_koo_kno01;o_kno00Co00000?ooo`3ooooo
+00005`2o_kl2o`0000030;no_ol00000_kno01D0_kno00?o00000;no_`2o_kl00`2o_kl2o`000080
+oooo00?o0000okno_ono_kl04ono_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o
+_kno00?o0000okno_ono_kl04ono_kl1o`00000000?o0000okno_ono_kl04_no_kl01?l00000oooo
+0?ooool0000H0;no_`;o00005`2o_kl01?l00000_kno0;no_`2o_kl2o`0000@0oooo00?o0000okno
+_ono_kl04ono_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno
+_ono_kl04ono_kl1o`00000000?o0000okno_ono_kl04_no_kl01Ol00000oooo0?ooo`3ooooo0000
+01P0_kno00?o00000;no_`2o_kl05P2o_kl00ol00000_knoo`0000060?ooo`03o`000?no_koo_kno
+01?o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno
+01?o_kno0Ol000000003o`000?no_koo_kno01;o_kno00?o00000?ooo`3oool00P3oool00ol00000
+_kno0;no_`0E0;no_`;o0000602o_kl00ol00000oooo0?ooo`050?ooo`03o`000?no_koo_kno01?o
+_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o
+_kno0Ol000000003o`000?no_koo_kno01;o_kno00?o00000?ooo`3oool00P3oool00ol00000_kno
+0;no_`0F0;no_`;o00005`2o_kl00ol00000oooo0?ooo`050?ooo`03o`000?no_koo_kno01?o_kno
+00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno
+0Ol000000003o`000?no_koo_kno01;o_kno00?o00000?ooo`3oool00`3oool00ol00000_kno0;no
+_`0E0;no_`;o0000602o_kl00ol00000oooo0?ooo`040?ooo`03o`000?no_koo_kno01?o_kno00?o
+0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno0Ol0
+00000003o`000?no_koo_kno01;o_kno00?o00000?ooo`3oool00`3oool00ol00000_kno0;no_`0F
+0;no_`;o00005`2o_kl00ol00000oooo0?ooo`040?ooo`03o`000?no_koo_kno01?o_kno00?o0000
+okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno0Ol00000
+0003o`000?no_koo_kno01;o_kno00?o00000?ooo`3oool0103oool00ol00000_kno0;no_`0E0;no
+_`;o0000602o_kl00ol00000oooo0?ooo`030?ooo`03o`000?no_koo_kno01?o_kno00?o0000okno
+_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno0Ol000000003
+o`000?no_koo_kno01;o_kno00?o00000?ooo`3oool01@3oool00ol00000_kno0;no_`0C0;no_`04
+o`00003oool0ooooo`0001L0_kno0_l000040?ooo`03o`000?no_koo_kno01?o_kno00?o0000okno
+_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01?o_kno0Ol000000003
+o`000?no_koo_kno01;o_kno00?o00000?ooo`3oool01@3oool00ol00000_kno0;no_`0A0;no_`;o
+0000103oool00ol00000_kno0;no_`0C0;no_`03o`00003oool0oooo00@0oooo00?o0000okno_ono
+_kl04ono_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono
+_kl04ono_kl1o`00000000?o0000okno_ono_kl04_no_kl00ol00000oooo0?ooo`060?ooo`03o`00
+002o_kl0_kno00h0_kno0_l000060?ooo`03o`00002o_kl0_kno0140_kno0_l000070?ooo`03o`00
+0?no_koo_kno01?o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Bokno_`03o`00
+0?no_koo_kno01?o_kno0Ol000000003o`000?no_koo_kno01;o_kno00?o00000?ooo`3oool01P3o
+ool00ol00000_kno0;no_`0=0;no_`03o`00003oool0oooo00L0oooo00?o00000;no_`2o_kl03P2o
+_kl2o`0000T0oooo00?o0000okno_ono_kl04ono_kl00ol0003o_knookno_`0Bokno_`03o`000?no
+_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl1o`00000000?o0000okno_ono_kl04_no_kl0
+0ol00000oooo0?ooo`070?ooo`03o`00002o_kl0_kno00X0_kno0_l0000:0?ooo`03o`00002o_kl0
+_kno00d0_kno00?o00000?ooo`3oool02@3oool00ol0003o_knookno_`0Cokno_`03o`000?no_koo
+_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_knookno_`0Cokno_`7o000000000ol0
+003o_knookno_`0Bokno_`03o`00003oool0oooo00P0oooo00?o00000;no_`2o_kl01`2o_kl2o`00
+00d0oooo00?o00000;no_`2o_kl02P2o_kl2o`0000`0oooo00?o0000okno_ono_kl04ono_kl00ol0
+003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl1o`00
+000000?o0000okno_ono_kl04_no_kl00ol00000oooo0?ooo`080?ooo`03o`00002o_kl0_kno00H0
+_kno00?o00000?ooo`3oool03P3oool00ol00000_kno0;no_`070;no_`;o00003P3oool00ol0003o
+_knookno_`0Cokno_`03o`000?no_koo_kno01;o_kno00?o0000okno_ono_kl04_no_kl00ol0003o
+_knookno_`0Cokno_`7o000000000ol0003o_knookno_`0Bokno_`03o`00003oool0oooo00T0oooo
+00?o00000;no_`2o_kl00`2o_kl2o`000140oooo00?o00000;no_`2o_kl01P2o_kl00ol00000oooo
+0?ooo`0>0?ooo`03o`000?no_koo_kno01?o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_kno
+okno_`0Bokno_`03o`000?no_koo_kno01?o_kno0Ol000000003o`000?no_koo_kno01;o_kno00?o
+00000?ooo`3oool02@3oool01?l00000_kno0;no_`2o_kl2o`0001@0oooo00?o00000;no_`2o_kl0
+0`2o_kl2o`000140oooo00?o0000okno_ono_kl04ono_kl00ol0003o_knookno_`0Bokno_`03o`00
+0?no_koo_kno01;o_kno00?o0000okno_ono_kl04ono_kl1o`00000000?o0000okno_ono_kl04_no
+_kl00ol00000oooo0?ooo`0:0?ooo`03o`00002o_koo000001H0oooo00Co00000;no_`2o_kl0_kno
+0_l0000C0?ooo`03o`000?no_koo_kno01?o_kno00?o0000okno_ono_kl04_no_kl00ol0003o_kno
+okno_`0Bokno_`03o`000?no_koo_kno01?o_kno0Ol000000003o`000?no_koo_kno01;o_kno00?o
+00000?ooo`3oool02`3oool00ol00000oooo0?ooo`0F0?ooo`03o`00002o_koo000001D0oooo00?o
+0000okno_ono_kl04ono_kl00ol0003o_knookno_`0Bokno_`03o`000?no_koo_kno01;o_kno00?o
+0000okno_ono_kl04ono_kl1o`000000Zol000000001\
+\>"],
+  ImageRangeCache->{{{0, 170}, {170, 0}} -> {-3.99355*^-5, -3.99355*^-5, \
+0.046983, 0.046983}}],
+
+Cell[BoxData[
+    TagBox[\(\[SkeletonIndicator]  Graphics  \[SkeletonIndicator]\),
+      False,
+      Editable->False]], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+A packing of 71 unit squares in a square of side length s = 8.9632+\
+\>", "Section",
+  FontSize->24],
+
+Cell["\<\
+Another gap filled! I suppose that n = 71 is the last n < 100 for which a \
+nontrivial packing exists and yet none was previously known. (Well, not \
+previously known publically. As I mentioned to you long ago, I'd found one, \
+although I never sent it to you. But it was so terribly asymmetric and messy \
+that I couldn't be sure that I was getting even a local minimum. We can just \
+forget about it; this new packing is much nicer.)\
+\>", "Text",
+  FontSize->24],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(m = 
+      Root[73 + 428\ #1 + 714\ #1\^2 - 224\ #1\^3 - 1417\ #1\^4 - 
+            824\ #1\^5 + 270\ #1\^6 + 308\ #1\^7 + 49\ #1\^8 &, 5]; 
+    s = 2 + 3\ \@2 - \@2\ m + 3\ \@\(1 + m\^2\); 
+    a = \(7 + m\^2\ \((\(-1\) + s)\)\)\/\(1 + m\^2\); 
+    b = \(1 + 8\ m + m\^2 - m\ s\)\/\(1 + m\^2\); 
+    c = b + m \((6 - a)\) + 2 \@\( 1 + m\^2\); 
+    h = \(6 + 3\ m - c\ m + 6\ m\^2\)\/\(1 + m\^2\); 
+    i = \(c + 3\ m\^2\)\/\(1 + m\^2\); 
+    Show[Graphics[{lowerlefttriangle[7], unitsquare[4, 3], unitsquare[4, 4], 
+          unitsquare[3, 4], unitsquare[5, 2], unitsquare[2, 5], 
+          unitsquare[0, s - 1], upperrighttriangle[4, s], 
+          unitsquare[s - 1, s - 5], unitsquare[s - 5, s - 1], 
+          unitsquare[s - 1, 0], unitsquare[a, b, ArcTan[m]], 
+          unitsquare[a + 1\/\@\(1 + m\^2\), b + m\/\@\(1 + m\^2\), 
+            ArcTan[m]], unitsquare[6, c, ArcTan[m] - \[Pi]\/2], 
+          unitsquare[6 + 1\/\@\(1 + m\^2\), c + m\/\@\(1 + m\^2\), 
+            ArcTan[m] - \[Pi]\/2], 
+          unitsquare[6 + 2\/\@\(1 + m\^2\), c + \(2  m\)\/\@\(1 + m\^2\), 
+            ArcTan[m] - \[Pi]\/2], 
+          unitsquare[h, i, ArcTan[m]], \[IndentingNewLine]unitsquare[
+            h + 1\/\@\(1 + m\^2\), i + m\/\@\(1 + m\^2\), ArcTan[m]], 
+          unitsquare[s - 1, s - 1 - 2 \@ 2, \(3  \[Pi]\)\/4], 
+          unitsquare[s - 1 - 1\/\@2, s - 1 - 5\/\@2, \(3  \[Pi]\)\/4], 
+          unitsquare[5, 2  s - 9 - 4 \@ 2], 
+          unitsquare[s - 5\/2, s - 5\/2, \(5  \[Pi]\)\/4], 
+          unitsquare[s - \(5 + \@2\)\/2, 
+            s - \(5 + \@2\)\/2, \(5  \[Pi]\)\/4], 
+          unitsquare[s - 5\/2, s - 5\/2, \(3  \[Pi]\)\/4], 
+          unitsquare[s - \(5 + \@2\)\/2, 
+            s - \(5 + \@2\)\/2, \(3  \[Pi]\)\/4], 
+          unitsquare[s - 1 - 2 \@ 2, s - 1, \(5  \[Pi]\)\/4], 
+          unitsquare[s - 1 - 5\/\@2, s - 1 - 1\/\@2, \(5  \[Pi]\)\/4], 
+          unitsquare[2  s - 9 - 4 \@ 2, 5], unitsquare[b, a, \(-ArcTan[m]\)], 
+          unitsquare[b + m\/\@\(1 + m\^2\), 
+            a + 1\/\@\(1 + m\^2\), \(-ArcTan[m]\)], 
+          unitsquare[c, 6, \(-ArcTan[m]\) + \[Pi]\/2], 
+          unitsquare[c + m\/\@\(1 + m\^2\), 
+            6 + 1\/\@\(1 + m\^2\), \(-ArcTan[m]\) + \[Pi]\/2], 
+          unitsquare[c + \(2  m\)\/\@\(1 + m\^2\), 
+            6 + 2\/\@\(1 + m\^2\), \(-ArcTan[m]\) + \[Pi]\/2], 
+          unitsquare[i, h, \(-ArcTan[m]\)], 
+          unitsquare[i + m\/\@\(1 + m\^2\), 
+            h + 1\/\@\(1 + m\^2\), \(-ArcTan[m]\)], square[s]}], 
+      AspectRatio \[Rule] Automatic, ImageSize \[Rule] {171, 171}, 
+      PlotRange \[Rule] {{0, s}, {0, s}}]\)], "Input"],
+
+Cell[GraphicsData["PostScript", "\<\
+%!
+%%Creator: Mathematica
+%%AspectRatio: 1 
+%%ImageSize: 171 171 
+MathPictureStart
+/Mabs {
+Mgmatrix idtransform
+Mtmatrix dtransform
+} bind def
+/Mabsadd { Mabs
+3 -1 roll add
+3 1 roll add
+exch } bind def
+%% Graphics
+%%IncludeResource: font Courier
+%%IncludeFont: Courier
+/Courier findfont 10  scalefont  setfont
+% Scaling calculations
+-2.29932e-17 0.111566 0 0.111566 [
+[ 0 0 0 0 ]
+[ 1 1 0 0 ]
+] MathScale
+% Start of Graphics
+1 setlinecap
+1 setlinejoin
+newpath
+0 0 m
+1 0 L
+1 1 L
+0 1 L
+closepath
+clip
+newpath
+.75 g
+0 0 m
+.11157 0 L
+.11157 .11157 L
+0 .11157 L
+F
+0 g
+.5 Mabswid
+[ ] 0 setdash
+0 0 m
+.11157 0 L
+.11157 .11157 L
+0 .11157 L
+0 0 L
+s
+.75 g
+0 .11157 m
+.11157 .11157 L
+.11157 .22313 L
+0 .22313 L
+F
+0 g
+0 .11157 m
+.11157 .11157 L
+.11157 .22313 L
+0 .22313 L
+0 .11157 L
+s
+.75 g
+0 .22313 m
+.11157 .22313 L
+.11157 .3347 L
+0 .3347 L
+F
+0 g
+0 .22313 m
+.11157 .22313 L
+.11157 .3347 L
+0 .3347 L
+0 .22313 L
+s
+.75 g
+0 .3347 m
+.11157 .3347 L
+.11157 .44627 L
+0 .44627 L
+F
+0 g
+0 .3347 m
+.11157 .3347 L
+.11157 .44627 L
+0 .44627 L
+0 .3347 L
+s
+.75 g
+0 .44627 m
+.11157 .44627 L
+.11157 .55783 L
+0 .55783 L
+F
+0 g
+0 .44627 m
+.11157 .44627 L
+.11157 .55783 L
+0 .55783 L
+0 .44627 L
+s
+.75 g
+0 .55783 m
+.11157 .55783 L
+.11157 .6694 L
+0 .6694 L
+F
+0 g
+0 .55783 m
+.11157 .55783 L
+.11157 .6694 L
+0 .6694 L
+0 .55783 L
+s
+.75 g
+0 .6694 m
+.11157 .6694 L
+.11157 .78097 L
+0 .78097 L
+F
+0 g
+0 .6694 m
+.11157 .6694 L
+.11157 .78097 L
+0 .78097 L
+0 .6694 L
+s
+.75 g
+.11157 0 m
+.22313 0 L
+.22313 .11157 L
+.11157 .11157 L
+F
+0 g
+.11157 0 m
+.22313 0 L
+.22313 .11157 L
+.11157 .11157 L
+.11157 0 L
+s
+.75 g
+.11157 .11157 m
+.22313 .11157 L
+.22313 .22313 L
+.11157 .22313 L
+F
+0 g
+.11157 .11157 m
+.22313 .11157 L
+.22313 .22313 L
+.11157 .22313 L
+.11157 .11157 L
+s
+.75 g
+.11157 .22313 m
+.22313 .22313 L
+.22313 .3347 L
+.11157 .3347 L
+F
+0 g
+.11157 .22313 m
+.22313 .22313 L
+.22313 .3347 L
+.11157 .3347 L
+.11157 .22313 L
+s
+.75 g
+.11157 .3347 m
+.22313 .3347 L
+.22313 .44627 L
+.11157 .44627 L
+F
+0 g
+.11157 .3347 m
+.22313 .3347 L
+.22313 .44627 L
+.11157 .44627 L
+.11157 .3347 L
+s
+.75 g
+.11157 .44627 m
+.22313 .44627 L
+.22313 .55783 L
+.11157 .55783 L
+F
+0 g
+.11157 .44627 m
+.22313 .44627 L
+.22313 .55783 L
+.11157 .55783 L
+.11157 .44627 L
+s
+.75 g
+.11157 .55783 m
+.22313 .55783 L
+.22313 .6694 L
+.11157 .6694 L
+F
+0 g
+.11157 .55783 m
+.22313 .55783 L
+.22313 .6694 L
+.11157 .6694 L
+.11157 .55783 L
+s
+.75 g
+.22313 0 m
+.3347 0 L
+.3347 .11157 L
+.22313 .11157 L
+F
+0 g
+.22313 0 m
+.3347 0 L
+.3347 .11157 L
+.22313 .11157 L
+.22313 0 L
+s
+.75 g
+.22313 .11157 m
+.3347 .11157 L
+.3347 .22313 L
+.22313 .22313 L
+F
+0 g
+.22313 .11157 m
+.3347 .11157 L
+.3347 .22313 L
+.22313 .22313 L
+.22313 .11157 L
+s
+.75 g
+.22313 .22313 m
+.3347 .22313 L
+.3347 .3347 L
+.22313 .3347 L
+F
+0 g
+.22313 .22313 m
+.3347 .22313 L
+.3347 .3347 L
+.22313 .3347 L
+.22313 .22313 L
+s
+.75 g
+.22313 .3347 m
+.3347 .3347 L
+.3347 .44627 L
+.22313 .44627 L
+F
+0 g
+.22313 .3347 m
+.3347 .3347 L
+.3347 .44627 L
+.22313 .44627 L
+.22313 .3347 L
+s
+.75 g
+.22313 .44627 m
+.3347 .44627 L
+.3347 .55783 L
+.22313 .55783 L
+F
+0 g
+.22313 .44627 m
+.3347 .44627 L
+.3347 .55783 L
+.22313 .55783 L
+.22313 .44627 L
+s
+.75 g
+.3347 0 m
+.44627 0 L
+.44627 .11157 L
+.3347 .11157 L
+F
+0 g
+.3347 0 m
+.44627 0 L
+.44627 .11157 L
+.3347 .11157 L
+.3347 0 L
+s
+.75 g
+.3347 .11157 m
+.44627 .11157 L
+.44627 .22313 L
+.3347 .22313 L
+F
+0 g
+.3347 .11157 m
+.44627 .11157 L
+.44627 .22313 L
+.3347 .22313 L
+.3347 .11157 L
+s
+.75 g
+.3347 .22313 m
+.44627 .22313 L
+.44627 .3347 L
+.3347 .3347 L
+F
+0 g
+.3347 .22313 m
+.44627 .22313 L
+.44627 .3347 L
+.3347 .3347 L
+.3347 .22313 L
+s
+.75 g
+.3347 .3347 m
+.44627 .3347 L
+.44627 .44627 L
+.3347 .44627 L
+F
+0 g
+.3347 .3347 m
+.44627 .3347 L
+.44627 .44627 L
+.3347 .44627 L
+.3347 .3347 L
+s
+.75 g
+.44627 0 m
+.55783 0 L
+.55783 .11157 L
+.44627 .11157 L
+F
+0 g
+.44627 0 m
+.55783 0 L
+.55783 .11157 L
+.44627 .11157 L
+.44627 0 L
+s
+.75 g
+.44627 .11157 m
+.55783 .11157 L
+.55783 .22313 L
+.44627 .22313 L
+F
+0 g
+.44627 .11157 m
+.55783 .11157 L
+.55783 .22313 L
+.44627 .22313 L
+.44627 .11157 L
+s
+.75 g
+.44627 .22313 m
+.55783 .22313 L
+.55783 .3347 L
+.44627 .3347 L
+F
+0 g
+.44627 .22313 m
+.55783 .22313 L
+.55783 .3347 L
+.44627 .3347 L
+.44627 .22313 L
+s
+.75 g
+.55783 0 m
+.6694 0 L
+.6694 .11157 L
+.55783 .11157 L
+F
+0 g
+.55783 0 m
+.6694 0 L
+.6694 .11157 L
+.55783 .11157 L
+.55783 0 L
+s
+.75 g
+.55783 .11157 m
+.6694 .11157 L
+.6694 .22313 L
+.55783 .22313 L
+F
+0 g
+.55783 .11157 m
+.6694 .11157 L
+.6694 .22313 L
+.55783 .22313 L
+.55783 .11157 L
+s
+.75 g
+.6694 0 m
+.78097 0 L
+.78097 .11157 L
+.6694 .11157 L
+F
+0 g
+.6694 0 m
+.78097 0 L
+.78097 .11157 L
+.6694 .11157 L
+.6694 0 L
+s
+.75 g
+.44627 .3347 m
+.55783 .3347 L
+.55783 .44627 L
+.44627 .44627 L
+F
+0 g
+.44627 .3347 m
+.55783 .3347 L
+.55783 .44627 L
+.44627 .44627 L
+.44627 .3347 L
+s
+.75 g
+.44627 .44627 m
+.55783 .44627 L
+.55783 .55783 L
+.44627 .55783 L
+F
+0 g
+.44627 .44627 m
+.55783 .44627 L
+.55783 .55783 L
+.44627 .55783 L
+.44627 .44627 L
+s
+.75 g
+.3347 .44627 m
+.44627 .44627 L
+.44627 .55783 L
+.3347 .55783 L
+F
+0 g
+.3347 .44627 m
+.44627 .44627 L
+.44627 .55783 L
+.3347 .55783 L
+.3347 .44627 L
+s
+.75 g
+.55783 .22313 m
+.6694 .22313 L
+.6694 .3347 L
+.55783 .3347 L
+F
+0 g
+.55783 .22313 m
+.6694 .22313 L
+.6694 .3347 L
+.55783 .3347 L
+.55783 .22313 L
+s
+.75 g
+.22313 .55783 m
+.3347 .55783 L
+.3347 .6694 L
+.22313 .6694 L
+F
+0 g
+.22313 .55783 m
+.3347 .55783 L
+.3347 .6694 L
+.22313 .6694 L
+.22313 .55783 L
+s
+.75 g
+0 .88843 m
+.11157 .88843 L
+.11157 1 L
+0 1 L
+F
+0 g
+0 .88843 m
+.11157 .88843 L
+.11157 1 L
+0 1 L
+0 .88843 L
+s
+.75 g
+.88843 .88843 m
+1 .88843 L
+1 1 L
+.88843 1 L
+F
+0 g
+.88843 .88843 m
+1 .88843 L
+1 1 L
+.88843 1 L
+.88843 .88843 L
+s
+.75 g
+.88843 .77687 m
+1 .77687 L
+1 .88843 L
+.88843 .88843 L
+F
+0 g
+.88843 .77687 m
+1 .77687 L
+1 .88843 L
+.88843 .88843 L
+.88843 .77687 L
+s
+.75 g
+.88843 .6653 m
+1 .6653 L
+1 .77687 L
+.88843 .77687 L
+F
+0 g
+.88843 .6653 m
+1 .6653 L
+1 .77687 L
+.88843 .77687 L
+.88843 .6653 L
+s
+.75 g
+.88843 .55373 m
+1 .55373 L
+1 .6653 L
+.88843 .6653 L
+F
+0 g
+.88843 .55373 m
+1 .55373 L
+1 .6653 L
+.88843 .6653 L
+.88843 .55373 L
+s
+.75 g
+.77687 .88843 m
+.88843 .88843 L
+.88843 1 L
+.77687 1 L
+F
+0 g
+.77687 .88843 m
+.88843 .88843 L
+.88843 1 L
+.77687 1 L
+.77687 .88843 L
+s
+.75 g
+.77687 .77687 m
+.88843 .77687 L
+.88843 .88843 L
+.77687 .88843 L
+F
+0 g
+.77687 .77687 m
+.88843 .77687 L
+.88843 .88843 L
+.77687 .88843 L
+.77687 .77687 L
+s
+.75 g
+.77687 .6653 m
+.88843 .6653 L
+.88843 .77687 L
+.77687 .77687 L
+F
+0 g
+.77687 .6653 m
+.88843 .6653 L
+.88843 .77687 L
+.77687 .77687 L
+.77687 .6653 L
+s
+.75 g
+.6653 .88843 m
+.77687 .88843 L
+.77687 1 L
+.6653 1 L
+F
+0 g
+.6653 .88843 m
+.77687 .88843 L
+.77687 1 L
+.6653 1 L
+.6653 .88843 L
+s
+.75 g
+.6653 .77687 m
+.77687 .77687 L
+.77687 .88843 L
+.6653 .88843 L
+F
+0 g
+.6653 .77687 m
+.77687 .77687 L
+.77687 .88843 L
+.6653 .88843 L
+.6653 .77687 L
+s
+.75 g
+.55373 .88843 m
+.6653 .88843 L
+.6653 1 L
+.55373 1 L
+F
+0 g
+.55373 .88843 m
+.6653 .88843 L
+.6653 1 L
+.55373 1 L
+.55373 .88843 L
+s
+.75 g
+.88843 .44217 m
+1 .44217 L
+1 .55373 L
+.88843 .55373 L
+F
+0 g
+.88843 .44217 m
+1 .44217 L
+1 .55373 L
+.88843 .55373 L
+.88843 .44217 L
+s
+.75 g
+.44217 .88843 m
+.55373 .88843 L
+.55373 1 L
+.44217 1 L
+F
+0 g
+.44217 .88843 m
+.55373 .88843 L
+.55373 1 L
+.44217 1 L
+.44217 .88843 L
+s
+.75 g
+.88843 0 m
+1 0 L
+1 .11157 L
+.88843 .11157 L
+F
+0 g
+.88843 0 m
+1 0 L
+1 .11157 L
+.88843 .11157 L
+.88843 0 L
+s
+.75 g
+.82426 .05886 m
+.91047 .12967 L
+.83966 .21588 L
+.75345 .14507 L
+F
+0 g
+.82426 .05886 m
+.91047 .12967 L
+.83966 .21588 L
+.75345 .14507 L
+.82426 .05886 L
+s
+.75 g
+.91047 .12967 m
+.99669 .20048 L
+.92588 .28669 L
+.83966 .21588 L
+F
+0 g
+.91047 .12967 m
+.99669 .20048 L
+.92588 .28669 L
+.83966 .21588 L
+.91047 .12967 L
+s
+.75 g
+.6694 .22041 m
+.74021 .1342 L
+.82642 .20501 L
+.75561 .29122 L
+F
+0 g
+.6694 .22041 m
+.74021 .1342 L
+.82642 .20501 L
+.75561 .29122 L
+.6694 .22041 L
+s
+.75 g
+.75561 .29122 m
+.82642 .20501 L
+.91264 .27582 L
+.84183 .36203 L
+F
+0 g
+.75561 .29122 m
+.82642 .20501 L
+.91264 .27582 L
+.84183 .36203 L
+.75561 .29122 L
+s
+.75 g
+.84183 .36203 m
+.91264 .27582 L
+.99885 .34663 L
+.92804 .43284 L
+F
+0 g
+.84183 .36203 m
+.91264 .27582 L
+.99885 .34663 L
+.92804 .43284 L
+.84183 .36203 L
+s
+.75 g
+.72545 .26645 m
+.81167 .33726 L
+.74086 .42348 L
+.65464 .35267 L
+F
+0 g
+.72545 .26645 m
+.81167 .33726 L
+.74086 .42348 L
+.65464 .35267 L
+.72545 .26645 L
+s
+.75 g
+.81167 .33726 m
+.89788 .40807 L
+.82707 .49429 L
+.74086 .42348 L
+F
+0 g
+.81167 .33726 m
+.89788 .40807 L
+.82707 .49429 L
+.74086 .42348 L
+.81167 .33726 L
+s
+.75 g
+.88843 .57288 m
+.80954 .65177 L
+.73065 .57288 L
+.80954 .49399 L
+F
+0 g
+.88843 .57288 m
+.80954 .65177 L
+.73065 .57288 L
+.80954 .49399 L
+.88843 .57288 L
+s
+.75 g
+.80954 .49399 m
+.73065 .57288 L
+.65177 .49399 L
+.73065 .4151 L
+F
+0 g
+.80954 .49399 m
+.73065 .57288 L
+.65177 .49399 L
+.73065 .4151 L
+.80954 .49399 L
+s
+.75 g
+.55783 .36479 m
+.6694 .36479 L
+.6694 .47635 L
+.55783 .47635 L
+F
+0 g
+.55783 .36479 m
+.6694 .36479 L
+.6694 .47635 L
+.55783 .47635 L
+.55783 .36479 L
+s
+.75 g
+.72108 .72108 m
+.64219 .64219 L
+.72108 .56331 L
+.79997 .64219 L
+F
+0 g
+.72108 .72108 m
+.64219 .64219 L
+.72108 .56331 L
+.79997 .64219 L
+.72108 .72108 L
+s
+.75 g
+.64219 .64219 m
+.56331 .56331 L
+.64219 .48442 L
+.72108 .56331 L
+F
+0 g
+.64219 .64219 m
+.56331 .56331 L
+.64219 .48442 L
+.72108 .56331 L
+.64219 .64219 L
+s
+.75 g
+.72108 .72108 m
+.64219 .79997 L
+.56331 .72108 L
+.64219 .64219 L
+F
+0 g
+.72108 .72108 m
+.64219 .79997 L
+.56331 .72108 L
+.64219 .64219 L
+.72108 .72108 L
+s
+.75 g
+.64219 .64219 m
+.56331 .72108 L
+.48442 .64219 L
+.56331 .56331 L
+F
+0 g
+.64219 .64219 m
+.56331 .72108 L
+.48442 .64219 L
+.56331 .56331 L
+.64219 .64219 L
+s
+.75 g
+.57288 .88843 m
+.49399 .80954 L
+.57288 .73065 L
+.65177 .80954 L
+F
+0 g
+.57288 .88843 m
+.49399 .80954 L
+.57288 .73065 L
+.65177 .80954 L
+.57288 .88843 L
+s
+.75 g
+.49399 .80954 m
+.4151 .73065 L
+.49399 .65177 L
+.57288 .73065 L
+F
+0 g
+.49399 .80954 m
+.4151 .73065 L
+.49399 .65177 L
+.57288 .73065 L
+.49399 .80954 L
+s
+.75 g
+.36479 .55783 m
+.47635 .55783 L
+.47635 .6694 L
+.36479 .6694 L
+F
+0 g
+.36479 .55783 m
+.47635 .55783 L
+.47635 .6694 L
+.36479 .6694 L
+.36479 .55783 L
+s
+.75 g
+.05886 .82426 m
+.14507 .75345 L
+.21588 .83966 L
+.12967 .91047 L
+F
+0 g
+.05886 .82426 m
+.14507 .75345 L
+.21588 .83966 L
+.12967 .91047 L
+.05886 .82426 L
+s
+.75 g
+.12967 .91047 m
+.21588 .83966 L
+.28669 .92588 L
+.20048 .99669 L
+F
+0 g
+.12967 .91047 m
+.21588 .83966 L
+.28669 .92588 L
+.20048 .99669 L
+.12967 .91047 L
+s
+.75 g
+.22041 .6694 m
+.29122 .75561 L
+.20501 .82642 L
+.1342 .74021 L
+F
+0 g
+.22041 .6694 m
+.29122 .75561 L
+.20501 .82642 L
+.1342 .74021 L
+.22041 .6694 L
+s
+.75 g
+.29122 .75561 m
+.36203 .84183 L
+.27582 .91264 L
+.20501 .82642 L
+F
+0 g
+.29122 .75561 m
+.36203 .84183 L
+.27582 .91264 L
+.20501 .82642 L
+.29122 .75561 L
+s
+.75 g
+.36203 .84183 m
+.43284 .92804 L
+.34663 .99885 L
+.27582 .91264 L
+F
+0 g
+.36203 .84183 m
+.43284 .92804 L
+.34663 .99885 L
+.27582 .91264 L
+.36203 .84183 L
+s
+.75 g
+.26645 .72545 m
+.35267 .65464 L
+.42348 .74086 L
+.33726 .81167 L
+F
+0 g
+.26645 .72545 m
+.35267 .65464 L
+.42348 .74086 L
+.33726 .81167 L
+.26645 .72545 L
+s
+.75 g
+.33726 .81167 m
+.42348 .74086 L
+.49429 .82707 L
+.40807 .89788 L
+F
+0 g
+.33726 .81167 m
+.42348 .74086 L
+.49429 .82707 L
+.40807 .89788 L
+.33726 .81167 L
+s
+0 0 m
+1 0 L
+1 1 L
+0 1 L
+0 0 L
+s
+% End of Graphics
+MathPictureEnd
+\
+\>"], "Graphics",
+  ImageSize->{171, 171},
+  ImageCache->GraphicsData["Bitmap", "\<\
+CF5dJ6E]HGAYHf4PAg9QL6QYHg<PAVmbKF5d0`40002[0000Zb000`400?l00000o`00003oZol00000
+0003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno
+_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno
+_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool04?ooool00ol0003o_knookno_`0@okno
+_`7o000000000ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono
+_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono
+_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?oooooooooo013ooooo00?o0000okno_ono
+_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno_`03o`00
+0?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`00
+0?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003oooooooooo`0@ooooo`03o`00
+0?no_koo_kno013o_kno0Ol000000003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no
+_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no
+_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool04?oo
+ool00ol0003o_knookno_`0@okno_`7o000000000ol0003o_knookno_`0?okno_`03o`000?no_koo
+_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo
+_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?oooooo
+oooo013ooooo00?o0000okno_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0
+003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0
+003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0
+003oooooooooo`0@ooooo`03o`000?no_koo_kno013o_kno0Ol000000003o`000?no_koo_kno00oo
+_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o
+_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o
+_kno00?o0000ooooooooool04?ooool00ol0003o_knookno_`0@okno_`7o000000000ol0003o_kno
+okno_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_kno
+okno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_kno
+okno_`0@okno_`03o`000?oooooooooo013ooooo00?o0000okno_ono_kl04?no_kl1o`00000000?o
+0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o
+0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o
+0000okno_ono_kl04?no_kl00ol0003oooooooooo`0@ooooo`03o`000?no_koo_kno013o_kno0Ol0
+00000003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@
+okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@
+okno_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool04?ooool00ol0003o_knookno_`0@
+okno_`7o000000000ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000okno
+_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno
+_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?oooooooooo00Gooooo0_l00009oooo
+o`03o`000?no_koo_kno013o_kno0Ol000000003o`000?no_koo_kno00oo_kno00?o0000okno_ono
+_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono
+_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000oooooooo
+ool01Oooool00ol00000_knoo`000008ooooo`03o`000?no_koo_kno013o_kno0Ol000000003o`00
+0?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`00
+0?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`00
+0?no_koo_kno013o_kno00?o0000ooooooooool01?ooool01Ol00000_kno0;no_`2o_koo000000Oo
+oooo00?o0000okno_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_kno
+okno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_kno
+okno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003ooooo
+ooooo`03ooooo`03o`00002o_kl0_kno00<0_kno00?o0000ooooooooool01?ooool00ol0003o_kno
+okno_`0@okno_`7o000000000ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o_kno00?o
+0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o
+0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?oooooooooo00;ooooo00?o
+00000;no_`2o_kl01@2o_kl00ol0003oooooooooo`03ooooo`03o`000?no_koo_kno013o_kno0Ol0
+00000003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@
+okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@
+okno_`03o`000?no_koo_kno013o_kno00Go0000ooooooooooooooooo`0000090;no_`03o`000?oo
+oooooooo00;ooooo00?o0000okno_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl0
+0ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl0
+0ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl0
+1?l0003oooooooooool0000;0;no_`;o00000_ooool00ol0003o_knookno_`0@okno_`7o00000000
+0ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl0
+0ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl0
+0ol0003o_knookno_`0@okno_`03o`000?oooooo000000h0_kno00?o0000ooooool000004_no_kl1
+o`000000QOl000000ooooooo00000;no_`0>0;no_aGo000000000ol0003o_knookno_`0?okno_`03
+o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03
+o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003oooooooooo`0Aooooo`03
+o`00002o_kl0_kno00l0_kno00?o0000ooooooooool04?ooool1o`00000000?o0000okno_ono_kl0
+3ono_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl0
+4?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool0
+4?ooool00ol00000_kno0;no_`0A0;no_`03o`000?oooooooooo00oooooo0Ol000000003o`000?no
+_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no
+_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?oo
+oooooooo00oooooo00?o00000;no_`2o_kl04`2o_kl00ol0003oooooooooo`0>ooooo`7o00000000
+0ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl0
+0ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl0
+0ol0003oooooooooo`09ooooo`;o00000oooool00ol00000_kno0;no_`0E0;no_`;o00003_ooool1
+o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno
+013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno
+013o_kno00?o0000ooooooooool02Oooool01Ol00000_knoo`000?oooooo000001P0_kno00?o0000
+0;no_ol000003Oooool1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno
+_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno
+_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool02?ooool01?l00000_kno0;no_`2o_kl2
+o`0001L0_kno00Go00000;no_`2o_kl0_knoo`00000<ooooo`7o000000000ol0003o_knookno_`0?
+okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@
+okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003oooooooooo`07
+ooooo`03o`00002o_kl0_kno00<0_kno0_l0000E0;no_`03o`00002o_kl0_kno00<0_kno00?o0000
+ooooooooool02Oooool1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno
+_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno
+_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool01_ooool00ol00000_kno0;no_`050;no
+_`;o00004`2o_kl00ol00000_kno0;no_`050;no_`;o00002Oooool1o`00000000?o0000okno_ono
+_kl03ono_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono
+_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000oooooooo
+ool01Oooool00ol00000_kno0;no_`080;no_`03o`00002o_kl0_kno00l0_kno00?o00000;no_`2o
+_kl0202o_kl00ol0003oooooooooo`06ooooo`7o000000000ol0003o_knookno_`0?okno_`03o`00
+0?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`00
+0?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003oooooooooo`05ooooo`03o`00
+002o_kl0_kno00T0_kno00?o00000;no_`2o_kl03@2o_kl00ol00000_kno0;no_`0:0;no_`03o`00
+0?oooooooooo00Gooooo0Ol000000003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no
+_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no
+_kl00ol0003o_knookno_`0@okno_`03o`000?oooooooooo00Cooooo00?o00000;no_`2o_kl02`2o
+_kl00ol00000_kno0;no_`0;0;no_`03o`00002o_kl0_kno00`0_kno00?o0000ooooooooool01?oo
+ool1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo
+_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo
+_kno013o_kno00?o0000ooooooooool00oooool00ol00000_kno0;no_`0=0;no_`;o00002`2o_kl0
+0ol00000_kno0;no_`0=0;no_`;o00001?ooool1o`00000000?o0000okno_ono_kl03ono_kl00ol0
+003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0
+003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool00_ooool00ol0
+0000_kno0;no_`0@0;no_`03o`00002o_kl0_kno00L0_kno00?o00000;no_`2o_kl0402o_kl01?l0
+003oooooooooooooool1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno
+_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno
+_`03o`000?no_koo_kno013o_kno00Go0000ooooooooooooooooo`00000D0;no_`03o`00002o_kl0
+_kno00D0_kno00?o00000;no_`2o_kl04P2o_kl00ol0003oooooooooo`01o`00000000?o0000okno
+_ono_kl03ono_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno
+_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00Go0000oooo
+ooooooooooooo`00000E0;no_`03o`00002o_kl0_kno00<0_kno00?o00000;no_`2o_kl0502o_kl1
+o`00007ooooo0Ol000000003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0
+003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0
+003o_knookno_`0@okno_`04o`000?ooooooooooo`0001L0_kno0_l000020;no_`03o`00002o_kl0
+_kno01H0_kno0_l000000003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0
+003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0
+003o_knookno_`0@okno_`03o`000?oooooo000001P0_kno00Co00000;no_ol0003o00006@2o_kl2
+o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno
+013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno
+013o_kno0_l0000H0;no_`05o`00002o_kl0_kno0;no_ol00000602o_kl1o`00007ooooo0Ol00000
+07?o00005`2o_kl00ol00000_kno0;no_`030;no_`03o`00002o_kl0_kno01@0_kno00?o0000oooo
+ooooool00Ol000000003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o
+_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o
+_knookno_`0@okno_`03o`000?oooooo000001D0_kno00?o00000;no_`2o_kl01@2o_kl2o`0001<0
+_kno00Co0000oooooooooooooooo0Ol000000003o`000?no_koo_kno00oo_kno00?o0000okno_ono
+_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono
+_kl04?no_kl00ol0003o_knookno_`0@okno_`04o`000?ooooooooooo`0001<0_kno00?o00000;no
+_`2o_kl0202o_kl00ol00000_kno0;no_`0?0;no_`03o`000?oooooooooo00;ooooo0Ol000000003
+o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03
+o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`05
+o`000?ooooooooooooooool000004P2o_kl00ol00000_kno0;no_`090;no_`03o`00002o_kl0_kno
+00d0_kno00?o0000ooooooooool00oooool1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o
+_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o
+_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool00_ooool2o`0000l0
+_kno00?o00000;no_`2o_kl02`2o_kl00ol00000_kno0;no_`0;0;no_`03o`000?oooooooooo00Co
+oooo0Ol000000003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_kno
+okno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_kno
+okno_`0@okno_`03o`000?oooooooooo00Cooooo00?o00000;no_`2o_kl02`2o_kl00ol00000_kno
+0;no_`0=0;no_`;o00002`2o_kl00ol0003oooooooooo`04ooooo`7o000000000ol0003o_knookno
+_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno
+_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003ooooooooo
+o`05ooooo`03o`00002o_kl0_kno00T0_kno00?o00000;no_`2o_kl0402o_kl00ol00000_kno0;no
+_`070;no_`03o`000?oooooooooo00Gooooo0Ol000000003o`000?no_koo_kno00oo_kno00?o0000
+okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000
+okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?oooooooooo00Kooooo00?o0000
+0;no_`2o_kl01`2o_kl00ol00000_kno0;no_`0B0;no_`03o`00002o_kl0_kno00D0_kno00?o0000
+ooooooooool01_ooool1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno
+_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno
+_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool01oooool2o`0000L0_kno00?o00000;no
+_`2o_kl04`2o_kl00ol00000_kno0;no_`030;no_`03o`000?oooooooooo00Oooooo0Ol000000003
+o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03
+o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03
+o`000?oooooooooo00Oooooo00?o00000;no_ol000001@2o_kl00ol00000_kno0;no_`0E0;no_`;o
+00000P2o_kl00ol0003oooooooooo`08ooooo`7o000000000ol0003o_knookno_`0?okno_`03o`00
+0?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`00
+0?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003oooooooooo`06ooooo`05o`00
+002o_kl0_kno0;no_ol000000`2o_kl00ol00000_kno0;no_`0F0;no_`04o`00002o_koo0000o`00
+00_ooooo0Ol000000003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o
+_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o
+_knookno_`0@okno_`03o`000?oooooooooo00Gooooo00?o00000;no_`2o_kl00`2o_kl00ol00000
+_knoo`00000H0;no_`05o`00002o_kl0_kno0;no_ol000002oooool1o`00000000?o0000okno_ono
+_kl03ono_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono
+_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000oooooooo
+ool01?ooool00ol00000_kno0;no_`050;no_`;o00005`2o_kl00ol00000_kno0;no_`030;no_`03
+o`000?oooooooooo00Sooooo0Ol000000003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl0
+4?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl0
+4?no_kl00ol0003o_knookno_`0@okno_`03o`000?oooooooooo00?ooooo00?o00000;no_`2o_kl0
+1`2o_kl2o`0001D0_kno00?o00000;no_`2o_kl01@2o_kl00ol0003oooooooooo`07ooooo`7o0000
+00000ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no
+_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no
+_kl00ol0003oooooooooo`02ooooo`03o`00002o_kl0_kno00T0_kno0_l0000C0;no_`03o`00002o
+_kl0_kno00L0_kno00?o0000ooooooooool01_ooool1o`00000000?o0000okno_ono_kl03ono_kl0
+0ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl0
+0ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00Go0000ooooooooooooooooo`00
+000>0;no_`03o`00002o_kl0_kno0100_kno00?o00000;no_`2o_kl0202o_kl2o`0000Kooooo0Ol0
+00000003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@
+okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@
+okno_`05o`000?ooooooooooooooool000003`2o_kl2o`0000l0_kno00?o00000;no_`2o_kl02`2o
+_kl00ol0003oooooooooo`03ooooo`7o000000000ol0003o_knookno_`0?okno_`03o`000?no_koo
+_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo
+_kno013o_kno00?o0000okno_ono_kl04?no_kl01?l0003oooooooooool0000A0;no_`;o00003@2o
+_kl00ol00000_kno0;no_`0=0;no_`03o`000?oooooooooo00;ooooo0Ol000000003o`000?no_koo
+_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo
+_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?oooooo
+000001<0_kno0_l0000;0;no_`03o`00002o_kl0_kno00l0_kno00Co0000oooooooooooooooo0Ol0
+000007?o00005@2o_kl2o`0000T0_kno00?o00000;no_`2o_kl04@2o_kl00ol0003oooooooooo`01
+o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno
+013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?oooooooooo
+013ooooo00?o00000;no_`2o_kl05@2o_kl3o`0000L0_kno00?o00000;no_`2o_kl04P2o_kl1o`00
+007ooooo0Ol000000003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o
+_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o
+ooooooooo`0?ooooo`03o`00002o_kl0_kno01H0_kno00Co00000;no_ol0003o00001@2o_kl00ol0
+0000_kno0;no_`0D0;no_`;o000000000ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o
+_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o
+_kno00?o0000ooooooooool03_ooool2o`0001L0_kno00Co00000;no_`2o_kl0_kno0_l000030;no
+_`03o`00002o_kl0_kno01D0_kno0_l000000003o`000?no_koo_kno00oo_kno00?o0000okno_ono
+_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono
+_kl04?no_kl00ol0003oooooooooo`0@ooooo`03o`00002o_kl0_kno01<0_kno00?o00000;no_`2o
+_kl00`2o_kl2o`0000030;no_ol00000_kno01H0_kno0Ol00001ooooo`7o000000000ol0003o_kno
+okno_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_kno
+okno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool04Oooool00ol00000_kno
+0;no_`0A0;no_`03o`00002o_kl0_kno00D0_kno0ol0000F0;no_`03o`000?oooooooooo007o0000
+00000ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no
+_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno5?l000000ooooooo00000;no
+_`0@0;no_`03o`00002o_kl0_kno00P0_kno0_l0000D0;no_`04o`000?ooooooooooooooo`7o0000
+00000ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no
+_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no
+_kl01?l0003oooooooooool0000?0;no_`03o`00002o_kl0_kno00X0_kno0_l0000B0;no_`03o`00
+0?oooooooooo00;ooooo0Ol000000003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no
+_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no
+_kl00ol0003o_knookno_`0@okno_`05o`000?ooooooooooooooool000003@2o_kl00ol00000_kno
+0;no_`0<0;no_`;o00004@2o_kl00ol0003oooooooooo`02ooooo`7o000000000ol0003o_knookno
+_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno
+_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003ooooooooo
+o`02ooooo`;o00002`2o_kl00ol00000_kno0;no_`0=0;no_`;o00003`2o_kl00ol0003ooooooooo
+o`03ooooo`7o000000000ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000
+okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000
+okno_ono_kl04?no_kl00ol0003oooooooooo`04ooooo`03o`00002o_kl0_kno00L0_kno00?o0000
+0;no_`2o_kl0402o_kl00ol00000_kno0;no_`0;0;no_`03o`000?oooooooooo00Cooooo0Ol00000
+0003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno
+_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno
+_`03o`000?oooooooooo00Gooooo00?o00000;no_`2o_kl01@2o_kl00ol00000_kno0;no_`0B0;no
+_`;o00002P2o_kl00ol0003oooooooooo`05ooooo`7o000000000ol0003o_knookno_`0?okno_`03
+o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03
+o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003oooooooooo`06ooooo`03
+o`00002o_kl0_kno00<0_kno00?o00000;no_`2o_kl0502o_kl2o`0000P0_kno00?o0000oooooooo
+ool01_ooool1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno_`03o`00
+0?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`00
+0?no_koo_kno013o_kno00?o0000ooooooooool01oooool01Ol00000_kno0;no_`2o_koo000001P0
+_kno0_l000070;no_`03o`000?oooooooooo00Kooooo0Ol000000003o`000?no_koo_kno00oo_kno
+00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno
+00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?oooooooooo00Oooooo
+0_l000000`2o_koo00000;no_`0H0;no_`03o`000?oooooo000000D0_kno00?o0000ooooooooool0
+1oooool1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno_`03o`000?no
+_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no
+_koo_kno013o_kno00?o0000ooooooooool01_ooool00ol00000_kno0;no_`02o`0001P0_kno00Go
+0000ooooooooooooooooo`0000030;no_`03o`000?oooooooooo00Sooooo0Ol000000003o`000?no
+_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no
+_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?oo
+oooooooo00Gooooo00?o00000;no_`2o_kl00P2o_kl2o`0001H0_kno00?o0000ooooooooool00ooo
+ool00ol00000_knoo`00000;ooooo`7o000000000ol0003o_knookno_`0?okno_`03o`000?no_koo
+_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo
+_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003oooooooooo`04ooooo`03o`00002o_kl0
+_kno00@0_kno0_l0000D0;no_`03o`000?oooooooooo00Gooooo00?o0000ooooooooool02_ooool1
+o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno
+013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno
+013o_kno00?o0000ooooooooool00oooool00ol00000_kno0;no_`060;no_`;o00004P2o_kl00ol0
+003oooooooooo`0Cooooo`7o0000001Oo`0001;o_kno00?o0000ooooooooool00_ooool00ol00000
+_kno0;no_`080;no_`;o00004@2o_kl00ol0003oooooooooo`0Do`00000000?o0000okno_ono_kl0
+3ono_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl0
+4?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00Go0000oooooooooooo
+ooooo`00000<0;no_`;o00003`2o_kl01Ol0003ooooooooooooooooo000001;o_kno0Ol000000003
+o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03
+o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`04
+o`000?ooooooooooo`0000h0_kno0ol0000<0;no_`03o`000?oooooooooo00;ooooo00?o0000okno
+_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno_`03
+o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03
+o`000?no_koo_kno013o_kno00?o0000ooooool00000402o_kl00ol0003oooooo`00000:0;no_`03
+o`000?oooooooooo00?ooooo00?o0000okno_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl0
+3ono_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl0
+4?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno0_l0000B0;no_`03o`00
+0?oooooo000000P0_kno00?o0000ooooooooool01?ooool00ol0003o_knookno_`0@okno_`7o0000
+00000ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no
+_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno5?l0000D0;no_`03o`000?oo
+oooo000000L0_kno00?o0000ooooooooool01?ooool00ol0003o_knookno_`0@okno_`7o00000000
+0ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl0
+0ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool03oooool0
+0ol00000_kno0;no_`0D0;no_`03o`000?oooooo000000D0_kno00?o0000ooooooooool01Oooool0
+0ol0003o_knookno_`0@okno_`7o000000000ol0003o_knookno_`0?okno_`03o`000?no_koo_kno
+013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno
+013o_kno00?o0000ooooooooool02oooool2o`000003ooooool00000_kno01L0_kno00?o0000oooo
+ool000000`2o_kl00ol0003oooooooooo`06ooooo`03o`000?no_koo_kno013o_kno0Ol000000003
+o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03
+o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003oooooooooo`0:ooooo`04
+o`00002o_kl0_knoo`0001X0_kno00Go0000ooooool00000_knoo`000009ooooo`03o`000?no_koo
+_kno013o_kno0Ol000000003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0
+003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0
+003oooooooooo`09ooooo`03o`00002o_kl0_kno0080_kno00?o00000;no_`2o_kl05`2o_kl2o`00
+0003ooooool0003ooooo00Wooooo00?o0000okno_ono_kl04?no_kl1o`00000000?o0000okno_ono
+_kl03ono_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono
+_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?oooooooooo00Sooooo00?o00000;no_`2o
+_kl0102o_kl00ol00000_kno0;no_`0E0;no_`04o`00002o_kl0_knoo`0000_ooooo00?o0000okno
+_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno_`03
+o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03
+o`000?oooooooooo00Oooooo00?o00000;no_`2o_kl01P2o_kl00ol00000_kno0;no_`0C0;no_`03
+o`00002o_kl0_kno0080_kno00?o0000ooooooooool02?ooool00ol0003o_knookno_`0@okno_`7o
+000000000ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl0
+4?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool0
+1_ooool00ol00000_kno0;no_`080;no_`03o`00002o_kl0_kno0140_kno00?o00000;no_`2o_kl0
+102o_kl00ol0003oooooooooo`07ooooo`03o`000?no_koo_kno013o_kno0Ol000000003o`000?no
+_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no
+_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003oooooooooo`05ooooo`03o`00002o
+_kl0_kno00X0_kno00?o00000;no_`2o_kl03`2o_kl00ol00000_kno0;no_`060;no_`03o`000?oo
+oooooooo00Kooooo00?o0000okno_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl0
+0ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl0
+0ol0003o_knookno_`0@okno_`03o`000?oooooooooo00Cooooo00?o00000;no_`2o_kl0302o_kl0
+0ol00000_kno0;no_`0=0;no_`03o`00002o_kl0_kno00P0_kno00?o0000ooooooooool01Oooool0
+0ol0003o_knookno_`0@okno_`7o000000000ol0003o_knookno_`0?okno_`03o`000?no_koo_kno
+013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno
+013o_kno00?o0000ooooooooool00oooool00ol00000_kno0;no_`0>0;no_`03o`00002o_kl0_kno
+00/0_kno00?o00000;no_`2o_kl02P2o_kl00ol0003oooooooooo`04ooooo`03o`000?no_koo_kno
+013o_kno0Ol000000003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o
+_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o
+ooooooooo`02ooooo`03o`00002o_kl0_kno0100_kno00?o00000;no_`2o_kl02@2o_kl00ol00000
+_kno0;no_`0<0;no_`03o`000?oooooooooo00?ooooo00?o0000okno_ono_kl04?no_kl1o`000000
+00?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno
+00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`05o`000?ooooooooooooooool0
+0000502o_kl00ol00000_kno0;no_`070;no_`03o`00002o_kl0_kno00h0_kno00?o0000oooooooo
+ool00_ooool00ol0003o_knookno_`0@okno_`7o000000000ol0003o_knookno_`0?okno_`03o`00
+0?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`00
+0?no_koo_kno013o_kno00Co0000oooooooooooo00005P2o_kl00ol00000_kno0;no_`050;no_`03
+o`00002o_kl0_kno0100_kno00Go0000ooooooooooooooooo`00000Bokno_`7o0000001Oo`000003
+ooooool00000_kno01L0_kno00?o00000;no_`2o_kl00`2o_kl00ol00000_kno0;no_`0B0;no_`03
+o`000?oooooooooo01Co000000000ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o_kno
+00?o0000okno_ono_kl04?no_kl00ol0003oooooooooo`03ooooo`03o`000?no_koo_kno00oo_kno
+00?o0000ooooooooool03?ooool00ol00000_kno0;no_`0H0;no_`05o`00002o_kl0_kno0;no_ol0
+00005P2o_kl00ol0003oooooo`00000Bokno_`7o000000000ol0003o_knookno_`0?okno_`03o`00
+0?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003oooooooooo`03ooooo`03o`00
+0?no_koo_kno00oo_kno00?o0000ooooooooool03?ooool2o`0001T0_kno0_l000000`2o_koo0000
+0;no_`0G0;no_`;o00004_no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno
+_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool00oooool00ol0003o_knookno
+_`0?okno_`03o`000?oooooooooo00_ooooo00Co00000;no_`2o_koo00005`2o_kl01?l00000_kno
+o`000?l0000I0;no_`;o00004_no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_kno
+okno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool00oooool00ol0003o_kno
+okno_`0?okno_`03o`000?oooooooooo00[ooooo00?o00000;no_`2o_kl00P2o_kl00ol00000_kno
+0;no_`0C0;no_`04o`00002o_kl0_kno0;no_`;o00005`2o_kl00ol0003oooooo`00000Bokno_`7o
+000000000ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl0
+4?no_kl00ol0003oooooooooo`03ooooo`03o`000?no_koo_kno00oo_kno00?o0000ooooooooool0
+2Oooool00ol00000_kno0;no_`040;no_`03o`00002o_kl0_kno0140_kno00?o00000;no_`2o_kl0
+0`2o_kl2o`0001D0_kno00Co0000oooooooooooo00004_no_kl1o`00000000?o0000okno_ono_kl0
+3ono_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool0
+0oooool00ol0003o_knookno_`0?okno_`03o`000?oooooooooo00Sooooo00?o00000;no_`2o_kl0
+1P2o_kl00ol00000_kno0;no_`0?0;no_`03o`00002o_kl0_kno00D0_kno0_l0000C0;no_`05o`00
+0?ooooooooooooooool000004_no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_kno
+okno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool00oooool00ol0003o_kno
+okno_`0?okno_`03o`000?oooooooooo00Oooooo00?o00000;no_`2o_kl0202o_kl00ol00000_kno
+0;no_`0=0;no_`03o`00002o_kl0_kno00L0_kno0_l0000A0;no_`03o`000?oooooooooo00;ooooo
+00?o0000okno_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno
+_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool00oooool00ol0003o_knookno
+_`0?okno_`03o`000?oooooooooo00Kooooo00?o00000;no_`2o_kl02P2o_kl00ol00000_kno0;no
+_`0;0;no_`03o`00002o_kl0_kno00T0_kno0_l0000?0;no_`03o`000?oooooooooo00?ooooo00?o
+0000okno_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@
+okno_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool00oooool00ol0003o_knookno_`0?
+okno_`03o`000?oooooooooo00Gooooo00?o00000;no_`2o_kl0302o_kl00ol00000_kno0;no_`09
+0;no_`03o`00002o_kl0_kno00/0_kno0_l0000=0;no_`03o`000?oooooooooo00Cooooo00?o0000
+okno_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno
+_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool00oooool00ol0003o_knookno_`0?okno
+_`03o`000?oooooooooo00Cooooo00?o00000;no_`2o_kl03P2o_kl00ol00000_kno0;no_`070;no
+_`03o`00002o_kl0_kno00d0_kno0_l0000;0;no_`03o`000?oooooooooo00Gooooo00?o0000okno
+_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno_`03
+o`000?no_koo_kno013o_kno00?o0000ooooooooool00oooool00ol0003o_knookno_`0?okno_`03
+o`000?oooooooooo00?ooooo00?o00000;no_`2o_kl0402o_kl00ol00000_kno0;no_`050;no_`03
+o`00002o_kl0_kno00l0_kno0_l000090;no_`03o`000?oooooooooo00Kooooo00?o0000okno_ono
+_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno_`03o`00
+0?no_koo_kno013o_kno00?o0000ooooooooool00oooool00ol0003o_knookno_`0?okno_`03o`00
+0?oooooooooo00;ooooo00?o00000;no_`2o_kl04P2o_kl00ol00000_kno0;no_`030;no_`03o`00
+002o_kl0_kno0140_kno0_l000070;no_`03o`000?oooooooooo00Oooooo00?o0000okno_ono_kl0
+4?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o_knookno_`0@okno_`03o`000?no
+_koo_kno013o_kno00?o0000ooooooooool00oooool00ol0003o_knookno_`0?okno_`05o`000?oo
+ooooooooooooool000005P2o_kl01Ol00000_kno0;no_`2o_koo000001D0_kno0_l000050;no_`03
+o`000?oooooooooo00Sooooo00?o0000okno_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl0
+3ono_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000ooooooooool0
+0oooool00ol0003o_knookno_`0?okno_`04o`000?ooooooooooo`0001P0_kno00?o00000;no_ol0
+00005`2o_kl2o`0000<0_kno00?o0000ooooooooool02Oooool00ol0003o_knookno_`0@okno_`7o
+000000000ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl0
+4?no_kl00ol0003oooooooooo`03ooooo`03o`000?no_koo_kno00oo_kno00?o0000ooooool00000
+6@2o_kl2o`0001T0_kno0_l000000`2o_koo0000ooooo`0;ooooo`03o`000?no_koo_kno013o_kno
+0Ol000000003o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno
+_`0@okno_`03o`000?oooooooooo00?ooooo00?o0000okno_ono_kl03ono_kl01?l0003ooooooooo
+ool0000G0;no_`04o`00002o_kl0_knoo`0001L0_kno00Co0000oooooooooooo00003Oooool00ol0
+003o_knookno_`0@okno_`7o000000000ol0003o_knookno_`0?okno_`03o`000?no_koo_kno013o
+_kno00?o0000okno_ono_kl04?no_kl01?l0003oooooo`000?l00002ooooo`03o`000?no_koo_kno
+00oo_kno00?o0000ooooooooool00_l0000E0;no_`03o`00002o_kl0_kno0080_kno00?o00000;no
+_`2o_kl04`2o_kl00ol0003oooooooooo`0?ooooo`03o`000?no_koo_kno013o_kno0Ol000000003
+o`000?no_koo_kno00oo_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`;o
+000000D0_knoo`000?ooooooooooo`00000Aokno_`03o`000?oooooo00000080_kno00?o00000;no
+_`2o_kl04@2o_kl00ol00000_kno0;no_`040;no_`03o`00002o_kl0_kno0140_kno00?o0000oooo
+ooooool04?ooool00ol0003o_knookno_`0@okno_`7o0000000io`0000<0_kno00?o0000ooooool0
+00004ol000040;no_`03o`00002o_kl0_kno00l0_kno00?o00000;no_`2o_kl01P2o_kl00ol00000
+_kno0;no_`0?0;no_bSo000000000ol0003o_knookno_`0?okno_`03o`000?oooooooooo00kooooo
+00?o00000;no_ol000004Oooool00ol00000_kno0;no_`030;no_`03o`000?oooooooooo013ooooo
+00?o00000;no_`2o_kl0102o_kl00ol00000_kno0;no_`0=0;no_`03o`00002o_kl0_kno00P0_kno
+00?o00000;no_`2o_kl03@2o_kl00ol0003oooooo`00000Bokno_`03o`000?no_koo_kno013o_kno
+0Ol000000003o`000?no_koo_kno00oo_kno00?o0000ooooooooool03Oooool01Ol00000_kno0;no
+_`2o_koo000000oooooo00?o00000;no_`2o_kl01@2o_kl00ol0003oooooooooo`0>ooooo`03o`00
+002o_kl0_kno00H0_kno00?o00000;no_`2o_kl02`2o_kl00ol00000_kno0;no_`0:0;no_`03o`00
+002o_kl0_kno00/0_kno00Co0000oooooooooooo00004_no_kl00ol0003o_knookno_`0@okno_`7o
+000000000ol0003o_knookno_`0?okno_`03o`000?oooooooooo00cooooo00?o00000;no_`2o_kl0
+0`2o_kl00ol0003oooooooooo`0;ooooo`03o`00002o_kl0_kno00L0_kno00?o0000ooooooooool0
+3?ooool00ol00000_kno0;no_`080;no_`03o`00002o_kl0_kno00T0_kno00?o00000;no_`2o_kl0
+302o_kl00ol00000_kno0;no_`090;no_`05o`000?ooooooooooooooool000004_no_kl00ol0003o
+_knookno_`0@okno_`7o000000000ol0003o_knookno_`0?okno_`03o`000?oooooooooo00[ooooo
+0_l000070;no_`03o`000?oooooooooo00Sooooo0_l0000;0;no_`03o`000?oooooooooo00[ooooo
+00?o00000;no_`2o_kl02P2o_kl00ol00000_kno0;no_`070;no_`03o`00002o_kl0_kno00h0_kno
+00?o00000;no_`2o_kl01`2o_kl00ol0003oooooooooo`02ooooo`03o`000?no_koo_kno013o_kno
+00?o0000okno_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003ooooooooo
+o`09ooooo`03o`00002o_kl0_kno00P0_kno00?o0000ooooooooool01_ooool00ol00000_kno0;no
+_`0<0;no_`03o`000?oooooooooo00Sooooo00?o00000;no_`2o_kl0302o_kl00ol00000_kno0;no
+_`050;no_`03o`00002o_kl0_kno0100_kno00?o00000;no_`2o_kl01@2o_kl00ol0003ooooooooo
+o`03ooooo`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl1o`00000000?o0000
+okno_ono_kl03ono_kl00ol0003oooooooooo`08ooooo`03o`00002o_kl0_kno00T0_kno00?o0000
+ooooooooool01Oooool00ol00000_kno0;no_`0=0;no_`03o`000?oooooooooo00Oooooo00?o0000
+0;no_`2o_kl03P2o_kl00ol00000_kno0;no_`030;no_`03o`00002o_kl0_kno0180_kno00?o0000
+0;no_`2o_kl00`2o_kl00ol0003oooooooooo`04ooooo`03o`000?no_koo_kno013o_kno00?o0000
+okno_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003oooooooooo`07oooo
+o`03o`00002o_kl0_kno00/0_kno00?o0000ooooooooool00oooool00ol00000_kno0;no_`0?0;no
+_`03o`000?oooooooooo00Gooooo00?o00000;no_`2o_kl0402o_kl01Ol00000_kno0;no_`2o_koo
+000001H0_kno00Go00000;no_`2o_kl0_knoo`000007ooooo`03o`000?no_koo_kno013o_kno00?o
+0000okno_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003oooooooooo`05
+ooooo`;o00003`2o_kl01Ol0003ooooooooooooooooo000001<0_kno00?o0000ooooooooool00ooo
+ool00ol00000_kno0;no_`0B0;no_`03o`00002o_koo000001P0_kno00?o00000;no_ol000002?oo
+ool00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno0Ol000000003o`000?no_koo
+_kno00oo_kno00?o0000ooooooooool01?ooool00ol00000_kno0;no_`0@0;no_`03o`000?oooooo
+000001D0_kno00Go0000ooooooooooooooooo`00000F0;no_`;o00006@2o_kl00ol0003ooooooooo
+o`07ooooo`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl1o`00000000?o0000
+okno_ono_kl03ono_kl00ol0003oooooooooo`03ooooo`03o`00002o_kl0_kno0180_kno00?o0000
+0;no_`2o_kl05@2o_kl00ol0003oooooo`00000H0;no_`;o00005`2o_kl00ol0003oooooooooo`08
+ooooo`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl1o`00000000?o0000okno
+_ono_kl03ono_kl00ol0003oooooooooo`02ooooo`03o`00002o_kl0_kno01<0_kno00?o00000;no
+_`2o_kl05P2o_kl00ol00000_kno0;no_`0G0;no_`?o00005@2o_kl00ol0003oooooooooo`09oooo
+o`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl1o`00000000?o0000okno_ono
+_kl03ono_kl01Ol0003ooooooooooooooooo000001L0_kno00?o00000;no_`2o_kl05@2o_kl2o`00
+01L0_kno00?o00000;no_`2o_kl00_l0000C0;no_`03o`000?oooooooooo00[ooooo00?o0000okno
+_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`7o000000000ol0003o_knookno_`0?okno_`05
+o`000?ooooooooooooooool00000602o_kl00ol00000_kno0;no_`0C0;no_`04o`00002o_koo0000
+o`0001D0_kno00?o00000;no_`2o_kl00P2o_kl2o`000140_kno00?o0000ooooooooool02oooool0
+0ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno0Ol000000003o`000?no_koo_kno
+00oo_kno00?o0000ooooooooool00_ooool00ol00000_kno0;no_`0F0;no_`03o`00002o_kl0_kno
+0140_kno00Co00000;no_`2o_kl0_kno0_l0000C0;no_`03o`00002o_kl0_kno00@0_kno0_l0000?
+0;no_`03o`000?oooooooooo00cooooo00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@
+okno_`7o000000000ol0003o_knookno_`0?okno_`03o`000?oooooooooo00;ooooo0_l0000G0;no
+_`;o00004@2o_kl00ol00000_kno0;no_`030;no_`;o00004@2o_kl00ol00000_kno0;no_`060;no
+_`;o00003@2o_kl00ol0003oooooooooo`0=ooooo`03o`000?no_koo_kno013o_kno00?o0000okno
+_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl01_l0003ooooooooooooooooo0000
+0;no_`;o00005@2o_kl01?l00000_knoo`000?l0000?0;no_`03o`00002o_kl0_kno00D0_kno0_l0
+000?0;no_`03o`00002o_kl0_kno00P0_kno0_l0000;0;no_`03o`000?oooooooooo00kooooo00?o
+0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`7o000000000ol0003o_knookno_`0?
+okno_`04o`000?ooooooooooo`0000<0_kno0_l0000C0;no_`04o`00002o_kl0_kno0;no_`;o0000
+3@2o_kl00ol00000_kno0;no_`070;no_`;o00003@2o_kl00ol00000_kno0;no_`0:0;no_`;o0000
+2@2o_kl00ol0003oooooooooo`0?ooooo`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl0
+4?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003oooooo`0000050;no_`03o`00002o
+_kl0_kno0100_kno00?o00000;no_`2o_kl00`2o_kl00ol00000_kno0;no_`090;no_`;o00002`2o
+_kl2o`0000/0_kno00?o00000;no_`2o_kl0302o_kl2o`0000L0_kno00?o0000ooooooooool04?oo
+ool00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno0Ol0000001Co00001`2o_kl0
+0ol00000_kno0;no_`0=0;no_`;o00001`2o_kl00ol00000_kno0;no_`070;no_`03o`00002o_kl0
+_kno00`0_kno0_l000090;no_`03o`00002o_kl0_kno00h0_kno0_l000050;no_c_o000000000ol0
+003oooooooooo`0?ooooo`03o`00002o_kl0_kno00L0_kno00?o00000;no_`2o_kl02`2o_kl00ol0
+0000_kno0;no_`080;no_`03o`00002o_kl0_kno00D0_kno00?o00000;no_`2o_kl03P2o_kl2o`00
+00L0_kno00?o00000;no_`2o_kl0402o_kl2o`0000<0_kno00?o0000ooooool000004_no_kl00ol0
+003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno0Ol000000003o`000?oooooooooo00go
+oooo0_l0000;0;no_`03o`00002o_kl0_kno00T0_kno00?o00000;no_`2o_kl02@2o_kl2o`0000D0
+_kno00?o00000;no_`2o_kl03`2o_kl00ol0003oooooo`0000050;no_`03o`00002o_kl0_kno0180
+_kno0_l000001@2o_koo0000oooooooooooo000001;o_kno00?o0000okno_ono_kl04?no_kl00ol0
+003o_knookno_`0@okno_`7o000000000ol0003oooooooooo`0<ooooo`03o`00002o_kl0_kno00`0
+_kno00?o00000;no_`2o_kl01`2o_kl00ol00000_kno0;no_`0;0;no_`;o00000`2o_kl00ol00000
+_kno0;no_`0A0;no_`03o`000?oooooo000000<0_kno00?o00000;no_`2o_kl0502o_kl2o`0000?o
+oooo00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o
+_kno0Ol000000003o`000?oooooooooo00_ooooo00?o00000;no_`2o_kl03@2o_kl00ol00000_kno
+0;no_`050;no_`;o00003`2o_kl2o`0000030;no_ol00000_kno01@0_kno00Go0000ooooool00000
+_knoo`00000H0;no_`05o`000?ooooooooooooooool000004_no_kl00ol0003o_knookno_`0@okno
+_`03o`000?no_koo_kno013o_kno0Ol000000003o`000?oooooooooo00[ooooo00?o00000;no_`2o
+_kl03`2o_kl00ol00000_kno0;no_`030;no_`03o`00002o_kl0_kno0100_kno0_l0000G0;no_`03
+o`000?oooooo000001X0_kno00Co0000oooooooooooo00004_no_kl00ol0003o_knookno_`0@okno
+_`03o`000?no_koo_kno013o_kno0Ol000000003o`000?oooooooooo00Wooooo00?o00000;no_`2o
+_kl04@2o_kl01Ol00000_kno0;no_`2o_koo000001@0_kno00?o00000;no_`2o_kl05P2o_kl00ol0
+003oooooo`00000I0;no_`04o`000?ooooooooooo`0001;o_kno00?o0000okno_ono_kl04?no_kl0
+0ol0003o_knookno_`0@okno_`7o000000000ol0003oooooooooo`08ooooo`03o`00002o_kl0_kno
+01<0_kno00?o00000;no_ol000005@2o_kl2o`0001P0_kno00?o0000ooooool000005`2o_kl01Ol0
+003ooooooooooooooooo000001;o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@
+okno_`7o000000000ol0003oooooooooo`07ooooo`03o`00002o_kl0_kno01D0_kno00?o00000;no
+_`2o_kl05@2o_kl2o`0001L0_kno0_l000000ooooooo00000;no_`0D0;no_`03o`000?oooooooooo
+00;ooooo00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno
+013o_kno0Ol000000003o`000?oooooooooo00Oooooo00?o00000;no_`2o_kl05@2o_kl00ol00000
+_kno0;no_`0F0;no_`;o00005@2o_kl00ol0003oooooooooo`02ooooo`03o`00002o_kl0_kno0140
+_kno00?o0000ooooooooool00oooool00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o
+_kno00?o0000okno_ono_kl04?no_kl1o`00000000?o0000ooooooooool02?ooool00ol00000_kno
+0;no_`0E0;no_`03o`00002o_kl0_kno01H0_kno0_l0000C0;no_`03o`000?oooooooooo00Cooooo
+00?o00000;no_`2o_kl03`2o_kl00ol0003oooooooooo`04ooooo`03o`000?no_koo_kno013o_kno
+00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`7o000000000ol0003ooooooooo
+o`09ooooo`03o`00002o_kl0_kno01<0_kno00?o00000;no_ol000005`2o_kl2o`000180_kno00?o
+0000ooooooooool01_ooool00ol00000_kno0;no_`0=0;no_`03o`000?oooooooooo00Gooooo00?o
+0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno0Ol0
+00000003o`000?oooooooooo00[ooooo00?o00000;no_`2o_kl04@2o_kl01Ol00000_kno0;no_`2o
+_koo000001D0_kno00Co00000;no_ol0003o00003`2o_kl2o`0000[ooooo00?o00000;no_`2o_kl0
+2`2o_kl00ol0003oooooooooo`06ooooo`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl0
+4?no_kl00ol0003o_knookno_`0@okno_`7o000000000ol0003oooooooooo`0;ooooo`03o`00002o
+_kl0_kno00l0_kno00?o00000;no_`2o_kl00`2o_kl00ol00000_kno0;no_`0A0;no_`04o`00002o
+_kl0_kno0;no_`;o00003@2o_kl00ol0003oooooooooo`0;ooooo`03o`00002o_kl0_kno00T0_kno
+00?o0000ooooooooool01oooool00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno
+00?o0000okno_ono_kl04?no_kl1o`00000000?o0000ooooooooool03?ooool00ol00000_kno0;no
+_`0=0;no_`03o`00002o_kl0_kno00@0_kno00?o00000;no_`2o_kl0402o_kl00ol00000_kno0;no
+_`030;no_`;o00002`2o_kl00ol0003oooooooooo`0=ooooo`03o`00002o_kl0_kno00L0_kno00?o
+0000ooooooooool02?ooool00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o
+0000okno_ono_kl04?no_kl1o`00000000?o0000ooooooooool03Oooool00ol00000_kno0;no_`0;
+0;no_`03o`00002o_kl0_kno00H0_kno00?o00000;no_`2o_kl03@2o_kl2o`0000L0_kno0_l00009
+0;no_`03o`000?oooooooooo00oooooo00?o00000;no_`2o_kl01@2o_kl00ol0003oooooooooo`09
+ooooo`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@
+okno_`7o000000000ol0003oooooooooo`0=ooooo`03o`00002o_kl0_kno00T0_kno0_l0000:0;no
+_`03o`00002o_kl0_kno00/0_kno00?o00000;no_`2o_kl0202o_kl00ol00000_kno0;no_`050;no
+_`;o00004oooool00ol00000_kno0;no_`030;no_`03o`000?oooooooooo00[ooooo00?o0000okno
+_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno0Ol000000003
+o`000?oooooooooo00kooooo00?o00000;no_`2o_kl01`2o_kl00ol00000_kno0;no_`0;0;no_`03
+o`00002o_kl0_kno00T0_kno00?o00000;no_`2o_kl02P2o_kl00ol00000_kno0;no_`030;no_`03
+o`000?oooooooooo01Cooooo00Go00000;no_`2o_kl0_knoo`00000=ooooo`03o`000?no_koo_kno
+013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`7o000000000ol0003o
+ooooooooo`0?ooooo`03o`00002o_kl0_kno00D0_kno00?o00000;no_`2o_kl03@2o_kl00ol00000
+_kno0;no_`070;no_`03o`00002o_kl0_kno00`0_kno00Go00000;no_`2o_kl0_knoo`00000Hoooo
+o`03o`00002o_koo000000kooooo00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno
+_`03o`000?no_koo_kno013o_kno0Ol0000001Co00001@2o_kl00ol00000_kno0;no_`0>0;no_`03
+o`00002o_kl0_kno00D0_kno0_l0000?0;no_`;o000000<0_knoo`000?ooool00ooooomPo`000000
+00?o0000okno_ono_kl03ono_kl00ol0003oooooo`0000030;no_`03o`00002o_kl0_kno0100_kno
+00?o00000;no_`2o_kl00`2o_kl00ol00000_kno0;no_`0@0;no_`;o00001Oooool00ol0003o_kno
+okno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_kno
+okno_`0@okno_`03o`000?no_koo_kno013o_kno0Ol000000003o`000?no_koo_kno00oo_kno00Ko
+0000oooooooooooo00000;no_ol0000D0;no_`05o`00002o_kl0_kno0;no_ol00000502o_kl00ol0
+003oooooooooo`03ooooo`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0
+003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl1o`00
+000000?o0000okno_ono_kl03ono_kl01Ol0003ooooooooooooooooo000001H0_kno00?o00000;no
+_ol000005P2o_kl00ol0003oooooooooo`02ooooo`03o`000?no_koo_kno013o_kno00?o0000okno
+_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno
+_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl01Ol0003ooooooooooooooooo0000
+01L0_kno00?o00000;no_`2o_kl05P2o_kl01Ol0003ooooooooooooooooo000001;o_kno00?o0000
+okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000
+okno_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003oooooooooo`02oooo
+o`03o`00002o_kl0_kno01@0_kno00?o00000;no_`2o_kl05`2o_kl01?l0003oooooooooool0000B
+okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@
+okno_`03o`000?no_koo_kno013o_kno0Ol000000003o`000?no_koo_kno00oo_kno00?o0000oooo
+ooooool00oooool00ol00000_kno0;no_`0D0;no_`03o`00002o_kl0_kno01H0_kno0_l000000ooo
+oooo0000okno_`0Aokno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0
+003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno0Ol000000003o`000?no_koo_kno00oo
+_kno00?o0000ooooooooool01?ooool00ol00000_kno0;no_`0B0;no_`03o`000?oooooo000001H0
+_kno00Go0000ooooooooooooooooo`00000Bokno_`03o`000?no_koo_kno013o_kno00?o0000okno
+_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno0Ol000000003
+o`000?no_koo_kno00oo_kno00?o0000ooooooooool01Oooool00ol00000_kno0;no_`0@0;no_`05
+o`000?ooooooooooooooool00000502o_kl00ol0003oooooooooo`02ooooo`03o`000?no_koo_kno
+013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno
+013o_kno00?o0000okno_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003o
+ooooooooo`05ooooo`03o`00002o_kl0_kno00l0_kno00?o0000ooooooooool00oooool00ol00000
+_kno0;no_`0@0;no_`03o`000?oooooooooo00?ooooo00?o0000okno_ono_kl04?no_kl00ol0003o
+_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o
+_knookno_`0@okno_`7o000000000ol0003o_knookno_`0?okno_`03o`000?oooooooooo00Kooooo
+00?o00000;no_`2o_kl03@2o_kl00ol0003oooooooooo`05ooooo`03o`00002o_kl0_kno00d0_kno
+0_l00006ooooo`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_kno
+okno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl1o`00000000?o
+0000okno_ono_kl03ono_kl00ol0003oooooooooo`07ooooo`03o`00002o_kl0_kno00/0_kno00?o
+0000ooooooooool01oooool00ol00000_kno0;no_`0;0;no_`03o`000?oooooooooo00Kooooo00?o
+0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o
+0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`7o000000000ol0003o_knookno_`0?
+okno_`03o`000?oooooooooo00Sooooo00?o00000;no_`2o_kl0202o_kl2o`0000[ooooo00?o0000
+0;no_`2o_kl02P2o_kl00ol0003oooooooooo`07ooooo`03o`000?no_koo_kno013o_kno00?o0000
+okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000
+okno_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl03ono_kl00ol0003oooooooooo`09oooo
+o`03o`00002o_kl0_kno00H0_kno00?o0000ooooooooool02oooool00ol00000_kno0;no_`080;no
+_`03o`000?oooooooooo00Sooooo00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno
+_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno
+_`7o000000000ol0003o_knookno_`0?okno_`03o`000?oooooooooo00Wooooo00?o00000;no_`2o
+_kl01@2o_kl00ol0003oooooooooo`0=ooooo`03o`00002o_kl0_kno00D0_kno0_l0000;ooooo`03
+o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03
+o`000?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl1o`00000000?o0000okno_ono_kl0
+3ono_kl00ol0003oooooooooo`0:ooooo`03o`00002o_kl0_kno00<0_kno00?o0000ooooooooool0
+3oooool00ol00000_kno0;no_`030;no_`03o`000?oooooooooo00_ooooo00?o0000okno_ono_kl0
+4?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono_kl0
+4?no_kl00ol0003o_knookno_`0@okno_`7o000000000ol0003o_knookno_`0?okno_`03o`000?oo
+oooooooo00_ooooo00Go00000;no_`2o_kl0_knoo`00000Cooooo`05o`00002o_kl0_kno0;no_ol0
+00003_ooool00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno00?o0000okno_ono
+_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`000?no_koo_kno013o_kno0Ol000000003o`00
+0?no_koo_kno00oo_kno00?o0000ooooooooool03?ooool00ol00000_knoo`00000Eooooo`03o`00
+002o_koo000000oooooo00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`03o`00
+0?no_koo_kno013o_kno00?o0000okno_ono_kl04?no_kl00ol0003o_knookno_`0@okno_`7o0000
+002[o`000000\
+\>"],
+  ImageRangeCache->{{{0, 170}, {170, 0}} -> {-4.4817*^-5, -4.4817*^-5, \
+0.0527258, 0.0527258}}],
+
+Cell[BoxData[
+    TagBox[\(\[SkeletonIndicator]  Graphics  \[SkeletonIndicator]\),
+      False,
+      Editable->False]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(N[s]\)], "Input"],
+
+Cell[BoxData[
+    \(8.963267508501394`\)], "Output"]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"5.0 for Macintosh",
+ScreenRectangle->{{53, 1280}, {0, 1002}},
+WindowSize->{1147, 758},
+WindowMargins->{{7, Automatic}, {Automatic, 13}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1754, 51, 1148, 23, 155, "Input"],
+
+Cell[CellGroupData[{
+Cell[2927, 78, 110, 3, 78, "Section"],
+Cell[3040, 83, 434, 10, 110, "Text"],
+Cell[3477, 95, 349, 7, 107, "Text"],
+
+Cell[CellGroupData[{
+Cell[3851, 106, 2197, 37, 454, "Input"],
+Cell[6051, 145, 35720, 807, 179, 4799, 422, "GraphicsData", "PostScript", \
+"Graphics"],
+Cell[41774, 954, 130, 3, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[41941, 962, 37, 1, 43, "Input"],
+Cell[41981, 965, 52, 1, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[42082, 972, 110, 3, 78, "Section"],
+Cell[42195, 977, 77, 1, 45, "Text"],
+
+Cell[CellGroupData[{
+Cell[42297, 982, 476, 9, 105, "Input"],
+Cell[42776, 993, 112, 2, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[42925, 1000, 2800, 49, 625, "Input"],
+Cell[45728, 1051, 49265, 1266, 179, 8549, 760, "GraphicsData", "PostScript", \
+"Graphics"],
+Cell[94996, 2319, 130, 3, 27, "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[95175, 2328, 110, 3, 78, "Section"],
+Cell[95288, 2333, 475, 8, 138, "Text"],
+
+Cell[CellGroupData[{
+Cell[95788, 2345, 2632, 46, 552, "Input"],
+Cell[98423, 2393, 57402, 1544, 179, 11048, 968, "GraphicsData", "PostScript", \
+"Graphics"],
+Cell[155828, 3939, 130, 3, 27, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[155995, 3947, 37, 1, 43, "Input"],
+Cell[156035, 3950, 52, 1, 27, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+
