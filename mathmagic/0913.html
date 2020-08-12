@@ -1,0 +1,799 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month<br>(September 2013)</H1></CENTER>
+
+This month we consider three problems concerning surrounding polyominoes.<p>
+
+<font size=+2>1.</font><br>
+
+We define the <b>enlargement</b> of a polyomino P to be the polyomino whose unit squares touch (even at one point) the squares of P.  Given a polyomino P, what is the smallest number of copies of P that tile a shape S and also tile the enlargement of S?  What if we also want the enlargement of the enlargement of S, or the whole infinite series of enlargements to have tilings?<p>
+
+<font size=+2>2.</font><br>
+
+Given an n-omino P, we define its <b>children</b> to be the (n+1)-ominoes that can be formed by adding 1 more square to P.  Now start with a polyomino P, and try to completely surround it with all of its children.  Each child must touch P at more than one point.  We call this the <b>1-ring</b> around P.  Which polyominoes have a 1-ring?  For those that do, try to completely surround the 1-ring of P with all the grandchildren of P.  This is called a <b>2-ring</b> of P.  Which polyominoes have a 2-ring?  In general, how many rings does a polyomino have?<p>
+
+<font size=+2>3.</font><br>
+
+For fixed positive integers n and k, what is the largest area A(n,k) that can be completely surrounded by k copies of the same n-omino?  
+Why is this problem easy for n = 1 or 2, or for k = 1, 2, or a multiple of 4?  What are the values of A(n,k) for other values of n and k?  What polyominoes give the largest areas?  Are they always I-shaped or L-shaped?<p>
+
+
+
+<P><hr color=black><p><center><h1>ANSWERS</h1></center>
+
+Solutions were received from George Sicherman, Joe DeVincentis, and Maurizio Morandi.<p>
+
+<font size=+2>1.</font><p>
+
+Here are the smallest-known solutions:<p>
+
+
+<TABLE align=center border=3><TR><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>1
+<td><img src="0913/1O.gif">
+<td><font size=+4>2
+<td><img src="0913/2I.gif">
+<td><font size=+4>3
+<td><img src="0913/3I.gif">
+<td><img src="0913/3L.gif">
+<td><font size=+4>4
+<td><img src="0913/4O.gif">
+<td><img src="0913/4I.gif">
+<td><img src="0913/4L.gif">
+<td><img src="0913/4T.gif"><br>(GS)
+<td><img src="0913/4S.gif"><br>(GS)
+</table>
+</TABLE><p>
+
+<TABLE align=center border=3><TR><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>5
+<td><img src="0913/5L.gif">
+<td><img src="0913/5P.gif">
+<td><img src="0913/5W.gif"><br>(GS)
+<td><img src="0913/5S.gif"><br>(GS)
+<td><img src="0913/5I.gif">
+<td><img src="0913/5R.gif"><br>(GS)
+<td><img src="0913/5Y.gif">
+<td><img src="0913/5Z.gif"><br>(GS)
+</table>
+</TABLE><p>
+
+<TABLE align=center border=3 bgcolor=FFFFFF><TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>6
+<td><img src="0913/6O.gif">
+<td><img src="0913/6P.gif">
+<td><img src="0913/6R.gif"><br>(GS)
+<td><img src="0913/6Q.gif"><br>(GS)
+<td><img src="0913/6A.gif"><br>(GS)
+<td><img src="0913/6F.gif"><br>(GS)
+<td><img src="0913/6Z.gif"><br>(GS)
+<td><img src="0913/6M.gif"><br>(GS)
+</table>
+<TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><img src="0913/6D.gif">
+<td><img src="0913/6L.gif"><br>(GS)
+<td><img src="0913/6I.gif">
+<td><img src="0913/6J.gif">
+<td><img src="0913/6W.gif"><br>(GS)
+<td><img src="0913/6WW.gif"><br>(GS)
+<td><img src="0913/6Y.gif">
+</table>
+</TABLE><p>
+
+<TABLE align=center border=3 bgcolor=FFFFFF><TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>7
+<td><img src="0913/7J.gif"><br>(GS)
+<td><img src="0913/7Q.gif"><br>(GS)
+<td><img src="0913/7R.gif"><br>(GS)
+<td><img src="0913/7P.gif">
+<td><img src="0913/7L.gif"><br>(GS)
+<td><img src="0913/7O.gif"><br>(GS)
+</table>
+<TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><img src="0913/7W.gif"><br>(GS)
+<td><img src="0913/7D.gif"><br>(GS)
+<td><img src="0913/7N.gif"><br>(GS)
+<td><img src="0913/7Z.gif"><br>(GS)
+<td><img src="0913/7B.gif"><br>(GS)
+</table>
+<TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><img src="0913/7I.gif"><br>(GS)
+<td><img src="0913/7M.gif"><br>(GS)
+<td><img src="0913/7E.gif"><br>(GS)
+<td><img src="0913/7A.gif"><br>(GS)
+<td><img src="0913/7G.gif">
+</table>
+</TABLE><p>
+
+Joe DeVincentis considered the question of how many successive enlargements could be tiled.  He noted that the monomino and domino can tile ever-larger enlargements.  George Sicherman noticed the same thing for the I, L, and O tetrominoes.  Joe DeVincentis noticed that the 2&times;4 rectangle also has this property.  Then Joe DeVincentis showed that only polyominoes of area 1, 2, 4, and 8 can possibly tile infinitely many enlargements.  In general, how many enlargements can be tiled?  <p>
+
+Here are the best known results:<p>
+
+<TABLE align=center border=3><TR><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>3
+<td><img src="0913/3Ix4.gif"><br>(GS)
+<td><img src="0913/3Lx4.gif"><br>(GS)
+</table>
+</TABLE><p>
+
+<TABLE align=center border=3><TR><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>4
+<td><img src="0913/4Sx2.gif"><br>(GS)
+</table>
+</TABLE><p>
+
+<TABLE align=center border=3 bgcolor=white><TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>5
+<td><img src="0913/5Px3.gif"><br>(GS)
+<td><img src="0913/5Lx2.gif"><br>(GS)
+<td><img src="0913/5Ix2.gif"><br>(GS)
+</table>
+<TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><img src="0913/5Wx2.gif"><br>(GS)
+<td><img src="0913/5Rx2.gif"><br>(GS)
+<td><img src="0913/5Sx2.gif"><br>(GS)
+</table>
+</TABLE><p>
+
+<TABLE align=center border=3 bgcolor=white><TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>6
+<td><img src="0913/6Ox3.gif"><br>(GS)
+<td><img src="0913/6Px3.gif"><br>(GS)
+<td><img src="0913/6Lx2.gif"><br>(GS)
+</table>
+<TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><img src="0913/6Ix2.gif"><br>(GS)
+<td><img src="0913/6Fx2.gif"><br>(GS)
+<td><img src="0913/6Dx2.gif"><br>(GS)
+</table>
+</TABLE><p>
+
+George Sicherman thought polyhexes, polyiamonds, and polyaboloes should be examined as well.<p>
+
+<TABLE align=center border=3><TR><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>1
+<td><img src="0913/h1-1.png"><br>(GS)
+<td><font size=+4>2
+<td><img src="0913/h2-1.png"><br>(GS)
+<td><font size=+4>3
+<td><img src="0913/h3-1.png"><br>(GS)
+<td><img src="0913/h3-2.png"><br>(GS)
+<td><img src="0913/h3-3.png"><br>(GS)
+</table>
+</TABLE><p>
+
+<TABLE align=center border=3><TR><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>4
+<td><img src="0913/h4-2.png"><br>(GS)
+<td><img src="0913/h4-3.png"><br>(GS)
+<td><img src="0913/h4-4.png"><br>(GS)
+<td><img src="0913/h4-6.png"><br>(GS)
+<td><img src="0913/h4-1.png"><br>(GS)
+<td><img src="0913/h4-5.png"><br>(GS)
+</table>
+</TABLE><p>
+
+<TABLE align=center border=3 bgcolor=white><TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>5
+<td><img src="0913/h5-2.png"><br>(GS)
+<td><img src="0913/h5-15.png"><br>(GS)
+<td><img src="0913/h5-5.png"><br>(GS)
+<td><img src="0913/h5-6.png"><br>(GS)
+<td><img src="0913/h5-1.png"><br>(GS)
+</table>
+<TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><img src="0913/h5-9.png"><br>(GS)
+<td><img src="0913/h5-3.png"><br>(GS)
+<td><img src="0913/h5-8.png"><br>(GS)
+<td><img src="0913/h5-10.png"><br>(GS)
+<td><img src="0913/h5-11.png"><br>(GS)
+</table>
+<TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><img src="0913/h5-18.png"><br>(GS)
+<td><img src="0913/h5-19.png"><br>(GS)
+<td><img src="0913/h5-17.png"><br>(GS)
+<td><img src="0913/h5-14.png"><br>(GS)
+</table>
+</TABLE><p>
+
+
+<TABLE align=center border=3><TR><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>1
+<td><img src="0913/i1-1.png"><br>(GS)
+<td><font size=+4>2
+<td><img src="0913/i2-1.png"><br>(GS)
+<td><font size=+4>3
+<td><img src="0913/i3-1.png"><br>(GS)
+</table>
+</TABLE><p>
+
+
+<TABLE align=center border=3><TR><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>4
+<td><img src="0913/i4-1.png"><br>(GS)
+<td><img src="0913/i4-2.png"><br>(GS)
+<td><font size=+4>5
+<td><img src="0913/i5-2.png"><br>(GS)
+<td><img src="0913/i5-1.png"><br>(GS)
+<td><img src="0913/i5-3.png"><br>(GS)
+</table>
+</TABLE><p>
+
+<TABLE align=center border=3 bgcolor=white><TR><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>6
+<td><img src="0913/i6-2.png"><br>(GS)
+<td><img src="0913/i6-5.png"><br>(GS)
+<td><img src="0913/i6-1.png"><br>(GS)
+<td><img src="0913/i6-6.png"><br>(GS)
+</table>
+<TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><img src="0913/i6-9.png"><br>(GS)
+<td><img src="0913/i6-11.png"><br>(GS)
+<td><img src="0913/i6-4.png"><br>(GS)
+<td><img src="0913/i6-7.png"><br>(GS)
+</table>
+</TABLE><p>
+
+<TABLE align=center border=3 bgcolor=white><TR><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>7
+<td><img src="0913/i7-7.png"><br>(GS)
+<td><img src="0913/i7-2.png"><br>(GS)
+<td><img src="0913/i7-9.png"><br>(GS)
+</table>
+<TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><img src="0913/i7-23.png"><br>(GS)
+<td><img src="0913/i7-1.png"><br>(GS)
+<td><img src="0913/i7-5.png"><br>(GS)
+<td><img src="0913/i7-11.png"><br>(GS)
+</table>
+</TABLE><p>
+
+
+<TABLE align=center border=3><TR><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>1
+<td><img src="0913/ab1-1.png"><br>(GS)
+<td><font size=+4>2
+<td><img src="0913/ab2-3.png"><br>(GS)
+<td><font size=+4>3
+<td><img src="0913/ab3-2.png"><br>(GS)
+<td><img src="0913/ab3-4.png"><br>(GS)
+</table>
+</TABLE><p>
+
+<TABLE align=center border=3><TR><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>4
+<td><img src="0913/ab4-12.png"><br>(GS)
+<td><img src="0913/ab4-6.png"><br>(GS)
+<td><img src="0913/ab4-7.png"><br>(GS)
+<td><img src="0913/ab4-10.png"><br>(GS)
+<td><img src="0913/ab4-14.png"><br>(GS)
+</table>
+</TABLE><p>
+
+<TABLE align=center border=3><TR><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>5
+<td><img src="0913/ab5-9.png"><br>(GS)
+<td><img src="0913/ab5-1.png"><br>(GS)
+<td><img src="0913/ab5-5.png"><br>(GS)
+<td><img src="0913/ab5-15.png"><br>(GS)
+</table>
+</TABLE><p>
+
+
+George Sicherman also examined the weaker form of enlargement:<p>
+
+<TABLE align=center border=3><TR><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>1
+<td><img src="0913/e1-1.png"><br>(GS)
+<td><font size=+4>2
+<td><img src="0913/e2-1.png"><br>(GS)
+<td><font size=+4>3
+<td><img src="0913/e3-2.png"><br>(GS)
+<td><img src="0913/e3-1.png"><br>(GS)
+<td><font size=+4>4
+<td><img src="0913/e4-4.png"><br>(GS)
+<td><img src="0913/e4-1.png"><br>(GS)
+<td><img src="0913/e4-2.png"><br>(GS)
+<td><img src="0913/e4-3.png"><br>(GS)
+</table>
+</TABLE><p>
+
+<TABLE align=center border=3><TR><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><font size=+4>5
+<td><img src="0913/e5-4.png"><br>(GS)
+<td><img src="0913/e5-1.png"><br>(GS)
+<td><img src="0913/e5-2.png"><br>(GS)
+<td><img src="0913/e5-6.png"><br>(GS)
+<td><img src="0913/e5-7.png"><br>(GS)
+<td><img src="0913/e5-9.png"><br>(GS)
+<td><img src="0913/e5-3.png"><br>(GS)
+<td><img src="0913/e5-10.png"><br>(GS)
+</table>
+</TABLE><p>
+
+
+
+
+<hr><font size=+2>2.</font><p>
+
+The best known solutions are shown below:<p>
+
+<TABLE border=1 align=center><TR><TD>
+<table bgcolor=white width=100% cellpadding=5><tr align=center>
+<td><font size=+4>3
+<td><img src="0913/L3.gif">
+</table></TABLE><p>
+
+<TABLE border=1 align=center><TR><TD>
+<table bgcolor=white width=100% cellpadding=5><tr align=center>
+<td><font size=+4>4
+<td><img src="0913/S4.gif">
+<td><img src="0913/T4.gif">
+<td><img src="0913/L4.gif">
+<td><img src="0913/I4.gif">
+</table></TABLE><p>
+
+<TABLE border=1 align=center bgcolor=white><TR align=center><TD>
+<table bgcolor=white cellpadding=5>
+<tr align=center>
+<td><font size=+4>5
+<td><img src="0913/S5.gif">
+<td><img src="0913/T5.gif">
+<td><img src="0913/U5.gif">
+<td><img src="0913/V5.gif">
+<td><img src="0913/L5.gif">
+<td><img src="0913/Z5.gif">
+</table>
+<TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><img src="0913/P5.gif">
+<td><img src="0913/W5.gif"><br>(GS)
+<td><img src="0913/Y5.gif"><br>(GS)
+<td><img src="0913/R5.gif"><br>(GS)
+<td><img src="0913/I5.gif"><br>(JD)
+</table></TABLE><p>
+
+<TABLE border=1 align=center bgcolor=white><TR align=center><TD>
+<table bgcolor=white cellpadding=5>
+<tr align=center>
+<td><font size=+4>6
+<td><img src="0913/A6.gif"><br>(JD)
+<td><img src="0913/I6.gif"><br>(JD)
+<td><img src="0913/E6.gif"><br>(JD)
+<td><img src="0913/K6.gif"><br>(JD)
+<td><img src="0913/C6.gif"><br>(JD)
+<td><img src="0913/D6.gif"><br>(JD)
+<td><img src="0913/N6.gif"><br>(GS)
+</table>
+<TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><img src="0913/Z6.gif"><br>(GS)
+<td><img src="0913/X6.gif"><br>(GS)
+<td><img src="0913/XX6.gif"><br>(GS)
+<td><img src="0913/S6.gif"><br>(GS)
+<td><img src="0913/SS6.gif"><br>(GS)
+<td><img src="0913/T6.gif"><br>(GS)
+<td><img src="0913/EE6.gif"><br>(GS)
+</table>
+<TR align=center><TD>
+<table border=0 bgcolor=FFFFFF cellpadding=5>
+<tr align=center>
+<td><img src="0913/W6.gif"><br>(GS)
+<td><img src="0913/Q6.gif"><br>(GS)
+<td><img src="0913/P6.gif"><br>(GS)
+<td><img src="0913/F6.gif"><br>(GS)
+<td><img src="0913/ZZ6.gif"><br>(GS)
+<td><img src="0913/L6.gif"><br>(JD)
+</table></TABLE><p>
+
+If we reverse things, some polyominoes can be surrounded by their <b>parents</b>, the polyominoes that are missing one square from the original.  What polyominoes have reverse 1-rings and 2-rings?<p>
+
+
+<TABLE border=1 align=center><TR><TD>
+<table bgcolor=white width=100% cellpadding=5>
+<tr align=center>
+<td><font size=+4>6
+<td><img src="0913/P6-.gif"><br>
+<td><img src="0913/Q6-.gif"><br>(GS)
+</table></TABLE><p>
+
+<TABLE border=1 align=center bgcolor=white><TR align=center><TD>
+<table bgcolor=white cellpadding=5>
+<tr align=center>
+<td><font size=+4>7
+<td><img src="0913/7-59-.png"><br>(GS)
+<td><img src="0913/7-39-.png"><br>(GS)
+<td><img src="0913/7-89-.png"><br>(GS)
+<td><img src="0913/7-101-.png"><br>(GS)
+<td><img src="0913/7-42-.png"><br>(GS)
+<td><img src="0913/7-92-.png"><br>(GS)
+<td><img src="0913/7-24-.png"><br>(GS)
+</table>
+<TR align=center><TD>
+<table border=0 bgcolor=white cellpadding=5>
+<tr align=center>
+<td><img src="0913/7-43-.png"><br>(GS)
+<td><img src="0913/7-7-.png"><br>(GS)
+<td><img src="0913/7-15-.png"><br>(GS)
+<td><img src="0913/7-16-.png"><br>(GS)
+<td><img src="0913/7-17-.png"><br>(GS)
+<td><img src="0913/7-27-.png"><br>(GS)
+<td><img src="0913/7-40-.png"><br>(GS)
+<td><img src="0913/7-41-.png"><br>(GS)
+<td><img src="0913/7-52-.png"><br>(GS)
+</table>
+<TR align=center><TD>
+<table border=0 bgcolor=white cellpadding=5>
+<tr align=center>
+<td><img src="0913/7-91-.png"><br>(GS)
+<td><img src="0913/7-97-.png"><br>(GS)
+<td><img src="0913/7-65-.png"><br>(GS)
+<td><img src="0913/7-69-.png"><br>(GS)
+<td><img src="0913/7-73-.png"><br>(GS)
+<td><img src="0913/7-76-.png"><br>(GS)
+<td><img src="0913/7-87-.png"><br>(GS)
+<td><img src="0913/7-95-.png"><br>(GS)
+</table></TABLE><p>
+
+<TABLE border=1 align=center><TR><TD>
+<table bgcolor=white width=100% cellpadding=5>
+<tr align=center>
+<td><font size=+4>8
+<td><img src="0913/8-42-.png"><br>(GS)
+<td><img src="0913/8-1-.png"><br>(JD)
+</table></TABLE><p>
+
+George Sicherman thought polyhexes and polyiamonds should be considered as well:<p>
+
+<TABLE border=1 align=center><TR><TD>
+<table bgcolor=white width=100% cellpadding=5>
+<tr align=center>
+<td><font size=+4>2
+<td><img src="0913/hh2-1.png"><br>(GS)
+<td><font size=+4>3
+<td><img src="0913/hh3-2.png"><br>(GS)
+<td><img src="0913/hh3-3.png"><br>(GS)
+</table></TABLE><p>
+
+<TABLE border=1 align=center><TR><TD>
+<table bgcolor=white width=100% cellpadding=5>
+<tr align=center>
+<td><font size=+4>4
+<td><img src="0913/hh4-1.png"><br>(GS)
+<td><img src="0913/hh4-2.png"><br>(GS)
+<td><img src="0913/hh4-3.png"><br>(GS)
+<td><img src="0913/hh4-5.png"><br>(GS)
+<td><img src="0913/hh4-6.png"><br>(GS)
+</table></TABLE><p>
+
+<TABLE border=1 align=center><TR><TD>
+<table bgcolor=white width=100% cellpadding=5>
+<tr align=center>
+<td><font size=+4>5
+<td><img src="0913/hh5-5-.png"><br>(GS)
+</table></TABLE><p>
+
+<TABLE border=1 align=center bgcolor=white><TR><TD>
+<table bgcolor=white width=100% cellpadding=5>
+<tr align=center>
+<td><font size=+4>6
+<td><img src="0913/hh6-12-.png"><br>(GS)
+<td><img src="0913/hh6-21-.png"><br>(GS)
+<td><img src="0913/hh6-40-.png"><br>(GS)
+<td><img src="0913/hh6-22-.png"><br>(GS)
+<td><img src="0913/hh6-58-.png"><br>(GS)
+</table>
+<TR align=center><TD>
+<table border=0 bgcolor=white cellpadding=5>
+<tr align=center>
+<td><img src="0913/hh6-59-.png"><br>(GS)
+<td><img src="0913/hh6-75-.png"><br>(GS)
+<td><img src="0913/hh6-43-.png"><br>(GS)
+<td><img src="0913/hh6-64-.png"><br>(GS)
+<td><img src="0913/hh6-5-.png"><br>(GS)
+<td><img src="0913/hh6-19-.png"><br>(GS)
+</table></TABLE><p>
+
+<TABLE border=1 align=center bgcolor=white><TR><TD>
+<table bgcolor=white width=100% cellpadding=5>
+<tr align=center>
+<td><font size=+4>7
+<td><img src="0913/hh7-83-.png"><br>(GS)
+<td><img src="0913/hh7-84-.png"><br>(GS)
+<td><img src="0913/hh7-93-.png"><br>(GS)
+</table>
+<TR align=center><TD>
+<table border=0 bgcolor=white cellpadding=5>
+<tr align=center>
+<td><img src="0913/hh7-198-.png"><br>(GS)
+<td><img src="0913/hh7-58-.png"><br>(GS)
+<td><img src="0913/hh7-237-.png"><br>(GS)
+<td><img src="0913/hh7-236-.png"><br>(GS)
+</table></TABLE><p>
+
+<TABLE border=1 align=center><TR><TD>
+<table bgcolor=white width=100% cellpadding=5>
+<tr align=center>
+<td><font size=+4>5
+<td><img src="0913/i5-2-.png"><br>(GS)
+<td><img src="0913/i5-3-.png"><br>(GS)
+</table></TABLE><p>
+
+<TABLE border=1 align=center><TR><TD>
+<table bgcolor=white width=100% cellpadding=5>
+<tr align=center>
+<td><font size=+4>6
+<td><img src="0913/i6-1-.png"><br>(GS)
+<td><img src="0913/i6-2-.png"><br>(GS)
+<td><img src="0913/i6-4-.png"><br>(GS)
+<td><img src="0913/i6-5-.png"><br>(GS)
+<td><img src="0913/i6-6-.png"><br>(GS)
+<td><img src="0913/i6-7-.png"><br>(GS)
+<td><img src="0913/i6-8-.png"><br>(GS)
+<td><img src="0913/i6-9-.png"><br>(GS)
+<td><img src="0913/i6-11-.png"><br>(GS)
+</table></TABLE><p>
+
+<TABLE border=1 align=center><TR><TD>
+<table bgcolor=white width=100% cellpadding=5>
+<tr align=center>
+<td><font size=+4>8
+<td><img src="0913/i8-18-.png"><br>(GS)
+</table></TABLE><p>
+
+<TABLE border=1 align=center><TR><TD>
+<table bgcolor=white width=100% cellpadding=5>
+<tr align=center>
+<td><font size=+4>9
+<td><img src="0913/i9-29-.png"><br>(GS)
+<td><img src="0913/i9-19-.png"><br>(GS)
+<td><img src="0913/i9-53-.png"><br>(GS)
+</table></TABLE><p>
+
+
+<hr><font size=+2>3.</font><p>
+
+When n=1 or n=2, the polyominoes are so small we can make the region as square as possible.  When k=1 or k=2, the optimal polyominoes will also allow for a hole that is as square as possible.  When k is a multiple of 4, an I polyomino can be used to make a square region.  Thus we have:<p>
+ 
+<center>A(1,4m) = A(1,4m+1) = A(2,2m) = A(4m,1) = A(4m,1) = A(2m,2) = (m-1)<sup>2</sup>
+<br>A(1,4m+2) = A(1,4m+3) = A(2,2m+1) = A(4m+2,1) = A(4m+3,1) = A(2m+1,2) = m(m-1)
+<br>A(n,4k) = (nk-1)<sup>2</sup>
+</center><p>
+
+Joe DeVincentis conjectures that for k=10, an I polyomino is always best, and A(n,10)=2n(3n-2).<p> 
+
+Here are the largest-known areas for some other small cases:<p>
+
+<table align=center border=1 bgcolor=lightyellow cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>n \ k<th>3<th>5<th>6<th>7<th>9<th>11<th>13
+
+<tr align=center><th bgcolor=DDFFDD>3
+<td>A(3,3)=0
+<td><img src="0913/3-5.gif"><br>A(3,5)=6
+<td><img src="0913/3-6.gif"><br>A(3,6)=12
+<td><img src="0913/3-7.gif"><br>A(3,7)=15
+<td><img src="0913/3-9.gif"><br>A(3,9)=30 (JD)
+<td><img src="0913/3-11.gif"><br>A(3,11)=48 (JD)
+<td><img src="0913/3-13.gif"><br>A(3,13)=72 (JD)
+<tr align=center><th bgcolor=DDFFDD>4
+<td><img src="0913/4-3.gif"><br>A(4,3)=3
+<td><img src="0913/4-5.gif"><br>A(4,5)=13
+<td><img src="0913/4-6.gif"><br>A(4,6)=24
+<td><img src="0913/4-7.gif"><br>A(4,7)=30 (JD)
+<td><img src="0913/4-9.gif"><br>A(4,9)=58 (JD)
+<td><img src="0913/4-11.gif"><br>A(4,11)=94 (JD)
+<td><img src="0913/4-13.gif"><br>A(4,13)=138 (JD)
+<tr align=center><th bgcolor=DDFFDD>5
+<td><img src="0913/5-3.gif"><br>A(5,3)=6
+<td><img src="0913/5-5.gif"><br>A(5,5)=24
+<td><img src="0913/5-6.gif"><br>A(5,6)=40
+<td><img src="0913/5-7.gif"><br>A(5,7)=50 (JD)
+<td><img src="0913/5-9.gif"><br>A(5,9)=93 (JD)
+<td><img src="0913/5-11.gif"><br>A(5,11)=148 (JD)
+<td><img src="0913/5-13.gif"><br>A(5,13)=218 (JD)
+<tr align=center><th bgcolor=DDFFDD>6
+<td><img src="0913/6-3.gif"><br>A(6,3)=8
+<td><img src="0913/6-5.gif"><br>A(6,5)=36
+<td><img src="0913/6-6.gif"><br>A(6,6)=60 (JD)
+<td><img src="0913/6-7.gif"><br>A(6,7)=76 (JD)
+<td><img src="0913/6-9.gif"><br>A(6,9)=136 (JD)
+<td><img src="0913/6-11.gif"><br>A(6,11)=218 (JD)
+<td><img src="0913/6-13.gif"><br>A(6,13)=320 (JD)
+<tr align=center><th bgcolor=DDFFDD>7
+<td><img src="0913/7-3.gif"><br>A(7,3)=14 (JD)
+<td><img src="0913/7-5.gif"><br>A(7,5)=50 (JD)
+<td><img src="0913/7-6.gif"><br>A(7,6)=84 (JD)
+<td><img src="0913/7-7.gif"><br>A(7,7)=108 (JD)
+<td><img src="0913/7-9.gif"><br>A(7,9)=190 (MM)
+<td><img src="0913/7-11.gif"><br>A(7,11)=297 (JD)
+<td><img src="0913/7-13.gif"><br>A(7,13)=437 (JD)
+<tr align=center><th bgcolor=DDFFDD>8
+<td><img src="0913/8-3.gif"><br>A(8,3)=20 (JD)
+<td><img src="0913/8-5.gif"><br>A(8,5)=70 (JD)
+<td><img src="0913/8-6.gif"><br>A(8,6)=113 (JD)
+<td><img src="0913/8-7.gif"><br>A(8,7)=145 (JD)
+<td><img src="0913/8-9.gif"><br>A(8,9)=255 (MM)
+<td><img src="0913/8-11.gif"><br>A(8,11)=391 (JD)
+<td><img src="0913/8-13.gif"><br>A(8,13)=572 (JD)
+<tr align=center><th bgcolor=DDFFDD>9
+<td><img src="0913/9-3.gif"><br>A(9,3)=24 (JD)
+<td><img src="0913/9-5.gif"><br>A(9,5)=89 (JD)
+<td><img src="0913/9-6.gif"><br>A(9,6)=146 (JD)
+<td><img src="0913/9-7.gif"><br>A(9,7)=182 (JD)
+<td><img src="0913/9-9.gif"><br>A(9,9)=324 (MM)
+<td><img src="0913/9-11.gif"><br>A(9,11)=498 (JD)
+<td><img src="0913/9-13.gif"><br>A(9,13)=725 (JD)
+<tr align=center><th bgcolor=DDFFDD>10
+<td><img src="0913/10-3.gif"><br>A(10,3)=33 (JD)
+<td><img src="0913/10-5.gif"><br>A(10,5)=111 (JD)
+<td><img src="0913/10-6.gif"><br>A(10,6)=183 (JD)
+<td><img src="0913/10-7.gif"><br>A(10,7)=226 (JD)
+<td><img src="0913/10-9.gif"><br>A(10,9)=404 (JD)
+<td><img src="0913/10-11.gif"><br>A(10,11)=622 (JD)
+<td><img src="0913/10-13.gif"><br>A(10,13)=896 (JD)
+<tr align=center><th bgcolor=DDFFDD>11
+<td><img src="0913/11-3.gif"><br>A(11,3)=42 (JD)
+<td><img src="0913/11-5.gif"><br>A(11,5)=140 (JD)
+<td><img src="0913/11-6.gif"><br>A(11,6)=224 (JD)
+<td><img src="0913/11-7.gif"><br>A(11,7)=279 (JD)
+<td><img src="0913/11-9.gif"><br>A(11,9)=489 (JD)
+<td><img src="0913/11-11.gif"><br>A(11,11)=756 (JD)
+<td><img src="0913/11-13.gif"><br>A(11,13)=1085 (JD)
+<tr align=center><th bgcolor=DDFFDD>12
+<td><img src="0913/12-3.gif"><br>A(12,3)=48 (JD)
+<td><img src="0913/12-5.gif"><br>A(12,5)=166 (JD)
+<td><img src="0913/12-6.gif"><br>A(12,6)=269 (JD)
+<td><img src="0913/12-7.gif"><br>A(12,7)=338 (JD)
+<td><img src="0913/12-9.gif"><br>A(12,9)=584 (JD)
+<td><img src="0913/12-11.gif"><br>A(12,11)=907 (JD)
+<td><img src="0913/12-13.gif"><br>A(12,13)=1301 (JD)
+<tr align=center><th bgcolor=DDFFDD>13
+<td><img src="0913/13-3.gif"><br>A(13,3)=60 (JD)
+<td><img src="0913/13-5.gif"><br>A(13,5)=196 (JD)
+<td><img src="0913/13-6.gif"><br>A(13,6)=318 (JD)
+<td><img src="0913/13-7.gif"><br>A(13,7)=401 (JD)
+<td><img src="0913/13-9.gif"><br>A(13,9)=694 (JD)
+<tr align=center><th bgcolor=DDFFDD>14
+<td><img src="0913/14-3.gif"><br>A(14,3)=72 (JD)
+<td><img src="0913/14-5.gif"><br>A(14,5)=234 (JD)
+<td><img src="0913/14-6.gif"><br>A(14,6)=372 (JD)
+<td><img src="0913/14-7.gif"><br>A(14,7)=466 (JD)
+<tr align=center><th bgcolor=DDFFDD>15
+<td><img src="0913/15-3.gif"><br>A(15,3)=81 (JD)
+<td><img src="0913/15-5.gif"><br>A(15,5)=267 (JD)
+<td><img src="0913/15-6.gif"><br>A(15,6)=430 (JD)
+<td><img src="0913/15-7.gif"><br>A(15,7)=530 (JD)
+<tr align=center><th bgcolor=DDFFDD>16
+<td><img src="0913/16-3.gif"><br>A(16,3)=95 (GS)
+<td><img src="0913/16-5.gif"><br>A(16,5)=305 (JD)
+<td><img src="0913/16-6.gif"><br>A(16,6)=492 (JD)
+<td><img src="0913/16-7.gif"><br>A(16,7)=610 (JD)
+<tr align=center><th bgcolor=DDFFDD>17
+<td><img src="0913/17-3.gif"><br>A(17,3)=110 (GS)
+<td><img src="0913/17-5.gif"><br>A(17,5)=352 (JD)
+<tr align=center><th bgcolor=DDFFDD>18
+<td><img src="0913/18-3.gif"><br>A(18,3)=122 (JD)
+<td><img src="0913/18-5.gif"><br>A(18,5)=392 (JD)
+<tr align=center><th bgcolor=DDFFDD>19
+<td><img src="0913/19-3.gif"><br>A(19,3)=138 (JD)
+<tr align=center><th bgcolor=DDFFDD>20
+<td><img src="0913/20-3.gif"><br>A(20,3)=156 (JD)
+</table><p>
+
+George Sicherman suspects that for fixed n and large k, the solution always involves I polyominoes.<p>
+
+Because of the A(15,3)=81 solution found by Joe DeVincentis, it appears the optimal solutions do not always use an L or I polyomino.<p>
+
+What if we want to fence off m different regions, all with the same area, using k copies of the same n-omino?  What is the largest A(n,k,m) those areas could be?  Here are the best known solutions:<p>
+
+<center><font size=+2>m=2</font></center>
+<table align=center border=1 bgcolor=lightyellow cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>n \ k<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9
+<tr align=center><th bgcolor=DDFFDD>3
+<td><td><td><td><td><img src="0913/3-6-2.png"><br>A(3,6,2)=2 (GS)<td><img src="0913/3-7-2.png"><br>A(3,7,2)=4 (JD)<td><img src="0913/3-8-2.png"><br>A(3,8,2)=6 (JD)<td><img src="0913/3-9-2.png"><br>A(3,9,2)=9 (JD)
+<tr align=center><th bgcolor=DDFFDD>4
+<td><td><td><img src="0913/4-4-2.png"><br>A(4,4,2)=2 (GS)<td><img src="0913/4-5-2.png"><br>A(4,5,2)=3 (JD)<td><img src="0913/4-6-2.png"><br>A(4,6,2)=6 (GS)<td><img src="0913/4-7-2.png"><br>A(4,7,2)=9 (JD)<td><img src="0913/4-8-2.png"><br>A(4,8,2)=12 (JD)<td><img src="0913/4-9-2.png"><br>A(4,9,2)=16 (JD)
+<tr align=center><th bgcolor=DDFFDD>5
+<td><td><img src="0913/5-3-2.png"><br>A(5,3,2)=1 (GS)<td><img src="0913/5-4-2.png"><br>A(5,4,2)=2 (GS)<td><img src="0913/5-5-2.png"><br>A(5,5,2)=6 (GS)<td><img src="0913/5-6-2.png"><br>A(5,6,2)=8 (GS)<td><img src="0913/5-7-2.png"><br>A(5,7,2)=16 (JD)<td><img src="0913/5-8-2.png"><br>A(5,8,2)=20 (JD)<td><img src="0913/5-9-2.png"><br>A(5,9,2)=30 (JD)
+<tr align=center><th bgcolor=DDFFDD>6
+<td><td><img src="0913/6-3-2.png"><br>A(6,3,2)=2 (JD)<td><img src="0913/6-4-2.png"><br>A(6,4,2)=5 (GS)<td><img src="0913/6-5-2.png"><br>A(6,5,2)=8 (JD)<td><img src="0913/6-6-2.png"><br>A(6,6,2)=17 (JD)<td><img src="0913/6-7-2.png"><br>A(6,7,2)=25 (JD)<td><img src="0913/6-8-2.png"><br>A(6,8,2)=30 (JD)<td><img src="0913/6-9-2.png"><br>A(6,9,2)=42 (JD)
+<tr align=center><th bgcolor=DDFFDD>7
+<td><img src="0913/7-2-2.png"><br>A(7,2,2)=1 (GS)<td><img src="0913/7-3-2.png"><br>A(7,3,2)=3 (GS)<td><img src="0913/7-4-2.png"><br>A(7,4,2)=8 (JD)<td><img src="0913/7-5-2.png"><br>A(7,5,2)=14 (JD)<td><img src="0913/7-6-2.png"><br>A(7,6,2)=24 (JD)<td><img src="0913/7-7-2.png"><br>A(7,7,2)=36 (JD)
+<tr align=center><th bgcolor=DDFFDD>8
+<td><img src="0913/8-2-2.png"><br>A(8,2,2)=2 (JD)<td><img src="0913/8-3-2.png"><br>A(8,3,2)=4 (GS)<td><img src="0913/8-4-2.png"><br>A(8,4,2)=12 (JD)<td><img src="0913/8-5-2.png"><br>A(8,5,2)=20 (JD)<td><img src="0913/8-6-2.png"><br>A(8,6,2)=30 (JD)<td><img src="0913/8-7-2.png"><br>A(8,7,2)=49 (JD)
+<tr align=center><th bgcolor=DDFFDD>9
+<td><td><img src="0913/9-3-2.png"><br>A(9,3,2)=6 (JD)<td><img src="0913/9-4-2.png"><br>A(9,4,2)=17 (JD)<td><img src="0913/9-5-2.png"><br>A(9,5,2)=27 (JD)<td><img src="0913/9-6-2.png"><br>A(9,6,2)=44 (JD)
+</table><p>
+
+<center><font size=+2>m=3</font></center>
+<table align=center border=1 bgcolor=lightyellow cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>n \ k<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10
+<tr align=center><th bgcolor=DDFFDD>3
+<td><td><td><td><td><td><img src="0913/3-8-3.png"><br>A(3,8,3)=2 (JD)<td><img src="0913/3-9-3.png"><br>A(3,9,3)=3 (JD)<td><img src="0913/3-10-3.png"><br>A(3,10,3)=4 (JD)
+<tr align=center><th bgcolor=DDFFDD>4
+<td><td><td><img src="0913/4-5-3.png"><br>A(4,5,3)=1 (GS)<td><img src="0913/4-6-3.png"><br>A(4,6,3)=2 (GS)<td><img src="0913/4-7-3.png"><br>A(4,7,3)=3 (JD)<td><img src="0913/4-8-3.png"><br>A(4,8,3)=6 (JD)<td><img src="0913/4-9-3.png"><br>A(4,9,3)=7 (JD)<td><img src="0913/4-10-3.png"><br>A(4,10,3)=9 (JD)
+<tr align=center><th bgcolor=DDFFDD>5
+<td><td><img src="0913/5-4-3.png"><br>A(5,4,3)=1 (GS)<td><img src="0913/5-5-3.png"><br>A(5,5,3)=2 (JD)<td><img src="0913/5-6-3.png"><br>A(5,6,3)=4 (JD)<td><img src="0913/5-7-3.png"><br>A(5,7,3)=6 (JD)<td><img src="0913/5-8-3.png"><br>A(5,8,3)=10 (JD)<td><img src="0913/5-9-3.png"><br>A(5,9,3)=12 (JD)<td><img src="0913/5-10-3.png"><br>A(5,10,3)=16 (JD)
+<tr align=center><th bgcolor=DDFFDD>6
+<td><img src="0913/6-3-3.png"><br>A(6,3,3)=1 (GS)<td><img src="0913/6-4-3.png"><br>A(6,4,3)=2 (GS)<td><img src="0913/6-5-3.png"><br>A(6,5,3)=4 (JD)<td><img src="0913/6-6-3.png"><br>A(6,6,3)=6 (JD)<td><img src="0913/6-7-3.png"><br>A(6,7,3)=8 (JD)<td><img src="0913/6-8-3.png"><br>A(6,8,3)=12 (JD)<td><img src="0913/6-9-3.png"><br>A(6,9,3)=18 (JD)<td><img src="0913/6-10-3.png"><br>A(6,10,3)=25 (JD)
+<tr align=center><th bgcolor=DDFFDD>7
+<td><td><img src="0913/7-4-3.png"><br>A(7,4,3)=4 (JD)<td><img src="0913/7-5-3.png"><br>A(7,5,3)=6 (JD)<td><img src="0913/7-6-3.png"><br>A(7,6,3)=8 (JD)<td><img src="0913/7-7-3.png"><br>A(7,7,3)=12 (JD)<td><img src="0913/7-8-3.png"><br>A(7,8,3)=21 (JD)
+</table><p>
+
+<center><font size=+2>m=4</font></center>
+<table align=center border=1 bgcolor=lightyellow cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>n \ k<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11
+<tr align=center><th bgcolor=DDFFDD>3
+<td><td><td><td><td><td><img src="0913/3-9-4.png"><br>A(3,9,4)=1 (JD)<td><img src="0913/3-10-4.png"><br>A(3,10,4)=2 (JD)<td><img src="0913/3-11-4.png"><br>A(3,11,4)=3 (JD)
+<tr align=center><th bgcolor=DDFFDD>4
+<td><td><td><img src="0913/4-6-4.png"><br>A(4,6,4)=1 (GS)<td><img src="0913/4-7-4.gif"><br>A(4,7,4)=2<td><td><img src="0913/4-9-4.png"><br>A(4,9,4)=4 (JD)<td><img src="0913/4-10-4.png"><br>A(4,10,4)=5 (JD)<td><img src="0913/4-11-4.png"><br>A(4,11,4)=6 (JD)
+<tr align=center><th bgcolor=DDFFDD>5
+<td><td><img src="0913/5-5-4.png"><br>A(5,5,4)=1 (GS)<td><img src="0913/5-6-4.png"><br>A(5,6,4)=2 (JD)<td><td><img src="0913/5-8-4.png"><br>A(5,8,4)=6 (JD)<td><td><img src="0913/5-10-4.png"><br>A(5,10,4)=8 (JD)<td><img src="0913/5-11-4.png"><br>A(5,11,4)=10 (JD)
+<tr align=center><th bgcolor=DDFFDD>6
+<td><img src="0913/6-4-4.png"><br>A(6,4,4)=1 (JD)<td><img src="0913/6-5-4.png"><br>A(6,5,4)=2 (JD)<td><img src="0913/6-6-4.png"><br>A(6,6,4)=4 (JD)<td><img src="0913/6-7-4.png"><br>A(6,7,4)=6 (JD)<td><img src="0913/6-8-4.png"><br>A(6,8,4)=8 (JD)<td><td><img src="0913/6-10-4.png"><br>A(6,10,4)=12 (JD)<td><img src="0913/6-11-4.png"><br>A(6,11,4)=18 (JD)
+<tr align=center><th bgcolor=DDFFDD>6
+<td><img src="0913/7-4-4.png"><br>A(7,4,4)=2 (JD)<td><img src="0913/7-5-4.png"><br>A(7,5,4)=3 (JD)<td><img src="0913/7-6-4.png"><br>A(7,6,4)=6 (JD)<td><img src="0913/7-7-4.png"><br>A(7,7,4)=8 (JD)<td><img src="0913/7-8-4.png"><br>A(7,8,4)=10 (JD)<td><img src="0913/7-9-4.png"><br>A(7,9,4)=14 (JD)
+</table><p>
+
+<p><hr color=black><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 10/2/13.<font></BODY></HTML>
+

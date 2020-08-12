@@ -1,0 +1,54 @@
+<table align=center bgcolor=FFFFDD border=1 cellpadding=3><tr align=center bgcolor=DDDDFF>
+<th>n \ m<th>2
+<tr align=center><th bgcolor=DDDDFF>3
+<td> 36<sup>2</sup>=1296 <br> 21<sup>3</sup>=9261<th bgcolor=DDDDFF>3
+<tr align=center><th bgcolor=DDDDFF>4
+<td> 32<sup>2</sup>=1024 <br> 7<sup>4</sup>=2401
+<td> 21<sup>3</sup>=9261 <br> 6<sup>4</sup>=1296<th bgcolor=DDDDFF>4
+<tr align=center><th bgcolor=DDDDFF>5
+<td> 18<sup>2</sup>=324 <br> 3<sup>5</sup>=243
+<td> 945<sup>3</sup>=843908625 <br> 48<sup>5</sup>=254803968
+<td> 7<sup>4</sup>=2401 <br> 4<sup>5</sup>=1024<th bgcolor=DDDDFF>5
+<tr align=center><th bgcolor=DDDDFF>6
+<td> 1702<sup>2</sup>=2896804 <br> 13<sup>6</sup>=4826809
+<td> 178<sup>3</sup>=5639752 <br> 14<sup>6</sup>=7529536
+<td> 350<sup>4</sup>=15006250000 <br> 50<sup>6</sup>=15625000000
+<td> 477<sup>5</sup>=24694025666157 <br> 50<sup>6</sup>=60254729561664
+<tr align=center><th bgcolor=DDDDFF>7
+<td> 892<sup>2</sup>=799236 <br> 6<sup>7</sup>=279936
+<td> 12<sup>3</sup>=1728 <br> 3<sup>7</sup>=2187
+<td> 14<sup>4</sup>=38416 <br> 4<sup>7</sup>=16384
+<td> 1265<sup>5</sup>=3239310864040625 <br> 164<sup>7</sup>=3190854023266304
+<tr align=center><th bgcolor=DDDDFF>8
+<td> 1024<sup>2</sup>=1048576 <br> 7<sup>8</sup>=5764801
+<td> 273<sup>3</sup>=20346417 <br> 9<sup>8</sup>=43046721
+<td> 32<sup>4</sup>=1048576 <br> 7<sup>8</sup>=5764801
+<td> 16<sup>5</sup>=1048576 <br> 7<sup>8</sup>=5764801
+<tr align=center><th bgcolor=DDDDFF>9
+<td> 117<sup>2</sup>=13689 <br> 3<sup>9</sup>=19683
+<td> 5<sup>3</sup>=125 <br> 2<sup>9</sup>=512
+<td> 2323<sup>4</sup>=29120366676241 <br> 31<sup>9</sup>=26439622160671
+<td> 10612<sup>5</sup>=134581760941720056832 <br> 205<sup>9</sup>=639417840613205078125
+<tr align=center><th bgcolor=DDDDFF>10
+<td> 1663<sup>2</sup>=2765569 <br> 5<sup>10</sup>=9765625
+<td> 21490<sup>3</sup>=9924513949000 <br> 17<sup>10</sup>=2015993900449
+<td> 7<sup>4</sup>=2401 <br> 2<sup>10</sup>=1024
+<td> 71322<sup>5</sup>=1845514940671845308617632 <br> 291<sup>10</sup>=4354415726901861885367401
+</table><p>
+
+<table align=center bgcolor=FFFFDD border=1 cellpadding=3><tr align=center bgcolor=DDDDFF>
+<th>n \ m<th>6
+<tr align=center><th bgcolor=DDDDFF>7
+<td> 604<sup>6</sup>=48553621866090496 <br> 244<sup>7</sup>=51490698625368064<th bgcolor=DDDDFF>7
+<tr align=center><th bgcolor=DDDDFF>8
+<td> 2184<sup>6</sup>=108521504043929174016 <br> 339<sup>8</sup>=174420523496591010081
+<td> 2511<sup>7</sup>=629400362910778340554671 <br> 918<sup>8</sup>=504360944810372276510976<th bgcolor=DDDDFF>8
+<tr align=center><th bgcolor=DDDDFF>9
+<td> 11566<sup>6</sup>=2393862093570956141694016 <br> 478<sup>9</sup>=1302719966433505169694208
+<td> 1819<sup>7</sup>=65891424018613967932339 <br> 322<sup>9</sup>=37213699403613156884992
+<td> 9348<sup>8</sup>=58310884581920243160434679545856 <br> 3588<sup>9</sup>=98553467561288413354185042690048
+<tr align=center><th bgcolor=DDDDFF>10
+<td> 24874<sup>6</sup>=2393862093570956141694016 <br> 478<sup>10</sup>=1302719966433505169694208
+<td> 7285<sup>7</sup>=1088947376016342707296328125 <br> 544<sup>10</sup>=2269807344710827302165938176
+<td> 7<sup>8</sup>=5764801 <br> 4<sup>10</sup>=1048576
+</table>

@@ -1,0 +1,248 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (May 2011)</H1></CENTER>
+
+Suppose f and g are integer functions, with f(n) &le; n and g(n) &ge; n.<br>
+For small integers 0 &le; n &le; 100, we ask for the smallest number of iterations of f or g to return to n.<br>
+We also ask for the smallest number n requiring k operations to return to n.<br>
+Some pairs of functions are more interesting than others.<br>
+We restrict our attention to pairs which have relatively few cycles.<br>
+Can you extend one of the tables below, or find another interesting pair of functions f and g?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Berend van der Zwaag sent solutions this month.<p>
+
+<center>&phi;(n) = number of smaller coprime numbers to n, &sigma;(n) = sum of divisors of n</center>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td>&phi;(0)=0
+<td>&sigma;(1)=1
+<td>&phi;(&sigma;(2))=2
+<td>&sigma;(&phi;(3))=3
+<td>&sigma;(&sigma;(&phi;(4)))=4
+<tr align=center><td>&phi;(&sigma;(&phi;(&sigma;(6))))=6
+<td>&sigma;(&phi;(&sigma;(7)))=7
+<td>&phi;(&sigma;(8))=8
+<td>&phi;(&sigma;(12))=12
+<td>&sigma;(&phi;(15))=15
+<tr align=center><td>&phi;(&sigma;(&sigma;(16)))=16
+<td>&sigma;(&sigma;(&phi;(24)))=24
+<td>&sigma;(&phi;(28))=28
+<td>&phi;(&sigma;(&phi;(&sigma;(&phi;(&sigma;(30))))))=30
+<td>&sigma;(&phi;(&sigma;(31)))=31
+<tr align=center><td>&sigma;(&sigma;(&phi;(32)))=32
+<td>&phi;(&sigma;(&phi;(&sigma;(&sigma;(&sigma;(&phi;(36)))))))=36
+<td>&phi;(&sigma;(&phi;(&sigma;(48))))=48
+<td>&sigma;(&sigma;(&phi;(&phi;(&sigma;(&phi;(&sigma;(56)))))))=56
+<td>&phi;(&sigma;(&phi;(&sigma;(60))))=60
+<tr align=center><td>&sigma;(&sigma;(&sigma;(&phi;(&phi;(&sigma;(63))))))=63
+<td>&phi;(&sigma;(&sigma;(64)))=64
+<td>&phi;(&sigma;(&phi;(&sigma;(72))))=72
+<td>&sigma;(&phi;(&sigma;(&phi;(&phi;(&sigma;(&sigma;(91)))))))=91
+<td>&phi;(&phi;(&sigma;(&sigma;(96))))=96
+</table><p>
+
+<table align=center border=1 cellpadding=5 bgcolor=EEFFFF>
+<tr align=center bgcolor=BBFFFF><th>operations<th>sequence
+<tr align=center><td>1<td>&phi;(0)=0
+<tr align=center><td>2<td>&phi;(&sigma;(2))=2
+<tr align=center><td>3<td>&sigma;(&sigma;(&phi;(4)))=4
+<tr align=center><td>4<td>&phi;(&sigma;(&phi;(&sigma;(6))))=6
+<tr align=center><td>5<td>&phi;(&sigma;(&sigma;(&sigma;(&phi;(144)))))=144
+<tr align=center><td>6<td>&phi;(&sigma;(&phi;(&sigma;(&phi;(&sigma;(30))))))=30
+<tr align=center><td>7<td>&phi;(&sigma;(&phi;(&sigma;(&sigma;(&sigma;(&phi;(36)))))))=36
+<tr align=center><td>8<td>&phi;(&sigma;(&phi;(&sigma;(&sigma;(&sigma;(&phi;(&sigma;(384))))))))=384
+<tr align=center><td>9<td>&phi;(&phi;(&sigma;(&phi;(&phi;(&sigma;(&sigma;(&sigma;(&sigma;(800)))))))))=800
+<tr align=center><td>10<td>&phi;(&phi;(&sigma;(&phi;(&phi;(&phi;(&sigma;(&sigma;(&sigma;(&sigma;(160))))))))))=160
+<tr align=center><td>11<td>&phi;(&sigma;(&phi;(&phi;(&sigma;(&phi;(&phi;(&sigma;(&sigma;(&sigma;(&sigma;(108)))))))))))=108
+<tr align=center><td>12<td>&phi;(&sigma;(&phi;(&phi;(&sigma;(&phi;(&sigma;(&phi;(&sigma;(&sigma;(&sigma;(&phi;(1080))))))))))))=1080
+<tr align=center><td>13<td>&phi;(&phi;(&phi;(&sigma;(&phi;(&sigma;(&sigma;(&phi;(&sigma;(&sigma;(&phi;(&sigma;(&sigma;(640)))))))))))))=640 (BZ)
+<tr align=center><td>14<td>&phi;(&sigma;(&sigma;(&sigma;(&phi;(&phi;(&phi;(&sigma;(&phi;(&sigma;(&sigma;(&phi;(&phi;(&sigma;(4620))))))))))))))=4620 (BZ)
+<tr align=center><td>15<td>&phi;(&sigma;(&sigma;(&sigma;(&phi;(&phi;(&phi;(&sigma;(&phi;(&phi;(&sigma;(&sigma;(&sigma;(&phi;(&sigma;(10800)))))))))))))))=10800 (BZ)
+<tr align=center><td>16<td>&phi;(&sigma;(&sigma;(&sigma;(&sigma;(&phi;(&sigma;(&phi;(&phi;(&sigma;(&phi;(&sigma;(&phi;(&phi;(&sigma;(&phi;(10496))))))))))))))))=10496 (BZ)
+<tr align=center><td>17<td>&sigma;(&phi;(&phi;(&sigma;(&phi;(&sigma;(&sigma;(&sigma;(&phi;(&sigma;(&phi;(&sigma;(&phi;(&sigma;(&sigma;(&phi;(&phi;(7905)))))))))))))))))=7905 (BZ)
+<tr align=center><td>18<td>&phi;(&sigma;(&sigma;(&phi;(&sigma;(&sigma;(&sigma;(&phi;(&phi;(&phi;(&sigma;(&phi;(&sigma;(&phi;(&sigma;(&sigma;(&sigma;(&phi;(23760))))))))))))))))))=23760 (BZ)
+</table><p>
+
+<center>&radic;(n) = square root rounded down, F(n) = n!</center>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td>&radic;(0)=0
+<td>F(1)=1
+<td>F(2)=2
+<tr align=center><td>&radic;(&radic;(F(&radic;(&radic;(F(F(3)))))))=3
+<td>&radic;(F(4))=4
+<td>&radic;(&radic;(F(F(&radic;(&radic;(F(5)))))))=5
+<tr align=center><td>F(&radic;(&radic;(F(&radic;(&radic;(F(6)))))))=6
+<td>&radic;(F(&radic;(&radic;(F(F(&radic;(10)))))))=10
+<td>&radic;(&radic;(&radic;(F(12))))=12
+<tr align=center><td>&radic;(&radic;(&radic;(&radic;(&radic;(&radic;(&radic;(F(&radic;(&radic;(&radic;(&radic;(F(&radic;(&radic;(&radic;(&radic;(F(F(&radic;(21))))))))))))))))))))=21 (BZ)
+<td>F(&radic;(24))=24
+<td>&radic;(F(F(&radic;(&radic;(F(&radic;(26)))))))=26
+<tr align=center><td>&radic;(&radic;(&radic;(&radic;(F(F(&radic;(&radic;(&radic;(&radic;(&radic;(&radic;(&radic;(&radic;(F(&radic;(&radic;(&radic;(&radic;(F(30))))))))))))))))))))=30 (BZ)
+<td>&radic;(&radic;(&radic;(&radic;(&radic;(&radic;(&radic;(F(F(&radic;(35))))))))))=35
+<td>&radic;(&radic;(F(&radic;(F(&radic;(&radic;(F(&radic;(43)))))))))=43
+<tr align=center><td>&radic;(&radic;(&radic;(&radic;(&radic;(F(&radic;(&radic;(F(&radic;(F(&radic;(&radic;(F(&radic;(44)))))))))))))))=44
+<td>&radic;(&radic;(&radic;(&radic;(F(&radic;(F(&radic;(46))))))))=46
+<td>&radic;(&radic;(&radic;(&radic;(&radic;(F(&radic;(82)))))))=82
+</table><p>
+
+<table align=center border=1 cellpadding=5 bgcolor=EEFFFF>
+<tr align=center bgcolor=BBFFFF><th>operations<th>sequence
+<tr align=center><td>1<td>&radic;(0)=0
+<tr align=center><td>2<td>&radic;(F(4))=4
+<tr align=center><td>3<td>none
+<tr align=center><td>4<td>&radic;(&radic;(&radic;(F(12))))=12
+<tr align=center><td>5<td>none
+<tr align=center><td>6<td>none
+<tr align=center><td>7<td>&radic;(&radic;(F(&radic;(&radic;(F(F(3)))))))=3
+<tr align=center><td>8<td>&radic;(&radic;(&radic;(&radic;(F(&radic;(F(&radic;(46))))))))=46
+<tr align=center><td>9<td>&radic;(&radic;(F(&radic;(F(&radic;(&radic;(F(&radic;(43)))))))))=43
+<tr align=center><td>10<td>&radic;(&radic;(&radic;(&radic;(&radic;(&radic;(&radic;(F(F(&radic;(35))))))))))=35
+<tr align=center><td>11<td>none
+</table><p>
+
+<center>&Pi;(n) = product of digits of n, S(n) = n<sup>2</sup></center>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td>&Pi;(0)=0
+<td>&Pi;(1)=1
+<td>&Pi;(2)=2
+<td>&Pi;(3)=3
+<td>&Pi;(4)=4
+<tr align=center><td>&Pi;(5)=5
+<td>&Pi;(6)=6
+<td>&Pi;(7)=7
+<td>&Pi;(8)=8
+<td>&Pi;(9)=9
+<tr align=center><td>&Pi;(&Pi;(S(&Pi;(S(S(&Pi;(16)))))))=16
+<td>&Pi;(S(&Pi;(&Pi;(&Pi;(&Pi;(&Pi;(S(S(&Pi;(S(18)))))))))))=18
+<td>&Pi;(S(&Pi;(24)))=24
+<td>S(&Pi;(&Pi;(&Pi;(S(&Pi;(S(36)))))))=36
+<td>S(&Pi;(&Pi;(64)))=64
+</table><p>
+
+<table align=center border=1 cellpadding=5 bgcolor=EEFFFF>
+<tr align=center bgcolor=BBFFFF><th>operations<th>sequence
+<tr align=center><td>1<td>&Pi;(0)=0
+<tr align=center><td>2<td>none?
+<tr align=center><td>3<td>&Pi;(S(&Pi;(24)))=24
+<tr align=center><td>4<td>none?
+<tr align=center><td>5<td>none?
+<tr align=center><td>6<td>&Pi;(&Pi;(&Pi;(S(&Pi;(S(128))))))=128
+<tr align=center><td>7<td>&Pi;(&Pi;(S(&Pi;(S(S(&Pi;(16)))))))=16
+<tr align=center><td>8<td>none?
+<tr align=center><td>9<td>none?
+<tr align=center><td>10<td>none?
+<tr align=center><td>11<td>&Pi;(S(&Pi;(&Pi;(&Pi;(&Pi;(&Pi;(S(S(&Pi;(S(18)))))))))))=18
+<tr align=center><td>12<td>none?
+</table><p>
+
+<center>&Sigma;(n) = sum of digits of n, P(n) = 2<sup>n</sup></center>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td>&Sigma;(0)=0
+<td>&Sigma;(1)=1
+<td>&Sigma;(2)=2
+<tr align=center><td>&Sigma;(3)=3
+<td>&Sigma;(4)=4
+<td>&Sigma;(5)=5
+<tr align=center><td>&Sigma;(6)=6
+<td>&Sigma;(7)=7
+<td>&Sigma;(8)=8
+<tr align=center><td>&Sigma;(9)=9
+<td>&Sigma;(P(&Sigma;(P(P(&Sigma;(11))))))=11
+<td>&Sigma;(&Sigma;(P(P(&Sigma;(P(&Sigma;(13)))))))=13
+<tr align=center><td>&Sigma;(P(&Sigma;(P(&Sigma;(P(&Sigma;(P(P(14)))))))))=14
+<td>P(P(&Sigma;(&Sigma;(P(&Sigma;(16))))))=16
+<td>&Sigma;(P(&Sigma;(&Sigma;(P(P(&Sigma;(P(P(&Sigma;(20))))))))))=20
+<tr align=center><td>&Sigma;(P(&Sigma;(P(&Sigma;(P(&Sigma;(P(&Sigma;(22)))))))))=22
+<td>&Sigma;(P(P(P(&Sigma;(&Sigma;(P(&Sigma;(25))))))))=25
+<td>&Sigma;(P(&Sigma;(P(P(P(&Sigma;(&Sigma;(29))))))))=29
+<tr align=center><td>&Sigma;(P(&Sigma;(P(&Sigma;(&Sigma;(P(P(&Sigma;(P(&Sigma;(31)))))))))))=31
+<td>P(&Sigma;(32))=32
+<td>&Sigma;(P(&Sigma;(P(&Sigma;(P(P(&Sigma;(&Sigma;(&Sigma;(P(P(&Sigma;(41)))))))))))))=41
+<tr align=center><td>&Sigma;(P(&Sigma;(P(&Sigma;(P(&Sigma;(&Sigma;(P(P(&Sigma;(&Sigma;(P(&Sigma;(47))))))))))))))=47
+<td>&Sigma;(P(&Sigma;(P(&Sigma;(P(&Sigma;(P(P(&Sigma;(&Sigma;(&Sigma;(P(50)))))))))))))=50
+<td>&Sigma;(P(P(&Sigma;(&Sigma;(P(&Sigma;(P(&Sigma;(&Sigma;(P(58)))))))))))=58
+<tr align=center><td>&Sigma;(P(&Sigma;(P(&Sigma;(P(&Sigma;(P(&Sigma;(&Sigma;(P(P(&Sigma;(&Sigma;(68))))))))))))))=68
+<td>&Sigma;(P(70))=70
+<td>&Sigma;(P(&Sigma;(P(&Sigma;(P(&Sigma;(P(&Sigma;(P(P(&Sigma;(&Sigma;(76)))))))))))))=76
+</table><p>
+
+<table align=center border=1 cellpadding=5 bgcolor=EEFFFF>
+<tr align=center bgcolor=BBFFFF><th>operations<th>sequence
+<tr align=center><td>1<td>&Sigma;(0)=0
+<tr align=center><td>2<td>P(&Sigma;(32))=32
+<tr align=center><td>3<td>none
+<tr align=center><td>4<td>none
+<tr align=center><td>5<td>none
+<tr align=center><td>6<td>&Sigma;(P(&Sigma;(P(P(&Sigma;(11))))))=11
+<tr align=center><td>7<td>&Sigma;(&Sigma;(P(P(&Sigma;(P(&Sigma;(13)))))))=13
+<tr align=center><td>8<td>&Sigma;(P(P(P(&Sigma;(&Sigma;(P(&Sigma;(25))))))))=25
+<tr align=center><td>9<td>&Sigma;(P(&Sigma;(P(&Sigma;(P(&Sigma;(P(P(14)))))))))=14
+<tr align=center><td>10<td>&Sigma;(P(&Sigma;(&Sigma;(P(P(&Sigma;(P(P(&Sigma;(20))))))))))=20
+<tr align=center><td>11<td>&Sigma;(P(&Sigma;(P(&Sigma;(&Sigma;(P(P(&Sigma;(P(&Sigma;(31)))))))))))=31
+<tr align=center><td>12<td>none?
+<tr align=center><td>13<td>&Sigma;(P(&Sigma;(P(&Sigma;(P(P(&Sigma;(&Sigma;(&Sigma;(P(P(&Sigma;(41)))))))))))))=41
+<tr align=center><td>14<td>&Sigma;(P(&Sigma;(P(&Sigma;(P(&Sigma;(&Sigma;(P(P(&Sigma;(&Sigma;(P(&Sigma;(47))))))))))))))=47
+</table><p>
+
+Berend van der Zwaag was interested in these two functions:<p>
+
+<center>p(n) = smallest permutation of the digits of n, d(n) = 2n</center>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td>p(0)=0
+<td>p(1)=1
+<td>p(2)=2
+<tr align=center><td>p(3)=3
+<td>p(4)=4
+<td>p(5)=5
+<tr align=center><td>p(6)=6
+<td>p(7)=7
+<td>p(8)=8
+<tr align=center><td>p(9)=9
+<td>d(p(d(d(p(d(d(d(d(d(d(d(d(d(10))))))))))))))=10
+<td>d(d(p(d(d(p(d(d(d(d(d(d(d(d(20))))))))))))))=20
+<tr align=center><td>d(p(d(p(d(d(d(p(d(d(d(d(d(30)))))))))))))=30
+<td>d(p(d(d(d(d(d(d(d(p(d(d(d(d(32))))))))))))))=32
+<td>d(d(d(p(d(d(p(d(d(d(d(d(d(d(40))))))))))))))=40
+<tr align=center><td>d(p(d(p(d(d(d(d(d(d(d(d(d(d(50))))))))))))))=50
+<td>d(p(d(d(p(d(54))))))=54
+<td>d(d(p(d(p(d(d(d(p(d(d(d(d(60)))))))))))))=60
+<tr align=center><td>d(d(p(d(d(d(d(d(d(d(p(d(d(d(64))))))))))))))=64
+<td>d(d(p(d(d(p(72))))))=72
+<td>d(p(d(d(d(d(p(d(d(d(d(p(d(d(d(76)))))))))))))))=76
+<tr align=center><td>d(d(d(d(p(d(d(p(d(d(d(d(d(d(80))))))))))))))=80
+<td>d(p(d(p(d(d(d(90)))))))=90
+<td>d(p(d(d(p(d(p(d(d(d(d(p(d(p(d(d(d(92)))))))))))))))))=92
+<tr align=center><td>d(p(d(d(d(d(p(d(d(d(p(96)))))))))))=96
+<td>d(p(d(p(d(p(d(d(d(p(98))))))))))=98
+<td>d(d(p(d(p(d(d(d(d(d(d(d(d(d(100))))))))))))))=100
+</table><p>
+
+<table align=center border=1 cellpadding=5 bgcolor=EEFFFF>
+<tr align=center bgcolor=BBFFFF><th>operations<th>sequence
+<tr align=center><td>1<td>p(0)=0
+<tr align=center><td>2<td>d(p(2491578))=2491578
+<tr align=center><td>3<td>d(p(d(24913578)))=24913578
+<tr align=center><td>4<td>d(p(d(p(24691578))))=24691578
+<tr align=center><td>5<td>d(p(d(d(d(252)))))=252
+<tr align=center><td>6<td>d(p(d(d(p(d(54))))))=54
+<tr align=center><td>7<td>d(p(d(p(d(d(d(90)))))))=90
+<tr align=center><td>8<td>d(p(d(d(d(d(p(d(298))))))))=298
+<tr align=center><td>9<td>d(p(d(d(d(p(d(d(p(254)))))))))=254
+<tr align=center><td>10<td>d(p(d(p(d(p(d(d(d(p(98))))))))))=98
+<tr align=center><td>11<td>d(p(d(d(d(d(p(d(d(d(p(96)))))))))))=96
+<tr align=center><td>12<td>d(p(d(p(d(d(d(d(d(d(d(d(450))))))))))))=450
+<tr align=center><td>13<td>d(p(d(p(d(d(d(p(d(d(d(d(d(30)))))))))))))=30
+<tr align=center><td>14<td>d(p(d(d(p(d(d(d(d(d(d(d(d(d(10))))))))))))))=10
+<tr align=center><td>15<td>d(p(d(d(d(d(p(d(d(d(d(p(d(d(d(76)))))))))))))))=76
+<tr align=center><td>16<td>d(p(d(p(d(d(d(d(p(d(p(d(d(d(d(d(230))))))))))))))))=230
+<tr align=center><td>17<td>d(p(d(d(p(d(p(d(d(d(d(p(d(p(d(d(d(92)))))))))))))))))=92
+<tr align=center><td>18<td>d(d(p(d(p(d(p(d(d(d(d(p(d(d(p(d(d(p(1396))))))))))))))))))=1396
+<tr align=center><td>19<td>d(d(p(d(d(d(d(p(d(d(d(d(d(d(p(d(p(d(d(1836)))))))))))))))))))=1836
+<tr align=center><td>20<td>d(p(d(d(d(d(p(d(d(d(d(d(d(d(d(p(d(d(d(p(696))))))))))))))))))))=696
+</table><p>
+
+
+<p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 5/17/11.<font>
+
+</BODY></HTML>

@@ -1,0 +1,152 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1><CENTER><H1>Problem of the Month (April 2004)</H1></CENTER>Strobogrammatic numbers (SNs) are numbers that are the same when viewed upside down: 0, 1, 8, 11, 69, 88, 96, ....  These are sequence <a href="http://www.research.att.com/projects/OEIS?Anum=A000787
+">000787</a> at the <a href="http://www.research.att.com/~njas/sequences/index.html">Encyclopedia of Integer Sequences</a>.  This month we consider Strobogrammatic Expressions (SEs): mathematical expressions that describe the same number when viewed upside down.  Only the digits 0, 1, 6, 8, and 9, addition, subtraction, multiplication, division, exponentiation, and parentheses are allowed.  Here are some simple examples: 91-8/8-16, 68+68+61, and 9<sup>(9-6)</sup>, which describe the numbers 74, 197, and 729 respectively.<p>
+
+Every number can be represented by a SE of the form 1+1+1+....  What are the shortest (in terms of the minimum number of symbols used) SEs that represent the integers from 1 to 100?  We are particularly interested in shortest SEs that do not use any SNs.<p>
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Joseph DeVincentis and Richard Sabey sent SEs for 1-100, many of which beat my best. <p>
+
+Jeremy Galvagni found lots of SEs involving exponents.<p>
+
+Philippe Fondanaiche sent alternatives to some shortest expressions.<p>
+
+Gavin Theobald improved some expressions.<p>
+
+<center><font size=+3>Shortest Known Strobogrammatic Expressions</font></center>
+<center><table><tr><td>
+
+<table border=1 bgcolor=lightyellow><tr><th bgcolor=CCFFCC>Number<th bgcolor=CCFFCC>Symbols<th bgcolor=CCFFCC width=100>Shortest SE
+<tr align=center><td>1<td>1<td>1
+<tr align=center><td>2<td>3<td>1+1
+<tr align=center><td>3<td>3<td>9-6
+<tr align=center><td>4<td>5<td>9-6+1
+<tr align=center><td>5<td>5<td>6<sup>1</sup>-1<sup>9</sup>
+<tr align=center><td>6<td>2<td>6<sub>9</sub> <font color=orange>(GT)
+<tr align=center><td>7<td>4<td>6<sub>9</sub>+1 <font color=orange>(GT)
+<tr align=center><td>8<td>1<td>8
+<tr align=center><td>9<td>3<td>8+1<br>9<sup>1<sup>6</sup></sup>
+<tr align=center><td>10<td>5<td>9<sup>1</sup>+1<sup>6</sup><br>8+1+1<br>9<sup>1<sup>6</sup></sup>+1
+<tr align=center><td>11<td>2<td>11
+<tr align=center><td>12<td>4<td>11+1<br>11<sub>11</sub> <font color=orange>(GT)
+<tr align=center><td>13<td>6<td>11+1+1
+<tr align=center><td>14<td>4<td>6<sub>9</sub>+8 <font color=orange>(GT)
+<tr align=center><td>15<td>3<td>6+9
+<tr align=center><td>16<td>3<td>8+8
+<tr align=center><td>17<td>5<td>8+8+1<br>8+9<sup>1<sup>6</sup></sup><br>6<sub>9</sub>+11 <font color=orange>(GT)
+<tr align=center><td>18<td>5<td>18<sup>1<sup>81</sup></sup>
+<tr align=center><td>19<td>4<td>11+8
+<tr align=center><td>20<td>6<td>11+8+1
+<tr align=center><td>21<td>5<td>89-68
+<tr align=center><td>22<td>5<td>11+11
+<tr align=center><td>23<td>5<td>6+8+9
+<tr align=center><td>24<td>5<td>8+8+8
+<tr align=center><td>25<td>7<td>8+8+8+1<br>8+9<sup>1<sup>6</sup></sup>+8<br>6<sub>9</sub>+8+11 <font color=orange>(GT)</font><br>99-8-66 <font color=orange>(GT)
+<tr align=center><td>26<td>6<td>6+11+9
+<tr align=center><td>27<td>6<td>8+11+8
+<tr align=center><td>28<td>8<td>8+11+1+8<br>8+11+9<sup>1<sup>6</sup></sup><br>6<sub>9</sub>+11+11 <font color=orange>(GT)
+<tr align=center><td>29<td>7<td>89-68+8
+<tr align=center><td>30<td>7<td>6+6+9+9<br>11+8+11<br>191-161<br>696-666 <font color=orange>(GT)
+<tr align=center><td>31<td>7<td>6+8+8+9
+<tr align=center><td>32<td>7<td>8+8+8+8<br>99-1-66
+<tr align=center><td>33<td>5<td>99-66
+<tr align=center><td>34<td>7<td>99-66+1<br>61-8-19 <font color=red>(JD)
+<tr align=center><td>35<td>8<td>8+8+8+11
+</table>
+
+</td><td>&nbsp;&nbsp;&nbsp;</td><td>
+
+<table border=1 bgcolor=lightyellow><tr><th bgcolor=CCFFCC>Number<th bgcolor=CCFFCC>Symbols<th bgcolor=CCFFCC width=100>Shortest SE
+<tr align=center><td>36<td>5<td>6<sup>1+1<sup>9</sup></sup> <font color=orange>(GT)</font><br>6<sub>9</sub>*6<sub>9</sub> <font color=orange>(GT)
+<tr align=center><td>37<td>7<td>6<sup>1+1<sup>9</sup></sup>+1 <font color=orange>(GT)</font><br>6<sub>9</sub>*6<sub>9</sub>+1 <font color=orange>(GT)
+<tr align=center><td>38<td>9<td>6+6+8+9+9<br>11+8+8+11<br>101+18-81 <font color=red>(JD)
+<tr align=center><td>39<td>8<td>99-66+6<sub>9</sub> <font color=orange>(GT)
+<tr align=center><td>40<td>8<td>8(6<sup>1</sup>-1<sup>9</sup>)
+<tr align=center><td>41<td>7<td>61-1-19
+<tr align=center><td>42<td>5<td>61-19
+<tr align=center><td>43<td>7<td>61-19+1
+<tr align=center><td>44<td>7<td>6<sup>1+1<sup>9</sup></sup>+8 <font color=orange>(GT)</font><br>6<sub>9</sub>*6<sub>9</sub>+8 <font color=orange>(GT)
+<tr align=center><td>45<td>7<td>9*9-6*6
+<tr align=center><td>46<td>6<td>6/9*69 <font color=red>(JD)
+<tr align=center><td>47<td>8<td>6/9*69+1 <font color=red>(JD)</font><br>6<sub>9</sub>*6<sub>9</sub>+11 <font color=orange>(GT)
+<tr align=center><td>48<td>4<td>6<sub>9</sub>*8 <font color=orange>(GT)
+<tr align=center><td>49<td>6<td>6<sub>9</sub>*8+1 <font color=orange>(GT)
+<tr align=center><td>50<td>7<td>61-19+8
+<tr align=center><td>51<td>7<td>6*9+6-9
+<tr align=center><td>52<td>8<td>81-11-18
+<tr align=center><td>53<td>7<td>61<sup>1</sup>-8<sub>99</sub> <font color=orange>(GT)
+<tr align=center><td>54<td>3<td>6*9
+<tr align=center><td>55<td>5<td>6*9+1
+<tr align=center><td>56<td>6<td>6<sub>9</sub>*8+8 <font color=orange>(GT)
+<tr align=center><td>57<td>7<td>6*9+9-6<br>61<sub>8</sub>+8<sub>19</sub>  <font color=orange>(GT)
+<tr align=center><td>58<td>8<td>69+6-8-9 <font color=orange>(GT)
+<tr align=center><td>59<td>7<td>6<sub>9</sub>*8+11 <font color=orange>(GT)
+<tr align=center><td>60<td>6<td>6<sub>9</sub>+6*9 <font color=orange>(GT)
+<tr align=center><td>61<td>5<td>61<sup>1<sup>19</sup></sup>
+<tr align=center><td>62<td>5<td>6*9+8
+<tr align=center><td>63<td>5<td>81-18
+<tr align=center><td>64<td>3<td>8*8
+<tr align=center><td>65<td>5<td>8*8+1
+<tr align=center><td>66<td>5<td>66<sup>1<sup>99</sup></sup><br>6<sub>9</sub>*11 <font color=orange>(GT)
+<tr align=center><td>67<td>7<td>68<sup>1</sup>-1<sup>89</sup><br>66<sup>1</sup>+1<sup>99</sup><br>66<sup>1<sup>99</sup></sup>+1<br>8*8+9-6<br>91-8-16 <font color=red>(JD)</font><br>6<sub>9</sub>*11+1 <font color=orange>(GT)
+<tr align=center><td>68<td>5<td>68<sup>1<sup>89</sup></sup>
+<tr align=center><td>69<td>2<td>69
+<tr align=center><td>70<td>4<td>69+1<br>19<sub>61</sub> <font color=orange>(GT)
+<tr align=center><td>71<td>6<td>1+69+1
+</table>
+
+</td><td>&nbsp;&nbsp;&nbsp;</td><td>
+
+<table border=1 bgcolor=lightyellow><tr><th bgcolor=CCFFCC>Number<th bgcolor=CCFFCC>Symbols<th bgcolor=CCFFCC width=100>Shortest SE
+
+<tr align=center><td>72<td>5<td>8*8+8 <font color=green>(RS)
+<tr align=center><td>73<td>7<td>8*8+8+1 <font color=green>(RS)
+<tr align=center><td>74<td>7<td>91-1-16<br>66<sup>1<sup>99</sup></sup>+8<br>111*6/9 <font color=orange>(GT)</font><br>6<sub>9</sub>*11+8 <font color=orange>(GT)
+<tr align=center><td>75<td>5<td>91-16<br>6<sub>9</sub>+69 <font color=orange>(GT)
+<tr align=center><td>76<td>7<td>91-16+1<br>68<sup>1<sup>89</sup></sup>+8<br>6<sub>9</sub>+19<sub>61</sub> <font color=orange>(GT)
+<tr align=center><td>77<td>4<td>69+8
+<tr align=center><td>78<td>6<td>69+8+1<br>69+9<sup>1<sup>6</sup></sup>
+<tr align=center><td>79<td>7<td>9+8*8+6 <font color=orange>(GT)</font><br>81<sub>9</sub>+6<sub>18</sub> <font color=orange>(GT)
+<tr align=center><td>80<td>5<td>69+11<br>61+19 <font color=purple>(PF)
+<tr align=center><td>81<td>5<td>81<sup>1<sup>18</sup></sup>
+<tr align=center><td>82<td>7<td>81<sup>1</sup>+1<sup>18</sup><br>81<sup>1<sup>18</sup></sup>+1
+<tr align=center><td>83<td>7<td>91-16+8<br>6<sub>9</sub>+69+8 <font color=orange>(GT)
+<tr align=center><td>84<td>6<td>6+69+9
+<tr align=center><td>85<td>6<td>88+6-9
+<tr align=center><td>86<td>5<td>86<sup>1<sup>98</sup></sup>
+<tr align=center><td>87<td>7<td>86<sup>1</sup>+1<sup>98</sup><br>86<sup>1<sup>98</sup></sup>+1
+<tr align=center><td>88<td>2<td>88
+<tr align=center><td>89<td>4<td>88+1<br>18<sub>81</sub> <font color=orange>(GT)
+<tr align=center><td>90<td>6<td>1+88+1
+<tr align=center><td>91<td>5<td>91<sup>1<sup>16</sup></sup>
+<tr align=center><td>92<td>7<td>91<sup>1</sup>+1<sup>16</sup><br>91<sup>1<sup>16</sup></sup>+1<br>86+6<sub>9</sub>-0 <font color=orange>(GT)
+<tr align=center><td>93<td>6<td>96+6-9
+<tr align=center><td>94<td>5<td>6<sub>9</sub>+88 <font color=orange>(GT)
+<tr align=center><td>95<td>7<td>96<sup>1</sup>-1<sup>96</sup> <font color=orange>(GT)</font><br>6<sub>9</sub>+18<sub>81</sub> <font color=orange>(GT)
+<tr align=center><td>96<td>2<td>96
+<tr align=center><td>97<td>4<td>96+1<br>16<sub>91</sub> <font color=orange>(GT)
+<tr align=center><td>98<td>5<td>98<sup>1<sup>86</sup></sup>
+<tr align=center><td>99<td>5<td>88+11<br>99<sup>1<sup>66</sup></sup><br>81+18 <font color=purple>(PF)
+<tr align=center><td>100<td>7<td>88+11+1<br>99<sup>1<sup>66</sup></sup>+1<br>81+1+18 <font color=purple>(PF)</font><br>11<sub>81</sub>+18 <font color=orange>(GT)
+</table>
+
+
+
+</td></tr></table></center><p>
+
+Richard Sabey sent solutions for many other numbers less than 1000 as well. <p>
+
+Joseph DeVincentis also sent some SEs that are different expressions upside down.  Here are some short primitive expressions that can be used to manufacture other examples.<p>
+
+<center><table border=1 bgcolor=lightyellow><tr><th bgcolor=CCFFCC>Number<th bgcolor=CCFFCC>Symbols<th bgcolor=CCFFCC>Shortest Non-Symmetric SE
+<tr align=center><td>1<td>3<td>1<sup>6<sup>1</sup></sup>
+<tr align=center><td>10<td>8<td>8<sup>1</sup>+1<sup>0</sup>+1<sup>6</sup>
+<tr align=center><td>16<td>8<td>6<sup>1</sup>+9+1<sup>6</sup>
+<tr align=center><td>17<td>6<td>98<sup>1</sup>-81
+<tr align=center><td>62<td>8<td>81<sup>1</sup>+0-19
+<tr align=center><td>87<td>8<td>98+0-11<sup>1</sup>
+<tr align=center><td>100<td>8<td>98+1<sup>8</sup>+1<sup>9</sup>
+</table></center>
+
+<p><HR>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 4/23/06.<font>
+</BODY></HTML>

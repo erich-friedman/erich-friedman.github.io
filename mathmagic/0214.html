@@ -1,0 +1,967 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month<br>(February 2014)</H1></CENTER>
+
+A matrix whose rows and columns are all different primes with non-decreasing digits is called a <b>increasing prime grid</b>.  Similarly, if the primes have non-increasing digits, we call it a <b>decreasing prime grid</b>.  For small m and n, can you find all the m&times;n increasing/decreasing prime grids?  For a fixed m, what is the largest n so that an increasing/decreasing prime m&times;n grid exists?  What is the largest increasing/decreasing prime grid that you can find?<p>
+
+
+
+<P><hr color=black><p><center><h1>ANSWERS</h1></center>
+
+Solutions were received by Joe DeVincentis, Bryce Herdt, and Hakan Summako&gbreve;lu.<p>
+
+Here are the known increasing prime grids of different sizes:<p>
+
+<center>1&times;2</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><pre>
+23   37
+</pre></center>
+</td></tr></table><p>
+
+<center>1&times;3</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><pre>
+257
+</pre></center>
+</td></tr></table><p>
+
+<center>1&times;4</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><pre>
+2357
+</pre></center>
+</td></tr></table><p>
+
+<center>2&times;2</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><pre>
+11   11
+37   79
+</pre></center>
+</td></tr></table><p>
+
+<center>2&times;3</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><pre>
+113   127   127   137   137   157   167   167
+137   139   199   179   379   199   179   379
+</pre></center>
+</td></tr></table><p>
+
+<center>2&times;4</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><pre>
+1117   1367   2347   2467
+1399   3779   3779   3779
+</pre></center>
+</td></tr></table><p>
+
+<center>2&times;5</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><pre>
+11117   11257   11257   11257   12457   13457
+13799   13399   13999   79999   13799   37799
+</pre></center>
+</td></tr></table><p>
+
+<center>2&times;6</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><pre>
+111127   113467
+137999   377779
+</pre></center>
+</td></tr></table><p>
+
+<center>3&times;4</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><pre>
+1123   1223   2333   2333   2333   2333
+1277   1277   2347   2467   3347   3467
+3779   3779   3779   3779   3779   3779
+</pre></center>
+</td></tr></table><p>
+
+<center>3&times;5</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><pre>
+11113   11113   11113   11113   23333   23333
+12347   12377   12577   13577   23447   33457
+37799   37799   37799   37799   37799   37799
+</pre></center>
+</td></tr></table><p>
+
+<center>3&times;6</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><pre>
+112223
+122267
+377999
+</pre>
+(JD)</center>
+</td></tr></table><p>
+
+<center>4&times;5</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><pre>
+11113   11113   11113   11113   11113   11113
+14557   12227   12227   12227   12457   11257
+24677   13457   13477   13577   13577   12277
+37799   77999   77999   77999   77999   79999
+
+11113   11113   11113   11113   11113   11113
+11257   12227   11257   12227   12457   12457
+12457   12457   12577   12577   12577   14557
+79999   79999   79999   79999   79999   79999
+</pre>
+(JD)</center>
+</td></tr></table><p>
+
+<center>4&times;6</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><pre>
+112223   112223   112223   112223   112223   112223
+123377   122347   122477   222337   222347   222367
+223577   233477   233477   233477   233477   233477
+333779   377779   377779   377779   377779   377779
+
+112223   112223   112223   112223   112223   112223
+122347   122477   222347   222367   123457   223577
+233777   233777   233777   233777   234457   235577
+377779   377779   377779   377779   377779   377779
+
+112223   112223   112223   112223   112223   112223
+122347   222247   222347   123457   122347   222347
+233357   233357   233357   235577   233357   233357
+377999   377999   377999   377999   379999   379999
+</pre>
+(JD)</center>
+</td></tr></table><p>
+
+<center>5&times;5</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><a href="0214/increase5x5.txt">864 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>4&times;7</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><pre>
+1112333
+1223357
+2235557
+3377999
+</pre>
+(JD)</center>
+</td></tr></table><p>
+
+<center>5&times;6</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><a href="0214/increase5x6.txt">13349 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>4&times;8</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><pre>
+11122333
+12223457
+22333457
+33799999
+</pre>
+(JD)</center>
+</td></tr></table><p>
+
+<center>5&times;7</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><a href="0214/increase5x7.txt">10489 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>6&times;6</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><a href="0214/increase6x6.txt">5377 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>5&times;8</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><a href="0214/increase5x8.txt">135 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>6&times;7</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><a href="0214/increase6x7.txt">136374 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>5&times;9</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><a href="0214/increase5x9.txt">81253 solutions</a>
+<br>(HS)</center>
+</td></tr></table><p>
+
+<center>7&times;7</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><a href="0214/increase7x7.txt">2304 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>7&times;8</center>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><a href="0214/increase7x8.txt">13891 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+Here are the number of increasing prime grids of various sizes:<p>
+
+<table align=center border=1 cellpadding=5 bgcolor=white>
+<tr align=center bgcolor=DDDDFF><th>&times;<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<tr align=center><th bgcolor=DDDDFF>1<td>0
+<tr align=center><th bgcolor=DDDDFF>2<td>2<td>2
+<tr align=center><th bgcolor=DDDDFF>3<td>1<td>8<td>0
+<tr align=center><th bgcolor=DDDDFF>4<td>1<td>4<td>6<td>0
+<tr align=center><th bgcolor=DDDDFF>5<td>0<td>6<td>6<td>12<td>864
+<tr align=center><th bgcolor=DDDDFF>6<td>0<td>2<td>1<td>18<td>13349<td>5377
+<tr align=center><th bgcolor=DDDDFF>7<td>0<td>0<td>0<td>1<td>10489<td>136374<td>2304
+<tr align=center><th bgcolor=DDDDFF>8<td>0<td>0<td>0<td>1<td>135<td>0<td>13891<td>0
+<tr align=center><th bgcolor=DDDDFF>9<td>0<td>0<td>0<td>0<td>81253
+</table>
+
+<hr>
+
+Here are the decreasing prime grids of different sizes, up to symmetry:<p>
+
+<center>1&times;2</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><pre>
+53   73
+</pre></center></td></tr></table><p>
+
+<center>2&times;2</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><pre>
+41   71
+31   31
+</pre></center></td></tr></table><p>
+
+<center>2&times;3</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><pre>
+431   443   541   541   743   743
+311   311   311   331   311   331
+</pre></center><p>
+
+<center><pre>
+751   761   773   853   863   877
+331   311   311   331   311   331
+</pre></center>
+</td></tr></table><p>
+
+<center>2&times;4</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><pre>
+7541   8543   8741   8753   9743   9851   9871
+3331   3331   3331   3331   7331   7331   7331
+</pre></center>
+</td></tr></table><p>
+
+<center>3&times;3</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><pre>
+643   743   853
+541   733   643
+331   311   311
+</pre></center>
+</td></tr></table><p>
+
+<center>2&times;5</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><pre>
+75431   87443   87541   87541   98543
+33311   33311   33311   33331   73331
+</pre></center>
+</td></tr></table><p>
+
+<center>2&times;6</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><pre>
+876431   974431   987541   987631
+311111   733111   733331   733111
+</pre></center>
+</td></tr></table><p>
+
+<center>3&times;4</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><pre>
+7643   7643   7643   8443   8443   8443   8443   8663   8663
+4441   7433   7541   5431   7433   8431   8431   7541   8543
+3331   3331   3331   3331   7331   3331   7331   7331   3331
+
+8663   8863   8863   8863   8863   8863   8863   8863   8863
+8543   6551   6553   7541   7643   8543   8543   8641   8641
+7331   3331   3331   7331   7331   3331   7331   3331   7331
+
+8887   9643   9643   9643   9643   9643   9643   9643   9643
+8863   5431   5441   5443   5531   7433   7541   8431   8443
+7333   3331   3331   3331   3331   7331   7331   3331   3331
+
+9643   9643   9643   9643   9743   9743   9743   9743   9743
+8543   9431   9433   9533   5333   5431   5441   5443   7333
+3331   7331   7331   7331   3331   3331   3331   3331   7331
+
+9743   9743   9743   9743   9743   9743   9743   9743   9743
+7433   7741   8431   8443   8731   8741   9431   9433   9733
+7331   7331   3331   3331   3331   3331   7331   7331   7331
+
+9883   9883   9883   9973   9973   9973   9973   9973       
+8861   8863   9851   7541   8543   9533   9833   9871       
+3331   3331   7331   7331   3331   7331   7331   7331       
+</pre></center>
+</td></tr></table><p>
+
+<center>2&times;7</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><pre>
+9875443
+7333311
+</pre></center>
+</td></tr></table><p>
+
+<center>3&times;5</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><pre>
+64433   84443   84443   87433   87433   87433   87433   87433
+54331   54331   64333   54331   63331   84431   54331   54421
+33311   33311   33311   33311   33311   33311   33311   33311
+
+87443   87443   87443   87443   87443   87443   87443   87443
+63331   64333   64433   64433   77431   84421   84431   84431
+33311   33311   33311   33331   73331   33311   33311   33331
+
+87443   87443   87443   87443   87443   87643   87643   87643
+84431   87421   87433   87433   87433   54421   54443   64433
+73331   33311   33311   33331   73331   33311   33331   33311
+
+87643   87643   87643   87643   87643   87643   87643   87643
+64433   74441   77431   77543   84421   84431   84431   84431
+33331   73331   73331   73331   33311   33311   33331   73331
+
+87643   87643   87643   87643   87643   87643   87643   87643
+84443   84443   87421   87433   87433   87433   87443   87443
+33331   73331   33311   33311   33331   73331   33331   73331
+
+87643   87643   87743   87743   87743   87743   87743   87743
+87541   87541   54331   54331   64333   64333   77431   87421
+33331   73331   33311   33331   33311   33331   73331   33311
+
+87743   87743   87743   87743   87743   88643   88643   88643
+87433   87433   87433   87443   87443   65521   65543   75431
+33311   33331   73331   33331   73331   33311   33331   73331
+
+88643   88643   88643   88643   88643   88643   88643   88643
+75533   75541   76441   76541   76543   85531   85531   85531
+73331   73331   73331   73331   73331   33311   33331   73331
+
+88643   88643   88643   88643   88643   88643   88643   88643
+86441   86441   86531   86531   86531   86533   86533   86533
+33331   73331   33311   33331   73331   33311   33331   73331
+
+88663   88663   88663   88663   88663   88663   88663   88663
+65543   65543   75541   76541   76543   85531   86441   86531
+33311   33331   73331   73331   73331   33311   33311   33311
+
+88663   88843   88843   88843   88843   88843   88843   88843
+86533   76541   76543   86531   86531   86531   86533   86533
+33311   73331   73331   33311   33331   73331   33311   33331
+
+88843   88843   88873   88873   88873   88873   88873   88873
+86533   88643   76541   76543   86531   86531   86533   86533
+73331   73331   73331   73331   33331   73331   33331   73331
+  
+88873   88883   94433   96443   96443   96443   96443   96443
+88643   88651   54331   54331   54421   55331   55333   75431
+73331   73331   33311   33311   33311   33311   33311   73331
+
+96443   96443   96443   96443   96443   96443   96643   96643
+84421   84431   84431   85331   85333   94433   55441   75431
+33311   33311   33331   33311   33311   73331   33331   73331
+
+96643   96643   98443   98443   98443   98443   98443   98443
+95441   95443   55331   55333   75431   85331   85333   88321
+73331   73331   33311   33311   73331   33311   33311   33311
+
+98443   98663   98663   98663   98663   98663   98663   98663
+96431   55441   55541   55541   75541   76541   76543   85531
+73331   33311   33311   33331   73331   73331   73331   33311
+
+98663   98663   98663   98663   98773   98773   98773   98773
+86441   86531   86533   98543   75431   88741   96431   98731
+33311   33311   33311   73331   73331   33331   73331   73331
+   
+98873   98873   98873   98873   98873   98873   98873   98873
+76541   76543   86531   86533   88643   88651   88661   88663
+73331   73331   33331   33331   33331   33311   33311   33311
+
+98873   98873   98873   98873   98873   99643   99643   99643
+98533   98543   98641   98731   98773   75431   75533   75541
+73331   73331   73331   77731   77731   73331   73331   73331
+
+99643   99643   99643   99643   99643   99643   99643   99643
+85531   85531   95441   95443   95531   98443   98533   98543
+33311   33331   73331   73331   73331   73331   73331   73331
+
+99733   99833                                                
+85331   85531                                                
+33311   33311                                                
+</pre></center>
+</td></tr></table><p>
+
+<center>4&times;4</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><pre>
+9887
+9643
+7643
+3331
+</pre>(JD)</center>
+</td></tr></table><p>
+
+<center>3&times;6</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><a href="0214/decrease3x6.txt">194 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>4&times;5</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><pre>
+99877   98773   97777   98773   97777   98773
+88663   87433   87433   87433   87433   87433
+88643   85333   85333   85333   85333   85333
+73331   73331   73331   33331   33331   33311
+
+99877   98887   98873   98663   88643        
+87553   98773   98773   97553   87643        
+84443   76543   76543   75553   65543        
+33311   33311   33311   33311   33311        
+</pre>(JD)</center>
+</td></tr></table><p>
+
+
+<center>3&times;7</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><a href="0214/decrease3x7.txt">168 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>4&times;6</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><a href="0214/decrease4x6.txt">49 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>5&times;5</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><pre>
+98663   98773   88853   88663   98663
+88643   88663   88843   87443   96643
+86533   86533   88643   87433   65543
+86531   84431   87641   54331   43331
+73331   73331   33331   33331   33331
+
+98663   96643   97777   88663   88643
+88663   86533   87553   87433   87433
+88643   66533   65543   85333   85333
+75533   64433   64333   55333   55333
+33311   33311   33311   33311   33311
+</pre>(JD)</center>
+</td></tr></table><p>
+
+<center>3&times;8</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><pre>
+98877533   98866643   98866433   99877643   99877633
+98765431   98764321   98743331   97765331   97765331
+77711111   77711111   77711111   77711111   77711111
+
+99877643   99876443   99876443   99877643   98766433
+97765321   97753321   99866321   99865321   98664331
+77711111   77711111   71111111   71111111   71111111
+
+98776543   98766433   99766553   99965443   97766443
+98654221   98643331   77664421   77444321   76543321
+71111111   71111111   71111111   71111111   71111111
+</pre>(JD)</center>
+</td></tr></table><p>
+
+<center>3&times;9</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><a href="0214/decrease3x9.txt">56 solutions</a>
+<br>(JD) (HS)</center>
+</td></tr></table><p>
+
+<center>4&times;7</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><a href="0214/decrease4x7.txt">24 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>5&times;6</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><a href="0214/decrease5x6.txt">899 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>4&times;8</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><pre>
+99988853   98887753   98877553
+88887443   88777543   88775443
+87533333   86644433   86644433
+71111111   71111111   71111111
+</pre>(JD)</center>
+</td></tr></table><p>
+
+<center>5&times;7</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><a href="0214/decrease5x7.txt">1228 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>6&times;6</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><a href="0214/decrease6x6.txt">996 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>5&times;8</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><a href="0214/decrease5x8.txt">335 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>6&times;7</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><a href="0214/decrease6x7.txt">11352 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>5&times;9</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><a href="0214/decrease5x9.txt">1254 solutions</a>
+<br>(JD) (HS)</center>
+</td></tr></table><p>
+
+<center>6&times;8</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><a href="0214/decrease6x8.txt">5408 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>7&times;7</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><a href="0214/decrease7x7.txt">6279 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>6&times;9</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><a href="0214/decrease6x9.txt">20066 solutions</a>
+<br>(JD) (HS)</center>
+</td></tr></table><p>
+
+<center>7&times;8</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><a href="0214/decrease7x8.txt">1669 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>7&times;9</center>
+<table align=center border=2 bgcolor=DDFFFF cellpadding=10><tr><td>
+<center><a href="0214/decrease7x9.txt">101901 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+Here are the number of decreasing prime grids of various sizes:<p>
+
+<table align=center border=1 cellpadding=5 bgcolor=white>
+<tr align=center bgcolor=DDDDFF><th>&times;<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<tr align=center><th bgcolor=DDDDFF>1<td>0
+<tr align=center><th bgcolor=DDDDFF>2<td>2<td>2
+<tr align=center><th bgcolor=DDDDFF>3<td>0<td>12<td>3
+<tr align=center><th bgcolor=DDDDFF>4<td>0<td>7<td>44<td>1
+<tr align=center><th bgcolor=DDDDFF>5<td>0<td>5<td>162<td>11<td>10
+<tr align=center><th bgcolor=DDDDFF>6<td>0<td>4<td>194<td>49<td>899<td>996
+<tr align=center><th bgcolor=DDDDFF>7<td>0<td>1<td>168<td>24<td>1228<td>11352<td>6279
+<tr align=center><th bgcolor=DDDDFF>8<td>0<td>0<td>15<td>3<td>335<td>5408<td>1669<td>0
+<tr align=center><th bgcolor=DDDDFF>9<td>0<td>0<td>56<td>0<td>1254<td>20066<td>101901
+</table><p>
+
+<hr>
+
+Both Joe DeVincentis and Bryce Herdt generalized to grids that were decreasing across and increasing down.<p>
+
+<center>1&times;2</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><pre>
+53   73
+</pre></center></td></tr></table><p>
+
+<center>2&times;1</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><pre>
+2   3
+3   7
+</pre></center>
+</td></tr></table><p>
+
+<center>1&times;3</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><pre>
+2
+5
+7
+</pre></center>
+</td></tr></table><p>
+
+<center>1&times;4</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><pre>
+2
+3
+5
+7
+</pre></center>
+</td></tr></table><p>
+
+<center>2&times;2</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><pre>
+31   41   61   11   31   41
+71   71   71   73   73   73
+
+61   11   53   71   73   83
+73   97   97   97   97   97
+</pre>(BH)</center></td></tr></table><p>
+
+<center>2&times;3</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><pre>
+211   421   311   431   631   641   211
+331   733   773   773   773   773   971
+
+541   761   811   541   743   761   863
+971   971   971   977   977   977   977
+
+211   521   751   811   821   211   521
+991   991   991   991   991   997   997
+
+751   811   821   853                  
+997   997   997   997                  
+</pre>(JD)</center></td></tr></table><p>
+
+<center>2&times;4</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><pre>
+4211   6211   7321   7621   2111   7211   8111   8221
+7331   7331   9733   9733   9931   9931   9931   9931
+
+8521   2111   7211   7541   8111   8731   8741   8761
+9931   9973   9973   9973   9973   9973   9973   9973
+</pre>(JD)</center></td></tr></table><p>
+
+<center>4&times;2</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><pre>
+31   41
+41   61
+61   71
+97   97
+</pre>(JD)</center></td></tr></table><p>
+
+<center>3&times;3</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/3x3.txt">67 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>2&times;5</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><pre>
+54311   74311   86311   87421   75211   87211
+97771   97771   97771   99733   99971   99971
+
+87511   87541   75211   87211   87511        
+99971   99971   99991   99991   99991        
+</pre>(JD)</center></td></tr></table><p>
+
+<center>5&times;2</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><pre>
+11   11   11   31   41   31   41
+31   31   31   41   43   43   43
+41   41   61   61   53   53   73
+71   61   71   71   73   83   83
+73   97   97   97   97   97   97
+</pre>(JD)</center></td></tr></table><p>
+
+<center>2&times;6</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><pre>
+852211   752111
+999331   999931
+</pre>(JD)</center></td></tr></table><p>
+
+<center>6&times;2</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><pre>
+11   11   41   31
+31   31   43   61
+41   41   53   71
+43   73   73   73
+83   83   83   83
+97   97   97   97
+</pre>(JD)</center></td></tr></table><p>
+
+<center>3&times;4</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/3x4.txt">50 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>4&times;3</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/4x3.txt">58 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>2&times;7</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><pre>
+8643211
+9777331
+</pre>(JD)</center></td></tr></table><p>
+
+<center>7&times;2</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><pre>
+11
+31
+41
+43
+53
+83
+97
+</pre>(JD)</center></td></tr></table><p>
+
+<center>3&times;5</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/3x5.txt">38 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>5&times;3</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/5x3.txt">265 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>3&times;6</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/3x6.txt">33 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>6&times;3</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/6x3.txt">284 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>4&times;5</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/4x5.txt">140 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>5&times;4</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/5x4.txt">370 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>3&times;7</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/3x7.txt">24 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>7&times;3</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/7x3.txt">205 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>3&times;8</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><pre>
+55421111   54432211   54331111   54331111   54333311
+96433321   97443221   97744321   97753321   97754431
+99999773   99999773   99999773   99999773   99999773
+
+43321111   43333331   53333311   43321111   54432211
+98533321   98754431   98754431   98764321   99443221
+99999773   99999773   99999773   99999773   99999773
+
+54331111   54322211   54331111                      
+99544321   99732221   99743321                      
+99999773   99999773   99999773                      
+</pre>(JD)</center></td></tr></table><p>
+
+<center>8&times;3</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/8x3.txt">204 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>5&times;5</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/5x5.txt">417 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>3&times;9</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><pre>
+544322111
+997775531
+999977773
+</pre>(HS)</center>
+</td></tr></table><p>
+
+<center>9&times;3</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/9x3.txt">112 solutions</a>
+<br>(HS)</center>
+</td></tr></table><p>
+
+<center>4&times;7</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/4x7.txt">618 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>7&times;4</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/7x4.txt">295 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>5&times;6</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/5x6.txt">3997 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>6&times;5</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/6x5.txt">232 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>5&times;7</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/5x7.txt">15914 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>7&times;5</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/7x5.txt">185 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>9&times;4</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/9x4.txt">262 solutions</a>
+<br>(HS)</center>
+</td></tr></table><p>
+
+<center>5&times;8</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/5x8.txt">12202 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>8&times;5</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/8x5.txt">418 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>6&times;7</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/6x7.txt">35270 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>7&times;6</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/7x6.txt">38435 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>5&times;9</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/5x9.txt">8122 solutions</a>
+<br>(HS)</center>
+</td></tr></table><p>
+
+<center>9&times;5</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/9x5.txt">71 solutions</a>
+<br>(HS)</center>
+</td></tr></table><p>
+
+<center>7&times;7</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/7x7.txt">268113 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>7&times;8</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/7x8.txt">247700 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>8&times;7</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/8x7.txt">129164 solutions</a>
+<br>(JD)</center>
+</td></tr></table><p>
+
+<center>7&times;9</center>
+<table align=center border=2 bgcolor=DDFFDD cellpadding=10><tr><td>
+<center><a href="0214/7x9.txt">8122 solutions</a>
+<br>(HS)</center>
+</td></tr></table><p>
+
+Here are the number of increasing/decreasing prime grids of various sizes:<p>
+
+<table align=center border=1 cellpadding=5 bgcolor=white>
+<tr align=center bgcolor=DDDDFF><th>inc\dec<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9
+<tr align=center><th bgcolor=DDDDFF>1<td>0<td>2<td>0<td>0<td>0<td>0<td>0<td>0<td>0
+<tr align=center><th bgcolor=DDDDFF>2<td>2<td>12<td>25<td>16<td>11<td>2<td>1<td>0<td>0
+<tr align=center><th bgcolor=DDDDFF>3<td>1<td>0<td>67<td>50<td>38<td>33<td>24<td>13<td>1
+<tr align=center><th bgcolor=DDDDFF>4<td>1<td>2<td>58<td>0<td>140<td>0<td>618<td>0<td>0
+<tr align=center><th bgcolor=DDDDFF>5<td>0<td>7<td>265<td>370<td>417<td>3997<td>15914<td>12202<td>8122
+<tr align=center><th bgcolor=DDDDFF>6<td>0<td>4<td>284<td>0<td>232<td>0<td>34270<td>0<td>0
+<tr align=center><th bgcolor=DDDDFF>7<td>0<td>1<td>205<td>295<td>185<td>38435<td>268113<td>247700<td>564858
+<tr align=center><th bgcolor=DDDDFF>8<td>0<td>0<td>204<td>0<td>418<td>0<td>129164<td>0
+<tr align=center><th bgcolor=DDDDFF>9<td>0<td>0<td>112<td>262<td>71
+</table><p>
+<p><hr color=black><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 2/23/14.<font></BODY></HTML>
+

@@ -1,0 +1,51 @@
+<html><body>
+<p>
+I wrote a little program to explore power towers of various bases. After seeing the results by Jeremy Galvagni, I used the program to extend the table for M(n,s):
+</p>
+
+<table border="1" style="font-family:monospace;text-align:right">
+<tr><th>n \ s</th><th>&nbsp;1</th><th>&nbsp;2</th><th>&nbsp;3</th><th>&nbsp;4</th><th>&nbsp;5</th><th>&nbsp;6</th><th>&nbsp;7</th><th>&nbsp;8</th><th>&nbsp;9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th><th>20</th></tr>
+<tr><th>1</th><td>1<td>1<td>2<td>1<td>2<td>2<td>3<td>1<td>2<td>2<td>3<td>2<td>3<td>3<td>4<td>2<td>3<td>3<td>4<td>3
+<tr><th>2</th><td>2<td>2<td>2<td>2<td>4<td>2<td>4<td>2<td>4<td>4<td>4<td>3<td>5<td>4<td>5<td>4<td>6<td>5<td>5<td>5
+<tr><th>3</th><td>3<td>3<td>4<td>3<td>4<td>3<td>4<td>3<td>5<td>5<td>5<td>4<td>6<td>5<td>5<td>5<td>8<td>7<td>8<td>7
+<tr><th>4</th><td>4<td>4<td>4<td>4<td>5<td>3<td>5<td>4<td>6<td>5<td>6<td>5<td>7<td>6
+<tr><th>5</th><td>5<td>5<td>6<td>5<td>6<td>5<td>4<td>5<td>6<td>6<td>6<td>5
+<tr><th>6</th><td>6<td>6<td>6<td>6<td>7<td>5<td>5<td>6
+<tr><th>7</th><td>7<td>7<td>8<td>7<td>8<td>5<td>6
+<tr><th>8</th><td>8<td>8<td>8<td>8<td>8<td>6
+<tr><th>9</th><td>9<td>9<td>10<td>9
+<tr><th>10</th><td>10<td>10<td>10
+<tr><th>11</th><td>11<td>11
+<tr><th>12</th><td>12<td>12
+<tr><th>13</th><td>13
+</table>
+
+<p>
+This table contains a counterexample to the conjectures that M(n,s) >=  n and that M(n,s) is increasing in n. Notice M(5,7) = 4.
+</p>
+<pre>
+ 65536
+ 1024
+  2
+     1
+</pre>
+
+<p>
+A couple of my numbers disagree with those in the table on your page:
+</p>
+
+<pre>
+M(3,7) = 4
+ 512
+  64
+ 2
+   1
+
+M(4,6) = 3
+   256
+  64
+    1
+</pre>
+
+
+</body></html>

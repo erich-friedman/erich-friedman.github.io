@@ -1,0 +1,111 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (September 2011)</H1></CENTER>
+
+A <b>multi-set</b> is an unordered collection of digits, not all of which need to be distinct.  The <b>distance</b> between two multi-sets A and B is the smallest number of different components between orderings of A and B.  In other words, it is the smallest number of digits we need to change in A to get some permutation of B.<p>
+
+A <b>multi-set code</b> with base B, length L, distance D, and magnitude N is a collection of N multi-sets, each containing L digits from 1 to B, each with pairwise distance at least D.  For example, a multi-set code with base B=6, length L=3, distance D=2, and magnitude N=10 is {111, 222, 333, 444, 555, 666, 123, 145, 256, 346}.<p>
+
+Given B, L, and D, what is the largest possible value of N?<p>
+
+This problem came up with B=6 in trying to identify N collections of L dice that were as "far apart" as possible.
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Answers were received by Johan de Riuter and Maarten L&ouml;ffler, and Mark Mammel.<p>
+
+When B=1, there is only one possible multi-set, so N=1.<p>
+
+When B=2, the problem is trivial, with N = <img src="lfloor.gif" align=center> L/D <img src="rfloor.gif" align=center>.<p>
+
+When D>L, two strings cannot be distance D, so N=1.<p>
+
+When (1-1/B)L&lt;D&le;L, the only multi-sets possible are all the same, so N=B.<p>
+
+Notice below that the the columns are increasing, and the rows and diagonals are decreasing.  This can be used to determine which values are most likely to be improved.<p>
+
+Below are the largest-known values of N for a given B, L, and D:<p>
+
+<center><font size=+2>B=3</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=10>
+<tr bgcolor=DDFFDD><th>L \ D<th>2<th>3<th>4<th>5<th>6
+<tr align=center><th bgcolor=DDFFDD>3<td>4<br>{xxx, 123}
+<tr align=center><th bgcolor=DDFFDD>4<td>6<br>{xxyy}
+<tr align=center><th bgcolor=DDFFDD>5<td>7<br>{xxxxx,<br>11133, 22233,<br> 12333, 11223}<td>4<br>{xxxxx, 11223}
+<tr align=center><th bgcolor=DDFFDD>6<td>10<br>{xxyyzz}<td>6<br>{xxxyyy}<td>4<br>{xxxxxx, 112233}
+<tr align=center><th bgcolor=DDFFDD>7<td>12<br>{xxxxxx, 1111133,<br>1111223, 1112222,<br>1112333, 1122233,<br>1133333, 1222223,<br>
+2222333, 2233333}<td>6<br>{xxxxyyy}<td>4<br>{xxxxxxx, 1112223}
+<tr align=center><th bgcolor=DDFFDD>8<td>15<br>{wwxxyyzz}<td>8<br>{xxxxxxxx, 11111222,<br>11111333, 22222113,<br>33333112, 22223333}<td>6<br>{xxxxyyyy}<td>4<br>{xxxxxxxx,<br>11122233}
+<tr align=center><th bgcolor=DDFFDD>9<td>19<br>{xxxxxxxxx,<br>111111123, 111111222,<br>111111333, 111112233,<br>111122223, 111123333,<br>111222222, 111222333,<br>111333333, 112222233,<br>112233333, 122222223,<br>122223333, 123333333,<br>222222333, 222333333}<td>10<br>{xxxxxxxx, 111111233,<br>111112222, 111133333,<br>111222333, 112222223,<br>122333333,
+222223333}<td>6<br>{xxxxxyyyy}<td>4<br>{xxxxxxxxx,<br>111222333}<td>4<br>{xxxxxxxxx,<br>111222333}<tr align=center><th bgcolor=DDFFDD>10<td>22<br>{xxxxxxxxxx, 2233333333,<br>2222333333, 2222222333,<br>1222223333, 1222222223,<br>1133333333, 1122233333,<br>1122222233, 1112333333,<br>1112222333, 1112222222,<br>1111223333, 1111222223,<br>1111133333, 1111122233,<br>1111112333, 1111112222,<br>1111111223, 1111111133}<br>(JR+ML)
+<td>11<br>{xxxxxxxxxx,<br>2223333333, 2222223333,<br>1122222223, 1113333333,<br>1112223333, 1111122222,<br>1111113333, 1111111223}<br>(JR+ML)
+<td>7<br>{xxxxxxxxxx,<br>2222333333, 1111333333,<br>1111222222, 1111112233}<br>(JR+ML)
+<td>6<br>{xxxxxyyyyy}<td>4<br>{xxxxxxxxxx,<br>1111222333}
+</table><p>
+
+
+<center><font size=+2>B=4</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=10>
+<tr bgcolor=DDFFDD><th>L \ D<th>2<th>3<th>4<th>5<th>6
+<tr align=center><th bgcolor=DDFFDD>3<td>5<br>{xxx, 123}
+<tr align=center><th bgcolor=DDFFDD>4<td>11<br>{xxyy, 1234}<td>5<br>{xxxx, 1234}
+<tr align=center><th bgcolor=DDFFDD>5<td>14<br>{xxxxx, 11222, 11234,<br>11333, 11444, 12233,
+12244,<br>13344, 22234, 23334, 23444}<td>6<br>{xxxxx,<br>11223, 23344}
+<tr align=center><th bgcolor=DDFFDD>6<td>24<br>{xxyyzz, wwwxyz}<td>10<br>{xxxyyy}<td>5<br>{xxxxxx, 112234}
+<tr align=center><th bgcolor=DDFFDD>7<td>30<br>{xxxxxxx, 1111124, 1111133,<br>1111222, 1111344, 1112234,<br>1112444, 1113334, 1122222,<br>1122233, 1122244, 1123333,<br>1123344, 1134444, 1222234,<br>1223334, 1223444, 1244444,<br>1333334, 1333444, 2222233,<br>2222244, 2223333, 2223344,<br>2224444, 2333344, 2334444}<br>(MM)
+<td>12<br>{xxxxxxx, 1112224, 1113333,<br>1114444, 1123344, 1222233,<br>2224444, 2233334, 3334444}<td>6<br>{xxxxxxx,<br>1112223, 2333444}<td>5<br>{xxxxxxx,<br>1122334}
+<tr align=center><th bgcolor=DDFFDD>8<td>45<br>{wwxxyyzz, xxyy1234}<br>(MM)<td>16<br>{xxxxxxxx,<br>11111222, 11111334, 11112444,<br>11122333, 11222344, 11333334,<br>11334444, 12222233, 12244444,<br>22222444, 22233333, 23333444}<br>(MM)<td>11<br>{xxxxyyyy, 11223344}<br>(MM)<td>5<br>{xxxxxxxx,<br>11223344}<td>5<br>{xxxxxxxx,<br>11223344}
+</table><p>
+
+
+<center><font size=+2>B=5</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=10>
+<tr bgcolor=DDFFDD><th>L \ D<th>2<th>3<th>4<th>5
+<tr align=center><th bgcolor=DDFFDD>3<td>7<br>{xxx, 123, 345}
+<tr align=center><th bgcolor=DDFFDD>4<td>16<br>{xxyy, 1234}<br>(MM)<td>6<br>{xxxx, 1234}
+<tr align=center><th bgcolor=DDFFDD>5<td>25<br>{xxxxx, 11125, 11133,<br>11144, 11222, 11234,<br>11455, 12235, 12333,<br>12445, 13345, 13444,<br>13555, 22245, 22334,<br>22444, 22555, 23455,<br>33344, 33355, 44455}<br>(MM)<td>10<br>{xxxxx, 12233, 11255,<br>11344, 22445, 33455}<td>6<br>{xxxxx, 12345}
+<tr align=center><th bgcolor=DDFFDD>6<td>42<br>{xxxxxx, 111122,<br>111135, 111144, 111245,<br>111334, 111555, 112224,<br>112255, 112335, 112344,<br>113333, 113455, 114445,<br>122225, 122233, 122345,<br>123334, 123555, 124455,<br>133355, 133445, 134444,<br>145555, 222234, 222355,<br>222445, 223333, 223344,<br>224444, 224555, 233455,<br>234445, 333345, 333444,<br>335555, 344555, 444455}<br>(MM)<td>16<br>{xxxxxx, 111222, 111333,<br>111455, 112444, 122555,<br>123345, 222333, 222445,<br>333444, 333555, 444555}<br>(MM)<td>7<br>{xxxxxx,<br>112233, 114455}
+<tr align=center><th bgcolor=DDFFDD>7<td>66<br>{xxxxxxx, 1111125,<br>1111133, 1111223, 1111244,<br>1111345, 1111555, 1112222,<br>1112245, 1112334, 1112355,<br>1113335, 1113444, 1114455,<br>1122234, 1122255, 1122335,<br>1122444, 1123333, 1123445,<br>1124555, 1133344, 1133455,<br>1135555, 1144445, 1222224,<br>1222235, 1222333, 1222445,<br>1223344, 1223455, 1225555,<br>1233345, 1233555, 1234444,<br>1244455, 1333334, 1333355,<br>1334445, 1344555, 1455555,<br>2222233, 2222255, 2222344,<br>2223345, 2223555, 2224444,<br>2233334, 2233355, 2234445,<br>2244555, 2333335, 2333444,<br>2334455, 2345555, 2444445,<br>3333445, 3334555, 3344444,<br>3355555, 3444455, 4445555}<br>(MM)<td>21<br>{xxxxxxx, 1111222,<br>1111333, 1111444, 1111555,<br>1122334, 1134455, 1222244,<br>1224555, 1333355, 1334444,<br>2222355, 2223333, 2244445,<br>2333445, 2335555, 4445555}<br>(MM)<td>10<br>{xxxxxxx, 1122555,<br>1133444, 1222333,<br>2224445, 3334555}<td>6<br>{xxxxxxx,<br>1122345}
+</table><p>
+
+<center><font size=+2>B=6</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=10>
+<tr bgcolor=DDFFDD><th>L \ D<th>2<th>3<th>4<th>5
+<tr align=center><th bgcolor=DDFFDD>3<td>10<br>{xxx, 123,<br>145, 256, 346}
+<tr align=center><th bgcolor=DDFFDD>4<td>24<br>{xxyy, 1234,<br>1256, 3456}<br>(MM)<td>7<br>{xxxx, 1234}
+<tr align=center><th bgcolor=DDFFDD>5<td>42<br>{xxxxx,<br>11123, 11145, 11224, 11255,<br>11266, 11334, 11356, 11446,<br>12223, 12256, 12336, 12345,<br>13335, 13444, 13466, 13555,<br>14556, 15666, 22255, 22266,<br>22335, 22346, 22445, 23344,<br>23556, 23666, 24446, 24555,<br>24566, 33346, 33455, 33566,<br>34456, 44455, 44666, 55566}<br>(MM)
+<td>12<br>{xxxxx,<br>11223, 33445, 55661,<br>11446, 22554, 33662}<td>7<br>{xxxxx, 12345}
+<tr align=center><th bgcolor=DDFFDD>6<td>80<br>{xxxxxx, 111125, 111134,<br>111166, 111223, 111246, 111333,<br>111356, 111444, 111455, 112226,<br>112244, 112255, 112336, 112345,<br>112566, 113344, 113355, 113466,<br>114456, 115556, 116666, 122224,<br>122235, 122334, 122366, 122456,<br>123335, 123446, 123556, 124445,<br>124555, 124666, 133334, 133366,<br>133456, 134444, 134455, 135555,<br>135666, 144466, 145566, 222233,<br>222256, 222346, 222445, 222555,<br>222666, 223333, 223356, 223444,<br>223455, 224466, 225566, 233346,<br>233445, 233555, 233666, 234566,<br>244446, 244556, 255556, 256666,<br>333356, 333444, 333455, 334466,<br>335566, 344456, 345556, 346666,<br>444455, 445555, 445666, 555666}<br>(MM)<td>23<br>{xxxxxx, 111333, 111555,<br>111666, 112236, 114456,<br>122245, 123444, 133556,<br>222333, 222666, 223555,<br>234566, 333445, 333666,<br>444555, 444666, 555666}<br>(MM)<td>10<br>{xxxxxx,<br>112233, 114455,<br>115566, 334466}<td>7<br>{xxxxxx,<br>123456}
+</table><p>
+
+<center><font size=+2>B=7</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=10>
+<tr bgcolor=DDFFDD><th>L \ D<th>2<th>3<th>4<th>5
+<tr align=center><th bgcolor=DDFFDD>3<td>14<br>{xxx, 123, 145, 167,<br>246, 257, 347, 356}
+<tr align=center><th bgcolor=DDFFDD>4<td>35<br>{xxyy, 1234, 1267, 1357,<br>1456, 2356, 2457, 3467}<br>(MM)<td>9<br>{xxxx, 1234, 4567}
+<tr align=center><th bgcolor=DDFFDD>5<td>66<br>{xxxxx, 11122, 11133, 11144,<br>11155, 11167, 11237, 11256,<br>11346, 11457, 11666, 11777,<br>12224, 12236, 12257, 12333,<br>12344, 12455, 12466, 12477,<br>13345, 13367, 13557, 13566,<br>14445, 14467, 15556, 15677,<br>22233, 22256, 22277, 22345,<br>22444, 22467, 22555, 22666,<br>23347, 23356, 23577, 23667,<br>24456, 25567, 26777, 33344,<br>33357, 33555, 33666, 33777,<br>34446, 34457, 34556, 34677,<br>44477, 44555, 44666, 45667,<br>45777, 55577, 55666, 66677}<br>(MM)<td>17<br>{xxxxx, 11567,<br>12277, 13366, 14455,<br>22335, 22446, 25566,<br>33447, 35577, 46677}<td>8<br>{xxxxx, 12345}
+<tr align=center><th bgcolor=DDFFDD>6<td>132<br>(MM)<td>33<br>{xxxxxx,<br>111222, 111336, 111577, <br>112347, 112555, 112666,<br>114456, 122333, 122444,<br>122567, 135566, 146777,<br>222355, 222466, 222777,<br>233456, 236677, 244577,<br>333447, 333555, 333666,<br>335777, 344466, 444555,<br>456667, 555555, 555677}<br>(MM)<td>14<br>{xxxxxx, 112233,<br>114455, 116677,<br>224466, 225577,<br>334477, 335566}<td>8<br>{xxxxxx,<br>123456}
+</table><p>
+
+<center><font size=+2>B=8</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=10>
+<tr bgcolor=DDFFDD><th>L \ D<th>2<th>3<th>4<th>5
+<tr align=center><th bgcolor=DDFFDD>3<td>16<br>{xxx, 138, 147, 156,<br>237, 246, 258, 345, 678}
+<tr align=center><th bgcolor=DDFFDD>4<td>50<br>{xxyy, 1237, 1248,<br>1256, 1345, 1368, 1467,<br>1578, 2346, 2358, 2457,<br>2678, 3478, 3567, 4568}<br>(MM)<td>10<br>{xxxx, 1234, 5678}
+<tr align=center><th bgcolor=DDFFDD>5<td>98<br>(MM)<td>22<br>{xxxxx, 11226, 11347,<br>11558, 13388, 14466,<br>16778, 22337, 22455,<br>23468, 24477, 25667,<br>33445, 35577, 45788}<br>(MM)<td>9<br>{xxxxx, 12345}
+<tr align=center><th bgcolor=DDFFDD>6<td>231<br>(MM)<td>46<br>{xxxxxx, 111222, 111366,<br>111447, 111555, 111888,<br>112338, 115677, 122356,<br>122478, 125588, 126667,<br>134557, 144488, 145668,<br>177788, 222337, 222466,<br>222555, 222888, 223444,<br>226777, 233345, 234688,<br>235778, 244567, 333666,<br>333777, 333888, 334478,<br>335568, 346677, 444666,<br>444777, 445558, 457888,<br>555666, 555777, 666888}<br>(MM)<td>16<br>{xxxxxx,<br>113388, 114477,<br>115566, 223377,<br>224466, 225588,<br>334455, 667788}<td>9<br>{xxxxxx,<br>123456}
+</table><p>
+
+<center><font size=+2>B=9</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=10>
+<tr bgcolor=DDFFDD><th>L \ D<th>2<th>3<th>4<th>5
+<tr align=center><th bgcolor=DDFFDD>3<td>21<br>{xxx, 129, 138, 147,<br>156, 237, 246, 258,<br>345, 369, 489, 579, 678}
+<tr align=center><th bgcolor=DDFFDD>4<td>63<br>{xxyy, 1246, 1257,<br>1289, 1348, 1356, 1379,<br>1459, 1678, 2345, 2369,<br>2378, 2479, 2568, 3467,<br>3589, 4578, 4689, 5679}<br>(MM)<td>12<br>{xxxx, 1234,<br>4567, 1789}
+<tr align=center><th bgcolor=DDFFDD>5<td>139<br>(MM)<td>29<br>{xxxxx, 11288, 11335,<br>11449, 11677, 12279,<br>12456, 13478, 15599,<br>16689, 22366, 22448,<br>23377, 23589, 33499,<br>33688, 35567, 44667,<br>45588, 45779, 78899}<br>(MM)<td>11<br>{xxxxx, 12345, 56789}
+<tr align=center><th bgcolor=DDFFDD>6<td>310<br>(MM)<td>60<br>{xxxxxx,<br>111229, 111333, 111488,<br>111555, 111777, 112344,<br>112568, 114579, 114666,<br>116999, 122366, 123888,<br>124899, 133468, 135569,<br>135778, 144467, 167889,<br>222333, 222444, 222555,<br>222688, 222777, 222999,<br>223789, 224569, 233567,<br>234558, 246678, 255779,<br>333444, 333555, 333666,<br>333777, 333889, 334599,<br>344566, 346779, 366899,<br>444555, 444999, 445777,<br>445889, 477888, 555667,<br>555888, 555999, 566688,<br>666777, 777899, 888999}<br>(MM)<td>21<br>{xxxxxx, 112299, 113388,<br>114477, 115566, 223377,<br>224466, 225588, 334455,<br>336699, 448899, 557799, 667788}<td>10<br>{xxxxxx,<br>123456}
+</table><p>
+
+
+<p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 9/1/11.<font>
+
+</BODY></HTML>

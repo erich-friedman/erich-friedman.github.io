@@ -1,0 +1,95 @@
+Thunderball by Jonathan Welton
+ 
+
+
+ In Thunderball there are n balls which roll about on the surface of a squared grid. The balls move in response to a tilting of the surface, and all move at the same time in the same direction and the same distance, unless one or more of them are blocked. As the balls move they leave behind them a trail of damaged squares. Each visited square is so badly damaged that balls are subsequently blocked from revisiting it; if a tilt would bring a ball on to a previously visited square, the ball remains stationary. The balls start in a diagonal row of n, and the object is to bring them in to a horizontally or vertically adjacent row of n.
+ 
+ 
+
+ 
+
+
+ The 2-ball case can be solved by making tilting: N, W, 2S, 2E, 2S, E, 4N, 6W, 6S, 5E, S, E, 2N. This brings the balls in a line within the confines of an 8x7 rectangle. In fact it is possible to do so within a 5x7 rectangle. (How? Answers and Commentary.)
+ 
+ The 3-ball case is quite challenging, and can be solved with the sequence: S, 3E, 4N, W, N, 2E, 2S, 2E, 2S, E, S, 3E, 6N, 6W, E, 3S, 5E, 3W,  S, E, 9N, 11W, S. This brings the balls into an adjacent row within a 12x15 rectangle. I'm sure a more compact solution must be possible.
+ 
+ Can the problem be solved for all n? Well, here is a solution to the 4-ball problem.
+ 
+ 
+
+ 
+
+
+ I believe that this method of solution can be extended, with suitable changes of various aspects, to solve the problem for any larger n. This suggests that the problem is solvable for all n, but the method gives solutions which are far from minimal. By minimal, I mean a solution in which the encompassing rectangle has largest side as small as possible. (So 6x6 would be smaller than 5x7. This definition of minimal penalises long thin solutions like the 4-ball solution above more than a simple product of the sides would do.)
+ 
+ This type of problem, where all pieces move simultaneously in the same direction but squares may not be revisited, permits a great many variants. Start or target positions could be different, the board could have edges, or holes, off which the balls are not permitted to fall. There could be barriers or blocked squares which would help and hinder progress, or pits which trap balls. There could be anti-gravity balls, or ones which leave a trail of oil over which others may skid without stopping. Or the directions could be other than just orthogonal, for example diagonals could be permitted, or knight moves. I’ve tended to restrict myself to the pure version of the problem as above.
+ 
+
+> Jonathan,
+>
+>    Ed Pegg gave me your address.  I have a solution for the Thunderball
+> 3-case that fits in a 9x14 grid:
+>
+>       W, N, 6E, 8S, W, 4N, 2W, S, 4E, N, S, W, S, 3N, 4S, 6E, 4N
+>
+>    Attached is the pictorial solution.
+>
+>
+> Clint Weaver
+
+> Clint
+>
+> That's neat. I thought at first I must have misread the 8S, but it fits
+> together neatly in the end.
+>
+> Well done, and thanks for sending me your solution.
+>
+> Regards
+> Jonathan
+
+Clint
+
+Working on from the ideas in your solution, I've been able to shave off a
+couple more rows, to give a 9x12 solution. Check it out:
+W, N, 6E, 6S, W, 5N, W, S, 3E, 4N, 2S, W, 5S, 6E, 4N
+
+I'll be interested to see if any of Ed's readers find a method to do smaller
+than this. They're normally pretty smart.
+
+Regards
+Jonathan
+
+Ed,
+
+   Check it out.  Jonathan took my solution and made it even better!
+
+Clint
+
+----------------------------------------
+
+
+In fact, it's possible to line up 2 balls within a 4x7 box.
+
+Another possible method of judging the shortness of solutions is by
+the number of moves/tilts required. Mine requires 16.
+
+Solution:
+
+NWWSSSENEESWEENE
+
+Joseph DeVincentis
+
+-----------------------------------------------------------
+
+Ed,
+
+   The 5x7 Thunderball solution for the 2-ball case is as follows:
+
+      W, 3N, 2E, S, 2W, 6N, 4E, 3S, W
+
+Clint Weaver
+
+E-E-N-N-W-S-N-N-N-W-S-N-N-E   !!
+
+Jens Lund 
+

@@ -1,0 +1,230 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month<br>(December 2008)</H1></CENTER>
+
+Given a graph, a collection of vertices and edges connecting them, we want to label the vertices so that the label of each vertex is the sum of the digits of the labels of the adjacent vertices.  What graphs and labelings have this property?<p>
+
+<table align=center><tr><td><img src="1208/path.gif"><td width=30><td><img src="1208/wheel.gif"></tr></table>
+
+<P><hr color=black><p><center><h1>ANSWERS</h1></center>
+
+Any graph can be labeled with 0's.  These labelings are trivial, and are omitted below.<p>
+
+Any graph whose vertices have degrees 10 or less can be labeled: label each vertex with 9 times its degree.  We therefore consider these labelings trivial and omit them below.  In fact, <a href="mailto:devjoe@gmail.com">Joe DeVincentis</a> pointed out this is true as long as all the degrees d of the graph have the property that 9d has digit sum 9.<p>
+
+Here are some of the small digit sum graphs:<p>
+
+<center><font size=+2>Paths</font></center>
+<table align=center border=2 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>Length<th>Labelings
+<tr align=center><td>2<td>1, 1<br>2, 2<br>3, 3<br>4, 4<br>5, 5<br>6, 6<br>7, 7<br>8, 8
+<tr align=center><td>5<td>1, 10, 9, 17, 8<br>2, 11, 9, 16, 7<br>3, 12, 9, 15, 6<br>4, 13, 9, 14, 5<br>
+<tr align=center><td>8<td>1, 10, 9, 17, 17, 9, 10, 1<br>2, 11, 9, 16, 16, 9, 11, 2<br>3, 12, 9, 15, 15, 9, 12, 2<br>4, 13, 9, 14, 14, 9, 13, 4<br>5, 14, 9, 13, 13, 9, 14, 5<br>6, 15, 9, 12, 12, 9, 15, 6<br>7, 16, 9, 11, 11, 9, 16, 7<br>8, 17, 9, 10, 10, 9, 17, 8<br>8, 17, 18, 19, 19, 18, 17, 8
+</tr></table><p>
+
+In 2011, the Marin Math Circle discovered that these patterns likely continue.  Only for n = 2 (mod 3) are there solutions, and these solutions are symmetric for even n and asymmetric for odd n.<p>
+
+<center><font size=+2>Cycles</font></center>
+<table align=center border=2 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>Length<th>Labelings
+<tr align=center><td>4<td>6, 12, 6, 12
+<tr align=center><td>6<td>2, 10, 8, 16, 8, 10<br>3, 10, 7, 15, 8, 11<br>4, 10, 6, 14, 8, 12<br>4, 11, 7, 14, 7, 11<br>5, 10, 5, 13, 8, 13<br>5, 11, 6, 13, 7, 12<br>6, 12, 6, 12, 6, 12
+<br>9, 10, 10, 9, 17, 17<br>9, 11, 11, 9, 16, 16<br>9, 12, 12, 9, 15, 15<br>9, 13, 13, 9, 14, 14<br>17, 17, 18, 19, 19, 18
+<tr align=center><td>8<td>6, 12, 6, 12, 6, 12, 6, 12
+<tr align=center><td>10<td>6, 12, 6, 12, 6, 12, 6, 12, 6, 12
+</tr></table><p>
+
+<center><font size=+2>Regular Graphs<br>(and Complete Graphs)</font></center>
+<table align=center border=2 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>Degree<th>Labelings
+<tr align=center><td>1<td>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8
+<tr align=center><td>4<td>12<br>24<br>48
+<tr align=center><td>7<td>21 (Ed Pegg)<br>42 (Ed Pegg)<br>84 (Ed Pegg)
+<tr align=center><td>10<td>10 (JD)<br>20 (JD)<br>30 (JD)<br>40 (JD)<br>50 (JD)<br>60 (JD)<br>70 (JD)<br>80 (JD)
+<tr align=center><td>11<td>198 (JD)
+<tr align=center><td>13<td>195 (JD)
+<tr align=center><td>16<td>192 (JD)<br>288 (JD)
+<tr align=center><td>19<td>114 (JD)<br>133 (JD)<br>152 (JD)<br>190 (JD)<br>209 (JD)<br>228 (JD)<br>247 (JD)<br>266 (JD)<br>285 (JD)
+<tr align=center><td>21<td>378 (JD)
+<tr align=center><td>22<td>132 (JD)
+</tr></table><p>
+
+<center><font size=+2>Complete Bipartite Graphs</font></center>
+<table align=center border=2 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>m \ n<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9
+<tr align=center><th bgcolor=DDFFFF>1<td>1, 1<br>2, 2<br>3, 3<br>4, 4<br>5, 5<br>6, 6<br>7, 7<br>8, 8
+<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;
+<tr align=center><th bgcolor=DDFFFF>2<td>&nbsp;
+<td>6, 12<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;
+<tr align=center><th bgcolor=DDFFFF>3<td>&nbsp;
+<td>&nbsp;
+<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;
+<tr align=center><th bgcolor=DDFFFF>4<td>3, 12<br>6, 24
+<td>&nbsp;
+<td>&nbsp;
+<td>12, 12<br>24, 24<br>48, 48<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;
+<tr align=center><th bgcolor=DDFFFF>5<td>&nbsp;
+<td>2, 10<br>4, 20<br>6, 30<br>8, 40<br>10, 5<br>12, 15<br>14, 25<br>16, 35
+<td>&nbsp;
+<td>&nbsp;
+<td>15, 30<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;
+<tr align=center><th bgcolor=DDFFFF>6<td>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td>&nbsp;
+<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;
+<tr align=center><th bgcolor=DDFFFF>7<td>3, 21<br>6, 42
+<td>&nbsp;
+<td>&nbsp;
+<td>12, 21<br>20, 14<br>24, 42<br>28, 70<br>32, 35<br>40, 28<br>44, 56<br>48, 84<br>52, 49<br>56, 77<br>68, 98
+<td>&nbsp;
+<td>&nbsp;
+<td>21, 21<br>42, 42<br>84, 84<td>&nbsp;<td>&nbsp;
+<tr align=center><th bgcolor=DDFFFF>8<td>&nbsp;
+<td>12, 24<br>24, 48
+<td>&nbsp;
+<td>&nbsp;
+<td>30, 24<br>60, 48<br>75, 96
+<td>&nbsp;
+<td>&nbsp;
+<td>32, 40<br>64, 80<br>88, 128<td>&nbsp;
+<tr align=center><th bgcolor=DDFFFF>9<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;
+<tr align=center><th bgcolor=DDFFFF>10<td>1, 10<br>2, 20<br>3, 30<br>4, 40<br>5, 50<br>6, 60<br>7, 70<br>8, 80<td>&nbsp;<td>&nbsp;
+<td>12, 30<br>24, 60<td>&nbsp;<td>&nbsp;<td>21, 30<br>42, 60<td>&nbsp;<td>&nbsp;
+<tr align=center><th bgcolor=DDFFFF>11<td>18, 99 (JD)<td>12, 33<br>24, 66<br>36, 99<td>54, 99<td>72, 99<td>10, 11<br>20, 22<br>30, 33<br>40, 44<br>50, 55<br>60, 66<br>70, 77<br>80, 88<br>90, 99<td>108, 99<td>126, 99<td>144, 99<br>48, 132<br>96, 165<td>162, 99
+</tr></table><p>
+
+<center><font size=+2>Grids</font></center>
+<table align=center bgcolor=FFFFDD border=1 cellpadding=5><tr align=center><td>
+<center><pre>1 1   2 2   3 3   4 4   5 5   6 6   7 7   8 8</pre></center><p>
+<center><pre>1 10 9 17 8   2 11 9 16 7   3 12 9 15 6   4 13 9 14 5</pre></center><p>
+<center><pre>1 10 9 17 17 9 10 1   2 11 9 16 16 9 11 2</pre></center><p>
+<center><pre>3 12 9 15 15 9 12 3   4 13 9 14 14 9 13 4</pre></center><p>
+<center><pre>5 14 9 13 13 9 14 5   6 15 9 12 12 9 15 6</pre></center><p>
+<center><pre>7 16 9 11 11 9 16 7   8 17 9 10 10 9 17 8</pre></center><p>
+<center><pre>8 17 18 19 19 18 17 8</pre></center><p>
+<center><pre>10 18 26 18 10   11 18 25 18 11   12 18 24 18 12
+10 18 26 18 10   11 18 25 18 11   12 18 24 18 12</pre></center><p>
+<center><pre>13 18 23 18 13   14 18 22 18 14   15 18 21 18 15
+13 18 23 18 13   14 18 22 18 14   15 18 21 18 15</pre></center><p>
+<center><pre>16 18 20 18 16   16 27 29 27 16   17 27 28 27 17
+16 18 20 18 16   16 27 29 27 16   17 27 28 27 17</pre></center><p>
+<center><pre>19 27 26 27 19
+19 27 26 27 19</pre></center><p>
+<center><pre>10 14 14 10   12 15 15 12   14 16 16 14
+14 26 26 14   15 24 24 15   16 22 22 16
+14 26 26 14   15 24 24 15   16 22 22 16
+10 14 14 10   12 15 15 12   14 16 16 14</pre></center><p>
+<center><pre>16 17 17 16   16 26 26 16   20 19 19 20
+17 20 20 17   26 38 38 26   19 34 34 19
+17 20 20 17   26 38 38 26   19 34 34 19
+16 17 17 16   16 26 26 16   20 19 19 20</pre></center>
+</table><p>
+
+
+<center><font size=+2>Wheels</font></center>
+<table align=center border=2 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>Size<th>Center<th>Other Labelings
+<tr align=center><td>5<td>18<td>15, 21, 15, 21
+<tr align=center><td rowspan=2>6<td>15<td>12, 12, 12, 12, 12
+<tr align=center><td>30<td>15, 15, 15, 15, 15
+<tr align=center><td rowspan=12>7<td rowspan=3>27<td>13, 20, 16, 23, 16, 20
+<tr align=center><td>14, 20, 15, 22, 16, 21
+<tr align=center><td>15, 21, 15, 21, 15, 21
+<tr align=center><td rowspan=6>36<td>17, 20, 21, 19, 25, 24
+<tr align=center><td>17, 21, 22, 19, 24, 23
+<tr align=center><td>17, 22, 23, 19, 23, 22
+<tr align=center><td>18, 20, 20, 18, 25, 25
+<tr align=center><td>18, 21, 21, 18, 24, 24
+<tr align=center><td>18, 22, 22, 18, 23, 23
+<tr align=center><td rowspan=3>54<td>25, 25, 27, 29, 29, 27
+<tr align=center><td>25, 26, 28, 29, 28, 26
+<tr align=center><td>26, 26, 27, 28, 28, 27
+<tr align=center><td rowspan=17>9<td>8<td>10, 10, 10, 10, 10, 10, 10, 10
+<tr align=center><td>16<td>11, 11, 11, 11, 11, 11, 11, 11
+<tr align=center><td>20<td>4, 10, 4, 10, 4 10, 4, 10
+<tr align=center><td>24<td>12, 12, 12, 12, 12, 12, 12, 12
+<tr align=center><td>28<td>14, 20, 14, 20, 14, 20, 14, 20
+<tr align=center><td>32<td>13, 13, 13, 13, 13, 13, 13, 13
+<tr align=center><td>36<td>15, 21, 15, 21, 15, 21, 15, 21
+<tr align=center><td rowspan=2>40<td>8, 20, 8, 20, 8, 20, 8, 20
+<tr align=center><td>14, 14, 14, 14, 14, 14, 14, 14
+<tr align=center><td>44<td>16, 22, 16, 22, 16, 22, 16, 22
+<tr align=center><td rowspan=2>48<td>18, 30, 18, 30, 18, 30, 18, 30
+<tr align=center><td>24, 24, 24, 24, 24, 24, 24, 24
+<tr align=center><td>52<td>17, 23, 17, 23, 17, 23, 17, 23
+<tr align=center><td>56<td>25, 25, 25, 25, 25, 25, 25, 25
+<tr align=center><td>60<td>18, 24, 18, 24, 18, 24, 18, 24
+<tr align=center><td>64<td>26, 26, 26, 26, 26, 26, 26, 26
+<tr align=center><td>80<td>28, 28, 28, 28, 28, 28, 28, 28
+<tr align=center><td>11<td>45<td>15, 21, 15, 21, 15, 21, 15, 21, 15, 21
+<tr align=center><td>12<td>33<td>12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12 (JD)
+</tr></table><p>
+
+<a href="mathidentity@yahoo.com">Bryce Herdt</a> suggested investigating the smallest graph to have label n.  He found that K<sub>11</sub> has a labeling including 100, and K<sub>7</sub> has a labeling including 108.  It turns out this problem is fairly easy for all n with digit sum 9 or less.  Connect n to its digital sum s and several copies of 9, each of which is connected connected to the same copy of (18-s), which in turn is connected to (9-s).  If n has digit sum between 9 and 18, then connect n to s and a bunch of copies of 18, each of which is connected to (27-s), which in turn is connected to (18-s).<p>
+
+<a href="mailto:mathidentity@yahoo.com">Bryce Herdt</a> also suggested investigating the smallest graph whose labels are the first n positive integers, or in different bases, or both!  He gave an example in base 2:<p>
+
+<center><img src="1208/base2.gif"></center><p>
+
+<a href="mailto:mathidentity@yahoo.com">Bryce Herdt</a> also suggested investigating the smallest graph (besides P<sub>2</sub>) whose labels have greatest common divisor n.<p>
+
+<center><font size=+2>Smallest Known Graphs With At Least<br>3 Vertices Whose Labels Have GCD n</font></center>
+<table align=center border=0><TR><TD>
+<table align=center border=2 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>Label<th>Size<th>Graph
+<tr align=center><td>1<td>5<td>P<sub>5</sub>
+<tr align=center><td>2<td>6<td>C<sub>6</sub>
+<tr align=center><td>3<td>5<td>P<sub>5</sub>
+<tr align=center><td>4<td>7<td>K<sub>2,5</sub>
+<tr align=center><td>5<td>7<td>K<sub>2,5</sub>
+<tr align=center><td>6<td>4<td>C<sub>4</sub>
+<tr align=center><td>7<td>8<td><a href="1208/gcd7.gif">pic</a> (BH)
+<tr align=center><td>8<td>7<td>K<sub>2,5</sub>
+<tr align=center><td>9<td>3<td>P<sub>3</sub>
+<tr align=center><td>10<td>11<td>K<sub>11</sub>
+<tr align=center><td>11<td>19<td><a href="1208/gcd11.gif">pic</a> (BH)
+<tr align=center><td>12<td>5<td>K<sub>5</sub>
+<tr align=center><td>13<td>15<td><a href="1208/gcd13.gif">pic</a> (BH)
+<tr align=center><td>14<td>8<td><a href="1208/gcd7.gif">pic</a> (BH)
+<tr align=center><td>15<td>6<td>W<sub>6</sub> (BH)
+<tr align=center><td>16<td>12<td><a href="1208/gcd16.gif">pic</a> (BH)
+<tr align=center><td>17<td>16<td><a href="1208/gcd17.gif">pic</a> (BH)
+<tr align=center><td>18<td>3<td>C<sub>3</sub>
+<tr align=center><td>19<td>24<td><a href="1208/gcd19.gif">pic</a> (BH)
+<tr align=center><td>20<td>11<td>K<sub>11</sub>
+</tr></table><p>
+
+</TD><TD width=30></TD><TD>
+
+<table align=center border=2 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>Label<th>Size<th>Graph
+<tr align=center><td>21<td>8<td>K<sub>8</sub>
+<tr align=center><td>22<td>16<td><a href="1208/gcd22.gif">pic</a> (BH)
+<tr align=center><td>23<td>12<td><a href="1208/gcd23.gif">pic</a> (BH)
+<tr align=center><td>24<td>5<td>K<sub>5</sub>
+<tr align=center><td>25<td>12<td><a href="1208/gcd25.gif">pic</a>
+<tr align=center><td>26<td>15<td><a href="1208/gcd26.gif">pic</a> (BH)
+<tr align=center><td>27<td>4<td>K<sub>4</sub>
+<tr align=center><td>28<td>22<td><a href="1208/gcd28.gif">pic</a> (JD)
+<tr align=center><td>29<td>23<td><a href="1208/gcd29.gif">pic</a> (BH)
+<tr align=center><td>30<td>11<td>K<sub>11</sub>
+<tr align=center><td>31<td>22<td><a href="1208/gcd31.gif">pic</a> (JD)
+<tr align=center><td>32<td>14<td><a href="1208/gcd32.gif">pic</a> (BH)
+<tr align=center><td>33<td>30<td>hard (BH)
+<tr align=center><td>34<td>16<td><a href="1208/gcd34.gif">pic</a> (BH)
+<tr align=center><td>35<td>12<td><a href="1208/gcd35.gif">pic</a> (BH)
+<tr align=center><td>36<td>5<td>K<sub>5</sub>
+<tr align=center><td>37<td>19<td>hard (BH)
+<tr align=center><td>38<td>20<td><a href="1208/gcd38.gif">pic</a> (JD)
+<tr align=center><td>39<td>15<td><a href="1208/gcd39.gif">pic</a> (BH)
+<tr align=center><td>40<td>11<td>K<sub>11</sub>
+</tr></table><p>
+
+</TD></TR></TABLE><p>
+
+
+<a href="mailto:devjoe@gmail.com">Joe DeVincentis</a> wondered whether ALL graphs have these digit sum labelings.<p>
+<p><hr color=black><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 3/3/11.<font></BODY></HTML>
+

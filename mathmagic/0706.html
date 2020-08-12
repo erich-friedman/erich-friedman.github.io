@@ -1,0 +1,276 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML>
+
+<HEAD><TITLE>Math Magic</TITLE></HEAD>
+<BODY background="formulas.gif"><font size=+1>
+
+
+<CENTER><H1>Problem of the Month (July 2006)</H1></CENTER>
+
+In the chess literature, the problem of placing the minimum number of pieces to attack every square of the chessboard is well known.  This month we consider a natural extension, placing pieces on a board so that each square is attacked an equal number of times.  That is, what is the minimum number of white chess pieces that can be placed on an n&times;n chessboard so that each vacant square is attacked exactly k times?  What if we want to attack every square exactly k times?  (We allow any number of pieces, in any location, so pawns can be on the first or last rank.)<p>
+
+Can you find solutions with few pieces for n=3?  What about larger square boards?  What about rectangular boards?  Are the answers different if you are allowed to use both black and white pieces?<p>
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Let V(n,k) be the fewest number of chess pieces needed so that each vacant square of an n&times;n chessboard is attacked exactly k times.<p>
+
+Joe DeVincentis showed that:<p>
+
+<center>V(n,1)&le;n &nbsp; V(n,2)&le;n, V(n,3)&le;2n-2 &nbsp; V(n,4)&le;2n &nbsp; V(n,5)&le;3n-2 &nbsp; V(n,6)&le;4n-4 &nbsp; V(n,7)&le;4n-4 &nbsp; and &nbsp; V(n,8)&le;4n-4.</center><p>
+
+These bounds seem to be sharp for k=2, k=7, and k=8.<p>
+
+Here are the best known solutions.<p>
+
+<center><font size=+2>2&times;2, Vacant Squares Attacked k Times</font></center>
+<TABLE border=2 align=center bordercolor=blue><TR><TD>
+<table align=center bgcolor=CCFFFF cellpadding=8><tr align=center>
+<td>1<br><img src="0706/2-1.gif">
+<td>2<br><img src="0706/2-2.gif">
+<td>3<br><img src="0706/2-3.gif">
+</tr></table></TABLE><p>
+
+<center><font size=+2>3&times;3, Vacant Squares Attacked k Times</font></center>
+<TABLE border=2 align=center bordercolor=blue><TR><TD>
+<table align=center bgcolor=CCFFFF cellpadding=8><tr align=center>
+<td width=108>1<br><img src="0706/3-1.gif">
+<td width=108>2<br><img src="0706/3-2.gif">
+<td width=108>3<br><img src="0706/3-3.gif">
+<td width=108>4<br><img src="0706/3-4.gif">
+</tr><tr align=center>
+<td width=108>5<br><img src="0706/3-5.gif">
+<td width=108>6<br><img src="0706/3-6.gif">
+<td width=108>7<br><img src="0706/3-7.gif">
+<td width=108>8<br><img src="0706/3-8.gif">
+</tr></table></TABLE><p>
+
+<center><font size=+2>4&times;4, Vacant Squares Attacked k Times</font></center>
+<TABLE border=2 align=center bordercolor=blue><TR><TD>
+<table align=center bgcolor=CCFFFF cellpadding=8><tr align=center>
+<td width=140>1<br><img src="0706/4-1.gif"><br>&nbsp;
+<td width=140>2<br><img src="0706/4-2.gif"><br>&nbsp;
+<td width=140>3<br><img src="0706/4-3.gif"><br>(Joe DeVincentis)
+<td width=140>4<br><img src="0706/4-4.gif"><br>&nbsp;
+</tr><tr align=center>
+<td width=140>5<br><img src="0706/4-5.gif"><br>(Heinrich Hemme)
+<td width=140>6<br><img src="0706/4-6.gif"><br>&nbsp;
+<td width=140>7<br><img src="0706/4-7.gif"><br>&nbsp;
+<td width=140>8<br><img src="0706/4-8.gif"><br>&nbsp;
+</tr><tr align=center>
+<td width=140>9<br><img src="0706/4-9.gif"><br>(James Wilson)
+<td width=140>10<br><img src="0706/4-10.gif"><br>&nbsp;
+<td width=140>11<br><img src="0706/4-11.gif"><br>&nbsp;
+<td width=140>12<br><img src="0706/4-12.gif"><br>&nbsp;
+</tr></table></TABLE><p>
+
+<center><font size=+2>5&times;5, Vacant Squares Attacked k Times</font></center>
+<TABLE border=2 align=center bordercolor=blue><TR><TD>
+<table align=center bgcolor=CCFFFF cellpadding=8><tr align=center>
+<td width=172>1<br><img src="0706/5-1.gif"><br>&nbsp;
+<td width=172>2<br><img src="0706/5-2.gif"><br>&nbsp;
+<td width=172>3<br><img src="0706/5-3.gif"><br>(Dirk Riehm)
+<td width=172>4<br><img src="0706/5-4.gif"><br>&nbsp;
+</tr><tr align=center>
+<td width=172>5<br><img src="0706/5-5.gif">
+<td width=172>6<br><img src="0706/5-6.gif">
+<td width=172>7<br><img src="0706/5-7.gif">
+<td width=172>8<br><img src="0706/5-8.gif">
+</tr><tr align=center>
+<td width=172>9<br><img src="0706/5-9.gif"><br>&nbsp;
+<td width=172>10<br><img src="0706/5-10.gif"><br>&nbsp;
+<td width=172>11<br><img src="0706/5-11.gif"><br>(James Wilson)
+<td width=172>12<br><img src="0706/5-12.gif"><br>&nbsp;
+</tr><tr align=center>
+<td width=172>13<br><img src="0706/5-13.gif"><br>(James Wilson)
+<td width=172>14<br><img src="0706/5-14.gif"><br>&nbsp;
+<td width=172>15<br><img src="0706/5-15.gif"><br>&nbsp;
+<td width=172>16<br><img src="0706/5-16.gif"><br>&nbsp;
+</tr></table></TABLE><p>
+
+<center><font size=+2>6&times;6, Vacant Squares Attacked k Times</font></center>
+<TABLE border=2 align=center bordercolor=blue><TR><TD>
+<table align=center bgcolor=CCFFFF cellpadding=8><tr align=center>
+<td width=204>1<br><img src="0706/6-1.gif"><br>&nbsp;
+<td width=204>2<br><img src="0706/6-2.gif"><br>&nbsp;
+<td width=204>3<br><img src="0706/6-3.gif"><br>(Joe DeVincentis)
+<td width=204>4<br><img src="0706/6-4.gif"><br>&nbsp;
+</tr><tr align=center>
+<td width=204>5<br><img src="0706/6-5.gif">
+<td width=204>6<br><img src="0706/6-6.gif">
+<td width=204>7<br><img src="0706/6-7.gif">
+<td width=204>8<br><img src="0706/6-8.gif">
+</tr><tr align=center>
+<td width=204>9<br><img src="0706/6-9.gif"><br>&nbsp;
+<td width=204>10<br><img src="0706/6-10.gif"><br>&nbsp;
+<td width=204>11<br><img src="0706/6-11.gif"><br>(James Wilson)
+<td width=204>12<br><img src="0706/6-12.gif"><br>&nbsp;
+</tr><tr align=center>
+<td width=204>13<br><img src="0706/6-13.gif"><br>(James Wilson)
+<td width=204>14<br><img src="0706/6-14.gif"><br>&nbsp;
+<td width=204>15<br><img src="0706/6-15.gif"><br>&nbsp;
+<td width=204>16<br><img src="0706/6-16.gif"><br>&nbsp;
+</tr></table></TABLE><p>
+
+<center><font size=+2>7&times;7, Vacant Squares Attacked k Times</font></center>
+<TABLE border=2 align=center bordercolor=blue><TR><TD>
+<table align=center bgcolor=CCFFFF cellpadding=8><tr align=center>
+<td width=204>1<br><img src="0706/7-1.gif"><br>(Joe DeVincentis)
+<td width=204>2<br><img src="0706/7-2.gif"><br>&nbsp;
+<td width=204>3<br><img src="0706/7-3.gif"><br>(Joe DeVincentis)
+<td width=204>4<br><img src="0706/7-4.gif"><br>&nbsp;
+</tr><tr align=center>
+<td width=204>5<br><img src="0706/7-5.gif">
+<td width=204>6<br><img src="0706/7-6.gif">
+<td width=204>7<br><img src="0706/7-7.gif">
+<td width=204>8<br><img src="0706/7-8.gif">
+</tr><tr align=center>
+<td width=204>9<br><img src="0706/7-9.gif"><br>(James Wilson)
+<td width=204>10<br><img src="0706/7-10.gif"><br>(James Wilson)
+<td width=204>11<br><img src="0706/7-11.gif"><br>&nbsp;
+<td width=204>12<br><img src="0706/7-12.gif"><br>(James Wilson)
+</tr><tr align=center>
+<td width=204>13<br><img src="0706/7-13.gif"><br>(James Wilson)
+<td width=204>14<br><img src="0706/7-14.gif"><br>&nbsp;
+<td width=204>15<br><img src="0706/7-15.gif"><br>&nbsp;
+<td width=204>16<br><img src="0706/7-16.gif"><br>&nbsp;
+</tr></table></TABLE><p>
+
+<hr>
+
+Here are the best known results when every square must be attacked an equal number of times.<p>
+
+<center><font size=+2>2&times;2, All Squares Attacked k Times</font></center>
+<TABLE border=2 align=center bordercolor=red><TR><TD>
+<table align=center bgcolor=FFDDDD cellpadding=8><tr align=center>
+<td width=100>1<br><img src="0706/a2-1.gif"><br>&nbsp;
+<td width=100>2<br><img src="0706/a2-2.gif"><br>(James Wilson)
+<td width=100>3<br><img src="0706/a2-3.gif"><br>&nbsp;
+</tr></table></TABLE><p>
+
+<center><font size=+2>3&times;3, All Squares Attacked k Times</font></center>
+<TABLE border=2 align=center bordercolor=red><TR><TD>
+<table align=center bgcolor=FFDDDD cellpadding=8><tr align=center>
+<td width=120>1<br><img src="0706/a3-1.gif"><br>&nbsp;
+<td width=120>2<br><img src="0706/a3-2.gif"><br>(Joe DeVincentis)
+<td width=120>3<br><img src="0706/a3-3.gif"><br>&nbsp;
+</tr></table></TABLE><p>
+
+<center><font size=+2>4&times;4, All Squares Attacked k Times</font></center>
+<TABLE border=2 align=center bordercolor=red><TR><TD>
+<table align=center bgcolor=FFDDDD cellpadding=8><tr align=center>
+<td width=140>1<br><img src="0706/a4-1.gif"><br>&nbsp;
+<td width=140>2<br><img src="0706/a4-2.gif"><br>(Bernd Rennhak)
+<td width=140>3<br><img src="0706/a4-3.gif"><br>(Bernd Rennhak)
+<td width=140>4<br><img src="0706/a4-4.gif"><br>&nbsp;
+</tr></table></TABLE><p>
+
+<center><font size=+2>5&times;5, All Squares Attacked k Times</font></center>
+<TABLE border=2 align=center bordercolor=red><TR><TD>
+<table align=center bgcolor=FFDDDD cellpadding=8><tr align=center>
+<td width=172>1<br><img src="0706/a5-1.gif"><br>(Bernd Rennhak)
+<td width=172>2<br><img src="0706/a5-2.gif"><br>&nbsp;
+<td width=172>3<br><img src="0706/a5-3.gif"><br>(Bernd Rennhak)
+<td width=172>4<br><img src="0706/a5-4.gif"><br>(Bernd Rennhak)
+</tr></table></TABLE><p>
+
+<center><font size=+2>6&times;6, All Squares Attacked k Times</font></center>
+<TABLE border=2 align=center bordercolor=red><TR><TD>
+<table align=center bgcolor=FFDDDD cellpadding=8><tr align=center>
+<td width=204>1<br><img src="0706/a6-1.gif"><br>&nbsp;
+<td width=204>2<br><img src="0706/a6-2.gif"><br>(Bernd Rennhak)
+<td width=204>3<br><img src="0706/a6-3.gif"><br>(Bernd Rennhak)
+<td width=204>3<br><img src="0706/a6-4.gif"><br>(Bernd Rennhak)
+</tr></table></TABLE><p>
+
+<center><font size=+2>7&times;7, All Squares Attacked k Times</font></center>
+<TABLE border=2 align=center bordercolor=red><TR><TD>
+<table align=center bgcolor=FFDDDD cellpadding=8><tr align=center>
+<td width=236>1<br><img src="0706/a7-1.gif"><br>&nbsp;
+<td width=236>2<br><img src="0706/a7-2.gif"><br>&nbsp;
+<td width=236>3<br><img src="0706/a7-3.gif"><br>(Bernd Rennhak)
+</tr></table></TABLE><p>
+
+<center><font size=+2>8&times;8, All Squares Attacked k Times</font></center>
+<TABLE border=2 align=center bordercolor=red><TR><TD>
+<table align=center bgcolor=FFDDDD cellpadding=8><tr align=center>
+<td width=268>1<br><img src="0706/a8-1.gif"><br>(Bernd Rennhak)
+</tr></table></TABLE><p>
+
+<center><font size=+2>9&times;9, All Squares Attacked k Times</font></center>
+<TABLE border=2 align=center bordercolor=red><TR><TD>
+<table align=center bgcolor=FFDDDD cellpadding=8><tr align=center>
+<td width=300>1<br><img src="0706/a9-1.gif"><br>(Bernd Rennhak)
+</tr></table></TABLE><p>
+
+<hr>
+
+Bernd Rennhak considered the problem of attacking every square on an 4&times;n chessboard exactly k times.<p>
+
+<center><font size=+2>4&times;n, All Squares Attacked k Times</font></center>
+<TABLE border=2 align=center bordercolor=green><TR><TD>
+<table align=center bgcolor=DDFFDD cellpadding=8>
+<tr align=center><th>1<th>2<th>3<th>4
+<tr align=center>
+<td><img src="0706/a45-1.gif"><br>(Bernd Rennhak)
+<td><img src="0706/a45-2.gif"><br>(Bernd Rennhak)
+<td><img src="0706/a45-3.gif"><br>(Bernd Rennhak)
+<td><img src="0706/a45-4.gif"><br>(Bernd Rennhak)
+<tr align=center>
+<td><img src="0706/a46-1.gif"><br>(Bernd Rennhak)
+<td><img src="0706/a46-2.gif"><br>(Bernd Rennhak)
+<td><img src="0706/a46-3.gif"><br>(Bernd Rennhak)
+<td><img src="0706/a46-4.gif"><br>(Bernd Rennhak)
+<tr align=center>
+<td><img src="0706/a47-1.gif"><br>(Bernd Rennhak)
+<td><img src="0706/a47-2.gif"><br>(Bernd Rennhak)
+<tr align=center>
+<td><img src="0706/a48-1.gif"><br>(Bernd Rennhak)
+<td><img src="0706/a48-2.gif"><br>&nbsp;
+<tr align=center>
+<td><img src="0706/a49-1.gif"><br>(Bernd Rennhak)
+</tr></table></TABLE><p>
+
+<hr>
+
+Bernd Rennhak also considered the problem of attacking every square on triangular chessboards exactly k times.<p>
+
+<center><font size=+2>Triangles, All Squares Attacked k Times</font></center>
+<TABLE border=2 align=center bordercolor=purple><TR><TD>
+<table align=center bgcolor=DDDDFF cellpadding=8>
+<tr align=center><th>1<th>2<th>3
+<tr align=center>
+<td><img src="0706/t2-1.gif"><br>&nbsp;
+<td><img src="0706/t2-2.gif"><br>&nbsp;
+<tr align=center>
+<td><img src="0706/t3-1.gif"><br>&nbsp;
+<td><img src="0706/t3-2.gif"><br>&nbsp;
+<tr align=center>
+<td><img src="0706/t4-1.gif"><br>(Bernd Rennhak)
+<td><img src="0706/t4-2.gif"><br>(Bernd Rennhak)
+<tr align=center>
+<td><img src="0706/t5-1.gif"><br>(Bernd Rennhak)
+<td><img src="0706/t5-2.gif"><br>(Bernd Rennhak)
+<td><img src="0706/t5-3.gif"><br>(Bernd Rennhak)
+<tr align=center>
+<td><img src="0706/t6-1.gif"><br>(Bernd Rennhak)
+<td><img src="0706/t6-2.gif"><br>(Bernd Rennhak)
+<td><img src="0706/t6-3.gif"><br>(Bernd Rennhak)
+<tr align=center>
+<td>
+<td><img src="0706/t7-2.gif"><br>(Bernd Rennhak)
+<td><img src="0706/t7-3.gif"><br>(Bernd Rennhak)
+</tr></table></TABLE><p>
+
+Bernd Rennhak has <a href="http://www.logelium.de/Schach/SchachPuzzel_EN.htm">these pages</a> with more information.<p>
+
+<p><hr><p>
+If you can extend any of these results, please 
+<a href="mailto:efriedma@stetson.edu">e-mail</a> me.  
+Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 3/13/07.<font>
+
+
+</BODY>
+</HTML>
+
+

@@ -1,0 +1,196 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (October 2017)</H1></CENTER>
+
+The pair of numbers 692 and 1118 have a very interesting property.  Note that 692<sup>2</sup> + 1118<sup>2</sup> = 1728788.  And note that 692<sup>3</sup> + 1118<sup>3</sup> = 1728788920 starts with exactly the same digits!  What other pairs of positive integers x and y have the property that x<sup>3</sup> + y<sup>3</sup> starts with the digits of x<sup>2</sup> + y<sup>2</sup>?  More generally, what pairs of positive integers x and y have the property that x<sup>n</sup> + y<sup>n</sup> starts with the digits of x<sup>m</sup> + y<sup>m</sup>, where n&gt;m&gt;1?  Even more generally, what collections of numbers {x, y, ... , z, m, n} have the property that x<sup>n</sup> + y<sup>n</sup> + <sup>. . .</sup> + z<sup>n</sup> starts with the digits of x<sup>m</sup> + y<sup>m</sup> + <sup>. . .</sup> + z<sup>m</sup>?  What about other bases?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Bryce Herdt points out that for any m and x&lt;y (as long as y is not a power of 10), there is always some n>m that works.  This is because as n grows, x<sup>n</sup> &lt;&lt; y<sup>n</sup>, so x<sup>n</sup> will eventually contribute no digits to the sum. By taking logarithms, it's easy to see that y<sup>n</sup> will eventually begin with any arbitrary digits, for example the digits of x<sup>m</sup>+y<sup>m</sup>.<p>
+
+George Sicherman sent several solutions for 10 &le; n &le;20, and some solutions in base 8.<p>
+
+Bryce Herdt sent some small solutions for 20 &le; n &le;30.<p>
+
+Joe DeVincentis shared his technique for finding large solutions.  Consider the m=2 and n=3 case as an example.  Assume x < y.  We want x<sup>3</sup> + y<sup>3</sup> &asymp; 10<sup>d</sup> (x<sup>3</sup> + y<sup>2</sup>), or  y<sup>2</sup> (y&ndash;10<sup>d</sup>) &asymp; x<sup>2</sup> (10<sup>d</sup>&ndash;x), where d is the number of digits of agreement.  Since the right hand side has a maximum, we can take its derivative and find the maximum occurs around x = (2/3)10<sup>d</sup>.  By fixing d, looping y to start at 10<sup>d</sup>+1, and searching for x values slightly less than 10<sup>d</sup> or slightly more than 10<sup>d/2</sup>, he only needs to check about 10<sup>d</sup> cases for each d.<p>
+
+David Broadhurst also sent some huge solutions he found by efficiently solving the above cubic using cosines of a third of an angle.<p>
+
+There is a trivial infinite family for x<sup>n</sup> + y<sup>n</sup> starting with the digits of x<sup>m</sup> + y<sup>m</sup>: x=y=10<sup>k</sup>.<p>
+
+The other known cases with 1 < m < n &le; 10 are shown below:<p>
+
+<center><font size=+2>m=2 n=3</font></center>
+<table align=center border=1 cellpadding=4>
+<tr align=center bgcolor=FFFFDD>
+<th width=400>x<sup>m</sup> + y<sup>m</sup><th width=400>x<sup>n</sup> + y<sup>n</sup><th>Author
+<tr align=center>
+<td>692<sup>2</sup> + 1118<sup>2</sup> = 1728788<td>692<sup>3</sup> + 1118<sup>3</sup> = 1728788920<td>
+<tr align=center>
+<td>22377222<sup>2</sup> + 103620045<sup>2</sup> = 11237853790239309<td>22377222<sup>3</sup> + 103620045<sup>3</sup> = 1123785379023930900736173<td>JD
+<tr align=center>
+<td>223772220<sup>2</sup> + 1036200450<sup>2</sup> = 1123785379023930900<td>223772220<sup>3</sup> + 1036200450<sup>3</sup> = 1123785379023930900736173000<td>JD
+<tr align=center>
+<td>224900277<sup>2</sup> + 1036492627<sup>2</sup> = 1124897100420037858<td>224900277<sup>3</sup> + 1036492627<sup>3</sup> = 1124897100420037858898449816<td>JD
+<tr align=center>
+<td>42168172711<sup>2</sup> + 108702731146<sup>2</sup> = 13594438548384283562837
+<td>42168172711<sup>3</sup> + 108702731146<sup>3</sup> = 1359443854838428356283751827361567<td>DB
+<tr align=center>
+<td>70487560695<sup>2</sup> + 111743231377<sup>2</sup> = 17455045971305066199154
+<td>70487560695<sup>3</sup> + 111743231377<sup>3</sup> = 1745504597130506619915466723682008<td>DB
+<tr align=center>
+<td>118280864170<sup>2</sup> + 1012043721225<sup>2</sup> = 1038222856499747505289525
+<td>118280864170<sup>3</sup> + 1012043721225<sup>3</sup> = 1038222856499747505289525051686978625<td>DB
+<tr align=center>
+<td>920726348310<sup>2</sup> + 1059829825078<sup>2</sup> = 1970976266597131517562184
+<td>920726348310<sup>3</sup> + 1059829825078<sup>3</sup> = 1970976266597131517562184310094565552<td>DB
+
+</table><p>
+
+
+<center><font size=+2>m=2 n=4</font></center>
+<table align=center border=1 cellpadding=4>
+<tr align=center bgcolor=FFFFDD>
+<th width=400>x<sup>m</sup> + y<sup>m</sup><th width=400>x<sup>n</sup> + y<sup>n</sup><th>Author
+<tr align=center>
+<td>7<sup>2</sup> + 11<sup>2</sup> = 170<td>7<sup>4</sup> + 11<sup>4</sup> = 17042<td>
+<tr align=center>
+<td>5<sup>2</sup> + 32<sup>2</sup> = 1049<td>5<sup>4</sup> + 32<sup>4</sup> = 1049201<td>
+<tr align=center>
+<td>28735718<sup>2</sup> + 33579883<sup>2</sup> = 1953350031269213 
+<td>28735718<sup>4</sup> + 33579883<sup>4</sup> = 1953350031269213637900200303297<td>JD
+<tr align=center>
+<td>23639285<sup>2</sup> + 317100361<sup>2</sup> = 101111454741641546
+<td>23639285<sup>4</sup> + 317100361<sup>4</sup> = 10111145474164154604331367054963666<td>JD
+<tr align=center>
+<td>Infinite Family: (9)7(9)<sup>2</sup> + 1(0)1(9)<sup>2</sup> = 1(9)68(0)2
+<td>(9)7(9)<sup>4</sup> + 1(0)1(9)<sup>4</sup> = 1(9)68(0)271(9)68(0)2<td>JD
+</table><p>
+
+
+<center><font size=+2>m=2 n=5</font></center>
+<table align=center border=1 cellpadding=4>
+<tr align=center bgcolor=FFFFDD>
+<th width=400>x<sup>m</sup> + y<sup>m</sup><th width=500>x<sup>n</sup> + y<sup>n</sup><th>Author
+<tr align=center>
+<td>4<sup>2</sup> + 5<sup>2</sup> = 41<td>4<sup>5</sup> + 5<sup>5</sup> = 4149<td>
+<tr align=center>
+<td>1481<sup>2</sup> + 4781<sup>2</sup> = 25051322<td>1481<sup>5</sup> + 4781<sup>5</sup> = 2505132230829059302<td>JD
+<tr align=center>
+<td>1187<sup>2</sup> + 46426<sup>2</sup> = 2156782445
+<td>1187<sup>5</sup> + 46426<sup>5</sup> = 215678244558228574108083<td>JD
+<tr align=center>
+<td>139775<sup>2</sup> + 2157444<sup>2</sup> = 4674101663761
+<td>139775<sup>5</sup> + 2157444<sup>5</sup> = 46741016637617978188741861977599<td>JD
+<tr align=center>
+<td>181199<sup>2</sup> + 4643943<sup>2</sup> = 21599039664850
+<td>181199<sup>5</sup> + 4643943<sup>5</sup> = 2159903966485079912370886208033942<td>JD
+<tr align=center>
+<td>3339155<sup>2</sup> + 10324981<sup>2</sup> = 117755188764386
+<td>3339155<sup>5</sup> + 10324981<sup>5</sup> = 117755188764386934627241251719620776<td>JD
+<tr align=center>
+<td>11714718<sup>2</sup> + 23005720<sup>2</sup> = 666497770537924
+<td>11714718<sup>5</sup> + 23005720<sup>5</sup> = 6664977705379247707157854914065625568<td>JD
+</table><p>
+
+<center><font size=+2>m=2 n=6</font></center>
+<table align=center border=1 cellpadding=4>
+<tr align=center bgcolor=FFFFDD>
+<th width=400>x<sup>m</sup> + y<sup>m</sup><th width=400>x<sup>n</sup> + y<sup>n</sup><th>Author
+<tr align=center>
+<td>4<sup>2</sup> + 18<sup>2</sup> = 340<td>4<sup>6</sup> + 18<sup>6</sup> = 34016320<td>
+<tr align=center>
+<td>7<sup>2</sup> + 32<sup>2</sup> = 1073<td>7<sup>6</sup> + 32<sup>6</sup> = 1073859473<td>
+<tr align=center>
+<td>166<sup>2</sup> + 333<sup>2</sup> = 138445<td>166<sup>6</sup> + 333<sup>6</sup> = 1384456392420985<td>
+<tr align=center>
+<td>18292<sup>2</sup> + 33532<sup>2</sup> = 1458992288
+<td>18292<sup>6</sup> + 33532<sup>6</sup> = 1458992288564093012918509568<td>JD
+<tr align=center>
+<td>360552<sup>2</sup> + 1028903<sup>2</sup> = 1188639128113
+<td>360552<sup>6</sup> + 1028903<sup>6</sup> = 1188639128113897585733510774092112593<td>JD
+<tr align=center>
+<td>28425650<sup>2</sup> + 101879808<sup>2</sup> = 11187512856039364
+<td>28425650<sup>6</sup> + 101879808<sup>6</sup> = 1118751285603936459848547744496942724819666580544<td>JD
+</table><p>
+
+
+<center><font size=+2>m=2 n=7</font></center>
+<table align=center border=1 cellpadding=4>
+<tr align=center bgcolor=FFFFDD>
+<th width=400>x<sup>m</sup> + y<sup>m</sup><th width=400>x<sup>n</sup> + y<sup>n</sup><th>Author
+<tr align=center>
+<td>4<sup>2</sup> + 4<sup>2</sup> = 32<td>4<sup>7</sup> + 4<sup>7</sup> = 32768<td>
+<tr align=center>
+<td>77<sup>2</sup> + 401<sup>2</sup> = 166730<td>77<sup>7</sup> + 401<sup>7</sup> = 1667303986766629654<td>
+<tr align=center>
+<td>2063<sup>2</sup> + 2676<sup>2</sup> = 11416945<td>2063<sup>7</sup> + 2676<sup>7</sup> = 1141694525437148055180143<td>
+<tr align=center>
+<td>34773<sup>2</sup> + 66108<sup>2</sup> = 5579429193
+<td>34773<sup>7</sup> + 66108<sup>7</sup> = 5579429193390324289414066886893149<td>JD
+<tr align=center>
+<td>2440545<sup>2</sup> + 2569928<sup>2</sup> = 12560789822209
+<td>2440545<sup>7</sup> + 2569928<sup>7</sup> = 1256078982220917238676625775706391870219346337<td>JD
+</table><p>
+
+<center><font size=+2>m=2 n=8</font></center>
+<table align=center border=1 cellpadding=4>
+<tr align=center bgcolor=FFFFDD>
+<th width=400>x<sup>m</sup> + y<sup>m</sup><th width=400>x<sup>n</sup> + y<sup>n</sup><th>Author
+<tr align=center>
+<td>8<sup>2</sup> + 22<sup>2</sup> = 548<td>8<sup>8</sup> + 22<sup>8</sup> = 54892650752<td>
+<tr align=center>
+<td>263<sup>2</sup> + 484<sup>2</sup> = 303425<td>263<sup>8</sup> + 484<sup>8</sup> = 3034251506629606158017<td>
+<tr align=center>
+<td>170464093<sup>2</sup> + 228417560<sup>2</sup> = 81232588718666249
+<td>170464093<sup>8</sup> + 228417560<sup>8</sup> = 8123258871866624959113474177492797247323078342136557672056058634401<td>JD
+</table><p>
+
+<center><font size=+2>m=2 n=9</font></center>
+<table align=center border=1 cellpadding=4>
+<tr align=center bgcolor=FFFFDD>
+<th width=400>x<sup>m</sup> + y<sup>m</sup><th width=400>x<sup>n</sup> + y<sup>n</sup><th>Author
+<tr align=center>
+<td>1<sup>2</sup> + 2<sup>2</sup> = 5<td>1<sup>9</sup> + 2<sup>9</sup> = 513<td>
+<tr align=center>
+<td>7<sup>2</sup> + 139<sup>2</sup> = 19370<td>7<sup>9</sup> + 139<sup>9</sup> = 19370159742464385266<td>
+<tr align=center>
+<td>195<sup>2</sup> + 385<sup>2</sup> = 186250<td>195<sup>9</sup> + 385<sup>9</sup> = 
+186250825801426164062500<td>
+<tr align=center>
+<td>12853<sup>2</sup> + 37861<sup>2</sup> = 1598654930
+<td>12853<sup>9</sup> + 37861<sup>9</sup> = 159865493047585719627933107945922498339674<td>JD
+<tr align=center>
+<td>222914<sup>2</sup> + 282922<sup>2</sup> = 129735509480
+<td>222914<sup>9</sup> + 282922<sup>9</sup> = 12973550948006507932374877844699524995029023435776<td>JD
+<tr align=center>
+<td>478415<sup>2</sup> + 3736264<sup>2</sup> = 14188549589921
+<td>478415<sup>9</sup> + 3736264<sup>9</sup> = 141885495899215201431194446630473684470081169302554323726159<td>JD
+</table><p>
+
+<center><font size=+2>m=2 n=10</font></center>
+<table align=center border=1 cellpadding=4>
+<tr align=center bgcolor=FFFFDD>
+<th width=400>x<sup>m</sup> + y<sup>m</sup><th width=400>x<sup>n</sup> + y<sup>n</sup><th>Author
+<tr align=center>
+<td>908<sup>2</sup> + 2411<sup>2</sup> = 6637385<td>908<sup>10</sup> + 2411<sup>10</sup> = 6637385314425205826968902633702425<td>GS
+</table><p>
+
+<center><font size=+2>m=3 n=8</font></center>
+<table align=center border=1 cellpadding=4>
+<tr align=center bgcolor=FFFFDD>
+<th width=400>x<sup>m</sup> + y<sup>m</sup><th width=400>x<sup>n</sup> + y<sup>n</sup><th>Author
+<tr align=center>
+<td>1<sup>3</sup> + 4<sup>3</sup> = 65<td>1<sup>8</sup> + 4<sup>8</sup> = 65537<td>JD
+</table><p>
+
+
+
+Phil Mason looked for solutions for x<sup>m</sup> + y<sup>m</sup> + z<sup>m</sup> dividing x<sup>n</sup> + y<sup>n</sup> + z<sup>n</sup> with 1 &le; x &le; y &le; z < 1000 and 1 < m < n < 10.  Here are his solutions for {m,n} = <a href="1017/23.txt">{2,3}</a>, <a href="1017/24.txt">{2,4}</a>, <a href="1017/25.txt">{2,5}</a>, <a href="1017/26.txt">{2,6}</a>, <a href="1017/27.txt">{2,7}</a>, <a href="1017/28.txt">{2,8}</a>, <a href="1017/29.txt">{2,9}</a>, and 3 solutions for <a href="1017/3.txt">m=3</a>. 
+
+
+
+<HR><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 10/1/17.<font>
+
+
+</BODY></HTML>

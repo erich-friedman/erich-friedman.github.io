@@ -1,0 +1,535 @@
+  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+           "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<META NAME="GENERATOR" CONTENT="TtH 2.25">
+                                                                     
+<title> Ambiguous Products</title>
+ 
+<H1 align=center>Ambiguous Products </H1>
+
+<H3 align=center>C.Baiocchi </H3>
+
+
+<p>
+
+<H2> Abstract</H2>
+We want to study a particular case of the problem posed by Erich
+Friedman on January 2005 in <em>
+http://www.stetson.edu/&#126;efriedma/mathmagic/</em>. More precisely, we
+seek for three numerical strings A, B, C such that:
+<A NAME="nl">
+</A>
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+A&times;BC = AB&times;C</td></Table>
+</td><td width=100 align=right>(1)</td></table></centEr>
+
+ where a string
+like XY stays for the concatenation of the strings X and Y.
+
+<p>
+The first section contains some statements about the triples (A,B,C) satisfying
+(<A href="#nl">1</A>). The second section is devoted to proofs. In the last section 
+we discuss the problem of arbitrarily long solutions.
+
+<p>
+<p>        <H2><A NAME="tth_sEc1">
+1</A>&nbsp;&nbsp;Statements</H2>
+We will firstly establish some necessary and sufficient conditions for a triple 
+(A,B,C) to be a solution of (<A href="#nl">1</A>). The conditions will be expressed in 
+terms of three rational numbers,r<sub>1</sub>, r<sub>2</sub> and r<sub>3</sub>, 
+defined by:  
+<A NAME="r">
+</A>    
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+r<sub>1</sub>: = </td><td nowrap align=center>
+B&times;C<hr NOSHADE>10<sup><font face=symbol>||</font
+>C<font face=symbol>||</font
+></sup>&times;B-(10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup>-1)&times;C<Br></td><td nowrap align=center>
+&nbsp;;&nbsp;&nbsp;&nbsp; r<sub>2</sub>: = </td><td nowrap align=center>
+A&times;C<hr NOSHADE>10<sup><font face=symbol>||</font
+>C<font face=symbol>||</font
+></sup>&times;A-C<Br></td><td nowrap align=center>
+&nbsp;;&nbsp;&nbsp;&nbsp;r<sub>3</sub>: = </td><td nowrap align=center>
+A&times;B<hr NOSHADE>(10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup>-1)&times;A+B<Br></td><td nowrap align=center>
+</td></Table>
+</td><td width=100 align=right>(2)</td></table></centEr>
+
+
+where  <font face=symbol>||</font
+>X<font face=symbol>||</font
+> denotes the length of the string X; this notion makes sense because, 
+for the moment, we assume our numbers written without leading zeroes; later on we 
+will drop such a restriction.
+
+<p>
+The necessary and sufficient conditions on the three fractions involve both some 
+inequalities and the ``type'' of the number: 
+
+<p>
+
+   <b>Theorem 1</b> <em><A NAME="cn">
+</A>
+Let (A,B,C) be any solution of (<A href="#nl">1</A>). Then:
+
+<UL>
+<p>
+
+<li> r<sub>1</sub> &gt; 0; r<sub>1</sub> simplifies to an integral value;
+
+<li> r<sub>2</sub> <font face=symbol>£</font
+> 1; if r<sub>2</sub> &lt; 1 then r<sub>2</sub> is a periodic number without 
+nonperiodic part;
+
+<li> 1/10 <font face=symbol>£</font
+> r<sub>3</sub> &lt; 1; r<sub>3</sub> has a finite decimal expansion.
+</UL>
+<p>
+</em>
+As we said, each one of these condition is also sufficient; in the corresponding 
+results we rewrite some properties in a more explicit form:
+
+<p>
+
+   <b>Theorem 2</b> <em><A NAME="csA">
+</A>
+Let the strings B and C be given with:</em>
+<A NAME="cnA">
+</A>  
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+</td><td align=left class="cl"><font face=symbol>
+ì<br>í<br>
+î
+</font></td><td nowrap><TablE border=0 align=left><tr><td nowrap align=center>
+<tabLe border=0><tr><td nowrap Align=center>
+(A1)</td></tabLe></td><td nowrap align=center>
+<tabLe border=0><tr><td nowrap Align=center>
+10<sup><font face=symbol>||</font
+>C<font face=symbol>||</font
+></sup> &times;B &gt; (10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup>-1)&times;C&nbsp;;</td></tabLe></TD></TR><TR><TD NOWRAP align="center" 
+colspan=0><tabLe border=0><tr><td nowrap Align=center>
+(A2)</td></tabLe></td><td nowrap align=center>
+<table><TR><TD nowrap align="center" colspan=0>the reduced fraction of r<sub>1</sub> 
+is an integer.</td></tabLe></TD></TR></TablE>
+</td><td nowrap></td></Table>
+</td><td width=100 align=right>(3)</td></table></centEr>
+
+<em>
+Then there exists a unique string A such that the triple (A,B,C) solves 
+(<A href="#nl">1</A>); the value of A is r<sub>1</sub>.
+</em>
+<p>
+Concerning B, when A and C are given, the non-uniqueness is somewhat less 
+obvious; better, it fails. In the following theorem [X]<sup>k</sup> denotes the k-th 
+string-power of the string X.
+
+<p>
+
+   <b>Theorem 3</b> <em><A NAME="csB">
+</A>
+Let the strings A and C be given with:</em>
+<A NAME="cnB">
+</A> 
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+</td><td align=left class="cl"><font face=symbol>
+ì<br>í<br>
+î
+</font></td><td nowrap><TablE border=0 align=left><tr><td nowrap align=center>
+<tabLe border=0><tr><td nowrap Align=center>
+(B1)</td></tabLe></td><td nowrap align=center>
+<tabLe border=0><tr><td nowrap Align=center>
+A&times;C <font face=symbol>£</font
+> 10<sup><font face=symbol>||</font
+>C<font face=symbol>||</font
+></sup> &times;A-C</td></tabLe></TD></TR><TR><TD NOWRAP align="center" 
+colspan=0><tabLe border=0><tr><td nowrap Align=center>
+(B2)</td></tabLe></td><td nowrap align=center>
+<table><TR><TD nowrap align="center" colspan=0>r<sub>2</sub> = 0.PPP<font 
+face=symbol>¼</font
+> the value 9 being allowed for the minimal period 
+P&nbsp;.</td></tabLe></TD></TR></TablE>
+</td><td nowrap></td></Table>
+</td><td width=100 align=right>(4)</td></table></centEr>
+
+<em>
+The triple (A,B,C) solves (<A href="#nl">1</A>) if and only if B is a string-power 
+of the minimal period P; say B = [P]<sup>k</sup> with k <font face=symbol>³</font
+> 1.
+</em>
+<p>
+Concerning C, when A and B are given, any solution can obviously be extended
+by adding any number of <em>final </em> zeroes; this is the only way the
+uniqueness can fail:
+
+<p>
+
+   <b>Theorem 4</b> <em><A NAME="csC">
+</A>
+Let the strings A and B be given with:</em>
+<A NAME="cnC">
+</A>  
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+</td><td align=left class="cl"><font face=symbol>
+ì<br>ï<br>ï<br>í<br>
+ï<br>ï<br>î
+</font></td><td nowrap><TablE border=0 align=left><tr><td nowrap align=center>
+<tabLe border=0><tr><td nowrap Align=center>
+(C1)</td></tabLe></td><td nowrap align=center>
+<tabLe border=0><tr><td nowrap Align=center>
+</td><td nowrap align=center>
+(10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup>-1)&times;A+B<hr NOSHADE> 10<Br></td><td nowrap align=center>
+ <font face=symbol>£</font
+> A&times;B &lt; (10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup>-1)&times;A+B&nbsp;;</td></tabLe></TD></TR><TR><TD NOWRAP align="center" 
+colspan=0><tabLe border=0><tr><td nowrap Align=center>
+(C2)</td></tabLe></td><td nowrap align=center>
+<table><TR><TD nowrap align="center" colspan=0>in the reduced fraction of 
+r<sub>3</sub>, the denominator has only 2 and/or 5 as prime 
+factors.</td></tabLe></TD></TR></TablE>
+</td><td nowrap></td></Table>
+</td><td width=100 align=right>(5)</td></table></centEr>
+
+<em>
+Then there exist strings C such that the triple (A,B,C) solves (<A href="#nl">1</A>). 
+Any such string C satisfies C/(10<sup><font face=symbol>||</font
+>C<font face=symbol>||</font></sup>) = r<sub>3</sub>; in particular the string C is 
+determined but <em>final </em> zeroes.
+</em>
+<p>
+
+   <b>Remark 5</b> <em>The only reason for the leftmost inequality in (C1) is to forbid 
+initial zeroes in the string C; if we want to allow initial zeroes, we must simply 
+suppress this inequality; and choose as  <font face=symbol>||</font
+>X<font face=symbol>||</font
+> a number (greater than or equal to the 
+``natural'' length of the number) that takes into account the initial zeroes. 
+Of course initial zeroes for A can be added without changing anything; one easily 
+checks that initial zeroes on B can appear only if C has some initial zeroes. 
+The choice A = 3, B = 076923, C = 075 shows that solutions (A,B,C) with leading zeroes in B and C do exist; while A = 1, B = 1001, C = 091, shows that leading 
+zeroes in C do not force leading zeroes in B.
+</em>
+<p>
+The next result points out a maybe unsuspected property of the solutions:
+
+<p>
+
+   <b>Theorem 6</b> <em><A NAME="anche">
+</A>
+If (A,B,C) solves (<A href="#nl">1</A>), then (AB,B,BC) is also a solution.
+</em>
+<p>
+
+   <b>Remark 7</b> <em>By coupling the results of Thm.<A href="#csB">3</A> and 
+Thm.<A href="#anche">6</A> we have that, for any solution (A,B,C) and for any n &gt; 
+2, the string A[B]<sup>n</sup>C is </em>multi-ambiguous<em>, in the sense that:
+
+</em>
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+A[B]<sup>k</sup>&times;[B]<sup>l</sup>C = 
+A[B]<sup>l</sup>&times;[B]<sup>k</sup>C&nbsp;&nbsp;&nbsp;(k,l 
+<font face=symbol>³</font
+> 0,&nbsp;k+l = n)&nbsp;.</td></Table>
+</td></table></centEr>
+<em>
+
+The first examples of multi-ambiguous strings where discovered by Philippe Fondanaiche (see the &quot;solution page&quot; of Friedman at 
+<em>http://www.stetson.edu/&#126;efriedma/mathmagic/0105.html</em>)
+</em>
+<p>
+Let us end up with a result concerning string-comparison: the string C can not be 
+``too big'' with respect to B. The symbols &#171; and <U>&#171;</U> denoting the 
+string-comparison, we have:
+
+<p>
+
+   <b>Theorem 8</b> <em><A NAME="compa">
+</A>
+Let (A,B,C) be any solution of (<A href="#nl">1</A>). If B<U>&#171;</U>C, then there 
+exists k such that [B]<sup>k</sup><U>&#171;</U>C&#171;[B]<sup>k+1</sup>&nbsp;.
+</em>
+<p>
+        <H2><A NAME="tth_sEc2">
+2</A>&nbsp;&nbsp;Proofs</H2>
+
+<p>
+Equation (<A href="#nl">1</A>) can obviously be written in the form:
+<A NAME="nlbis">
+</A>  
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+A&times;(10<sup><font face=symbol>||</font
+>C<font face=symbol>||</font
+></sup>&times;B+C) = (10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup>&times;A+B)&times;C</td></Table>
+</td><td width=100 align=right>(6)</td></table></centEr>
+
+
+that in turn can be written in three different forms:
+  
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+A = </td><td nowrap align=center>
+B&times;C<hr NOSHADE>10<sup><font face=symbol>||</font
+>C<font face=symbol>||</font
+></sup>&times;B-(10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup>-1)&times;C<Br></td><td nowrap align=center>
+&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(A)</td></Table>
+</td></table></centEr>
+
+
+  
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+</td><td nowrap align=center>
+B<hr NOSHADE>10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup>-1<Br></td><td nowrap align=center>
+ = </td><td nowrap align=center>
+A&times;C<hr NOSHADE>10<sup><font face=symbol>||</font
+>C<font face=symbol>||</font
+></sup>&times;A-C<Br></td><td nowrap align=center>
+&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(B)</td></Table>
+</td></table></centEr>
+
+
+  
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+</td><td nowrap align=center>
+C<hr NOSHADE>10<sup><font face=symbol>||</font
+>C<font face=symbol>||</font
+></sup><Br></td><td nowrap align=center>
+ = </td><td nowrap align=center>
+A&times;B<hr NOSHADE>(10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup>-1)&times;A+B<Br></td><td nowrap align=center>
+&nbsp;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(C)</td></Table>
+</td></table></centEr>
+
+
+with the notations of Thm.<A href="#cn">1</A> we thus have:
+  
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+r<sub>1</sub> = A&nbsp;;&nbsp;&nbsp;&nbsp; r<sub>2</sub> = </td><td nowrap align=center>
+B<hr NOSHADE>10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup>-1<Br></td><td nowrap align=center>
+&nbsp;;&nbsp;&nbsp;&nbsp; r<sub>3</sub> = </td><td nowrap align=center>
+C<hr NOSHADE>10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup><Br></td><td nowrap align=center>
+&nbsp;.</td></Table>
+</td></table></centEr>
+
+
+
+<p>
+The necessity of (<A href="#cnA">3</A>) is then immediate: the numerator of 
+r<sub>1</sub> being positive, 
+the denominator must be also positive; the fraction giving the value of A, r<sub>1</sub> 
+must simplify to an integral value; conversely, if these conditions are satisfyied, 
+setting A: = r<sub>1</sub> we get a solution of (<A href="#nlbis">6</A>); say 
+Thm.<A href="#csA">2</A>.
+
+<p>
+Concerning the necessity of (<A href="#cnB">4</A>) and Thm.<A href="#csB">3</A> 
+we simply remark that 
+the maximum value for a string X of length x is given by [9]<sup>x</sup>; thus, from 
+(B), we need r<sub>2</sub> <font face=symbol>£</font
+> 1; say property (B1); then (B2) is obvious.
+
+<p>
+Concerning the necessity of (<A href="#cnC">5</A>) and Thm.<A href="#csC">4</A> we 
+remark that for 
+any string X of length x it is X &lt; 10<sup>x</sup>; thus, from (C), we need 
+r<sub>3</sub> &lt; 1; 
+property (C1) also forces a nonzero first digit; (C2) is obvious.
+
+<p>
+The proof of Thm.<A href="#anche">6</A> is nothing but a tedious algebraic manipulation. 
+In fact, starting from any triple (A,B,C) given with (<A href="#nlbis">6</A>), let us
+define the strings X and Y by setting X: = AB&nbsp;;&nbsp;Y: = BC&nbsp;; thus
+  
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+X = 10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup>&times;A+B&nbsp;;&nbsp;&nbsp;&nbsp; Y = 10<sup><font face=symbol>||</font
+>C<font face=symbol>||</font
+></sup>&times;B+C&nbsp;.</td></Table>
+</td></table></centEr>
+
+
+In particular we have
+     
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+A = </td><td nowrap align=center>
+X-B<hr NOSHADE>10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup><Br></td><td nowrap align=center>
+&nbsp;,&nbsp;C = Y-10<sup><font face=symbol>||</font
+>C<font face=symbol>||</font
+></sup>&times;B&nbsp;,&nbsp;<font face=symbol>||</font
+>C<font face=symbol>||</font
+> = <font face=symbol>||</font
+>Y<font face=symbol>||</font
+>-<font face=symbol>||</font
+>B<font face=symbol>||</font
+></td></Table>
+</td></table></centEr>
+
+
+that, inserted into (<A href="#nlbis">6</A>), after some algebraic manipulations give:
+  
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+X&times;(10<sup><font face=symbol>||</font
+>Y<font face=symbol>||</font
+></sup>&times;B+Y) = (10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup>&times;X+B)&times;Y</td></Table>
+</td></table></centEr>
+
+
+say (<A href="#nlbis">6</A>) holds true for the triple (X,B,Y).
+
+<p>
+To prove Thm.<A href="#compa">8</A> let us firstly prove:
+<A NAME="comp">
+</A>
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+for any solution (A,B,C) it is A &lt; B<font face=symbol>Û</font
+> C&#171;B&nbsp;.</td></Table>
+</td><td width=100 align=right>(7)</td></table></centEr>
+
+
+In fact, from (A), we get that A &lt; B if and only if:
+  
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+B &gt; </td><td nowrap align=center>
+B&times;C<hr NOSHADE>10<sup><font face=symbol>||</font
+>C<font face=symbol>||</font
+></sup>&times;B-(10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup>-1)&times;C<Br></td><td nowrap align=center>
+&nbsp;;</td></Table>
+</td></table></centEr>
+
+
+dividing by B and taking into account (A1) this relation becomes
+  10<sup><font face=symbol>||</font
+>C<font face=symbol>||</font
+></sup> &times;B &gt; 10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup>&times;C or also:
+  
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+</td><td nowrap align=center>
+C<hr NOSHADE>10<sup><font face=symbol>||</font
+>C<font face=symbol>||</font
+></sup><Br></td><td nowrap align=center>
+ &lt; </td><td nowrap align=center>
+B<hr NOSHADE>10<sup><font face=symbol>||</font
+>B<font face=symbol>||</font
+></sup><Br></td><td nowrap align=center>
+&nbsp;.</td></Table>
+</td></table></centEr>
+
+
+The last relation is nothing but C&#171;B&nbsp;.
+
+<p>
+Now let us start from a triple (A,B,C) with B<U>&#171;</U>C; thus the family of 
+values n such that [B]<sup>n</sup><U>&#171;</U>C contains at least the value n = 1. 
+On the other hand the family must be finite: for a sufficiently big m the numerical 
+value of [B]<sup>m</sup> becomes bigger than A; equation (<A href="#comp">7</A>) 
+applied to the solution (A,[B]<sup>m</sup>,C) forces C&#171;[B]<sup>m</sup>.
+
+<p>
+        <H2><A NAME="tth_sEc3">
+3</A>&nbsp;&nbsp;Arbitrarily Large Solutions</H2>
+
+<p>
+We now discuss another problem posed by Erich:
+
+<p>
+
+<center><em>are there arbitrarily large solutions of 
+(<A href="#nl">1</A>)?</em></center><br>
+
+<p>
+A positive answer is given by the following three classes of solutions:
+
+<UL>
+<p>
+
+<li> fix any solution (A,B,C) and replace C by C[0]<sup>k</sup>;
+
+<li> fix any h,k integral, and any D; then define A = C = [D]<sup>h</sup>,&nbsp;B = 
+[D]<sup>k</sup>;
+
+<li> fix any solution (A,B,C) and replace A by A[B]<sup>j</sup>, B by [B]<sup>k</sup> 
+and C by [B]<sup>j</sup>C.
+</UL>
+<p>
+Many less trivial examples can be constructed by using (B) and/or (C). On the other 
+hand, a very general result in this direction is due to <em>Emilio Schiavi</em>; 
+see again the &quot;solution page&quot; of Friedman at 
+<em>http://www.stetson.edu/&nbsp;efriedma/mathmagic/0105.html</em>. With the notations 
+(<A href="#r">2</A>), it refers to the limit case of r<sub>2</sub> = 1, say B = 9 or, 
+more generally, B = 99<font face=symbol>¼</font>9. 
+Then property (C1) holds true, because the fraction r<sub>3</sub> becomes 
+A/(A+1). Thus the necessary and sufficient condition reads:
+
+<centEr><table border=0 align=center><tr><td>
+<Table align=left><tr><td nowrap align=center>
+A+1 has only 2 and/or 5 as prime factors.</td></Table>
+</td></table></centEr>
+
+
+In other words: 
+
+<UL>
+<p>
+
+<li> Fix any ``denominator'' D of the form D = 
+2<sup>m</sup>&times;5<sup>n</sup>&nbsp;(m,n <font face=symbol>³</font> 0,&nbsp;n+m &gt; 0);
+
+<li> choose as A any factor of D-1;
+
+<li> set C = A&times;(10<sup>j</sup>)/( A+1)&nbsp;&nbsp;&nbsp;(j <font face=symbol>³</font
+> max(m,n));
+
+<li> fix any k &gt; 0 and set B = 10<sup>k</sup>-1.
+</UL>
+<p>
+Then the triple (A,B,C) solves (<A href="#nl">1</A>); better, these triples 
+describe <em>all </em> the solutions with r<sub>2</sub> = 1.
+
+<p>
+<p><br><p><br>
+<p><hr><small>File translated from T<sub><font size="-1">E</font></sub>X by 
+<a href="http://hutchinson.belmont.ma.us/tth/">T<sub><font size="-1">T</font></sub>H</a>, 
+version 2.25.<br>On 06 Feb 2005, 20:00.</small>
+</HTML>

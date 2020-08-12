@@ -1,0 +1,212 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1><CENTER><H1>Problem of the Month (June 2004)</H1></CENTER>This month we investigate the question "What is the smallest rectangle with aspect ratio r that contains n congruent rectangles with aspect ratio r?"    In other words, for positive integers n, and r&ge;1, we define <b>m<sub>n</sub>(r)</b> to be the minimum value of m so that an m x mr rectangle contains n non-overlapping non-tilted 1 x r rectangles.  Clearly if n is a perfect square, then m<sub>n</sub>(r) = &radic;n with no wasted space.<p>
+
+What are the values of m<sub>n</sub>(r) for non-square values of n?  
+
+A much harder question is to find <b>M<sub>n</sub>(r)</b>, the smallest value of m so that so that an m x mr rectangle contains n non-overlapping 1 x r rectangles that might be tilted.  For example, when r > 1.9762, M<sub>2</sub>(r) < m<sub>2</sub>(r):
+
+<center><img src="0604/2t.gif"></center><p>
+
+What are the values of M<sub>n</sub>(r) for small values of n?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Jeremy Galvagni found m<sub>n</sub>(r) for n=3 and 5, and found most of n=6 and 7.  Joseph DeVincentis found m<sub>n</sub>(r) for n=3 and 5.<p>
+
+Here are the piecewise definitions for m<sub>n</sub>(r) for small n:<p>
+
+<center><table cellpadding=5 border=2><tr align=center><td>If
+<td>r &ge; 1
+<td>r &ge; &radic;2
+<td>r &ge; 2
+</tr><tr align=center>
+<td><font size=+3>n=2
+<td><img src="0604/2c.gif">
+<td><img src="0604/2b.gif">
+<td><img src="0604/2a.gif">
+</tr><tr align=center><td>then
+<td>m<sub>2</sub>(r) = 2/r
+<td>m<sub>2</sub>(r) = r
+<td>m<sub>2</sub>(r) = 2
+</tr></table></center><p>
+
+<center><table cellpadding=5 border=2><tr align=center><td>If
+<td>r &ge; 1
+<td>r &ge; 3/2
+<td>r &ge; &radic;3
+<td>r &ge; 2
+</tr><tr align=center>
+<td><font size=+3>n=3
+<td><img src="0604/3d.gif">
+<td><img src="0604/3c.gif">
+<td><img src="0604/3b.gif">
+<td><img src="0604/3a.gif">
+</tr><tr align=center><td>then
+<td>m<sub>3</sub>(r) = 2
+<td>m<sub>3</sub>(r) = 3/r
+<td>m<sub>3</sub>(r) = r
+<td>m<sub>3</sub>(r) = 2
+</tr></table></center><p>
+
+<center><table cellpadding=5 border=2><tr align=center><td>If
+<td>r &ge; 1
+<td>r &ge; (&radic;13-1)/2
+<td>r &ge; (&radic;5+1)/2
+<td>r &ge; 2
+<td>r &ge; &radic;5
+<td>r &ge; 3
+</tr><tr align=center>
+<td><font size=+3>n=5
+<td><img src="0604/5f.gif">
+<td><img src="0604/5e.gif">
+<td><img src="0604/5d.gif">
+<td><img src="0604/5c.gif">
+<td><img src="0604/5b.gif">
+<td><img src="0604/5a.gif">
+</tr><tr align=center><td>then
+<td>m<sub>5</sub>(r) = 3/r
+<td>m<sub>5</sub>(r) = r + 1
+<td>m<sub>5</sub>(r) = 2 + 1/r
+<td>m<sub>5</sub>(r) = 5/r
+<td>m<sub>5</sub>(r) = r
+<td>m<sub>5</sub>(r) = 3
+</tr></table></center><p>
+
+<center><table cellpadding=5 border=2><tr align=center><td>If
+<td>r &ge; 1
+<td>r &ge; &radic;(3/2)
+<td>r &ge; (&radic;3+1)/2
+<td>r &ge; 3/2
+<td>r &ge; (&radic;17-1)/2
+<td>r &ge; 2
+<td>r &ge; &radic;6
+<td>r &ge; 3
+</tr><tr align=center>
+<td><font size=+3>n=6
+<td><img src="0604/6h.gif">
+<td><img src="0604/6g.gif">
+<td><img src="0604/6f.gif">
+<td><img src="0604/6e.gif">
+<td><img src="0604/6d.gif">
+<td><img src="0604/6c.gif">
+<td><img src="0604/6b.gif">
+<td><img src="0604/6a.gif">
+</tr><tr align=center><td>then
+<td>m<sub>6</sub>(r) = 3/r
+<td>m<sub>6</sub>(r) = 2r
+<td>m<sub>6</sub>(r) = 2 + 1/r
+<td>m<sub>6</sub>(r) = 4/r
+<td>m<sub>6</sub>(r) = r + 1
+<td>m<sub>6</sub>(r) = 6/r
+<td>m<sub>6</sub>(r) = r
+<td>m<sub>6</sub>(r) = 3
+</tr></table></center><p>
+
+<center><table cellpadding=5 border=2><tr align=center><td>If
+<td>r &ge; 1
+<td>r &ge; 4/3
+<td>r &ge; &radic;2
+<td>r &ge; 3/2
+<td>r &ge; &radic;3
+<td>r &ge; 2
+<td>r &ge; 7/3
+<td>r &ge; &radic;7
+<td>r &ge; 3
+</tr><tr align=center>
+<td><font size=+3>n=7
+<td><img src="0604/7i.gif">
+<td><img src="0604/7h.gif">
+<td><img src="0604/7g.gif">
+<td><img src="0604/7f.gif">
+<td><img src="0604/7e.gif">
+<td><img src="0604/7d.gif">
+<td><img src="0604/7c.gif">
+<td><img src="0604/7b.gif">
+<td><img src="0604/7a.gif">
+</tr><tr align=center><td>then
+<td>m<sub>7</sub>(r) = 3 
+<td>m<sub>7</sub>(r) = 4/r
+<td>m<sub>7</sub>(r) = 2r
+<td>m<sub>7</sub>(r) = 1 + 3/r
+<td>m<sub>7</sub>(r) = r + 1
+<td>m<sub>7</sub>(r) = 3
+<td>m<sub>7</sub>(r) = 7/r
+<td>m<sub>7</sub>(r) = r
+<td>m<sub>7</sub>(r) = 3
+</tr></table></center><p>
+
+<center><table cellpadding=5 border=2><tr align=center><td>If
+<td>r &ge; 1
+<td>r &ge; 4/3
+<td>r &ge; &radic;2
+<td>r &ge; 3/2
+<td>r &ge; 8/3
+<td>r &ge; &radic;8
+<td>r &ge; 3
+</tr><tr align=center>
+<td><font size=+3>n=8
+<td><img src="0604/8g.gif">
+<td><img src="0604/8f.gif">
+<td><img src="0604/8e.gif">
+<td><img src="0604/8d.gif">
+<td><img src="0604/8c.gif">
+<td><img src="0604/8b.gif">
+<td><img src="0604/8a.gif">
+</tr><tr align=center><td>then
+<td>m<sub>8</sub>(r) = 3 
+<td>m<sub>8</sub>(r) = 4/r
+<td>m<sub>8</sub>(r) = 2r
+<td>m<sub>8</sub>(r) = 3
+<td>m<sub>8</sub>(r) = 8/r
+<td>m<sub>8</sub>(r) = r
+<td>m<sub>8</sub>(r) = 3
+</tr></table></center><p>
+
+<center><table cellpadding=5 border=2><tr align=center><td>If
+<td>r &ge; 1
+<td>r &ge; &radic;5-1
+<td>r &ge; &radic;2
+<td>r &ge; 3/2
+<td>r &ge; &radic;(5/2)
+<td>r &ge; (&radic;17+3)/4
+</tr><tr align=center>
+<td ROWSPAN="4"><font size=+3>n=10
+<td><img src="0604/10l.gif">
+<td><img src="0604/10k.gif">
+<td><img src="0604/10j.gif">
+<td><img src="0604/10i.gif">
+<td><img src="0604/10h.gif">
+<td><img src="0604/10g.gif">
+</tr><tr align=center>
+<td>m<sub>10</sub>(r) = 4/r
+<td>m<sub>10</sub>(r) = 2 + r
+<td>m<sub>10</sub>(r) = 2 + 2/r
+<td>m<sub>10</sub>(r) = 5/r
+<td>m<sub>10</sub>(r) = 2r
+<td>m<sub>10</sub>(r) = 3 + 1/r 
+</tr><tr align=center>
+<td>r &ge; 2
+<td>r &ge; (&radic;13+1)/2
+<td>r &ge; 1+&radic;2
+<td>r &ge; 3
+<td>r &ge; &radic;10
+<td>r &ge; 4
+</tr><tr align=center>
+<td><img src="0604/10f.gif">
+<td><img src="0604/10e.gif">
+<td><img src="0604/10d.gif">
+<td><img src="0604/10c.gif">
+<td><img src="0604/10b.gif">
+<td><img src="0604/10a.gif">
+</tr><tr align=center>
+<td>then
+<td>m<sub>10</sub>(r) = 2 + 3/r
+<td>m<sub>10</sub>(r) = 1 + r
+<td>m<sub>10</sub>(r) = 3 + 1/r
+<td>m<sub>10</sub>(r) = 10/r
+<td>m<sub>10</sub>(r) = r
+<td>m<sub>10</sub>(r) = 4
+</tr></table></center><p>
+
+
+
+<p><HR>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 6/7/04.<font></BODY></HTML>

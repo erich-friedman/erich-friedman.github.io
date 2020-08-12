@@ -1,0 +1,255 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (June 2012)</H1></CENTER>
+
+If <img src="0612/blank.gif" align=center> stands for some digit, there is only one solution to the equation <img src="0612/blank.gif" align=center> + <img src="0612/blank.gif" align=center> = <img src="0612/blank.gif" align=center> that uses the same digit every time, namely 0 + 0 = 0.  Similarly, the only solution to <img src="0612/blank.gif" align=center> <sup><sup><img src="0612/blank.gif" align=center></sup></sup> = <img src="0612/blank.gif" align=center> <img src="0612/blank.gif" align=center> that uses exactly two different digits is 5<sup>2</sup> = 25.<p>
+
+For a given set S of n digits, what is the digit equation using the fewest digits with only one solution using n different digits, and the solution uses the digits from S?<p>
+
+When n=1, a computer search quickly finds all of the smallest solutions below.  But for n=2 and n=3, there are many unsolved cases.  Can you find or improve the solutions below?  What are the shortest solutions for n=10, n=9, and n=8?
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Solutions were received from Bryce Herdt, Andrew Bayly, Jon Palin, and Berend van der Zwaag.<p>
+
+Here are the shortest-known solutions:<p>
+
+<center><font size=+2>One Digit</font></center>
+<table align=center border=1 cellpadding=10 bgcolor=FFFFDD>
+<tr align=center><td bgcolor=DDFFDD>0 <td> 0 + 0 = 0
+<tr align=center><td bgcolor=DDFFDD>1 <td> 1 / 1 = 1<br>1<sup>1</sup> = 1
+<tr align=center><td bgcolor=DDFFDD>2 <td> 2<sup>2</sup> = 2 + 2<br>(2 + 2) / 2 = 2
+<tr align=center><td bgcolor=DDFFDD>3 <td> (3 + 3 + 3) / 3 = 3
+<tr align=center><td bgcolor=DDFFDD>4 <td> (4 + 4 + 4 + 4) / 4 = 4
+<tr align=center><td bgcolor=DDFFDD>5 <td> 5 &times; (5 + 5) + 5 = 55
+<tr align=center><td bgcolor=DDFFDD>6 <td> 6 &times; (6 + 6) = 66 + 6
+<tr align=center><td bgcolor=DDFFDD>7 <td> 7 &times; 7 + 7 + 7 + 7 + 7 = 77
+<tr align=center><td bgcolor=DDFFDD>8 <td> 8 &times; 8 + 8 + 8 + 8 = 88
+<tr align=center><td bgcolor=DDFFDD>9 <td> 9 &times; 9 + 9 + 9 = 99
+</table><p>
+
+<center><font size=+2>Two Digits</font></center>
+<table align=center border=1 cellpadding=10 bgcolor=FFFFDD>
+<tr align=center bgcolor=DDFFDD><td><td>0<td>1<td>2<td>3<td>4<td>5<td>6<td>7<td>8
+
+<tr align=center><td bgcolor=DDFFDD>1 <td>100<sup>1+1</sup> = 10000<td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+
+<tr align=center><td bgcolor=DDFFDD>2 <td>(2 &times; 2)<sup>2</sup> + 2<sup>2</sup> = 20<br>2<sup>2&times;2</sup> + 2<sup>2</sup> = 20<td>11<sup>2</sup> = 121<td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+
+<tr align=center><td bgcolor=DDFFDD>3 <td>3<sup>3</sup> = 30 &ndash; 3 / 3<sup>0</sup><br>(3 / 3<sup>0</sup>)<sup>3</sup> = 30 &ndash; 3<br>3<sup>3+0/3</sup> = 30 &ndash; 3<br>3<sup>3&ndash;0/3</sup> = 30 &ndash; 3<br>3<sup>3&ndash;0&ndash;0</sup> = 30 &ndash; 3<br>3<sup>3&ndash;0<sup>3</sup></sup> = 30 &ndash; 3<br>3<sup>3/3<sup>0</sup></sup> = 30 &ndash; 3<br>3<sup>3&times;3<sup>0</sup></sup> = 30 &ndash; 3<br>3<sup>3<sup>3<sup>0</sup></sup></sup> = 30 &ndash; 3<br>(3<sup>3</sup> + 3) / 3<sup>0</sup> = 30<br>(3<sup>3</sup> + 3)<sup>3<sup>0</sup></sup> = 30
+<td>11<sup>3</sup> = 1331<br>3<sup>3</sup> &ndash; 1 = (3 &ndash; 1) &times; 13<td>2 &times; 2<sup>2<sup>2</sup></sup> = 32<br>2 &times; 2<sup>2+2</sup> = 32<br>2 &times; 2<sup>2&times;2</sup> = 32<br>2 &times; (2 + 2)<sup>2</sup> = 32<br>2 &times; (2 &times; 2)<sup>2</sup> = 32<br>(2 &times; 2)<sup>3</sup> / 2 = 32<br>2<sup>3+3</sup> / 2 = 32<br>2 &times;  2 &times; 2<sup>3</sup> = 32<br>3<sup>3</sup> &ndash; 2<sup>2</sup> = 23<td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+
+<tr align=center><td bgcolor=DDFFDD>4 <td>4 &times; (40 / 4)<sup>4</sup> = 40000<td>11 + 1 = 4 + 4 + 4 / 1<br>11 + 1 = 4 + (4 + 4) / 1<br>11 + 1 = (4 + 4 + 4) / 1<br>11 + 1 &times; 1 = 4 + 4 + 4<br>11 = 4 + 4 + (4 &ndash; 1) / 1<td>2<sup>2</sup> + 24 / 2 = 4 &times; 4<td>344 / 43 = 4<sup>3</sup> / (4 + 4)<td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+
+<tr align=center><td bgcolor=DDFFDD>5 <td>5 / 5<sup>0</sup> + 5 = 50 / 5<br>50 &times; 5<sup>0</sup> / 5 = 5 + 5<br>(5 + 5)<sup>5<sup>0</sup></sup> = 50 / 5<br>(5 &times; (5 + 5) )<sup>5<sup>0</sup></sup> = 50
+<td>5 &ndash; 1 &ndash; 1 = 15 / 5<td>5<sup>2</sup> = 25<td>(5<sup>3</sup> &ndash; 5) / 3 = 35 + 5<td>(5 &ndash; 4) &times; (4<sup>4</sup> + 4<sup>4</sup> + 4)<br>= 555 + 5 &ndash; 44<br><font color=green>(Berend van der Zwaag)</font><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+
+<tr align=center><td bgcolor=DDFFDD>6 <td>6 &times; (60 / 6)<sup>6</sup> = 6000000<td>6 + 6 = 11 + 1<td>2<sup>6</sup> = 62 + 2<td>6 &times; 6 = 33 + 3<br>6<sup>6/3</sup> = 36<td>4 &times; 4 &times; 4 = 64<br>(6 &ndash; 4)<sup>6</sup> = 64<td>(5 &times; 6<sup>5</sup> + 6 + 6) / (6 + 6 &ndash; 5) = 5556<td bgcolor=white><td bgcolor=white><td bgcolor=white>
+
+<tr align=center><td bgcolor=DDFFDD>7 <td>7 &times; (70 / 7)<sup>7</sup> = 70000000<td>11 + 1 + 1 + 1 = 7 + 7<td>(2<sup>7</sup> + 7) / (7 &ndash; 2) = 27 <td>3<sup>3</sup> + 37 = (7 &ndash; 3)<sup>3</sup><td> <td>5<sup>7</sup> &ndash; 5<sup>5</sup> / 5 + 55 &times; 5 = 77775<td>6<sup>6</sup> / 6 = 7776<td bgcolor=white><td bgcolor=white>
+
+<tr align=center><td bgcolor=DDFFDD>8 <td>8 &times; (80 / 8)<sup>8</sup> = 800000000<td>11 + 1 &ndash; 8 = 8 / (1 + 1)<td>(8 &times; 8 &ndash; 8) / 2 = 28<br>(8<sup>2</sup> &ndash; 8) / 2 = 28<td>3<sup>8-3</sup> &times; (8+8) = 3888<br><font color=orange>(Bryce Herdt)<td>8 &times; 8 &ndash; 4 &times; 4 = 48<td> <td>8 &times; 86 = 688<td> <td bgcolor=white>
+
+<tr align=center><td bgcolor=DDFFDD>9 <td>9 &times; (9 &ndash; 0) &ndash; 0 = 90 &ndash; 9<br>9 &times; 9 = 9<sup>0</sup> &times; (90 &ndash; 9)<br>9 &times; 9<sup>9<sup>0</sup></sup> = 90 &ndash; 9<br>9 &times; 9 = 90 &ndash; 9 / 9<sup>0</sup><br>(9 &times; 9)<sup>9<sup>0</sup></sup> = 90 &ndash; 9<br>9 + 9 / 9 = 90 / (9 &ndash; 0)<br> 9 + 9<sup>0</sup> = 90 / (9 &ndash; 0)<br>9 &times; (9 + 0 + 0) = 90 &ndash; 9<br>(9 &times; 9 + 9)<sup>9<sup>0</sup></sup> = 90<td>(111 &ndash; 99 &ndash; 9)<sup>11&ndash;9</sup> = 9<td>(9<sup>2</sup> + 92)<sup>2</sup> = 29929<br><font color=orange>(Bryce Herdt)</font><td> <td> <td>5 &times; 5 &times; (5 &times; 5 + 9 + 9 &ndash; 5)<br>= 59999 &ndash; 9<sup>5</sup><td> <td>(9 &ndash; 7)<sup>7</sup> = 79 + 7 &times; 7<td>9 &times; 9 / (9 &ndash; 8) = (89 &ndash; 8)<br>9 &times; 9<sup>9&ndash;8</sup> = 89 &ndash; 8<br>(9 &times; 9)<sup>9&ndash;8</sup> = 89 &ndash; 8<br>(9 &times; 9 + 8)<sup>9&ndash;8</sup> = 89
+
+</table><p>
+
+
+<center><font size=+2>Three Digits With Lowest Digit 0</font></center>
+<table align=center border=1 cellpadding=10 bgcolor=FFFFDD>
+<tr align=center bgcolor=DDFFDD><td>0+<td>1<td>2<td>3<td>4<td>5<td>6<td>7<td>8
+<tr align=center><td bgcolor=DDFFDD>2 <td>10<sup>10/2</sup> = 100000<br><font color=blue>(Andrew Bayly)</font><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>3 <td>10<sup>3<sup>3</sup>&ndash;3&times;3&ndash;3&ndash;3</sup> = 1000000000000<br><font color=blue>(Andrew Bayly)</font><td> <td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>4 <td>100<sup>4</sup> = 100000000<br><font color=blue>(Andrew Bayly)</font><td> <td> <td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>5 <td>10<sup>5</sup> = 100000<br>(5 + 5)<sup>5</sup> = 100000<td> <td> <td> <td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>6 <td>10<sup>6</sup> = 1000000<td> <td> <td>(4<sup>6&ndash;4</sup> + 4)<sup>6</sup> = 64000000<br><font color=blue>(Andrew Bayly)</font><td> <td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>7 <td>10<sup>7</sup> = 10000000<td> <td> <td> <td> <td>60<sup>6+6&ndash;7</sup> = 777600000<br><font color=blue>(Andrew Bayly)</font><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>8 <td>10<sup>8</sup> = 100000000<td> <td> <td> <td> <td> <td> <td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>9 <td>10<sup>9</sup> = 1000000000<td> <td> <td> <td> <td> <td> <td>
+</table><p>
+
+<center><font size=+2>Three Digits With Lowest Digit 1</font></center>
+<table align=center border=1 cellpadding=10 bgcolor=FFFFDD>
+<tr align=center bgcolor=DDFFDD><td>1+<td>2<td>3<td>4<td>5<td>6<td>7<td>8
+<tr align=center><td bgcolor=DDFFDD>3 <td> <td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>4 <td> <td> <td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>5 <td>(5 / 1 / 1)<sup>2</sup> = 25<td> <td> <td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>6 <td>6<sup>6/2</sup> = 216<td> <td>6<sup>6</sup> / 4 = 11664<br><font color=blue>(Andrew Bayly)</font><td>16<sup>6</sup> &ndash; 11<sup>5</sup> = 16616165<br><font color=blue>(Andrew Bayly)</font><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>7 <td> <td> <td>(1 + 1 + 1)<sup>11</sup> = 177147<br><font color=blue>(Andrew Bayly)</font><td> <td>(7 &ndash; 1)<sup>6&ndash;1</sup> = 7776<br><font color=blue>(Andrew Bayly)</font><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>8 <td>8 &times; (8 + 8) = 128<td>(3<sup>3</sup> &ndash; 1)<sup>8&ndash;3</sup> = 11881188 + 188<br><font color=blue>(Andrew Bayly)</font><td>(8 &ndash; 1 &ndash; 1 &ndash; 1)<sup>11</sup> =<br>48818841 + 844 &times; 11<br><font color=blue>(Andrew Bayly)</font><td> <td> <td> <td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>9 <td>( (2 &times; (9 &ndash; 2 &times; 2) )<sup>9</sup> &ndash; 1) /<br>(1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1)<br>= 111111111<br><font color=blue>(Andrew Bayly)</font><td> <td> <td> <td> <td> <td>
+</table><p>
+
+<center><font size=+2>Three Digits With Lowest Digit 2</font></center>
+<table align=center border=1 cellpadding=10 bgcolor=FFFFDD>
+<tr align=center bgcolor=DDFFDD><td>2+<td>3<td>4<td>5<td>6<td>7<td>8
+<tr align=center><td bgcolor=DDFFDD>4 <td>22<sup>4</sup> &ndash; 32<sup>2</sup> = 233232<br><font color=blue>(Andrew Bayly)</font><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>5 <td> <td> <td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>6 <td> <td> <td>5<sup>2&times;2</sup> = 625<br>5<sup>2<sup>2</sup></sup> = 625<td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>7 <td> <td> <td> <td> <td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>8 <td>(8<sup>2</sup> &ndash; 2)<sup>3</sup> = 238328<br><font color=blue>(Andrew Bayly)</font><td> <td> <td> <td> <td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>9 <td> <td>(9<sup>4</sup> &ndash; 4)<sup>2</sup> = 42994249<br><font color=blue>(Andrew Bayly)</font><td> <td> <td> <td>
+</table><p>
+
+<center><font size=+2>Three Digits With Lowest Digit 3</font></center>
+<table align=center border=1 cellpadding=10 bgcolor=FFFFDD>
+<tr align=center bgcolor=DDFFDD><td>3+<td>4<td>5<td>6<td>7<td>8
+<tr align=center><td bgcolor=DDFFDD>5 <td> <td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>6 <td>(3<sup>3</sup> &ndash; 4)<sup>3&times;3&ndash;4</sup> = 6436343<br><font color=blue>(Andrew Bayly)</font><td> <td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>7 <td>7<sup>3</sup> = 343<td> <td>6<sup>7</sup> = 36 &times; 7776<td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>8 <td> <td> <td> <td> <td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>9 <td> <td> <td> <td> <td>
+</table><p>
+
+<center><font size=+2>Three Digits With Lowest Digit 4</font></center>
+<table align=center border=1 cellpadding=10 bgcolor=FFFFDD>
+<tr align=center bgcolor=DDFFDD><td>4+<td>5<td>6<td>7<td>8
+<tr align=center><td bgcolor=DDFFDD>6 <td>6 &times; 6<sup>5</sup> = 46656<td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>7 <td> <td>6 &times; 6<sup>4</sup> = 7776<td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>8 <td> <td>6<sup>6</sup> = 46648 + 8<td> <td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>9 <td> <td> <td> <td>
+</table><p>
+
+<center><font size=+2>Three Digits With Lowest Digit 5</font></center>
+<table align=center border=1 cellpadding=10 bgcolor=FFFFDD>
+<tr align=center bgcolor=DDFFDD><td>5+<td>6<td>7<td>8
+<tr align=center><td bgcolor=DDFFDD>7 <td>6<sup>5</sup> = 7776<td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>8 <td> <td> <td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>9 <td> <td> <td>
+</table><p>
+
+<center><font size=+2>Three Digits With Lowest Digit 6</font></center>
+<table align=center border=1 cellpadding=10 bgcolor=FFFFDD>
+<tr align=center bgcolor=DDFFDD><td>6+<td>7<td>8
+<tr align=center><td bgcolor=DDFFDD>8 <td> <td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>9 <td> <td>
+</table><p>
+
+<center><font size=+2>Three Digits With Lowest Digit 7</font></center>
+<table align=center border=1 cellpadding=10 bgcolor=FFFFDD>
+<tr align=center bgcolor=DDFFDD><td>7+<td>8
+<tr align=center><td bgcolor=DDFFDD>9 <td>
+</table><p>
+
+<center><font size=+2>Eight Digits</font></center>
+<table align=center border=1 cellpadding=10 bgcolor=FFFFDD>
+<tr align=center bgcolor=DDFFDD><td>all but<td>0<td>1<td>2<td>3<td>4<td>5<td>6<td>7<td>8
+<tr align=center><td bgcolor=DDFFDD>1 <td>(9 &ndash; 7)<sup>(8/4)<sup>3</sup></sup> = 256<br>(8 / 4)<sup>(9&ndash;7)<sup>3</sup></sup> = 256<td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>2 <td> <td> <td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>3 <td>(8 / 4)<sup>17&ndash;9</sup> = 256<br>24<sup>18/9</sup> = 576<td> <td> <td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>4 <td>(3<sup>5</sup> / 81)<sup>6</sup> = 729<td> <td>3<sup>8<sup>1</sup></sup> + 9 = 6570<td>6<sup>(5&ndash;0)/1</sup> / 8 = 972<br>6<sup>5/1&ndash;0</sup> / 8 = 972<br>6<sup>5<sup>1</sup>&ndash;0</sup> / 8 = 972<br>6<sup>(5&ndash;0)<sup>1</sup></sup> / 8 = 972<br>6<sup>10&ndash;5</sup> / 8 = 972<td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>5 <td>(78 &ndash; 4<sup>3</sup>)<sup>2</sup> = 196<td>(2<sup>7</sup> / 8)<sup>3</sup> = 4096<td>8<sup>(7&ndash;3)/1</sup> = 4096<br>8<sup>7/1&ndash;3</sup> = 4096<td>7<sup>8<sup>6/9</sup></sup> = 2401<td> <td bgcolor=white><td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>6 <td>8<sup>(7&ndash;4)<sup>3</sup>/9</sup> = 512<br>(8<sup>3</sup> / 4)<sup>9/7</sup> = 512<td> <td>3<sup>15<sup>1</sup></sup> = 14348907<br><font color=blue>(Andrew Bayly)</font><td>(8 / (9 &ndash; 7) )<sup>5</sup> = 1024<br>5 &times; 4<sup>7</sup> = 81920<td> <td>(9 &ndash; 0)<sup>4</sup> / 3 = 2187<td bgcolor=white><td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>7 <td>9<sup>5&times;8/16</sup> = 243<br>8<sup>3<sup>4</sup>/9&ndash;6</sup> = 512<br>(4<sup>6/3</sup> / 8)<sup>9</sup> = 512<br>( (6 / 3)<sup>4</sup> / 8)<sup>9</sup> = 512<td> <td> <td>2<sup>15</sup> / 8 = 4096<td>8<sup>9<sup>3/6</sup>&ndash;0</sup> = 512<br>8<sup>(9&ndash;0)<sup>3/6</sup></sup> = 512<td> <td>9<sup>5/(10&ndash;8)</sup> = 243<td bgcolor=white><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>8 <td>(54 / 6)<sup>3<sup>1</sup></sup> = 729<br>(54 / 6<sup>1</sup>)<sup>3</sup> = 729<br>(54<sup>1</sup> / 6)<sup>3</sup> = 729<br>3<sup>6<sup>1&times;(5&ndash;4)</sup></sup> = 729<br>3<sup>(6&times;(5&ndash;4))<sup>1</sup></sup> = 729
+<td> <td> <td>(9 &ndash; 7)<sup>10</sup> / 4 = 256<td>7<sup>2<sup>2<sup>2</sup></sup></sup> = 33232930569601<br><font color=blue>(Andrew Bayly)</font><td>12<sup>10</sup> = 61917364224<br><font color=blue>(Andrew Bayly)</font><td>(7 &ndash; 9 / 3)<sup>5</sup> = 1024<td>3<sup>6<sup>2</sup></sup> = 150094635296999121<br><font color=blue>(Andrew Bayly)</font><td bgcolor=white>
+<tr align=center><td bgcolor=DDFFDD>9 <td>8<sup>67&ndash;4<sup>3</sup></sup> = 512<td> <td> <td>24<sup>10&ndash;8</sup> = 576<br>84<sup>2<sup>1</sup></sup> = 7056<br>(84 &times; 1)<sup>2</sup> = 7056<td> <td>3 &times; 2<sup>10</sup> / 4 = 768<td>7<sup>8/(5&ndash;3)</sup> = 2401<td>6<sup>5</sup> / 3 / 24 = 108<br>80<sup>3</sup> / 4<sup>6</sup> = 125<td>
+</table><p>
+
+<center><font size=+2>Nine Digits</font></center>
+<table align=center border=1 cellpadding=10 bgcolor=FFFFDD>
+
+<tr align=center><td bgcolor=DDFFDD>all but 0 <td>69<sup>4/2</sup> / 3 = 1587<br>(7<sup>8/4</sup> &ndash; 5)<sup>2</sup> = 1936<br>(7<sup>2</sup> &ndash; 5)<sup>8/4</sup> = 1936<br>3<sup>54/6</sup> / 9 = 2187<br>(9 / (6 &ndash; 5) )<sup>4</sup> / 3 = 2187<br>9<sup>4/(6&ndash;5)</sup> / 3 = 2187<br>59<sup>2<sup>7&ndash;6</sup></sup> = 3481<br>72<sup>3&times;6/9</sup> = 5184<br>(83 &ndash; 9)<sup>2<sup>1</sup></sup> = 5476<br>9<sup>8/2</sup> + 13 = 6574<br>(3 &times; 76)<sup>2</sup> = 51984
+
+<tr align=center><td bgcolor=DDFFDD>all but 1 <td>8<sup>53&ndash;7<sup>2</sup></sup> = 4096<br>8<sup>2<sup>3</sup>/(7&ndash;5)</sup> = 4096<br>(84 &times; 3)<sup>2</sup> / 9 = 7056
+
+<tr align=center><td bgcolor=DDFFDD>all but 2 <td>(8 &times; (7 / 1 &ndash; 5))<sup>3</sup> = 4096<br>(8 &times; (7 &ndash; 5))<sup>3<sup>1</sup></sup> = 4096<br>7<sup>5</sup> &ndash; 9 / 3 = 16804<br>(4 + 9 / 3)<sup>5</sup> = 16807<br>6 &times; (5 &ndash; 1)<sup>7</sup> = 98304
+
+<tr align=center><td bgcolor=DDFFDD>all but 3 <td>(9 &ndash; 4 / 2)<sup>5</sup> = 16807<br>49<sup>5/2</sup> = 16807<br>7<sup>5</sup> + 4 / 2 = 16809 
+
+<tr align=center><td bgcolor=DDFFDD>all but 4 <td>(60 / 5)<sup>9/3</sup> = 1728<br>6 &times; 7<sup>9/3</sup> / 1 = 2058<br>6 &times; 7<sup>(9/3)<sup>1</sup></sup> = 2058<br>6 &times; 7<sup>9<sup>1</sup>/3</sup> = 2058<br>(6 &times; 7<sup>9/3</sup>)<sup>1</sup> = 2058<br>(9 &ndash; 0)<sup>6</sup> / 3<sup>5</sup> = 2187<br>9<sup>6</sup> / (3 &ndash; 0)<sup>5</sup> = 2187<br>56 &times; 7<sup>3</sup> = 19208
+
+<tr align=center><td bgcolor=DDFFDD>all but 5 <td>7<sup>8&ndash;36/9</sup> = 2401<br>(6 &times; (8 / 4)<sup>9</sup>)<sup>1</sup> = 3072<br>6 &times; (8 / 4)<sup>9/1</sup> = 3072<br>6 / (1 &ndash; 4 / 8)<sup>9</sup> = 3072<br>(7 &ndash; 3)<sup>8&ndash;2</sup> / 1 = 4096<br>(7 / 1 &ndash; 3)<sup>8&ndash;2</sup> = 4096<br>(7 &ndash; 3 / 1)<sup>8&ndash;2</sup> = 4096<br>(7 &ndash; 3)<sup>8/1&ndash;2</sup> = 4096<br>(7 &ndash; 3)<sup>(8&ndash;2)/1</sup> = 4096<br>(8 / (7 &ndash; 3) )<sup>12</sup> = 4096<br>(8 / 2)<sup>13&ndash;7</sup> = 4096<br>(1 &times; 2<sup>7</sup> / 8)<sup>3</sup> = 4096<br>( (2 / 1)<sup>7</sup> / 8)<sup>3</sup> = 4096<br>(2<sup>7/1</sup> / 8)<sup>3</sup> = 4096<br>(2<sup>7</sup> / 8)<sup>3/1</sup> = 4096<br>(2<sup>7<sup>1</sup></sup> / 8)<sup>3</sup> = 4096<br>(7 / 1 &ndash; 3)<sup>6</sup> + 2 = 4098<br>( (7 &ndash; 3) / 1)<sup>6</sup> + 2 = 4098<br>(7 &ndash; 3)<sup>6/1</sup> + 2 = 4098<br>8<sup>6<sup>2</sup>/9</sup> + 7 = 4103<br>(6<sup>3</sup> + 1)<sup>2</sup> = 47089 
+
+<tr align=center><td bgcolor=DDFFDD>all but 6 <td>(7 / (9 &ndash; 8) &ndash; 3)<sup>5</sup> = 1024<br>(7 &ndash; 3<sup>9&ndash;8</sup>)<sup>5</sup> = 1024<br>(7 &ndash; 3)<sup>5<sup>9&ndash;8</sup></sup> = 1024<br>57<sup>10&ndash;8</sup> = 3249<br>7 &times; 2<sup>(9&ndash;0)/1</sup> = 3584<br>7 &times; 2<sup>9/1&ndash;0</sup> = 3584<br>5 &times; 4<sup>7</sup> + 2 = 81930 
+
+<tr align=center><td bgcolor=DDFFDD>all but 7 <td>(7 &ndash; 3)<sup>5/(9&ndash;8)</sup> = 1024<br>(8 &ndash; 36 / 9)<sup>5</sup> = 1024<br>46<sup>3</sup> / 92 = 1058<br>(2<sup>15</sup> &ndash; 8) / 9 = 3640<br>2<sup>8/(5/3&ndash;1)</sup> = 4096<br>8<sup>52/13</sup> = 4096<br>(8<sup>3<sup>2</sup>&ndash;5</sup>) / 1 = 4096<br>8<sup>3<sup>2</sup>&ndash;5/1</sup> = 4096<br>8<sup>(3<sup>2</sup>&ndash;5)/1</sup> = 4096<br>8<sup>3<sup>2</sup>/1&ndash;5</sup> = 4096<br>8<sup>(3/1)<sup>2</sup>&ndash;5</sup> = 4096<br>8<sup>3<sup>2/1</sup>&ndash;5</sup> = 4096<br>8<sup>3<sup>2</sup>&ndash;5<sup>1</sup></sup> = 4096<br>(8 / 1)<sup>5</sup> / 2<sup>3</sup> = 4096<br>8<sup>5/1</sup> / 2<sup>3</sup> = 4096<br>8<sup>5<sup>1</sup></sup> / 2<sup>3</sup> = 4096<br>8<sup>5</sup> / 2<sup>3/1</sup> = 4096<br>(8<sup>2</sup> / (5 &ndash; 1) )<sup>3</sup> = 4096<br>(9<sup>4</sup> &ndash; 2<sup>8</sup>)<sup>1</sup> = 6305<br>3 &times; 56<sup>2<sup>1</sup></sup> = 9408<br>(3 &times; 56<sup>2</sup>)<sup>1</sup> = 9408
+
+
+<tr align=center><td bgcolor=DDFFDD>all but 8 <td>(63 / 9)<sup>5</sup> / 7 = 2401<br>(7 &ndash; 5)<sup>13</sup> / 2 = 4096<br>2<sup>15/3+7</sup> = 4096
+
+<tr align=center><td bgcolor=DDFFDD>all but 9 <td>7<sup>(6/3)<sup>5</sup>/8</sup> = 2401<br>(20 / 5)<sup>7</sup> = 16384<br>2<sup>70/5</sup> = 16384
+
+</table><p>
+
+<center><font size=+2>Ten Digits</font></center>
+<table align=center border=1 cellpadding=10 bgcolor=FFFFDD>
+<tr align=center>
+<td>12<sup>3</sup> &times; 4 + 58 = 6970
+<td>7<sup>5</sup> &ndash; (9 / 3)<sup>8</sup> = 10246
+<td>8 &times; 6<sup>4</sup> + 27 = 10395
+<td>7<sup>2</sup> &times; 6<sup>9/3</sup> = 10584
+<tr align=center>
+<td>(6 &times; (9 &ndash; 2) )<sup>3</sup> / 7 = 10584
+<td>(27 &ndash; 5)<sup>9/3</sup> = 10648
+<td>(4<sup>8</sup> + 7 &ndash; 5) / 6 = 10923
+<td>4<sup>8</sup> / 6 + 7 / 3 = 10925
+<tr align=center>
+<td>5 &times; (6 / 2)<sup>7</sup> + 8 = 10943
+<td>37<sup>2</sup> &times; 8 + 4 = 10956
+<td>(7 + 9<sup>0</sup>)<sup>5</sup> / 2 = 16384
+<td>7<sup>5</sup> + (3 &ndash; 9) / 2 = 16804
+<tr align=center>
+<td>(9<sup>4&ndash;3</sup>) &ndash; 2)<sup>5</sup> = 16807
+<td>(9 / (4 &ndash; 3) &ndash; 2)<sup>5</sup> = 16807
+<td>(9 &ndash; 2)<sup>5/(4&ndash;3)</sup> = 16807
+<td>(9 &ndash; 2)<sup>5&times;(4&ndash;3)</sup> = 16807
+<tr align=center>
+<td>(9 &ndash; 2)<sup>5<sup>4&ndash;3</sup></sup> = 16807
+<td>(42/ (9 &ndash; 3) )<sup>5</sup> = 16807
+<td>(3<sup>4</sup> / 9 &ndash; 2)<sup>5</sup> = 16807
+<td>7<sup>5</sup> + 2 / (4 &ndash; 3) = 16809
+<tr align=center>
+<td>7<sup>5&times;(4&ndash;3)</sup> + 2 = 16809
+<td>7<sup>5<sup>4&ndash;3</sup></sup> + 2 = 16809
+<td>7<sup>5</sup> + 92 / 4 = 16830
+<td>7<sup>5</sup> + 48 &times; 2 = 16903
+<tr align=center>
+<td>8 &times; 9<sup>4</sup> / 3 + 6 = 17502
+<td>35 &times; 4<sup>6</sup> / 8 = 17920
+<td>7 &times; (56 / 4)<sup>3</sup> = 19208
+<td>27<sup>4&ndash;5<sup>0</sup></sup> = 19683
+<tr align=center>
+<td>3<sup>9</sup> + 768 = 20451
+<td>81 &times; 4<sup>9&ndash;5</sup> = 20736
+<td>(5<sup>7</sup> + 19) / 3 = 26048
+<td>109 &times; 3<sup>5</sup> = 26487
+<tr align=center>
+<td>(16 &ndash; 3)<sup>4</sup> + 9 = 28570
+<td>(4 &times; (1 + 9<sup>0</sup>) )<sup>5</sup> = 32768
+<td>(1 &times; (9 &ndash; 4<sup>0</sup>) )<sup>5</sup> = 32768
+<td>(9 / 1 &ndash; 4<sup>0</sup>)<sup>5</sup> = 32768
+<tr align=center>
+<td>(9 &ndash; 4<sup>0</sup>)<sup>5/1</sup> = 32768
+<td>(9 &ndash; 4<sup>0</sup>)<sup>5<sup>1</sup></sup> = 32768
+<td>(9 &ndash; 1<sup>40</sup>)<sup>5</sup> = 32768
+<td>(9<sup>1</sup> &ndash; 4<sup>0</sup>)<sup>5</sup> = 32768
+<tr align=center>
+<td>8<sup>5</sup> + 1<sup>40</sup> = 32769
+<td>4 &times; (5</sup>7</sup> &ndash; 1) / 8 = 39062
+<td>209<sup>7&ndash;5</sup> = 43681
+<td>(651 / 3)<sup>2</sup> = 47089
+<tr align=center>
+<td>3 &times; (8<sup>5</sup> / 2 + 6) = 49170
+<td>(76 &times; 3 + 0)<sup>2</sup> = 51984
+<td>(76 &times; 3 &ndash; 0)<sup>2</sup> = 51984
+<td>(76 &times; (3 &ndash; 0 ) )<sup>2</sup> = 51984
+<tr align=center>
+<td>( (76 &ndash; 0) &times; 3)<sup>2</sup> = 51984
+<td>(76 &times; 3)<sup>2&ndash;0</sup> = 51984
+<td>(4<sup>9&ndash;5</sup> + 3)<sup>2</sup> = 67081
+<td>5<sup>9&ndash;2</sup> &ndash; 4<sup>3</sup> = 78061
+<tr align=center>
+<td>5 &times; 64<sup>7/3</sup> = 81920
+<td>5 &times; 4<sup>9&ndash;1</sup> = 327680
+<td>(1<sup>7</sup> + 4)<sup>8</sup> = 390625
+<td>5<sup>8</sup> + 17 = 390642
+<tr align=center>
+<td>84<sup>3</sup> + 6 = 592710
+</table><p>
+
+
+<hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 6/1/12.<font>
+
+</BODY></HTML>

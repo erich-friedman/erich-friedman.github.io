@@ -1,0 +1,89 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1><CENTER><H1>Problem of the Month (May 2004)</H1></CENTER>A popular type of number puzzle involves placing the digits 1 through 9 into a 3&times;3 square grid containing some arithmetic operations so that each row and column gives some correct equation.  This month we look into the existence of <b>digit isogrids</b>, rectangular puzzle grids using the operations + &ndash; &times; / ^ and the first n positive integers that have the same result in every row and column.  Every pair of digits must be separated by an operation, and all operations are performed "left to right" or "top down". <p>
+
+An 3&times;3 isogrid for 15 exists using only addition: the standard 3&times;3 magic square.  There are 3&times;3 isogrids for 1, 2, 3, 5, 11, 13, and 18 that use only two different operations.  Can you find them?  There are 3&times;3 isogrids for 4, 6-10, 12, 14, 16, 20, and 48 using only 3 operations.  The 3&times;3 isogrid for 36 requires 4 operations.  Can you find them?<p>
+
+What results are possible with different sized isogrids?  Can you find the possible results in a 2&times;n isogrid in general?  I'm particularly interested in possible results of a 4&times;4 isogrid.  In higher dimensions, what is the smallest isobox?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Guy Segal found a 2&times;4 isogrid, and used it to prove the existence of 2&times;n isogrids for every n&ge;4.<p>
+
+Jordan Balla found a 3&times;3 isogrid with result 16.<p>
+
+Bill Clagett found all the possible isogrids for the 2&times;3, 2&times;4, 3&times;3, 3&times;4, and 4&times;4 cases, including negative and fractional results.  Here are his results:
+
+<center><table border=1 bgcolor=lightyellow cellpadding=2>
+<tr><th bgcolor=CCFFCC>Size<th bgcolor=CCFFCC>Possible Results of Isogrids
+<tr align=center><td>2&times;3<td>-1, [1,3], 7
+<tr align=center><td>2&times;4<td>-4, -2, -1, [1,4], 9
+<tr align=center><td>3&times;3<td>-10, -8, [-6,-1], [1,16], 18, 20, 36, 48
+<tr align=center><td>3&times;4<td>-18, -16, -14, [-12,30], 32, 33, 36, 40, 44, 48, 56, 60, 1/2, 3/2, 5/2
+<tr align=center><td>4&times;4<td>-80, -72, -64, -60, -56, -48, -45, -42, -40, -36, -35, [-33,138],
+   140, 141, [143,145], 147, 150, [152,154], 156, 157, [159,162], 165,
+   [168,170], 174, 176, 180, 182, 189, 192, 196, 198, 200, 208, 210,
+   216, 220, 224, 225, 234, 240, 243, 252, 256, 264, 270, 288, 336,
+   360, 420, 480, 512, 4096, 16777216, -21/2, -15/2, -11/2, -9/2,
+   -7/2, -5/2, -3/2, -3/4, -2/3, -1/2, -1/3, -1/4, 1/6, 1/4, 1/3, 1/2,
+   2/3, 3/4, 5/4, 4/3, 3/2, 5/3, 7/4, 9/4, 7/3, 5/2, 8/3, 10/3, 7/2,
+   11/3, 13/3, 9/2, 14/3, 16/3, 11/2, 13/2, 22/3, 15/2, 17/2, 26/3,
+   28/3, 19/2, 21/2, 32/3, 34/3, 23/2, 25/2, 27/2, 29/2, 31/2, 33/2,
+   52/3, 35/2, 39/2
+</table></center><p>
+
+This is his amazing 4&times;4 isogrid with result 2<sup>24</sup>=16777216:<p>
+
+<center><img src="0504/2^24.gif"></center><p>
+
+Bill Clagett also noted that there are arrays of numbers which give several different isogrids results depending on the operations inserted.  He wondered whether the 3&times;4 example he found was the smallest one.<p>
+
+Bill Clagett also showed there is a unique 3&times;3&times;2 isobox.  Below are the two layers.  All the signs between the two layers are "&ndash;" except for one "^", and all the results are equal to 1.<p>
+
+<center><pre>
+    top layer:
+    1 ^ 18 ^  5
+    ^    -    +
+   16 -  7 /  9
+    ^    /    -
+    3 + 11 - 13
+
+   bottom layer:
+   14 - 17 +  4
+    -    -    +
+   15 -  6 -  8
+    ^    -    /
+    2 + 10 / 12
+</pre></center>
+
+Philippe Fondanaiche found all the 3&times;3 isogrid results.  He also showed that for 2&times;n isogrids, where n&le;7, that the results 1-n and 2n+1 were possible.  He couldn't extend this to n=8 though, since he couldn't find results of 5 or 6.  Can anyone verify this?<p>
+
+Philippe Fondanaiche also found results of 0-34 for 4&times;4 isogrids using only addition and subtraction.<p>
+
+Here are the small isogrids:<p>
+
+<center><font size=+3>2&times;3 Isogrids</font></center>
+<center><table cellspacing=20>
+<tr><td><img src="0504/1a.gif"><td><img src="0504/2a.gif"><td><img src="0504/3a.gif"><td><img src="0504/7a.gif"></tr>
+</table></center><p>
+
+<center><font size=+3>2&times;4 Isogrids</font></center>
+<center><table cellspacing=20>
+<tr><td><img src="0504/1b.gif"><td><img src="0504/2b.gif"><td><img src="0504/3b.gif"></tr>
+</table></center>
+<center><table cellspacing=20>
+<tr><td><img src="0504/4b.gif"><td><img src="0504/9b.gif"></tr>
+</table></center><p>
+
+<center><font size=+3>3&times;3 Isogrids</font></center>
+<center><table cellspacing=20>
+<tr><td><img src="0504/1.gif"><td><img src="0504/2.gif"><td><img src="0504/3.gif"><td><img src="0504/4.gif"></tr>
+<tr><td><img src="0504/5.gif"><td><img src="0504/6.gif"><td><img src="0504/7.gif"><td><img src="0504/8.gif"></tr>
+<tr><td><img src="0504/9.gif"><td><img src="0504/10.gif"><td><img src="0504/11.gif"><td><img src="0504/12.gif"></tr>
+<tr><td><img src="0504/13.gif"><td><img src="0504/14.gif"><td><img src="0504/15.gif"><td><img src="0504/16.gif"></tr>
+<tr align=center><td><img src="0504/18.gif"><br>&nbsp;<td><img src="0504/20.gif"><br>&nbsp;<td><img src="0504/36.gif"><br>&nbsp;<td><img src="0504/48.gif"><br>(Bryce Herdt)</tr>
+</table></center><p>
+
+I investigated 2&times;n isogrids.  It turns out results of 2n+1 and some numbers in [1,n] are possible, and nothing in [n,2n] is possible.  The following graph shows what exists.  the rows indicate n=3 (top) through n=28 (bottom), and the black squares indicate the numbers between 1 and n which are 2&times;n isogrids.<p>
+
+<center><img src="0504/2xn.gif"></center><p>
+
+<p><HR>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 5/25/04.<font></BODY></HTML>

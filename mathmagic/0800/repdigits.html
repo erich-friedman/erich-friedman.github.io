@@ -1,0 +1,41 @@
+Philippe Fondanaiche conjectured that the smallest repdigit Friedman number is 99999999.  I improved some of his smallest repdigits, which are shown below. <p><center><table cellpadding=5 border=5 bordercolor=orange><tr><td><font color=red>11111111111 = ((11&ndash;1)<sup>11</sup> &ndash; 1&times;1) / (11&ndash;1&ndash;1)</tr><tr><td><font color=red>22222222222222 = (2((22&ndash;2)/2)<sup>2<sup>2+2</sup>&ndash;2</sup>&ndash;2) / (2+2/2)<sup>2</sup></tr><tr><td><font color=red>333333333 = ((3&times;3 + 3/3)<sup>3&times;3</sup> &ndash; 3/3) / 3</tr><tr><td><font color=red>444444444444444 = (4(44/4 &ndash; 4/4)<sup>4&times;4&ndash;4/4</sup> &ndash; 4) / (4 + 4 + 4/4)</tr><tr><td><font color=red>5555555555 = (5(5+5)<sup>5+5</sup> &ndash; 5) / (5 + 5 &ndash; 5/5)</tr><tr><td><font color=red>6666666666666666 = (6((66&ndash;6)/6)<sup>6 + (66&ndash;6)/6</sup> &ndash; 6) / (6 + (6+6+6)/6)</tr><tr><td><font color=red>77777777777777 = (7((77&ndash;7)/7)<sup>7+7</sup> &ndash; 7 + 7 &ndash; 7) / (7 + (7+7)/7)</tr><tr><td><font color=red>88888888888888 = (8((88&ndash;8)/8)<sup>8+8&ndash;(8+8)/8</sup> &ndash; 8) / (8 + 8/8)</tr><tr><td><font color=red>99999999 = (9 + 9/9)<sup>9&ndash;9/9</sup> &ndash; 9/9</tr></table></center><p>Brendan Owen proved that repdigits of length 25 or more are Friedman numbers in any base with the following observation:<p>
+
+<center>R(a,n) = (a&times;a/(aa &ndash; a &ndash; a))&times;(((aa - a)/a)<sup>A + (a + ... (n&ndash;24 terms) ... + a)/a) &ndash; a/a</sup><br>
+with A = 24 = 13 + x using x = 11 a's in A = ((a + a + a + a + a)/a)<sup>(a + a)/a</sup> &ndash; a/a </center><p>  
+
+Then in 2015, Bruno Curfs showed that all repdigits of length 22 or more are Friedman numbers, regardless of base.  He also used his ideas to show separate formulas for each digit in base 10:<P>
+
+<table cellpadding=5 border=5 bordercolor=orange align=center><tr><td>R(1,n) = (11 &ndash; 1)^(A + (1 + ... (n &ndash; 11 terms) ... + 1)) &ndash; 1) / (11 - 1 - 1)
+<br>using x = 3 ones in A = 11 = 8 + x = 11/1 for n>12	
+<tr><td>R(2,n) = (2&times;((22 &ndash; 2)/2)^(A + (2 + ... (n &ndash; 16 terms) ... + 2)/2) &ndash; 2)/(22/2 &ndash; 2)
+<br>using x = 5 twos in A = 16 = 11 + x = 2^(2 + 2 + 2 &ndash; 2) for n>16<br>
+<tr><td>R(3,n) = (((33 &ndash; 3)/3)^(A + (3 + ... (n &ndash; 11 terms) ... + 3)/3) &ndash; 3/3)/3
+<br>using x = 3 threes in A = 11 = 8 + x = 33/3 for n>11<br>
+<tr><td>R(4,n) = (4&times;((44 &ndash; 4)/4)^(A + (4 + ... (n &ndash; 15 terms) ... + 4)/4) &ndash; 4)/(4 + 4 + 4/4)
+<br>using x = 4 fours in A = 15 = 11 + x = 4 &times; 4 &ndash; 4/4 for n>15<br>
+<tr><td>R(5,n) = (5&times;(5 + 5)^(A + (5 + ... (n &ndash; 14 terms) ... + 5)/5) &ndash; 5)/(5 + 5 &ndash; 5/5)
+<br>using x = 5 fives in A = 14 = 9 + x = 5 + 5 + 5 &ndash; 5/5 for n>14<br>
+<tr><td>R(6,n) = (6&times;(66/6 &ndash; 6/6)^(A + (6 + ... (n &ndash; 17 terms) ... + 6)/6) &ndash; 6)/(6 + (6 + 6 + 6)/6)
+<br>using x = 4 sixes in A = 17 = 13 + x = 66/6 + 6 for n>17<br>
+<tr><td>R(7,n) = (7&times;((77 &ndash; 7)/7)^(A + (7 + ... (n &ndash; 15 terms) ... + 7)/7) &ndash; 7)/(7 + (7 + 7)/7)
+<br>using x = 4 sevens in A = 15 = 11 + x = 7 + 7 + 7/7 for n>15<br>
+<tr><td>R(8,n) = (8&times;(88/8 &ndash; 8/8)^(A + (8 + ... (n &ndash; 15 terms) ... + 8)/8) &ndash; 8)/(8 + 8/8)
+<br>using x = 4 eights in A = 15 = 11 + x = 8 + 8 &ndash; 8/8 for n>15<br>
+<tr><td>R(9,n) = (9 + 9/9)^(A + (9 + ... (n &ndash; 9 terms) ... + 9)/9) &ndash; 9/9
+<br>using x = 3 nines in A = 9 = 6 + x = 9 + 9 &ndash; 9 for n>9</table><p>
+
+Bruno Curfs then solved 11 of the 12 remaining cases below.  He conjectured that R(3,10)=3333333333 is not a Friedman number.<p>
+
+<table cellpadding=5 border=5 bordercolor=orange align=center><tr><td>R(2,15) = (2&times;((22 &ndash; 2)/2)^(22/2 + 2 + 2) &ndash; 2)/(22/2 &ndash; 2)<br>
+<tr><td>R(2,16) = (2&times;(22/2 &ndash; 2/2)^(22 &ndash; 2 &ndash; 2 &ndash; 2) &ndash; 2)/(22/2 &ndash; 2)<br>
+<tr><td>R(3,11) = (3&times;((33 &ndash; 3)/3)^(33/3) &ndash; 3)/(3&times;3)<br>
+<tr><td>R(5,11) = (5&times;(5 + 5)^(55/5) &ndash; 5)/(5 + 5 &ndash; 5/5)<br>
+<tr><td>R(5,12) = (5&times;(5 + 5)^((55 + 5)/5) &ndash; 5)/(5 + 5 &ndash; 5/5)<br>
+<tr><td>R(5,13) = (5&times;(5 + 5)^((55 + 5 + 5)/5) &ndash; 5)/(5 + 5 &ndash; 5/5)<br>
+<tr><td>R(5,14) = (5&times;(5 + 5)^((55 + 5 + 5 + 5)/5) &ndash; 5)/(5 + 5 &ndash; 5/5)<br>
+<tr><td>R(6,17) = (6&times;((66 &ndash; 6)/6)^(6&times;(66/6 + 6)/6) &ndash; 6)/(6 + (6 + 6 + 6)/6)<br>
+<tr><td>R(7,15) = (7&times;(77/7 &ndash; 7/7)^(7 + 7 + 7/7) &ndash; 7)/(7 + (7 + 7)/7)<br>
+<tr><td>R(8,15) = (8&times;((88 &ndash; 8)/8)^(8 + 8 &ndash; 88/88) &ndash; 8)/(8 + 8/8)<br>
+<tr><td>R(9,9) = (9 + 9/9)^(9 + (9 &ndash; 9)&times;9) &ndash; 9/9</table><p>
+
+Bruno Curfs also showed that the smallest repdigit Friedman number in any base is 27 = 33<sub>8</sub> = 3<sup>3</sup>.

@@ -1,0 +1,98 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (March 2020)</H1></CENTER>
+
+An old puzzle is the pitcher problem.  You start with a full 8-ounce pitcher, and empty 3-ounce and 5-ounce pitchers, none of which have any markings on them.  By pouring water between pitchers until one pitcher is full or one is empty, the puzzle is to get a pitcher containing exactly 4 ounces of water.  There are various solutions, the shortest is 8 &rarr; 5 &rarr; 3 &rarr; 8, 5 &rarr; 3, 8 &rarr; <font color=blue>5</font> &rarr; 3.  The arrows indicate the pours and the blue number indicates which pitcher ends up with 4 ounces.<p>
+
+This month we consider the problem of obtaining a pitcher with 4 ounces of water if only some fraction 0&lt;f&le;1 of the water poured makes it into the target pitcher, with the rest 1-f leaking out onto the ground.  For example, if f=1/2, then 8 &rarr; <font color=blue>5</font> is a solution, and if f=3/4, then 8 &rarr; <font color=blue>3</font> is a solution.  The original problem is for f=1.<p>
+
+Clearly there are an infinite number of values of f that lead to solutions, with f=1 the accumulation point.  What rational values of f have solutions?  What values of f are roots of rational numbers?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Bryce Herdt found solutions for (4/5)<sup>1/n</sup> and (1/2)<sup>1/n</sup>.  His solution for (4/5)<sup>1/n</sup> is 8 &rarr; 5, 8 &rarr; 3, (8 &rarr; 5 &rarr; 8)<sup>n/2</sup>, and   his solution for (1/2)<sup>1/n</sup> is (8 &rarr; 5, 8 &rarr; 3 &rarr; 8, 5 &rarr; 8)<sup>n/2</sup>.  <p>
+
+
+<CENTER><FONT SIZE=+2>Known Rational f with Solutions</FONT></CENTER>
+<TABLE border=1 align=center cellpadding=4>
+<TR align=center bgcolor=FFFFDD><th>f<th>Shortest Solution
+<TR align=center><td>1<td>8 &rarr; 5 &rarr; 3 &rarr; 8, 5 &rarr; 3, 8 &rarr; <font color=blue>5</font> &rarr; 3
+<TR align=center><td>1/2<td>8 &rarr; <font color=blue>5
+<TR align=center><td>3/4<td>8 &rarr; <font color=blue>3
+<TR align=center><td>4/5<td>8 &rarr; 5, 8 &rarr; 3, 5 &rarr; <font color=blue>8 
+<TR align=center><td>5/6<td>8 &rarr; 3 &rarr; 8 &rarr; 5, 8 &rarr; 3, 5 &rarr; 3 &rarr; 5 &rarr; <font color=blue>8
+<TR align=center><td>6/7<td>8 &rarr; 3, 8 &rarr; 5, 3 &rarr; 5, 3 &rarr; 8, 5 &rarr; 3 &rarr; <font color=blue>8
+<TR align=center><td>7/8<td>8 &rarr; 3, 8 &rarr; <font color=blue>5
+<TR align=center><td>8/9<td>8 &rarr; 5, 8 &rarr; 3, <font color=blue>5</font> &rarr; 3
+<TR align=center><td>7/11<td>8 &rarr; 3 &rarr; 5, 8 &rarr; <font color=blue>5
+<TR align=center><td>9/11<td>8 &rarr; 3 &rarr; 5, 8 &rarr; 3 &rarr; 5, 8 &rarr; 5, 8 &rarr; 3, 5 &rarr; 3 &rarr; 8, 5 &rarr; <font color=blue>8 
+<TR align=center><td>10/11<td>8 &rarr; 3 &rarr; 5, 8 &rarr; 3, 8 &rarr; <font color=blue>5
+<TR align=center><td>11/12<td>8 &rarr; 3 &rarr; 5, 8 &rarr; 5, 8 &rarr; 3, <font color=blue>5</font> &rarr; 3
+<TR align=center><td>12/13<td>8 &rarr; 5, 8 &rarr; 3, 5 &rarr; 3, 5 &rarr; <font color=blue>8
+<TR align=center><td>13/14<td>8 &rarr; 3 &rarr; 8 &rarr; 5 &rarr; 3 &rarr; 8, 5 &rarr; 8 &rarr; 5 &rarr; 3 &rarr; <font color=blue>8
+<TR align=center><td>15/16<td>8 &rarr; 3 &rarr; 5, 8 &rarr; 5, 8 &rarr; 3, 5 &rarr; 3, 5 &rarr; <font color=blue>8
+<TR align=center><td>15/17<td>8 &rarr; 3 &rarr; 5, 8 &rarr; 3, 8 &rarr; 5, 3 &rarr; 5, 3 &rarr; 8, 5 &rarr; 3 &rarr; <font color=blue>8
+<TR align=center><td>15/19<td>8 &rarr; 3 &rarr; 5, 8 &rarr; 3, 8 &rarr; 5, 3 &rarr; 5, 3 &rarr; 8, 5 &rarr; <font color=blue>8
+<TR align=center><td>18/19<td>8 &rarr; 3 &rarr; 5, 8 &rarr; 3, 8 &rarr; 5, 3 &rarr; 5, 3 &rarr; 8, 5 &rarr; 3, 5 &rarr; <font color=blue>8
+</TABLE><p>
+
+<CENTER><FONT SIZE=+2>Known f with Solutions that are Roots of Rationals</FONT></CENTER>
+<TABLE border=1 align=center cellpadding=4>
+<TR align=center bgcolor=FFFFDD><th>f<th>Shortest Solution
+<TR align=center><td>&radic;<span style="border-top: 1px solid #000000; font-size: 16px;">1/2</span>
+<td>8 &rarr; 3 &rarr; 5, 8 &rarr; 3 &rarr; <font color=blue>5
+<TR align=center><td>&radic;<span style="border-top: 1px solid #000000; font-size: 16px;">2/3</span>
+<td>8 &rarr; 3 &rarr; 5, 8 &rarr; 3 &rarr; 5, 8 &rarr; 3, 5 &rarr; <font color=blue>8
+<TR align=center><td>&radic;<span style="border-top: 1px solid #000000; font-size: 16px;">3/4</span>
+<td>8 &rarr; 5 &rarr; 3, 5 &rarr; 8, 3 &rarr; 5, 8 &rarr; 3 &rarr; 5, 3 &rarr; 8, 5 &rarr; 8 &rarr; <font color=blue>5
+<TR align=center><td>&radic;<span style="border-top: 1px solid #000000; font-size: 16px;">4/5</span>
+<td>8 &rarr; 5, 8 &rarr; 3, 5 &rarr; 8 &rarr; <font color=blue>5
+<TR align=center><td>&radic;<span style="border-top: 1px solid #000000; font-size: 16px;">5/7</span>
+<td>8 &rarr; 5 &rarr; 3 &rarr; 5 &rarr; 3 &rarr; 5, 8 &rarr; 5 &rarr; <font color=blue>8
+<TR align=center><td>&radic;<span style="border-top: 1px solid #000000; font-size: 16px;">7/8</span>
+<td>8 &rarr; 5 &rarr; 3, 8 &rarr; 5 &rarr; <font color=blue>8
+<TR align=center><td>&radic;<span style="border-top: 1px solid #000000; font-size: 16px;">7/9</span>
+<td>8 &rarr; 3, 8 &rarr; 5, 3 &rarr; 8, 5 &rarr; 3 &rarr; 8 &rarr; 3 &rarr; 8, 5 &rarr; 3, 8 &rarr; <font color=blue>5
+<TR align=center><td>&radic;<span style="border-top: 1px solid #000000; font-size: 16px;">7/11</span>
+<td>8 &rarr; 5 &rarr; 3 &rarr; 5, 8 &rarr; 3 &rarr; 8, 5 &rarr; <font color=blue>8
+<TR align=center><td>&radic;<span style="border-top: 1px solid #000000; font-size: 16px;">10/11</span>
+<td>8 &rarr; 5 &rarr; 3 &rarr; 5 &rarr; 3, 8 &rarr; 5 &rarr; <font color=blue>8
+<TR align=center><td>&radic;<span style="border-top: 1px solid #000000; font-size: 16px;">9/13</span>
+<td>8 &rarr; 3 &rarr; 5, 8 &rarr; 3 &rarr; 5, 8 &rarr; 3 &rarr; 5 &rarr; 8, 3 &rarr; 5, 8 &rarr; <font color=blue>5
+<TR align=center><td>&radic;<span style="border-top: 1px solid #000000; font-size: 16px;">12/13</span>
+<td>8 &rarr; 5, 8 &rarr; 3, 5 &rarr; 8, 3 &rarr; 5, 8 &rarr; 5, 8 &rarr; 3, 5 &rarr; 3, 5 &rarr; <font color=blue>8
+<TR align=center><td>&radic;<span style="border-top: 1px solid #000000; font-size: 16px;">13/14</span>
+<td>8 &rarr; 5 &rarr; 3 &rarr; 5 &rarr; 3 &rarr; 5 &rarr; 3, 8 &rarr; 5 &rarr; <font color=blue>8
+<TR align=center><td><td>
+<TR align=center><td><font size=+2>&#8731;</font><span style="border-top: 1px solid #000000; font-size: 18px;">1/2</span>
+<td>8 &rarr; 3, 8 &rarr; 5, 3 &rarr; 8, 5 &rarr; 8 &rarr; <font color=blue>5
+<TR align=center><td><font size=+2>&#8731;</font><span style="border-top: 1px solid #000000; font-size: 18px;">2/3</span>
+<td>8 &rarr; 3, 8 &rarr; 5, 3 &rarr; 8, 5 &rarr; 3 &rarr; 8, 5 &rarr; 3, 8 &rarr; 5 &rarr; <font color=blue>8
+<TR align=center><td><font size=+2>&#8731;</font><span style="border-top: 1px solid #000000; font-size: 18px;">4/5</span>
+<td>8 &rarr; 5, 8 &rarr; 3, 5 &rarr; 8 &rarr; 5 &rarr; <font color=blue>8
+<TR align=center><td><font size=+2>&#8731;</font><span style="border-top: 1px solid #000000; font-size: 18px;">7/8</span>
+<td>8 &rarr; 3, 8 &rarr; 5, 3 &rarr; 8, 5 &rarr; 8 &rarr; 3, 8 &rarr; <font color=blue>5
+<TR align=center><td><font size=+2>&#8731;</font><span style="border-top: 1px solid #000000; font-size: 18px;">8/9</span>
+<td>8 &rarr; 3, 8 &rarr; 5, 3 &rarr; 8, 5 &rarr; 8 &rarr; 5, 8 &rarr; 3, 5 &rarr; 3 &rarr; <font color=blue>5</font> &rarr; 3
+<TR align=center><td><font size=+2>&#8731;</font><span style="border-top: 1px solid #000000; font-size: 18px;">7/11</span>
+<td>8 &rarr; 3, 8 &rarr; 5, 3 &rarr; 8, 5 &rarr; 8 &rarr; 3 &rarr; 5 &rarr; 8 &rarr; <font color=blue>5
+<TR align=center><td><font size=+2>&#8731;</font><span style="border-top: 1px solid #000000; font-size: 18px;">10/11</span>
+<td>8 &rarr; 3, 8 &rarr; 5, 3 &rarr; 8, 5 &rarr; 8 &rarr; 3 &rarr; 5 &rarr; 8 &rarr; 3, 8 &rarr; <font color=blue>5
+<TR align=center><td><td>
+<TR align=center><td><font size=+2>&#8732;</font><span style="border-top: 1px solid #000000; font-size: 18px;">1/2</span>
+<td>8 &rarr; 3, 8 &rarr; 5, 3 &rarr; 8, 5 &rarr; 8 &rarr; 5 &rarr; <font color=blue>8
+<TR align=center><td><font size=+2>&#8732;</font><span style="border-top: 1px solid #000000; font-size: 18px;">2/3</span>
+<td>8 &rarr; 3, 8 &rarr; 5, 3 &rarr; 8, 5 &rarr; 3 &rarr; 8, 5 &rarr; 3, 8 &rarr; 5 &rarr; 8 &rarr; <font color=blue>5
+<TR align=center><td><font size=+2>&#8732;</font><span style="border-top: 1px solid #000000; font-size: 18px;">4/5</span>
+<td>8 &rarr; 5, 8 &rarr; 3, 5 &rarr; 8 &rarr; 5 &rarr; 8 &rarr; <font color=blue>5
+<TR align=center><td><font size=+2>&#8732;</font><span style="border-top: 1px solid #000000; font-size: 18px;">7/8</span>
+<td>8 &rarr; 3, 8 &rarr; 5, 3 &rarr; 8, 5 &rarr; 8 &rarr; 5 &rarr; 3, 8 &rarr; 5 &rarr; <font color=blue>8
+<TR align=center><td><td>
+<TR align=center><td><sup>6</sup>&radic;<span style="border-top: 1px solid #000000; font-size: 16px;">4/5</span>
+<td>8 &rarr; 5, 8 &rarr; 3, 5 &rarr; 8 &rarr; 5 &rarr; 8 &rarr; 5 &rarr; 8 &rarr; <font color=blue>5
+</TABLE><p>
+
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:erichfriedman68@gmail.com">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 3/1/20.<font>
+</BODY></HTML>
+

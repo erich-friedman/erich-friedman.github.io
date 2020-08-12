@@ -1,0 +1,123 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (June 2018)</H1></CENTER>
+
+Consider polynomials of order n&ndash;1 with coefficients that are some permutation of 1, 2, 3, ... n.  How many and what kind of roots can they have?  In particular, what is the max/min number of integer/real/complex roots they can have, distinct/not?  Which of these polynomials is straightest on the interval [&ndash;1,1] (measured by minimizing the maximum curvature)?  Which of these polynomials that is non-negative on [&ndash;1,1] has smallest area on the interval [&ndash;1,1]?  What other questions involving these polynomials are interesting?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+
+The best known solutions are shown below. <p>
+
+<center><font size=+3>Maximum Integer Roots</font></center>
+<table align=center border=1 bgcolor=FFEEFF cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n<th># Roots<th>Roots<th>Coefficients<th>Solutions<th>Author
+<tr align=center><td>1<td>0<td> <td>1<td>1<td>
+<tr align=center><td>2<td>1<td>&ndash;2<td>1 2<td>1<td>
+<tr align=center><td>3<td>2<td>&ndash;1, &ndash;2<td>1 3 2<td>1<td>
+<tr align=center><td>4<td>1<td>&ndash;1<td>1 2 4 3<td>8<td>
+<tr align=center><td>5<td>1<td>&ndash;2<td>1 3 4 5 2<td>2<td>
+<tr align=center><td>6<td>1<td>&ndash;2<td>1 3 4 6 5 2<td>9<td>
+<tr align=center><td>7<td>2<td>&ndash;1, &ndash;1<td>1 2 6 7 3 5 4<td>26<td>
+<tr align=center><td>8<td>3<td>&ndash;1, &ndash;1, &ndash;2<td>3 7 2 4 8 1 5 6<td>1<td>
+<tr align=center><td>9<td>2<td>&ndash;2, &ndash;2<td>1 5 9 7 2 3 6 4 8<td>2<td>
+<tr align=center><td>10<td>0<td><td><td>10!<td>Johan de Ruiter
+<tr align=center><td>11<td>2<td>&ndash;1, &ndash;2<td>1 2 3 6 4 11 7 5 8 9 10<td>786<td>Johan de Ruiter
+<tr align=center><td>12<td>2<td>&ndash;1, &ndash;2<td>1 2 3 7 6 11 9 10 8 5 12 4<td>3132<td>Johan de Ruiter
+<tr align=center><td>13<td>0<td><td><td>13!<td>Johan de Ruiter
+<tr align=center><td>14<td>1<td>&ndash;2<td>1 2 3 5 4 12 6 13 7 11 8 14 9 10<td>1947354<td>Johan de Ruiter
+</table><p>
+
+<center><font size=+3>Maximum Real Roots</font></center>
+<table align=center border=1  bgcolor=EEFFFF cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n<th># Roots<th>Roots<th>Coefficients<th>Solutions<th>Author
+<tr align=center><td>1<td>0<td> <td>1<td>1<td>
+<tr align=center><td>2<td>1<td>&ndash;2<td>1 2<td>2<td>
+<tr align=center><td>3<td>2<td>&ndash;1, &ndash;2<td>1 3 2<td>2<td>
+<tr align=center><td>4<td>1<td>&ndash;1<td>1 2 4 3<td>24<td>
+<tr align=center><td>5<td>2<td>&ndash;2.524, &ndash;1.194<td>1 3 2 4 5<td>38<td>
+<tr align=center><td>6<td>3<td>&ndash;3.414, &ndash;0.682, &ndash;0.585<td>1 4 3 5 6 2<td>14<td>
+<tr align=center><td>7<td>4<td>&ndash;3.310, &ndash;1, &ndash;1, &ndash;0.865<td>1 5 6 2 4 7 3<td>4<td>
+<tr align=center><td>8<td>3<td>&ndash;1.514, &ndash;1, &ndash;1<td>1 2 3 7 6 4 8 5<td>2282<td>
+<tr align=center><td>9<td>4<td>&ndash;2.582, &ndash;1.526, &ndash;0.817, &ndash;0.296<td>1 4 5 6 7 3 8 9 2<td>448<td>
+<tr align=center><td>10<td>5<td>&ndash;3.317, &ndash;2.023, &ndash;1.262, &ndash;0.571, &ndash;0.453<td>1 6 10 4 3 7 5 9 8 2<td>4<td>
+<tr align=center><td>11<td>4<td>&ndash;3.247, &ndash;1, &ndash;0.797, &ndash;0.296<td>1 4 5 11 10 6 7 3 8 9 2<td>?<td>Maurizio Morandi
+<tr align=center><td>12<td>5<td>&ndash;3.213, &ndash;2.412, &ndash;1.323, &ndash;0.859, &ndash;0.186<td>1 6 10 5 8 9 4 11 3 7 12 2<td>?<td>Maurizio Morandi
+</table><p>
+
+<center><font size=+3>Maximum Repeated Complex Roots</font></center>
+<table align=center border=1 bgcolor=FFEEEE cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n<th># Repeated Roots<th>Repeated Roots<th>Coefficients<th>Solutions
+<tr align=center><td>1<td>0<td> <td>1<td>1
+<tr align=center><td>2<td>0<td> <td>1 2<td>2
+<tr align=center><td>3<td>0<td> <td>1 2 3<td>6
+<tr align=center><td>4<td>0<td> <td>1 2 3 4 <td>24
+<tr align=center><td>5<td>0<td> <td>1 2 3 4 5<td>120
+<tr align=center><td>6<td>0<td> <td>1 2 3 4 5 6<td>720
+<tr align=center><td>7<td>1<td>&ndash;1<td>1 2 6 7 3 5 4<td>26
+<tr align=center><td>8<td>1<td>&ndash;1<td>1 2 3 7 6 4 8 5<td>120
+<tr align=center><td>9<td>1<td>&ndash;2<td>1 5 9 7 2 3 6 4 8<td>4
+<tr align=center><td>10<td>2<td>(1+&radic;3)/2, (1&ndash;&radic;3)/2<td>1 6 2 9 7 10 8 4 5 3<td>6
+</table><p>
+
+<center><font size=+3>Minimum Curvature on [&ndash;1,1]</font></center>
+<table align=center border=1 bgcolor=EEFFEE cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n<th>Curvature<th>Coefficients<th>Solutions<th>Author
+<tr align=center><td>1<td>0<td>1<td>1<td>
+<tr align=center><td>2<td>0<td>1 2<td>2<td>
+<tr align=center><td>3<td>0.707+<td>1 3 2<td>1<td>
+<tr align=center><td>4<td>0.041+<td>2 1 4 3<td>1<td>
+<tr align=center><td>5<td>0.034+<td>1 3 2 5 4<td>1<td>
+<tr align=center><td>6<td>0.0248+<td>3 2 4 1 6 5<td>1<td>
+<tr align=center><td>7<td>0.0181+<td>5 6 1 4 2 7 3<td>1<td>
+<tr align=center><td>8<td>0.01310+<td>2 6 5 1 4 3 8 7<td>?<td>
+<tr align=center><td>9<td>0.01017+<td>4 8 6 2 1 5 3 9 7<td>?<td>Maurizio Morandi
+<tr align=center><td>10<td>0.007993+<td>4 8 7 6 2 1 5 3 10 9<td>?<td>Maurizio Morandi
+<tr align=center><td>11<td>0.006582+<td>5 9 8 7 4 2 1 6 3 11 10<td>?<td>Maurizio Morandi
+<tr align=center><td>12<td>0.005503+<td>5 10 9 8 7 4 2 1 6 3 12 11<td>?<td>Maurizio Morandi
+</table><p>
+
+<center><font size=+3>Minimum Area on [&ndash;1,1]</font></center>
+<table align=center border=1 bgcolor=EEEEFF cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n<th>Area<th>Coefficients<th>Solutions<th>Author
+<tr align=center><td>1<td>2<td>1<td>1<td>
+<tr align=center><td>2<td>4<td>1 2<td>1<td>
+<tr align=center><td>3<td>4<td>3 2 1<td>1<td>
+<tr align=center><td>4<td>14/3 = 4.666+<td>2 4 3 1<td>2<td>
+<tr align=center><td>5<td>28/5 = 5.6<td>4 5 3 2 1<td>1<td>
+<tr align=center><td>6<td>106/15 = 7.066+<td>2 6 5 4 3 1<td>4<td>
+<tr align=center><td>7<td>38/5 = 7.6<td>7 6 4 5 3 2 1<td>1<td>
+<tr align=center><td>8<td>304/35 = 8.685+<td>4 8 7 6 5 3 2 1<td>4<td>
+<tr align=center><td>9<td>598/63 = 9.492+<td>8 9 6 7 5 4 3 2 1<td>1<td>Maurizio Morandi
+<tr align=center><td>10<td>680/63 = 10.793+<td>8 10 7 9 6 5 4 3 2 1<td>10<td>Maurizio Morandi
+<tr align=center><td>11<td>888/77 = 11.532+<td>10 11 9 8 6 7 5 4 3 2 1<td>1<td>Maurizio Morandi
+<tr align=center><td>12<td>43354/3465 = 12.511+<td>10 12 9 11 7 8 6 4 5 3 2 1<td>2<td>Maurizio Morandi
+</table><p>
+
+Maurizio Morandi proved that the minimum area must be at least n.<p>
+
+Maurizio Morandi thought we should investigate the polynomials which minimize arclength as well.<p>
+
+<center><font size=+3>Minimum Arclength on [&ndash;1,1]</font></center>
+<table align=center border=1 bgcolor=EEEEEE cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n<th>Arclength<th>Coefficients<th>Solutions<th>Author
+<tr align=center><td>1<td>2<td>1<td>1<td>Maurizio Morandi
+<tr align=center><td>2<td>2.828+<td>1 2<td>1<td>Maurizio Morandi
+<tr align=center><td>3<td>4.646+<td>1 2 3<td>1<td>Maurizio Morandi
+<tr align=center><td>4<td>7.218+<td>2 3 1 4<td>1<td>Maurizio Morandi
+<tr align=center><td>5<td>11.169+<td>2 4 3 1 5<td>1<td>
+<tr align=center><td>6<td>16.509+<td>1 3 5 4 2 6<td>1<td>
+<tr align=center><td>7<td>22.486+<td>1 3 5 6 4 2 7<td>1<td>
+<tr align=center><td>8<td>29.128+<td>2 6 7 5 4 3 1 8<td>1<td>
+<tr align=center><td>9<td>37.130+<td>2 6 8 7 5 4 3 1 9<td>1<td>Maurizio Morandi
+<tr align=center><td>10<td>46.482+<td>1 3 5 8 9 7 6 4 2 10<td>1<td>Maurizio Morandi
+<tr align=center><td>11<td>56.495+<td>1 3 5 8 10 9 7 6 4 2 11<td>1<td>Maurizio Morandi
+<tr align=center><td>12<td>67.136+<td>2 6 9 11 10 8 7 5 4 3 1 12<td>1<td>Maurizio Morandi
+</table><p>
+
+Maurizio Morandi proved that the minimum arclength must be at least (n<sup>2</sup>&ndash;n+2)/2.<p>
+
+<HR><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 6/1/18.<font>
+
+
+</BODY></HTML>

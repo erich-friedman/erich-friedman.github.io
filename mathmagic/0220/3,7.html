@@ -1,0 +1,20 @@
+<HTML>
+<CENTER>n=3 players, N=7 games:</CENTER>
+<pre>
+A plays B.  call the winner A by symmetry.
+A plays C
+IF A WINS, 
+   B plays C, and the winner plays A 4 times (A wins ties)
+IF C WINS, A plays C again
+   IF A WINS, A plays C again
+      IF A WINS, 
+         B plays C, and the winner plays A twice (A wins ties)
+      IF C WINS, A plays C again
+         IF A WINS, A plays C twice (A wins ties)
+         IF C WINS, B plays C twice (C wins ties)
+   IF C WINS, B plays C
+      IF B WINS, B plays C again
+         IF B WINS, A plays C and winner plays B
+         IF C WINS, B plays C twice (C wins ties)
+      IF C WINS, A plays C 3 times and has to win all 3
+</pre>

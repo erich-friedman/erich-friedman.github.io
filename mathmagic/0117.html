@@ -1,0 +1,764 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (January 2017)</H1></CENTER>
+
+A <b>Langford List</b> is a list of numbers, each appearing twice, so that the number of the numbers in between the occurrences of n is n.  The smallest such example is 3 1 2 1 3 2 (provided by Berend van der Zwaag).  Define a <b>Language Langford List</b> to be a list of spellings of positive integers, each appearing twice, so that there are exactly n letters between the two occurrences of the number n.  What is the smallest Langford List containing a given number?  We can also do this in two dimensions.  What is the smallest <b>Language Langford Array</b> containing a given number?<p>  
+
+We can also use different counting systems.  For each positive number, what is this shortest <b>Roman Numeral Langford List</b>, where the number of line segments between two numbers are counted?  Or the shortest <b>Digital Clock Langford List</b>, where the number of LED segments between the two numbers are counted?  Or the shortest <b>Coinage Langford List</b>, where the smallest number of US coins to represent that many cents are counted?  By shortest, I mean the total number of letters, line segments, or coins.<p>
+
+Are there lists that contain each number 3 times, with the correct counts between neighboring pairs?  What is the shortest example for each type?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Solutions were received from Mark Mammel, Bryce Herdt, and Alex Rower.<p>
+
+Alex Rowen found a Langford list with three of each number: 1, 9, 1, 6, 1, 8, 2, 5, 7, 2, 6, 9, 2, 5, 8, 4, 7, 6, 3, 5, 4, 9, 3, 8, 7, 4, 3<p>
+
+Here are the shortest known Language Langford lists containing a given number n:<p>
+
+<table border=1 align=center cellpadding=5>
+<tr align=center><th>3, 5, 7, 10<th>4, 8, 9<th>6, 13<th>11, 16, 23<th>12, 17, 27<th>14, 22<th>15, 29<th>18, 21
+<tr align=center>
+
+<td>
+<font color=orange>THREE</font><br>
+<font color=gray>TEN</font><br>
+<font color=orange>THREE</font><br>
+<font color=9933CC>SEVEN</font><br>
+<font color=gray>TEN</font><br>
+<font color=blue>FIVE</font><br>
+<font color=9933CC>SEVEN</font><br>
+<font color=blue>FIVE</font>
+
+<td>
+FOUR<br>
+<font color=red>NINE</font><br>
+FOUR<br>
+<font color=green>EIGHT</font><br>
+<font color=red>NINE</font><br>
+<font color=blue>FIVE</font><br>
+<font color=green>EIGHT</font><br>
+<font color=blue>FIVE</font>
+
+<td>
+<font color=66AAFF>SIX</font><br>
+<font color=FF99FF>ELEVEN</font><br>
+<font color=66AAFF>SIX</font><br>
+FOURTEEN<br>
+<font color=FF99FF>ELEVEN</font><br>
+<font color=orange>THIRTEEN</font><br>
+FOURTEEN<br>
+<font color=green>EIGHT</font><br>
+<font color=orange>THIRTEEN</font><br>
+<font color=green>EIGHT</font>
+
+<td>
+<font color=FF99FF>ELEVEN</font><br>
+<font color=orange>TWENTYTHREE</font><br>
+<font color=FF99FF>ELEVEN</font><br>
+<font color=9933CC>SEVEN</font><br>
+<font color=66AAFF>SIXTEEN</font><br>
+<font color=9933CC>SEVEN</font><br>
+<font color=orange>TWENTYTHREE</font><br>
+<font color=66AAFF>SIXTEEN</font>
+
+<td>
+<font color=9933CC>SEVENTEEN</font><br>
+<font color=9933CC>TWENTYSEVEN</font><br>
+<font color=gold>TWELVE</font><br>
+<font color=9933CC>SEVENTEEN</font><br>
+<font color=66AAFF>SIX</font><br>
+<font color=gold>TWELVE</font><br>
+<font color=66AAFF>SIX</font><br>
+<font color=9933CC>TWENTYSEVEN</font>
+
+<td>
+<font color=red>NINE</font><br>
+<font color=gold>TWENTYTWO</font><br>
+<font color=red>NINE</font><br>
+<font color=green>EIGHT</font><br>
+FOURTEEN<br>
+<font color=green>EIGHT</font><br>
+<font color=gold>TWENTYTWO</font><br>
+FOURTEEN
+
+<td>
+<font color=66AAFF>SIX</font><br>
+<font color=gray>TWENTY</font><br>
+<font color=66AAFF>SIX</font><br>
+<font color=red>TWENTYNINE</font><br>
+<font color=blue>FIFTEEN</font><br>
+<font color=gray>TWENTY</font><br>
+<font color=9933CC>SEVENTEEN</font><br>
+<font color=blue>FIFTEEN</font><br>
+<font color=red>TWENTYNINE</font><br>
+<font color=9933CC>SEVENTEEN</font>
+
+<td>
+<font color=red>NINE</font><br>
+<font color=FF99FF>TWENTYONE</font><br>
+<font color=red>NINE</font><br>
+<font color=green>EIGHTEEN</font><br>
+<font color=9933CC>SEVENTEEN</font><br>
+<font color=FF99FF>TWENTYONE</font><br>
+<font color=green>EIGHTEEN</font><br>
+<font color=9933CC>SEVENTEEN</font>
+</table><p>
+
+<table border=1 align=center cellpadding=5>
+<tr align=center><th>19, 25<th>20<th>24<th>26<th>28<th>30
+<tr align=center>
+
+<td>
+<font color=red>NINETEEN</font><br>
+<font color=gold>TWENTYTWO</font><br>
+<font color=blue>TWENTYFIVE</font><br>
+<font color=red>NINETEEN</font><br>
+<font color=red>NINE</font><br>
+<font color=gold>TWENTYTWO</font><br>
+<font color=red>NINE</font><br>
+<font color=blue>TWENTYFIVE</font><br>
+
+<td>
+<font color=gray>TWENTY</font><br>
+<font color=FF99FF>TWENTYONE</font><br>
+<font color=orange>TWENTYTHREE</font><br>
+<font color=gray>TWENTY</font><br>
+<font color=red>NINE</font><br>
+<font color=FF99FF>TWENTYONE</font><br>
+<font color=red>NINE</font><br>
+<font color=orange>TWENTYTHREE</font>
+
+<td>
+<font color=red>NINE</font><br>
+<font color=gold>TWENTYTWO</font><br>
+<font color=red>NINE</font><br>
+<font color=red>NINETEEN</font><br>
+TWENTYFOUR<br>
+<font color=gold>TWENTYTWO</font><br>
+<font color=red>NINETEEN</font><br>
+<font color=blue>FIFTEEN</font><br>
+TWENTYFOUR<br>
+<font color=9933CC>SEVEN</font><br>
+<font color=blue>FIFTEEN</font><br>
+<font color=9933CC>SEVEN</font>
+
+<td>
+<font color=gold>TWELVE</font><br>
+<font color=FF99FF>TWENTYONE</font><br>
+<font color=66AAFF>SIX</font><br>
+<font color=gold>TWELVE</font><br>
+<font color=66AAFF>SIX</font><br>
+<font color=66AAFF>TWENTYSIX</font><br>
+<font color=FF99FF>TWENTYONE</font><br>
+<font color=green>EIGHTEEN</font><br>
+<font color=9933CC>SEVENTEEN</font><br>
+<font color=66AAFF>TWENTYSIX</font><br>
+<font color=green>EIGHTEEN</font><br>
+<font color=9933CC>SEVENTEEN</font>
+
+<td>
+<font color=9933CC>SEVEN</font><br>
+<font color=66AAFF>SIXTEEN</font><br>
+<font color=9933CC>SEVEN</font><br>
+<font color=green>TWENTYEIGHT</font><br>
+<font color=66AAFF>SIXTEEN</font><br>
+<font color=blue>TWENTYFIVE</font><br>
+<font color=9933CC>TWENTYSEVEN</font><br>
+<font color=green>TWENTYEIGHT</font><br>
+<font color=gray>TEN</font><br>
+<font color=blue>TWENTYFIVE</font><br>
+<font color=gray>TEN</font><br>
+<font color=9933CC>TWENTYSEVEN</font>
+
+<td>
+<font color=green>EIGHT</font><br>
+<font color=green>EIGHTEEN</font><br>
+<font color=green>EIGHT</font><br>
+<font color=gray>THIRTY</font><br>
+<font color=66AAFF>SIXTEEN</font><br>
+<font color=green>EIGHTEEN</font><br>
+<font color=orange>THIRTEEN</font><br>
+<font color=66AAFF>SIXTEEN</font><br>
+<font color=gray>THIRTY</font><br>
+<font color=orange>THIRTEEN</font>
+</table><p>
+
+Bryce Herdt found this 2-dimensional Langford Array using the consecutive numbers from 3 to 12:
+
+<table align=center border=1><tr><td><table align=center cellpadding=3>
+<tr align=center><td><td><td><td><td><font color=66AAFF>SIX</font>
+<tr align=center><td><font color=FF99FF>ELEVEN</font><td><font color=orange>THREE</font><td><font color=gold>TWELVE</font><td><td><font color=FF99FF>ELEVEN</font>
+<tr align=center><td><font color=9933CC>SEVEN</font><td><font color=gray>TEN</font><td>FOUR<td><font color=9933CC>SEVEN</font><td><font color=66AAFF>SIX</font>
+<tr align=center><td><font color=blue>FIVE</font><td><font color=orange>THREE</font><td><font color=blue>FIVE</font><td><td>
+<tr align=center><td><font color=red>NINE</font><td><font color=green>EIGHT</font><td>FOUR<td><font color=red>NINE</font><td><font color=green>EIGHT</font>
+<tr align=center><td><td><font color=gray>TEN</font><td><font color=gold>TWELVE</font><td><td>
+</table></table><p>
+
+Here are the shortest known Roman Numeral Langford Lists containing a given number n:<p>
+
+<table border=1 align=center cellpadding=5 style="font-size:20;">
+<tr align=center>
+<th><font size=+0>2, 5, 6
+<th><font size=+0>3, 9
+<th><font size=+0>4, 10
+<th><font size=+0>7
+<th><font size=+0>8
+<th><font size=+0>11
+<th><font size=+0>12, 15
+<th><font size=+0>13
+<th><font size=+0>14
+<th><font size=+0>16
+<th><font size=+0>17
+<th><font size=+0>18
+<th><font size=+0>19
+<th><font size=+0>20
+<th><font size=+0>21, 23
+<th><font size=+0>22, 25
+<th><font size=+0>24
+<tr align=center>
+
+<td>
+<font color=blue>V</font><br>
+<font color=66AAFF>VI</font><br>
+<font color=gold>II</font><br>
+<font color=blue>V</font><br>
+<font color=gold>II</font><br>
+<font color=66AAFF>VI</font>
+
+<td>
+<font color=66AAFF>VI</font><br>
+<font color=red>IX</font><br>
+<font color=orange>III</font><br>
+<font color=66AAFF>VI</font><br>
+<font color=orange>III</font><br>
+<font color=red>IX</font>
+
+<td>
+IV<br>
+<font color=blue>V</font><br>
+<font color=gray>X</font><br>
+IV<br>
+<font color=blue>V</font><br>
+<font color=66AAFF>VI</font><br>
+<font color=gold>II</font><br>
+<font color=gray>X</font><br>
+<font color=gold>II</font><br>
+<font color=66AAFF>VI</font><br><font size=+0>(MM)
+
+<td>
+<font color=gold>II</font><br>
+<font color=gray>X</font><br>
+<font color=gold>II</font><br>
+<font color=blue>XV</font><br>
+<font color=9933CC>VII</font><br>
+<font color=gray>X</font><br>
+<font color=green>VIII</font><br>
+<font color=9933CC>VII</font><br>
+<font color=blue>XV</font><br>
+<font color=green>VIII</font><br><font size=+0>(MM)
+
+<td>
+<font color=green>VIII</font><br>
+<font color=gold>XII</font><br>
+<font color=blue>XV</font><br>
+<font color=green>VIII</font><br>
+IV<br>
+<font color=gold>XII</font><br>
+IV</font><br>
+<font color=blue>XV</font><br><font size=+0>(MM)
+
+<td>
+<font color=red>IX</font><br>
+<font color=FF99FF>XI</font><br>
+<font color=gold>II</font><br>
+<font color=blue>V</font><br>
+<font color=gold>II</font><br>
+<font color=red>IX</font><br>
+<font color=blue>V</font><br>
+<font color=FF99FF>XI</font>
+
+<td>
+<font color=gold>XII</font><br>
+XIV<br>
+<font color=blue>XV</font><br>
+IV<br>
+<font color=gold>XII</font><br>
+IV<br>
+XIV<br>
+<font color=blue>XV</font>
+
+<td>
+<font color=blue>V</font><br>
+<font color=orange>XIII</font><br>
+<font color=blue>V</font><br>
+<font color=gold>XII</font><br>
+<font color=blue>XV</font><br>
+<font color=red>IX</font><br>
+<font color=orange>XIII</font><br>
+<font color=gold>XII</font><br>
+<font color=red>IX</font><br>
+<font color=blue>XV</font><br><font size=+0>(MM)
+
+<td>
+XIV<br>
+<font color=blue>V</font><br>
+<font color=66AAFF>VI</font><br>
+<font color=gold>II</font><br>
+<font color=blue>V</font><br>
+<font color=gold>II</font><br>
+<font color=66AAFF>VI</font><br>
+XIV
+
+<td>
+<font color=blue>XV</font><br>
+<font color=9933CC>VII</font><br>
+<font color=66AAFF>XVI</font><br>
+<font color=gray>X</font><br>
+<font color=9933CC>VII</font><br>
+<font color=blue>XV</font><br>
+<font color=gold>II</font><br>
+<font color=gray>X</font><br>
+<font color=gold>II</font><br>
+<font color=66AAFF>XVI</font><br><font size=+0>(MM)
+
+<td>
+<font color=FF99FF>XI</font><br>
+<font color=9933CC>XVII</font><br>
+<font color=FF99FF>XXI</font><br>
+<font color=FF99FF>XI</font><br>
+<font color=orange>III</font><br>
+<font color=red>IX</font><br>
+<font color=orange>III</font><br>
+<font color=9933CC>XVII</font><br>
+<font color=red>IX</font><br>
+<font color=FF99FF>XXI</font><br><font size=+0>(MM)
+
+<td>
+<font color=green>XVIII</font><br>
+<font color=66AAFF>VI</font><br>
+<font color=red>IX</font><br>
+<font color=orange>III</font><br>
+<font color=66AAFF>VI</font><br>
+<font color=orange>III</font><br>
+<font color=red>IX</font><br>
+<font color=green>XVIII</font>
+
+<td>
+<font color=green>VIII</font><br>
+<font color=red>XIX</font><br>
+<font color=FF99FF>XI</font><br>
+<font color=green>VIII</font><br>
+<font color=gold>II</font><br>
+<font color=blue>V</font><br>
+<font color=gold>II</font><br>
+<font color=FF99FF>XI</font><br>
+<font color=blue>V</font><br>
+<font color=red>XIX</font><br><font size=+0>(MM)
+
+<td>
+<font color=gray>XX</font><br>
+<font color=red>IX</font><br>
+<font color=FF99FF>XI</font><br>
+<font color=gold>II</font><br>
+<font color=blue>V</font><br>
+<font color=gold>II</font><br>
+<font color=red>IX</font><br>
+<font color=blue>V</font><br>
+<font color=FF99FF>XI</font><br>
+<font color=gray>XX</font>
+
+<td>
+<font color=orange>XXIII</font><br>
+<font color=FF99FF>XXXI</font><br>
+<font color=FF99FF>XXI</font><br>
+<font color=gold>II</font><br>
+<font color=blue>V</font><br>
+<font color=gold>II</font><br>
+<font color=red>IX</font><br>
+<font color=blue>V</font><br>
+<font color=orange>XXIII</font><br>
+<font color=red>IX</font><br>
+<font color=FF99FF>XXI</font><br>
+<font color=FF99FF>XXXI</font><br><font size=+0>(BH)
+<td>?
+
+<td>
+XXIV<br>
+XIV<br>
+<font color=blue>V</font><br>
+<font color=66AAFF>VI</font><br>
+<font color=gold>II</font><br>
+<font color=blue>V</font><br>
+<font color=gold>II</font><br>
+<font color=66AAFF>VI</font><br>
+XIV<br>
+XXIV<br><font size=+0>(BH)
+</table><p>
+
+
+
+
+
+Here are the shortest known Digital Clock Langford Lists containing a given number n:<p>
+
+<table border=1 align=center cellpadding=5>
+<tr align=center><th>4, 11, 12<th>5, 15, 28<th>6, 16<th>7, 8, 17, 25<th>9<th>10<th>13<th>14, 26<th>18, 29<th>19, 20, 27<th>21, 22, 23<th>24<th>30
+<tr align=center>
+
+<td>
+<img src="0117/1.gif"><img src="0117/1.gif"><br>
+<img src="0117/1.gif"><img src="0117/2.gif"><br>
+<img src="0117/4.gif"><br>
+<img src="0117/1.gif"><img src="0117/1.gif"><br>
+<img src="0117/4.gif"><br>
+<img src="0117/1.gif"><img src="0117/2.gif"><br><font size=+0>(MM)
+
+<td>
+<img src="0117/1.gif"><img src="0117/5.gif"><br>
+<img src="0117/2.gif"><img src="0117/8.gif"><br>
+<img src="0117/7.gif"><br>
+<img src="0117/1.gif"><img src="0117/5.gif"><br>
+<img src="0117/7.gif"><br>
+<img src="0117/5.gif"><br>
+<img src="0117/1.gif"><img src="0117/7.gif"><br>
+<img src="0117/5.gif"><br>
+<img src="0117/2.gif"><img src="0117/8.gif"><br>
+<img src="0117/1.gif"><img src="0117/7.gif"><br><font size=+0>(MM)
+
+<td>
+<img src="0117/1.gif"><img src="0117/6.gif"><br>
+<img src="0117/3.gif"><img src="0117/2.gif"><br>
+<img src="0117/1.gif"><img src="0117/4.gif"><br>
+<img src="0117/1.gif"><img src="0117/6.gif"><br>
+<img src="0117/6.gif"><br>
+<img src="0117/1.gif"><img src="0117/4.gif"><br>
+<img src="0117/6.gif"><br>
+<img src="0117/3.gif"><img src="0117/2.gif"><br><font size=+0>(BH)
+
+<td>
+<img src="0117/1.gif"><img src="0117/7.gif"><br>
+<img src="0117/2.gif"><img src="0117/5.gif"><br>
+<img src="0117/8.gif"><br>
+<img src="0117/1.gif"><img src="0117/7.gif"><br>
+<img src="0117/7.gif"><br>
+<img src="0117/8.gif"><br>
+<img src="0117/7.gif"><br>
+<img src="0117/2.gif"><img src="0117/5.gif">
+
+<td>
+<img src="0117/7.gif"><br>
+<img src="0117/8.gif"><br>
+<img src="0117/7.gif"><br>
+<img src="0117/1.gif"><img src="0117/7.gif"><br>
+<img src="0117/8.gif"><br>
+<img src="0117/9.gif"><br>
+<img src="0117/1.gif"><img src="0117/1.gif"><br>
+<img src="0117/1.gif"><img src="0117/7.gif"><br>
+<img src="0117/9.gif"><br>
+<img src="0117/1.gif"><img src="0117/1.gif"><br><font size=+0>(MM)
+
+<td>
+<img src="0117/1.gif"><img src="0117/0.gif"><br>
+<img src="0117/2.gif"><img src="0117/5.gif"><br>
+<img src="0117/1.gif"><img src="0117/0.gif"><br>
+<img src="0117/1.gif"><img src="0117/9.gif"><br>
+<img src="0117/1.gif"><img src="0117/8.gif"><br>
+<img src="0117/2.gif"><img src="0117/5.gif"><br>
+<img src="0117/1.gif"><img src="0117/9.gif"><br>
+<img src="0117/1.gif"><img src="0117/8.gif">
+
+
+<td>
+<img src="0117/1.gif"><img src="0117/3.gif"><br>
+<img src="0117/2.gif"><img src="0117/5.gif"><br>
+<img src="0117/7.gif"><br>
+<img src="0117/1.gif"><img src="0117/3.gif"><br>
+<img src="0117/7.gif"><br>
+<img src="0117/1.gif"><img src="0117/5.gif"><br>
+<img src="0117/1.gif"><img src="0117/7.gif"><br>
+<img src="0117/2.gif"><img src="0117/5.gif"><br>
+<img src="0117/1.gif"><img src="0117/5.gif"><br>
+<img src="0117/1.gif"><img src="0117/7.gif"><br><font size=+0>(MM)
+
+<td>
+<img src="0117/7.gif"><br>
+<img src="0117/1.gif"><img src="0117/2.gif"><br>
+<img src="0117/7.gif"><br>
+<img src="0117/2.gif"><img src="0117/4.gif"><br>
+<img src="0117/1.gif"><img src="0117/2.gif"><br>
+<img src="0117/2.gif"><img src="0117/6.gif"><br>
+<img src="0117/1.gif"><img src="0117/4.gif"><br>
+<img src="0117/2.gif"><img src="0117/4.gif"><br>
+<img src="0117/1.gif"><img src="0117/7.gif"><br>
+<img src="0117/1.gif"><img src="0117/4.gif"><br>
+<img src="0117/2.gif"><img src="0117/6.gif"><br>
+<img src="0117/1.gif"><img src="0117/7.gif"><br>
+<font size=+0>(MM)
+
+<td>
+<img src="0117/1.gif"><img src="0117/8.gif"><br>
+<img src="0117/2.gif"><img src="0117/9.gif"><br>
+<img src="0117/1.gif"><img src="0117/2.gif"><br>
+<img src="0117/1.gif"><img src="0117/8.gif"><br>
+<img src="0117/7.gif"><br>
+<img src="0117/1.gif"><img src="0117/2.gif"><br>
+<img src="0117/7.gif"><br>
+<img src="0117/2.gif"><img src="0117/9.gif"><br><font size=+0>(BH)
+
+<td>
+<img src="0117/1.gif"><img src="0117/9.gif"><br>
+<img src="0117/2.gif"><img src="0117/0.gif"><br>
+<img src="0117/2.gif"><img src="0117/7.gif"><br>
+<img src="0117/1.gif"><img src="0117/9.gif"><br>
+<img src="0117/1.gif"><img src="0117/1.gif"><br>
+<img src="0117/2.gif"><img src="0117/0.gif"><br>
+<img src="0117/1.gif"><img src="0117/1.gif"><br>
+<img src="0117/2.gif"><img src="0117/7.gif">
+
+<td>?
+
+<td>
+<img src="0117/2.gif"><img src="0117/4.gif"><br>
+<img src="0117/2.gif"><img src="0117/9.gif"><br>
+<img src="0117/7.gif"><br>
+<img src="0117/1.gif"><img src="0117/2.gif"><br>
+<img src="0117/7.gif"><br>
+<img src="0117/2.gif"><img src="0117/4.gif"><br>
+<img src="0117/1.gif"><img src="0117/2.gif"><br>
+<img src="0117/2.gif"><img src="0117/9.gif">
+
+<td>?
+
+
+</table><p>
+
+Bryce Herdt's solution for 6 and 16 contains only even numbers, and Mark Mammel's list for 13 only contains odd numbers.  Bryce wondered whether there were lists having greatest common factor higher than 2.<p>
+
+
+Here are the shortest known Coinage Langford Lists containing a given number n:<p>
+
+
+<table border=1 align=center cellpadding=5>
+<tr align=center><th>1, 4<th>2, 3, 5, 6<th>7<th>8<th>9<th>10
+<tr align=center>
+
+<td>
+<img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br><font size=+0>(MM)
+
+<td>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif">
+
+<td>
+<img src="0117/nickel.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif">
+
+<td>
+<img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br><font size=+0>(MM)
+
+<td>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><br><font size=+0>(MM)
+
+<td>
+<img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><br>
+<img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br><font size=+0>(MM)
+
+</table><p>
+
+
+
+
+<table border=1 align=center cellpadding=5>
+<tr align=center><th>11<th>12<th>13<th>14<th>15<th>16
+<tr align=center>
+
+<td>
+<img src="0117/dime.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><br>
+<img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><br><font size=+0>(MM)
+
+<td>
+<img src="0117/nickel.gif"><br>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><br>
+<img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><br><font size=+0>(MM)
+
+<td>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br><font size=+0>(MM)
+
+
+<td>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+
+<td>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/nickel.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><br>
+<img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/dime.gif"><img src="0117/nickel.gif"><br>
+<img src="0117/dime.gif"><br><font size=+0>(MM)
+
+<td>
+<img src="0117/dime.gif"><img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/dime.gif"><img src="0117/nickel.gif"><img src="0117/penny.gif"><br><font size=+0>(BH)
+
+</table><p>
+
+
+
+
+<table border=1 align=center cellpadding=5>
+<tr align=center><th>17<th>18<th>19<th>20
+<tr align=center>
+
+<td>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><br>
+<img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br><font size=+0>(MM)
+
+<td>
+<img src="0117/dime.gif"><img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><br>
+<img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br><font size=+0>(MM)
+
+<td>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/dime.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><br>
+<img src="0117/dime.gif"><img src="0117/dime.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br><font size=+0>(MM)
+
+<td>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><img src="0117/dime.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><br>
+<img src="0117/dime.gif"><img src="0117/penny.gif"><br>
+<img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/nickel.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><img src="0117/penny.gif"><br>
+<img src="0117/dime.gif"><br>
+<img src="0117/dime.gif"><img src="0117/dime.gif"><br><font size=+0>(MM)
+
+
+</table><p>
+
+
+<HR><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 1/1/17.<font>
+</BODY></HTML>

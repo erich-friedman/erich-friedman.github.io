@@ -1,0 +1,32 @@
+<HTML>
+<CENTER>n=6 players, N=10 games:</CENTER>
+<pre>
+A plays B, C plays D, winners play.  say A beats C by symmetry.
+C plays E
+IF C WINS, C plays F
+  IF C WINS, A plays C twice
+    IF A WINS TWICE, A wins the tournament
+    IF A AND C SPLIT, A plays C best-of-3
+    IF C WINS TWICE, A plays B and winner plays C twice (C wins ties)
+  IF F WINS, A plays F twice
+    IF A WINS TWICE, C plays D and winner plays A twice (A wins ties)
+    IF A AND F SPLIT, A plays F best-of-3
+    IF F WINS TWICE, A plays C and winner plays F twice (F wins ties)
+IF E WINS, A plays E
+  IF A WINS, E plays F
+    IF E WINS, A plays E
+      IF A WINS, D plays A 3 times and needs to win them all
+      IF E WINS, A plays E best-of-3
+    IF F WINS, A plays F
+      IF A WINS, D plays F and winner plays A twice (A wins ties)
+      IF F WINS, A plays F best-of-3
+  IF E WINS, A plays E again
+    IF A WINS, E plays F
+      IF E WINS, A plays E best-of-3
+      IF F WINS, A plays F
+        IF A WINS, E plays A twice (A wins ties)
+        IF F WINS, A plays F twice (F wins ties)
+    IF E WINS, E plays F
+      IF E WINS, D plays E 3 times and needs to win them all
+      IF F WINS, D plays E best-of-3
+</pre>

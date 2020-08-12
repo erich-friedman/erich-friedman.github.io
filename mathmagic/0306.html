@@ -1,0 +1,204 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+
+<CENTER><H1>Problem of the Month (March 2006)</H1></CENTER>
+
+This month we consider some problems involving playing cards.<p>
+
+<font size=+2>Problem #1:</font> In Cribbage, a collection of cards scores as follows:<p>
+
+<bu> 2 points for each set of cards that totals 15 (face cards count 10, aces count 1)<br>
+<bu> 2 points for each pair (this means 3-of-a-kind is worth 6 points and 4-of-a-kind is worth 12 points)<br>
+<bu> n points for each maximal straight containing n&ge;3 cards<br>
+<bu> n points for each maximal flush containing n&ge;4 cards<br>
+<bu> 1 point for the jack of trump<p>
+
+Usually, Cribbage is played with 5 cards.  It is well known that the highest scoring 5 card cribbage hand is J5555, worth 29 points.  What is the highest scoring n card Cribbage hand, for other values of n?<p>
+
+<font size=+2>Problem #2:</font> In a Poker variant called Guts, each player is dealt cards, and then each player declares simultaneously whether he is in or out.  Of all the players who are in, the best poker hand wins the pot and all the others match the pot. <p>
+
+If there are p players, and n cards dealt to each player, what is the worst hand that a player should stay in with?<p>
+
+<font size=+2>Problem #3:</font> My favorite magic trick involving cards is the following.  Alice gives Bob any 5 cards without Chuck seeing any of them.  Bob reveals 4 of those cards face up, one at a time.  Chuck, who is working with Bob, names the fifth card without seeing it.  <p>
+
+How do Bob and Chuck do this trick?  Here's a more general question: If Alice gives Bob n cards, and Bob can always play k of them so that Chuck can predict the other cards, what is the maximum number of cards in the deck?  If the cards can be labeled in any way, what is the "easiest" strategy for achieving this trick?<p>
+
+<font size=+2>Problem #4:</font> Pinochle is played with a 48 card Pinochle deck: the aces, kings, queens, jacks, tens and nines from a double deck.  A hand scores as follows:<p>
+
+<bu>These points are multiplied by 10 if you have both sets:<br>
+<bu> &nbsp; &nbsp; 15 points for a run (A K Q J T of trump)<br>
+<bu> &nbsp; &nbsp; 10 points for aces around (ace of each suit)<br>
+<bu> &nbsp; &nbsp; 8 points for kings around<br>
+<bu> &nbsp; &nbsp; 6 points for queens around<br>
+<bu> &nbsp; &nbsp; 4 points for jacks around<br>
+<bu> &nbsp; &nbsp; 4 points for pinochle (Q of spades and J of diamonds)<p>
+<bu>These points are multiplied by 2 if you have both sets:<br>
+<bu> &nbsp; &nbsp; 2 points for non-trump KQ<br>
+<bu> &nbsp; &nbsp; 4 points for KQ of trump (not already part of a run)<br>
+<bu> &nbsp; &nbsp; 1 point for 9 of trump<p>
+
+Unlike Cribbage, a card in Pinochle can only be used once within any given category.  Usually, Pinochle is played with 12 cards.  I think the maximal score with 12 cards is 190, for a double run in spades and two jacks of diamonds.  What is the highest scoring n card Pinochle hand, for various values of n?<p>
+
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+
+
+<font size=+2>Problem #1:</font><p>
+
+Gavin Theobald found the highest scoring hands for n&le;20, including one improvement.<p>
+
+Jeremy Galvagni found the highest scoring hands for n&le;6.<p>
+
+Joe DeVincentis found the highest scoring hands for n&le;7, but proved his assertions for n&le;4.<p>
+
+Philippe Fondanaiche found the highest scoring hands for n=6 and n=7.<p>
+
+<center><font size=+3>Highest Known Scoring<br>Cribbage Hand with n Cards</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=5>
+<tr bgcolor=palegreen><th>Cards<th>Points<th>Hand
+<tr align=center><td>1<td>1<td>J
+<tr align=center><td>2<td>3<td>JJ &nbsp; or &nbsp; 5J
+<tr align=center><td>3<td>8<td>555
+<tr align=center><td>4<td>20<td>5555
+<tr align=center><td>5<td>29<td>5555J
+<tr align=center><td>6<td>46<td>445566
+<tr align=center><td>7<td>72<td>4455566
+<tr align=center><td>8<td>112<td>33334455
+<tr align=center><td>9<td>188<td>AA2233444
+<tr align=center><td>10<td>332<td>AA22334455
+<tr align=center><td>11<td>576<td>AAA22233344 &nbsp; or &nbsp; AAA22233444 &nbsp; or &nbsp; AAA22333444 &nbsp; or &nbsp; AA222333444 <font color=blue>(GT)
+<tr align=center><td>12<td>1,024<td>AAA222333444
+<tr align=center><td>13<td>1,836<td>(A2)33344
+<tr align=center><td>14<td>3,206<td>(A23)44
+<tr align=center><td>15<td>5,086<td>(A23)444
+<tr align=center><td>16<td>7,440<td>(A234)
+<tr align=center><td>17<td>9,601<td>(A234)5
+<tr align=center><td>18<td>12,980<td>(A234)55
+<tr align=center><td>19<td>16,555<td>(A234)555
+<tr align=center><td>20<td>20,328<td>(A2345)
+<tr align=center><td>...<td>...<td>...
+<tr align=center><td>52<td>872,449,969<td>(A23456789TJQK)
+</table></center>
+
+<p><hr><p>
+
+<font size=+2>Problem #2:</font><p>
+
+Joe DeVincentis sent a well thought out analysis.  You should stay in when your expected winning is larger staying in than going out.  Ignoring that the same cards can not be dealt twice, he found out that you should stay in with probability .5 with 2 players, .293 with 3 players, and .207 with 4 players.<p>
+
+<center><font size=+3>Worst Approximate Hand to Stay<br>in Guts With p Players and n Cards</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=10>
+<tr bgcolor=palegreen><th>n \ p<th>2<th>3<th>4
+<tr align=center><th bgcolor=palegreen>1<td>8<td>J<td>Q
+<tr align=center><th bgcolor=palegreen>2<td>J7<td>K5 <font color=red>(JD)<td>KQ <font color=red>(JD)
+<tr align=center><th bgcolor=palegreen>3<td>K63<td>A85 <font color=green>(TG)<td>AQT <font color=red>(JD)
+<tr align=center><th bgcolor=palegreen>4<td>A875 
+<tr align=center><th bgcolor=palegreen>5<td>AKQJ7 
+<tr align=center><th bgcolor=palegreen>6<td>66A74 
+</table></center><p>
+
+Trevor Green did not ignore that cards can not be dealt twice, and found that the critical hands changed slightly.  His complete analysis for n=5 and p=2 convinced me that this was a VERY HARD problem.<p>
+
+<center><font size=+3>Worst Exact Hand to Stay<br>in Guts With p Players and n Cards</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=10>
+<tr bgcolor=palegreen><th>n \ p<th>2<th>3<th>4
+<tr align=center><th bgcolor=palegreen>1<td>8<td>J<td>Q
+<tr align=center><th bgcolor=palegreen>2<td>J8 <font color=green>(TG)<td>K4 <font color=green>(TG)<td>A2 <font color=green>(TG)
+<tr align=center><th bgcolor=palegreen>3<td>K42 <font color=green>(TG)<td>A82 <font color=green>(TG)
+<tr align=center><th bgcolor=palegreen>4<td>A532 <font color=green>(TG)
+<tr align=center><th bgcolor=palegreen>5<td>AKQ98* <font color=green>(TG)
+</table>
+* with AKQ98, call if 4-suited with A-9, A-8 or K-8 matching,<br>
+and call 4/5 of the time if 4-suited with K-9 or Q-8 matching.</center>
+<p>
+
+Then in 2013, Trevor Green gave an even more detailed analysis of the 2-player game.  His final results were:<p>
+
+<center><font size=+3>Worst Exact Hand to Stay<br>in Guts With 2 Players and n Cards</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=10>
+<tr bgcolor=palegreen><th>n<th>hand
+<tr align=center><th>1<td>T <font color=green>(TG)
+<tr align=center><th>2<td>K2 <font color=green>(TG)
+<tr align=center><th>3<td>A32 <font color=green>(TG)
+<tr align=center><th>4<td>AKJ4 <font color=green>(TG)
+<tr align=center><th>5<td>77982 or 77A32 <font color=green>(TG)
+</table></center>
+<p><hr><p>
+
+
+<font size=+2>Problem #3:</font><p>
+
+Joe DeVincentis solved the problem with n=5 and k=4.  He also found the upper bounds below.<p>
+
+The method for 124 cards for n=5 and k=4 is basically this: The cards are numbered 0 to 123, given 5 cards c<sub>0</sub> &lt; c<sub>1</sub> &lt; c<sub>2</sub> &lt; c<sub>3</sub> &lt; c<sub>4</sub>, the assistant hides c<sub>i</sub> where i = c<sub>0</sub> + c<sub>1</sub> + c<sub>2</sub> + c<sub>3</sub> + c<sub>4</sub> (mod 5). Let the sum of the displayed cards be s (mod 5). If you renumber the 120 non-displayed cards consecutively 0 to 119, then the hidden card must be -s (mod 5), limiting it to precisely 24 of the non-displayed cards. The order of the four cards then determines which of the 24 it is.  Philippe Fondanaiche also mentioned that it is possible to predict the last card when the deck has size d = n! + n &ndash; 1 cards.<p>
+
+Trevor Green found explicit strategies for k=2 and 3&le;n&le;5, and the lower bound d&ge;n+k.<p>
+
+Here are (rotationally symmetric) strategies for k=2.<p>
+
+<center>n=3: 123: play 32 / 124: play 42 / 125: play 52 / 126: play 62 / 134: play 34 / 135: play 35 / 136: play 36<p>
+n=4: 1234: play 12 / 1235: play 53 / 1236: play 63 / 1245: play 54 / 1246: play 46<p>
+n=5: 45678: play 54 / 35678: play 53 / 34678: play 63 / 34578: play 73 /<br>25678: play 56 / 24678: play 46 / 24578: play 47</center><p>
+
+<center><font size=+3>Bounds on Largest Deck Size</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=10>
+<tr bgcolor=palegreen><th>n \ k<th width=40>1<th width=40>2<th>3<th>4<th>5<th>6
+<tr align=center><th bgcolor=palegreen>2<td>3
+<tr align=center><th bgcolor=palegreen>3<td>4<td>8
+<tr align=center><th bgcolor=palegreen>4<td>5<td>7<td>27
+<tr align=center><th bgcolor=palegreen>5<td>6<td>8<td>8-14<td>124
+<tr align=center><th bgcolor=palegreen>6<td>7<td>8<td>9-13<td>10-31<td>725
+<tr align=center><th bgcolor=palegreen>7<td>8<td>9<td>10-13<td>11-22<td>12-76<td>5046
+</table></center>
+
+<p><hr><p>
+
+
+<font size=+2>Problem #4:</font><p>
+
+<center><font size=+3>Highest Known Scoring<br>Pinochle Hand with n Cards</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=5>
+<tr bgcolor=palegreen><th>Cards<th>Points<th>Hand
+<tr align=center><td>1<td>1<td>9
+<tr align=center><td>2<td>4<td><b>Q</b> <i>J</i> &nbsp; or &nbsp; KQ
+<tr align=center><td>3<td>8<td><b>KQ</b> <i>J</i> <font color=red>(JD)
+<tr align=center><td>4<td>40<td><b>QQ</b> <i>JJ</i>
+<tr align=center><td>5<td>44<td><b>KQQ</b> <i>JJ</i>
+<tr align=center><td>6<td>48<td><b>KKQQ</b> <i>JJ</i>
+<tr align=center><td>7<td>49<td><b>KKQQ9</b> <i>JJ</i>
+<tr align=center><td>8<td>100<td>AA AA AA AA
+<tr align=center><td>9<td>101<td>AA9 AA AA AA
+<tr align=center><td>10<td>150<td>AAKKQQJJTT
+<tr align=center><td>11<td>154<td><b>AAKKQQJJTT</b> <i>J</i> &nbsp; or &nbsp; <i>AAKKQQJJTT</i> <b>Q</b>
+<tr align=center><td>12<td>190<td><b>AAKKQQJJTT</b> <i>JJ</i> &nbsp; or &nbsp; <i>AAKKQQJJTT</i> <b>QQ</b>
+<tr align=center><td>13<td>192<td><i>AAKKQQJJTT</i> <b>KQQ</b>
+<tr align=center><td>14<td>196<td><i>AAKKQQJJTT</i> <b>QQ</b> Q Q <font color=red>(JD)
+<tr align=center><td>15<td>200<td><b>AAKKQQJJTT</b> <i>AJJ</i> A A &nbsp; or &nbsp; <i>AAKKQQJJTT</i> <b>AQQ</b> A A
+<tr align=center><td>16<td>250<td>AAKKQQJJTT AA AA AA &nbsp; or &nbsp; <i>AAKKQQJJTT</i> QQ QQ QQ 
+<tr align=center><td>17<td>254<td><b>AAKKQQJJTT</b> <i>AAJ</i> AA AA &nbsp; or &nbsp; <i>AAKKQQJJTT</i> <b>AAQ</b> AA AA
+<tr align=center><td>18<td>290<td><b>AAKKQQJJTT</b> <i>AAJJ</i> AA AA &nbsp; or &nbsp; <i>AAKKQQJJTT</i> <b>AAQQ</b> AA AA
+<tr align=center><td>19<td>292<td><i>AAKKQQJJTT</i> <b>AAKQQ</b> AA AA
+<tr align=center><td>20<td>296<td><i>AAKKQQJJTT</i> <b>AAQQ</b> AAQ AAQ
+<tr align=center><td>21<td>298<td><i>AAKKQQJJTT</i> <b>AAQQ</b> AAKQ AAQ <font color=red>(JD)
+<tr align=center><td>22<td>350<td><i>AAKKQQJJTT</i> AAQQ AAQQ AAQQ <font color=red>(JD)
+<tr align=center><td>23<td>352<td><i>AAKKQQJJTT</i> AAKQQ AAQQ AAQQ <font color=blue>(GT)
+<tr align=center><td>24<td>374<td><i>AAKKQQJJTT</i> <b>AAKKQQ</b> AAKK AAKK <font color=blue>(GT)
+<tr align=center><td>25<td>376<td><i>AAKKQQJJTT</i> <b>AAKKQQ</b> AAKKQ AAKK <font color=blue>(GT)
+<tr align=center><td>26<td>384<td><i>AAKKQQJJTT</i> <b>AAKKQQ</b> AAKKQ AAKKQ <font color=blue>(GT)
+<tr align=center><td>27<td>386<td><i>AAKKQQJJTT</i> <b>AAKKQQ</b> AAKKQQ AAKKQ <font color=blue>(GT)
+<tr align=center><td>28<td>442<td><i>AAKKQQJJTT</i> AAKKQQ AAKKQQ AAKKQQ <font color=blue>(GT)
+<tr align=center><td>29<td>443<td><i>AAKKQQJJTT9</i> AAKKQQ AAKKQQ AAKKQQ <font color=blue>(GT)
+<tr align=center><td>30<td>444<td><i>AAKKQQJJTT99</i> AAKKQQ AAKKQQ AAKKQQ <font color=blue>(GT)
+<tr align=center><td>31<td>446<td><i>AAKKQQJJTT</i> AAKKQQJ AAKKQQJ AAKKQQJ <font color=blue>(GT)
+<tr align=center><td>32<td>447<td><i>AAKKQQJJTT9</i> AAKKQQJ AAKKQQJ AAKKQQJ <font color=blue>(GT)
+<tr align=center><td>33<td>448<td><i>AAKKQQJJTT99</i> AAKKQQJ AAKKQQJ AAKKQQJ <font color=blue>(GT)
+<tr align=center><td>34<td>482<td>AAKKQQJJTT AAKKQQJJ AAKKQQJJ AAKKQQJJ <font color=blue>(GT)
+<tr align=center><td>35<td>483<td>AAKKQQJJTT9 AAKKQQJJ AAKKQQJJ AAKKQQJJ <font color=blue>(GT)
+<tr align=center><td>36-48<td>484<td>AAKKQQJJTT99 AAKKQQJJ AAKKQQJJ AAKKQQJJ <font color=blue>(GT)
+</table>
+(bold are spades, italics are diamonds)</center><p>
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 7/27/13.<font>
+</BODY></HTML>

@@ -1,0 +1,471 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (August 2011)</H1></CENTER>
+
+<font size=+2>1.</font><p>
+
+We call a polyomino P <b>distinguishable</b> if there are integers n, k, a, b, so that P is the only n-omino where a maximum of k copies of P can be packed in an a&times;b box.  If P is dintinguishable, we call the smallest such k the <b>distinguishing mark</b> of P.<p>
+
+Can you show that not all polyominoes are distinguishable?  What is the smallest one?  What are the distinguishing marks of some larger polyominoes?  What about polyaboloes?  What about polykings?<p>
+
+We call a polyomino P <b>super-distinguishable</b> if there are integers k, a, b, so that P is the only polyomino where a maximum of k copies of P can be packed in an a&times;b box.  Which polyominoes are super-distinguishable?<p>
+
+We call a polyomino P <b>2-distinguishable</b> if there are integers n, k<sub>1</sub>, a<sub>1</sub>, b<sub>1</sub>, k<sub>2</sub>, a<sub>2</sub>, b<sub>2</sub>, so that P is the only n-omino where a maximum of k<sub>1</sub> copies of P can be packed in an a<sub>1</sub>&times;b<sub>1</sub> box, and a maximum of k<sub>2</sub> copies of P can be packed in an a<sub>2</sub>&times;b<sub>2</sub> box.  Which polyominoes are 2-distinguishable?<p>
+
+<font size=+2>2.</font><p>
+
+For a given positive integer n, what is the smallest polyomino jigsaw puzzle in a square tray that has exactly n solutions, including rotations and reflections?  (Here "smallest" means smallest tray, and of those, smallest number of pieces.)  What are the solutions for rectangular trays?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+<font size=+2>1.</font><p>
+
+Solutions were received from George Sicherman, Berend van der Zwaag, Andrew Bayly, David Wilson, Bryce Herdt, and Gavin Theobald.<p>
+
+Berend van der Zwaag and George Sicherman showed that not all polyominoes are distinguishable.<p>
+
+Here are the known distinguishing marks of distinguishable polyominoes:<p>
+
+<TABLE align=center><tr><td>
+
+<table align=center border=1 bgcolor=FFFFFF cellpadding=10>
+<tr><th colspan=3><font size=+2>Small<br>Polyominoes
+<tr><th>Poly<th>Dist
+<tr align=center><td><img src="0811/1O.png"><td>0 in 0&times;0
+<tr align=center><td><img src="0811/2I.png"><td>0 in 0&times;0
+<tr align=center><td><img src="0811/3I.png"><td>0 in 2&times;2
+<tr align=center><td><img src="0811/3L.png"><td>0 in 1&times;3
+</table>
+
+<TD width=25><TD>
+
+<table align=center border=1 bgcolor=FFFFFF cellpadding=10>
+<tr><th colspan=3><font size=+2>Tetrominoes
+<tr><th>Poly<th>Dist
+<tr align=center><td><img src="0811/4I.png"><td>0 in 2&times;3
+<tr align=center><td><img src="0811/4O.png"><td>1 in 2&times;2
+<tr align=center><td><img src="0811/4L.png"><td>2 in 3&times;3
+<tr align=center><td><img src="0811/4S.png"><td>3 in 4&times;4
+<tr align=center><td><img src="0811/4T.png"><td>4 in 3&times;7 (GS)
+</table>
+
+<TD width=25><TD>
+<table align=center border=1 bgcolor=FFFFFF cellpadding=10>
+<tr><th colspan=3><font size=+2>Pentominoes
+<tr><th>Poly<th>Dist
+<tr align=center><td><img src="0811/5I.png"><td>0 in 3&times;4
+<tr align=center><td><img src="0811/5X.png"><td>1 in 3&times;5
+<tr align=center><td><img src="0811/5P.png"><td>3 in 4&times;4
+<tr align=center><td><img src="0811/5U.png"><td>3 in 2&times;11
+<tr align=center><td><img src="0811/5Z.png"><td>6 in 5&times;9
+<tr align=center><td><img src="0811/5T.png"><td>7 in 6&times;8
+<tr align=center><td><img src="0811/5L.png"><td>7 in 3&times;13 (GS)
+<tr align=center><td><img src="0811/5V.png"><td>9 in 5&times;10
+<tr align=center><td><img src="0811/5Y.png"><td>13 in 5&times;14 (BZ)
+<tr align=center><td><img src="0811/5S.png"><td>13 in 4&times;18 (BZ)
+</table>
+
+<TD width=25><TD>
+<table align=center border=1 bgcolor=FFFFFF cellpadding=10>
+<tr><th colspan=3><font size=+2>Hexominoes
+<tr><th>Poly<th>Dist
+<tr align=center><td><img src="0811/6I.png"><td>0 in 3&times;5
+<tr align=center><td><img src="0811/6O.png"><td>1 in 2&times;3
+<tr align=center><td><img src="0811/6Y'.png"><td>2 in 4&times;7
+<tr align=center><td><img src="0811/6C.png"><td>3 in 2&times;14
+<tr align=center><td><img src="0811/6R.png"><td>4 in 3&times;15 (GS)
+<tr align=center><td><img src="0811/6Z.png"><td>6 in 5&times;13 (GS)
+<tr align=center><td><img src="0811/6X'.png"><td>7 in 6&times;11 (GS)
+<tr align=center><td><img src="0811/6Y.png"><td>10 in 3&times;24 (GS)
+</table>
+
+<TD width=25><TD>
+
+<table align=center border=1 bgcolor=FFFFFF cellpadding=10>
+<tr><th colspan=3><font size=+2>Heptominoes
+<tr><th>Poly<th>Dist
+<tr align=center><td><img src="0811/7I.png"><td>0 in 4&times;6
+<tr align=center><td><img src="0811/7C.png"><td>1 in 2&times;9
+<tr align=center><td><img src="0811/7X'.png"><td>1 in 4&times;7 (GS)
+<tr align=center><td><img src="0811/7X.png"><td>2 in 5&times;8
+<tr align=center><td><img src="0811/7P.png"><td>3 in 2&times;11
+<tr align=center><td><img src="0811/7Q.png"><td>5 in 6&times;6 (GS)
+<tr align=center><td><img src="0811/7R.png"><td>5 in 3&times;24 (GS)
+<tr align=center><td><img src="0811/7V'.png"><td>6 in 23&times;3 (GS)
+<tr align=center><td><img src="0811/7D.png"><td>9 in 13&times;5 (GS)
+</table>
+
+</TABLE><p>
+
+
+
+
+
+
+Here are the the known super-distinguishable polyominoes:<p>
+
+<TABLE align=center><tr><td>
+
+<table align=center border=1 bgcolor=FFFFFF cellpadding=10>
+<tr><th colspan=3><font size=+2>Small<br>Polyominoes
+<tr><th>Poly<th>Dist
+<tr align=center><td><img src="0811/1O.png"><td>1 in 1&times;1
+<tr align=center><td><img src="0811/2I.png"><td>1 in 1&times;2
+<tr align=center><td><img src="0811/3I.png"><td>2 in 1&times;6
+<tr align=center><td><img src="0811/3L.png"><td>3 in 2&times;5
+</TABLE>
+
+<TD width=25><TD>
+<table align=center border=1 bgcolor=FFFFFF cellpadding=10>
+<tr><th colspan=3><font size=+2>Tetrominoes
+<tr><th>Poly<th>Dist
+<tr align=center><td><img src="0811/4I.png"><td>3 in 1&times;12
+<tr align=center><td><img src="0811/4O.png"><td>3 in 2&times;6
+<tr align=center><td><img src="0811/4T.png"><td>4 in 3&times;7 (GS)
+<tr align=center><td><img src="0811/4S.png"><td>7 in 4&times;8 (AB)
+<tr align=center><td><img src="0811/4L.png"><td>7 in 3&times;10 (AB)
+</TABLE>
+
+<TD width=25><TD>
+<table align=center border=1 bgcolor=FFFFFF cellpadding=10>
+<tr><th colspan=3><font size=+2>Pentominoes
+<tr><th>Poly<th>Dist
+<tr align=center><td><img src="0811/5I.png"><td>4 in 1&times;20
+<tr align=center><td><img src="0811/5P.png"><td>5 in 2&times;13
+<tr align=center><td><img src="0811/5Z.png"><td>6 in 5&times;9
+<tr align=center><td><img src="0811/5T.png"><td>7 in 6&times;8
+<tr align=center><td><img src="0811/5L.png"><td>7 in 3&times;13 (GS)
+<tr align=center><td><img src="0811/5V.png"><td>9 in 5&times;10
+<tr align=center><td><img src="0811/5Y.png"><td>13 in 5&times;14 (BZ)
+<tr align=center><td><img src="0811/5S.png"><td>13 in 4&times;18 (BZ)
+</table>
+
+</TABLE><p>
+
+
+Here are some distinguishable polyaboloes:<p>
+
+<TABLE align=center><tr><td>
+
+<table align=center border=1 bgcolor=FFFFFF cellpadding=10>
+<tr><th colspan=3><font size=+2>Small<br>Polyaboloes
+<tr><th>Poly<th>Dist
+<tr align=center><td><img src="0811/-1D.png"><td>0 in 0&times;0
+<tr align=center><td><img src="0811/1O.png"><td>1 in 1&times;1
+<tr align=center><td><img src="0811/-2I.png"><td>2 in 2&times;2
+<tr align=center><td><img src="0811/-2D.png"><td>5 in 2&times;3 (GS)
+</table>
+
+<TD width=25><TD>
+
+<table align=center border=1 bgcolor=FFFFFF cellpadding=10>
+<tr><th colspan=3><font size=+2>Triaboloes
+<tr><th>Poly<th>Dist
+<tr align=center><td><img src="0811/-3B.png"><td>1 in 1&times;2
+<tr align=center><td><img src="0811/-3I.png"><td>3 in 2&times;3
+<tr align=center><td><img src="0811/-3C.png"><td>2 in 2&times;4 (GS)
+<tr align=center><td><img src="0811/-3J.png"><td>3 in 2&times;4 (GS)
+</TABLE>
+
+<TD width=25><TD>
+
+<table align=center border=1 bgcolor=FFFFFF cellpadding=10>
+<tr><th colspan=3><font size=+2>Tetraboloes
+<tr><th>Poly<th>Dist
+<tr align=center><td><img src="0811/2I.png"><td>1 in 1&times;2
+<tr align=center><td><img src="0811/-4S.png"><td>1 in 2&times;4 (GS)
+<tr align=center><td><img src="0811/-4Y.png"><td>5 in 3&times;5 (GS)
+<tr align=center><td><img src="0811/-4O.png"><td>5 in 2&times;10 (GS)
+<tr align=center><td><img src="0811/-4J.png"><td>5 in 2&times;9 (GS)
+<tr align=center><td><img src="0811/-4L.png"><td>5 in 2&times;7 (GS)
+<tr align=center><td><img src="0811/-4D.png"><td>11 in 3&times;8 (GS)
+</TABLE>
+
+</TABLE><p>
+
+Here are some distinguishable polykings:<p>
+
+<TABLE align=center><tr><td>
+
+<table align=center border=1 bgcolor=FFFFFF cellpadding=10>
+<tr><th colspan=3><font size=+2>Small<br>Polykings
+<tr><th>Poly<th>Dist
+<tr align=center><td><img src="0811/1O.png"><td>0 in 0&times;0
+<tr align=center><td><img src="0811/=2L.png"><td>0 in 1&times;2
+<tr align=center><td><img src="0811/2I.png"><td>1 in 1&times;2
+</TABLE>
+
+<TD width=25><TD>
+
+<table align=center border=1 bgcolor=FFFFFF cellpadding=10>
+<tr><th colspan=3><font size=+2>Trikings
+<tr><th>Poly<th>Dist
+<tr align=center><td><img src="0811/=3L.png"><td>0 in 2&times;3
+<tr align=center><td><img src="0811/3I.png"><td>1 in 1&times;3
+<tr align=center><td><img src="0811/3L.png"><td>1 in 2&times;2 (GS)
+<tr align=center><td><img src="0811/=3V.png"><td>8 in 4&times;7 (GS)
+<tr align=center><td><img src="0811/=3J.png"><td>none (BH)
+</table>
+
+<TD width=25><TD>
+
+<table align=center border=1 bgcolor=FFFFFF cellpadding=10>
+<tr><th colspan=3><font size=+2>Tetrakings
+<tr><th>Poly<th>Dist
+<tr align=center><td><img src="0811/=4F.png"><td>0 in 3&times;4 (GS)
+<tr align=center><td><img src="0811/4I.png"><td>1 in 1&times;4 (GS)
+<tr align=center><td><img src="0811/4O.png"><td>1 in 2&times;2 (GS)
+<tr align=center><td><img src="0811/=4E.png"><td>1 in 3&times;4 (GS)
+<tr align=center><td><img src="0811/=4X.png"><td>4 in 4&times;8 (GS)
+<tr align=center><td><img src="0811/4L.png"><td>5 in 3&times;7 (GS)
+<tr align=center><td><img src="0811/=4A.png"><td>5 in 4&times;8 (GS)
+<tr align=center><td><img src="0811/=4D.png"><td>6 in 6&times;6 (GS)
+</table>
+
+</TABLE><p>
+
+<hr><font size=+2>2.</font><p>
+
+If there is a k&times;k n-puzzle, then putting 2-piece rings around it can create a (k+2)&times;(k+2) 2n-puzzle, 4n-puzzle, or 8n-puzzle.<p>
+
+If there is a solution for n, David Wilson pointed out there is a solution for 3n by putting a copy of the n-puzzle inside a modified 3-puzzle due to George Sicherman.<p>
+
+There is a n&times;n 2n-puzzle comprised of (n-1) n&times;1 rectangles and n 1&times;1 squares.<p>
+
+There is a (4n+1)-puzzle comprised of a 2&times;2 square inside a totally symmetric field of 1&times;1 squares.<p>
+
+Here are the best-known solutions for a square tray:<p>
+
+<table align=center cellpadding=5>
+<tr align=center>
+<td><img src="0811/1.gif"><br>1
+<td><img src="0811/2.gif"><br>2
+<td><img src="0811/3.gif"><br>3<br>(DW)
+<td><img src="0811/4.gif"><br>4
+<td><img src="0811/5.gif"><br>5
+<td><img src="0811/6.gif"><br>6
+<td><img src="0811/7.gif"><br>7<br>(GS)
+<td><img src="0811/8.gif"><br>8
+<td><img src="0811/9.gif"><br>9
+<td><img src="0811/10.gif"><br>10<br>(GS)
+<tr align=center>
+<td><img src="0811/11.gif"><br>11<br>(GS)
+<td><img src="0811/12.gif"><br>12
+<td><img src="0811/13.gif"><br>13
+<td><img src="0811/14.gif"><br>14<br>(GS)
+<td><img src="0811/15.gif"><br>15<br>(DW)
+<td><img src="0811/16.gif"><br>16
+<td><img src="0811/17.gif"><br>17
+<td><img src="0811/18.gif"><br>18
+<td><img src="0811/19.gif"><br>19<br>(DW)
+<td><img src="0811/20.gif"><br>20
+<tr align=center>
+<td><img src="0811/21.gif"><br>21<br>(GS)
+<td><img src="0811/22.gif"><br>22
+<td><img src="0811/23.gif"><br>23<br>(GS)
+<td><img src="0811/24.gif"><br>24<br>(GS)
+<td><img src="0811/25.gif"><br>25
+<td><img src="0811/26.gif"><br>26
+<td><img src="0811/27.gif"><br>27
+<td><img src="0811/28.gif"><br>28<br>(GS)
+<td><img src="0811/29.gif"><br>29<br>(GS)
+<td><img src="0811/30.gif"><br>30<br>(GS)
+<tr align=center>
+<td><img src="0811/31.gif"><br>31<br>(DW)
+<td><img src="0811/32.gif"><br>32
+<td><img src="0811/33.gif"><br>33
+<td><img src="0811/34.gif"><br>34<br>(GS)
+<td><img src="0811/35.gif"><br>35<br>(DW)
+<td><img src="0811/36.gif"><br>36
+<td><img src="0811/37.gif"><br>37
+<td><img src="0811/38.gif"><br>38<br>(GS)
+<td><img src="0811/39.gif"><br>39<br>(GS)
+<td><img src="0811/40.gif"><br>40
+<tr align=center>
+<td><img src="0811/41.gif"><br>41<br>(GT)
+<td><img src="0811/42.gif"><br>42<br>(GS)
+<td><img src="0811/43.gif"><br>43<br>(GS)
+<td><img src="0811/44.gif"><br>44
+<td><img src="0811/45.gif"><br>45<br>(BH)
+<td><img src="0811/46.gif"><br>46
+<td><img src="0811/47.gif"><br>47<br>(GS)
+<td><img src="0811/48.gif"><br>48
+<td><img src="0811/49.gif"><br>49
+<td><img src="0811/50.gif"><br>50<br>(GS)
+<tr align=center>
+<td><img src="0811/51.gif"><br>51<br>(GS)
+<td><img src="0811/52.gif"><br>52
+<td><img src="0811/53.gif"><br>53
+<td><img src="0811/54.gif"><br>54<br>(GS)
+<td><img src="0811/55.gif"><br>55
+<td><img src="0811/56.gif"><br>56
+<td><img src="0811/57.gif"><br>57
+<td><img src="0811/58.gif"><br>58<br>(GS)
+<td><font size=+2>?</font><br>59
+<td><img src="0811/60.gif"><br>60
+<tr align=center>
+<td><img src="0811/61.gif"><br>61
+<td><img src="0811/62.gif"><br>62<br>(GS)
+<td><img src="0811/63.gif"><br>63<br>(GT)
+<td><img src="0811/64.gif"><br>64<br>(GS)
+<td><img src="0811/65.gif"><br>65<br>(GS)
+<td><img src="0811/66.gif"><br>66<br>(GS)
+<td><img src="0811/67.gif"><br>67<br>(GS)
+<td><img src="0811/68.gif"><br>68
+<td><img src="0811/69.gif"><br>69
+<td><img src="0811/70.gif"><br>70
+<tr align=center>
+<td><font size=+2>23&times;23</font><br>71<br>(DW)
+<td><img src="0811/72.gif"><br>72<br>(GS)
+<td><img src="0811/73.gif"><br>73<br>(GS)
+<td><img src="0811/74.gif"><br>74<br>(GS)
+<td><img src="0811/75.gif"><br>75
+<td><img src="0811/76.gif"><br>76<br>(GS)
+<td><img src="0811/77.gif"><br>77<br>(GS)
+<td><img src="0811/78.gif"><br>78<br>(GS)
+<td><img src="0811/79.gif"><br>79
+<td><img src="0811/80.gif"><br>80
+<tr align=center>
+<td><img src="0811/81.gif"><br>81<br>(GS)
+<td><img src="0811/82.gif"><br>82<br>(GS)
+<td><img src="0811/83.gif"><br>83<br>(GS)
+<td><img src="0811/84.gif"><br>84<br>(GS)
+<td><img src="0811/85.gif"><br>85<br>(DW)
+<td><img src="0811/86.gif"><br>86<br>(GS)
+<td><font size=+2>20&times;20</font><br>87<br>(BH)
+<td><img src="0811/88.gif"><br>88<br>(GS)
+<td><img src="0811/89.gif"><br>89<br>(GS)
+<td><img src="0811/90.gif"><br>90
+<tr align=center>
+<td><img src="0811/91.gif"><br>91<br>(GT)
+<td><img src="0811/92.gif"><br>92<br>(GS)
+<td><img src="0811/93.gif"><br>93<br>(GS)
+<td><img src="0811/94.gif"><br>94<br>(GS)
+<td><img src="0811/95.gif"><br>95
+<td><img src="0811/96.gif"><br>96<br>(GS)
+<td><img src="0811/97.gif"><br>97
+<td><img src="0811/98.gif"><br>98<br>(GS)
+<td><img src="0811/99.gif"><br>99<br>(DW)
+<td><img src="0811/100.gif"><br>100<br>(GS)
+</table>
+
+There are always solutions for rectangles because there is a (n+1)&times;1 n-puzzle comprised of 1 domino and (n-1) single squares.<p>
+
+And here are the best-known solutions for a rectangular tray:<p>
+
+<table align=center cellpadding=5>
+<tr align=center>
+<td><img src="0811/^1.gif"><br>1
+<td><img src="0811/^2.gif"><br>2
+<td><img src="0811/^3.gif"><br>3
+<td><img src="0811/^4.gif"><br>4
+<td><img src="0811/^5.gif"><br>5
+<td><img src="0811/^6.gif"><br>6
+<td><img src="0811/^7.gif"><br>7
+<td><img src="0811/^8.gif"><br>8
+<td><img src="0811/^9.gif"><br>9<br>(GS)
+<td><img src="0811/^10.gif"><br>10
+<tr align=center>
+<td><img src="0811/^11.gif"><br>11
+<td><img src="0811/^12.gif"><br>12
+<td><img src="0811/^13.gif"><br>13
+<td><img src="0811/^14.gif"><br>14<br>(GS)
+<td><img src="0811/^15.gif"><br>15
+<td><img src="0811/^16.gif"><br>16
+<td><img src="0811/^17.gif"><br>17<br>(GS)
+<td><img src="0811/^18.gif"><br>18
+<td><img src="0811/^19.gif"><br>19<br>(GS)
+<td><img src="0811/^20.gif"><br>20<br>(GS)
+<tr align=center>
+<td><img src="0811/^21.gif"><br>21
+<td><img src="0811/^22.gif"><br>22
+<td><img src="0811/^23.gif"><br>23<br>(GS)
+<td><img src="0811/^24.gif"><br>24<br>(GS)
+<td><img src="0811/^25.gif"><br>25<br>(GS)
+<td><img src="0811/^26.gif"><br>26
+<td><img src="0811/^27.gif"><br>27<br>(GS)
+<td><img src="0811/^28.gif"><br>28<br>(GS)
+<td><img src="0811/^29.gif"><br>29
+<td><img src="0811/^30.gif"><br>30
+<tr align=center>
+<td><img src="0811/^31.gif"><br>31<br>(GS)
+<td><img src="0811/^32.gif"><br>32<br>(GS)
+<td><img src="0811/^33.gif"><br>33<br>(GS)
+<td><img src="0811/^34.gif"><br>34<br>(GS)
+<td><img src="0811/^35.gif"><br>35
+<td><img src="0811/^36.gif"><br>36
+<td><img src="0811/^37.gif"><br>37
+<td><img src="0811/^38.gif"><br>38<br>(GS)
+<td><img src="0811/^39.gif"><br>39<br>(GS)
+<td><img src="0811/^40.gif"><br>40
+<tr align=center>
+<td><img src="0811/^41.gif"><br>41<br>(GS)
+<td><img src="0811/^42.gif"><br>42
+<td><img src="0811/^43.gif"><br>43<br>(GS)
+<td><img src="0811/^44.gif"><br>44
+<td><img src="0811/^45.gif"><br>45
+<td><img src="0811/^46.gif"><br>46<br>(GS)
+<td><img src="0811/^47.gif"><br>47<br>(GS)
+<td><img src="0811/^48.gif"><br>48
+<td><img src="0811/^49.gif"><br>49<br>(BH)
+<td><img src="0811/^50.gif"><br>50<br>(GS)
+<tr align=center>
+<td><img src="0811/^51.gif"><br>51<br>(GS)
+<td><img src="0811/^52.gif"><br>52
+<td><img src="0811/^53.gif"><br>53<br>(GS)
+<td><img src="0811/^54.gif"><br>54<br>(GS)
+<td><img src="0811/^55.gif"><br>55
+<td><img src="0811/^56.gif"><br>56
+<td><img src="0811/^57.gif"><br>57<br>(GS)
+<td><img src="0811/^58.gif"><br>58<br>(GS)
+<td><img src="0811/^59.gif"><br>59<br>(GS)
+<td><img src="0811/^60.gif"><br>60
+<tr align=center>
+<td><img src="0811/^61.gif"><br>61<br>(GS)
+<td><img src="0811/^62.gif"><br>62<br>(GS)
+<td><img src="0811/^63.gif"><br>63<br>(GS)
+<td><img src="0811/^64.gif"><br>64<br>(GS)
+<td><img src="0811/^65.gif"><br>65<br>(GS)
+<td><img src="0811/^66.gif"><br>66<br>(GS)
+<td><img src="0811/^67.gif"><br>67<br>(GS)
+<td><img src="0811/^68.gif"><br>68<br>(GS)
+<td><img src="0811/^69.gif"><br>69<br>(GS)
+<td><img src="0811/^70.gif"><br>70
+<tr align=center>
+<td><img src="0811/^71.gif"><br>71<br>(GS)
+<td><img src="0811/^72.gif"><br>72<br>(GS)
+<td><img src="0811/^73.gif"><br>73<br>(GS)
+<td><img src="0811/^74.gif"><br>74<br>(GS)
+<td><img src="0811/^75.gif"><br>75<br>(GS)
+<td><img src="0811/^76.gif"><br>76<br>(GS)
+<td><img src="0811/^77.gif"><br>77<br>(GS)
+<td><img src="0811/^78.gif"><br>78<br>(GS)
+<td><img src="0811/^79.gif"><br>79<br>(GS)
+<td><img src="0811/^80.gif"><br>80
+<tr align=center>
+<td><img src="0811/^81.gif"><br>81<br>(GS)
+<td><img src="0811/^82.gif"><br>82<br>(GS)
+<td><img src="0811/^83.gif"><br>83<br>(GS)
+<td><img src="0811/^84.gif"><br>84<br>(GS)
+<td><img src="0811/^85.gif"><br>85<br>(GS)
+<td><img src="0811/^86.gif"><br>86<br>(GS)
+<td><img src="0811/^87.gif"><br>87<br>(GS)
+<td><img src="0811/^88.gif"><br>88<br>(GS)
+<td><img src="0811/^89.gif"><br>89
+<td><img src="0811/^90.gif"><br>90<br>(GS)
+<tr align=center>
+<td><img src="0811/^91.gif"><br>91
+<td><img src="0811/^92.gif"><br>92<br>(GS)
+<td><img src="0811/^93.gif"><br>93<br>(GS)
+<td><img src="0811/^94.gif"><br>94
+<td><img src="0811/^95.gif"><br>95<br>(GS)
+<td><img src="0811/^96.gif"><br>96<br>(GS)
+<td><img src="0811/^97.gif"><br>97<br>(GS)
+<td><img src="0811/^98.gif"><br>98<br>(GS)
+<td><img src="0811/^99.gif"><br>99<br>(GS)
+<td><img src="0811/^100.gif"><br>100<br>(GS)
+</table>
+
+<p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 8/20/11.<font>
+
+</BODY></HTML>

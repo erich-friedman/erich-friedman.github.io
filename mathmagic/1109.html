@@ -1,0 +1,93 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (November 2009)</H1></CENTER>
+
+This month we examine a famous problem involving elevators.  Suppose there are e elevators in a building, and each one stops at s of the floors.  We call a building <b>convenient</b> if you can get from any floor to any other floor without changing elevators.  What is the maximum number of floors f(e,s) of a convenient building?  For example, f(4,3)&ge;5 since the 4 elevators could stop at floors {1,2,3}, {1,2,4}, {1,2,5}, and {3,4,5}.  To see that f(4,3)&lt;6, notice the elevators only make 4&times;3=12 stops, so some floor will only be visited by at most 2 elevators, and that floor will not be accessible from every floor.  What are the values of f(e,s)?  What can be proven about the function f(e,s)?<p>
+
+We call a building <b>perfect</b> if each pair of floors is linked by exactly one elevator.  The only perfect buildings known are the trivial e=1 and s=k, and e=k(k-1)/2 and s=2, and the non-trivial pairs e=7 and s=3, e=12 and s=3, and e=13 and s=4.  Can you find the designs of these perfect buildings?  Can you find any others?  Are there many other perfect buildings if we relax the rule that every elevator has to visit the same number of floors, but insist that every elevator visits at least 3 floors?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+It is easy to see f(e+1,s) &ge; f(e,s), since an extra elevator can't hurt, and f(e,s+1) &ge; f(e,s)+1, since the extra stop for each elevator can be a new floor.  It is harder to see that f(e,ks) &ge; k f(e,s). To do so, pile k copies of a convenient building with f(e,s) floors on top of one another, and link the corresponding elevators so that each stops at ks floors.<p>
+
+Another very useful upper bound for f(e,s) is given by f(e,s)<img src="lceil.gif" align=center>(f(e,s)-1)/(s-1)<img src="rceil.gif" align=center> &le; es.  This comes from the fact that we need at least (f(e,s)-1)/(s-1) elevators to visit each floor.<p>
+
+<a href="mailto:jgalvagni@mohawkschools.org">Jeremy Galvagni</a> gave the lower bound f(e,s) &ge; 1/2 + &radic;(2es + 1/4) that comes from the fact that f(e,s)[f(e,s)-1]/2 &ge; es.<p>
+
+<a href="mailto:jgalvagni@mohawkschools.org">Jeremy Galvagni</a> also noted that if x&lt;y, then f(x,y) &le; f(y,x).<p>
+
+
+
+Here are some more general results:<p>
+
+f(1,s) = s<br>
+f(2,s) = s<br>
+f(3,2k) = 3k<br>
+f(3,2k+1) = 3k+1<br>
+f(6,s) = 2s (for s&ge;2)<br>
+f(7,3k) = 7k<br>
+f(7,3k-1) = 7k-3<br>
+f(12,3k) = 9k<br>
+f(13,4k) = 13k<p>
+
+f(e,1) = 1<br>
+f(e,2) = <img src="lfloor.gif" align=center>1/2 + &radic;(2e+1)<img src="rfloor.gif" align=center><p>
+
+
+
+The known specific results are summarized in the table below.  The results shown in black come from David Rhee and Jerry Lo, who wrote a survey paper on this problem in the marvelous book "Mathematical Wizardry for a Gardner".  The results shown in red are my contributions.  The blue results are due to <a href="mailto:jgalvagni@mohawkschools.org">Jeremy Galvagni</a>.<p>
+
+<center><font size=+2>Maximum number of floors with e elevators and s stops</font></center>
+<table align=center border=1 cellpadding=7 bgcolor=FFFFDD>
+<tr align=center bgcolor=DDFFDD><th>e \ s<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13<th>14<th>15<th>16
+
+<tr align=center><th bgcolor=DDFFDD>1
+<td>1<td>2<td>3<td>4<td>5<td>6<td>7<td>8<td>9<td>10<td>11<td>12<td>13<td>14<td>15<td>16
+<tr align=center><th bgcolor=DDFFDD>2
+<td>1<td>2<td>3<td>4<td>5<td>6<td>7<td>8<td>9<td>10<td>11<td>12<td>13<td>14<td>15<td>16
+<tr align=center><th bgcolor=DDFFDD>3
+<td>1<td>3<td>4<td>6<td>7<td>9<td>10<td>12<td>13<td>15<td>16<td>18<td>19<td>21<td>22<td>24
+<tr align=center><th bgcolor=DDFFDD>4
+<td>1<td>3<td>5<td><font color=red>6<td><font color=red>8<td><font color=red>10<td><font color=red>11<td><font color=red>13<td><td><td><td><td><td><td><td>
+<tr align=center><th bgcolor=DDFFDD>5
+<td>1<td>3<td>5<td><font color=red>7<td><font color=red>9<td><font color=red>10<td><font color=red>12<td><font color=red>14<td><td><td><td><td><td><td><td>
+<tr align=center><th bgcolor=DDFFDD>6
+<td>1<td>4<td>6<td>8<td>10<td>12<td>14<td>16<td>18<td>20<td>22<td>24<td>26<td>28<td>30<td>32
+<tr align=center><th bgcolor=DDFFDD>7
+<td>1<td>4<td>7<td><font color=blue>8<td>11<td>14<td><td>18<td>21<td><td>25<td>28<td><td>32<td>35<td>
+<tr align=center><th bgcolor=DDFFDD>8
+<td>1<td>4<td>7<td><font color=blue>9<td><td><td><td><td><td><td><td><td><td><td><td>
+<tr align=center><th bgcolor=DDFFDD>9
+<td>1<td>4<td>7<td><font color=blue>10<td><td><td><td><td><td><td><td><td><td><td><td>
+<tr align=center><th bgcolor=DDFFDD>10
+<td>1<td>5<td>7<td>10<td><td><td><td><td><td><td><td><td><td><td><td>
+<tr align=center><th bgcolor=DDFFDD>11
+<td>1<td>5<td>8<td><td><td><td><td><td><td><td><td><td><td><td><td>
+<tr align=center><th bgcolor=DDFFDD>12
+<td>1<td>5<td>9<td><td><td>18<td><td><td>27<td><td><td>36<td><td><td>45<td>
+<tr align=center><th bgcolor=DDFFDD>13
+<td>1<td>5<td>9<td>13<td><td><td><td>26<td><td><td><td>39<td><td><td><td>52
+<tr align=center><th bgcolor=DDFFDD>14
+<td>1<td>5<td>9<td><td><td><td><td><td><td><td><td><td><td><td><td>
+<tr align=center><th bgcolor=DDFFDD>15
+<td>1<td>6<td>9<td><td><td><td><td><td><td><td><td><td><td><td><td>
+<tr align=center><th bgcolor=DDFFDD>16
+<td>1<td>6<td>9<td><td><td><td><td><td><td><td><td><td><td><td><td>
+</table><p>
+
+
+<a href="mailto:jgalvagni@mohawkschools.org">Jeremy Galvagni</a> found perfect elevator designs for f(7,3) and f(12,3).  <a href="mailto:devjoe@gmail.com">Joe DeVincentis</a> found perfect elevator designs for f(7,3), f(12,3), and f(13,4).<p>
+
+<a href="mailto:devjoe@gmail.com">Joe DeVincentis</a> generalized the perfect f(7,3) and f(13,4) buildings to perfect f(s<sup>2</sup>-s+1,s) buildings for all s.  He also showed that e=f(f-1)/s(s-1) and (f-1)/(s-1) need to be integers for a perfect building.  Based on this, he conjectured that perfect f(s<sup>2</sup>+s,s)=s<sup>2</sup> buildings exist.  Both <a href="mailto:evert.stenlund@telia.com">Evert Stenlund</a> and <a href="mailto:dave@langers.nl">Dave Langers</a> then showed that omitting an elevator from a perfect f((s+1)<sup>2</sup>-(s+1)+1,s) building along with all floors that it visits constructs a perfect f(s<sup>2</sup>+s,s) building.<p>
+
+<a href="mailto:dave@langers.nl">Dave Langers</a> noticed that if there are perfect f(d,s) and f(e,s) and these numbers are coprime, then there is some perfect f(c,s) = f(d,s) f(e,s).  Therefore if there is a perfect building with a prime p number of floors, there is a prefect building with p<sup>n</sup> floors for any number n.<p>
+
+<a href="mailto:evert.stenlund@telia.com">Evert Stenlund</a> found perfect elevator designs for f(20,4) and f(21,5), shown below:<p>
+
+<center><img src="1109/f(20,4)=16.gif" align=center> &nbsp; &nbsp; <img src="1109/f(21,5)=21.gif" align=center></center><p>
+
+<a href="mailto:dave@langers.nl">Dave Langers</a> also gave designs for perfect f((2n+1)(3n+1,3)=6n+3 buildings (derived from Bose) and perfect f(n(6n+1),3)=6n+1 buildings (derived from Skolem).  Thus the only small cases to resolve are f(50,4)=25, f(63,4)=28, f(69,6)=46, f(82,5)=41, f(85,6)=51, and f(99,5)=45.<p>
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 11/13/09.<font>
+
+</BODY></HTML>

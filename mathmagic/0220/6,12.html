@@ -1,0 +1,112 @@
+<HTML>
+<CENTER>n=6 players, N=12 games:</CENTER>
+<pre>
+A plays B, assume A wins by symmetry.  C plays D, assume C wins by symmetry.  A plays C, assume A wins by symmetry.
+A plays E.
+IF A WINS, A plays C
+  IF A WINS, D plays F
+    IF D WINS, A plays D
+      IF A WINS, A plays F
+        IF A WINS, B plays E, and winner plays A 3 times and needs to win them all
+        IF F WINS, F plays A 4 times (A wins ties)
+      IF D WINS, A plays D twice more
+        IF A WINS BOTH, F plays A 3 times and needs to win them all
+        IF THEY SPLIT, A plays D best-of-3
+        IF D WINS BOTH, A plays C, and winner plays D twice (D wins ties)
+    IF F WINS, A plays F
+      IF A WINS, A plays F again
+        IF A WINS, B plays E, and winner plays A 3 times and needs to win them all
+        IF F WINS, F plays A 4 times (A wins ties)
+      IF F WINS, A plays F best-of-5
+  IF C WINS, A plays C again
+    IF A WINS, A plays C again
+      IF A WINS, D plays F
+        IF D WINS, A plays D
+          IF A WINS, F plays A 3 times and needs to win them all
+          IF D WINS, A plays D best-of-3
+        IF F WINS, F plays A 4 times (A wins ties)
+      IF C WINS, A plays C again
+        IF A WINS, A plays F
+          IF A WINS, C plays D, and winner plays A twice (A wins ties)
+          IF F WINS, A plays F best-of-3
+        IF C WINS, A plays F, and winner plays C best-of-3
+    IF C WINS, A plays F
+      IF A WINS, A plays C twice
+        IF A WINS BOTH, C plays D, and winner plays A twice (A wins ties)
+        IF THEY SPLIT, A plays C best-of-3
+        IF C WINS BOTH, B plays C 3 times and needs to win them all
+      IF F WINS, C plays F twice
+        IF C WINS BOTH, A plays B, and winner plays C twice (C wins ties)
+        IF THEY SPLIT, C plays F best-of-3
+        IF F WINS BOTH, A plays C, and winner plays F twice (F wins ties)
+IF E WINS, C plays E
+  IF C WINS, C plays E again
+    IF C WINS, A plays C
+      IF A WINS, A plays C again
+        IF A WINS, A plays F
+          IF A WINS, E plays A 3 times and needs to win them all
+          IF F WINS, A plays F best-of-3
+        IF C WINS, A plays C again
+          IF A WINS, A plays C again
+            IF A WINS, F plays A twice (A wins ties)
+            IF C WINS, A plays F, and winner plays C
+          IF C WINS, A plays F, and winner plays C twice (C wins ties)
+      IF C WINS, A plays F
+        IF A WINS, A plays C
+          IF A WINS, A plays C best-of-3
+          IF C WINS, A plays B, and winner plays C twice (C wins ties)
+        IF F WINS, C plays F
+          IF C WINS, B plays F, and winner plays C twice (C wins ties)
+          IF F WINS, C plays F best-of-3
+    IF E WINS, C plays F
+      IF C WINS, C plays E
+        IF C WINS, A plays E
+          IF A WINS, A plays C best-of-3
+          IF E WINS, C plays E
+            IF C WINS, A plays C twice (C wins ties)
+            IF E WINS, C plays E twice (E wins ties)
+        IF E WINS, A plays E
+          IF A WINS, A plays E best-of-3
+          IF E WINS, A plays C, and winner plays E twice (E wins ties)
+      IF F WINS, E plays F
+        IF E WINS, A plays E
+          IF A WINS, A plays E again
+            IF A WINS, F plays A twice (A wins ties)
+            IF E WINS, A plays E twice (E wins ties)
+          IF E WINS, A plays F, and winner plays E twice (E wins ties)
+        IF F WINS, A plays E
+          IF A WINS, A plays F best-of-3
+          IF E WINS, E plays F
+            IF E WINS, F plays E twice (E wins ties)
+            IF F WINS, A plays F twice (F wins ties)
+  IF E WINS, A plays E
+    IF A WINS, A plays E again
+      IF A WINS, E plays F
+        IF E WINS, A plays E
+          IF A WINS, D plays A 3 times and needs to win them all
+          IF E WINS, A plays E best-of-3
+        IF F WINS, A plays F
+          IF A WINS, D plays F, and winner plays A twice (A wins ties)
+          IF F WINS, A plays F best-of-3
+      IF E WINS, A plays E again
+        IF A WINS, E plays F
+          IF E WINS, A plays E best-of-3
+          IF F WINS, A plays F
+            IF A WINS, E plays A twice (A wins ties)
+            IF F WINS, A plays F twice (F wins ties)
+        IF E WINS, E plays F
+          IF E WINS, D plays E 3 times and needs to win them all
+          IF F WINS, E plays F best-of-3
+    IF E WINS, E plays F
+      IF E WINS, A plays D
+        IF A WINS, A plays E
+          IF A WINS, A plays E best-of-3
+          IF E WINS, B plays E 3 times and needs to win them all
+        IF D WINS, D plays E
+          IF D WINS, D plays E best-of-3
+          IF E WINS, B plays E 3 times and needs to win them all
+      IF F WINS, E plays F twice more
+        IF E WINS BOTH, D plays E 3 times and needs to win them all
+        IF THEY SPLIT, E plays F best-of-3
+        IF F WINS BOTH, A plays D, and winner plays F twice (F wins ties)
+</pre>

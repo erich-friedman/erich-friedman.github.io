@@ -1,0 +1,59 @@
+The two player game in the original rules is essentially a partnership 4-player game where each player plays both sides of a partnership.
+
+Player 1, as X, makes his first four moves with one color as shown below, and player 2, as O, makes his first three with the color starting at the next position clockwise around the board as shown below.
+
++--------------------+
+|XXXXX   OOOO   OOOOO|
+|     XXXX  XOOOX    |
+|         XXXX  X    |
+|             XXX    |
+
+With the other colors, they do the 180 degree rotation of this on the opposite edge of the board. Player 2 is done. Player 1 continues to play for 7 more turns on each color to reach the diagram shown below. X is done after 11 turns. Y continues and plays out his last 10 pieces. Total 21+11+3+3=38 turns.
+
++--------------------+
+|XXXXX   OOOO   OOOOO|
+|     XXXX  XOOOX    |
+| XX X    XXXX  X    |
+|   X XX      XXX    |
+|XXXX XX XX  X   Y   |
+|    Y  XX XXX YYY   |
+|    YYYY  X  X  Y   |
+|        YY YYX Y    |
+|         YY YX Y    |
+|           YY YY    |
+|             Y      |
+|             Y      |
+|             Y      |
+|            Y       |
+|           YY       |
+|           Y        |
+|    YYY    Y        |
+|    Y  YYYY         |
+|    YCCCY  YYYY     |
+|CCCCC   CCCC   YYYYY|
++--------------------+
+
+
+
+There is another game to consider, Blokus Duo, which is played with the same tiles but only 2 colors, a smaller (14x14) board, and start spaces moved diagonally inward 4 spaces (the 5th spaces from the corners). 
+
+With X going first, the first 4 turns of this game lead to this position:
+
++--------------+
+|              |
+|              |
+|              |
+|              |
+|       XXX    |
+|       X      |
+|       X      |
+|    XXX       |
+|OOOO X        |
+|    O         |
+|    O         |
+|    O         |
+|    O         |
+|    O         |
++--------------+
+
+Player 2 (O) is done. Player 1 plays out his remaining pieces (21+2 = 23 total turns).

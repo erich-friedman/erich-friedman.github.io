@@ -1,0 +1,190 @@
+%!
+%% author: Berend Jan van der Zwaag
+%% date: 8 August 2001
+
+
+/a {24 mul} def % define length unit
+/c {closepath} def
+/f {fill} def
+/ii {dup 1 add index exch index} def
+/m {moveto} def
+/n {newpath} def
+/r {rlineto} def
+/rm {rmoveto} def
+/s {setgray} def
+
+/d {0 s n m show} def % display text
+
+/b { % g x y b: make a box at (x,y) of size 1x1 and fill it with color g
+n m 1 a 0 r 0 1 a r -1 a 0 r c s f
+} def
+
+/h { % x y g1 g2 ... g12 h: make 12 triangles in a hexagon with colors g1..g12
+13 ii n m 0 1 a r .57735 a 0 r c s f
+12 ii n m .57735 a 1 a r .2887 a -.5 a r c s f
+11 ii n m .866 a .5 a r .2887 a -.5 a r c s f
+10 ii n m .866 a -.5 a r .2887 a .5 a r c s f
+9 ii n m .57735 a -1 a r .2887 a .5 a r c s f
+8 ii n m 0 -1 a r .57735 a 0 r c s f
+7 ii n m 0 -1 a r -.57735 a 0 r c s f
+6 ii n m -.57735 a -1 a r -.2887 a .5 a r c s f
+5 ii n m -.866 a -.5 a r -.2887 a .5 a r c s f
+4 ii n m -.866 a .5 a r -.2887 a -.5 a r c s f
+3 ii n m -.57735 a 1 a r -.2887 a -.5 a r c s f
+2 ii n m 0 1 a r -.57735 a 0 r c s f
+pop pop
+} def
+
+/t { % x y g1 ... g8 t: make 8 triangles in a square with colors g1..g8
+9 ii n m 0 1 a r 1 a 0 r c s f
+8 ii n m 1 a 0 r 0 1 a r c s f
+7 ii n m 1 a 0 r 0 -1 a r c s f
+6 ii n m 0 -1 a r 1 a 0 r c s f
+5 ii n m 0 -1 a r -1 a 0 r c s f
+4 ii n m -1 a 0 r 0 -1 a r c s f
+3 ii n m -1 a 0 r 0 1 a r c s f
+2 ii n m 0 1 a r -1 a 0 r c s f
+pop pop
+} def
+
+/e { % x y g1 ... g12 e: make 12 shapes in a hexagon with colors g1..g12
+13 ii n m .57735 a 1 a rm -.57735 a -1 a r .57735 a -1 a r -.2887 a 1 a r c s f
+12 ii n m .57735 a 1 a rm -.2887 a -1 a r .2887 a -1 a r c s f
+11 ii n m .57735 a 1 a rm .2887 a -1 a r -.2887 a -1 a r c s f
+10 ii n m .57735 a 1 a rm .57735 a -1 a r -.57735 a -1 a r .2887 a 1 a r c s f
+9 ii n m -1.1547 a 0 rm 1.1547 a 0 r .57735 a -1 a r -.7217 a .75 a r c s f
+8 ii n m -1.1547 a 0 rm 1.01036 a -.25 a r .7217 a -.75 a r c s f
+7 ii n m -1.1547 a 0 rm .7217 a -.75 a r 1.01036 a -.25 a r c s f
+6 ii n m -1.1547 a 0 rm .57735 a -1 a r 1.1547 a 0 r -1.01036 a .25 a r c s f
+5 ii n m -1.1547 a 0 rm 1.1547 a 0 r .57735 a 1 a r -.7217 a -.75 a r c s f
+4 ii n m -1.1547 a 0 rm 1.01036 a .25 a r .7217 a .75 a r c s f
+3 ii n m -1.1547 a 0 rm .7217 a .75 a r 1.01036 a .25 a r c s f
+2 ii n m -1.1547 a 0 rm .57735 a 1 a r 1.1547 a 0 r -1.01036 a -.25 a r c s f
+pop pop
+} def
+
+/Times-Roman findfont 18 scalefont setfont
+
+(monohedral:) 1 a 27 a d
+(n = 6) 1 a 26 a d
+.7 1 a 21.5 a b
+.3 1 a 22.5 a b
+.5 1 a 23.5 a b
+.7 1 a 24.5 a b
+.3 2 a 21   a b
+.5 2 a 22   a b
+.7 2 a 23   a b
+.3 2 a 24   a b
+.7 3 a 21.5 a b
+.3 3 a 22.5 a b
+.5 3 a 23.5 a b
+.7 3 a 24.5 a b
+.3 4 a 21   a b
+.5 4 a 22   a b
+.7 4 a 23   a b
+.3 4 a 24   a b
+
+(n = 7) 7 a 26 a d
+.7  7 a 21   a b
+.3  7 a 22   a b
+.5  7 a 23   a b
+.7  7 a 24   a b
+.3  8 a 21   a b
+.5  8 a 22   a b
+.7  8 a 23   a b
+.3  8 a 24   a b
+.7  9 a 21.5 a b
+.3  9 a 22.5 a b
+.5  9 a 23.5 a b
+.7  9 a 24.5 a b
+.3 10 a 21.5 a b
+.5 10 a 22.5 a b
+.7 10 a 23.5 a b
+.3 10 a 24.5 a b
+.5 11 a 21   a b
+.7 11 a 22   a b
+.3 11 a 23   a b
+.5 11 a 24   a b
+.7 12 a 21   a b
+.3 12 a 22   a b
+.5 12 a 23   a b
+.7 12 a 24   a b
+.5 13 a 21.5 a b
+.7 13 a 22.5 a b
+.3 13 a 23.5 a b
+.5 13 a 24.5 a b
+.7 14 a 21.5 a b
+.3 14 a 22.5 a b
+.5 14 a 23.5 a b
+.7 14 a 24.5 a b
+
+(n = 8) 17 a 26 a d
+.7 17 a 21 a b
+.3 17 a 22 a b
+.7 17 a 23 a b
+.3 17 a 24 a b
+.3 18 a 21 a b
+.7 18 a 22 a b
+.3 18 a 23 a b
+.7 18 a 24 a b
+.7 19 a 21 a b
+.3 19 a 22 a b
+.7 19 a 23 a b
+.3 19 a 24 a b
+.3 20 a 21 a b
+.7 20 a 22 a b
+.3 20 a 23 a b
+.7 20 a 24 a b
+
+(n = 9) 1 a 19 a d
+2 a 17 a .7 .7 .5 .5 .3 .3 .7 .7 .5 .5 .3 .3 h
+2 a 15 a .7 .7 .5 .5 .3 .3 .7 .7 .5 .5 .3 .3 h
+3.732 a 18 a .7 .7 .5 .5 .3 .3 .7 .7 .5 .5 .3 .3 h
+3.732 a 16 a .7 .7 .5 .5 .3 .3 .7 .7 .5 .5 .3 .3 h
+3.732 a 14 a .7 .7 .5 .5 .3 .3 .7 .7 .5 .5 .3 .3 h
+5.464 a 17 a .7 .7 .5 .5 .3 .3 .7 .7 .5 .5 .3 .3 h
+5.464 a 15 a .7 .7 .5 .5 .3 .3 .7 .7 .5 .5 .3 .3 h
+
+(n = 10) 7.5 a 19 a d
+9 a 17 a .7 .7 .7 .5 .5 .5 .5 .3 .3 .3 .3 .7 h
+9 a 15 a .7 .7 .7 .5 .5 .5 .5 .3 .3 .3 .3 .7 h
+10.732 a 18 a .7 .7 .7 .5 .5 .5 .5 .3 .3 .3 .3 .7 h
+10.732 a 16 a .7 .7 .7 .5 .5 .5 .5 .3 .3 .3 .3 .7 h
+10.732 a 14 a .7 .7 .7 .5 .5 .5 .5 .3 .3 .3 .3 .7 h
+12.464 a 17 a .7 .7 .7 .5 .5 .5 .5 .3 .3 .3 .3 .7 h
+12.464 a 15 a .7 .7 .7 .5 .5 .5 .5 .3 .3 .3 .3 .7 h
+
+(n = 12) 14.5 a 19 a d
+16 a 17 a .3 .7 .7 .3 .3 .7 .7 .3 .3 .7 .7 .3 h
+16 a 15 a .3 .7 .7 .3 .3 .7 .7 .3 .3 .7 .7 .3 h
+17.732 a 18 a .3 .7 .7 .3 .3 .7 .7 .3 .3 .7 .7 .3 h
+17.732 a 16 a .3 .7 .7 .3 .3 .7 .7 .3 .3 .7 .7 .3 h
+17.732 a 14 a .3 .7 .7 .3 .3 .7 .7 .3 .3 .7 .7 .3 h
+19.464 a 17 a .3 .7 .7 .3 .3 .7 .7 .3 .3 .7 .7 .3 h
+19.464 a 15 a .3 .7 .7 .3 .3 .7 .7 .3 .3 .7 .7 .3 h
+
+(n = 14) 1 a 11 a d
+2 a 9 a .7 .3 .7 .3 .7 .3 .7 .3 t
+2 a 7 a .7 .3 .7 .3 .7 .3 .7 .3 t
+4 a 9 a .7 .3 .7 .3 .7 .3 .7 .3 t
+4 a 7 a .7 .3 .7 .3 .7 .3 .7 .3 t
+
+(n = 16) 7.5 a 11 a d
+9 a 9 a .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 h
+9 a 7 a .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 h
+10.732 a 10 a .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 h
+10.732 a 8 a .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 h
+10.732 a 6 a .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 h
+12.464 a 9 a .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 h
+12.464 a 7 a .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 h
+
+(n = 21) 14.5 a 11 a d
+16 a 9 a .7 .7 .5 .5 .3 .3 .7 .7 .5 .5 .3 .3 e
+16 a 7 a .7 .7 .5 .5 .3 .3 .7 .7 .5 .5 .3 .3 e
+17.732 a 10 a .7 .7 .5 .5 .3 .3 .7 .7 .5 .5 .3 .3 e
+17.732 a 8 a .7 .7 .5 .5 .3 .3 .7 .7 .5 .5 .3 .3 e
+17.732 a 6 a .7 .7 .5 .5 .3 .3 .7 .7 .5 .5 .3 .3 e
+19.464 a 9 a .7 .7 .5 .5 .3 .3 .7 .7 .5 .5 .3 .3 e
+19.464 a 7 a .7 .7 .5 .5 .3 .3 .7 .7 .5 .5 .3 .3 e
+
+showpage             % We're done... eject the page

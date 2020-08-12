@@ -1,0 +1,36 @@
+<HTML>
+<CENTER>n=7 players, N=10 games:</CENTER>
+<pre>
+A plays B, C plays D.  assume A and C win by symmetry.
+C plays E
+IF C WINS, A plays F
+  IF A WINS, A plays C
+    IF A WINS, C plays G
+      IF C WINS, A plays C 4 times (A wins ties)
+      IF G WINS, A plays G
+        IF A WINS, C plays G and winner plays A twice (A wins ties)
+        IF G WINS, A plays G best-of-3
+    IF C WINS, A plays G
+      IF A WINS, A plays C 4 times (C wins ties)
+      IF G WINS, C plays G
+        IF C WINS, A plays G and winner plays C twice (C wins ties)
+        IF G WINS, C plays G best-of-3
+  IF F WINS, A plays G
+    IF A WINS, A plays C
+      IF A WINS, C plays F
+        IF C WINS, A plays C
+          IF A WINS, F plays A twice (A wins ties)
+          IF C WINS, A plays C twice (C wins ties)
+        IF F WINS, A plays F best-of-3
+      IF C WINS, C plays F
+        IF C WINS, A plays F and winner plays C twice (C wins ties)
+        IF F WINS, C plays F best-of-3
+    IF G WINS, C plays F
+      IF C WINS, C plays G
+        IF C WINS, F plays G and winner plays C twice (C wins ties)
+        IF G WINS, C plays G best-of-3
+      IF F WINS, C plays G and winner plays F best-of-3
+IF E WINS, A plays E
+  IF A WINS, C plays E, F plays G, winners play, and winner plays A best-of-3
+  IF E WINS, A plays C, F plays G, winners play, and winner plays E best-of-3
+</pre>

@@ -1,0 +1,279 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (June 2008)</H1></CENTER>
+
+This month we investigate four problems involving powers:<p>
+
+<font size=+3>1.</font> Most recreational math enthusiasts know that 153 is a <b>narcissistic number</b> because 1<sup>3</sup> + 5<sup>3</sup> + 3<sup>3</sup> = 153.  In other words, if n<sup>{k}</sup> stands for the sum of the k<sup>th</sup> powers of the digits of n, we have 153<sup>{3}</sup> = 153.  A full list of the 88 narcissistic numbers can be found <a href="http://mathworld.wolfram.com/NarcissisticNumber.html">here</a>.<p>
+
+A generalization of narcissistic numbers are <b>recurring digital invariants</b>, or <b>RDI's</b>.  For example 55<sup>{3}</sup> = 250, 250<sup>{3}</sup> = 133, and 133<sup>{3}</sup> = 55, which we abbreviate 55<sup>{3,3,3}</sup> = 55.  These are simply cycles rather than fixed points of this map.  A partial list of RDI's can be found <a href="http://mathworld.wolfram.com/RecurringDigitalInvariant.html">here</a>.<p>
+
+We are interested in a further generalization of this idea.  For a given positive integer n, what is the smallest list of powers for which n<sup>{n<sub>1</sub>, n<sub>2</sub>, n<sub>3</sub>, ... n<sub>k</sub>}</sup> = n?  For example, 18<sup>{1,3,1}</sup> = 18 because 18<sup>{1}</sup> = 9, 9<sup>{3}</sup> = 729, and 729<sup>{1}</sup> = 18.  We call such numbers <b>generalized recurring digital invariants</b>, or <b>GRDI's</b>.  Of course smallest could mean shortest, smallest sum, or smallest maximum element.<p>
+
+What are the best results for large n?  How about n=2008?  What numbers are GRDI's? 
+
+<p><hr><p>
+
+<font size=+3>2.</font> How close can a sum of the form &Sigma; &plusmn; a<sub>i</sub><sup>b<sub>i</sub></sup> be to 0 if the a<sub>i</sub> and b<sub>i</sub> are the numbers from 1&ndash;2n?  What are the minimal differences for large n?  Can the difference ever be exactly 0?  If not, how fast do these minimal differences grow?
+
+<p><hr><p>
+
+<font size=+3>3.</font> For k&gt;1 and n&gt;1, what is the smallest collection of k different n<sup>th</sup> powers that have exactly the same collection of digits?  For example, for k=2 and n=3, we have 5<sup>3</sup> = 125 and 8<sup>3</sup> = 512.  How about larger values of k and n?
+
+<p><hr><p>
+
+<font size=+3>4.</font> The equation 2<sup>4</sup> = 4<sup>2</sup> is the only non-trivial integer equation of x<sup>y</sup> = y<sup>x</sup>.  But if we are allowed to have more than one term on each side, there are other true equations where the bases and exponents have been switched, including: 2<sup>3</sup> + 2<sup>5</sup> + 3<sup>5</sup> + 4<sup>3</sup> + 6<sup>2</sup> + 7<sup>2</sup> = 3<sup>2</sup> + 5<sup>2</sup> + 5<sup>3</sup> + 3<sup>4</sup> + 2<sup>6</sup> + 2<sup>7</sup>.  Can you find some solutions with fewer terms?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+
+
+<font size=+3>1.</font> Here are the smallest lists for all the 2-digit numbers:<p>
+
+<center><font size=+2>Smallest GRDI Exponents</font></center>
+<table align=center border=2 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDDDFF><th>n<th>min length<th>min sum<th>min max
+<tr align=center><td>10<td colspan=3>none
+<tr align=center><td>11<td colspan=2>{1,7,1}<td>{1,2,2,2,2,2,1,2,2,2,1}
+<tr align=center><td>12<td colspan=2>{7,1}<td>{2,2,1,3,3,2,1}
+<tr align=center><td>13<td colspan=2>{1,4,1}<td>{1,2,2,2,1}
+<tr align=center><td>14<td colspan=2>{4,1}<td>{2,1,2,3,2,1}
+<tr align=center><td>15<td colspan=2>{2,4,2}<td>{1,2,2,3,2,3,2,1}
+<tr align=center><td>16<td>{2,4,1}<td colspan=2>{1,2,2,1}
+<tr align=center><td>17<td colspan=2>{3,2,2}<td>{2,2,2,2,2,1}
+<tr align=center><td>18<td colspan=3>{1,3,1}
+<tr align=center><td>19<td colspan=2>{4,1}<td>{2,3,3,2}
+<tr align=center><td>20<td>{13,1}<td>{2,4,4,1}<td>{2,2,2,2,2,2,2,2}
+<tr align=center><td>21<td>{13,1}<td>{2,2,1,4,2}<td>{2,2,2,2,3,3,3,3,2,3,2}
+<tr align=center><td>22<td>{13,1}<td>{1,7,1}<td>{3,2,2,2,3,2}
+<tr align=center><td>23<td colspan=2>{1,7,1}<td>{4,1,4,4,3,2}
+<tr align=center><td>24<td>{5,7,1}<td>{1,3,5,1}<td>{3,2,3,3,2,3,2}
+<tr align=center><td>25<td>{7,1}<td>{2,4,1}<td>{2,2,2,1,2,2}
+<tr align=center><td>26<td>{9,1}<td>{2,5,1}<td>{1,3,3,2}
+<tr align=center><td>27<td colspan=2>{5,1}<td>{2,3,2,3}
+<tr align=center><td>28<td colspan=2>{7,1}<td>{3,2,2,1,3}
+<tr align=center><td>29<td colspan=2>{4,1,2}<td>{2,2,1,2,2,2}
+<tr align=center><td>30<td>{8,5,1}<td colspan=2>{3,2,2,3}
+<tr align=center><td>31<td colspan=2>{1,10,1}<td>{1,4,3,4,1}
+<tr align=center><td>32<td colspan=2>{11,1}<td>{2,4,4,2,4}
+<tr align=center><td>33<td colspan=2>{4,3,2}<td>{1,3,3,2}
+<tr align=center><td>34<td>{14,1}<td colspan=2>{1,3,2}
+<tr align=center><td>35<td colspan=2>{9,1}<td>{3,2,3,3,2}
+<tr align=center><td>36<td colspan=2>{8,1}<td>{1,2,2,2,2,2,2,2,2,1,2}
+<tr align=center><td>37<td colspan=2>{4,1,2}<td>{2,1,1,2,2}
+<tr align=center><td>38<td>{3,11,1}<td>{2,2,6,1}<td>{3,2,3,3,2}
+<tr align=center><td>39<td>{3,13,1}<td>{1,2,5,2}<td>{3,4,4,4,3,2}
+<tr align=center><td>40<td>{13,1}<td>{5,4,2,2}<td>{2,3,2,2,3,3,2,2}
+<tr align=center><td>41<td>{13,1}<td>{2,3,2}<td>{1,2,2,2,2,2,2,1,2,2,2}
+<tr align=center><td>42<td>{5,13,1}<td>{3,1,4,2,2,2}<td>{2,2,2,2,2,2,2,2}
+<tr align=center><td>43<td>{17,1}<td>{1,10,1}<td>{1,3,4,4,3,4,2}
+<tr align=center><td>44<td>{3,15,1}<td>{1,7,7,1}<td>{3,2,2,4,4,4,4,4,2,2}
+<tr align=center><td>45<td>{17,1}<td>{1,7,1}<td>{2,1,2,2,2,2,2,2,1,2,2}
+<tr align=center><td>46<td>{12,1}<td>{2,3,4,2}<td>{2,1,2,3,3,2,2}
+<tr align=center><td>47<td colspan=2>{12,1}<td>{4,4,1,4,3,2}
+<tr align=center><td>48<td colspan=2>{9,9,1}<td>{3,1,5,4,5,5,2,4}
+<tr align=center><td>49<td>{2,11,1}<td colspan=2>{2,1,1,2}
+<tr align=center><td>50<td>{7,7,1}<td>{2,3,3,2}<td>{2,2,2,2,1,2}
+<tr align=center><td>51<td colspan=2>{9,3,2}<td>{3,2,2,3,3,2}
+<tr align=center><td>52<td>{1,13,1}<td>{1,2,1,1,3,2}<td>{2,2,2,1,1,2,2}
+<tr align=center><td>53<td>{5,11,1}<td colspan=2>{3,2,3,2}
+<tr align=center><td>54<td>{13,1}<td colspan=2>{2,3,2,3,2}
+<tr align=center><td>55<td colspan=3>{3,3,3}
+<tr align=center><td>56<td>{3,18,1}<td colspan=2>{3,1,3,4,2}
+<tr align=center><td>57<td>{1,37,1}<td>{5,1,4,2}<td>{1,4,4,2,4,2}
+<tr align=center><td>58<td>{1,6,2}<td colspan=2>{1,1,2,2,2}
+<tr align=center><td>59<td>{1,16,1}<td>{1,3,5,3,2}<td>{1,3,3,3,3,3,2}
+<tr align=center><td>60<td>{9,13,1}<td>{2,7,4,2}<td>{3,4,4,4,2}
+<tr align=center><td>61<td>{2,25,1}<td>{3,2,2,3,2}<td>{2,2,2,2,2,1,2,1,2,2,2}
+<tr align=center><td>62<td>{1,11,1}<td>{3,2,5,2}<td>{4,1,4,4,2}
+<tr align=center><td>63<td>{14,1}<td>{1,2,5,3,3}<td>{2,3,2,4,4,3}
+<tr align=center><td>64<td>{3,19,1}<td>{4,1,1,3}<td>{2,2,2,2,1,1,2}
+<tr align=center><td>65<td>{23,1}<td>{1,1,2,4,2}<td>{2,2,2,2,2,2,1,2,1,2,2}
+<tr align=center><td>66<td colspan=2>{4,2,3}<td>{3,3,2,3,3,3}
+<tr align=center><td>67<td>{14,1}<td>{4,3,5,2}<td>{2,3,4,3,2,4,2}
+<tr align=center><td>68<td>{1,19,1}<td>{4,1,2,2}<td>{3,3,2,2,2}
+<tr align=center><td>69<td>{5,17,1}<td>{2,5,2,2}<td>{3,3,2,3,2}
+<tr align=center><td>70<td>{3,26,1}<td colspan=2>{4,3,2,4,2}
+<tr align=center><td>71<td>{1,13,1}<td>{1,4,1,6,2}<td>{1,2,3,2,3,4,2}
+<tr align=center><td>72<td>{13,1}<td>{1,6,3,2}<td>{2,2,1,3,3,2,2}
+<tr align=center><td>73<td>{15,1}<td>{2,6,1,2}<td>{2,3,1,3,3,2,2}
+<tr align=center><td>74<td>{17,1}<td>{2,8,2}<td>{2,3,3,2,2,3,3}
+<tr align=center><td>75<td>{19,1}<td>{2,2,2,2,5,2}<td>{2,4,4,4,4,2}
+<tr align=center><td>76<td>{2,19,1}<td>{6,2,1,4,2}<td>{4,4,4,2,4 2}
+<tr align=center><td>77<td>{1,25,1}<td>{2,1,1,6,2}<td>{3,2,3 4,3,2}
+<tr align=center><td>78<td>{1,25,1}<td colspan=2>{1,3,2,4,2}
+<tr align=center><td>79<td>{4,21,1}<td colspan=2>{4,1,2,5,4,2}
+<tr align=center><td>80<td>{17,1}<td>{5,1,3,3}<td>{3,3,2,3,3}
+<tr align=center><td>81<td colspan=3>{1,2}
+<tr align=center><td>82<td>{5,1,4}<td>{2,4,1,2}<td>{3,3,2,2}
+<tr align=center><td>83<td>{5,31,1}<td colspan=2>{4,4,2,4}
+<tr align=center><td>84<td>{4,30,1}<td>{1,2,2,5,2}<td>{3,1,3,4,4,2}
+<tr align=center><td>85<td>{3,20,1}<td colspan=2>{2,1,2,2,2,2}
+<tr align=center><td>86<td colspan=2>{8,2,2}<td>{3,3,3,3,3,2,2}
+<tr align=center><td>87<td>{7,21,1}<td colspan=2>{3,1,2,4,2}
+<tr align=center><td>88<td>{21,1}<td>{1,2,4,2}<td>{1,2,2,3,3,3,3,2}
+<tr align=center><td>89<td>{1,22,1}<td colspan=2>{1,2,2,2,2,2}
+<tr align=center><td>90<td>{19,1}<td colspan=2>{3,4,2,2,2}
+<tr align=center><td>91<td>{17,1}<td colspan=2>{2,3,1,3,2,3}
+<tr align=center><td>92<td>{7,21,1}<td colspan=2>{1,1,3,3,3,3}
+<tr align=center><td>93<td>{1,55,1}<td colspan=2>{2,3,4,2,2}
+<tr align=center><td>94<td colspan=2>{5,2}<td>{3,1,3,2,3,2}
+<tr align=center><td>95<td>{5,25,1}<td>{1,8,5,2}<td>{3,2,1,4,4,3,4,2}
+<tr align=center><td>96<td>{7,21,1}<td>{3,1,3,6,2}<td>{5,4,5,2}
+<tr align=center><td>97<td>{25,1}<td colspan=2>{1,1,2,2}
+<tr align=center><td>98<td>{1,25,1}<td>{2,4,2,4}<td>{2,3,3,2,3,3,3,2}
+<tr align=center><td>99<td>{21,1}<td>{2,5,4,2}<td>{2,3,3,3,3,3}
+</tr></table><p>
+
+<a href="mailto:lpebody@hbk.com">Luke Peabody</a> found that 2008<sup>{2,512,1}</sup>=2008 and 2008<sup>{5,1,7,7,6,7,3}</sup>=2008.  Can anyone find a shorter list or one with a small sum?  He claims no list using numbers smaller than 7 will work.<p>
+
+
+
+<p><hr><p>
+
+<font size=+3>2.</font> Here are the smallest known differences for n &le; 24:<p>
+
+<center><font size=+2>Minimal Power Differences</font></center>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<th align=center bgcolor=DDDDFF>2n<th align=center bgcolor=DDDDFF>k<th align=center bgcolor=DDDDFF>Smallest<br>Difference<th align=center bgcolor=DDDDFF>Expression
+<tr align=center><td>4<td>1<td>4<td>( 2<sup>3</sup> ) &ndash; ( 4<sup>1</sup> )
+<tr align=center bgcolor=FFFFBB><td>6<td>1<td>1<td>( 1<sup>5</sup> + 2<sup>6</sup> ) &ndash; ( 4<sup>3</sup> )
+<tr align=center><td rowspan="2">8<td>1<td>16<td>( 1<sup>6</sup> + 2<sup>7</sup> + 8<sup>3</sup> ) &ndash; ( 5<sup>4</sup> )
+<tr align=center><td>2<td>9<td>( 2<sup>7</sup> + 8<sup>3</sup> ) &ndash; ( 5<sup>4</sup> + 6<sup>1</sup> )
+<tr align=center bgcolor=FFFFBB><td rowspan="2">10<td>1<td>28<td>( 1<sup>9</sup> + 3<sup>7</sup> + 6<sup>5</sup> + 8<sup>2</sup> ) &ndash; ( 10<sup>4</sup> )
+<tr align=center bgcolor=FFFFBB><td>2<td>&ndash;1<td>( 5<sup>6</sup> + 8<sup>4</sup> + 10<sup>1</sup> ) &ndash; ( 3<sup>9</sup> + 7<sup>2</sup> )
+</table><p>
+
+<center><font size=+2>Smallest Known Power Differences</font></center>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<th align=center bgcolor=DDDDFF>2n<th align=center bgcolor=DDDDFF>k<th align=center bgcolor=DDDDFF>Smallest<br>Difference<th align=center bgcolor=DDDDFF>Expression
+<tr align=center><td rowspan="3">12<td>1<td>&ndash;157<td>( 3<sup>11</sup> + 5<sup>7</sup> + 9<sup>4</sup> + 10<sup>1</sup> + 12<sup>2</sup> ) &ndash; ( 8<sup>6</sup> )
+<tr align=center><td>2<td>&ndash;2<td>( 2<sup>11</sup> + 3<sup>9</sup> + 10<sup>5</sup> + 12<sup>1</sup> ) &ndash; ( 7<sup>6</sup> + 8<sup>4</sup> )
+<tr align=center><td>3<td>&ndash;15<td>( 2<sup>11</sup> + 3<sup>9</sup> + 10<sup>5</sup> ) &ndash; ( 1<sup>12</sup> + 7<sup>6</sup> + 8<sup>4</sup> )
+
+<tr align=center bgcolor=FFFFBB><td rowspan="3">14<td>1<td>2<td>( 2<sup>14</sup> + 4<sup>11</sup> + 7<sup>8</sup> + 10<sup>5</sup> + 12<sup>1</sup> + 13<sup>3</sup> ) &ndash; ( 6<sup>9</sup> )
+<tr align=center bgcolor=FFFFBB><td>2<td>&ndash;1<td>( 1<sup>11</sup> + 3<sup>14</sup> + 5<sup>9</sup> + 12<sup>2</sup> + 13<sup>4</sup> ) &ndash; ( 7<sup>8</sup> + 10<sup>6</sup> )
+<tr align=center bgcolor=FFFFBB><td>3<td>2<td>( 3<sup>10</sup> + 4<sup>13</sup> + 6<sup>11</sup> + 7<sup>5</sup> ) &ndash; ( 1<sup>14</sup> + 9<sup>2</sup> + 12<sup>8</sup> )
+
+<tr align=center><td rowspan="4">16<td>1<td>444<td>( 1<sup>12</sup> + 2<sup>15</sup> + 3<sup>14</sup> + 4<sup>10</sup> + 5<sup>11</sup> + 13<sup>7</sup> + 16<sup>6</sup> ) &ndash; ( 8<sup>9</sup> )
+<tr align=center><td>2<td>&ndash;26<td>( 10<sup>5</sup> + 11<sup>4</sup> + 13<sup>1</sup> + 14<sup>3</sup> + 15<sup>2</sup> + 16<sup>9</sup> ) &ndash; ( 7<sup>6</sup> + 8<sup>12</sup> )
+<tr align=center><td>3<td>4<td>( 2<sup>15</sup> + 3<sup>14</sup> + 4<sup>10</sup> ) &ndash; ( 5<sup>11</sup> + 8<sup>9</sup> + 12<sup>1</sup> + 13<sup>7</sup> + 16<sup>6</sup> )
+<tr align=center><td>4<td>17<td>( 1<sup>12</sup> + 2<sup>15</sup> + 3<sup>14</sup> + 4<sup>10</sup> ) &ndash; ( 5<sup>11</sup> + 8<sup>9</sup> + 13<sup>7</sup> + 16<sup>6</sup> )
+
+<tr align=center bgcolor=FFFFBB><td rowspan="4">18<td>1<td>1386<td>( 1<sup>16</sup> + 2<sup>14</sup> + 3<sup>15</sup> + 4<sup>10</sup> + 6<sup>11</sup> + 12<sup>7</sup> + 13<sup>9</sup> + 17<sup>5</sup> ) &ndash; ( 18<sup>8</sup> )
+<tr align=center bgcolor=FFFFBB><td>2<td>&ndash;93<td>( 4<sup>12</sup> + 7<sup>11</sup> + 13<sup>5</sup> + 14<sup>8</sup> + 15<sup>1</sup> + 16<sup>6</sup> + 17<sup>3</sup> ) &ndash; ( 2<sup>18</sup> + 9<sup>10</sup> )
+<tr align=center bgcolor=FFFFBB><td>3<td>&ndash;109<td>( 4<sup>12</sup> + 7<sup>11</sup> + 13<sup>5</sup> + 14<sup>8</sup> + 16<sup>6</sup> + 17<sup>3</sup> ) &ndash; (  1<sup>15</sup> + 2<sup>18</sup> + 9<sup>10</sup> )
+<tr align=center bgcolor=FFFFBB><td>4<td>5<td>( 10<sup>9</sup> + 11<sup>2</sup> + 13<sup>7</sup> + 15<sup>1</sup> + 17<sup>6</sup> ) &ndash; ( 3<sup>18</sup> + 4<sup>14</sup> + 12<sup>8</sup> + 16<sup>5</sup> )
+
+<tr align=center><td rowspan="3">20<td>1<td>&ndash;8736<td>( 3<sup>14</sup> + 8<sup>12</sup> + 11<sup>6</sup> + 15<sup>1</sup> + 16<sup>9</sup> + 17<sup>7</sup> + 18<sup>2</sup> + 19<sup>5</sup> + 20<sup>4</sup> ) &ndash; ( 13<sup>10</sup> )
+<tr align=center><td>2<td>94<td>( 1<sup>19</sup> + 3<sup>18</sup> + 5<sup>15</sup> + 11<sup>10</sup> + 13<sup>9</sup> + 16<sup>2</sup> + 17<sup>4</sup> + 20<sup>7</sup> ) &ndash; ( 8<sup>12</sup> + 14<sup>6</sup> )
+<tr align=center><td>3<td>74<td>( 3<sup>18</sup> + 5<sup>15</sup> + 11<sup>10</sup> + 13<sup>9</sup> + 16<sup>2</sup> + 17<sup>4</sup> + 20<sup>7</sup> ) &ndash; ( 8<sup>12</sup> + 14<sup>6</sup> + 19<sup>1</sup> )
+
+<tr align=center bgcolor=FFFFBB><td rowspan="3">22<td>1<td>3278<td>( 1<sup>22</sup> + 2<sup>21</sup> + 3<sup>19</sup> + 4<sup>20</sup> + 13<sup>8</sup> + 14<sup>9</sup> + 15<sup>6</sup> + 16<sup>7</sup> + 17<sup>10</sup> + 18<sup>5</sup> ) &ndash; ( 11<sup>12</sup> )
+<tr align=center bgcolor=FFFFBB><td>2<td>3255<td>( 2<sup>21</sup> + 3<sup>19</sup> + 4<sup>20</sup> + 13<sup>8</sup> + 14<sup>9</sup> + 15<sup>6</sup> + 16<sup>7</sup> + 17<sup>10</sup> + 18<sup>5</sup> ) &ndash; ( 11<sup>12</sup> + 22<sup>1</sup>)
+<tr align=center bgcolor=FFFFBB><td>3<td>&ndash;24575<td>( 2<sup>20</sup> + 3<sup>21</sup> + 12<sup>11</sup> + 15<sup>1</sup> + 16<sup>9</sup> + 18<sup>8</sup> + 19<sup>6</sup> + 22<sup>5</sup> ) &ndash; ( 4<sup>17</sup> + 7<sup>14</sup> + 13<sup>10</sup> )
+
+<tr align=center><td rowspan="2">24<td>1<td>&ndash;5359<td>( 2<sup>22</sup> + 4<sup>21</sup> + 13<sup>11</sup> + 14<sup>12</sup> + 15<sup>6</sup> + 16<sup>7</sup> + 17<sup>8</sup> + 18<sup>5</sup> + 19<sup>1</sup> + 20<sup>9</sup> + 23<sup>3</sup> ) &ndash; ( 24<sup>10</sup> )
+<tr align=center><td>2<td>&ndash;5379<td>( 2<sup>22</sup> + 4<sup>21</sup> + 13<sup>11</sup> + 14<sup>12</sup> + 15<sup>6</sup> + 16<sup>7</sup> + 17<sup>8</sup> + 18<sup>5</sup> + 20<sup>9</sup> + 23<sup>3</sup> ) &ndash; ( 1<sup>19</sup> + 24<sup>10</sup> )
+</table><p>
+
+
+<p><hr><p>
+
+<font size=+3>3.</font> Here are the smallest known results:<p>
+
+<center><font size=+2>Smallest Collection of k Different n<sup>th</sup> Powers with the Same Digits</font></center>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<tr align=center bgcolor=DDDDFF><th>k \ n<th>2<th>3<th>4
+<tr align=center><th bgcolor=DDDDFF>2
+<td>13<sup>2</sup> = 169 <br>14<sup>2</sup> = 196 
+<td>5<sup>3</sup> = 125 <br>8<sup>3</sup> = 512 
+<td>4<sup>4</sup> = 256 <br>5<sup>4</sup> = 625 
+<tr align=center><th bgcolor=DDDDFF>3
+<td>13<sup>2</sup> = 169 <br>14<sup>2</sup> = 196 <br>31<sup>2</sup> = 961 
+<td>345<sup>3</sup> = 41063625 <br>384<sup>3</sup> = 56623104 <br>405<sup>3</sup> = 66430125 
+<td>1001<sup>4</sup> = 1004006004001 <br>1010<sup>4</sup> = 1040604010000 <br>1100<sup>4</sup> = 1464100000000 
+<tr align=center><th bgcolor=DDDDFF>4
+<td>128<sup>2</sup> = 16384 <br>178<sup>2</sup> = 31684 <br>191<sup>2</sup> = 36481 <br>196<sup>2</sup> = 38416 
+<td>1002<sup>3</sup> = 1006012008 <br>1020<sup>3</sup> = 1061208000 <br>2001<sup>3</sup> = 8012006001 <br>2010<sup>3</sup> = 8120601000 
+<td>10001<sup>4</sup> = 10004000600040001 <br>10010<sup>4</sup> = 10040060040010000 <br>10100<sup>4</sup> = 10406040100000000 <br>11000<sup>4</sup> = 14641000000000000 
+<tr align=center><th bgcolor=DDDDFF>5
+<td>128<sup>2</sup> = 16384 <br> 178<sup>2</sup> = 31684 <br> 191<sup>2</sup> = 36481 <br> 196<sup>2</sup> = 38416 <br> 209<sup>2</sup> = 43681 
+<td>5027<sup>3</sup> = 127035954683 <br>7061<sup>3</sup> = 352045367981 <br>7202<sup>3</sup> = 373559126408 <br>8288<sup>3</sup> = 569310543872 <br>8384<sup>3</sup> = 589323567104 
+<td>18637<sup>4</sup> = 120643525773897361 <br>22876<sup>4</sup> = 273854796251013376 <br>24788<sup>4</sup> = 377542589207163136 <br>27011<sup>4</sup> = 532307581397762641 <br>27506<sup>4</sup> = 572413350873761296 
+<tr align=center><th bgcolor=DDDDFF>6
+<td>103<sup>2</sup> = 10609 <br>130<sup>2</sup> = 16900 <br>140<sup>2</sup> = 19600 <br>247<sup>2</sup> = 61009 <br>301<sup>2</sup> = 90601 <br>310<sup>2</sup> = 96100 
+<td>11257<sup>3</sup> = 1426487591593 <br>11272<sup>3</sup> = 1432197595648 <br>15178<sup>3</sup> = 3496581419752 <br>16231<sup>3</sup> = 4275981654391 <br>16885<sup>3</sup> = 4813967954125 <br>19654<sup>3</sup> = 7591941538264 
+<tr align=center><th bgcolor=DDDDFF>7
+<td>1280<sup>2</sup> = 1638400 <br>1780<sup>2</sup> = 3168400 <br>1910<sup>2</sup> = 3648100 <br>1951<sup>2</sup> = 3806401 <br>1960<sup>2</sup> = 3841600 <br>2009<sup>2</sup> = 4036081 <br>2090<sup>2</sup> = 4368100 
+<td>23395<sup>3</sup> = 12804692354875 <br>23572<sup>3</sup> = 13097526845248 <br>24928<sup>3</sup> = 15490388426752 <br>25429<sup>3</sup> = 16443257028589 <br>25816<sup>3</sup> = 17205482538496 <br>33739<sup>3</sup> = 38405782562419 <br>34927<sup>3</sup> = 42607284155983 
+<tr align=center><th bgcolor=DDDDFF>8
+<td>1003<sup>2</sup> = 1006009 <br>1030<sup>2</sup> = 1060900 <br>1300<sup>2</sup> = 1690000 <br>1400<sup>2</sup> = 1960000 <br>2470<sup>2</sup> = 6100900 <br>3001<sup>2</sup> = 9006001 <br>3010<sup>2</sup> = 9060100  <br>3100<sup>2</sup> = 9610000 
+</table><p>
+
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<tr align=center bgcolor=DDDDFF><th>k \ n<th>5<th>6
+<tr align=center><th bgcolor=DDDDFF>2
+<td>348<sup>5</sup> = 5103830227968 <br>381<sup>5</sup> = 8028323765901 
+<td>731<sup>6</sup> = 152582336769287881 <br>764<sup>6</sup> = 198865822812737536 
+<tr align=center><th bgcolor=DDDDFF>3
+<td>10001<sup>5</sup> = 100050010001000050001 <br>10010<sup>5</sup> = 100501001000500100000 <br>10100<sup>5</sup> = 105101005010000000000 
+<td>10001<sup>6</sup> = 1000600150020001500060001 <br>10010<sup>6</sup> = 1006015020015006001000000 <br>10100<sup>6</sup> = 1061520150601000000000000 
+<tr align=center><th bgcolor=DDDDFF>4
+<td>77577<sup>5</sup> = 2809732043385544072671657 <br>82206<sup>5</sup> = 3754201540342892587063776 <br>84744<sup>5</sup> = 4370637587630405589172224 <br>88326<sup>5</sup> = 5375796440820402273185376 
+<td>100001<sup>6</sup> = 1000060001500020000150000600001 <br>100010<sup>6</sup> = 1000600150020001500060001000000 <br>100100<sup>6</sup> = 1006015020015006001000000000000 <br>101000<sup>6</sup> = 1061520150601000000000000000000 
+<tr align=center><th bgcolor=DDDDFF>5
+<td>114318<sup>5</sup> = 19524192871006530732473568 <br>115431<sup>5</sup> = 20493318522670793075846151 <br>116418<sup>5</sup> = 21384577307426399005121568 <br>133122<sup>5</sup> = 41807015820653779495321632 <br>141213<sup>5</sup> = 56153056098471782041237293 
+</table>
+
+
+
+<p><hr><p>
+
+<font size=+3>4.</font> Here are the known exponent switch equations with 5 or fewer terms on each side:<p>
+
+<a href="mailto:jgalvagni@mohawk.mtrsd.k12.ma.us">Jeremy Galvagni</a> noted that these are too easy if we allow 1, or repeats of terms.<p>
+
+<center><font size=+2>Known Small Exponent Switch Equations</font></center>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<tr align=center><td>2<sup>4</sup> = 4<sup>2</sup>
+<tr align=center><td>2<sup>5</sup> + 2<sup>7</sup> + 2<sup>9</sup> + 5<sup>3</sup> + 5<sup>4</sup> =
+                     5<sup>2</sup> + 7<sup>2</sup> + 9<sup>2</sup> + 3<sup>5</sup> + 4<sup>5</sup>
+<tr align=center><td>2<sup>5</sup> + 2<sup>6</sup> + 2<sup>7</sup> + 4<sup>5</sup> + 6<sup>3</sup> =
+                     5<sup>2</sup> + 6<sup>2</sup> + 7<sup>2</sup> + 5<sup>4</sup> + 3<sup>6</sup>
+<tr align=center><td>2<sup>3</sup> + 2<sup>7</sup> + 3<sup>6</sup> + 5<sup>4</sup> + 8<sup>2</sup> =
+                     3<sup>2</sup> + 7<sup>2</sup> + 6<sup>3</sup> + 4<sup>5</sup> + 2<sup>8</sup>
+<tr align=center><td>2<sup>5</sup> + 2<sup>6</sup> + 2<sup>11</sup> + 5<sup>3</sup> + 7<sup>3</sup> =
+                     5<sup>2</sup> + 6<sup>2</sup> + 11<sup>2</sup> + 3<sup>5</sup> + 3<sup>7</sup>
+<tr align=center><td>2<sup>3</sup> + 2<sup>9</sup> + 2<sup>11</sup> + 6<sup>3</sup> + 7<sup>3</sup> =
+                     3<sup>2</sup> + 9<sup>2</sup> + 11<sup>2</sup> + 3<sup>6</sup> + 3<sup>7</sup>
+<tr align=center><td>4<sup>5</sup> + 4<sup>6</sup> + 7<sup>3</sup> + 9<sup>2</sup> + 10<sup>2</sup> =
+                     5<sup>4</sup> + 6<sup>4</sup> + 3<sup>7</sup> + 2<sup>9</sup> + 2<sup>10</sup>
+<tr align=center><td>2<sup>6</sup> + 2<sup>10</sup> + 2<sup>11</sup> + 6<sup>4</sup> + 7<sup>2</sup> =
+                     6<sup>2</sup> + 10<sup>2</sup> + 11<sup>2</sup> + 4<sup>6</sup> + 2<sup>7</sup>
+<tr align=center><td>2<sup>3</sup> + 2<sup>8</sup> + 4<sup>3</sup> + 5<sup>6</sup> + 13<sup>2</sup> =
+                     3<sup>2</sup> + 8<sup>2</sup> + 3<sup>4</sup> + 6<sup>5</sup> + 2<sup>13</sup>
+<tr align=center><td>2<sup>8</sup> + 3<sup>10</sup> + 4<sup>5</sup> + 4<sup>6</sup> + 8<sup>4</sup> =
+                     8<sup>2</sup> + 10<sup>3</sup> + 5<sup>4</sup> + 6<sup>4</sup> + 4<sup>8</sup>
+<tr align=center><td>2<sup>12</sup> + 2<sup>16</sup> + 4<sup>6</sup> + 7<sup>4</sup> + 10<sup>3</sup> =
+                     12<sup>2</sup> + 16<sup>2</sup> + 6<sup>4</sup> + 4<sup>7</sup> + 3<sup>10</sup>
+<tr align=center><td>2<sup>5</sup> + 2<sup>16</sup> + 4<sup>3</sup> + 7<sup>5</sup> + 12<sup>2</sup> =
+                     5<sup>2</sup> + 16<sup>2</sup> + 3<sup>4</sup> + 5<sup>7</sup> + 2<sup>12</sup>
+<tr align=center><td>2<sup>9</sup> + 2<sup>12</sup> + 2<sup>20</sup> + 7<sup>4</sup> + 10<sup>4</sup> =
+                     9<sup>2</sup> + 12<sup>2</sup> + 20<sup>2</sup> + 4<sup>7</sup> + 4<sup>10</sup>
+</table><p>
+
+<a href="mailto:dean@math.ucdavis.edu">Dean Hickerson</a> asked what is the smallest K so that there are infinitely many exponent switch equations with K or fewer terms on each side?  And then he noted that K &le; 20 since:<p>
+
+<center>2<sup>2n</sup>+ 2<sup>2n+8</sup>+ 2<sup>2n+16</sup>+ 2<sup>2n+32</sup>+ 2<sup>2n+34</sup> +
+    4<sup>n+1</sup>+ 4<sup>n+2</sup>+ 4<sup>n+10</sup>+ 4<sup>n+14</sup>+ 4<sup>n+18</sup> +<br>
+    n<sup>4</sup> + (n+4)<sup>4</sup> + (n+8)<sup>4</sup> + (n+16)<sup>4</sup> + (n+17)<sup>4</sup> +
+    (2n+2)<sup>2</sup> + (2n+4)<sup>2</sup> + (2n+20)<sup>2</sup> + (2n+28)<sup>2</sup> + (2n+36)<sup>2</sup>
+
+  =<br> (2n)<sup>2</sup> + (2n+8)<sup>2</sup> + (2n+16)<sup>2</sup> + (2n+32)<sup>2</sup> + (2n+34)<sup>2</sup> +
+    (n+1)<sup>4</sup> + (n+2)<sup>4</sup> + (n+10)<sup>4</sup> + (n+14)<sup>4</sup> + (n+18)<sup>4</sup> +<br>
+    4<sup>n</sup> + 4<sup>n+4</sup>+ 4<sup>n+8</sup>+ 4<sup>n+16</sup>+ 4<sup>n+17</sup> +
+    2<sup>2n+2</sup>+ 2<sup>2n+4</sup>+ 2<sup>2n+20</sup>+ 2<sup>2n+28</sup>+ 2<sup>2n+36</sup>.</center><p>
+<p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 7/29/08.<font>
+
+</BODY></HTML>

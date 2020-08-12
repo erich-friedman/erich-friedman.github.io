@@ -1,0 +1,171 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (August 2016)</H1></CENTER>
+
+A <b>flash card</b> is a string of digits or arithmetic operations (+ &ndash; &times; /).  We allow unary minuses, but no other leading or trailing operations, or leading zeroes.  What is the shortest flash card that when repeated multiple times, evaluates to n?  For example, the flash card 6+1 repeated twice looks like 6+16+1, which evaluates to 23.  Do flash cards like this always exist?<p>
+
+What are the shortest pairs of flash cards that evaluate to n in one order, and n+1 in the other order?  What are the 3 shortest flash cards that have different cyclical orders to evaluate to n, n+1, and n+2?<p>
+
+For pairs A and B of flash cards, is it possible that the 4 orders AA, AB, BA, and BB evaluate to 4 consecutive integers?  Is this sort of thing possible with larger numbers of flash cards?
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Answers were received from Joe DeVincentis, Jon Palin, Bryce Herdt, and Berend van der Zwaag.<p>
+
+Joe DeVincentis found that &ndash;1+2 repeated n times evaluates to n.  He also showed that 0&times;1 repeated n times evaluates to 0.  More importantly, he showed that 0&times;0+n repeated k times evaluates to n.<p>
+
+Here are the smallest known solutions for a single flash card, repeated multiple times:<p>
+
+<center><font size=+2>Flash Cards that Evaluate to n when Repeated Twice</font></center>
+<table align=center border=1 bgcolor=FFFFFF cellpadding=5>
+<tr align=center bgcolor=CCFFCC><th>n<th>0<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9
+<tr align=center><th bgcolor=CCFFCC>0<td bgcolor=FFEECC>0&times;1<td bgcolor=DDFFFF>0&times;0+1<td bgcolor=FFDDDD>&ndash;1+2<td bgcolor=DDFFFF>0&times;0+3<td bgcolor=FFDDDD>&ndash;1+3<td bgcolor=DDFFFF>0&times;0+5<td bgcolor=FFDDDD>&ndash;1+4<td bgcolor=DDFFFF>0&times;0+7<td bgcolor=FFDDDD>&ndash;1+5<td bgcolor=DDFFFF>0&times;0+9
+<tr align=center><th bgcolor=CCFFCC>10<td bgcolor=FFDDDD>&ndash;1+6<td bgcolor=FFFFCC>1<td bgcolor=FFDDDD>&ndash;1+7<td>1+1<td bgcolor=FFDDDD>&ndash;1+8<td>2+1<td bgcolor=FFDDDD>&ndash;1+9<td>3+1<td bgcolor=FFDDDD>&ndash;0+9<td>4+1
+<tr align=center><th bgcolor=CCFFCC>20<td bgcolor=DDDDFF>0&ndash;1+2<td>5+1<td bgcolor=FFFFCC>2<td>6+1<td>1+2<td>7+1<td>2+2<td>8+1<td>3+2<td>9+1
+<tr align=center><th bgcolor=CCFFCC>30<td>4+2<td bgcolor=DDDDFF>0&ndash;1+3<td>5+2<td bgcolor=FFFFCC>3<td>6+2<td>1+3<td>7+2<td>2+3<td>8+2<td>3+3
+<tr align=center><th bgcolor=CCFFCC>40<td>9+2<td>4+3<td bgcolor=FFEECC>1&times;2<td>5+3<td bgcolor=FFFFCC>4<td>6+3<td>1+4<td>7+3<td>2+4<td>8+3
+<tr align=center><th bgcolor=CCFFCC>50<td>3+4<td>9+3<td>4+4<td bgcolor=DDDDFF>0&ndash;1+5<td>5+4<td bgcolor=FFFFCC>5<td>6+4<td>1+5<td>7+4<td>2+5
+<tr align=center><th bgcolor=CCFFCC>60<td>8+4<td>3+5<td>9+4<td>4+5<td bgcolor=DDDDFF>0&ndash;1+6<td>5+5<td bgcolor=FFFFCC>6<td>6+5<td>1+6<td>7+5
+<tr align=center><th bgcolor=CCFFCC>70<td>2+6<td>8+5<td>3+6<td>9+5<td>4+6<td bgcolor=FFEECC>5&times;1<td>5+6<td bgcolor=FFFFCC>7<td>6+6<td>1+7
+<tr align=center><th bgcolor=CCFFCC>80<td>7+6<td>2+7<td>8+6<td>3+7<td>9+6<td>4+7<td bgcolor=DDDDFF>0&ndash;1+8<td>5+7<td bgcolor=FFFFCC>8<td>6+7
+<tr align=center><th bgcolor=CCFFCC>90<td>1+8<td>7+7<td>2+8<td>8+7<td>3+8<td>9+7<td>4+8<td bgcolor=DDDDFF>0&ndash;1+9<td>5+8<td bgcolor=FFFFCC>9
+</table><p>
+
+<center><font size=+2>Flash Cards that Evaluate to n when Repeated Three Times</font></center>
+<table align=center border=1 bgcolor=FFFFFF cellpadding=5>
+<tr align=center bgcolor=CCFFCC><th>n<th>0<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9
+<tr align=center><th bgcolor=CCFFCC>0<td bgcolor=FFEECC>0&times;1<td bgcolor=DDFFFF>0&times;0+1<td bgcolor=DDFFFF>0&times;0+2<td bgcolor=FFDDDD>&ndash;1+2<td bgcolor=DDFFFF>0&times;0+4<td bgcolor=DDFFFF>0&times;0+5<td bgcolor=FFDDDD>&ndash;1+3<td bgcolor=DDFFFF>0&times;0+7<td bgcolor=DDFFFF>0&times;0+8<td bgcolor=FFDDDD>&ndash;1+4
+<tr align=center><th bgcolor=CCFFCC>10<td bgcolor=FFDDFF>0/5+2<td bgcolor=FFDDFF>0/2+1<td bgcolor=FFDDDD>&ndash;1+5<td bgcolor=FFDDFF>5/5+2<td bgcolor=FFDDFF>2/2+1<td bgcolor=FFDDDD>&ndash;1+6<td bgcolor=FFDDFF>6/6+3<td bgcolor=FFDDFF>8/8+4<td bgcolor=FFDDDD>&ndash;1+7<td bgcolor=FFDDFF>4/8+5
+<tr align=center><th bgcolor=CCFFCC>20<td bgcolor=FFDDFF>0/5+4<td>0+1<td bgcolor=FFDDFF>0/2+2<td bgcolor=FFDDFF>0/3+3<td>1+1<td bgcolor=FFDDFF>2/2+2<td bgcolor=FFDDFF>3/3+3<td>2+1<td bgcolor=FFDDFF>5/5+5<td bgcolor=FFDDFF>6/6+6
+<tr align=center><th bgcolor=CCFFCC>30<td>3+1<td bgcolor=FFDDFF>8/8+8<td bgcolor=FFDDFF>9/9+9<td>4+1<td bgcolor=FFDDFF>8/2+2<td bgcolor=FFDDFF>0/5+7<td>5+1<td bgcolor=EEFFCC>0&times;0+37<td bgcolor=FFDDFF>5/5+7<td>6+1
+<tr align=center><th bgcolor=CCFFCC>40<td bgcolor=FFDDFF>0/5+8<td bgcolor=FFDDFF>4/6+9<td>0+2<td bgcolor=FFDDFF>5/5+8<td bgcolor=FFDDFF>0/2+4<td>1+2<td bgcolor=FFDDFF>0/3+6<td bgcolor=FFDDFF>2/2+4<td>2+2<td bgcolor=FFDDFF>3/3+6
+<tr align=center><th bgcolor=CCFFCC>50<td bgcolor=FFDDFF>4/2+4<td>3+2<td bgcolor=FFDDFF>6/3+6<td bgcolor=FFDDFF>6/2+4<td>4+2<td bgcolor=FFDDFF>0/2+5<td bgcolor=FFDDFF>8/2+4<td>5+2<td bgcolor=FFDDFF>2/2+5<td bgcolor=DDDDFF>3&times;2+1
+<tr align=center><th bgcolor=CCFFCC>60<td>6+2<td bgcolor=FFDDFF>4/2+5<td bgcolor=DDDDFF>4+2&times;1<td>0+3<td bgcolor=FFDDFF>6/2+5<td bgcolor=DDDDFF>5+2&times;1<td>1+3<td bgcolor=FFDDFF>8/2+5<td bgcolor=EEFFCC>0&times;0+68<td>2+3
+<tr align=center><th bgcolor=CCFFCC>70<td bgcolor=FFDDFF>1/3+9<td bgcolor=FFDDFF>2/3+9<td>3+3<td bgcolor=FFDDFF>4/3+9<td bgcolor=FFDDFF>5/3+9<td>4+3<td bgcolor=FFDDFF>7/3+9<td bgcolor=FFDDFF>8/3+9<td>5+3<td bgcolor=DDDDFF>2&times;3+1
+<tr align=center><th bgcolor=CCFFCC>80<td bgcolor=FFDDFF>2/2+7<td>6+3<td bgcolor=DDDDFF>0&times;2+2<td bgcolor=FFDDFF>4/2+7<td>0+4<td bgcolor=EEFFCC>0&times;0+85<td bgcolor=FFDDFF>6/2+7<td>1+4<td bgcolor=FFDDFF>0/2+8<td bgcolor=FFDDFF>8/2+7
+<tr align=center><th bgcolor=CCFFCC>90<td>2+4<td bgcolor=FFDDFF>2/2+8<td bgcolor=EEFFCC>0&times;0+92<td>3+4<td bgcolor=FFDDFF>4/2+8<td bgcolor=DDDDFF>9&times;2+1<td>4+4<td bgcolor=FFDDFF>6/2+8<td bgcolor=DDDDFF>5+3&times;1<td>5+4
+</table><p>
+
+<center><font size=+2>Flash Cards that Evaluate to n when Repeated Four Times</font></center>
+<table align=center border=1 bgcolor=FFFFFF cellpadding=5>
+<tr align=center bgcolor=CCFFCC><th>n<th>0<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9
+<tr align=center><th bgcolor=CCFFCC>0<td bgcolor=FFEECC>0&times;1<td bgcolor=DDFFFF>0&times;0+1<td bgcolor=DDFFFF>0&times;0+2<td bgcolor=DDFFFF>0&times;0+3<td bgcolor=FFDDDD>&ndash;1+2<td bgcolor=DDFFFF>0&times;0+5<td bgcolor=DDFFFF>0&times;0+6<td bgcolor=DDFFFF>0&times;0+7<td bgcolor=FFDDDD>&ndash;1+3<td bgcolor=DDFFFF>0&times;0+9
+<tr align=center><th bgcolor=CCFFCC>10<td bgcolor=FFDDFF>6/6+1<td bgcolor=FFDDFF>5/5+1<td bgcolor=FFDDDD>&ndash;1+4<td bgcolor=FFDDFF>0/9+3<td bgcolor=FFDDFF>0/5+2<td bgcolor=FFDDFF>3/3+1<td bgcolor=FFDDDD>&ndash;1+5<td bgcolor=FFDDFF>9/9+3<td bgcolor=FFDDFF>0/6+3<td bgcolor=FFDDFF>2/4+2
+<tr align=center><th bgcolor=CCFFCC>20<td bgcolor=FFDDDD>&ndash;1+6<td bgcolor=FFDDFF>0/5+3<td bgcolor=FFDDFF>6/6+3<td bgcolor=FFDDFF>8/8+4<td bgcolor=FFDDDD>&ndash;1+7<td bgcolor=FFDDFF>5/5+3<td bgcolor=FFDDFF>0/9+6<td bgcolor=FFDDFF>1/7+5<td bgcolor=FFDDDD>&ndash;1+8<td bgcolor=FFDDFF>1/8+6
+<tr align=center><th bgcolor=CCFFCC>30<td bgcolor=FFDDFF>8/7+5<td>0+1<td bgcolor=FFDDDD>&ndash;1+9<td bgcolor=FFDDFF>6/9+7<td bgcolor=FFDDFF>6/6+5<td>1+1<td bgcolor=FFDDDD>&ndash;0+9<td bgcolor=FFDDFF>3/3+3<td bgcolor=FFDDFF>4/4+4<td>2+1
+<tr align=center><th bgcolor=CCFFCC>40<td bgcolor=FFDDFF>6/6+6<td bgcolor=FFDDFF>7/7+7<td bgcolor=FFDDFF>8/8+8<td>3+1<td bgcolor=FFDDFF>3/7+8<td bgcolor=FFDDFF>9/3+3<td bgcolor=FFDDFF>6/6+7<td>4+1<td bgcolor=FFDDFF>9/6+7<td bgcolor=FFDDFF>0/5+7
+<tr align=center><th bgcolor=CCFFCC>50<td bgcolor=FFDDFF>3/6+8<td>5+1<td bgcolor=FFDDFF>6/6+8<td bgcolor=FFDDFF>5/5+7<td bgcolor=FFDDFF>9/6+8<td>6+1<td bgcolor=FFDDFF>3/6+9<td bgcolor=FFDDFF>6/4+6<td bgcolor=FFDDFF>6/6+9<td>7+1
+<tr align=center><th bgcolor=CCFFCC>60<td bgcolor=FFDDFF>9/6+9<td bgcolor=FFDDFF>7/2+3<td>0+2<td>8+1<td bgcolor=FFDDFF>0/2+4<td bgcolor=DDDDDD>0&ndash;7+3<td>1+2<td>9+1<td bgcolor=FFDDFF>2/2+4<td bgcolor=FFDDFF>1/4+8
+<tr align=center><th bgcolor=CCFFCC>70<td>2+2<td bgcolor=FFDDFF>3/4+8<td bgcolor=FFDDFF>4/4+8<td bgcolor=FFDDFF>5/4+8<td>3+2<td bgcolor=FFDDFF>7/4+8<td bgcolor=FFDDFF>8/4+8<td bgcolor=FFDDFF>9/4+8<td>4+2<td bgcolor=DDDDDD>6+6+1
+<tr align=center><th bgcolor=CCFFCC>80<td bgcolor=FFDDFF>0/2+5<td bgcolor=FFDDFF>3/3+7<td>5+2<td bgcolor=DDDDDD>6+7+1<td bgcolor=FFDDFF>2/2+5<td bgcolor=FFDDFF>6/3+7<td>6+2<td bgcolor=DDDDDD>7+7+1<td bgcolor=FFDDFF>0/3+8<td bgcolor=FFDDFF>9/3+7
+<tr align=center><th bgcolor=CCFFCC>90<td>7+2<td bgcolor=DDDDDD>7+8+1<td bgcolor=FFDDFF>3/3+8<td>0+3<td>8+2<td bgcolor=DDDDDD>8+8+1<td bgcolor=FFDDFF>6/3+8<td>1+3<td>9+2<td bgcolor=FFDDFF>0/3+9
+</table><p>
+
+<hr>
+
+Joe DeVincentis found that 0/10 and 1+n evaluate to n and n+1.  He found all of the solutions in white below.  Here are the smallest known solutions for multiple flash cards, evaluating to consecutive integers:<p>
+
+<center><font size=+2>Flash Card Pairs that Evaluate to n and n+1</font></center>
+<table align=center border=1 bgcolor=FFFFFF cellpadding=5>
+<tr align=center bgcolor=CCFFCC><th>n<th>0<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9
+<tr align=center><th bgcolor=CCFFCC>0
+<td bgcolor=FFEECC>&ndash;0&times;1<br>1<td bgcolor=DDDDDD>0/5<br>0+1<td>0/10<br>1+2<td>0/10<br>1+3<td bgcolor=DDDDDD>0/8<br>0+4<td>0/10<br>1+5<td>0/10<br>1+6<td>0/10<br>1+7<td>0/10<br>1+8<td bgcolor=DDDDDD>0/9<br>0+9
+<tr align=center><th bgcolor=CCFFCC>10
+<td>9/9<br>&ndash;0+9<td bgcolor=DDDDFF>2<br>0/2+1<td bgcolor=DDDDFF>2<br>2/2+1<td bgcolor=DDDDFF>2<br>4/2+1<td bgcolor=DDDDFF>2<br>6/2+1<td bgcolor=DDDDFF>2<br>8/2+1<td>0/10<br>1+16<td bgcolor=DDDDFF>8<br>0/5+1<td bgcolor=DDDDFF>8<br>5/5+1<td>0/10<br>1+19
+<tr align=center><th bgcolor=CCFFCC>20
+<td>0/10<br>1+20<td bgcolor=FFFFDD>1&times;2<br>1<td bgcolor=EEFFCC>1&times;2<br>1+1<td bgcolor=EEFFCC>1&times;2<br>2+1<td bgcolor=EEFFCC>1&times;2<br>3+1<td bgcolor=EEFFCC>1&times;2<br>4+1<td bgcolor=EEFFCC>1&times;2<br>5+1<td bgcolor=EEFFCC>1&times;2<br>6+1<td bgcolor=EEFFCC>1&times;2<br>7+1<td bgcolor=EEFFCC>1&times;2<br>8+1
+<tr align=center><th bgcolor=CCFFCC>30
+<td bgcolor=EEFFCC>1&times;2<br>9+1<td bgcolor=DDFFFF>5&times;2+2<br>1<td bgcolor=FFDDDD>2/2&times;3<br>2<td bgcolor=DDFFFF>6&times;2+2<br>1<td>1<br>65/5+2<td bgcolor=DDFFFF>7&times;2+2<br>1<td>1<br>75/5+2<td bgcolor=DDFFFF>8&times;2+2<br>1<td bgcolor=DDDDFF>2/2+3<br>7<td bgcolor=DDDDFF>4/2+3<br>7
+<tr align=center><th bgcolor=CCFFCC>40
+<td bgcolor=DDDDFF>6/2+3<br>7<td bgcolor=DDDDFF>8/2+3<br>7<td bgcolor=FFFFDD>3&times;1<br>4<td bgcolor=FFDDDD>3/3&times;4<br>3<td bgcolor=FFDDDD>5<br>5/5&times;4<td bgcolor=FFDDFF>3+3&times;1<br>4<td bgcolor=FFDDFF>4+3&times;1<br>4<td bgcolor=FFDDFF>5+3&times;1<br>4<td bgcolor=FFDDFF>6+3&times;1<br>4<td bgcolor=FFDDFF>7+3&times;1<br>4
+<tr align=center><th bgcolor=CCFFCC>50
+<td bgcolor=FFDDFF>8+3&times;1<br>4<td bgcolor=FFDDFF>9+3&times;1<br>4<td>0/10<br>1+52<td>0/10<br>1+53<td bgcolor=FFDDDD>4/4&times;5<br>4<td bgcolor=FFDDDD>6<br>6/6&times;5<td>4<br>16/8+5<td>4<br>24/8+5<td>4<br>32/8+5<td>4<br>40/8+5
+<tr align=center><th bgcolor=CCFFCC>60
+<td>4<br>48/8+5<td>4<br>56/8+5<td bgcolor=EEFFCC>1&times;3<br>1&times;2<td>4<br>72/8+5<td>4<br>80/8+5<td bgcolor=FFDDDD>5/5&times;6<br>5<td bgcolor=FFDDDD>7<br>7/7&times;6<td>0/10<br>1+67<td bgcolor=EEFFCC>2+3<br>3&times;2<td>0/10<br>1+69
+<tr align=center><th bgcolor=CCFFCC>70
+<td>0/10<br>1+70<td bgcolor=EEFFCC>5+2<br>2&times;3<td>0/10<br>1+72<td>0/10<br>1+73<td>0/10<br>1+74<td>0/10<br>1+75<td bgcolor=FFDDDD>6/6&times;7<br>6<td bgcolor=FFDDDD>8<br>8/8&times;7<td bgcolor=EEFFCC>2+7<br>6&times;1<td>0/10<br>1+79
+<tr align=center><th bgcolor=CCFFCC>80
+<td>0/10<br>1+80<td>0/10<br>1+81<td>0/10<br>1+82<td>0/10<br>1+83<td>0/10<br>1+84<td>0/10<br>1+85<td>0/10<br>1+86<td bgcolor=FFDDDD>7/7&times;8<br>7<td bgcolor=FFDDDD>9<br>9/9&times;8<td>0/10<br>1+89
+<tr align=center><th bgcolor=CCFFCC>90
+<td>0/10<br>1+90<td>0/10<br>1+91<td bgcolor=EEFFCC>2&times;4<br>5+2<td>0/10<br>1+93<td>0/10<br>1+94<td bgcolor=EEFFCC>7+2<br>2&times;4<td>0/10<br>1+96<td>0/10<br>1+98<td bgcolor=FFDDDD>8/8&times;9<br>8<td>0/10<br>1+99
+</table><p>
+
+Jon Palin found a general solution for triples: 0+(n-8)+9, 0/9, and 0&times;8.  I suspect many shorter solutions exist, but only the ones below are known to be better.<p>
+
+<center><font size=+2>Flash Card Triples that Evaluate<br>Cyclically to n, n+1, and n+2</font></center>
+<table align=center border=1 bgcolor=FFFFFF cellpadding=5>
+<tr align=center bgcolor=CCFFCC><th>n<th>0<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9
+<tr align=center><th bgcolor=CCFFCC>0
+<td>2<br>10/42<br>0&times;4<br>(JD)<td>2+1<br>0/5<br>0&times;5<br>(JD)<td>1+2<br>0/5<br>0&times;5<br>(JD)<td>3+3<br>0/6<br>0&times;2<br>(JD)<td>2+3<br>5/7<br>0&times;4<br>(JD)<td>?<td>?<td>?<td>8+8<br>0/8<br>0&times;1<br>(JD)<td>9+9<br>0/9<br>0&times;2<br>(JD)
+<tr align=center><th bgcolor=CCFFCC>10
+<td>?<td>5+2<br>4/2<br>0&times;5<br>(JD)<td>?<td>?<td>?<td>?<td>?<td>0/9<br>0&times;9<br>1+18<br>(JP)<td>?<td>?
+<tr align=center><th bgcolor=CCFFCC>20
+<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?
+<tr align=center><th bgcolor=CCFFCC>30
+<td>?<td>?<td>1<br>6/9&times;1<br>8+2<br>(JD)<td>?<td>?<td>7<br>0/5+2<br>0+1<br>(JD)<td>7<br>5/5+2<br>0+1<br>(JD)<td>7<br>5/5+2<br>1+1<br>(JD)<td>7<br>5/5+2<br>2+1<br>(JD)<td>7<br>5/5+2<br>3+1<br>(JD)
+<tr align=center><th bgcolor=CCFFCC>40
+<td>7<br>5/5+2<br>4+1<br>(JD)<td>7<br>5/5+2<br>5+1<br>(JD)<td>7<br>5/5+2<br>6+1<br>(JD)<td>7<br>5/5+2<br>7+1<br>(JD)<td>7<br>5/5+2<br>8+1<br>(JD)<td>7<br>5/5+2<br>9+1<br>(JD)<td>?<td>?<td>?<td>?
+<tr align=center><th bgcolor=CCFFCC>50
+<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?
+<tr align=center><th bgcolor=CCFFCC>60
+<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?
+<tr align=center><th bgcolor=CCFFCC>70
+<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?
+<tr align=center><th bgcolor=CCFFCC>80
+<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?
+<tr align=center><th bgcolor=CCFFCC>90
+<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?<td>?
+</table><p>
+
+<center><font size=+2>Flash Card Pairs so that AA, AB, BA, BB<br>Evaluate to n, n+1, n+2, and n+3</font></center>
+<table align=center border=1 bgcolor=FFFFFF cellpadding=5>
+<tr align=center bgcolor=CCFFCC><th>n<th>0<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9
+
+<tr align=center><th bgcolor=CCFFCC>0
+<td>0/5<br>&ndash;1+2<br>(JD)<td>&ndash;2+3<br>0&times;0+3<br>(JD)<td>&ndash;1+2<br>0&times;0+4<br>(JD)<td>0/5+1<br>0/5+2<br>(JP)<td>0/2+1<br>5/5+1<br>(BZ)
+<td>5/5+1<br>5/5+2<br>(BH)<td>&ndash;1+4<br>0/8+4<br>(JD)<td>&ndash;2+6<br>0/20+6<br>(BZ)<td>&ndash;0+4<br>8/8+4<br>(JD)<td>0/5+3<br>0/5+4<br>(BZ)
+
+<tr align=center><th bgcolor=CCFFCC>10
+<td>0/5+4<br>8/8+4<br>(BZ)<td>5/5+3<br>5/5+4<br>(BZ)<td>0/5+4<br>0/5+5<br>(BZ)<td>&ndash;2+9<br>0/15+9<br>(BZ)<td>5/5+4<br>5/5+5<br>(BZ)
+<td>0/5+5<br>0/5+6<br>(BZ)<td>&ndash;1+9<br>0/9+9<br>(JD)<td>5/5+5<br>5/5+6<br>(BZ)<td>&ndash;0+9<br>9/9+9<br>(JD)<td>2<br>4&ndash;7+2&times;1<br>(JD)
+
+<tr align=center><th bgcolor=CCFFCC>20
+<td>2<br>0&ndash;1+2&times;1<br>(JD)<td>2<br>4&ndash;5+2&times;1<br>(JD)<td>2<br>0+1+2&times;1<br>(JD)<td>5/5+7<br>5/5+8<br>(BZ)<td>0/5+8<br>0/5+9<br>(BZ)
+<td>1+2&times;1<br>2+2&times;1<br>(JP)<td>5/5+8<br>5/5+9<br>(BZ)<td>3&ndash;1+2&times;1<br>3+2<br>(BZ)<td>2+2&times;1<br>3+2&times;1<br>(JP)<td>3+1+2<br>3+2&times;1<br>(JP)
+
+<tr align=center><th bgcolor=CCFFCC>30
+<td>3+2&times;1<br>3+2+2<br>(BZ)<td>3+2&times;1<br>4+2&times;1<br>(JP)<td>2&ndash;4+3&times;1<br>1+3<br>(BZ)<td>0+3&times;1<br>1+3<br>(JP)<td>4+2&times;1<br>5+2&times;1<br>(JP)
+<td>1+7+2<br>5+2&times;1<br>(JP)<td>2&ndash;1+3&times;1<br>1+1+3<br>(BZ)<td>3&times;1<br>3&ndash;6+4<br>(JP)<td>3&times;1<br>5&ndash;8+4<br>(JP)<td>3&times;1<br>5&ndash;7+4<br>(JP)
+
+<tr align=center><th bgcolor=CCFFCC>40
+<td>1+4+3<br>2+3&times;1<br>(JP)<td>4<br>4&ndash;4+3&times;1<br>(JD)<td>4<br>6&ndash;6+3&times;1<br>(JD)<td>4<br>2+1+3&times;1<br>(JD)<td>4<br>2+2+3&times;1<br>(JD)
+<td>2&ndash;1+4<br>4/2&times;2<br>(BZ)<td>7+3<br>9+2&times;1<br>(JD)<td>1+2&times;2<br>2+2&times;2<br>(JP)<td>1+2+4<br>1+4&times;1<br>(JP)<td>4+4<br>4+3&times;1<br>(JD)
+
+<tr align=center><th bgcolor=CCFFCC>50
+<td>2+2&times;2<br>3+2&times;2<br>(JP)<td>3+1+4<br>3+2&times;2<br>(JP)<td>3+2&times;2<br>3+2+4<br>(JP)<td>3+2&times;2<br>4+2&times;2<br>(JP)<td>4&times;1<br>4&ndash;4+5<br>(JP)
+<td>4&ndash;3+5<br>4&times;1<br>(JP)<td>1+6+4<br>5+2&times;2<br>(JP)<td>1+7+4<br>5+2&times;2<br>(BZ)<td>5+3+4<br>7+3&times;1<br>(JP)<td>5+2&times;2<br>6+2&times;2<br>(BH)
+
+<tr align=center><th bgcolor=CCFFCC>60
+<td>1+5&times;1<br>2&ndash;5+6<br>(BZ)<td>1+5&times;1<br>2&ndash;4+6<br>(BZ)<td>4+4&times;1<br>4+5<br>(JP)<td>4+1+5<br>4+4&times;1<br>(BZ)<td>0+3&times;2<br>1&ndash;2+6<br>(JP)
+<td>7+2&times;2<br>8+2&times;2<br>(JP)<td>1+6<br>0+3&times;2<br>(JD)<td>2+5&times;1<br>2+6<br>(JP)<td>8+5<br>9+3&times;1<br>(JP)<td>1+2&times;3<br>1+2+6<br>(JP)
+
+<tr align=center><th bgcolor=CCFFCC>70
+<td>7+2+5<br>9+2&times;2<br>(JP)<td>3+6<br>3+5&times;1<br>(JD)<td>3+1+6<br>3+5&times;1<br>(JP)<td>1+4+6<br>2+3&times;2<br>(JP)<td>7<br>9&ndash;9+2&times;3<br>(JD)
+<td>7<br>5&ndash;3+2&times;3<br>(JD)<td>7<br>9&ndash;7+2&times;3<br>(JD)<td>7<br>5&ndash;1+2&times;3<br>(JD)<td>7+4&times;1<br>7+6<br>(JP)<td>4+3&times;2<br>4+5&times;1<br>(JP)
+
+<tr align=center><th bgcolor=CCFFCC>80
+<td>2+1+7<br>2+6&times;1<br>(BZ)<td>5+2&times;3<br>6+2&times;3<br>(BH)<td>4+3&times;2<br>4+7<br>(JP)<td>1&ndash;3+8<br>1+7&times;1<br>(BZ)<td>6+2&times;3<br>7+2&times;3<br>(BH)
+<td>8<br>9&ndash;8+3&times;2<br>(JD)<td>8<br>7&ndash;4+3&times;2<br>(JD)<td>8<br>9&ndash;6+3&times;2<br>(JD)<td>6+3&times;2<br>6+7<br>(JP)<td>6+1+7<br>6+3&times;2<br>(JP)
+
+<tr align=center><th bgcolor=CCFFCC>90
+<td>8+2&times;3<br>8+7<br>(JP)<td>2+7&times;1<br>2+8<br>(JP)<td>7+2+7<br>9+2&times;3<br>(JP)<td>3&ndash;1+2&times;4<br>3+8<br>(BZ)<td>6&times;1<br>6&ndash;8+9<br>(JP)
+<td>6&times;1<br>6&ndash;7+9<br>(JP)<td>2&ndash;3+9<br>2+4&times;2<br>(BZ)<td>3+2&times;4<br>4+2&times;4<br>(JP)<td>2&ndash;4+3&times;3<br>1+9<br>(BZ)<td>0+3&times;3<br>1+9<br>(JP)
+
+</table><p>
+
+Berend van der Zwaag also found 10 flash cards so that all possible pairs evaluate to the numbers 0 through 99.  They are: 0&ndash;11+2, 0&ndash;11+3, ... , 0&ndash;11+11.
+
+<HR><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 8/26/16.<font>
+
+</BODY></HTML>

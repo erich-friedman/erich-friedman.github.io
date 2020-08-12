@@ -1,0 +1,164 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1><CENTER><H1>Problem of the Month (January 2005)</H1></CENTER>A computer was programmed to print out products of integers, but for some reason the spaces for multiplication didn't print.  Most of the equations can be recovered uniquely: 946 = 414 can only be 9 46 = 414.  This month we are interested in the other cases, the <b>ambiguous products</b>.<p>
+
+We exclude trivial cases where the product is 0, or the product contains the same factors in a different order, or a factor is added to a smaller solution.  The smallest ambiguous products are:
+
+<center><pre><font size=+1>
+1 64 = 64      16 4 = 64 
+1 95 = 95      19 5 = 95 
+2 65 = 130     26 5 = 130
+4 98 = 392     49 8 = 392
+</font></pre></center><p>
+
+In fact, these are often seen in recreational mathematics as fractions where illegal canceling gives the correct result:<p>
+
+<style>
+    td.upper_line { border-top:solid 1px black; }
+    table.fraction { text-align: center; vertical-align: middle;
+        margin-top:0.5em; margin-bottom:0.5em; line-height: 2em; }
+</style>
+
+<center><table><tr><td>
+
+<table class="fraction" align="center" cellpadding="0" cellspacing="0">
+<tr>
+ <td nowrap="nowrap">16</td>
+ <td rowspan="2" nowrap="nowrap">&nbsp;&nbsp;=&nbsp;&nbsp;</td>
+ <td nowrap="nowrap">1</td>
+</tr><tr>
+ <td class="upper_line">64</td>
+ <td class="upper_line">4</td>
+</tr></table>
+
+</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+
+<table class="fraction" align="center" cellpadding="0" cellspacing="0">
+<tr>
+ <td nowrap="nowrap">19</td>
+ <td rowspan="2" nowrap="nowrap">&nbsp;&nbsp;=&nbsp;&nbsp;</td>
+ <td nowrap="nowrap">1</td>
+</tr><tr>
+ <td class="upper_line">95</td>
+ <td class="upper_line">5</td>
+</tr></table>
+
+</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+
+
+<table class="fraction" align="center" cellpadding="0" cellspacing="0">
+<tr>
+ <td nowrap="nowrap">26</td>
+ <td rowspan="2" nowrap="nowrap">&nbsp;&nbsp;=&nbsp;&nbsp;</td>
+ <td nowrap="nowrap">2</td>
+</tr><tr>
+ <td class="upper_line">65</td>
+ <td class="upper_line">5</td>
+</tr></table>
+
+</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
+
+<table class="fraction" align="center" cellpadding="0" cellspacing="0">
+<tr>
+ <td nowrap="nowrap">49</td>
+ <td rowspan="2" nowrap="nowrap">&nbsp;&nbsp;=&nbsp;&nbsp;</td>
+ <td nowrap="nowrap">4</td>
+</tr><tr>
+ <td class="upper_line">98</td>
+ <td class="upper_line">8</td>
+</tr></table>
+
+</td></tr></table></center>
+
+What are some other small ambiguous products?  What products can be ambiguous?  Are there arbitrarily long strings which are ambiguous?  What is the shortest product that can be written in 3 different ways?  Are there products which can be written in arbitrarily large numbers of ways?<p>
+
+If the equal signs also don't print, we get a new class of ambiguous products.  This time we also exclude cases where leading 1's become multiple factors, like 1 18 = 18 and 1 1 8 1 = 8.<p>
+
+The shortest strings of digits that are ambiguous in this fashion are:
+
+<center><pre><font size=+1>
+2 27 1 = 54    22 7 = 154
+2 6 2 1 = 24   2 62 = 124
+2 9 5 1 = 90   2 95 = 190
+3 1 8 2 = 48   31 8 = 248
+3 5 5 1 = 75   35 5 = 175
+4 4 5 1 = 80   4 45 = 180
+</font></pre></center><p>
+
+What are the strings of 7 digits that are ambiguous?   Can a string give 3 different products?  What else can you prove about ambiguous products?<p>
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Here are the shortest strings which are 3-ambiguous or 4-ambiguous.  
+
+<center><pre><font size=+1>
+1 4 48 35 = 1 448 3 5 = 14 4 8 3 5
+1 4 4 8 63 = 1 448 6 3 = 14 4 8 6 3
+1 48 6 35 = 1 4 8 63 5 = 14 8 6 3 5
+1 5 5775 = 1 55 7 75 = 15 5 77 5
+3 5 1 448 = 35 1 4 48 = 3 5 14 4 8
+4 48 6 35 = 4 4 8 63 5 = 448 6 3 5
+6 3 1 448 = 6 3 14 4 8 = 63 1 4 4 8
+6 35 1 48 = 6 3 5 14 8 = 63 5 1 4 8
+6 3 5 448 = 6 35 4 48 = 63 5 4 4 8
+</font></pre></center><p>
+
+<center><pre><font size=+1>
+1 4 48 6 35 = 1 4 4 8 63 5 = 1 448 6 3 5 = 14 4 8 6 3 5
+6 3 5 1 448 = 6 35 1 4 48 = 6 3 5 14 4 8 = 63 5 1 4 4 8
+</font></pre></center><p>
+
+Claudio Baiocchi found several infinite families of arbitrary products.<P>
+
+<center>1999<sup>...</sup>9 &times; 5 = 1 &times; 999<sup>...</sup>95</center>
+
+<center>555<sup>...</sup>565000<sup>...</sup>04 &times; 5 = 555<sup>...</sup>56 &times; 5000<sup>...</sup>045</center>
+<center>666<sup>...</sup>674000<sup>...</sup>02 &times; 4 = 666<sup>...</sup>67 &times; 4000<sup>...</sup>024</center><p>
+
+He also showed that if AB &times; C = A &times; BC is an ambiguous product, so is A[B]<sup>k</sup> &times; [B]<sup>l</sup>C = A[B]<sup>l</sup> &times; [B]<sup>k</sup>C for all k and l.  He sent me a paper he wrote on the subject.<p>
+
+He gives another interesting example, where A = 333<sup>...</sup>34, C = 666<sup>...</sup>67, and B=3AC, then AB &times; C = A &times; BC is ambiguous.<p>
+
+Emilio Schiavi found this one.<p>
+
+<center>1 &times; 333<sup>...</sup>325 = 1333<sup>...</sup>3 &times; 25</center><p>
+
+He also found a very general infinite family.  let N=10<sup>n</sup>, and let d be a divisor of N. Let A = N/d &ndash; 1, B = N &ndash; d, and c=999...9. Then (Ac) &times; B = A &times; (cB) is an ambiguous product.<p>
+
+He also analyzed AB &times; C = A &times; BC, and gave a way to construct interesting examples.<p>
+
+
+Philippe Fondanaiche found these:<p>
+
+<center>1 &times; 666<sup>...</sup>64 = 1666<sup>...</sup>6 &times; 4</center>
+<center>2 &times; 666<sup>...</sup>65 = 2666<sup>...</sup>6 &times; 5</center>
+<center>4 &times; 999<sup>...</sup>98 = 4999<sup>...</sup>9 &times; 8</center>
+<center>2 &times; 777<sup>...</sup>756 = 2777<sup>...</sup>7 &times; 56</center>
+<center>3 &times; 999<sup>...</sup>975 = 3999<sup>...</sup>9 &times; 75</center>
+<center>4 &times; 324324<sup>...</sup>3243 = 432432<sup>...</sup>4324 &times; 3</center>
+<center>4 &times; 8484<sup>...</sup>847 = 4848<sup>...</sup>484 &times; 8</center>
+<center>6 &times; 5454<sup>...</sup>545 = 65454<sup>...</sup>54 &times; 5</center>
+<center>7 &times; 4242<sup>...</sup>424 = 74242<sup>...</sup>42 &times; 4</center>
+<center>8 &times; 333<sup>...</sup>32 = 8333<sup>...</sup>3 &times; 32</center>
+<center>8 &times; 648648<sup>...</sup>6486 = 864864<sup>...</sup>8648 &times; 6</center><p>
+
+He notes that the first three (and Claudio Baiocchi notes the next two as well) are ambiguous in more than one way.  He also provides this additional example:<P>
+
+<center>19 &times; 75 &times; 395 = 1975 &times; 3 &times; 95 = 562875</center>
+<center>1 &times; 975 &times; 3 &times; 95 = 19 &times; 75 &times; 39 &times; 5 = 277875</center><p>
+
+Philippe Fondanaiche also sent these examples of 3-ambiguous and 4-ambiguous strings:<p>
+
+<center><pre>
+130 3 25 6 24 = 1 30 325 6 24 = 1 30 3 25 624
+1 50 2 40 735 = 150 2 40 7 35 = 1 50 240 7 35
+1 80 4 50 648 = 180 450 6 48 = 180 4 50 6 48
+1 975 3 95 395 = 19 75 395 39 5 = 1975 39 5 3 95
+4 80 6 75 972 = 4 80 675 9 72 = 480 6 75 9 72
+8 33 83 3 3332 = 833 83 3 33 32 = 833 8 33 3 332
+1 75 3 50 4 48 945 = 1 75 3 50 448 9 45 = 1 75 350 4 48 9 45 = 175 3 50 4 48 9 45
+</pre></center>
+
+Philippe Fondanaiche also investigated ambiguous products where the equal sign comes before the multiplication signs.<p>
+
+
+<p><hr>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 1/31/05.<font></BODY></HTML>

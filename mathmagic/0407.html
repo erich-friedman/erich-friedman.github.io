@@ -1,0 +1,908 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (April 2007)</H1></CENTER>
+
+Pick two types of chess pieces.  How many of each can you place on an m &times; n chessboard so that each piece attacks exactly one other piece, and the attacks form one large loop?  We can ask the same question for cycles of 3 or more chess pieces.  We allow Pawns to be in the first row.<p>
+
+For a given cycle of chess pieces and given board, what is the maximum number of pieces that can be placed?  If we disregard the condition requiring pieces to attack other specific pieces, what is the largest possible attack loop on an m &times; n chessboard? 
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Here are the best results I could find.<p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>Any Pieces</font></center><br><IMG SRC="0407/6x5.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9
+<TR align=center><th bgcolor=lightgreen>1<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/1x2.gif">2</a><TD bgcolor=FFFFDD>2<TD bgcolor=FFFFDD>2<TD bgcolor=FFFFDD>2<TD bgcolor=FFFFDD>2<TD bgcolor=FFFFDD>2<TD bgcolor=FFFFDD>2<TD bgcolor=FFFFDD>2
+<TR align=center><th bgcolor=lightgreen>2<TD bgcolor=FFFFDD><a href="0407/2x1.gif">2</a><TD bgcolor=FFFFDD>2<TD bgcolor=FFFFBB><a href="0407/2x3.gif">4</a><TD bgcolor=FFFFAA><a href="0407/2x4.gif">5</a><TD bgcolor=FFFF99><a href="0407/2x5.gif">6</a><TD bgcolor=FFFF77><a href="0407/2x6.gif">8</a><TD bgcolor=FFEE77><a href="0407/2x7.gif">9</a><TD bgcolor=FFDD77><a href="0407/2x8.gif">10</a><TD bgcolor=FFBB77><a href="0407/2x9.gif">12</a>
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD>2<TD bgcolor=FFFF99><a href="0407/3x2.gif">6</a><TD bgcolor=FFFF99>6<TD bgcolor=FFFF77><a href="0407/3x4.gif">8</a><TD bgcolor=FFDD77><a href="0407/3x5.gif">10</a><TD bgcolor=FFDD77>10<TD bgcolor=FFCC77><a href="0407/3x7.gif">11</a><TD bgcolor=FF9977><a href="0407/3x8.gif">14</a><TD bgcolor=FF9977>14
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>2<TD bgcolor=FFFF88><a href="0407/4x2.gif">7</a><TD bgcolor=FFFF77><a href="0407/4x3.gif">8</a><TD bgcolor=FFFF77>8<TD bgcolor=FFDD77>10<TD bgcolor=FFBB77><a href="0407/4x6.gif">12</a><TD bgcolor=FFAA77><a href="0407/4x7.gif">13</a>
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>2<TD bgcolor=FFFF77><a href="0407/5x2.gif">8</a><TD bgcolor=FFFF77>8<TD bgcolor=FFDD77>
+<a href="0407/5x4.gif">10</a><TD bgcolor=FFAA77><a href="0407/5x5.gif">13</a><TD bgcolor=FF9977><a href="0407/5x6.gif">14</a>
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>2<TD bgcolor=FFFF77>8<TD bgcolor=FFEE77><a href="0407/6x3.gif">9</a><TD bgcolor=FFCC77><a href="0407/6x4.gif">11</a><TD bgcolor=FF8877><a href="0407/6x5.gif">15</a>
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>2<TD bgcolor=FFEE77><a href="0407/7x2.gif">9</a><TD bgcolor=FFCC77><a href="0407/7x3.gif">11</a><TD bgcolor=FFAA77><a href="0407/7x4.gif">13</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>2<TD bgcolor=FFDD77><a href="0407/8x2.gif">10</a><TD bgcolor=FFBB77><a href="0407/8x3.gif">12</a>
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>2<TD bgcolor=FFBB77><a href="0407/9x2.gif">12</a><TD bgcolor=FFAA77><a href="0407/9x3.gif">13</a>
+</tr></table>
+</TR></TABLE><p>
+
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; K</font></center><br><IMG SRC="0407/BK88.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>2<TD bgcolor=FFFFDD><a href="0407/BK22.gif">1</a>
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BK34.gif">2</a><TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/BK55.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/BK46.gif">4</a><TD bgcolor=FFDD77>5<TD bgcolor=FFBB77><a href="0407/BK66.gif">6</a>
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77>5<TD bgcolor=FFBB77>6<TD bgcolor=FF7777><a href="0407/BK77.gif">8</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77><a href="0407/BK58.gif">6</a><TD bgcolor=FF7777><a href="0407/BK68.gif">8</a><TD bgcolor=FF7777>8<TD bgcolor=BB7777><a href="0407/BK88.gif">10</a>
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77>6<TD bgcolor=FF7777>8<TD bgcolor=FF7777>8
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFBB77><a href="0407/BK410.gif">6</a><TD bgcolor=FFBB77>6<TD bgcolor=FF7777>8
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFBB77>6<TD bgcolor=FF7777><a href="0407/BK511.gif">8</a>
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFBB77>6<TD bgcolor=FF7777>8
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; N</font></center><br><IMG SRC="0407/BN69.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFBB><a href="0407/BN33.gif">2</a>
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFBB><a href="0407/BN24.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/BN44.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/BN35.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77><a href="0407/BN56.gif">6</a><TD bgcolor=FFBB77>6
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77>6<TD bgcolor=FFBB77>6<TD bgcolor=FF7777><a href="0407/BN77.gif">8</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFBB>2<TD bgcolor=FFBB77><a href="0407/BN38.gif">6</a><TD bgcolor=FFBB77>6<TD bgcolor=FFBB77>6<TD bgcolor=FF7777><a href="0407/BN68.gif">8</a><TD bgcolor=BB7777><a href="0407/BN78.gif">10</a><TD bgcolor=BB7777>10
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB>2<TD bgcolor=FFBB77>6<TD bgcolor=FFBB77>6<TD bgcolor=FF7777><a href="0407/BN59.gif">8</a><TD bgcolor=BB7777><a href="0407/BN69.gif">10</a><TD bgcolor=BB7777>10
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFBB77>6<TD bgcolor=FFBB77>6<TD bgcolor=FF7777>8<TD bgcolor=BB7777>10
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFBB77>6<TD bgcolor=FFBB77>6<TD bgcolor=FF7777>8<TD bgcolor=BB7777>10
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFBB>2<TD bgcolor=FFBB77>6<TD bgcolor=FF7777><a href="0407/BN412.gif">8</a><TD bgcolor=BB7777><a href="0407/BN512.gif">10</a>
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; R</font></center><br><IMG SRC="0407/BR512.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFBB><a href="0407/BR23.gif">2</a><TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BR44.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BR35.gif">3</a><TD bgcolor=FFFF77><a href="0407/BR45.gif">4</a><TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/BR36.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/BR56.gif">5</a><TD bgcolor=FFDD77>5
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77><a href="0407/BR57.gif">6</a><TD bgcolor=FFBB77>6<TD bgcolor=FFBB77>6
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/BR48.gif">5</a><TD bgcolor=FFBB77>6<TD bgcolor=FFBB77>6<TD bgcolor=FF9977><a href="0407/BR78.gif">7</a><TD bgcolor=FF9977>7
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77><a href="0407/BR49.gif">6</a><TD bgcolor=FFBB77>6<TD bgcolor=FF9977><a href="0407/BR69.gif">7</a><TD bgcolor=FF7777><a href="0407/BR79.gif">8</a>
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77>6<TD bgcolor=FF9977><a href="0407/BR510.gif">7</a><TD bgcolor=FF9977>7
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77>6<TD bgcolor=FF9977>7
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FF9977><a href="0407/BR412.gif">7</a><TD bgcolor=FF7777><a href="0407/BR512.gif">8</a>
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>K &rarr; N</font></center><br><IMG SRC="0407/KN512.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFBB><a href="0407/KN23.gif">2</a><TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/KN45.gif">3</a><TD bgcolor=FFFF77><a href="0407/KN55.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/KN46.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/KN66.gif">5</a>
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77><a href="0407/KN57.gif">6</a><TD bgcolor=FFBB77>6<TD bgcolor=FF7777><a href="0407/KN77.gif">8</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77>6<TD bgcolor=FF7777><a href="0407/KN68.gif">8</a><TD bgcolor=DD7777><a href="0407/KN78.gif">9</a><TD bgcolor=BB7777><a href="0407/KN88.gif">10</a>
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFBB77><a href="0407/KN49.gif">6</a><TD bgcolor=FF9977><a href="0407/KN59.gif">7</a><TD bgcolor=FF7777>8<TD bgcolor=BB7777><a href="0407/KN79.gif">10</a>
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFBB77>6<TD bgcolor=FF7777><a href="0407/KN510.gif">8</a><TD bgcolor=DD7777><a href="0407/KN610.gif">9</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFBB77>6<TD bgcolor=DD7777><a href="0407/KN511.gif">9</a>
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFBB77>6<TD bgcolor=BB7777><a href="0407/KN512.gif">10</a>
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>K &rarr; R</font></center><br><IMG SRC="0407/KR78.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>2<TD bgcolor=FFFFDD><a href="0407/KR12.gif">1</a><TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/KR24.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/KR45.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/KR66.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/KR57.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/KR68.gif">5</a><TD bgcolor=FFBB77><a href="0407/KR78.gif">6</a><TD bgcolor=FFBB77>6
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/KR39.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/KR59.gif">5</a><TD bgcolor=FFDD77>5<TD bgcolor=FFBB77>6
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77>5<TD bgcolor=FFBB77><a href="0407/KR610.gif">6</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77>5
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77>5
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>N &rarr; Q</font></center><br><IMG SRC="0407/NQ69.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFBB><a href="0407/NQ24.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQ45.gif">3</a><TD bgcolor=FFFF77><a href="0407/NQ55.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQ36.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/NQ47.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/NQ77.gif">5</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/NQ68.gif">5</a><TD bgcolor=FFDD77>5<TD bgcolor=FFBB77><a href="0407/NQ88.gif">6</a>
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/NQ59.gif">5</a><TD bgcolor=FFBB77><a href="0407/NQ69.gif">6</a><TD bgcolor=FFBB77>6
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77>5<TD bgcolor=FFBB77>6
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFDD77><a href="0407/NQ411.gif">5</a><TD bgcolor=FFDD77>5
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/NQ312.gif">4</a><TD bgcolor=FFDD77>5<TD bgcolor=FFBB77><a href="0407/NQ512.gif">6</a>
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>N &rarr; R</font></center><br><IMG SRC="0407/NR512.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFBB><a href="0407/NR33.gif">2</a>
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFBB><a href="0407/NR24.gif">2</a><TD bgcolor=FFFF99><a href="0407/NR34.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/NR45.gif">4</a><TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFF77><a href="0407/NR26.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/NR66.gif">5</a>
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/NR57.gif">5</a><TD bgcolor=FFBB77><a href="0407/NR67.gif">6</a><TD bgcolor=FFBB77>6
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/NR38.gif">5</a><TD bgcolor=FFDD77>5<TD bgcolor=FFBB77><a href="0407/NR58.gif">6</a><TD bgcolor=FFBB77>6<TD bgcolor=FF9977><a href="0407/NR78.gif">7</a><TD bgcolor=FF7777><a href="0407/NR88.gif">8</a>
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77>5<TD bgcolor=FFBB77><a href="0407/NR49.gif">6</a><TD bgcolor=FFBB77>6<TD bgcolor=FF9977><a href="0407/NR69.gif">7</a><TD bgcolor=FF7777><a href="0407/NR79.gif">8</a>
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77>5<TD bgcolor=FFBB77>6<TD bgcolor=FF9977><a href="0407/NR510.gif">7</a><TD bgcolor=FF9977>7
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77>5<TD bgcolor=FFBB77>6<TD bgcolor=FF9977>7
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77>5<TD bgcolor=FF9977><a href="0407/NR412.gif">7</a><TD bgcolor=FF7777><a href="0407/NR512.gif">8</a>
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>P &rarr; R</font></center><br><IMG SRC="0407/PR124.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFBB><a href="0407/PR42.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PR45.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PR53.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PR56.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PR65.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/PR67.gif">5</a><TD bgcolor=FFDD77>5<TD bgcolor=FFDD77>5<TD bgcolor=FFDD77>5
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/PR76.gif">5</a><TD bgcolor=FFDD77>5<TD bgcolor=FFDD77>5<TD bgcolor=FFBB77><a href="0407/PR79.gif">6</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/PR83.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77>5<TD bgcolor=FFDD77>5<TD bgcolor=FFBB77><a href="0407/PR88.gif">6</a>
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/PR94.gif">5</a><TD bgcolor=FFDD77>5<TD bgcolor=FFDD77>5<TD bgcolor=FFBB77><a href="0407/PR97.gif">6</a>
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77>5<TD bgcolor=FFDD77>5<TD bgcolor=FFBB77><a href="0407/PR106.gif">6</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77>5<TD bgcolor=FFDD77>5
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77><a href="0407/PR124.gif">6</a><TD bgcolor=FFBB77>6
+</tr></table>
+</TR></TABLE><p>
+
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; K &rarr; N</font></center><br><IMG SRC="0407/BKN512.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/BKN33.gif">1</a>
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFBB><a href="0407/BKN35.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BKN66.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BKN57.gif">3</a><TD bgcolor=FFFF77><a href="0407/BKN67.gif">4</a><TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/BKN58.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/BKN78.gif">5</a><TD bgcolor=FFDD77>5
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77><a href="0407/BKN79.gif">6</a>
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/BKN410.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/BKN610.gif">5</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/BKN511.gif">5</a>
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFBB>2<TD bgcolor=FFDD77><a href="0407/BKN412.gif">5</a><TD bgcolor=FFBB77><a href="0407/BKN512.gif">6</a>
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; K &rarr; R</font></center><br><IMG SRC="0407/BKR512.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFBB><a href="0407/BKR45.gif">2</a><TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BKR66.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BKR57.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/BKR78.gif">4</a><TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/BKR59.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFBB>2<TD bgcolor=FFDD77><a href="0407/BKR512.gif">5</a>
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; N &rarr; K</font></center><br><IMG SRC="0407/BNK610.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/BNK23.gif">1</a><TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BNK35.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BNK56.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/BNK67.gif">4</a><TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/BNK58.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/BNK88.gif">5</a>
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/BNK79.gif">5</a>
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77><a href="0407/BNK610.gif">6</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFDD77><a href="0407/BNK512.gif">5</a>
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; N &rarr; R</font></center><br><IMG SRC="0407/BNR78.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/BNR23.gif">1</a><TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BNR34.gif">2</a><TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFBB><a href="0407/BNR26.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BNR56.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BNR47.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/BNR67.gif">4</a><TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/BNR58.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/BNR78.gif">5</a><TD bgcolor=FFDD77>5
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BNR39.gif">3</a><TD bgcolor=FFFF77><a href="0407/BNR49.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77>5
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/BNR310.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/BNR610.gif">5</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/BNR512.gif">5</a>
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; N &rarr; Q</font></center><br><IMG SRC="0407/BNQ68.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/BNQ23.gif">1</a><TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BNQ35.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFBB><a href="0407/BNQ26.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BNQ67.gif">3</a><TD bgcolor=FFFF77><a href="0407/BNQ77.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BNQ58.gif">3</a><TD bgcolor=FFFF77><a href="0407/BNQ68.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BNQ49.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BNQ310.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/BNQ511.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/BNQ412.gif">4</a><TD bgcolor=FFFF77>4
+</tr></table>
+</TR></TABLE><p>
+
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; P &rarr; N</font></center><br><IMG SRC="0407/PNB511.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFBB><a href="0407/PNB32.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/PNB410.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/PNB55.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FF7777><a href="0407/PNB511.gif">8</a><TD bgcolor=FF7777>8
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77><a href="0407/PNB610.gif">6</a>
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77><a href="0407/PNB78.gif">6</a><TD bgcolor=FFBB77>6
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77><a href="0407/PNB86.gif">6</a><TD bgcolor=FFBB77>6<TD bgcolor=FFBB77>6
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77>6<TD bgcolor=FFBB77>6
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77>6
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; P &rarr; R</font></center><br><IMG SRC="0407/PRB106.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/PRB32.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRB44.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRB57.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PRB59.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRB63.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRB65.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRB74.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PRB77.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/PRB79.gif">5</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PRB86.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/PRB97.gif">5</a>
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PRB105.gif">4</a><TD bgcolor=FFDD77><a href="0407/PRB106.gif">5</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/PRB114.gif">4</a><TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; R &rarr; K</font></center><br><IMG SRC="0407/BRK69.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFBB><a href="0407/BRK34.gif">2</a><TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BRK56.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFBB><a href="0407/BRK27.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BRK47.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/BRK67.gif">4</a><TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/BRK58.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/BRK78.gif">5</a><TD bgcolor=FFDD77>5
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BRK39.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/BRK69.gif">5</a><TD bgcolor=FFDD77>5
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/BRK410.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFDD77>5
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/BRK512.gif">5</a>
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; R &rarr; N</font></center><br><IMG SRC="0407/BRN610.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/BRN23.gif">1</a><TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFBB><a href="0407/BRN25.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BRN57.gif">3</a><TD bgcolor=FFFF77><a href="0407/BRN67.gif">4</a><TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/BRN58.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/BRN88.gif">5</a>
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BRN49.gif">3</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/BRN79.gif">5</a>
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/BRN610.gif">5</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/BRN411.gif">4</a><TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>K &rarr; N &rarr; Q</font></center><br><IMG SRC="0407/NQK77.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/NQK23.gif">1</a><TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQK45.gif">2</a><TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQK36.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQK67.gif">3</a><TD bgcolor=FFFF77><a href="0407/NQK77.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB><a href="0407/NQK29.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQK59.gif">3</a><TD bgcolor=FFFF77><a href="0407/NQK69.gif">4</a><TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQK410.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQK312.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/NQK512.gif">4</a>
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>K &rarr; N &rarr; R</font></center><br><IMG SRC="0407/NRK79.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/NRK23.gif">1</a><TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NRK45.gif">2</a><TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NRK36.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NRK66.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/NRK77.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NRK58.gif">3</a><TD bgcolor=FFFF77><a href="0407/NRK68.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/NRK88.gif">5</a>
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB><a href="0407/NRK29.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NRK49.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4<TD bgcolor=FFDD77><a href="0407/NRK79.gif">5</a>
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/NRK510.gif">4</a><TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NRK311.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/NRK412.gif">4</a><TD bgcolor=FFFF77>4
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>K &rarr; P &rarr; R</font></center><br><IMG SRC="0407/PRK95.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/PRK32.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRK45.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRK49.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRK53.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRK58.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PRK511.gif">4</a><TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRK65.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PRK69.gif">4</a><TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99><a href="0407/PRK77.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/PRK95.gif">4</a><TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/PRK124.gif">4</a><TD bgcolor=FFFF77>4
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>K &rarr; R &rarr; N</font></center><br><IMG SRC="0407/NKR512.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/NKR23.gif">1</a><TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NKR46.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NKR77.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NKR38.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/NKR88.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NKR610.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/NKR512.gif">4</a>
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>N &rarr; P &rarr; R</font></center><br><IMG SRC="0407/PRN106.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12
+<TR align=center><th bgcolor=lightgreen>2<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/PRN23.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRN25.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/PRN32.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRN63.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRN69.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRN77.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRN85.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PRN97.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PRN106.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFF99><a href="0407/PRN113.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFDD>1<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>N &rarr; R &rarr; P</font></center><br><IMG SRC="0407/PNR78.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12
+<TR align=center><th bgcolor=lightgreen>2<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/PNR23.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PNR26.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/PNR32.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PNR55.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNR57.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PNR69.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PNR73.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNR76.gif">3</a><TD bgcolor=FFFF77><a href="0407/PNR77.gif">4</a><TD bgcolor=FFBB77><a href="0407/PNR78.gif">5</a><TD bgcolor=FFBB77>5
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNR76.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4<TD bgcolor=FFBB77>5
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PNR106.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PNR125.gif">4</a>
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>N &rarr; Q &rarr; P</font></center><br><IMG SRC="0407/PNQ88.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12
+<TR align=center><th bgcolor=lightgreen>2<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/PNQ23.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PNQ26.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/PNQ32.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PNQ35.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNQ512.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNQ69.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PNQ73.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNQ77.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNQ86.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PNQ88.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNQ104.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>N &rarr; Q &rarr; R</font></center><br><IMG SRC="0407/NQR68.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/NQR23.gif">1</a><TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQR55.gif">2</a>
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQR47.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQR77.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQR68.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>12<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>P &rarr; P &rarr; R</font></center><br><IMG SRC="0407/PPR76.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/PPR32.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PPR55.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PPR63.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PPR76.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+</tr></table>
+</TR></TABLE><p>
+
+
+
+
+
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; N &rarr; R &rarr; K</font></center><br><IMG SRC="0407/BNRK68.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD><a href="0407/BNRK44.gif">1</a>
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BNRK66.gif">2</a>
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BNRK57.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB><a href="0407/BNRK68.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB><a href="0407/BNRK411.gif">2</a><TD bgcolor=FFFFBB>2
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; N &rarr; K &rarr; R</font></center><br><IMG SRC="0407/BNKR88.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/BNKR44.gif">1</a>
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD><a href="0407/BNKR36.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BNKR56.gif">2</a><TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BNKR48.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/BNKR88.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB><a href="0407/BNKR39.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BNKR69.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BNKR510.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; R &rarr; N &rarr; K</font></center><br><IMG SRC="0407/BRNK78.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/BRNK33.gif">1</a>
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD><a href="0407/BRNK25.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BRNK55.gif">2</a>
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BRNK46.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BRNK37.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BRNK67.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/BRNK78.gif">4</a><TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BRNK59.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/BRNK610.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BRNK411.gif">3</a><TD bgcolor=FFFF99>3
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; R &rarr; K &rarr; N</font></center><br><IMG SRC="0407/BRKN68.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD><a href="0407/BRKN34.gif">1</a><TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BRKN56.gif">2</a><TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BRKN47.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BRKN68.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB><a href="0407/BRKN310.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BRKN510.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; K &rarr; N &rarr; R</font></center><br><IMG SRC="0407/BKNR88.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD><a href="0407/BKNR34.gif">1</a><TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BKNR55.gif">2</a>
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BKNR46.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BKNR67.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BKNR58.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/BKNR88.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>B &rarr; K &rarr; R &rarr; N</font></center><br><IMG SRC="0407/BKRN78.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD><a href="0407/BKRN36.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BKRN56.gif">2</a><TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BKRN78.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/BKRN410.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/BKRN610.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>N &rarr; Q &rarr; B &rarr; K</font></center><br><IMG SRC="0407/NQBK77.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD><a href="0407/NQBK34.gif">1</a><TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQBK55.gif">2</a>
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQBK46.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQBK77.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQBK69.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQBK511.gif">3</a>
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>N &rarr; Q &rarr; B &rarr; R</font></center><br><IMG SRC="0407/NQBR68.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/NQBR33.gif">1</a>
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD><a href="0407/NQBR24.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQBR46.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQBR77.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQBR38.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQBR68.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQBR510.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQBR411.gif">3</a><TD bgcolor=FFFF99>3
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>N &rarr; Q &rarr; K &rarr; B</font></center><br><IMG SRC="0407/NQKB78.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD><a href="0407/NQKB44.gif">1</a>
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQKB66.gif">2</a>
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQKB57.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFBB><a href="0407/NQKB48.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQKB78.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQKB610.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>N &rarr; Q &rarr; K &rarr; R</font></center><br><IMG SRC="0407/NQKR47.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD><a href="0407/NQKR26.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQKR66.gif">2</a>
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQKR47.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQKR310.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>N &rarr; Q &rarr; R &rarr; B</font></center><br><IMG SRC="0407/NQRB58.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/NQRB44.gif">1</a>
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD><a href="0407/NQRB35.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQRB67.gif">2</a><TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQRB58.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQRB411.gif">2</a><TD bgcolor=FFFFBB>2
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>N &rarr; Q &rarr; R &rarr; K</font></center><br><IMG SRC="0407/NQRK67.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD><a href="0407/NQRK35.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQRK67.gif">2</a><TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQRK59.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQRK411.gif">2</a><TD bgcolor=FFFFBB>2
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>N &rarr; Q &rarr; B &rarr; P</font></center><br><IMG SRC="0407/NQBP69.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/NQBP33.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQBP49.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQBP57.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQBP69.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQBP84.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQBP88.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>N &rarr; Q &rarr; K &rarr; P</font></center><br><IMG SRC="0407/NQKP58.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/NQKP34.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD><a href="0407/NQKP43.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQKP58.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQKP77.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQKP95.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQKP114.gif">2</a><TD bgcolor=FFFFBB>2
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>N &rarr; Q &rarr; R &rarr; P</font></center><br><IMG SRC="0407/NQRP68.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/NQRP35.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD><a href="0407/NQRP53.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQRP68.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQRP77.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQRP96.gif">2</a><TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>N &rarr; Q &rarr; P &rarr; R</font></center><br><IMG SRC="0407/NQPR105.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11
+<TR align=center><th bgcolor=lightgreen>2<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/NQPR24.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/NQPR33.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD><a href="0407/NQPR42.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQPR49.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQPR57.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQPR511.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQPR66.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQPR610.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQPR74.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQPR79.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQPR88.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQPR96.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/NQPR105.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/NQPR113.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>P &rarr; N &rarr; B &rarr; K</font></center><br><IMG SRC="0407/PNBK78.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>8<th>9
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFBB><a href="0407/PNBK78.gif">2</a><TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFBB>2
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>P &rarr; N &rarr; B &rarr; R</font></center><br><IMG SRC="0407/PNBR79.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/PNBR35.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PNBR49.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PNBR56.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNBR510.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD><a href="0407/PNBR63.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PNBR65.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2 <TD bgcolor=FFFF99><a href="0407/PNBR68.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNBR77.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PNBR79.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PNBR84.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNBR86.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFF99><a href="0407/PNBR115.gif">3</a><TD bgcolor=FFFF99>3
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>P &rarr; N &rarr; K &rarr; B</font></center><br><IMG SRC="0407/PNKB69.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/PNKB33.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PNKB45.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNKB510.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNKB67.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PNKB69.gif">4</a><TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77>4
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>P &rarr; N &rarr; K &rarr; R</font></center><br><IMG SRC="0407/PNKR69.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>4<th>5<th>6<th>7<th>8<th>9<th>10
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFBB><a href="0407/PNKR67.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNKR69.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFBB><a href="0407/PNKR75.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB><a href="0407/PNKR94.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>P &rarr; N &rarr; R &rarr; B</font></center><br><IMG SRC="0407/PNRB106.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/PNRB33.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PNRB47.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNRB510.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PNRB66.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNRB68.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PNRB75.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PNRB87.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF77><a href="0407/PNRB97.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFF99><a href="0407/PNRB105.gif">3</a><TD bgcolor=FFFF77><a href="0407/PNRB106.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFF99>3
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>P &rarr; N &rarr; R &rarr; K</font></center><br><IMG SRC="0407/PNRK34.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/PNRK34.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>P &rarr; R &rarr; B &rarr; K</font></center><br><IMG SRC="0407/PRBK106.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFDD><a href="0407/PRBK33.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRBK45.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRBK59.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRBK68.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRBK76.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PRBK79.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFF99><a href="0407/PRBK95.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PRBK97.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRBK104.gif">2</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PRBK106.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>P &rarr; R &rarr; B &rarr; N</font></center><br><IMG SRC="0407/PRBN69.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFBB><a href="0407/PRBN58.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD><a href="0407/PRBN63.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRBN65.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRBN69.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRBN74.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRBN78.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRBN87.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRBN106.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRBN115.gif">3</a>
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>P &rarr; R &rarr; K &rarr; B</font></center><br><IMG SRC="0407/PRKB610.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/PRKB34.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFDD><a href="0407/PRKB43.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRKB47.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRKB55.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRKB511.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRKB64.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRKB68.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PRKB610.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRKB77.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRKB86.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRKB95.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>P &rarr; R &rarr; K &rarr; N</font></center><br><IMG SRC="0407/PRKN115.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>4<th>5<th>6<th>7<th>8<th>9<th>10
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFBB><a href="0407/PRKN65.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRKN610.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFBB><a href="0407/PRKN84.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRKN88.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRKN97.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRKN106.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRKN115.gif">3</a>
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>P &rarr; R &rarr; N &rarr; B</font></center><br><IMG SRC="0407/PRNB68.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/PRNB34.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRNB410.gif">2</a><TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRNB57.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRNB511.gif">3</a>
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD><a href="0407/PRNB63.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRNB65.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRNB68.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRNB87.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRNB96.gif">3</a><TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRNB114.gif">2</a><TD bgcolor=FFFFBB>2
+</tr></table>
+</TR></TABLE><p>
+
+<TABLE align=center cellpadding=5><TR><TD>
+<center><font size=+3>P &rarr; R &rarr; N &rarr; K</font></center><br><IMG SRC="0407/PRNK106.gif"><TD>
+<TABLE BORDER=3 align=center cellpadding=5>
+<TR bgcolor=lightgreen><th>n\m<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11
+<TR align=center><th bgcolor=lightgreen>2<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/PRNK25.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1
+<TR align=center><th bgcolor=lightgreen>3<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD><a href="0407/PRNK33.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRNK38.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>4<TD bgcolor=FFFFFF>0<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRNK46.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2
+<TR align=center><th bgcolor=lightgreen>5<TD bgcolor=FFFFDD><a href="0407/PRNK52.gif">1</a><TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRNK59.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>6<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRNK64.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>7<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRNK77.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>8<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB><a href="0407/PRNK83.gif">2</a><TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRNK85.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+<TR align=center><th bgcolor=lightgreen>9<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PRNK97.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>10<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99><a href="0407/PRNK104.gif">3</a><TD bgcolor=FFFF99>3<TD bgcolor=FFFF77><a href="0407/PRNK106.gif">4</a>
+<TR align=center><th bgcolor=lightgreen>11<TD bgcolor=FFFFDD>1<TD bgcolor=FFFFBB>2<TD bgcolor=FFFF99>3<TD bgcolor=FFFF99>3
+</tr></table>
+</TR></TABLE><p>
+
+Gavin Theobald realized that I had omitted Pawn and Knight cycles, since no more than 4 of each can be used, but he thought I should show the cycles anyway:<p>
+
+<center><img src="0407/NP24.gif"> &nbsp; &nbsp; <img src="0407/NP45.gif"> &nbsp; &nbsp; <img src="0407/NP52.gif"></center><p>
+
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 4/22/07.<font>
+
+</BODY></HTML>
+

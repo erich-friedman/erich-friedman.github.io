@@ -1,0 +1,171 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (August 2018)</H1></CENTER>
+
+The problem of packing squares of sides 1, 2, 3, ... n inside the smallest square has been well-studied.  The problem of using squares 1, 2, 3, ... n to cover the largest square was studied in the <a href="https://www2.stetson.edu/~efriedma/mathmagic/0900.html">September 2000 Math Magic</a>.  We generalize the problem even further.  Given n squares of sides 1, 2, 3, ... n, what is the largest square that they can cover k times?  In the process, what is the largest area of squares that can be unused and still achieve the covering?<p>
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Joe DeVincentis and Maurizio Morandi sent solutions.<p>
+
+The known solutions are shown below.  The size of the square and the unnecessary squares are given. <p>
+
+<center><font size=+3>Largest Square Covered k Times With Squares 1&ndash;n</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n \ k<th>1<th>2<th>3
+<tr align=center><th bgcolor=FFFFDD>1
+<td><img src="0818/1,1.gif"><br>1<td>0<td>0
+<tr align=center><th bgcolor=FFFFDD>2
+<td><img src="0818/1,2.gif"><br>2 {1}
+<td><img src="0818/2,2.gif"><br>1<td>0
+<tr align=center><th bgcolor=FFFFDD>3
+<td><img src="0818/1,3.gif"><br>3 {2,1}
+<td><img src="0818/2,3.gif"><br>2 {1}
+<td><img src="0818/3,3.gif"><br>1
+<tr align=center><th bgcolor=FFFFDD>4
+<td><img src="0818/1,4.gif"><br>4 {3,2,1}
+<td><img src="0818/2,4.gif"><br>3 {2,1}
+<td><img src="0818/3,4.gif"><br>2 {1}
+<tr align=center><th bgcolor=FFFFDD>5
+<td><img src="0818/1,5.gif"><br>6 {1} <font color=red>(MM)
+<td><img src="0818/2,5.gif"><br>4 {3,2,1}
+<td><img src="0818/3,5.gif"><br>3 {2,1}
+<tr align=center><th bgcolor=FFFFDD>6
+<td><img src="0818/1,6.gif"><br>9
+<td><img src="0818/2,6.gif"><br>6 {1} <font color=red>(MM)
+<td><img src="0818/3,6.gif"><br>4 {3,2,1}
+<tr align=center><th bgcolor=FFFFDD>7
+<td><img src="0818/1,7.gif"><br>11 {2}
+<td><img src="0818/2,7.gif"><br>7 {5}
+<td><img src="0818/3,7.gif"><br>6 {1} <font color=red>(MM)
+<tr align=center><th bgcolor=FFFFDD>8
+<td><img src="0818/1,8.gif"><br>13 {4,1}
+<td><img src="0818/2,8.gif"><br>8 {7,2,1}
+<td><img src="0818/3,8.gif"><br>7 {5}
+<tr align=center><th bgcolor=FFFFDD>9
+<td><img src="0818/1,9.gif"><br>16 {2,1}
+<td><img src="0818/2,9.gif"><br>10 {1} <font color=red>(MM)
+<td><img src="0818/3,9.gif"><br>8 {7,2,1}
+<tr align=center><th bgcolor=FFFFDD>10
+<td><img src="0818/1,10.gif"><br>18 {7,1} <font color=red>(MM)
+<td><img src="0818/2,10.gif"><br>12 {2,1} <font color=red>(MM)
+<td><img src="0818/3,10.gif"><br>10 {1}
+<tr align=center><th bgcolor=FFFFDD>11
+<td><img src="0818/1,11.gif"><br>21 {3} <font color=red>(MM)
+<td><img src="0818/2,11.gif"><br>14 {4} <font color=red>(MM)
+<td><img src="0818/3,11.gif"><br>11 {6,1}
+<tr align=center><th bgcolor=FFFFDD>12
+<td><img src="0818/1,12.gif"><br>24 {3,2,1} <font color=red>(MM)
+<td><img src="0818/2,12.gif"><br>16 {6,2}
+<td><img src="0818/3,12.gif"><br>12 {11,2,1}
+<tr align=center><th bgcolor=FFFFDD>13
+<td><img src="0818/1,13.gif"><br>28 {1}
+<td><img src="0818/2,13.gif"><br>19 {2,1}
+<td><img src="0818/3,13.gif"><br>14 {1}
+<tr align=center><th bgcolor=FFFFDD>14
+<td><img src="0818/1,14.gif"><br>31 {4,1} <font color=red>(MM)
+<td><img src="0818/2,14.gif"><br>21 {6,1} <font color=red>(MM)
+<td><img src="0818/3,14.gif"><br>16 {2,1}
+<tr align=center><th bgcolor=FFFFDD>15
+<td><img src="0818/1,15.gif"><br>34 {5,4,1} <font color=red>(MM)
+<td><img src="0818/2,15.gif"><br>24 {2,1} <font color=red>(MM)
+<td><img src="0818/3,15.gif"><br>18 {5}
+<tr align=center><th bgcolor=FFFFDD>16
+<td><img src="0818/1,16.gif"><br>38 {5,2,1} <font color=red>(MM)
+<td><img src="0818/2,16.gif"><br>26 {8,1} <font color=blue>(JD)
+<td><img src="0818/3,16.gif"><br>20 {6,2}
+<tr align=center><th bgcolor=FFFFDD>17
+<td><img src="0818/1,17.gif"><br>41 {9,1} <font color=red>(MM)
+<td><img src="0818/2,17.gif"><br>29 {1} <font color=blue>(JD)
+<td><img src="0818/3,17.gif"><br>22 {7,4,1}
+<tr align=center><th bgcolor=FFFFDD>18
+<td><img src="0818/1,18.gif"><br>45 {8,1} <font color=red>(MM)
+<td><img src="0818/2,18.gif"><br>31 {8,1} <font color=blue>(JD)
+<td><img src="0818/3,18.gif"><br>25 {1} <font color=red>(MM)
+<tr align=center><th bgcolor=FFFFDD>19
+<td><img src="0818/1,19.gif"><br>49 {5} <font color=red>(MM)
+<td><img src="0818/2,19.gif"><br>34 {5,4,1} <font color=red>(MM)
+<td><img src="0818/3,19.gif"><br>27 {7,1} <font color=red>(MM)
+<tr align=center><th bgcolor=FFFFDD>20
+<td><img src="0818/1,20.gif"><br>53 {4,3,1} <font color=red>(MM)
+<td><img src="0818/2,20.gif"><br>36 {13,1} <font color=red>(MM)
+<td><img src="0818/3,20.gif"><br>29 {8,6,1} <font color=red>(MM)
+<tr align=center><th bgcolor=FFFFDD>21
+<td><img src="0818/1,21.gif"><br>57 {5,1} <font color=red>(MM)
+<td><img src="0818/2,21.gif"><br>39 {8,7,3} <font color=red>(MM)
+<td><img src="0818/3,21.gif"><br>32 {3} <font color=red>(MM)
+<tr align=center><th bgcolor=FFFFDD>22
+<td><img src="0818/1,22.gif"><br>61 {7,1} <font color=red>(MM)
+<td><img src="0818/2,22.gif"><br>42 {9} <font color=blue>(JD)
+<td><img src="0818/3,22.gif"><br>34 {10,1} <font color=red>(MM)
+<tr align=center><th bgcolor=FFFFDD>23
+<td><img src="0818/1,23.gif"><br>65 {6,4,2,1} <font color=red>(MM)
+<td><img src="0818/2,23.gif"><br>45 {3} <font color=blue>(JD)
+<td><img src="0818/3,23.gif"><br>36 {12,7,1} <font color=blue>(JD)
+<tr align=center><th bgcolor=FFFFDD>24
+<td><img src="0818/1,24.gif"><br>69 {8,4,3,2} <font color=red>(MM)
+<td><img src="0818/2,24.gif"><br>47 {14,2,1} <font color=blue>(JD)
+<td><img src="0818/3,24.gif"><br>39 {6,5,4,1} <font color=blue>(JD)
+</table><p>
+
+Maurizio Morandi also considered the problem of covering the largest possible squares and tans with tans of sides 1, 2, 3, ... n:<p>
+
+<center><font size=+3>Largest Square Covered With Tans 1&ndash;n</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center><tr align=center>
+<td>n=1<br><img src="0818/Q1.png" style="height: 50%"><br>s = 1/2
+<td>n=2<br><img src="0818/Q2.png" style="height: 50%"><br>s = 3/2
+<td>n=3<br><img src="0818/Q3.png" style="height: 50%"><br>s = (6+3&radic;2)/4 = 2.560+
+<td>n=4<br><img src="0818/Q4.png" style="height: 50%"><br>s = (11+3&radic;2)/4 = 3.810+
+<td>n=5<br><img src="0818/Q5.png" style="height: 50%"><br>s = (26+11&radic;2)/8 = 5.194+
+<td>n=6<br><img src="0818/Q6.png" style="height: 50%"><br>s = (62+27&radic;2)/15 = 6.678+
+<td>n=7<br><img src="0818/Q7.png" style="height: 50%"><br>s = (76+34&radic;2)/15 = 8.272+
+<td>n=8<br><img src="0818/Q8.png" style="height: 50%"><br>s = (98+315&radic;2)/54 = 10.064+
+</table>
+<table align=center border=1 cellpadding=5>
+<tr align=center><tr align=center>
+<td>n=9<br><img src="0818/Q9.png" style="height: 50%"><br>s = (124+367&radic;2)/54 = 11.907+
+<td>n=10<br><img src="0818/Q10.png" style="height: 44%"><br>s = (338+329&radic;2)/58 = 13.849+
+<td>n=11<br><img src="0818/Q11.png" style="height: 54%"><br>s = (55+51&radic;2)/8 = 15.890+
+<td>n=12<br><img src="0818/Q12.png" style="height: 50%"><br>s = (110+75&radic;2)/12 = 18.005+ 
+</table><p>
+
+<center><font size=+3>Largest Tan Covered With Tans 1&ndash;n</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center><tr align=center>
+<td>n=1<br><img src="0818/T1.png" style="height: 50%"><br>s = 1
+<td>n=2<br><img src="0818/T2.png" style="height: 50%"><br>s = 3/&radic;2 = 2.121+
+<td>n=3<br><img src="0818/T3.png" style="height: 50%"><br>s = (3+3&radic;2)/2 = 3.621+  
+<td>n=4<br><img src="0818/T4.png" style="height: 50%"><br>s = (6+11&radic;2)/4 = 5.389+
+<td>n=5<br><img src="0818/T5.png" style="height: 50%"><br>s = (11+13&radic;2)/4 = 7.346+  
+<td>n=6<br><img src="0818/T6.png" style="height: 50%"><br>s = (27+28&radic;2)/7 = 9.515+
+<td>n=7<br><img src="0818/T7.png" style="height: 50%"><br>s = (16+47&radic;2)/7 = 11.781+ 
+</table>
+<table align=center border=1 cellpadding=5>
+<tr align=center><tr align=center>
+<td>n=8<br><img src="0818/T8.png" style="height: 50%"><br>s = 10+3&radic;2 = 14.242+   
+<td>n=9<br><img src="0818/T9.png" style="height: 45%"><br>s = (92+197&radic;2)/22 = 16.845+
+<td>n=10<br><img src="0818/T10.png" style="height: 54%"><br>s = (161+191&radic;2)/22 = 19.596+
+</table><p>
+
+<center><font size=+3>Largest Equilateral Triangle Covered With Equilateral Triangles 1&ndash;n</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center><tr align=center>
+<td>n=1<br><img src="0818/tr1.gif"><br>1
+<td>n=2<br><img src="0818/tr2.gif"><br>2 {1}
+<td>n=3<br><img src="0818/tr3.gif"><br>3 {2,1}
+<td>n=4<br><img src="0818/tr4.gif"><br>5
+<td>n=5<br><img src="0818/tr5.gif"><br>7 {1}
+<td>n=6<br><img src="0818/tr6.gif"><br>9 {2,1}
+<td>n=7<br><img src="0818/tr7.gif" style="height: 40%"><br>23/2 =11.5 <font color=red>(MM)
+<td>n=8<br><img src="0818/tr8.gif"><br>14 {1}
+<td>n=9<br><img src="0818/tr9.gif" style="height: 40%"><br>117/7 = 16.714+ <font color=red>(MM)
+<td>n=10<br><img src="0818/tr10.gif" style="height: 40%"><br>175/9 = 19.444+ <font color=red>(MM)
+<td>n=11<br><img src="0818/tr11.gif"><br>89/4 = 22.25 <font color=red>(MM)
+<td>n=12<br><img src="0818/tr12.gif"><br>201/8 = 25.125 <font color=red>(MM)
+</table>
+
+<HR><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 8/1/18.<font>
+
+
+</BODY></HTML>

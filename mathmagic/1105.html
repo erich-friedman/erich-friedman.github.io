@@ -1,0 +1,142 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+<CENTER><H1>Problem of the Month (November 2005)</H1></CENTER>
+
+Given a shape S and a positive integer n, what is the smallest number of non-overlapping congruent copies of S that can be arranged in the plane so that each copy of S touches exactly n others?  The answer often  depends on what we mean by "touch".  This can mean "touch at at least one point", "touch at exactly one point", or "touch along part of an edge".<p>
+
+For example, 4 squares can touch 3 others at at least one point, 12 squares can touch 3 others at exactly one point, and 14 squares can touch 3 others along part of an edge:<p>
+
+<center><table cellpadding=20><tr align=center><td><img src="1105/p1-3.gif"><p>touching<td><img src="1105/p1-3p.gif"><p>touching at 1 point<td><img src="1105/p1-3e.gif"><p>touching along an edge<br>(found by Ed Pegg)</tr></table></center><p>
+
+Can you show that 25 squares can each touch 4 other squares?  Can you show that 48 squares can each touch 4 other squares in exactly 1 point?  Can you show that no finite collection of squares can each touch 4 squares along an edge?  What are the corresponding minimum numbers for other shapes?
+
+Another way to look at this is: For a given planar regular graph, what is the smallest polyomino that can be arranged to have that adjacency graph?  For definiteness, here we require the shapes to conform to the square grid and to touch along part of an edge.  For example, there is a 8-omino that can realize the smallest 3-regular graph:<p>
+
+<center><table cellpadding=20><tr align=center><td><img src="1105/3r4.gif"><td><img src="1105/p8-3.gif"><p>(found by Olexandr Ravsky)</tr></table></center><p>
+
+What are the smallest polyominoes (or other polyforms) that can realize the other small planar 3-regular and 4-regular graphs?
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+For various shapes, here are the fewest known that can be arranged so that each touches exactly 3 or 4 others:<p>
+
+<center><font size=+2>Fewest Number Known of a Shape to<br>Have Regular Adjacency Graph</font></center>
+<center><TABLE BORDER cellpadding=6 bgcolor=lightyellow><TR bgcolor=palegreen><th rowspan=2>Shape<th colspan="3">Touching 3 others<th colspan=3>Touching 4 others</TR><TR align=center bgcolor=palegreen><th width=55>any<th width=55>1 point<th width=55>edge<th width=55>any<th width=55>1 point<th width=55>edge</TR>
+<TR align=center><td bgcolor=palegreen><img src="1105/p1.gif">
+<td><a href="1105/p1-3.gif">4</a><td><a href="1105/p1-3p.gif">12</a><td><a href="1105/p1-3e.gif">14</a> (EP)
+<td><a href="1105/p1-4.gif">25</a> (BG)<td><a href="1105/p1-4p.gif">48</a> (BG)<td>&infin;</TR>
+
+<TR align=center><td bgcolor=palegreen><img src="1105/p2.gif">
+<td><a href="1105/p2-3.gif">4</a><td><a href="1105/p2-3p.gif">8</a><td><a href="1105/p2-3e.gif">8</a>
+<td><a href="1105/p2-4.gif">15</a><td><a href="1105/p2-4p.gif">24</a> (MM)<td><a href="1105/p2-4e.gif">24</a></TR>
+
+<TR align=center><td bgcolor=palegreen><img src="1105/p3I.gif">
+<td><a href="1105/p3I-3.gif">4</a><td><a href="1105/p3I-3p.gif">8</a><td><a href="1105/p3I-3e.gif">8</a>
+<td><a href="1105/p3I-4.gif">10</a><td><a href="1105/p3I-4p.gif">16</a><td><a href="1105/p3I-4e.gif">20</a></TR>
+
+<TR align=center><td bgcolor=palegreen><img src="1105/p3L.gif">
+<td><a href="1105/p3L-3.gif">4</a><td><a href="1105/p3L-3p.gif">8</a><td><a href="1105/p3L-3e.gif">8</a>
+<td><a href="1105/p3L-4.gif">15</a> (CP)<td><a href="1105/p3L-4p.gif">22</a><td><a href="1105/p3L-4e.gif">32</a></TR>
+
+<TR align=center><td bgcolor=palegreen><img src="1105/p4I.gif">
+<td><a href="1105/p4I-3.gif">4</a><td><a href="1105/p4I-3p.gif">6</a> (MM)<td><a href="1105/p4I-3e.gif">8</a>
+<td><a href="1105/p4I-4.gif">10</a><td><a href="1105/p4I-4p.gif">12</a> (MM)<td><a href="1105/p4I-4e.gif">24</a></TR>
+
+<TR align=center><td bgcolor=palegreen><img src="1105/p4L.gif">
+<td><a href="1105/p4L-3.gif">4</a><td><a href="1105/p4L-3p.gif">8</a><td><a href="1105/p4L-3e.gif">6</a> (CP)
+<td><a href="1105/p4L-4.gif">10</a> (CP)<td><a href="1105/p4L-4p.gif">16</a> (MM)<td><a href="1105/p4L-4e.gif">16</a></TR>
+
+<TR align=center><td bgcolor=palegreen><img src="1105/p5R.gif">
+<td><a href="1105/p5R-3.gif">4</a><td><a href="1105/p5R-3p.gif">6</a><td><a href="1105/p5R-3e.gif">6</a>
+<td><a href="1105/p5R-4.gif">10</a><td><a href="1105/p5R-4p.gif">12</a> (MM)<td><a href="1105/p5R-4e.gif">12</a></TR>
+
+<TR align=center><td bgcolor=palegreen><img src="1105/p5L.gif">
+<td><a href="1105/p5L-3.gif">4</a><td><a href="1105/p5L-3p.gif">6</a> (CP)<td><a href="1105/p5L-3e.gif">6</a>
+<td><a href="1105/p5L-4p.gif">10</a> (MM)<td><a href="1105/p5L-4pp.gif">14</a><td><a href="1105/p5L-4e.gif">16</a></TR>
+
+<TR align=center><td bgcolor=palegreen><img src="1105/p8.gif">
+<td><a href="1105/p8-3.gif">4</a><td><a href="1105/p8-31.gif">6</a> (MM)<td><a href="1105/p8-3.gif">4</a> (OR)
+<td>?<td>?<td>?</TR>
+
+<TR align=center><td bgcolor=palegreen><img src="1105/t1.gif">
+<td><a href="1105/t1-3.gif">4</a><td><a href="1105/t1-3.gif">4</a><td>&infin;</a>
+<td><a href="1105/t1-4.gif">5</a><td><a href="1105/t1-4.gif">5</a><td>&infin;</TR>
+
+<TR align=center><td bgcolor=palegreen><img src="1105/tan1.gif">
+<td><a href="1105/tan1-3.gif">4</a><td><a href="1105/tan1-3.gif">4</a><td><a href="1105/tan1-3e.gif">16</a>
+<td><a href="1105/tan1-4.gif">5</a><td><a href="1105/tan1-4.gif">5</a><td>&infin;</TR>
+
+<TR align=center><td bgcolor=palegreen><img src="1105/hex1.gif">
+<td><a href="1105/hex1-3.gif">12</a> (CP)<td><a href="1105/hex1-3p.gif">12</a> (CP)<td><a href="1105/hex1-3e.gif">16</a><td>&infin;<td>&infin;<td>&infin;</TR>
+
+<TR align=center><td bgcolor=palegreen><img src="1105/cir.gif">
+<td><a href="1105/cir-3.gif">16</a><td><a href="1105/cir-3.gif">16</a><td>&infin;</a>
+<td>&infin;<td>&infin;<td>&infin;</TR>
+
+</table><p>
+EP = Ed Pegg<br>
+BG = Branko Gr&uuml;nbaum<br>
+OR = Olexandr Ravsky<br>
+CP = Corey Plover<br>
+MM = Maurizio Morandi<p></center>
+
+For the small planar 3-regular graphs, here are the smallest known polyforms that can have this adjacency graph:<p>
+
+<center><font size=+2>Smallest Known Polyominoes and Polyhexes<br>to Have Given 3-Regular Adjacency Graph</font></center>
+<center><TABLE BORDER cellpadding=6 bgcolor=lightyellow><TR bgcolor=palegreen><th>Graph<th>Min Size<th>Polyomino Arrangement<th>Min Size<th>Polyhex Arrangement</TR><TR align=center><td><img src="1105/3r4.gif"><td>8<td><img src="1105/p8-3.gif" align=middle> (OR)
+  <td>4<td><img src="1105/J-3.gif" align=middle> (GS)</TR>
+<TR align=center><td><img src="1105/3r6.gif"><td>4<td><img src="1105/p4L-3e.gif" align=middle> (CP)
+  <td>4<td><img src="1105/J-3b.gif" align=middle> (CP)</TR>
+<TR align=center><td><img src="1105/3r81.gif"><td>9<td><img src="1105/p9-3.gif">
+  <td>?<td>?</TR>
+<TR align=center><td><img src="1105/3r82.gif"><td>5<td><img src="1105/p5R-41.gif">
+  <td>4<td><img src="1105/J-3c.gif" align=middle></TR>
+<TR align=center><td><img src="1105/3r83.gif"><td>3<td><img src="1105/p3I-3e.gif">
+   <td>2<td><img src="1105/I-3.gif" align=middle></TR>
+<TR align=center><td><img src="1105/3r101.gif"><td>3<td><img src="1105/p3L-42.gif">
+  <td>3<td><img src="1105/U-3.gif" align=middle></TR>
+<TR align=center><td><img src="1105/3r102.gif"><td>3<td><img src="1105/p3I-43.gif">
+   <td>3<td><img src="1105/I-3b.gif" align=middle></TR>
+<TR align=center><td><img src="1105/3r103.gif"><td>4<td><img src="1105/p5R-44.gif" align=middle> (MM)
+   <td>2<td><img src="1105/T-3.gif" align=middle> (MM)</TR>
+<TR align=center><td><img src="1105/3r104.gif"><td>4<td><img src="1105/p4L-45.gif">
+   <td>3<td><img src="1105/J-3f.gif" align=middle> (MM)</TR>
+<TR align=center><td><img src="1105/3r105.gif"><td>5<td><img src="1105/p5R-55.gif">
+   <td>3<td><img src="1105/J-3d.gif" align=middle> (MM)</TR>
+<TR align=center><td><img src="1105/3r106.gif"><td>5<td><img src="1105/p5R-56.gif">
+   <td>4<td><img src="1105/J-3e.gif" align=middle></TR>
+<TR align=center><td><img src="1105/3r107.gif"><td>5<td><img src="1105/p5R-57.gif">
+   <td>3<td><img src="1105/U-3b.gif" align=middle></TR>
+<TR align=center><td><img src="1105/3r108.gif"><td>9<td><img src="1105/p9-3e.gif" align=middle> (MM)
+  <td>?<td>?</TR>
+<TR align=center><td><img src="1105/3r109.gif"><td>10<td><img src="1105/p10-e3.gif" align=middle> (MM)
+  <td>?<td>?</TR>
+<TR align=center><td><img src="1105/3r14.gif"><td>3<td><img src="1105/p3I-58.gif" align=middle> (JD)
+   <td>2<td><img src="1105/I-3c.gif" align=middle></TR>
+</table><p>
+OR = Olexandr Ravsky<br>
+GS = George Sicherman<br>
+CP = Corey Plover<br>
+JD = Joe DeVincentis<br>
+MM = Maurizio Morandi<p></center>
+
+For the small planar 4-regular graphs, here are the smallest known polyominoes that can have this adjacency graph:<p>
+
+<center><font size=+2>Smallest Known Polyominoes and Polyhexes<br>to Have Given 4-Regular Adjacency Graph</font></center>
+<center><TABLE BORDER cellpadding=6 bgcolor=lightyellow><TR bgcolor=palegreen><th>Graph<th>Min Size<th>Polyomino Arrangement<th>Min Size<th>Polyhex Arrangement</TR><TR align=center><td><img src="1105/4r6.gif"><td>?<td>?<td>?<td>?</TR>
+<TR align=center><td><img src="1105/4r8.gif"><td>6<td><img src="1105/p6L-4e.gif">
+  <td>5<td><img src="1105/Q-4.gif" align=middle>  (MM)</TR>
+<TR align=center><td><img src="1105/4r9.gif"><td>?<td>?<td>?<td>?</TR>
+<TR align=center><td><img src="1105/4r101.gif"><td>8<td><img src="1105/p9-4e.gif" align=middle> (MM)
+  <td>5<td><img src="1105/Y-4.gif" align=middle> (MM)</TR>
+<TR align=center><td><img src="1105/4r102.gif"><td>?<td>?<td>?<td>?</TR>
+<TR align=center><td><img src="1105/4r103.gif"><td>?<td>?<td>?<td>?</TR>
+<TR align=center><td><img src="1105/4r111.gif"><td>10<td><img src="1105/p10-e4.gif" align=middle> (MM)<td>?<td>?</TR>
+<TR align=center><td><img src="1105/4r112.gif"><td>?<td>?<td>?<td>?</TR>
+<TR align=center><td><img src="1105/4r113.gif"><td>8<td><img src="1105/p8-4e.gif" align=middle> (JD)<td>?<td>?</TR>
+</table><p>
+JD = Joe DeVincentis<br>
+MM = Maurizio Morandi<p></center>
+
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 11/29/05.<font></BODY></HTML>

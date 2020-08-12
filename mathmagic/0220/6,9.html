@@ -1,0 +1,27 @@
+<HTML>
+<CENTER>n=6 players, N=9 games:</CENTER>
+<pre>
+If there are 3 games left, (X>Y>Z) means: X plays Y
+IF X WINS, X plays Z twice (X wins ties)
+IF Y WINS, X plays Y twice (Y wins ties)
+
+A plays B.  C plays D.  By symmetry, assume A and C win).  C plays E
+IF C WINS, A plays F
+   IF A WINS, A plays C best-of-5
+   IF F WINS, A plays C
+      IF A WINS, A plays C again
+         IF A WINS, A plays F best-of-3
+         IF C WINS, (C>F>A)
+      IF C WINS, C plays F
+         IF C WINS, B plays F, and winner plays C twice (C wins ties)
+         IF F WINS, C plays F best-of-3
+IF E WINS, A plays E
+   IF A WINS, C plays F
+      IF C WINS, C plays E
+         IF C WINS, A plays C best-of-3
+         IF E WINS, (A>E>C)
+      IF F WINS, A plays F
+         IF A WINS, E plays F, and winner plays A twice (A wins ties)
+         IF F WINS, (F>A>E)
+   IF E WINS, A plays C, winner plays F, and winner plays E best-of-3
+</pre>

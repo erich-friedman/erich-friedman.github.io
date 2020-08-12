@@ -1,0 +1,255 @@
+/*----- 3x2 base 13 -----*/
+
+9	11	2
+2	1	9
+Horizontal values:
+1666, 360, 
+Vertical Values:
+119, 144, 35, 
+
+10	11	3
+3	1	12
+Horizontal values:
+1836, 532, 
+Vertical Values:
+133, 144, 51, 
+
+1	6	8
+3	7	10
+Horizontal values:
+255, 608, 
+Vertical Values:
+16, 85, 114, 
+
+5	5	8
+3	7	10
+Horizontal values:
+918, 608, 
+Vertical Values:
+68, 72, 114, 
+
+1	10	7
+4	5	9
+Horizontal values:
+306, 750, 
+Vertical Values:
+17, 135, 100, 
+
+1	12	8
+5	12	7
+Horizontal values:
+333, 1008, 
+Vertical Values:
+18, 168, 111, 
+
+3	8	10
+6	6	8
+Horizontal values:
+621, 1100, 
+Vertical Values:
+45, 110, 138, 
+
+3	12	12
+11	7	6
+Horizontal values:
+675, 1956, 
+Vertical Values:
+50, 163, 162, 
+
+
+/*----- 4x2 base 13 -----*/
+3	5	4	9
+1	2	11	2
+Horizontal values:
+7497, 2680, 
+Vertical Values:
+40, 67, 63, 119, 
+
+2	2	9	11
+1	4	6	1
+Horizontal values:
+4860, 2952, 
+Vertical Values:
+27, 30, 123, 144, 
+
+3	2	9	10
+1	4	9	10
+Horizontal values:
+7056, 3000, 
+Vertical Values:
+40, 30, 126, 140, 
+
+3	3	12	6
+1	5	9	1
+Horizontal values:
+7260, 3160, 
+Vertical Values:
+40, 44, 165, 79, 
+
+2	2	11	9
+1	7	5	11
+Horizontal values:
+4884, 3456, 
+Vertical Values:
+27, 33, 148, 128, 
+
+2	3	8	9
+1	7	5	11
+Horizontal values:
+5014, 3456, 
+Vertical Values:
+27, 46, 109, 128, 
+
+2	7	11	4
+1	9	12	1
+Horizontal values:
+5724, 3875, 
+Vertical Values:
+27, 100, 155, 53, 
+
+6	10	4	7
+1	10	2	7
+Horizontal values:
+14931, 3920, 
+Vertical Values:
+79, 140, 54, 98, 
+
+11	5	7	7
+1	10	2	7
+Horizontal values:
+25110, 3920, 
+Vertical Values:
+144, 75, 93, 98, 
+
+4	3	8	9
+1	10	10	11
+Horizontal values:
+9408, 4028, 
+Vertical Values:
+53, 49, 114, 128, 
+
+2	5	8	7
+1	11	3	9
+Horizontal values:
+5350, 4104, 
+Vertical Values:
+27, 76, 107, 100, 
+
+1	11	5	9
+1	12	4	1
+Horizontal values:
+4130, 4278, 
+Vertical Values:
+14, 155, 69, 118, 
+
+3	8	9	4
+1	12	9	8
+Horizontal values:
+8064, 4350, 
+Vertical Values:
+40, 116, 126, 60, 
+
+4	9	7	6
+2	4	4	8
+Horizontal values:
+10406, 5130, 
+Vertical Values:
+54, 121, 95, 86, 
+
+11	4	9	9
+2	4	6	12
+Horizontal values:
+24969, 5160, 
+Vertical Values:
+145, 56, 123, 129, 
+
+12	12	3	9
+2	4	6	12
+Horizontal values:
+28440, 5160, 
+Vertical Values:
+158, 160, 45, 129, 
+
+2	8	4	12
+2	4	8	10
+Horizontal values:
+5810, 5184, 
+Vertical Values:
+28, 108, 60, 166, 
+
+3	9	7	8
+3	2	10	11
+Horizontal values:
+8211, 7070, 
+Vertical Values:
+42, 119, 101, 115, 
+
+3	12	5	10
+3	3	4	5
+Horizontal values:
+8694, 7155, 
+Vertical Values:
+42, 159, 69, 135, 
+
+11	6	12	7
+3	6	4	8
+Horizontal values:
+25344, 7665, 
+Vertical Values:
+146, 84, 160, 99, 
+
+1	8	7	12
+3	6	5	10
+Horizontal values:
+3652, 7680, 
+Vertical Values:
+16, 110, 96, 166, 
+
+4	9	11	6
+3	9	6	5
+Horizontal values:
+10458, 8195, 
+Vertical Values:
+55, 126, 149, 83, 
+
+3	12	5	10
+3	9	10	8
+Horizontal values:
+8694, 8250, 
+Vertical Values:
+42, 165, 75, 138, 
+
+2	10	9	9
+4	8	8	6
+Horizontal values:
+6210, 10250, 
+Vertical Values:
+30, 138, 125, 123, 
+
+9	7	12	8
+4	9	6	8
+Horizontal values:
+21120, 10395, 
+Vertical Values:
+121, 100, 162, 112, 
+
+12	11	9	10
+6	4	8	3
+Horizontal values:
+28350, 13965, 
+Vertical Values:
+162, 147, 125, 133, 
+
+8	9	11	10
+6	8	4	9
+Horizontal values:
+19250, 14595, 
+Vertical Values:
+110, 125, 147, 139, 
+
+1	11	12	12
+9	3	12	4
+Horizontal values:
+4224, 20440, 
+Vertical Values:
+22, 146, 168, 160, 

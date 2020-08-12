@@ -1,0 +1,40 @@
+10:
+"ten"
+27:
+"three cubed"
+31:
+"thirty-one"
+36:
+"thrice twelve"
+37:
+"thirty-seven"
+38:
+"twice nineteen"
+47:
+"forty plus seven"
+57:
+"ten plus forty-seven"
+59:
+"ten plus seven squared"
+60:
+"forty added to twenty"
+74:
+"three cubed plus forty-seven"
+76:
+"three cubed plus seven squared"
+78:
+"thirty-one plus forty-seven"
+"thirty-seven plus forty-one"
+80:
+"thirty-one plus seven squared"
+83:
+"thrice twelve plus forty-seven"
+85:
+"thrice twelve plus seven squared"
+"twice nineteen plus forty-seven"
+87:
+"twice nineteen plus seven squared"
+107:
+"forty added to twenty plus forty-seven"
+109:
+"forty added to twenty plus seven squared"

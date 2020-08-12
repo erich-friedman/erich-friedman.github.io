@@ -1,0 +1,437 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month<br>(June 2016)</H1></CENTER>
+
+This month we consider the Math Magic problem of <a href="http://www2.stetson.edu/~efriedma/mathmagic/0313.html">March 2013</a>, but for equilateral triangles instead of circles.  Consider an infinite grid of unit squares.  We want to place k equilateral triangles on this grid so that: 1) no two triangles cover part of the same grid square and 2) the set of squares that are at least partially covered by a triangle form an m&times;n rectangle.  For a given m and n, what is the minimum k that will work?  Below are some examples.
+
+<table align=center cellpadding=10><tr><td><img src="0616/3x3.gif"><td><img src="0616/4x7.gif"><td><img src="0616/3x10.gif"></table>
+
+<P><hr color=black><p><center><h1>ANSWERS</h1></center>
+
+Answers were submitted by Joe DeVincentis.<p>
+
+Let f(m,n) be the smallest k that works for a given m and n.<p>
+
+It is clear that f(1,n) = f(2,n) = <img src="lceil.gif" align=center>n/3<img src="rceil.gif" align=center> and f(a+b,n) &le; f(a,n) + f(b,n).<p>
+
+Joe DeVincentis showed the following general bounds for large n:<p>
+
+<center>
+<img src="0616/3x17.png"><br>f(3,7n+3)&le;2n+1<p>
+<img src="0616/4x20.png"><br>f(4,4n)&le;n<p>
+<img src="0616/5x20.png"><br>f(5,9n&ndash;7)&le;2n<p>
+<img src="0616/5x25.png"><br>f(5,9n&ndash;2)&le;2n+1<p>
+<img src="0616/6x18.png"><br>f(6,5n&ndash;7)&le;n<p>
+<img src="0616/7x19.png"><br>f(6,11n&ndash;3)&le;2n+1<p>
+<img src="0616/7x24.png"><br>f(6,11n&ndash;9)&le;2n<p>
+</center>
+
+<center><font size=+2>Smallest-Known Number of Equilateral<br>Triangles Covering m&times;n Rectangle</font></center>
+<table align=center cellpadding=0>
+<tr align=center><th>m\n<th width=20>1<th width=20>2<th width=20>3<th width=20>4<th width=20>5<th width=20>6<th width=20>7<th width=20>8<th width=20>9<th width=20>10<th width=20>11<th width=20>12<th width=20>13<th width=20>14<th width=20>15<th width=20>16<th width=20>17<th width=20>18<th width=20>19<th width=20>20
+
+<tr align=center><th height=20>1
+<td bgcolor=DDDDFF>1<td bgcolor=DDDDFF>1<td bgcolor=DDDDFF>1<td bgcolor=FFDDFF>2<td bgcolor=FFDDFF>2
+<td bgcolor=FFDDFF>2<td bgcolor=DDFFFF>3<td bgcolor=DDFFFF>3<td bgcolor=DDFFFF>3<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4<td bgcolor=FFDDBB>4<td bgcolor=DDFFDD>5<td bgcolor=DDFFDD>5<td bgcolor=DDFFDD>5
+<td bgcolor=FFFFBB>6<td bgcolor=FFFFBB>6<td bgcolor=FFFFBB>6<td bgcolor=FFDDDD>7<td bgcolor=FFDDDD>7
+
+<tr align=center><th height=20>2
+<td bgcolor=DDDDFF>1<td bgcolor=DDDDFF>1<td bgcolor=DDDDFF>1<td bgcolor=FFDDFF>2<td bgcolor=FFDDFF>2
+<td bgcolor=FFDDFF>2<td bgcolor=DDFFFF>3<td bgcolor=DDFFFF>3<td bgcolor=DDFFFF>3<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4<td bgcolor=FFDDBB>4<td bgcolor=DDFFDD>5<td bgcolor=DDFFDD>5<td bgcolor=DDFFDD>5
+<td bgcolor=FFFFBB>6<td bgcolor=FFFFBB>6<td bgcolor=FFFFBB>6<td bgcolor=FFDDDD>7<td bgcolor=FFDDDD>7
+
+<tr align=center><th height=20>3
+<td bgcolor=DDDDFF>1
+<td bgcolor=DDDDFF>1
+<td bgcolor=DDDDFF><a href="0616/3x3.gif"><font size=-1>EF</font></a>
+<td bgcolor=FFDDFF>2
+<td bgcolor=FFDDFF>2
+
+<td bgcolor=FFDDFF>2
+<td bgcolor=DDFFFF>3
+<td bgcolor=DDFFFF>3
+<td bgcolor=DDFFFF>3
+<td bgcolor=DDFFFF><a href="0616/3x10.gif"><font size=-1>EF</font></a>
+
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD>5
+
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD><a href="0616/3x17.png"><font size=-1>JD</font></a>
+<td bgcolor=FFFFBB>6
+<td bgcolor=FFFFBB>6
+<td bgcolor=FFFFBB>6
+
+<tr align=center><th height=20>4
+<td bgcolor=FFDDFF>2
+<td bgcolor=FFDDFF>2
+<td bgcolor=FFDDFF>2
+<td bgcolor=FFDDFF>2
+<td bgcolor=FFDDFF>2
+
+<td bgcolor=FFDDFF>2
+<td bgcolor=FFDDFF>2
+<td bgcolor=FFDDFF><a href="0616/4x8.png"><font size=-1>JD</font></a>
+<td bgcolor=DDFFFF>3
+<td bgcolor=DDFFFF>3
+
+<td bgcolor=DDFFFF>3
+<td bgcolor=DDFFFF><a href="0616/4x12.gif"><font size=-1>EF</font></a>
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+
+<td bgcolor=FFDDBB><a href="0616/4x16.gif"><font size=-1>EF</font></a>
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD><a href="0616/4x20.png"><font size=-1>JD</font></a>
+
+<tr align=center><th height=20>5
+<td bgcolor=FFDDFF>2<td bgcolor=FFDDFF>2<td bgcolor=FFDDFF>2<td bgcolor=FFDDFF>2<td bgcolor=DDFFFF>3
+<td bgcolor=DDFFFF>3<td bgcolor=DDFFFF>3<td bgcolor=FFDDBB>4<td bgcolor=FFDDBB>4<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4<td bgcolor=FFDDBB>4<td bgcolor=DDFFDD>5<td bgcolor=DDFFDD>5<td bgcolor=DDFFDD>5
+<td bgcolor=FFFFBB>6
+<td bgcolor=FFFFBB>6
+<td bgcolor=FFFFBB>6
+<td bgcolor=FFFFBB>6
+<td bgcolor=FFFFBB><a href="0616/5x20.png"><font size=-1>JD</font></a>
+
+<tr align=center><th height=20>6
+<td bgcolor=FFDDFF>2
+<td bgcolor=FFDDFF>2
+<td bgcolor=FFDDFF>2
+<td bgcolor=FFDDFF>2
+<td bgcolor=DDFFFF>3
+
+<td bgcolor=DDFFFF>3
+<td bgcolor=DDFFFF><a href="0616/6x7.gif"><font size=-1>EF</font></a>
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB><a href="0616/6x13.png"><font size=-1>JD</font></a>
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD>5
+
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD><a href="0616/6x18.png"><font size=-1>JD</font></a>
+<td bgcolor=FFFFBB>6
+<td bgcolor=FFFFBB>6
+
+<tr align=center><th height=20>7
+<td bgcolor=DDFFFF>3
+<td bgcolor=DDFFFF>3
+<td bgcolor=DDFFFF>3
+<td bgcolor=FFDDFF>2
+<td bgcolor=DDFFFF>3
+
+<td bgcolor=DDFFFF><a href="0616/6x7.gif"><font size=-1>EF</font></a>
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB><font size=-1>JD</font>
+
+<td bgcolor=FFDDBB><font size=-1>JD</font>
+<td bgcolor=FFDDBB><font size=-1>JD</font>
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB><a href="0616/7x14.png"><font size=-1>JD</font></a>
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+<td bgcolor=DDFFDD><a href="0616/7x19.png"><font size=-1>JD</font></a>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+
+<tr align=center><th height=20>8
+<td bgcolor=DDFFFF>3
+<td bgcolor=DDFFFF>3
+<td bgcolor=DDFFFF>3
+<td bgcolor=FFDDFF><a href="0616/4x8.png"><font size=-1>JD</font></a>
+<td bgcolor=FFDDBB>4
+
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB><font size=-1>JD</font>
+<td bgcolor=FFDDBB><a href="0616/8x9.png"><font size=-1>JD</font></a>
+<td bgcolor=DDFFDD>5
+
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+<td bgcolor=DDFFDD><a href="0616/8x13.png"><font size=-1>JD</font></a>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><a href="0616/8x19.png"><font size=-1>JD</font></a>
+<td bgcolor=FFDDDD>7
+
+
+<tr align=center><th height=20>9
+<td bgcolor=DDFFFF>3
+<td bgcolor=DDFFFF>3
+<td bgcolor=DDFFFF>3
+<td bgcolor=DDFFFF>3
+<td bgcolor=FFDDBB>4
+
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB><a href="0616/8x9.png"><font size=-1>JD</font></a>
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD>5
+
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><a href="0616/9x19.png"><font size=-1>JD</font></a>
+<td bgcolor=FFDDDD>7
+
+
+<tr align=center><th height=20>10
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+<td bgcolor=DDFFFF><a href="0616/3x10.gif"><font size=-1>EF</font></a>
+<td bgcolor=DDFFFF>3
+<td bgcolor=FFDDBB>4
+
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB><font size=-1>JD</font>
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD>5
+
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><a href="0616/10x19.png"><font size=-1>JD</font></a>
+<td bgcolor=FFDDDD>7
+
+
+<tr align=center><th height=20>11
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+<td bgcolor=DDFFFF>3
+<td bgcolor=FFDDBB>4
+
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB><font size=-1>JD</font>
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+<td bgcolor=DDFFDD>5
+
+<td bgcolor=FFFFBB><a href="0616/11x11.png"><font size=-1>JD</font></a>
+<td bgcolor=DDFFDD><a href="0616/11x12.png"><font size=-1>JD</font></a>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><a href="0616/11x20.png"><font size=-1>JD</font></a>
+
+
+<tr align=center><th height=20>12
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+<td bgcolor=DDFFFF><a href="0616/4x12.gif"><font size=-1>EF</font></a>
+<td bgcolor=FFDDBB>4
+
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB><font size=-1>JD</font>
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+
+<td bgcolor=DDFFDD><a href="0616/11x12.png"><font size=-1>JD</font></a>
+<td bgcolor=FFDDDD><font size=-1>JD</font>
+<td bgcolor=FFDDDD><font size=-1>JD</font>
+<td bgcolor=FFDDDD><a href="0616/12x14.png"><font size=-1>JD</font></a>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+<td bgcolor=DDDDDD><a href="0616/12x20.png"><font size=-1>JD</font></a>
+
+<tr align=center><th height=20>13
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD>5
+<td bgcolor=FFDDBB>4
+<td bgcolor=FFDDBB>4
+<td bgcolor=DDFFDD>5
+
+<td bgcolor=FFDDBB><a href="0616/6x13.png"><font size=-1>JD</font></a>
+<td bgcolor=FFDDBB>4
+<td bgcolor=DDFFDD><a href="0616/8x13.png"><font size=-1>JD</font></a>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFDDDD><font size=-1>JD</font>
+<td bgcolor=DDDDDD>8
+<td bgcolor=FFDDDD><a href="0616/13x14.png"><font size=-1>JD</font></a>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+<td bgcolor=DDDDDD><a href="0616/13x20.png"><font size=-1>JD</font></a>
+
+
+<tr align=center><th height=20>14
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD>5
+<td bgcolor=FFDDBB>4
+<td bgcolor=DDFFDD>5
+
+<td bgcolor=DDFFDD>5
+<td bgcolor=FFDDBB><a href="0616/7x14.png"><font size=-1>JD</font></a>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFDDDD><a href="0616/12x14.png"><font size=-1>JD</font></a>
+<td bgcolor=FFDDDD><a href="0616/13x14.png"><font size=-1>JD</font></a>
+
+
+<tr align=center><th height=20>15
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD>5
+<td bgcolor=FFDDBB>4
+<td bgcolor=DDFFDD>5
+
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+
+
+<tr align=center><th height=20>16
+<td bgcolor=FFFFBB>6
+<td bgcolor=FFFFBB>6
+<td bgcolor=DDFFDD>5
+<td bgcolor=FFDDBB><a href="0616/4x16.gif"><font size=-1>EF</font></a>
+<td bgcolor=FFFFBB>6
+
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+
+
+<tr align=center><th height=20>17
+<td bgcolor=FFFFBB>6
+<td bgcolor=FFFFBB>6
+<td bgcolor=DDFFDD><a href="0616/3x17.png"><font size=-1>JD</font></a>
+<td bgcolor=DDFFDD>5
+<td bgcolor=FFFFBB>6
+
+<td bgcolor=DDFFDD>5
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+
+
+<tr align=center><th height=20>18
+<td bgcolor=FFFFBB>6
+<td bgcolor=FFFFBB>6
+<td bgcolor=FFFFBB>6
+<td bgcolor=DDFFDD>5
+<td bgcolor=FFFFBB>6
+
+<td bgcolor=DDFFDD><a href="0616/6x18.png"><font size=-1>JD</font></a>
+<td bgcolor=DDFFDD><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+
+
+<tr align=center><th height=20>19
+<td bgcolor=FFDDDD>7
+<td bgcolor=FFDDDD>7
+<td bgcolor=FFFFBB>6
+<td bgcolor=DDFFDD>5
+<td bgcolor=FFFFBB>6
+
+<td bgcolor=FFFFBB>6
+<td bgcolor=DDFFDD><a href="0616/7x19.png"><font size=-1>JD</font></a>
+<td bgcolor=FFFFBB><a href="0616/8x19.png"><font size=-1>JD</font></a>
+<td bgcolor=FFFFBB><a href="0616/9x19.png"><font size=-1>JD</font></a>
+<td bgcolor=FFFFBB><a href="0616/10x19.png"><font size=-1>JD</font></a>
+
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+<td bgcolor=DDDDDD><font size=-1>JD</font>
+
+
+<tr align=center><th height=20>20
+<td bgcolor=FFDDDD>7
+<td bgcolor=FFDDDD>7
+<td bgcolor=FFFFBB>6
+<td bgcolor=DDFFDD><a href="0616/4x20.png"><font size=-1>JD</font></a>
+<td bgcolor=FFFFBB><a href="0616/5x20.png"><font size=-1>JD</font></a>
+
+<td bgcolor=FFFFBB>6
+<td bgcolor=FFFFBB><font size=-1>JD</font>
+<td bgcolor=FFDDDD>7
+<td bgcolor=FFDDDD>7
+<td bgcolor=FFDDDD>7
+
+<td bgcolor=FFFFBB><a href="0616/11x20.png"><font size=-1>JD</font></a>
+<td bgcolor=DDDDDD><a href="0616/12x20.png"><font size=-1>JD</font></a>
+<td bgcolor=DDDDDD><a href="0616/13x20.png"><font size=-1>JD</font></a>
+
+</table>
+<p><hr color=black><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 6/1/16.<font></BODY></HTML>
+

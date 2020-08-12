@@ -1,0 +1,221 @@
+###############################################################################
+This Text File is Public Domain. This is available in INTERNET.
+http://www.cli.di.unipi.it/~velucchi/queens.txt
+This is for review/abstract in journals and magazines in all the World.
+I am available for more technical details.
+IF YOU PRINT THIS FILE OR REFERENCE ON, WRITE ME PLEASE.
+###############################################################################
+
+FOR ME, THIS IS THE BEST CHESS-PUZZLE
+by Mario VELUCCHI
+[Project Beginning: May 1995 - Last Up-Dated: 27 January 1997]
+
+NON-Dominating Queens Problem
+-  Placing N Queens on an order-N board to leave a maximum number of unattacked vacant cells.
+
+ N   Free(N) Prob.
+ 1     0     100% Sure
+ 2     0       "
+ 3     0       "
+ 4     1       "
+ 5     3       "
+ 6     5       "
+ 7     7       "
+ 8    11       "
+ 9    18       "
+10    22       "
+11    30       "
+12    36       "
+13    47       "
+14    56       "
+15    72       "
+16    82       "
+17    97     probable
+18   111       "
+19   132       "
+20   145       "
+21   170       "
+22   186       "
+23   216       "
+24   240       "
+25   260       "
+26   290       "
+27   324       "
+28   360       "
+29   381       "
+30   420       "
+>30  others dispositions     probables
+
+[Notation: Free[N] = Maximum Known for unattacked vacant cells if i place N queens in order-N board]
+======================
+
+ROLL -
+The first authors of these proposed values of Free(N) are:
+N= 1    Free=  0 obvious
+N= 2    Free=  0 obvious
+N= 3    Free=  0 obvious
+N= 4    Free=  1 in Stephen AINLEY, 1977 and Martin GARDNER, 1983 (reprint of previous Scientific American articles)
+N= 5    Free=  3 in Stephen AINLEY and M. GARDNER, ibid
+N= 6    Free=  5 in Stephen AINLEY and M. GARDNER, ibid
+N= 7    Free=  7 in Stephen AINLEY and M. GARDNER, ibid
+N= 8    Free= 11 in Walter William Rouse BALL 'Mathematical Recreations and Problems' Macmillan 1892
+N= 9    Free= 18 Diego BRACAMONTE (Argentina) in 'El Acertijo' 1993
+N=10    Free= 22 in Stephen AINLEY and M. GARDNER, ibid
+N=11    Free= 30 Rodolfo KURCHAN (Argentina) in 'El Acertijo' 1993
+                 Mario VELUCCHI (Italy) - [C] 1995 [new solution]
+N=12    Free= 36 in Stephen AINLEY and M. GARDNER, ibid
+N=13    Free= 47 Johan CLAES (Belgium), Mario VELUCCHI - [C] 1995
+N=14    Free= 56 in Stephen AINLEY, ibid
+                 Mario VELUCCHI - [C] 1995 [new solution]
+N=15    Free= 72 Johan CLAES, Mario VELUCCHI - [C] 1995
+N=16    Free= 82 Johan CLAES, Mario VELUCCHI - [C] 1995
+N=17    Free= 97 Johan CLAES, Mario VELUCCHI - [~C] 1995
+N=18    Free=111 in Stephen AINLEY, ibid
+N=19    Free=132 in Stephen AINLEY, ibid
+N=20    Free=145 Johan CLAES, Mario VELUCCHI - [C] 1995
+N=21    Free=170 Johan CLAES, Mario VELUCCHI - [C] 1995
+N=22    Free=186 in Stephen AINLEY, ibid
+N>22    ever by Johan CLAES, Mario VELUCCHI, Miyoshi NAGAI (Japan) - [C] 1995
+
+[Notation: [C] - Computer Research;  [~C] - Computer and Human Research]
+======================
+
+Different Solutions     [in increase]
+by Johan CLAES, Mario VELUCCHI, Miyoshi NAGAI - [C] 1995
+ N      Free      #      Prob.
+ 4        1      25      100% Sure
+ 5        3       1       "
+ 6        5       3       "
+ 7        7      38       "
+ 8       11       7       "
+ 9       18       1       "
+10       22       1       "
+11       30       2       "
+12       36       7       "
+13       47       1       "
+14       56       4       "
+15       72       3       "
+16       82       1       "
+17       97     >=1
+18      111     >=1
+..      ...     ...
+
+for N <= 8 the first reference is by Bernd SCHWARZKOPF (Germany) in 'Die Schwalbe' [C] 1982
+======================
+
+Generalisation:
+K Queens on an order-N board
+
+- Table Free(K,N) (best known solutions) for:
+
+1 <= N <= 30
+only for Max K-Queens near equal to Free(K,N)
+in Stephen AINLEY, ibid
+
+1 <= N <= 10   1 <= K <= (N)
+incomplete
+by Hiroshi OKUNO (Japan) in Martin GARDNER, ibid [C]
+
+1 <= N <= 8   1 <= K <= (N*N)
+best/number of solutions 
+by Bernd SCHWARZKOPF in 'Die Schwalbe' [C] 1982
+
+1 <= N <= 30   1 <= K <= (N*N)   [in increase]
+best/number of solutions
+by Johan CLAES, Mario VELUCCHI - [C] 1995
+
+- Formulas and Bounds   [in progress]
+by Johan CLAES, Mario VELUCCHI 1995
+
+Free(K, N) = 0  for  N^2-3*N+3 <= K <= N^2
+Free(K, N) = 1  for  N^2-5*N+8 <= K <= N^2-3*N+2 ...
+
+this is obvious because i have:
+Free(1, N) = N^2-3*N+2
+Free(2, N) = N^2-5*N+7
+Free(3, N) =? N^2-6*N+9
+Free(4, N) =? N^2-6*N+8  for N pair; otherwise: Free(4, N) =? N^2-6*N+9
+...
+Free(>4, N) = others approximate formulas
+
+- Lower, Upper Bounds and Approximate Formulas for Free(N, N), the proposed problem [in progress]
+by Johan CLAES, Mario VELUCCHI, Gustavo PI¥EIRO 1995
+...
+
+- Others theoretical considerations, conjectures and theorems [in progress]
+by Johan CLAES, Mario VELUCCHI, Gustavo PI¥EIRO 1995
+...
+
+[Notation: Free(K, N) = free squares for K Queens in order-N board]
+======================
+
+References/Acknowledgements:
+ 
+1. Walter William Rouse BALL 'Mathematical Recreations and Problems' Macmillan 1892
+2. Stephen AINLEY 'Mathematical Puzzles' G.Bell & Sons Ltd, UK 1977
+3. Martin GARDNER 'Wheels, Life and Other Mathematical Amusements' Freeman 1983
+
+I.   'Die Schwalbe' (German journal specific on Chess Problems)
+II.  'El Acertijo' (Argentinean journal specific on Recreational Mathematics)
+III. 'Informazione Scacchi' (Italian journal specific on Chess)
+IV.  'Jouer Jeux Math‚matiques' (French journal specific on Recreational Mathematics)
+V.   'KONWAKAI NEWS' (Japanese journal specific on Recreational Mathematics)
+VI.  'mathematical digest' nø 103, April 1996, p. 24 (South African magazine)
+VII. 'Scientific American' Martin GARDNER's Mathematical Games Column (USA)
+VIII.'SHARADA' (Russian journal specific on Recreational Mathematics)
+IX.  'springaren' (Swedish journal specific on Chess Problems)
+X.   'Technology Review - MIT Students special edition' Allan J. GOTTLIEB's Puzzle Corner (USA)
+
+a. Personal communications by Allan J. GOTTLIEB (USA)
+b. Personal communications by Bernd SCHWARZKOPF (Germany)
+c. Personal communications by Dario URI (Italy)
+d. Personal communications by Gustavo PI¥EIRO  (Argentina)
+e. Personal communications by HŠctor SAN SEGUNDO (Argentina)
+f. Personal communications by J.H. WEBB (South Africa)
+g. Personal communications by Johan CLAES (Belgium)
+h. Personal communications by Martin GARDNER (USA)
+i. Personal communications by Michel CRITON(France)
+j. Personal communications by Miyoshi NAGAI (Japan)
+k. Personal communications by Ronald L. GRAHAM (USA)
+l. Personal communications by Stephen HEDETNIEMI (USA)
+m. Personal communications by Toshi Junk KATO (Japan)
+n. Personal communications by Vladimir N. RIBINSKY (Russia)
+o. My papers (Mario VELUCCHI - Italy)
+
+======================
+
+Mario VELUCCHI
+Via Emilia, 106
+I-56121 Pisa - ITALY
+
+e-mail: velucchi@cli.di.unipi.it
+http://www.cli.di.unipi.it//~velucchi/intro.html
+
+======================
+
+Two nice DIAGRAMS (very small selection):
+...
+...
+ + - + + + + - -
+ + - + + + - - -
+ + + + + + - - +
+ Q + Q + + + + +
+ Q + + + + + + +
+ Q + + + Q + + +
+ + + + + + + - -
+ + + Q Q Q + + +
+8 : free = 11
+
+ + Q + + + + Q +
+ Q + Q + + + Q +
+ + Q + + + + + +
+ + + + + + - + -
+ + + + + - + + -
+ + + + - + - + -
+ Q Q + + + + + +
+ + + + - - - + -
+8 : free = 11
+...
+...
+
+

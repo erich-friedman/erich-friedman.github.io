@@ -1,0 +1,171 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (October 2006)</H1></CENTER>
+
+This month I feature two problems which are generalizations of problems in "The Puzzling Adventures of Dr. Ecco", by Dennis Shasha. The first concerns how to rank several players in a tournament, and the second concerns how to build a building whose rooms have a tree structure.<p>
+
+<font size=+2>Problem #1:</font> The designers of a sports tournament want not only to identify the best player, but to completely rank the players. Assuming that the best player always wins a match, and assuming that the match schedule can not depend on the results of earlier matches, how many rounds and matches are necessary to do this? For example, the shortest tournaments for 2, 3, or 4 players are shown below. Time travels from left to right, the matches are represented by boxes, and the output of each box is assumed to be sorted.<p>
+
+In general, assume that we are playing some game where k players play at a time, and that the results of a match rank the k players. How many rounds and matches does it take to completely rank n players? How do the answers change if we only want to identify the top p players? How do the answers change if each match only identifies the best player?<hr>
+
+<font size=+2>Problem #2:</font> An eccentric builder wants to build a 1-story building containing equal size rectangular rooms and no hallways. In addition, the building is to have a tree structure, so there is a unique path between any two rooms. The lobby must have a<sub>1</sub> doors, and each of those rooms must have a<sub>2</sub> more doors, and so on up to some final splitting with a<sub>n</sub> doors. We say this is a a<sub>1</sub>a<sub>2</sub>...a<sub>n</sub> building. What is the smallest aspect ratio for the rooms that will allow such a building?
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+<font size=+3>Problem #1:</font><p>
+
+It turns out that for k=2 these have been well-studied and are called Sorting Networks.  Gavin Theobald sent me this <a href="http://www.cs.brandeis.edu/~hugues/sorting_networks.html">page</a>.<p>
+
+Let S(n) the fewest games needed to sort n players.  Sune Kristian Jakobsen proved that &sum; <img src="lceil.gif" align=abscenter> log<sub>2</sub> i<img src="rceil.gif" align=abscenter> (for 1&le;i&le;n) &le; S(n) &le; (3n<sup>2</sup> &ndash; n)/2.<p>
+
+Corey Plover told me that Donald Knuth covered this problem in Section 5.3.4 of "The Art of Computer Programming", Volume 3, and sent two figures from that section.  He also gave me some other references:<p>
+
+R.J. Nelson and R.C Bose showed that S(2<sup>n</sup>) &le; 3<sup>n</sup> &ndash; 2<sup>n</sup> and therefore S(n) = O(n<sup>log 3</sup>) in [JACM 9 (1962) p282-296].<br>
+
+T.N. Hibbard found a simpler construction using the same number of comparisons in [JACM 10 (1963), p142-150].<br>
+
+R.W. Floyd and D.E. Knuth proved S(n) = O(n<sup>1+c/&radic;(log n)</sup>) in [Notices of the Amer. Math. Soc. 14 (1967), p283].<br>
+
+R.L. Drysdale and F.H. Young showed S(256) &le; 3651 in [SICOMP 4 (1975), p264-270].<br>
+
+Ajtai, Komolos and Szemeredi showed that S(n) = O(n log n) in [Combinatorica 3 (1983), p1-19].<p>
+
+Here are the smallest known sorting tournaments for k=2:<p>
+
+<table align=center border=1 bgcolor=FFFFDD>
+<tr align=center bgcolor=lightgreen><th>n<th>S(n)<th>rounds<br>needed
+<tr align=center><td>1<td>0<td>0
+<tr align=center><td>2<td>1<td>1
+<tr align=center><td>3<td>3<td>3
+<tr align=center><td>4<td>5<td>3
+<tr align=center><td>5<td>9<td>5
+<tr align=center><td>6<td>12<td>5
+<tr align=center><td>7<td>16<td>6
+<tr align=center><td>8<td>19<td>6
+<tr align=center><td>9<td>21-25<td>7
+<tr align=center><td>10<td>25-29<td>7
+<tr align=center><td>11<td>29-35<td>7-8
+<tr align=center><td>12<td>33-39<td>7-8
+<tr align=center><td>13<td>37-45<td>7-9
+<tr align=center><td>14<td>41-51<td>7-9
+<tr align=center><td>15<td>45-56<td>7-9
+<tr align=center><td>16<td>49-60<td>7-9
+</table>
+
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="1006/2-2.gif">
+<td><img src="1006/2-3.gif">
+<td><img src="1006/2-4.gif">
+<td><img src="1006/2-5.gif">
+</table><p>
+
+<center><img src="1006/Fig49.jpg"><p><img src="1006/Fig51.jpg"></center><p>
+
+Here are the smallest known sorting tournaments for k=3:<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="1006/3-3.gif">
+<td><img src="1006/3-4.gif">
+<td><img src="1006/3-5.gif">
+<td><img src="1006/3-6.gif">
+<td><img src="1006/3-7.gif">
+</table>
+
+Here are the smallest known sorting tournaments for k=4:<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="1006/4-4.gif">
+<td><img src="1006/4-5.gif">
+<td><img src="1006/4-6.gif">
+<td><img src="1006/4-7.gif">
+<td><img src="1006/4-8.gif">
+</table>
+
+<p><hr><p>
+
+<font size=+3>Problem #2:</font><p>
+
+Here are the smallest known aspect ratio tree packings:<p>
+
+<table align=center cellpadding=10 border=1 bgcolor=FFFFFF>
+<tr align=center bgcolor=lightgreen><th>a<sub>i</sub><th>aspect<br>ratio<th>building
+<tr align=center><td>8<td>&gt;1<td><img src="1006/8.gif">
+<tr align=center><td>82<td>&gt;1<td><img src="1006/82.jpg">
+<br>(Jeremy Galvagni)
+<tr align=center><td>72<td>&gt;1<td><img src="1006/72.gif">
+<tr align=center><td>62<td>1<td><img src="1006/62.gif">
+<tr align=center><td>622<td>&gt;1<td><img src="1006/622.gif">
+<tr align=center><td>63<td>&gt;4/3<td><img src="1006/63.jpg">
+<br>(Jeremy Galvagni)
+<tr align=center><td>522<td>1<td><img src="1006/522.gif">
+<tr align=center><td>5222<td>3/2<td><img src="1006/5222.jpg">
+<br>(Jeremy Galvagni)
+<tr align=center><td>523<td>&gt;4/3<td><img src="1006/523.jpg">
+<br>(Jeremy Galvagni)
+<tr align=center><td>53<td>&gt;1<td><img src="1006/53.gif">
+<tr align=center><td>423<td>1<td><img src="1006/423.gif">
+<tr align=center><td>4232<td>?<td>?
+<tr align=center><td>424<td>&gt;7/4<td><img src="1006/424.jpg">
+<br>(Jeremy Galvagni)
+<tr align=center><td>432<td>1<td><img src="1006/432.gif">
+<tr align=center><td>4322<td>?<td>?
+<tr align=center><td>433<td>>8/5<td><img src="1006/433.jpg">
+<br>(Jeremy Galvagni)
+<tr align=center><td>44<td>&gt;1<td><img src="1006/44.gif">
+<tr align=center><td>34<td>1<td><img src="1006/34.gif">
+<tr align=center><td>342<td>&gt;1<td><img src="1006/342.gif">
+<tr align=center><td>35<td>&gt;1<td><img src="1006/35.gif">
+<tr align=center><td>22222<td>1<td><img src="1006/22222.jpg">
+<br>(Jeremy Galvagni)
+<tr align=center><td>222222<td>?<td>?
+<tr align=center><td>22223<td>?<td>?
+<tr align=center><td>2224<td>1<td><img src="1006/2224.gif">
+<tr align=center><td>22242<td>?<td>?
+<tr align=center><td>2225<td>&gt;4/3<td><img src="1006/2225.jpg">
+<br>(Jeremy Galvagni)
+<tr align=center><td>224<td>1<td><img src="1006/224.gif">
+<tr align=center><td>2242<td>&gt;1<td><img src="1006/2242.jpg">
+<br>(Jeremy Galvagni)
+<tr align=center><td>225<td>>1<td><img src="1006/225.jpg">
+<br>(Jeremy Galvagni)
+<tr align=center><td>233<td>1<td><img src="1006/233.gif">
+<tr align=center><td>2332<td>&gt;10/7<td><img src="1006/2332.jpg">
+<br>(Jeremy Galvagni)
+<tr align=center><td>234<td>3/2<td><img src="1006/234.jpg">
+<br>(Jeremy Galvagni)
+<tr align=center><td>242<td>1<td><img src="1006/242.jpg">
+<br>(Jeremy Galvagni)
+<tr align=center><td>2422<td>&gt;6/5<td><img src="1006/2422.jpg">
+<br>(Jeremy Galvagni)
+<tr align=center><td>243<td>&gt;4/3<td><img src="1006/243.gif">
+<tr align=center><td>25<td>1<td><img src="1006/25.gif">
+<tr align=center><td>252<td>&gt;1<td><img src="1006/252.gif">
+<tr align=center><td>26<td>&gt;1<td><img src="1006/26.gif">
+<tr align=center><td>27<td>&gt;4/3<td><img src="1006/27.gif">
+</table><p>
+
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 12/3/06.<font>
+
+<!-- Stats Script Start -->
+<script type="text/javascript">
+<!--
+var FCS_Account="580";
+var FCS_Server="http://www.statisfy.com/";
+var FCS_Page="DetectName";
+var FCS_Url="DetectUrl";
+var FCS_Offset="0";
+var FCS_Interval="24";
+var FCS_Cntimg="100";
+// -->
+</script>
+<script type="text/javascript" src="http://www.statisfy.com//js.php?usr=580">
+</script>
+<noscript>
+<a href="http://www.statisfy.com/" target="_blank">
+<img src="http://www.statisfy.com//stat.php?usr=580&offset=0&interval=24&cntimg=100" border="0" title="Statisfy Free Web Stats!" alt="Statisfy Free Web Stats!" /></a>
+</noscript>
+<!-- Stats Script  End  --></BODY></HTML>
+

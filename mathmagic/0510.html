@@ -1,0 +1,408 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (May 2010)</H1></CENTER>
+
+This month we consider several problems concerning numbers:<p><hr><p>
+
+<font size=+2>1.</font> Which positive integers n have a <b>multiplicative partition</b>, a partition with the property that there are exactly n subsets of the partition with product n, including one that contains any given summand?  For example, 18 = 3 + 3 + 3 + 3 + 2 + 2 + 2 has this property, since there are <sub>4</sub>C<sub>2</sub> = 6 ways to choose two factors of 3's, and <sub>3</sub>C<sub>1</sub> = 3 ways to choose one factor of 2.  What is the smallest odd number that has a multiplicative partition?<p>
+
+<font size=+2>2.</font> For a given non-negative integer n, what is the shortest <b>unique equation</b> for n, an equation in one variable that has unique integer solution n?  We allow well-known symbols of any kind (+, &ndash;, +, /, ^, !, &radic;, concatenation, etc.), but we do not allow constants.  For example, x + x = x has unique solution x = 0, and x<sup>x</sup> = x has unique solution x = 1.  What are the equations using the fewest symbols that uniquely identify the positive integers?<p>
+
+<font size=+2>3.</font> In <a href="http://www.stetson.edu/~efriedma/mathmagic/0601.html">June 2001</a>, we investigated printer's errors involving powers.  But if a subscript is used to denote a base, there are also strings of digits that evaluate to the same number for different sets of subscripted digits.  We call these <b>base printer errors</b>.  For example, 10<sub>89</sub> = 108<sub>9</sub>, as both evaluate to 89.  Can you find some other base printer errors?  What infinite families are there?  Are there strings that can be interpreted 3 different ways to give the same result? <p>
+
+<font size=+2>4.</font> On long car trips, we play a game with numerical license plates.  We try to insert symbols between the digits to make a true equation.  For example, 4935 has solutions &radic;4 + 9/3 = 5 and &radic;4 + 9 = 3! + 5.  Thus we say the number 4935 is a <b>license plate number</b>.  What is the largest number that is not a license plate number?  This may be too hard, so what is the largest number only using the digits 0-n that is not a license plate number?<p>
+
+<font size=+2>5.</font> In <a href="http://www.stetson.edu/~efriedma/mathmagic/0800.html">August 2000</a>, we investigated Friedman numbers.  But some numbers have the ability to make themselves multiple times using their own digits.  For example, using each of the digits of 279936 exactly once, we can form 6<sup>7</sup> and (9&ndash;3)<sup>9&ndash;2</sup>, both of which evaluate to 279936.  Is this the smallest <b>multiple Friedman number</b>?  What is the smallest Friedman number of order 3?  of order n?
+
+
+<P><hr color=black><p><center><h1>ANSWERS</h1></center>
+
+This month's contributors were Jaroslaw Wroblewski, Bryce Herdt, Joe DeVincentis, Berend van der Zwaag, and Gavin Theobald.<p>
+
+
+<font size=+2>1.</font><p>
+
+Bryce Herdt showed that prime numbers, and products of two prime numbers, do not have multiplicative partitions.<p>
+
+Joe DeVincentis proved that 105 was the smallest odd number with a multiplicative partition.  He also showed that 32 is the smallest power of 2 that has a multiplicative partition.<p>
+
+Joe DeVincentis showed that 4p, where p is an odd prime, has a multiplicative partition when p=5 or (5p+3)/2 is a square.  Berend van der Zwaag showed that when p>16 and (7p+1)/2 is square also works.<p>
+
+
+Here are the known numbers with multiplicative partitions:<p>
+
+<center><font size=+2>Known Numbers with<br>Multiplicative Partitions</font></center>
+<table align=center bgcolor=FFFFDD border=1 cellpadding=5><tr bgcolor=DDFFDD><th>n<th>Partition<th>Author
+<tr align=center><td><font size=+1>1<td><font size=+1>1<td>
+<tr align=center><td><font size=+1>12<td><font size=+1>3 &nbsp; 2222 &nbsp; 1<td>
+<tr align=center><td><font size=+1>18<td><font size=+1>3333 &nbsp; 222<td>
+<tr align=center><td><font size=+1>20<td><font size=+1>55 &nbsp; 22222<td>
+<tr align=center><td><font size=+1>24<td><font size=+1>66 &nbsp; 4 &nbsp; 3 &nbsp; 2 &nbsp; 111<td>
+<tr align=center><td><font size=+1>32<td><font size=+1>16 &nbsp; 44 &nbsp; 222 &nbsp; 11<td>(BH)
+<tr align=center><td><font size=+1>36<td><font size=+1>6666 &nbsp; 333 &nbsp; 2 &nbsp; 1<td>(BH)
+<tr align=center><td><font size=+1>40<td><font size=+1>10 &nbsp; 5555 &nbsp; 4 &nbsp; 22&nbsp; 11<td>
+<tr align=center><td><font size=+1>42<td><font size=+1>77 &nbsp; 6 &nbsp; 3333 &nbsp; 22222<td>(BH) 
+<tr align=center><td><font size=+1>48<td><font size=+1>16 &nbsp; 8 &nbsp; 6 &nbsp; 33333 &nbsp; 111<td>
+<tr align=center><td><font size=+1>54<td><font size=+1>66666 &nbsp; 3333 &nbsp; 222222<td>(BZ)
+<tr align=center><td><font size=+1>56<td><font size=+1>1414 &nbsp; 8 &nbsp; 7 &nbsp; 44 &nbsp; 2 &nbsp; 111<td>
+<tr align=center><td><font size=+1>60<td><font size=+1>1515 &nbsp; 5 &nbsp; 44444 &nbsp; 3 &nbsp; 11<td>
+<tr align=center><td><font size=+1>64<td><font size=+1>32 &nbsp; 16 &nbsp; 22222222<td>(JD)
+<tr align=center><td><font size=+1>66<td><font size=+1>111111 &nbsp; 6 &nbsp; 3333333 &nbsp; 222<td>(BH)
+<tr align=center><td><font size=+1>72<td><font size=+1>36 &nbsp; 1212 &nbsp; 3 &nbsp; 222 &nbsp; 111<td>
+<tr align=center><td><font size=+1>76<td><font size=+1>19 &nbsp; 4<sup>10</sup> &nbsp; 22222222 &nbsp; 1<td>(JD)
+<tr align=center><td><font size=+1>80<td><font size=+1>40 &nbsp; 10 &nbsp; 88 &nbsp; 44 &nbsp; 2 &nbsp; 1111<td>
+<tr align=center><td><font size=+1>84<td><font size=+1>2121 &nbsp; 444444 &nbsp; 2<sup>9</sup><td>(JD)
+<tr align=center><td><font size=+1>88<td><font size=+1>22 &nbsp; 4<sup>10</sup> &nbsp; 2<sup>13</sup><td>(JD)
+<tr align=center><td><font size=+1>90<td><font size=+1>1010 &nbsp; 999 &nbsp; 5555555 &nbsp; 2222<td>(BH)
+<tr align=center><td><font size=+1>92<td><font size=+1>46 &nbsp; 23 &nbsp; 4 &nbsp; 222222222 &nbsp; 1<td>(BZ)
+<tr align=center><td><font size=+1>96<td><font size=+1>48 &nbsp; 16 &nbsp; 6666 &nbsp; 22 &nbsp; 1111<td>(BH)
+<tr align=center><td><font size=+1>100<td><font size=+1>2525 &nbsp; 555 &nbsp; 4444444 &nbsp; 222 &nbsp; 1<td>(BH)
+<tr align=center><td><font size=+1>102<td><font size=+1>171717 &nbsp; 6666 &nbsp; 33333 &nbsp; 222222<td>(BZ)
+<tr align=center><td><font size=+1>104<td><font size=+1>26 &nbsp; 131313 &nbsp; 88 &nbsp; 4444 &nbsp; 222 &nbsp; 1<td>(BZ)
+<tr align=center><td><font size=+1>105<td><font size=+1>15 &nbsp; 7777777 &nbsp; 5555555 &nbsp; 33<td>(JD)
+<tr align=center><td><font size=+1>108<td><font size=+1>9 &nbsp; 4<sup>17</sup> &nbsp; 3 &nbsp; 2<sup>14</sup><td>(BZ)
+<tr align=center><td><font size=+1>110<td><font size=+1>111111 &nbsp; 101010 &nbsp; 5555 &nbsp; 22 &nbsp; 1<td>(BZ)
+<tr align=center><td><font size=+1>112<td><font size=+1>28 &nbsp; 4<sup>18</sup> &nbsp; 22222 &nbsp; 11<td>(JD)
+<tr align=center><td><font size=+1>114<td><font size=+1>19 &nbsp; 6 &nbsp; 3<sup>28</sup> &nbsp; 22 &nbsp; 1<td>(BZ)
+<tr align=center><td><font size=+1>120<td><font size=+1>30 &nbsp; 4<sup>15</sup> &nbsp; 2<sup>15</sup><td>(JD)
+</table><p>
+
+
+<hr><p><font size=+2>2.</font><p>
+
+Below are the shortest known equations.  We count square brackets [ ] but not round parentheses ( ), which just extend the square root, due to my poor typesetting skills.  Bryce Herdt convinced me that since concatenation was only allowed between x's, that in many cases a space could mean multiplication.  Gavin Theobald convinced me that subscripts could be used for bases.<p>
+
+<center><font size=+2>Shortest Known Equations with Unique Solution n</font></center>
+<TABLE align=center cellpadding=10><TR><TD>
+<table border=1 align=center bgcolor=FFFFDD cellpadding=6>
+<tr align=center bgcolor=DDFFFF><th>n<th>Equation<th>Symbols<th>Author
+<tr align=center><td>0<td>x + x = x<td>5<td>
+<tr align=center><td>1<td>x<sup>x</sup> = x<td>4<td>
+<tr align=center><td>2<td>x<sup>x</sup> = x + x<td>6<td>
+<tr align=center><td>3<td>x! = x + x<td>6<td>
+<tr align=center><td>4<td>&radic;(x! &ndash; x &ndash; x) = x <td>9<td>
+<tr align=center><td>5<td>x! = x &middot; x &middot; x &ndash; x<td>10<td>
+<tr align=center><td>6<td>x! = xxx + xx &ndash; x &ndash; x<td>13<td>(BH)
+<tr align=center><td>7<td>&radic;(x &radic;(xxx + x)) = x + x<td>12<td>(GT)
+<tr align=center><td>8<td>x &middot; x / &radic;(x+x) = x + x<td>12<td>(GT)
+<tr align=center><td>9<td>&radic;x + &radic;x = &radic;(x)!<td>9<td>(GT)
+<tr align=center><td>10<td>x<sub>x</sub> = x<td>4<td>(GT)
+<tr align=center><td>11<td>x<sub>x</sub> = x + x/x<td>8<td>(GT)
+<tr align=center><td>12<td>x[x<sub>x</sub> &ndash; x] = x + x<td>11<td>(GT)
+<tr align=center><td>13<td>x &radic;&radic;x<sub>x</sub> = x + x<td>9<td>(GT)
+<tr align=center><td>14<td>x &radic;(x<sub>x</sub> &ndash; x) = x + x<td>10<td>(GT)
+<tr align=center><td>15<td>x &radic;&radic;(x + x/x) = x + x<td>12<td>(BZ)
+<tr align=center><td>16<td>x &radic;(x/&radic;x) = x + x<td>10<td>(GT)
+<tr align=center><td>17<td>x<sub>x</sub> = &radic;(x &ndash; x/x)!<td>10<td>(JD)
+<tr align=center><td>18<td>&radic;&radic;(x+x) = x / &radic;(x + x + x)<td>14<td>(JD)
+<tr align=center><td>19<td>x &radic;(x<sub>x</sub> &ndash; x) = x + x + x<td>12<td>(GT)
+<tr align=center><td>20<td>x<sub>x</sub> = x + x<td>6<td>(GT)
+<tr align=center><td>21<td>x<sub>x</sub> = x + x + x/x<td>10<td>(GT)
+<tr align=center><td>22<td>x[x<sub>x</sub> &ndash; x &ndash; x] = x + x<td>13<td>(GT)
+<tr align=center><td>23<td>x[x<sub>x</sub> &ndash; x &ndash; x] = x + x + x<td>15<td>(GT)
+<tr align=center><td>24<td>x &radic;(x<sub>x</sub> &ndash; x &ndash; x) = x + x<td>12<td>(GT)
+<tr align=center><td>25<td>x<sub>x</sub> = x + x + &radic;x<td>9<td>(GT)
+<tr align=center><td>26<td>x<sub>x</sub> = x + x + &radic;(x &ndash; x/x) + x/x<td>17<td>(GT)
+<tr align=center><td>27<td>x &middot; x / &radic;(x + x + x) = x + x + x<td>16<td>(BZ)
+<tr align=center><td>28<td>x<sub>x</sub> = x + x + &radic;(x<sub>x</sub>)<td>10<td>(GT)
+<tr align=center><td>29<td>x &radic;(x<sub>x</sub> &ndash; x &ndash; x) = x + x + x<td>14<td>(GT)
+<tr align=center><td>30<td>x<sub>x</sub> = x + x + x<td>8<td>(GT)
+<tr align=center><td>31<td>x<sub>x</sub> = x + x + x + x/x<td>12<td>(GT)
+<tr align=center><td>32<td>x &radic;(x / &radic;(x + x)) = x + x<td>12<td>(GT)
+<tr align=center><td>33<td>x<sub>x</sub> &middot; x &ndash; xx = x<td>9<td>(GT)
+<tr align=center><td>34<td>x &radic;(x<sub>x</sub> &ndash; x &ndash; x &ndash; x) = x + x<td>14<td>(GT)
+<tr align=center><td>35<td>x &radic;(x<sub>x</sub> &ndash; xx/x) = x + x + x<td>15<td>(GT)
+<tr align=center><td>36<td>&radic;(x)! = x<sub>x</sub> &radic;x + x<td>10<td>(GT)
+</table>
+
+</TD><TD>
+
+<table border=1 align=center bgcolor=FFFFDD cellpadding=6>
+<tr align=center bgcolor=DDFFFF><th>n<th>Equation<th>Symbols<th>Author
+<tr align=center><td>37<td>x&radic;&radic;(x<sub>x</sub> &ndash; x) = x + x + x<td>13<td>(GT)
+<tr align=center><td>38<td>x &radic;(x<sub>x</sub> &ndash; x &ndash; x &ndash; x + x/x) = x + x + x<td>20<td>(GT)
+<tr align=center><td>39<td>x &radic;(x<sub>x</sub> &ndash; x &ndash; x &ndash; x) = x + x + x<td>16<td>(GT)
+<tr align=center><td>40<td>&radic;(x &middot; x<sub>x</sub>) = x + x<td>9<td>(GT)
+<tr align=center><td>41<td>&radic;x &radic;(x<sub>x</sub> &ndash; x/x) = x + x<td>13<td>(GT)
+<tr align=center><td>42<td>&radic;(x<sub>x</sub> &middot; x &ndash; x&ndash; x) = x + x<td>13<td>(GT)
+<tr align=center><td>43<td>&radic;(x<sub>x</sub> &middot; x &ndash; x&ndash; x &ndash; x) = x + x<td>15<td>(GT)
+<tr align=center><td>44<td>x &radic;(x<sub>x</sub>) / &radic;(x + x/x) = x + x<td>15<td>(GT)
+<tr align=center><td>45<td>&radic;(x<sub>x</sub> &middot; x &ndash; x&ndash; x &ndash; x &ndash; x &ndash; x) = x + x<td>19<td>(GT)
+<tr align=center><td>46<td>xx + x[x + x &ndash; x<sub>x</sub>] = x + x + x<td>18<td>(GT)
+<tr align=center><td>47<td>xx/x + x + x = x<sub>x</sub><td>11<td>(GT)
+<tr align=center><td>48<td>x &middot; x<sub>x</sub> = xx + xx &ndash; x &ndash; x<td>14<td>(JD)
+<tr align=center><td>49<td>xx + x + x = &radic;(x)! + &radic;x<td>13<td>(JW)
+<tr align=center><td>50<td>&radic;x &radic;(x<sub>x</sub> &ndash; x) = x + x<td>11<td>(GT)
+<tr align=center><td>51<td>x &radic;&radic;&radic;(x<sub>x</sub>) = x + x<td>10<td>(GT)
+<tr align=center><td>52<td>&radic;(x[x<sub>x</sub> &ndash; x] &ndash; x &ndash; x) = x + x<td>16<td>(GT)
+<tr align=center><td>53<td>&radic;(x[x<sub>x</sub> &ndash; x] &ndash; x &ndash; x &ndash; x) = x + x<td>17<td>(GT)
+<tr align=center><td>54<td>x &radic;(x<sub>x</sub> &ndash; x) / &radic;(x + x/x) = x + x<td>17<td>(GT)
+<tr align=center><td>55<td>x &radic;(x<sub>x</sub> / [x + x/x] &ndash; x/x) = x + x<td>20<td>(GT)
+<tr align=center><td>59<td>x[x<sub>x</sub> &middot; x &ndash; x]/xx = x + x + x<td>18<td>(GT)
+<tr align=center><td>60<td>[x<sub>x</sub> / x]! = x<sub>x</sub> + x<sub>x</sub><td>13<td>(GT)
+<tr align=center><td>64<td>&radic;&radic;(&radic;x + &radic;x) = [x + x]/x<td>15<td>(JD)
+<tr align=center><td>66<td>x &radic;(x<sub>x</sub> &middot; x + x + x)/&radic;xx = x + x<td>18<td>(GT)
+<tr align=center><td>70<td>&radic;x &radic;(x<sub>x</sub> + x + x) = x + x + x<td>15<td>(GT)
+<tr align=center><td>71<td>&radic;x &radic;(x<sub>x</sub> + x + x &ndash; x/x) = x + x + x<td>19<td>(GT)
+<tr align=center><td>72<td>x &radic;(x &radic;(x+x)) / &radic;(x + x + x) = x + x<td>18<td>(GT)
+<tr align=center><td>80<td>x &radic;x<sub>x</sub> / &radic;(x + x) = x + x<td>13<td>(GT)
+<tr align=center><td>81<td>x &radic;(x/&radic;x) = x + x + x<td>12<td>(GT)
+<tr align=center><td>82<td>x &radic;&radic;(x &ndash; x/x) = x + x + x<td>14<td>(GT)
+<tr align=center><td>83<td>x &radic;&radic;(x &ndash; [x + x]/x) = x + x + x<td>18<td>(GT)
+<tr align=center><td>84<td>x &radic;&radic;(x &ndash; [x + x + x]/x) = x + x + x<td>20<td>(GT)
+<tr align=center><td>89<td>x<sub>x</sub> &ndash; x/x = [[x + x + x]/x]!!<td>20<td>(GT)
+<tr align=center><td>90<td>&radic;(x &middot; x<sub>x</sub>) = x + x + x<td>11<td>(GT)
+<tr align=center><td>91<td>&radic;(x<sub>x</sub> &middot; x &ndash; x) = x + x + x<td>13<td>(GT)
+<tr align=center><td>92<td>&radic;(x<sub>x</sub> &middot; x &ndash; x &ndash; x) = x + x + x<td>15<td>(GT)
+<tr align=center><td>93<td>&radic;(x<sub>x</sub> &middot; x &ndash; x &ndash; x &ndash; x) = x + x + x<td>17<td>(GT)
+<tr align=center><td>94<td>&radic;(x<sub>x</sub> &middot; x &ndash; x &ndash; x &ndash; x &ndash; x) = x + x + x<td>19<td>(GT)
+<tr align=center><td>99<td>x<sub>xx</sub> / x<sub>x</sub> = x + x/x<td>12<td>(GT)
+<tr align=center><td>100<td>&radic;(x<sub>x</sub>) = x<td>5<td>(JD)
+</table>
+
+</TABLE>
+
+<p><hr><p>
+
+
+<font size=+2>3.</font><p>
+
+Here are the known base printer errors with 8 or fewer digits:<p>
+
+<table border=1 bgcolor=FFFFDD cellpadding=6 align=center>
+<th align=center bgcolor=DDDDFF colspan=3>4-Digit Printer Errors
+<tr align=center>
+<td>10<sub>89</sub> = 108<sub>9</sub> = 89
+<td>11<sub>78</sub> = 117<sub>8</sub> = 79
+<td>12<sub>24</sub> = 122<sub>4</sub> = 26
+<tr align=center>
+<td>12<sub>67</sub> = 126<sub>7</sub> = 69
+<td>13<sub>56</sub> = 135<sub>6</sub> = 59
+<td>14<sub>45</sub> = 144<sub>5</sub> = 49
+<tr align=center>
+<td>21<sub>89</sub> = 218<sub>9</sub> = 179
+<td>23<sub>78</sub> = 237<sub>8</sub> = 159
+<td>25<sub>67</sub> = 256<sub>7</sub> = 139
+<tr align=center>
+<td>32<sub>89</sub> = 328<sub>9</sub> = 269
+<td>35<sub>78</sub> = 357<sub>8</sub> = 239
+<td>43<sub>89</sub> = 438<sub>9</sub> = 359
+<tr align=center>
+<td>47<sub>78</sub> = 477<sub>8</sub> = 319
+<td>52<sub>68</sub> = 526<sub>8</sub> = 342
+<td>54<sub>89</sub> = 548<sub>9</sub> = 449
+<tr align=center>
+<td>65<sub>89</sub> = 658<sub>9</sub> = 539
+<td>76<sub>89</sub> = 768<sub>9</sub> = 629
+<td>87<sub>89</sub> = 878<sub>9</sub> = 719
+</table><p>
+
+<table border=1 bgcolor=FFFFDD cellpadding=6 align=center>
+<th align=center bgcolor=DDDDFF colspan=3>5-Digit Printer Errors
+<tr align=center>
+<td>11<sub>110</sub> = 111<sub>10</sub> = 111
+<td>11<sub>889</sub> = 1188<sub>9</sub> = 890
+<td>13<sub>114</sub> = 1311<sub>4</sub> = 117
+<tr align=center>
+<td>13<sub>419</sub> = 134<sub>19</sub> = 422
+<td>14<sub>623</sub> = 146<sub>23</sub> = 627
+<td>15<sub>416</sub> = 1541<sub>6</sub> = 421
+<tr align=center>
+<td>15<sub>627</sub> = 1562<sub>7</sub> = 632
+<td>15<sub>928</sub> = 159<sub>28</sub> = 933
+<td>16<sub>212</sub> = 162<sub>12</sub> = 218
+<tr align=center>
+<td>18<sub>825</sub> = 188<sub>25</sub> = 833
+<td>23<sub>889</sub> = 2388<sub>9</sub> = 1781
+<td>31<sub>779</sub> = 3177<sub>9</sub> = 2338
+<tr align=center>
+<td>34<sub>214</sub> = 342<sub>14</sub> = 646
+<td>35<sub>889</sub> = 3588<sub>9</sub> = 2672
+<td>36<sub>624</sub> = 366<sub>24</sub> = 1878
+<tr align=center>
+<td>44<sub>420</sub> = 444<sub>20</sub> = 1684
+<td>47<sub>522</sub> = 375<sub>22</sub> = 2095
+<td>47<sub>889</sub> = 4788<sub>9</sub> = 3563
+<tr align=center>
+<td>99<sub>930</sub> = 999<sub>30</sub> = 8379
+<td>&nbsp;
+<td>&nbsp;
+</table><p>
+
+<table border=1 bgcolor=FFFFDD cellpadding=6 align=center>
+<th align=center bgcolor=DDDDFF colspan=3>6-Digit Printer Errors
+<tr align=center>
+<td>10<sub>1010</sub> = 1010<sub>10</sub> = 1010
+<td>10<sub>2537</sub> = 10253<sub>7</sub> = 2537
+<td>11<sub>1110</sub> = 1111<sub>10</sub> = 1111
+<tr align=center>
+<td>12<sub>1210</sub> = 1212<sub>10</sub> = 1212
+<td>12<sub>7719</sub> = 1277<sub>19</sub> = 7721
+<td>13<sub>1310</sub> = 1313<sub>10</sub> = 1313
+<tr align=center>
+<td>13<sub>3617</sub> = 13361<sub>7</sub> = 3620
+<td>13<sub>6918</sub> = 1369<sub>18</sub> = 6921
+<td>14<sub>1410</sub> = 1414<sub>10</sub> = 1414
+<tr align=center>
+<td>15<sub>1510</sub> = 1515<sub>10</sub> = 1515
+<td>15<sub>8819</sub> = 1588<sub>19</sub> = 8824
+<td>16<sub>1610</sub> = 1616<sub>10</sub> = 1616
+<tr align=center>
+<td>17<sub>1710</sub> = 1717<sub>10</sub> = 1717
+<td>18<sub>1810</sub> = 1818<sub>10</sub> = 1818
+<td>18<sub>9919</sub> = 1899<sub>19</sub> = 9927
+<tr align=center>
+<td>19<sub>1910</sub> = 1919<sub>10</sub> = 1919
+<td>20<sub>2467</sub> = 20246<sub>7</sub> = 4934
+<td>22<sub>1546</sub> = 22154<sub>6</sub> = 3094
+<tr align=center>
+<td>29<sub>4415</sub> = 2944<sub>15</sub> = 8839
+<td>42<sub>2607</sub> = 42260<sub>7</sub> = 10430
+<td>45<sub>1912</sub> = 4519<sub>12</sub> = 7653
+<tr align=center>
+<td>80<sub>8020</sub> = 8080<sub>20</sub> = 64160
+<td>&nbsp;
+<td>&nbsp;
+</table><p>
+
+<table border=1 bgcolor=FFFFDD cellpadding=6 align=center>
+<th align=center bgcolor=DDDDFF colspan=3>7-Digit Printer Errors
+<tr align=center>
+<td>10<sub>34608</sub> = 103460<sub>8</sub> = 34608
+<td>11<sub>11110</sub> = 11111<sub>10</sub> = 11111
+<td>24<sub>42048</sub> = 244204<sub>8</sub> = 84100
+</table><p>
+
+<table border=1 bgcolor=FFFFDD cellpadding=6 align=center>
+<th align=center bgcolor=DDDDFF colspan=3>8-Digit Printer Errors
+<tr align=center>
+<td>10<sub>101010</sub> = 101010<sub>10</sub> = 101010
+<td>11<sub>111110</sub> = 111111<sub>10</sub> = 111111
+<td>12<sub>121210</sub> = 121212<sub>10</sub> = 121212
+<tr align=center>
+<td>13<sub>131310</sub> = 131313<sub>10</sub> = 131313
+<td>13<sub>670914</sub> = 136709<sub>14</sub> = 670917
+<td>14<sub>141410</sub> = 141414<sub>10</sub> = 141414
+<tr align=center>
+<td>15<sub>151510</sub> = 151515<sub>10</sub> = 151515
+<td>15<sub>358512</sub> = 153585<sub>12</sub> = 358517
+<td>16<sub>161610</sub> = 161616<sub>10</sub> = 161616
+<tr align=center>
+<td>17<sub>171710</sub> = 171717<sub>10</sub> = 171717
+<td>18<sub>181810</sub> = 181818<sub>10</sub> = 181818
+<td>19<sub>191910</sub> = 191919<sub>10</sub> = 191919
+<tr align=center>
+<td>24<sub>334748</sub> = 2433474<sub>8</sub> = 669500
+<td>38<sub>704329</sub> = 3870432<sub>9</sub> = 2112995
+<td>&nbsp;
+</table><p>
+
+Joe DeVincentis found these 9 digit printer errors:<p>
+
+<table border=1 bgcolor=FFFFDD cellpadding=6 align=center>
+<th align=center bgcolor=DDDDFF colspan=3>9-Digit Printer Errors
+<tr align=center>
+<td>11<sub>1111110</sub> = 1111111<sub>10</sub> = 1111111
+<td>12<sub>6214349</sub> = 12621434<sub>9</sub> = 6214351
+<td>14<sub>3255108</sub> = 14325510<sub>8</sub> = 3255112
+<tr align=center>
+<td>15<sub>4318512</sub> = 1543185<sub>12</sub> = 4318517
+<td>34<sub>5603179</sub> = 34560317<sub>9</sub> = 16809541
+<td>62<sub>4973113</sub> = 6249731<sub>13</sub> = 29838680
+</table><p>
+
+Joe DeVincentis noticed that all but one of the 4-digit solutions are of the form ABCD with C=D-1 and B=(10-D)A-1.<p>
+
+Joe DeVincentis found two infinite families of solutions: 1N<sub>1N1N...1N10</sub> = 1N1N...1N<sub>10</sub> and 11<sub>11...10</sub> = 11...1<sub>10</sub>.<p>
+
+<hr><p><font size=+2>4.</font><p>
+
+Here are the largest known non-license plate numbers using the digits 0-n:<p>
+
+<center><font size=+2>Largest Known<br>Non-License<br>Plate Numbers</font></center>
+<table align=center bgcolor=FFFFDD border=1 cellpadding=5>
+<tr bgcolor=FFDDDD><th>n<th>Largest<th>Author
+<tr align=center><td><font size=+1>0<td><font size=+1>0<td>
+<tr align=center><td><font size=+1>1<td><font size=+1>1<td>(BH)
+<tr align=center><td><font size=+1>2<td><font size=+1>21<td>
+<tr align=center><td><font size=+1>3<td><font size=+1>32<td>(BZ)
+<tr align=center><td><font size=+1>4<td><font size=+1>43<td>(BZ)
+<tr align=center><td><font size=+1>5<td><font size=+1>553<td>(BZ)
+<tr align=center><td><font size=+1>6<td><font size=+1>655<td>(BZ)
+<tr align=center><td><font size=+1>7<td><font size=+1>7662<td>(BZ)
+<tr align=center><td><font size=+1>8<td><font size=+1>8775<td>(BZ)
+<tr align=center><td><font size=+1>9<td><font size=+1>8775<td>(BZ)
+</table><p>
+
+<hr><p><font size=+2>5.</font><p>
+
+Here are the smallest known Friedman numbers of order n:<p>
+
+<center><font size=+2>Smallest Known Multiple Friedman Numbers</font></center>
+<table align=center bgcolor=FFFFDD border=1 cellpadding=5>
+<tr bgcolor=FFDDFF><th>n<th>Smallest Known Friedman Number of Order n<th>Author
+<tr align=center><td><font size=+1>1<td><font size=+1>25 = 5<sup>2</sup><td>
+<tr align=center><td><font size=+1>2<td><font size=+1>279,936 = 6<sup>7</sup> = (9&ndash;3)<sup>9&ndash;2</sup><td>
+
+<tr align=center><td><font size=+1>3<td><font size=+1>31,381,059,609 = 9<sup>11</sup> = 9<sup>5+6</sup> = 3<sup>30&ndash;8+0</sup><td>(JD)
+
+<tr align=center><td><font size=+1>4<td><font size=+1>1,125,899,906,842,624<br>= 2<sup>50</sup> = (4&times;8)<sup>9+1</sup> = (4&times;8)<sup>9+1</sup> = 2<sup>9&times;6&ndash;6+2</sup><td>(JD)
+
+<tr align=center><td><font size=+1>5<td><font size=+1>1,152,921,504,606,846,976<br>= 2<sup>60</sup> = 2<sup>60</sup> = 4<sup>5&times;6</sup> = 4<sup>5&times;6</sup> = 8<sup>17+1+1+9/9</sup><td>(JD)
+
+<tr align=center><td><font size=+1>6<td><font size=+1>4,722,366,482,869,645,213,696<br>= 2<sup>72</sup> = 4<sup>36</sup> = 4<sup>36</sup> = 8<sup>24</sup> = 8<sup>5&times;6&ndash;(6+6)/2</sup> = 16<sup>9+9</sup><td>(JD)
+
+<tr align=center><td><font size=+1>7<td><font size=+1>42,391,158,275,216,203,514,294,433,201<br>= 3<sup>60</sup> = 3<sup>3&times;4&times;5</sup> = (2+1)<sup>59+1</sup> = 9<sup>30</sup><br>= 27<sup>4&times;5</sup> = (24+4&ndash;1)<sup>22&ndash;2</sup> = 81<sup>15</sup><td>(JD)
+
+<tr align=center><td><font size=+1>8<td><font size=+1>324,518,553,658,426,726,783,156,020,576,256<br>= 4<sup>54</sup> = 8<sup>36</sup> = 8<sup>36</sup> = 8<sup>36</sup> = (7+1)<sup>6<sup>2</sup></sup><br>= (2+2)<sup>55&ndash;1</sup> = (5+5+6)<sup>27</sup> = (5+5+6)<sup>27+0+0</sup><td>(JD)
+
+<tr align=center><td><font size=+1>9<td><font size=+1>22,528,399,544,939,174,411,840,147,874,772,641<br>= 3<sup>72</sup> = 3<sup>72</sup> = (4-1)<sup>72</sup> = (4-1)<sup>76&ndash;4</sup> = 9<sup>9&times;4</sup><br>= 9<sup>40&ndash;4</sup> = 9<sup>8&times;4+4</sup> = 27<sup>5&times;5&ndash;1</sup> = 81<sup>18</sup><td>(JD)
+
+<tr align=center><td><font size=+1>10<td><font size=+1>147,808,829,414,345,923,316,083,210,206,383,297,601<br>= 
+3<sup>80</sup> = 3<sup>80</sup> = 3<sup>80</sup> = 3<sup>80</sup> = 3<sup>72+8</sup> = 3<sup>74+6</sup><br>= 9<sup>40</sup> = 9<sup>46&ndash;6</sup> = 9<sup>4&times;5&times;2&times;1</sup> = (11&ndash;2)<sup>(21&ndash;1)&times;2</sup><td>(JD)
+
+<tr align=center><td><font size=+1>11<td><font size=+1>1,427,247,692,705,959,881,058,285,969,449,495,136,382,746,624
+<br>= 4<sup>75</sup> = 4<sup>75</sup> = 4<sup>75</sup> = 8<sup>50</sup> = 8<sup>50</sup> = 4<sup>73+2</sup> = 4<sup>81&ndash;6</sup><br>= 4<sup>81&ndash;6</sup> = 4<sup>69+6</sup> = 2<sup>12<sup>2</sup>+6</sup> = 32<sup>9+9+9+9+9+2&ndash;9&ndash;8</sup><td>(JD)
+
+<tr align=center><td><font size=+1>12<td><font size=+1>91,343,852,333,181,432,387,730,302,044,767,688,728,495,783,936
+<br>= 4<sup>78</sup> = 4<sup>78</sup> = 4<sup>78</sup> = 4<sup>78</sup> = 4<sup>78</sup> = 8<sup>52</sup> = 8<sup>52</sup> = 16<sup>39</sup><br>= 16<sup>39</sup> = 16<sup>39</sup> = 2<sup>300/2+3+3</sup> = (7-3)<sup>3&times;(30&ndash;3)&ndash;3</sup><td>(JD)
+
+</table><p>
+
+Joe DeVincentis suggested that factorials should be allowed.  Here are the best known solutions in this case:
+
+
+<center><font size=+2>Smallest Known Multiple Factorial Friedman Numbers</font></center>
+<table align=center bgcolor=FFFFDD border=1 cellpadding=5>
+<tr bgcolor=FFDDFF><th>n<th>Smallest Known Factorial Friedman Number of Order n<th>Author
+<tr align=center><td><font size=+1>1<td><font size=+1>1! = 1<td>(BZ)
+<tr align=center><td><font size=+1>2<td><font size=+1>15,625 = 5<sup>6</sup> = 5<sup>(1+2)!</sup><td>(BH)
+
+<tr align=center><td><font size=+1>3<td><font size=+1>479,001,600 = (19&ndash;7)! = (4!/(0!+0!))! = (6&times;(0!+0!))!<td>(BZ)
+
+<tr align=center><td><font size=+1>4<td><font size=+1>1,307,674,368,000<br>= (14+0!)! = (7+8)! = (3&times;(6&ndash;0!))! = (7+6+3&ndash;0!+0)!<td>(JD)
+
+<tr align=center><td><font size=+1>5<td><font size=+1>20,922,789,888,000<br>= (8&times;2)! = (8&times;2)! = (8&times;2)! = (9+7)! = (8&times;(0!+0!)+0&times;90)!<td>(JD)
+
+<tr align=center><td><font size=+1>6<td><font size=+1>121,645,100,408,832,000
+<br>= (20&ndash;4<sup>0</sup>)! = (18+0!)! = (18+0!)!<br>= (4!&ndash;5)! = (3&times;6+0!)! = (20&ndash;1)!<td>(BZ)
+
+<tr align=center><td><font size=+1>7<td><font size=+1>2,432,902,008,176,640,000<br>= 20! = 20! = 20! = (19+0!)!<br>= (3&times;7&ndash;0!)! = (8+6+6+0+0)! = (4!&ndash;4)!<td>&nbsp;
+
+<tr align=center><td><font size=+1>8<td><font size=+1>25,852,016,738,884,976,640,000
+<br>= 23! = (4!&ndash;0!)! = (4!&ndash;0!)! = ((8/2)!&ndash;8<sup>0</sup>)!
+= (5&times;6&ndash;7)!<br>= (5&times;6&ndash;7)! = (9+8+6)! = ((8/(0!+0!))!&ndash;1)!<td>(BZ)
+
+<tr align=center><td><font size=+1>9<td><font size=+1>620,448,401,733,239,439,360,000<br>= 4!! = 4!! = 4!! = 4!! = (3&times;8)! = ((1+7)&times;3)!<br>= (9&times;3&ndash;3)! = (2&times;9+6)! = (23+600000<sup>0</sup>)!<td>(JD)
+
+<tr align=center><td><font size=+1>10<td><font size=+1>620,448,401,733,239,439,360,000<br>= 4!! = 4!! = 4!! = 4!! = (3&times;8)! = ((1+7)&times;3)!<br>= (9&times;3&ndash;3)! = (2&times;9+6)! = (23+60<sup>0</sup>)! = (0!+0!+0!+0!)!!<td>
+
+<tr align=center><td><font size=+1>11<td><font size=+1>620,448,401,733,239,439,360,000<br>= 4!! = 4!! = 4!! = 4!! = (3&times;8)!= ((1+7)&times;3)! = (9&times;3&ndash;3)!<br>= (2&times;9+6)! = (6&ndash;2+0)!! = (3+0!)!! = (0!+0!+0!+0!)!!<td>(BH)
+
+<tr align=center><td><font size=+1>12<td><font size=+1>620,448,401,733,239,439,360,000<br>= 
+4!! = 4!! = 4!! = 4!! = (3&times;8)! = (1+3)!! = (7&ndash;3)!! = (6&ndash;2)!!<br>= (6&ndash;2)!! = (3+0!)!! = (3+0!)!! = (0!+0!+0!+0!+9&ndash;9)!!<td>(JD)
+</table><p>
+
+
+<p><hr color=black><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 6/26/10.<font></BODY></HTML>
+

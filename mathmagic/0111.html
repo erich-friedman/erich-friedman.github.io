@@ -1,0 +1,370 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (January 2011)</H1></CENTER>
+
+This month we examine a variety of square packing problems:<p>
+
+<font size=+2>1.</font><p>
+
+1. Consider a collection of n+1 squares of side n where the k<sup>th</sup> square and the (k+1)<sup>st</sup> square share a boundary of length k.  What is the smallest rectangle they can be packed into?  What is the smallest square they can be packed into?  What are the best answers you can find for n=100?<p>
+
+<font size=+2>2.</font><p>
+
+Consider a collection of n squares of sides 1, 2, 3, . . . n where the k<sup>th</sup> square and the (k+1)<sup>st</sup> square share a boundary of length at least 1.  What is the smallest square they can be packed into?  What is the smallest rectangle they can be packed in?  Does it always have one side n?  What if the boundary between the k<sup>th</sup> square and the (k+1)<sup>st</sup> square has length k?  What if the k<sup>th</sup> square and the (k+1)<sup>st</sup> square share a midpoint of a side? What are the best answers you can find for n=100?<p>
+
+<font size=+2>3.</font><p>
+
+Consider a collection of n squares of side n where the k<sup>th</sup> square and the (k+1)<sup>st</sup> square overlap in a square of side k, and no other squares overlap.  What is the smallest rectangle they can be packed into?  What is the smallest square they can be packed into?  What are the best answers you can find for n=100?<p>
+
+<font size=+2>4.</font><p>
+
+Apparently 2 squares each of sides 1, 2, 3, . . . n can usually be packed inside the smallest integer side square possible from area constraints.  Can anyone find a counterexample?  How about n=18, which would only leave 7 unit squares of waste?<p>
+
+Here we make it a little harder and insist that the two squares of side k no touch each other, even at corners.  For which value of n it is still possible to pack these 2n squares inside the smallest possible square?  What is the largest decimal part that &radic;(n(n+1)(2n+1)/3) can have and still have such a packing?<p>
+
+<font size=+2>5.</font><p>
+
+What is the smallest square that contains non-overlapping squares with sides equal to the distinct fractions in (0,1] with denominators no larger than n?  <p>
+
+<font size=+2>6.</font><p>
+
+What is the smallest square rotated 45<sup>o</sup> that contains non-overlapping non-rotated squares with sides 1, 2, 3, . . . n? 
+
+
+
+
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Solutions were received from Maurizio Morandi, Johan de Ruiter, Corey Plover, Dave Langers, and Bernd van der Zwaag. <p>
+
+
+<font size=+2>1.</font><p>
+
+Here are the best known results for rectangles:<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=1<br><img src="0111/s1.gif" align=center><br>area=2<br>(DL)
+<td>n=2<br><img src="0111/s2.gif" align=center><br>area=16
+<td>n=3<br><img src="0111/s3.gif" align=center><br>area=54
+<td>n=4<br><img src="0111/s4.gif" align=center><br>area=108
+<td>n=5<br><img src="0111/s5.gif" align=center><br>area=209
+<td>n=6<br><img src="0111/s6.gif" align=center><br>area=380
+<td>n=7<br><img src="0111/s7.gif" align=center><br>area=550
+<td>n=8<br><img src="0111/s8.gif" align=center><br>area=837
+</table>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=9<br><img src="0111/s9.gif" align=center><br>area=1131
+<td>n=10<br><img src="0111/s10.gif" align=center><br>area=1554
+<td>n=11<br><img src="0111/s11.gif" align=center><br>area=2093
+<td>n=12<br><img src="0111/s12.gif" align=center><br>area=2736
+<td>n=13<br><img src="0111/s13.gif" align=center><br>area=3476
+<td>n=14<br><img src="0111/s14.gif" align=center><br>area=4230
+<td>n=15<br><img src="0111/s15.gif" align=center><br>area=5250
+</table>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=16<br><img src="0111/s16.gif" align=center><br>area=6336
+<td>n=17<br><img src="0111/s17.gif" align=center><br>area=7182
+<td>n=18<br><img src="0111/s18.gif" align=center><br>area=8784
+<td>n=19<br><img src="0111/s19.gif" align=center><br>area=10620
+<td>n=20<br><img src="0111/s20.gif" align=center><br>area=12159
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=21<br><img src="0111/s21.gif" align=center><br>area=14058<br>(JR)
+<td>n=22<br><img src="0111/s22.gif" align=center><br>area=16200<br>(JR)
+<td>n=23<br><img src="0111/s23.gif" align=center><br>area=18469<br>(JR)
+<td>n=24<br><img src="0111/s24.gif" align=center><br>area=20856<br>(JR)
+<td>n=25<br><img src="0111/s25.gif" align=center><br>area=23375<br>(JR)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=26<br><img src="0111/s26.gif" align=center><br>area=26600<br>(JR)
+<td>n=27<br><img src="0111/s27.gif" align=center><br>area=29406<br>(JR)
+<td>n=28<br><img src="0111/s28.gif" align=center><br>area=32970<br>(JR)
+<td>n=29<br><img src="0111/s29.gif" align=center><br>area=36284<br>(JR)
+</table><p>
+
+Johan de Ruiter also found the smallest perimeters of rectangles that pack these squares.<p>
+
+Here are the best known results for squares:<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=1<br><img src="0111/ss1.gif" align=center><br>side=2
+<td>n=2<br><img src="0111/ss2.gif" align=center><br>side=4
+<td>n=3<br><img src="0111/ss3.gif" align=center><br>side=8
+<td>n=4<br><img src="0111/ss4.gif" align=center><br>side=12
+<td>n=5<br><img src="0111/ss5.gif" align=center><br>side=15
+<td>n=6<br><img src="0111/ss6.gif" align=center><br>side=20
+<td>n=7<br><img src="0111/ss7.gif" align=center><br>side=24
+</table>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=8<br><img src="0111/ss8.gif" align=center><br>side=31
+<td>n=9<br><img src="0111/ss9.gif" align=center><br>side=36
+<td>n=10<br><img src="0111/ss10.gif" align=center><br>side=42
+<td>n=11<br><img src="0111/ss11.gif" align=center><br>side=47
+<td>n=12<br><img src="0111/ss12.gif" align=center><br>side=55
+</table>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=13<br><img src="0111/ss13.gif" align=center><br>side=60
+<td>n=14<br><img src="0111/ss14.gif" align=center><br>side=69
+<td>n=15<br><img src="0111/ss15.gif" align=center><br>side=75<br>(DL)
+<td>n=16<br><img src="0111/ss16.gif" align=center><br>side=81<br>(DL)
+<td>n=17<br><img src="0111/ss17.gif" align=center><br>side=89<br>(DL)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=18<br><img src="0111/ss18.gif" align=center><br>side=96<br>(DL)
+<td>n=19<br><img src="0111/ss19.gif" align=center><br>side=106<br>(DL)
+<td>n=20<br><img src="0111/ss20.gif" align=center><br>side=114<br>(DL)
+<td>n=21<br><img src="0111/ss21.gif" align=center><br>side=123<br>(DL)
+<td>n=22<br><img src="0111/ss22.gif" align=center><br>side=131<br>(DL)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=23<br><img src="0111/ss23.gif" align=center><br>side=139<br>(DL)
+<td>n=24<br><img src="0111/ss24.gif" align=center><br>side=147<br>(DL)
+<td>n=25<br><img src="0111/ss25.gif" align=center><br>side=156<br>(DL)
+<td>n=26<br><img src="0111/ss26.gif" align=center><br>side=165<br>(DL)
+<td>n=27<br><img src="0111/ss27.gif" align=center><br>side=174<br>(DL)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=28<br><img src="0111/ss28.gif" align=center><br>side=184<br>(DL)
+<td>n=29<br><img src="0111/ss29.gif" align=center><br>side=193<br>(DL)
+<td>n=30<br><img src="0111/ss30.gif" align=center><br>side=205<br>(DL)
+<td>n=31<br><img src="0111/ss31.gif" align=center><br>side=216<br>(DL)
+</table><p>
+
+<hr><font size=+2>2.</font><p>
+
+Here are the best-known results for squares.  The most likely to be improved are n=14 and n=20.<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=1<br><img src="0111/g1.gif" align=center><br>side=1
+<td>n=2<br><img src="0111/g2.gif" align=center><br>side=3
+<td>n=3<br><img src="0111/g3.gif" align=center><br>side=5
+<td>n=4<br><img src="0111/g4.gif" align=center><br>side=7
+<td>n=5<br><img src="0111/g5.gif" align=center><br>side=9
+<td>n=6<br><img src="0111/g6.gif" align=center><br>side=11
+<td>n=7<br><img src="0111/g7.gif" align=center><br>side=13
+<td>n=8<br><img src="0111/g8.gif" align=center><br>side=15
+</table>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=9<br><img src="0111/g9.gif" align=center><br>side=18
+<td>n=10<br><img src="0111/g10.gif" align=center><br>side=21
+<td>n=11<br><img src="0111/g11.gif" align=center><br>side=24
+<td>n=12<br><img src="0111/g12.gif" align=center><br>side=27
+<td>n=13<br><img src="0111/g13.gif" align=center><br>side=30
+</table>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=14<br><img src="0111/g14.gif" align=center><br>side=35
+<td>n=15<br><img src="0111/g15.gif" align=center><br>side=38
+<td>n=16<br><img src="0111/g16.gif" align=center><br>side=42
+<td>n=17<br><img src="0111/g17.gif" align=center><br>side=45
+</table>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=18<br><img src="0111/g18.gif" align=center><br>side=48
+<td>n=19<br><img src="0111/g19.gif" align=center><br>side=52
+<td>n=20<br><img src="0111/g20.gif" align=center><br>side=57
+</table>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=21<br><img src="0111/g21.gif" align=center><br>side=60
+<td>n=22<br><img src="0111/g22.gif" align=center><br>side=64
+<td>n=23<br><img src="0111/g23.gif" align=center><br>side=68
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=24<br><img src="0111/g24.gif" align=center><br>side=73<br>(BZ)
+<td>n=25<br><img src="0111/g25.gif" align=center><br>side=78
+<td>n=26<br><img src="0111/g26.gif" align=center><br>side=82
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=27<br><img src="0111/g27.gif" align=center><br>side=86
+<td>n=28<br><img src="0111/g28.gif" align=center><br>side=90
+<td>n=29<br><img src="0111/g29.gif" align=center><br>side=94
+</table><p>
+
+<hr><font size=+2>3.</font><p>
+
+Here are the best-known results for rectangles:<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=1<br><img src="0111/l1.gif" align=center><br>area=1
+<td>n=2<br><img src="0111/l2.gif" align=center><br>area=9
+<td>n=3<br><img src="0111/l3.gif" align=center><br>area=30
+<td>n=4<br><img src="0111/l4.gif" align=center><br>area=70
+<td>n=5<br><img src="0111/l5.gif" align=center><br>area=135
+<td>n=6<br><img src="0111/l6.gif" align=center><br>area=273
+<td>n=7<br><img src="0111/l7.gif" align=center><br>area=392
+</table>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=8<br><img src="0111/l8.gif" align=center><br>area=667
+<td>n=9<br><img src="0111/l9.gif" align=center><br>area=888
+<td>n=10<br><img src="0111/l10.gif" align=center><br>area=1242
+<td>n=11<br><img src="0111/l11.gif" align=center><br>area=1716<br>(MM)
+</table>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=12<br><img src="0111/l12.gif" align=center><br>area=2412<br>(MM)
+<td>n=13<br><img src="0111/l13.gif" align=center><br>area=2844<br>(CP)
+<td>n=14<br><img src="0111/l14.gif" align=center><br>area=3840<br>(CP)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=15<br><img src="0111/l15.gif" align=center><br>area=4558<br>(CP)
+<td>n=16<br><img src="0111/l16.gif" align=center><br>area=5904<br>(CP)
+<td>n=17<br><img src="0111/l17.gif" align=center><br>area=6460<br>(CP)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=18<br><img src="0111/l18.gif" align=center><br>area=7957<br>(CP)
+<td>n=19<br><img src="0111/l19.gif" align=center><br>area=9672<br>(CP)
+<td>n=20<br><img src="0111/l20.gif" align=center><br>area=11682<br>(CP)
+</table><p>
+
+Here is the best-known packing for n=100:<p>
+
+<center>n=100<br><img src="0111/l100.png" align=center><br>area=2052875<br>(CP)</center><p>
+
+Here are the best-known results for squares:<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=1<br><img src="0111/ll1.gif" align=center><br>side=1
+<td>n=2<br><img src="0111/ll2.gif" align=center><br>side=3
+<td>n=3<br><img src="0111/ll3.gif" align=center><br>side=6
+<td>n=4<br><img src="0111/ll4.gif" align=center><br>side=10
+<td>n=5<br><img src="0111/ll5.gif" align=center><br>side=15
+<td>n=6<br><img src="0111/ll6.gif" align=center><br>side=21
+<td>n=7<br><img src="0111/ll7.gif" align=center><br>side=22<br>(CP)
+</table>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=8<br><img src="0111/ll8.gif" align=center><br>side=29<br>(CP)
+<td>n=9<br><img src="0111/ll9.gif" align=center><br>side=35<br>(CP)
+<td>n=10<br><img src="0111/ll10.gif" align=center><br>side=40<br>(CP)
+<td>n=11<br><img src="0111/ll11.gif" align=center><br>side=47<br>(CP)
+</table>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=12<br><img src="0111/ll12.gif" align=center><br>side=57<br>(CP)
+<td>n=13<br><img src="0111/ll13.gif" align=center><br>side=58<br>(CP)
+<td>n=14<br><img src="0111/ll14.gif" align=center><br>side=64<br>(CP)
+</table>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=15<br><img src="0111/ll15.gif" align=center><br>side=70<br>(CP)
+<td>n=16<br><img src="0111/ll16.gif" align=center><br>side=82<br>(CP)
+<td>n=17<br><img src="0111/ll17.gif" align=center><br>side=86<br>(CP)
+</table>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=18<br><img src="0111/ll18.gif" align=center><br>side=94<br>(CP)
+<td>n=19<br><img src="0111/ll19.gif" align=center><br>side=101<br>(CP)
+<td>n=20<br><img src="0111/ll20.gif" align=center><br>side=112<br>(CP)
+</table>
+
+Here is the best-known packing for n=100:<p>
+
+<center>n=100<br><img src="0111/ll100.png" align=center><br>side=1478<br>(CP)</center><p>
+
+<hr><font size=+2>4.</font><p>
+
+Here are the known packings:<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=8<br><img src="0111/r8.gif" align=center><br>area=(20.20)<sup>2</sup>
+<td>n=12<br><img src="0111/r12.gif" align=center><br>area=(36.06)<sup>2</sup>
+<td>n=13<br><img src="0111/r13.gif" align=center><br>area=(40.47)<sup>2</sup>
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=14<br><img src="0111/r14.gif" align=center><br>area=(45.06)<sup>2</sup>
+<td>n=16<br><img src="0111/r16.gif" align=center><br>area=(54.70)<sup>2</sup>
+<td>n=17<br><img src="0111/r17.gif" align=center><br>area=(59.75)<sup>2</sup><br>(BZ)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=19<br><img src="0111/r19.gif" align=center><br>area=(70.29)<sup>2</sup><br>(MM)
+<td>n=20<br><img src="0111/r20.gif" align=center><br>area=(75.76)<sup>2</sup><br>(BZ)
+</table><p>
+
+<hr><font size=+2>5.</font><p>
+
+Here are the best-known packings:<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=1<br><img src="0111/f1.gif" align=center><br>side = 1
+<td>n=2<br><img src="0111/f2.gif" align=center><br>side = 1 + 1/2 = 1.500
+<td>n=3<br><img src="0111/f3.gif" align=center><br>side = 1 + 2/3 = 1.666+
+<td>n=4<br><img src="0111/f4.gif" align=center><br>side = 1 + 3/4 = 1.750
+<td>n=5<br><img src="0111/f5.gif" align=center><br>side = 3/4 + 2/3 + 3/5 = 2.016+
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=6<br><img src="0111/f6.gif" align=center><br>side = 4/5 + 3/4 + 2/3 = 2.216+
+<td>n=7<br><img src="0111/f7.gif" align=center><br>side = 5/7 + 4/7 + 3/4 + 1/2 = 2.535+<br>(MM)
+<td>n=8<br><img src="0111/f8.gif" align=center><br>side = 5/7 + 4/5 + 3/5 + 2/3 = 2.780+<br>(MM)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=9<br><img src="0111/f9.gif" align=center><br>side = 7/8 + 5/6 + 3/4 + 1/2 + 1/7 = 3.101+<br>(MM)
+<td>n=10<br><img src="0111/f10.gif" align=center><br>side = 8/9 + 5/6 + 2/3 + 1/2 + 3/7 = 3.317+<br>(MM)
+</table><p>
+
+<hr><font size=+2>6.</font><p>
+
+Here are the best-known packings:<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=1<br><img src="0111/p1.gif" align=center><br>side = &radic;2
+<td>n=2<br><img src="0111/p2.gif" align=center><br>side = (9/4) &radic;2
+<td>n=3<br><img src="0111/p3.gif" align=center><br>side = (15/4) &radic;2
+<td>n=4<br><img src="0111/p4.gif" align=center><br>side = (21/4) &radic;2
+<td>n=5<br><img src="0111/p5.gif" align=center><br>side = (41/6) &radic;2
+<td>n=6<br><img src="0111/p6.gif" align=center><br>side = (17/2) &radic;2
+<td>n=7<br><img src="0111/p7.gif" align=center><br>side = (31/3) &radic;2<br>(MM)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=8<br><img src="0111/p8.gif" align=center><br>side = (37/3) &radic;2<br>(MM)
+<td>n=9<br><img src="0111/p9.gif" align=center><br>side = (29/2) &radic;2<br>(MM)
+<td>n=10<br><img src="0111/p10.gif" align=center><br>side = (167/10) &radic;2<br>(MM)
+<td>n=11<br><img src="0111/p11.gif" align=center><br>side = 19 &radic;2<br>(MM)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=12<br><img src="0111/p12.gif" align=center><br>side = (213/10) &radic;2<br>(MM)
+<td>n=13<br><img src="0111/p13.gif" align=center><br>side = (47/2) &radic;2<br>(MM)
+<td>n=14<br><img src="0111/p14.gif" align=center><br>side = 26 &radic;2<br>(MM)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=15<br><img src="0111/p15.gif" align=center><br>side = (115/4) &radic;2<br>(MM)
+<td>n=16<br><img src="0111/p16.gif" align=center><br>side = (63/2) &radic;2<br>(MM)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=17<br><img src="0111/p17.gif" align=center><br>side = (137/4) &radic;2<br>(MM)
+<td>n=18<br><img src="0111/p18.gif" align=center><br>side = 37 &radic;2<br>(MM)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=19<br><img src="0111/p19.gif" align=center><br>side = (239/6) &radic;2<br>(MM)
+<td>n=20<br><img src="0111/p20.gif" align=center><br>side = (171/4) &radic;2<br>(MM)
+</table><p>
+
+<hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 10/12/17.<font>
+
+</BODY></HTML>

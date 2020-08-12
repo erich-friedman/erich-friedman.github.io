@@ -1,0 +1,466 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month<br>(September 2012)</H1></CENTER>
+
+This month we consider four counting problems concerning connected graphs.  By "smallest graph" below, we mean the graph with the fewest vertices, and among those, the one with the fewest edges.<p><hr><p>
+
+<font size=+2>1.</font> Given a graph, we can count how many ways there are to eliminate 1 vertex at a time (along with any incident edges) and keep the graph connected.  For a given integer n, is there a graph that can be eliminated in exactly n ways, and if so, what is the smallest such graph?  <p>
+
+<font size=+2>2.</font> If instead we eliminate edges one at a time, so as to not disconnect the graph (except for isolated vertices), what are the smallest graphs that can be eliminated in exactly n ways?<p>
+
+<font size=+2>3.</font> A Hamiltonian path is a path that visits all the vertices of a graph exactly once.  For a given integer n, what is the smallest graph with exactly n Hamiltonian paths?  We count a path and its reverse as the same path.<p>
+
+<font size=+2>4.</font> A Hamiltonian cycle is a cycle that visits all the vertices of a graph exactly once.  For a given integer n, what is the smallest graph with exactly n Hamiltonian cycles?  We count a cycle and all of its rotations and reflections as the same cycle.<p>
+
+
+
+<P><hr color=black><p><center><h1>ANSWERS</h1></center>
+
+<font size=+2>1.</font><p>
+
+Andrew Bayly found the vertex elimination number of complete graphs (v!), cycle graphs (v &times; 2<sup>v-2</sup>), star graphs (2 &times; (v-1)!), and path graphs (2<sup>v-1</sup>) with v vertices.<p>
+
+Andrew Bayly pointed out that all vertex elimination numbers are even, except 1.  Joe DeVincentis pointed out that all graphs with 3 or more vertices that don't contain a triangle have vertex elimination numbers that are divisibly by 4.<p>
+
+Jon Palin used a computer program to search all connected graphs with 7 or fewer vertices.  His results can be found <a href="0912/problem1.txt">here</a>.<p>
+
+Here are the smallest graphs that can be vertex-eliminated in exactly n ways:<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>1<br><img src="0912/e1.gif">
+<td><font size=+1>2<br><img src="0912/e2.gif">
+<td><font size=+1>4<br><img src="0912/e4.gif">
+<td><font size=+1>6<br><img src="0912/e6.gif">
+<td><font size=+1>8<br><img src="0912/e8.gif">
+<td><font size=+1>12<br><img src="0912/e12.gif">
+<td><font size=+1>14<br><img src="0912/e14.gif">
+<td><font size=+1>16<br><img src="0912/e16.gif">
+<td><font size=+1>20<br><img src="0912/e20.gif">
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>24<br><img src="0912/e24.gif">
+<td><font size=+1>28<br><img src="0912/e28.gif">
+<td><font size=+1>30<br><img src="0912/e30.gif"><br>(JD)
+<td><font size=+1>32<br><img src="0912/e32.gif"><br>(AB)
+<td><font size=+1>36<br><img src="0912/e36.gif"><br>(JD)
+<td><font size=+1>40<br><img src="0912/e40.gif"><br>(JD)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>44<br><img src="0912/e44.gif"><br>(JD)
+<td><font size=+1>48<br><img src="0912/e48.gif"><br>(JD)
+<td><font size=+1>50<br><img src="0912/e50.gif"><br>(JD)
+<td><font size=+1>52<br><img src="0912/e52.gif"><br>(JD)
+<td><font size=+1>56<br><img src="0912/e56.gif"><br>(JD)
+<td><font size=+1>60<br><img src="0912/e60.gif"><br>(JD)
+<td><font size=+1>62<br><img src="0912/e62.gif"><br>(JD)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>64<br><img src="0912/e64.gif"><br>(AB)
+<td><font size=+1>66<br><img src="0912/e66.gif"><br>(JD)
+<td><font size=+1>72<br><img src="0912/e72.gif"><br>(JD)
+<td><font size=+1>76<br><img src="0912/e76.gif"><br>(JD)
+<td><font size=+1>80<br><img src="0912/e80.gif"><br>(JD)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>82<br><img src="0912/e82.gif"><br>(JD)
+<td><font size=+1>84<br><img src="0912/e84.gif"><br>(JD)
+<td><font size=+1>92<br><img src="0912/e92.gif"><br>(JD)
+<td><font size=+1>96<br><img src="0912/e96.gif"><br>(JD)
+<td><font size=+1>104<br><img src="0912/e104.gif"><br>(JD)
+<td><font size=+1>108<br><img src="0912/e108.gif"><br>(JD)
+<td><font size=+1>112<br><img src="0912/e112.gif"><br>(JD)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>116<br><img src="0912/e116.gif"><br>(JD)
+<td><font size=+1>120<br><img src="0912/e120.gif"><br>(JD)
+<td><font size=+1>124<br><img src="0912/e124.gif"><br>(JD)
+<td><font size=+1>126<br><img src="0912/e126.gif"><br>(JD)
+<td><font size=+1>128<br><img src="0912/e128.gif"><br>(JD)
+</table><p>
+
+<hr><font size=+2>2.</font><p>
+
+Jeremy Galvagni found the edge elimination number of path graphs (2<sup>v-2</sup>) with v vertices.<p>
+
+Joe DeVincentis found the edge elimination numbers of cycle graphs (v &times; 2<sup>v-2</sup>) and star graphs ((v-1)!) with v vertices.<p>
+
+Here are the smallest known graphs that can be edge-eliminated in exactly n ways:<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>1<br><img src="0912/f1.gif">
+<td><font size=+1>2<br><img src="0912/f2.gif">
+<td><font size=+1>4<br><img src="0912/f4.gif">
+<td><font size=+1>6<br><img src="0912/f6.gif">
+<td><font size=+1>8<br><img src="0912/f8.gif">
+<td><font size=+1>14<br><img src="0912/f14.gif">
+<td><font size=+1>16<br><img src="0912/f16.gif">
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>20<br><img src="0912/f20.gif">
+<td><font size=+1>24<br><img src="0912/f24.gif">
+<td><font size=+1>30<br><img src="0912/f30.gif">
+<td><font size=+1>32<br><img src="0912/f32.gif"><br>(JD)
+<td><font size=+1>36<br><img src="0912/f36.gif"><br>(JD)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>40<br><img src="0912/f40.gif"><br>(JD)
+<td><font size=+1>50<br><img src="0912/f50.gif"><br>(JD)
+<td><font size=+1>56<br><img src="0912/f56.gif"><br>(JD)
+<td><font size=+1>60<br><img src="0912/f60.gif"><br>(JD)
+<td><font size=+1>62<br><img src="0912/f62.gif"><br>(JD)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>64<br><img src="0912/f64.gif"><br>(JD)
+<td><font size=+1>66<br><img src="0912/f66.gif"><br>(JD)
+<td><font size=+1>76<br><img src="0912/f76.gif"><br>(JD)
+<td><font size=+1>82<br><img src="0912/f82.gif"><br>(JD)
+<td><font size=+1>92<br><img src="0912/f92.gif"><br>(JD)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>96<br><img src="0912/f96.gif"><br>(JD)
+<td><font size=+1>108<br><img src="0912/f108.gif"><br>(JD)
+<td><font size=+1>112<br><img src="0912/f112.gif"><br>(JD)
+<td><font size=+1>120<br><img src="0912/f120.gif"><br>(JD)
+<td><font size=+1>126<br><img src="0912/f126.gif"><br>(JD)
+<td><font size=+1>128<br><img src="0912/f128.gif"><br>(JD)
+</table><p>
+
+<hr><font size=+2>3.</font><p>
+
+Jeremy Galvagni found the Hamiltonian path number of complete graphs (v!/2) and cycle graphs (v) with v vertices.<p>
+
+Mark Mammel found the smallest graphs for n&le;27 by computer.<p>
+
+Here are the smallest graphs that have exactly n Hamiltonian paths:<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>0<br><img src="0912/h0.gif">
+<td><font size=+1>1<br><img src="0912/h1.gif">
+<td><font size=+1>2<br><img src="0912/h2.gif">
+<td><font size=+1>3<br><img src="0912/h3.gif">
+<td><font size=+1>4<br><img src="0912/h4.gif">
+<td><font size=+1>5<br><img src="0912/h5.gif">
+<td><font size=+1>6<br><img src="0912/h6.gif">
+<td><font size=+1>7<br><img src="0912/h7.gif">
+<td><font size=+1>8<br><img src="0912/h8.gif"><br>(JG)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>9<br><img src="0912/h9.gif"><br>(JG)
+<td><font size=+1>10<br><img src="0912/h10.gif"><br>(JG)
+<td><font size=+1>11<br><img src="0912/h11.gif"><br>(JG)
+<td><font size=+1>12<br><img src="0912/h12.gif"><br>(JG)
+<td><font size=+1>13<br><img src="0912/h13.gif"><br>(MM)
+<td><font size=+1>14<br><img src="0912/h14.gif"><br>(MM)
+<td><font size=+1>15<br><img src="0912/h15.gif"><br>(MM)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>16<br><img src="0912/h16.gif"><br>(MM)
+<td><font size=+1>17<br><img src="0912/h17.gif"><br>(MM)
+<td><font size=+1>18<br><img src="0912/h18.gif"><br>(MM)
+<td><font size=+1>19<br><img src="0912/h19.gif"><br>(MM)
+<td><font size=+1>20<br><img src="0912/h20.gif"><br>(MM)
+<td><font size=+1>21<br><img src="0912/h21.gif"><br>(MM)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>22<br><img src="0912/h22.gif"><br>(MM)
+<td><font size=+1>23<br><img src="0912/h23.gif"><br>(MM)
+<td><font size=+1>24<br><img src="0912/h24.gif"><br>(MM)
+<td><font size=+1>25<br><img src="0912/h25.gif"><br>(MM)
+<td><font size=+1>26<br><img src="0912/h26.gif"><br>(MM)
+<td><font size=+1>27<br><img src="0912/h27.gif"><br>(MM)
+<td><font size=+1>28<br><img src="0912/h28.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>29<br><img src="0912/h29.png"><br>(JT)
+<td><font size=+1>30<br><img src="0912/h30.png"><br>(JT)
+<td><font size=+1>31<br><img src="0912/h31.png"><br>(JT)
+<td><font size=+1>32<br><img src="0912/h32.png"><br>(JT)
+<td><font size=+1>33<br><img src="0912/h33.png"><br>(JT)
+<td><font size=+1>34<br><img src="0912/h34.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>35<br><img src="0912/h35.png"><br>(JT)
+<td><font size=+1>36<br><img src="0912/h36.png"><br>(JT)
+<td><font size=+1>37<br><img src="0912/h37.png"><br>(JT)
+<td><font size=+1>38<br><img src="0912/h38.png"><br>(JT)
+<td><font size=+1>39<br><img src="0912/h39.png"><br>(JT)
+<td><font size=+1>40<br><img src="0912/h40.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>41<br><img src="0912/h41.png"><br>(JT)
+<td><font size=+1>42<br><img src="0912/h42.png"><br>(JT)
+<td><font size=+1>43<br><img src="0912/h43.png"><br>(JT)
+<td><font size=+1>44<br><img src="0912/h44.png"><br>(JT)
+<td><font size=+1>45<br><img src="0912/h45.png"><br>(JT)
+<td><font size=+1>46<br><img src="0912/h46.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>47<br><img src="0912/h47.png"><br>(JT)
+<td><font size=+1>48<br><img src="0912/h48.png"><br>(JT)
+<td><font size=+1>49<br><img src="0912/h49.png"><br>(JT)
+<td><font size=+1>50<br><img src="0912/h50.png"><br>(JT)
+<td><font size=+1>51<br><img src="0912/h51.png"><br>(JT)
+<td><font size=+1>52<br><img src="0912/h52.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>53<br><img src="0912/h53.png"><br>(JT)
+<td><font size=+1>54<br><img src="0912/h54.png"><br>(JT)
+<td><font size=+1>55<br><img src="0912/h55.png"><br>(JT)
+<td><font size=+1>56<br><img src="0912/h56.png"><br>(JT)
+<td><font size=+1>57<br><img src="0912/h57.png"><br>(JT)
+<td><font size=+1>58<br><img src="0912/h58.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>59<br><img src="0912/h59.png"><br>(JT)
+<td><font size=+1>60<br><img src="0912/h60.png"><br>(JT)
+<td><font size=+1>61<br><img src="0912/h61.png"><br>(JT)
+<td><font size=+1>62<br><img src="0912/h62.png"><br>(JT)
+<td><font size=+1>63<br><img src="0912/h63.png"><br>(JT)
+<td><font size=+1>64<br><img src="0912/h64.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>65<br><img src="0912/h65.png"><br>(JT)
+<td><font size=+1>66<br><img src="0912/h66.png"><br>(JT)
+<td><font size=+1>67<br><img src="0912/h67.png"><br>(JT)
+<td><font size=+1>68<br><img src="0912/h68.png"><br>(JT)
+<td><font size=+1>69<br><img src="0912/h69.png"><br>(JT)
+<td><font size=+1>70<br><img src="0912/h70.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>71<br><img src="0912/h71.png"><br>(JT)
+<td><font size=+1>72<br><img src="0912/h72.png"><br>(JT)
+<td><font size=+1>73<br><img src="0912/h73.png"><br>(JT)
+<td><font size=+1>74<br><img src="0912/h74.png"><br>(JT)
+<td><font size=+1>75<br><img src="0912/h75.png"><br>(JT)
+<td><font size=+1>76<br><img src="0912/h76.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>77<br><img src="0912/h77.png"><br>(JT)
+<td><font size=+1>78<br><img src="0912/h78.png"><br>(JT)
+<td><font size=+1>79<br><img src="0912/h79.png"><br>(JT)
+<td><font size=+1>80<br><img src="0912/h80.png"><br>(JT)
+<td><font size=+1>81<br><img src="0912/h81.png"><br>(JT)
+<td><font size=+1>82<br><img src="0912/h82.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>83<br><img src="0912/h83.png"><br>(JT)
+<td><font size=+1>84<br><img src="0912/h84.png"><br>(JT)
+<td><font size=+1>85<br><img src="0912/h85.png"><br>(JT)
+<td><font size=+1>86<br><img src="0912/h86.png"><br>(JT)
+<td><font size=+1>87<br><img src="0912/h87.png"><br>(JT)
+<td><font size=+1>88<br><img src="0912/h88.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>89<br><img src="0912/h89.png"><br>(JT)
+<td><font size=+1>90<br><img src="0912/h90.png"><br>(JT)
+<td><font size=+1>91<br><img src="0912/h91.png"><br>(JT)
+<td><font size=+1>92<br><img src="0912/h92.png"><br>(JT)
+<td><font size=+1>93<br><img src="0912/h93.png"><br>(JT)
+<td><font size=+1>94<br><img src="0912/h94.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>95<br><img src="0912/h95.png"><br>(JT)
+<td><font size=+1>96<br><img src="0912/h96.png"><br>(JT)
+<td><font size=+1>97<br><img src="0912/h97.png"><br>(JT)
+<td><font size=+1>98<br><img src="0912/h98.png"><br>(JT)
+<td><font size=+1>99<br><img src="0912/h99.png"><br>(JT)
+<td><font size=+1>100<br><img src="0912/h100.png"><br>(JT)
+</table><p>
+
+<hr><font size=+2>4.</font> <p>
+
+Jeremy Galvagni found the Hamiltonian cycle number of complete graphs ((v-1)!/2) with v vertices.<p>
+
+Andrew Bayly found that the wheel graph with v vertices has v-1 Hamiltonian cycles, so all positive integers are the Hamiltonian cycle number of some graph.<p>
+
+Mark Mammel found the smallest graphs for n&le;25 by computer.<p>
+
+Jeremy Tan found the smallest graphs for 26&le;n&le;40 by computer.  In 2014, he extended this to n&le;88.  He also computed that 7-vertex graphs can have these numbers of Hamiltonian cycles: 0-12, 14-20, 22-24, 26-28, 30, 32-34, 36, 38, 40, 45, 48, 52, 60, 62, 70, 72, 76, 80, 90, 108, 120, 144, 168, 240 and 360.<p>
+
+In 2018, Johan de Ruiter found that 8-vertex graphs can have these numbers of Hamilton cycles: 0-88, 90, 92-106, 108-116, 118, 120, 122-124, 126, 128-136, 138-140, 142, 144-150, 152-153, 156, 158, 160, 162, 164-166, 168-169, 172, 174, 176-177, 180, 183-184, 186, 188, 192, 194, 198, 200, 204, 208, 210, 212, 214, 216, 219-220, 222-223, 228, 230-232, 240, 245, 248, 252, 260, 264, 266, 268, 270, 276, 284, 292, 296, 298, 300, 308, 310, 312, 320, 323-324, 328, 336, 340, 348, 354, 360, 366, 384, 390, 408, 430, 432, 444, 456, 458, 476, 496, 504, 508, 576, 582, 636, 660, 696, 720, 744, 816, 912, 984, 1200, 1320, 1800, 2520.  He also sent lists for <a href="0912/9.txt">n=9</a> and <a href="0912/10.txt">n=10</a>.<p>
+
+Here are the smallest known graphs that have exactly n Hamiltonian cycles:<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>0<br><img src="0912/c0.gif">
+<td><font size=+1>1<br><img src="0912/c1.gif">
+<td><font size=+1>2<br><img src="0912/c2.gif">
+<td><font size=+1>3<br><img src="0912/c3.gif">
+<td><font size=+1>4<br><img src="0912/c4.gif"><br>(AB)
+<td><font size=+1>5<br><img src="0912/c5.gif"><br>(MM)
+<td><font size=+1>6<br><img src="0912/c6.gif"><br>(MM)
+<td><font size=+1>7<br><img src="0912/c7.gif"><br>(MM)
+<td><font size=+1>8<br><img src="0912/c8.gif"><br>(MM)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>9<br><img src="0912/c9.gif"><br>(MM)
+<td><font size=+1>10<br><img src="0912/c10.gif"><br>(MM)
+<td><font size=+1>11<br><img src="0912/c11.gif"><br>(MM)
+<td><font size=+1>12<br><img src="0912/c12.gif"><br>(MM)
+<td><font size=+1>13<br><img src="0912/c13.gif"><br>(MM)
+<td><font size=+1>14<br><img src="0912/c14.gif"><br>(MM)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>15<br><img src="0912/c15.gif"><br>(MM)
+<td><font size=+1>16<br><img src="0912/c16.gif"><br>(MM)
+<td><font size=+1>17<br><img src="0912/c17.gif"><br>(MM)
+<td><font size=+1>18<br><img src="0912/c18.gif"><br>(MM)
+<td><font size=+1>19<br><img src="0912/c19.gif"><br>(MM)
+<td><font size=+1>20<br><img src="0912/c20.gif"><br>(MM)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>21<br><img src="0912/c21.gif"><br>(MM)
+<td><font size=+1>22<br><img src="0912/c22.gif"><br>(MM)
+<td><font size=+1>23<br><img src="0912/c23.gif"><br>(MM)
+<td><font size=+1>24<br><img src="0912/c24.gif"><br>(MM)
+<td><font size=+1>25<br><img src="0912/c25.gif"><br>(MM)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>26<br><img src="0912/c26.png"><br>(JT)
+<td><font size=+1>27<br><img src="0912/c27.png"><br>(JT)
+<td><font size=+1>28<br><img src="0912/c28.png"><br>(JT)
+<td><font size=+1>29<br><img src="0912/c29.png"><br>(JT)
+<td><font size=+1>30<br><img src="0912/c30.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>31<br><img src="0912/c31.png"><br>(JT)
+<td><font size=+1>32<br><img src="0912/c32.png"><br>(JT)
+<td><font size=+1>33<br><img src="0912/c33.png"><br>(JT)
+<td><font size=+1>34<br><img src="0912/c34.png"><br>(JT)
+<td><font size=+1>35<br><img src="0912/c35.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>36<br><img src="0912/c36.png"><br>(JT)
+<td><font size=+1>37<br><img src="0912/c37.png"><br>(JT)
+<td><font size=+1>38<br><img src="0912/c38.png"><br>(JT)
+<td><font size=+1>39<br><img src="0912/c39.png"><br>(JT)
+<td><font size=+1>40<br><img src="0912/c40.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>41<br><img src="0912/c41.png"><br>(JT)
+<td><font size=+1>42<br><img src="0912/c42.png"><br>(JT)
+<td><font size=+1>43<br><img src="0912/c43.png"><br>(JT)
+<td><font size=+1>44<br><img src="0912/c44.png"><br>(JT)
+<td><font size=+1>45<br><img src="0912/c45.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>46<br><img src="0912/c46.png"><br>(JT)
+<td><font size=+1>47<br><img src="0912/c47.png"><br>(JT)
+<td><font size=+1>48<br><img src="0912/c48.png"><br>(JT)
+<td><font size=+1>49<br><img src="0912/c49.png"><br>(JT)
+<td><font size=+1>50<br><img src="0912/c50.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>51<br><img src="0912/c51.png"><br>(JT)
+<td><font size=+1>52<br><img src="0912/c52.png"><br>(JT)
+<td><font size=+1>53<br><img src="0912/c53.png"><br>(JT)
+<td><font size=+1>54<br><img src="0912/c54.png"><br>(JT)
+<td><font size=+1>55<br><img src="0912/c55.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>56<br><img src="0912/c56.png"><br>(JT)
+<td><font size=+1>57<br><img src="0912/c57.png"><br>(JT)
+<td><font size=+1>58<br><img src="0912/c58.png"><br>(JT)
+<td><font size=+1>59<br><img src="0912/c59.png"><br>(JT)
+<td><font size=+1>60<br><img src="0912/c60.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>61<br><img src="0912/c61.png"><br>(JT)
+<td><font size=+1>62<br><img src="0912/c62.png"><br>(JT)
+<td><font size=+1>63<br><img src="0912/c63.png"><br>(JT)
+<td><font size=+1>64<br><img src="0912/c64.png"><br>(JT)
+<td><font size=+1>65<br><img src="0912/c65.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>66<br><img src="0912/c66.png"><br>(JT)
+<td><font size=+1>67<br><img src="0912/c67.png"><br>(JT)
+<td><font size=+1>68<br><img src="0912/c68.png"><br>(JT)
+<td><font size=+1>69<br><img src="0912/c69.png"><br>(JT)
+<td><font size=+1>70<br><img src="0912/c70.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>71<br><img src="0912/c71.png"><br>(JT)
+<td><font size=+1>72<br><img src="0912/c72.png"><br>(JT)
+<td><font size=+1>73<br><img src="0912/c73.png"><br>(JT)
+<td><font size=+1>74<br><img src="0912/c74.png"><br>(JT)
+<td><font size=+1>75<br><img src="0912/c75.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>76<br><img src="0912/c76.png"><br>(JT)
+<td><font size=+1>77<br><img src="0912/c77.png"><br>(JT)
+<td><font size=+1>78<br><img src="0912/c78.png"><br>(JT)
+<td><font size=+1>79<br><img src="0912/c79.png"><br>(JT)
+<td><font size=+1>80<br><img src="0912/c80.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>81<br><img src="0912/c81.png"><br>(JT)
+<td><font size=+1>82<br><img src="0912/c82.png"><br>(JT)
+<td><font size=+1>83<br><img src="0912/c83.png"><br>(JT)
+<td><font size=+1>84<br><img src="0912/c84.png"><br>(JT)
+<td><font size=+1>85<br><img src="0912/c85.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>86<br><img src="0912/c86.png"><br>(JT)
+<td><font size=+1>87<br><img src="0912/c87.png"><br>(JT)
+<td><font size=+1>88<br><img src="0912/c88.png"><br>(JT)
+<td><font size=+1>89<br><img src="0912/c89.png"><br>(JT)
+<td><font size=+1>90<br><img src="0912/c90.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>91<br><img src="0912/c91.png"><br>(JT)
+<td><font size=+1>92<br><img src="0912/c92.png"><br>(JT)
+<td><font size=+1>93<br><img src="0912/c93.png"><br>(JT)
+<td><font size=+1>94<br><img src="0912/c94.png"><br>(JT)
+<td><font size=+1>95<br><img src="0912/c95.png"><br>(JT)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><font size=+1>96<br><img src="0912/c96.png"><br>(JT)
+<td><font size=+1>97<br><img src="0912/c97.png"><br>(JT)
+<td><font size=+1>98<br><img src="0912/c98.png"><br>(JT)
+<td><font size=+1>99<br><img src="0912/c99.png"><br>(JT)
+<td><font size=+1>100<br><img src="0912/c100.png"><br>(JT)
+</table><p>
+<p><hr color=black><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 1/5/19.<font></BODY></HTML>
+

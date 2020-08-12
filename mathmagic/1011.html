@@ -1,0 +1,489 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (October 2011)</H1></CENTER>
+
+This month we investigate several questions about binomial coefficients <sub>n</sub>C<sub>r</sub> = n! / r! (n-r)! .<p>
+
+<font size=+2>1. Anagrams</font><p>
+In some cases, permuting the digits of n just permutes the digits of <sub>n</sub>C<sub>r</sub>.  For example, <sub>269</sub>C<sub>2</sub> = 36046 and <sub>296</sub>C<sub>2</sub> = 43660.  How many more examples are there of this type?<p>
+
+<font size=+2>2. Sums</font><p>
+There are lots of examples of triangular numbers that are the sum of two other triangular numbers, and tetrahedral numbers that are the sum of two tetrahedral numbers.  What about other binomial coefficients?  The only example known besides the trivial family <sub>2n</sub>C<sub>n</sub> = <sub>2n-1</sub>C<sub>n</sub> + <sub>2n-1</sub>C<sub>n</sub> is <sub>200</sub>C<sub>4</sub> = <sub>190</sub>C<sub>4</sub> + <sub>132</sub>C<sub>4</sub>.  Are there any other examples?<p>
+
+<font size=+2>3. Products</font><p>
+There are lots of examples of triangular numbers that are the product of two other triangular numbers.  What about other binomial coefficients?  For example, <sub>16</sub>C<sub>3</sub> = <sub>8</sub>C<sub>3</sub> &times; <sub>5</sub>C<sub>3</sub>.  How many more examples are there of this type?<p>
+
+<font size=+2>4. Printer Errors</font><p>
+In some cases, if a printer forgets to subscript some digits, the result is unchanged.  For example, 2<sub>15</sub>C<sub>2</sub> = 21<sub>5</sub>C<sub>2</sub>.  Are there any other examples?<p>
+
+<font size=+2>5. Concatenation</font><p>
+There are lots of examples of triangular numbers that are the concatenation of other triangular numbers, and tetrahedral numbers that are the concatenation of tetrahedral numbers.  What about other binomial coefficients?  For example, <sub>1748</sub>C<sub>4</sub> = 387670507005 is the concatenation of 3876,70,5,0,70,0,5, all of which are <sub>n</sub>C<sub>4</sub> for some n.  How many more examples are there of this type?<p>
+
+<font size=+2>6. Factorials</font><p>
+What is the fewest number of non-trivial binomial coefficients that we need to multiply in order to get factorials?  For example, 5! = <sub>10</sub>C<sub>3</sub> and 6! = <sub>10</sub>C<sub>3</sub> &times; <sub>4</sub>C<sub>2</sub>.<p>
+
+<font size=+2>7. Mountains</font><p>
+An integer is called a mountain if the digits are non-decreasing followed by non-increasing.  There are infinitely many triangular and tetrahedral numbers that are mountains.  But there seem to be only finitely many mountains among <sub>n</sub>C<sub>k</sub> for any k&ge;4.  What are the largest?  Are there any bigger than <sub>434</sub>C<sub>4</sub>=1457898876 and <sub>38</sub>C<sub>16</sub>=22239974430?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Solutions were received from Jon Palin, Johan de Ruiter, Mark Mammel, and Joe DeVincentis.<p>
+
+<font size=+2>1. Anagrams</font><p>
+
+<center><font size=+3>Binomial Anagrams</font></center>
+<center><font size=+2>Triangular</font></center>
+<TABLE align=center cellpadding=10><TR><TD>
+<table border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td><sub>269</sub>C<sub>2</sub> = 36046<td><sub>296</sub>C<sub>2</sub> = 43660<td>(EF)
+<tr align=center><td><sub>496</sub>C<sub>2</sub> = 122760<td><sub>649</sub>C<sub>2</sub> = 210276<td>(EF)
+<tr align=center><td><sub>1973</sub>C<sub>2</sub> = 1945378<td><sub>3791</sub>C<sub>2</sub> = 7183945<td>(JD)
+<tr align=center><td><sub>2021</sub>C<sub>2</sub> = 2041210<td><sub>2201</sub>C<sub>2</sub> = 2421100<td>(EF)
+<tr align=center><td><sub>2022</sub>C<sub>2</sub> = 2043231<td><sub>2202</sub>C<sub>2</sub> = 2423301<td>(EF)
+<tr align=center><td><sub>2023</sub>C<sub>2</sub> = 2045253<td><sub>2203</sub>C<sub>2</sub> = 2425503<td>(EF)
+<tr align=center><td><sub>2024</sub>C<sub>2</sub> = 2047276<td><sub>2204</sub>C<sub>2</sub> = 2427706<td>(EF)
+<tr align=center><td><sub>2031</sub>C<sub>2</sub> = 2061465<td><sub>2301</sub>C<sub>2</sub> = 2646150<td>(EF)
+<tr align=center><td><sub>* 2041</sub>C<sub>2</sub> = 2081820<td><sub>2401</sub>C<sub>2</sub> = 2881200<td>(EF)
+<tr align=center><td><sub>* 2042</sub>C<sub>2</sub> = 2083861<td><sub>2402</sub>C<sub>2</sub> = 2883601<td>(EF)
+<tr align=center><td><sub>2043</sub>C<sub>2</sub> = 2085903<td><sub>4023</sub>C<sub>2</sub> = 8090253<td>(JD)
+<tr align=center><td><sub>2044</sub>C<sub>2</sub> = 2087946<td><sub>4024</sub>C<sub>2</sub> = 8094276<td>(JD)
+<tr align=center><td><sub>2157</sub>C<sub>2</sub> = 2325246<td><sub>2175</sub>C<sub>2</sub> = 2364225<td>(EF)
+<tr align=center><td><sub>2346</sub>C<sub>2</sub> = 2750685<td><sub>3426</sub>C<sub>2</sub> = 5867025<td>(EF)
+<tr align=center><td><sub>2365</sub>C<sub>2</sub> = 2795430<td><sub>2635</sub>C<sub>2</sub> = 3470295<td>(EF)
+<tr align=center><td><sub>2429</sub>C<sub>2</sub> = 2948806<td><sub>4292</sub>C<sub>2</sub> = 9208486<td>(JD)
+<tr align=center><td><sub>2458</sub>C<sub>2</sub> = 3019653<td><sub>4258</sub>C<sub>2</sub> = 9063153<td>(JD)
+<tr align=center><td><sub>2580</sub>C<sub>2</sub> = 3326910<td><sub>2805</sub>C<sub>2</sub> = 3932610<td>(EF)
+<tr align=center><td><sub>2847</sub>C<sub>2</sub> = 4051281<td><sub>2874</sub>C<sub>2</sub> = 4128501<td>(EF)
+<tr align=center><td><sub>3060</sub>C<sub>2</sub> = 4680270<td><sub>3600</sub>C<sub>2</sub> = 6478200<td>(EF)
+<tr align=center><td><sub>3068</sub>C<sub>2</sub> = 4704778<td><sub>3860</sub>C<sub>2</sub> = 7447870<td>(JP)
+<tr align=center><td><sub>3231</sub>C<sub>2</sub> = 5218065<td><sub>3321</sub>C<sub>2</sub> = 5512860<td>(EF)
+<tr align=center><td><sub>3403</sub>C<sub>2</sub> = 5788503<td><sub>3430</sub>C<sub>2</sub> = 5880735<td>(EF)
+<tr align=center><td><sub>3410</sub>C<sub>2</sub> = 5812345<td><sub>4103</sub>C<sub>2</sub> = 8415253<td>(JP)
+<tr align=center><td><sub>3435</sub>C<sub>2</sub> = 5897895<td><sub>3453</sub>C<sub>2</sub> = 5959878<td>(EF)
+<tr align=center><td><sub>3496</sub>C<sub>2</sub> = 6109260<td><sub>4396</sub>C<sub>2</sub> = 9660210<td>(JP)
+<tr align=center><td><sub>3572</sub>C<sub>2</sub> = 6377806<td><sub>3752</sub>C<sub>2</sub> = 7036876<td>(JP)
+<tr align=center><td><sub>3672</sub>C<sub>2</sub> = 6739956<td><sub>3726</sub>C<sub>2</sub> = 6939675<td>(JP)
+<tr align=center><td><sub>3679</sub>C<sub>2</sub> = 6765681<td><sub>3967</sub>C<sub>2</sub> = 7866561<td>(JP)
+<tr align=center><td><sub>4020</sub>C<sub>2</sub> = 8078190<td><sub>4200</sub>C<sub>2</sub> = 8817900<td>(JP)
+<tr align=center><td><sub>* 4021</sub>C<sub>2</sub> = 8082210<td><sub>4201</sub>C<sub>2</sub> = 8822100<td>(JP)
+<tr align=center><td><sub>* 4022</sub>C<sub>2</sub> = 8086231<td><sub>4202</sub>C<sub>2</sub> = 8826301<td>(JD)
+<tr align=center><td><sub>4074</sub>C<sub>2</sub> = 8296701<td><sub>4407</sub>C<sub>2</sub> = 9708621<td>(JP)
+<tr align=center><td><sub>4348</sub>C<sub>2</sub> = 9450378<td><sub>4438</sub>C<sub>2</sub> = 9845703<td>(JP)
+<tr align=center><td><sub>4415</sub>C<sub>2</sub> = 9743905<td><sub>4451</sub>C<sub>2</sub> = 9903475<td>(JP)
+<tr align=center><td><sub>4427</sub>C<sub>2</sub> = 9796951<td><sub>4472</sub>C<sub>2</sub> = 9997156<td>(JP)
+<tr align=center><td><sub>4506</sub>C<sub>2</sub> = 10149765<td><sub>5406</sub>C<sub>2</sub> = 14609715<td>(JP)
+<tr align=center><td><sub>4569</sub>C<sub>2</sub> = 10435596<td><sub>9654</sub>C<sub>2</sub> = 46595031<td>(JP)
+<tr align=center><td><sub>4679</sub>C<sub>2</sub> = 10944181<td><sub>4796</sub>C<sub>2</sub> = 11498410<td>(JP)
+<tr align=center><td><sub>4688</sub>C<sub>2</sub> = 10986328<td><sub>8864</sub>C<sub>2</sub> = 39280816<td>(JP)
+<tr align=center><td><sub>4752</sub>C<sub>2</sub> = 11288376<td><sub>5247</sub>C<sub>2</sub> = 13762881<td>(JP)
+<tr align=center><td><sub>4972</sub>C<sub>2</sub> = 12357906<td><sub>7429</sub>C<sub>2</sub> = 27591306<td>(JP)
+<tr align=center><td><sub>5005</sub>C<sub>2</sub> = 12522510<td><sub>5500</sub>C<sub>2</sub> = 15122250<td>(JP)
+<tr align=center><td><sub>5027</sub>C<sub>2</sub> = 12632851<td><sub>7502</sub>C<sub>2</sub> = 28136251<td>(JP)
+</table><p>
+<TD>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td><sub>5041</sub>C<sub>2</sub> = 12703320<td><sub>5140</sub>C<sub>2</sub> = 13207230<td>(JP)
+<tr align=center><td><sub>5042</sub>C<sub>2</sub> = 12708361<td><sub>5240</sub>C<sub>2</sub> = 13726180<td>(JP)
+<tr align=center><td><sub>5280</sub>C<sub>2</sub> = 13936560<td><sub>8205</sub>C<sub>2</sub> = 33656910<td>(JP)
+<tr align=center><td><sub>5336</sub>C<sub>2</sub> = 14233780<td><sub>5363</sub>C<sub>2</sub> = 14378203<td>(JP)
+<tr align=center><td><sub>5372</sub>C<sub>2</sub> = 14426506<td><sub>5732</sub>C<sub>2</sub> = 16425046<td>(JP)
+<tr align=center><td><sub>5375</sub>C<sub>2</sub> = 14442625<td><sub>5735</sub>C<sub>2</sub> = 16442245<td>(JP)
+<tr align=center><td><sub>5378</sub>C<sub>2</sub> = 14458753<td><sub>8735</sub>C<sub>2</sub> = 38145745<td>(JP)
+<tr align=center><td><sub>5635</sub>C<sub>2</sub> = 15873795<td><sub>5653</sub>C<sub>2</sub> = 15975378<td>(JP)
+<tr align=center><td><sub>5642</sub>C<sub>2</sub> = 15913261<td><sub>6542</sub>C<sub>2</sub> = 21395611<td>(JP)
+<tr align=center><td><sub>5698</sub>C<sub>2</sub> = 16230753<td><sub>6598</sub>C<sub>2</sub> = 21763503<td>(JP)
+<tr align=center><td><sub>5738</sub>C<sub>2</sub> = 16459453<td><sub>8357</sub>C<sub>2</sub> = 34915546<td>(JP)
+<tr align=center><td><sub>5970</sub>C<sub>2</sub> = 17817465<td><sub>9507</sub>C<sub>2</sub> = 45186771<td>(JP)
+<tr align=center><td><sub>5989</sub>C<sub>2</sub> = 17931066<td><sub>8599</sub>C<sub>2</sub> = 36967101<td>(JP)
+<tr align=center><td><sub>6179</sub>C<sub>2</sub> = 19086931<td><sub>6197</sub>C<sub>2</sub> = 19198306<td>(JP)
+<tr align=center><td><sub>6266</sub>C<sub>2</sub> = 19628245<td><sub>6626</sub>C<sub>2</sub> = 21948625<td>(JP)
+<tr align=center><td><sub>6298</sub>C<sub>2</sub> = 19829253<td><sub>6928</sub>C<sub>2</sub> = 23995128<td>(JP)
+<tr align=center><td><sub>6340</sub>C<sub>2</sub> = 20094630<td><sub>6403</sub>C<sub>2</sub> = 20496003<td>(JP)
+<tr align=center><td><sub>6358</sub>C<sub>2</sub> = 20208903<td><sub>6385</sub>C<sub>2</sub> = 20380920<td>(JP)
+<tr align=center><td><sub>6765</sub>C<sub>2</sub> = 22879230<td><sub>7665</sub>C<sub>2</sub> = 29372280<td>(JP)
+<tr align=center><td><sub>6853</sub>C<sub>2</sub> = 23478378<td><sub>8653</sub>C<sub>2</sub> = 37432878<td>(JP)
+<tr align=center><td><sub>7031</sub>C<sub>2</sub> = 24713965<td><sub>7310</sub>C<sub>2</sub> = 26714395<td>(JP)
+<tr align=center><td><sub>7128</sub>C<sub>2</sub> = 25400628<td><sub>7281</sub>C<sub>2</sub> = 26502840<td>(JP)
+<tr align=center><td><sub>7138</sub>C<sub>2</sub> = 25471953<td><sub>7183</sub>C<sub>2</sub> = 25794153<td>(JP)
+<tr align=center><td><sub>7191</sub>C<sub>2</sub> = 25851645<td><sub>9117</sub>C<sub>2</sub> = 41555286<td>(JP)
+<tr align=center><td><sub>7384</sub>C<sub>2</sub> = 27258036<td><sub>7438</sub>C<sub>2</sub> = 27658203<td>(JP)
+<tr align=center><td><sub>7817</sub>C<sub>2</sub> = 30548836<td><sub>8771</sub>C<sub>2</sub> = 38460835<td>(JP)
+<tr align=center><td><sub>7879</sub>C<sub>2</sub> = 31035381<td><sub>8779</sub>C<sub>2</sub> = 38531031<td>(JP)
+<tr align=center><td><sub>7901</sub>C<sub>2</sub> = 31208950<td><sub>7910</sub>C<sub>2</sub> = 31280095<td>(JP)
+<tr align=center><td><sub>7980</sub>C<sub>2</sub> = 31836210<td><sub>8079</sub>C<sub>2</sub> = 32631081<td>(JP)
+<tr align=center><td><sub>8018</sub>C<sub>2</sub> = 32140153<td><sub>8180</sub>C<sub>2</sub> = 33452110<td>(JP)
+<tr align=center><td><sub>8153</sub>C<sub>2</sub> = 33231628<td><sub>8513</sub>C<sub>2</sub> = 36231328<td>(JP)
+<tr align=center><td><sub>8195</sub>C<sub>2</sub> = 33574915<td><sub>8915</sub>C<sub>2</sub> = 39734155<td>(JP)
+<tr align=center><td><sub>8379</sub>C<sub>2</sub> = 35099631<td><sub>8937</sub>C<sub>2</sub> = 39930516<td>(JP)
+<tr align=center><td><sub>8385</sub>C<sub>2</sub> = 35149920<td><sub>8835</sub>C<sub>2</sub> = 39024195<td>(JP)
+<tr align=center><td><sub>8539</sub>C<sub>2</sub> = 36452991<td><sub>8935</sub>C<sub>2</sub> = 39912645<td>(JP)
+<tr align=center><td><sub>8749</sub>C<sub>2</sub> = 38268126<td><sub>8794</sub>C<sub>2</sub> = 38662821<td>(JP)
+<tr align=center><td><sub>9036</sub>C<sub>2</sub> = 40820130<td><sub>9360</sub>C<sub>2</sub> = 43800120<td>(JP)
+<tr align=center><td><sub>9112</sub>C<sub>2</sub> = 41509716<td><sub>9121</sub>C<sub>2</sub> = 41591760<td>(JP)
+<tr align=center><td><sub>9230</sub>C<sub>2</sub> = 42591835<td><sub>9302</sub>C<sub>2</sub> = 43258951<td>(JP)
+<tr align=center><td><sub>9547</sub>C<sub>2</sub> = 45567831<td><sub>9754</sub>C<sub>2</sub> = 47565381<td>(JP)
+</table><p>
+</TABLE>
+
+<center><font size=+2>Tetrahedral</font></center>
+<TABLE align=center cellpadding=10><TR><TD>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td><sub>406</sub>C<sub>3</sub> = 11071620<td><sub>460</sub>C<sub>3</sub> = 16117020<td>(EF)
+<tr align=center><td><sub>567</sub>C<sub>3</sub> = 30220155<td><sub>675</sub>C<sub>3</sub> = 51030225<td>(EF)
+<tr align=center><td><sub>728</sub>C<sub>3</sub> = 64039976<td><sub>782</sub>C<sub>3</sub> = 79396460<td>(EF)
+<tr align=center><td><sub>10181</sub>C<sub>3</sub> = 175829636970<td><sub>18011</sub>C<sub>3</sub> = 973620897165<td>(JP)
+<tr align=center><td><sub>10306</sub>C<sub>3</sub> = 182386518720<td><sub>10360</sub>C<sub>3</sub> = 185268781320<td>(JP)
+<tr align=center><td><sub>11225</sub>C<sub>3</sub> = 235663172700<td><sub>12251</sub>C<sub>3</sub> = 306377602125<td>(JP)
+<tr align=center><td><sub>11423</sub>C<sub>3</sub> = 248356318671<td><sub>13124</sub>C<sub>3</sub> = 376658813124<td>(JP)
+<tr align=center><td><sub>11575</sub>C<sub>3</sub> = 258403969275<td><sub>17515</sub>C<sub>3</sub> = 895374629205<td>(JP)
+<tr align=center><td><sub>11722</sub>C<sub>3</sub> = 268375424440<td><sub>17122</sub>C<sub>3</sub> = 836442574240<td>(JP)
+<tr align=center><td><sub>15061</sub>C<sub>3</sub> = 569277033490<td><sub>15601</sub>C<sub>3</sub> = 632735997400<td>(JP)
+<tr align=center><td><sub>17436</sub>C<sub>3</sub> = 883312961740<td><sub>17463</sub>C<sub>3</sub> = 887423039611<td>(JP)
+<tr align=center><td><sub>22365</sub>C<sub>3</sub> = 1864220157030<td><sub>32652</sub>C<sub>3</sub> = 5801472126300<td>(JP)
+<tr align=center><td><sub>22600</sub>C<sub>3</sub> = 1923607294200<td><sub>26002</sub>C<sub>3</sub> = 2929671342000<td>(JP)
+<tr align=center><td><sub>24318</sub>C<sub>3</sub> = 2396507173116<td><sub>28341</sub>C<sub>3</sub> = 3793571612610<td>(JP)
+<tr align=center><td><sub>25285</sub>C<sub>3</sub> = 2693928680170<td><sub>25582</sub>C<sub>3</sub> = 2789981362060<td>(JP)
+<tr align=center><td><sub>25863</sub>C<sub>3</sub> = 2882936463011<td><sub>28563</sub>C<sub>3</sub> = 3883422061961<td>(JP)
+<tr align=center><td><sub>26934</sub>C<sub>3</sub> = 3256139046884<td><sub>29634</sub>C<sub>3</sub> = 4336862091584<td>(JP)
+<tr align=center><td><sub>29465</sub>C<sub>3</sub> = 4263083769980<td><sub>29546</sub>C<sub>3</sub> = 4298339670680<td>(JP)
+<tr align=center><td><sub>31198</sub>C<sub>3</sub> = 5060427975196<td><sub>31981</sub>C<sub>3</sub> = 5451099726670<td>(JP)
+<tr align=center><td><sub>31619</sub>C<sub>3</sub> = 5268074821569<td><sub>31916</sub>C<sub>3</sub> = 5417928825660<td>(JP)
+<tr align=center><td><sub>35024</sub>C<sub>3</sub> = 7159930087024<td><sub>35402</sub>C<sub>3</sub> = 7394270591800<td>(JP)
+<tr align=center><td><sub>41243</sub>C<sub>3</sub> = 11691437250541<td><sub>42431</sub>C<sub>3</sub> = 12731156144095<td>(JP)
+<tr align=center><td><sub>42816</sub>C<sub>3</sub> = 13080868941760<td><sub>48216</sub>C<sub>3</sub> = 18680791048360<td>(JP)
+</table><p>
+<TD>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td><sub>43054</sub>C<sub>3</sub> = 13300225577804<td><sub>44350</sub>C<sub>3</sub> = 14537852032700<td>(JP)
+<tr align=center><td><sub>43520</sub>C<sub>3</sub> = 13736796720640<td><sub>50432</sub>C<sub>3</sub> = 21376740693760<td>(JP)
+<tr align=center><td><sub>43582</sub>C<sub>3</sub> = 13795591408060<td><sub>43852</sub>C<sub>3</sub> = 14053589196700<td>(JP)
+<tr align=center><td><sub>45248</sub>C<sub>3</sub> = 15438962706496<td><sub>52484</sub>C<sub>3</sub> = 24093766951684<td>(JP)
+<tr align=center><td><sub>46075</sub>C<sub>3</sub> = 16301084674525<td><sub>64705</sub>C<sub>3</sub> = 45148376520160<td>(JP)
+<tr align=center><td><sub>46579</sub>C<sub>3</sub> = 16841906774329<td><sub>75469</sub>C<sub>3</sub> = 71636980471294<td>(JP)
+<tr align=center><td><sub>47952</sub>C<sub>3</sub> = 18375609596400<td><sub>74925</sub>C<sub>3</sub> = 70098966514350<td>(JP)
+<tr align=center><td><sub>54269</sub>C<sub>3</sub> = 26636686447094<td><sub>54296</sub>C<sub>3</sub> = 26676463944680<td>(JP)
+<tr align=center><td><sub>54678</sub>C<sub>3</sub> = 27243492588676<td><sub>57864</sub>C<sub>3</sub> = 32288776529464<td>(JP)
+<tr align=center><td><sub>54969</sub>C<sub>3</sub> = 27680794812044<td><sub>54996</sub>C<sub>3</sub> = 27721604844980<td>(JP)
+<tr align=center><td><sub>56636</sub>C<sub>3</sub> = 30276346298540<td><sub>66356</sub>C<sub>3</sub> = 48693356270420<td>(JP)
+<tr align=center><td><sub>57563</sub>C<sub>3</sub> = 31787500128461<td><sub>75356</sub>C<sub>3</sub> = 71315670881420<td>(JP)
+<tr align=center><td><sub>64965</sub>C<sub>3</sub> = 45694825434730<td><sub>65694</sub>C<sub>3</sub> = 47250459383644<td>(JP)
+<tr align=center><td><sub>71483</sub>C<sub>3</sub> = 60874980486781<td><sub>78314</sub>C<sub>3</sub> = 80047971888664<td>(JP)
+<tr align=center><td><sub>72625</sub>C<sub>3</sub> = 63839466019000<td><sub>72652</sub>C<sub>3</sub> = 63910694806300<td>(JP)
+<tr align=center><td><sub>74581</sub>C<sub>3</sub> = 69137852639570<td><sub>81547</sub>C<sub>3</sub> = 90376753812965<td>(JP)
+<tr align=center><td><sub>74605</sub>C<sub>3</sub> = 69204620237710<td><sub>75604</sub>C<sub>3</sub> = 72022109367604<td>(JP)
+<tr align=center><td><sub>89077</sub>C<sub>3</sub> = 117796088423650<td><sub>98770</sub>C<sub>3</sub> = 160587123798640<td>(JP)
+<tr align=center><td><sub>90748</sub>C<sub>3</sub> = 124550529861996<td><sub>98470</sub>C<sub>3</sub> = 159128266599540<td>(JP)
+<tr align=center><td><sub>92759</sub>C<sub>3</sub> = 133015691848459<td><sub>97295</sub>C<sub>3</sub> = 153499486031815<td>(JP)
+<tr align=center><td><sub>93237</sub>C<sub>3</sub> = 135082674039170<td><sub>93372</sub>C<sub>3</sub> = 135670298301740<td>(JP)
+<tr align=center><td><sub>94987</sub>C<sub>3</sub> = 142832667627045<td><sub>99874</sub>C<sub>3</sub> = 166032472758624<td>(JP)
+<tr align=center><td><sub>97690</sub>C<sub>3</sub> = 155376645632680<td><sub>97960</sub>C<sub>3</sub> = 156668533674520<td>(JP)
+</table><p>
+</TABLE>
+
+
+<center><font size=+2>Higher-Dimensional</font></center>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td><sub>3459</sub>C<sub>4</sub> = 5954392001376<td><sub>3549</sub>C<sub>4</sub> = 6599002433751<td>(EF)
+<tr align=center><td><sub>5604</sub>C<sub>4</sub> = 41050285745001<td><sub>6405</sub>C<sub>4</sub> = 70058105214405<td>(JP)
+<tr align=center><td><sub>14370</sub>C<sub>4</sub> = 1775965325761320<td><sub>17340</sub>C<sub>4</sub> = 3765605727219315<td>(JP)
+<tr align=center><td><sub>15081</sub>C<sub>4</sub> = 2154450498189990<td><sub>18501</sub>C<sub>4</sub> = 4880099954491125<td>(JP)
+<tr align=center><td><sub>23362</sub>C<sub>4</sub> = 12408443067522320<td><sub>26332</sub>C<sub>4</sub> = 20027428106423435<td>(JP)
+<tr align=center><td><sub>23718</sub>C<sub>4</sub> = 13182298672431735<td><sub>31278</sub>C<sub>4</sub> = 39871387263114225<td>(JP)
+<tr align=center><td><sub>25953</sub>C<sub>4</sub> = 18898990965961800<td><sub>35952</sub>C<sub>4</sub> = 69599881018896900<td>(JP)
+<tr align=center><td><sub>32438</sub>C<sub>4</sub> = 46123759884753915<td><sub>34382</sub>C<sub>4</sub> = 58215349746193785<td>(JP)
+<tr align=center><td><sub>41874</sub>C<sub>4</sub> = 128086784325921876<td><sub>48417</sub>C<sub>4</sub> = 228942511637878680<td>(JP)
+<tr align=center><td><sub>43895</sub>C<sub>4</sub> = 154664131262038095<td><sub>49835</sub>C<sub>4</sub> = 256965204381631410<td>(JP)
+<tr align=center><td><sub>45178</sub>C<sub>4</sub> = 173555780642193950<td><sub>47581</sub>C<sub>4</sub> = 213534598707590615<td>(JP)
+<tr align=center><td><sub>55971</sub>C<sub>4</sub> = 408878680724913960<td><sub>57915</sub>C<sub>4</sub> = 468714087968802390<td>(JP)
+<tr align=center><td><sub>71970</sub>C<sub>4</sub> = 1117785733041442920<td><sub>77091</sub>C<sub>4</sub> = 1471531874027134920<td>(JP)
+<tr align=center><td><sub>80619</sub>C<sub>4</sub> = 1759973234802562626<td><sub>80916</sub>C<sub>4</sub> = 1786052322269937645<td>(JP)
+<tr align=center><td><sub>84708</sub>C<sub>4</sub> = 2145140329578536745<td><sub>84780</sub>C<sub>4</sub> = 2152443057837419655<td>(JP)
+<tr align=center><td><sub>86277</sub>C<sub>4</sub> = 2308546876744361925<td><sub>87726</sub>C<sub>4</sub> = 2467586379634801425<td>(JP)
+<tr align=center><td><sub>90717</sub>C<sub>4</sub> = 2821725433467881655<td><sub>91077</sub>C<sub>4</sub> = 2866784283357141525<td>(JP)
+<tr align=center><td><sub>95385</sub>C<sub>4</sub> = 3448909318502571210<td><sub>95538</sub>C<sub>4</sub> = 3471091525280318940<td>(JP)
+<tr align=center><td><sub>17182</sub>C<sub>5</sub> = 12471955254541380906<td><sub>17812</sub>C<sub>5</sub> = 14932700146958145552<td>(JP)
+<tr align=center><td><sub>44472</sub>C<sub>5</sub> = 1449287011564979898024<td><sub>44724</sub>C<sub>5</sub> = 1490818725997604128944<td>(JP)
+<tr align=center><td><sub>54829</sub>C<sub>5</sub> = 4128489346207799017215<td><sub>58942</sub>C<sub>5</sub> = 5927470631709142814298<td>(JP)
+<tr align=center><td><sub>74878</sub>C<sub>5</sub> = 19612453714517490929850<td><sub>88477</sub>C<sub>5</sub> = 45177439212918901406595<td>(JP)
+<tr align=center><td><sub>20932</sub>C<sub>6</sub> = 116740248815973722928352<td><sub>23209</sub>C<sub>6</sub> = 216932872817759232815044<td>(JP)
+<tr align=center><td><sub>33864</sub>C<sub>6</sub> = 2093652769554893663938108<td><sub>36483</sub>C<sub>6</sub> = 3273649609135269305569888<td>(JP)
+<tr align=center><td><sub>50956</sub>C<sub>6</sub> = 24305895626756194080607516<td><sub>59650</sub>C<sub>6</sub> = 62549087386952617461505600<td>(JP)
+<tr align=center><td><sub>74139</sub>C<sub>6</sub> = 230600357969611548547443178<td><sub>79431</sub>C<sub>6</sub> = 348759197003628665447504311<td>(JP)
+<tr align=center><td><sub>65276</sub>C<sub>7</sub> = 1001623436649759159123627825800<td><sub>75626</sub>C<sub>7</sub> = 2806381939152477521326614695000<td>(JP)
+<tr align=center><td><sub>73682</sub>C<sub>7</sub> = 2338705420011603297284842961936<td><sub>87263</sub>C<sub>7</sub> = 7643212308345679690028224803191<td>(JP)
+<tr align=center><td><sub>74573</sub>C<sub>7</sub> = 2544007949713621856106493377812<td><sub>77534</sub>C<sub>7</sub> = 3341159138790247640578427902616<td>(JP)
+</table><p>
+
+Johan de Riuter found some infinite families of these.<p>
+
+Joe DeVincentis notes that the triangular solutions marked with a star can be combined.<p>
+
+Joe DeVincentis found these triples of anagrammed triangular numbers:<p>
+
+<pre>
+[10193, 10391, 10913] [51943528, 53981245, 59541328]
+[20011, 20101, 21001] [200210055, 202015050, 220510500]
+[20041, 24001, 40021, 42001] [200810820, 288012000, 800820210, 882021000]
+[20042, 24002, 40022, 42002] [200830861, 288036001, 800860231, 882063001]
+[20434, 23404, 40234] [208763961, 273861906, 809367261]
+[22199, 29192, 29219] [246386701, 426071836, 426860371]
+[24503, 40325, 40523] [300186253, 813032650, 821036503]
+[30238, 30823, 38302] [457153203, 475013253, 733502451]
+[40011, 40101, 41001] [800420055, 804025050, 840520500]
+[45026, 56042, 60524] [1013647825, 1570324861, 1831547026]
+[47255, 52574, 52754] [1116493885, 1381986451, 1391465881]
+[49829, 89924, 92849] [1241439706, 4043117926, 4310421976]
+[50015, 50501, 55001] [1250725105, 1275150250, 1512527500]
+[50695, 55069, 65095] [1284966165, 1516269846, 2118646965]
+[51269, 65291, 69512] [1314229546, 2131424695, 2415924316]
+[51948, 59148, 89154] [1349271378, 1749213378, 3974173281]
+[52499, 92954, 95942] [1378046251, 4320176581, 4602385711]
+[53077, 70357, 70735] [1408557426, 2475018546, 2501684745]
+[53172, 57132, 57312] [1413604206, 1632004146, 1642304016]
+[53395, 53953, 55393] [1425486315, 1455436128, 1534164528]
+[53725, 57325, 57523] [1443160950, 1643049150, 1654419003]
+[57906, 95670, 97506] [1676523465, 4576326615, 4753661265]
+[57938, 59783, 79835] [1678376953, 1786973653, 3186773695]
+[60011, 60101, 61001] [1800630055, 1806035050, 1860530500]
+[63654, 64536, 64563] [2025884031, 2082415380, 2084158203]
+[67072, 67720, 70276] [2249293056, 2292965340, 2469322950]
+[75281, 78152, 87251] [2833576840, 3053828476, 3806324875]
+[77806, 86077, 87670] [3026847915, 3704581926, 3842970615]
+[80011, 80101, 81001] [3200840055, 3208045050, 3280540500]
+[89165, 89615, 95186] [3975154030, 4015379305, 4530139705]
+[96429, 96924, 99624] [4649227806, 4697082426, 4962420876]
+</pre><p>
+
+He also found this triple for n=4:<br>
+[913596, 919356, 969153] [29027034145968417206835, 29766020942103458487315, 36758302495182914427600]<p>
+
+<hr><font size=+2>2. Sums</font><p>
+
+<center><font size=+3>Binomial Sums</font></center>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td><sub>16</sub>C<sub>6</sub> = <sub>15</sub>C<sub>6</sub> + <sub>14</sub>C<sub>6</sub> <td>(MM)
+<tr align=center><td><sub>21</sub>C<sub>6</sub> = <sub>19</sub>C<sub>6</sub> + <sub>19</sub>C<sub>6</sub><td>(MM)
+<tr align=center><td><sub>200</sub>C<sub>4</sub> = <sub>190</sub>C<sub>4</sub> + <sub>132</sub>C<sub>4</sub><td>(EF)
+<tr align=center><td><sub>120</sub>C<sub>35</sub> = <sub>118</sub>C<sub>35</sub> + <sub>118</sub>C<sub>35</sub><td>(JD)
+<tr align=center><td><sub>105</sub>C<sub>40</sub> = <sub>104</sub>C<sub>40</sub> + <sub>103</sub>C<sub>40</sub><td>(JD)
+<tr align=center><td><sub>697</sub>C<sub>204</sub> = <sub>695</sub>C<sub>204</sub> + <sub>695</sub>C<sub>204</sub><td>(JD)
+<tr align=center><td><sub>715</sub>C<sub>273</sub> = <sub>714</sub>C<sub>273</sub> + <sub>713</sub>C<sub>273</sub><td>(JD)
+</table><p>
+
+Joe DeVincentis showed that there are 2 infinite families that arise from some Pell equations:<br>
+When 5r<sup>2</sup>-2r+1 is a square, n=(1+3r+&radic;(5r<sup>2</sup>-2r+1))/2 makes <sub>n</sub>C<sub>r</sub> = <sub>n-1</sub>C<sub>r</sub> + <sub>n-2</sub>C<sub>r</sub>.<br>
+When 8r<sup>2</sup>+1 is a square, n=(1+4r+&radic;(8r<sup>2</sup>+1))/2 makes <sub>n</sub>C<sub>r</sub> = <sub>n-2</sub>C<sub>r</sub> + <sub>n-2</sub>C<sub>r</sub>.<br>
+
+<hr><font size=+2>3. Products</font><p>
+
+<center><font size=+3>Binomial Products</font></center>
+<center><font size=+2>Tetrahedral</font></center>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td><sub>16</sub>C<sub>3</sub> = <sub>8</sub>C<sub>3</sub> &times; <sub>5</sub>C<sub>3</sub><td>(EF)
+<tr align=center><td><sub>50</sub>C<sub>3</sub> = <sub>16</sub>C<sub>3</sub> &times; <sub>7</sub>C<sub>3</sub><td>(EF)
+<tr align=center><td><sub>65</sub>C<sub>3</sub> = <sub>14</sub>C<sub>3</sub> &times; <sub>10</sub>C<sub>3</sub><td>(EF)
+<tr align=center><td><sub>176</sub>C<sub>3</sub> = <sub>30</sub>C<sub>3</sub> &times; <sub>12</sub>C<sub>3</sub><td>(EF)
+<tr align=center><td><sub>210</sub>C<sub>3</sub> = <sub>78</sub>C<sub>3</sub> &times; <sub>6</sub>C<sub>3</sub><td>(EF)
+<tr align=center><td><sub>352</sub>C<sub>3</sub> = <sub>65</sub>C<sub>3</sub> &times; <sub>11</sub>C<sub>3</sub><td>(EF)
+<tr align=center><td><sub>561</sub>C<sub>3</sub> = <sub>86</sub>C<sub>3</sub> &times; <sub>13</sub>C<sub>3</sub><td>(EF)
+<tr align=center><td><sub>2576</sub>C<sub>3</sub> = <sub>105</sub>C<sub>3</sub> &times; <sub>46</sub>C<sub>3</sub><td>(JP)
+<tr align=center><td><sub>5425</sub>C<sub>3</sub> = <sub>341</sub>C<sub>3</sub> &times; <sub>30</sub>C<sub>3</sub><td>(JP)
+<tr align=center><td><sub>11440</sub>C<sub>3</sub> = <sub>496</sub>C<sub>3</sub> &times; <sub>43</sub>C<sub>3</sub><td>(JP)
+</table><p>
+
+<center><font size=+2>Higher-Dimensional</font></center>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td><sub>28</sub>C<sub>4</sub> = <sub>15</sub>C<sub>4</sub> &times; <sub>6</sub>C<sub>4</sub><td>(EF)
+<tr align=center><td><sub>9</sub>C<sub>5</sub> = <sub>7</sub>C<sub>5</sub> &times; <sub>6</sub>C<sub>5</sub><td>(JP)
+<tr align=center><td><sub>16</sub>C<sub>11</sub> = <sub>14</sub>C<sub>11</sub> &times; <sub>12</sub>C<sub>11</sub><td>(JD)
+<tr align=center><td><sub>25</sub>C<sub>19</sub> = <sub>23</sub>C<sub>19</sub> &times; <sub>20</sub>C<sub>19</sub><td>(JD)
+<tr align=center><td><sub>36</sub>C<sub>29</sub> = <sub>34</sub>C<sub>219</sub> &times; <sub>30</sub>C<sub>29</sub><td>(JD)
+<tr align=center><td><sub>50</sub>C<sub>34</sub> = <sub>47</sub>C<sub>34</sub> &times; <sub>35</sub>C<sub>34</sub><td>(JD)
+</table><p>
+
+Joe DeVincentis showed that there is an infinite family that arise from a Pell equation:<br>
+When 4r+5 is a square, n=(3+2r-&radic;(4r+5))/2 makes <sub>n</sub>C<sub>r</sub> = <sub>r+1</sub>C<sub>r</sub> &times; <sub>n-2</sub>C<sub>r</sub>.<br>
+
+<hr><font size=+2>4. Printer Errors</font><p>
+
+<center><font size=+3>Binomial Printer Errors</font></center>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td>2 &times; 105 = 2<sub>15</sub>C<sub>2</sub> = 21<sub>5</sub>C<sub>2</sub> = 21 &times; 10
+</table><p>
+
+Joe DeVincentis did an extensive analysis to streamline the search, but did not discover any new solutions.<p>
+
+<hr><font size=+2>5. Concatenation</font><p>
+
+<center><font size=+3>Binomial Concatenations</font></center>
+<TABLE align=center cellpadding=10><TR><TD>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td><sub>6</sub>C<sub>4</sub> = 1,5<td>(EF)
+<tr align=center><td><sub>14</sub>C<sub>4</sub> = 1,0,0,1<td>(EF)
+<tr align=center><td><sub>25</sub>C<sub>4</sub> = 126,5,0<td>(EF)
+<tr align=center><td><sub>26</sub>C<sub>4</sub> = 1,495,0<td>(EF)
+<tr align=center><td><sub>1748</sub>C<sub>4</sub> = 3876,70,5,0,70,0,5<td>(EF)
+<tr align=center><td><sub>25</sub>C<sub>6</sub> = 1,7,7,1,0,0<td>(JP)
+<tr align=center><td><sub>16</sub>C<sub>8</sub> = 1287,0<td>(EF)
+<tr align=center><td><sub>10</sub>C<sub>9</sub> = 1,0<td>(EF)
+<tr align=center><td><sub>29</sub>C<sub>9</sub> = 10,0,1,5005<td>(EF)
+<tr align=center><td><sub>11</sub>C<sub>10</sub> = 1,1<td>(JP)
+<tr align=center><td><sub>14</sub>C<sub>10</sub> = 1,0,0,1<td>(JP)
+<tr align=center><td><sub>21</sub>C<sub>14</sub> = 11628,0<td>(JP)
+<tr align=center><td><sub>20</sub>C<sub>18</sub> = 19,0<td>(JP)
+<tr align=center><td><sub>25</sub>C<sub>22</sub> = 23.0,0<td>(JP)
+<tr align=center><td><sub>30</sub>C<sub>27</sub> = 406,0<td>(JP)
+<tr align=center><td><sub>40</sub>C<sub>27</sub> = 1203322288,0<td>(JP)
+<tr align=center><td><sub>40</sub>C<sub>36</sub> = 9139,0<td>(JP)
+<tr align=center><td><sub>50</sub>C<sub>45</sub> = 211876,0<td>(JP)
+<tr align=center><td><sub>60</sub>C<sub>54</sub> = 5006386,0<td>(JP)
+<tr align=center><td><sub>70</sub>C<sub>63</sub> = 119877472,0<td>(JP)
+<tr align=center><td><sub>80</sub>C<sub>72</sub> = 2898753715,0<td>(JP)
+<tr align=center><td><sub>78</sub>C<sub>75</sub> = 76,0,76<td>(JP)
+<tr align=center><td><sub>90</sub>C<sub>81</sub> = 70625252863,0<td>(JP)
+<tr align=center><td><sub>100</sub>C<sub>90</sub> = 1731030945644,0<td>(JP)
+</table><p>
+<TD>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td><sub>100</sub>C<sub>99</sub> = 1,0,0<td>(JP)
+<tr align=center><td><sub>101</sub>C<sub>100</sub> = 1,0,1<td>(JP)
+<tr align=center><td><sub>110</sub>C<sub>99</sub> = 42634215112710,0<td>(JD)
+<tr align=center><td><sub>110</sub>C<sub>109</sub> = 1,1,0<td>(JP)
+<tr align=center><td><sub>111</sub>C<sub>110</sub> = 1,1,1<td>(JP)
+<tr align=center><td><sub>120</sub>C<sub>108</sub> = 1054285955968882,0<td>(JD)
+<tr align=center><td><sub>130</sub>C<sub>117</sub> = 26159486052576800,0<td>(JD)
+<tr align=center><td><sub>140</sub>C<sub>126</sub> = 650961395024165664,0<td>(JD)
+<tr align=center><td><sub>142</sub>C<sub>140</sub> = 1,0,0,1,1<td>(JP)
+<tr align=center><td><sub>200</sub>C<sub>198</sub> = 199,0,0<td>(JD)
+<tr align=center><td><sub>300</sub>C<sub>297</sub> = 44551,0,0<td>(JD)
+<tr align=center><td><sub>400</sub>C<sub>396</sub> = 10507399,0,0<td>(JD)
+<tr align=center><td><sub>500</sub>C<sub>495</sub> = 2552446876,0,0<td>(JD)
+<tr align=center><td><sub>600</sub>C<sub>594</sub> = 631952326369,0,0<td>(JD)
+<tr align=center><td><sub>700</sub>C<sub>693</sub> = 158557355818786,0,0<td>(JD)
+<tr align=center><td><sub>800</sub>C<sub>792</sub> = 40174579682804359,0,0<td>(JD)
+<tr align=center><td><sub>1000</sub>C<sub>999</sub> = 1,0,0,0<td>(JD)
+<tr align=center><td><sub>1001</sub>C<sub>1000</sub> = 1,0,0,1<td>(JD)
+<tr align=center><td><sub>1010</sub>C<sub>1009</sub> = 1,0,1,0<td>(JD)
+<tr align=center><td><sub>1011</sub>C<sub>1010</sub> = 1,0,1,1<td>(JD)
+<tr align=center><td><sub>1100</sub>C<sub>1099</sub> = 1,1,0,0<td>(JD)
+<tr align=center><td><sub>1101</sub>C<sub>1100</sub> = 1,1,0,1<td>(JD)
+<tr align=center><td><sub>1110</sub>C<sub>1109</sub> = 1,1,1,0<td>(JD)
+<tr align=center><td><sub>1111</sub>C<sub>1110</sub> = 1,1,1,1<td>(JD)
+</table><p>
+</TABLE>
+
+<hr><font size=+2>6. Factorials</font><p>
+
+<center><font size=+3>Shortest-Known Binomial Factorials</font></center>
+<TABLE align=center cellpadding=10><TR><TD>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td>3! = <sub>4</sub>C<sub>2</sub><td>(EF)
+<tr align=center><td>5! = <sub>10</sub>C<sub>3</sub><td>(EF)
+<tr align=center><td>6! = <sub>10</sub>C<sub>3</sub> &times; <sub>4</sub>C<sub>2</sub><td>(EF)
+<tr align=center><td>7! = <sub>10</sub>C<sub>5</sub> &times; <sub>6</sub>C<sub>3</sub><td>(EF)
+<tr align=center><td>8! = <sub>64</sub>C<sub>2</sub> &times; <sub>6</sub>C<sub>3</sub><td>(EF)
+<tr align=center><td>9! = <sub>10</sub>C<sub>3</sub> &times; <sub>9</sub>C<sub>3</sub> &times; <sub>9</sub>C<sub>2</sub><td>(EF)
+<tr align=center><td>10! = <sub>10</sub>C<sub>5</sub> &times; <sub>10</sub>C<sub>3</sub> &times; <sub>10</sub>C<sub>3</sub><td>(EF)
+<tr align=center><td>11! = <sub>33</sub>C<sub>2</sub> &times; <sub>25</sub>C<sub>2</sub> &times; <sub>10</sub>C<sub>5</sub><td>(EF)
+<tr align=center><td>12! = <sub>64</sub>C<sub>2</sub> &times; <sub>25</sub>C<sub>2</sub> &times; <sub>12</sub>C<sub>5</sub><td>(EF)
+<tr align=center><td>13! = <sub>33</sub>C<sub>2</sub> &times; <sub>28</sub>C<sub>5</sub> &times; <sub>10</sub>C<sub>3</sub><td>(EF)
+<tr align=center><td>14! = <sub>65</sub>C<sub>3</sub> &times; <sub>64</sub>C<sub>2</sub> &times; <sub>45</sub>C<sub>2</sub><td>(EF)
+<tr align=center><td>15! = <sub>81</sub>C<sub>2</sub> &times; <sub>66</sub>C<sub>4</sub> &times; <sub>16</sub>C<sub>3</sub><td>(EF)
+<tr align=center><td>16! = <sub>8</sub>C<sub>4</sub> &times; <sub>64</sub>C<sub>2</sub> &times; <sub>81</sub>C<sub>3</sub> &times; <sub>66</sub>C<sub>3</sub><td>(JP)
+<tr align=center><td>17! = <sub>4096</sub>C<sub>2</sub> &times; <sub>100</sub>C<sub>2</sub> &times; <sub>18</sub>C<sub>5</sub><td>(JR)
+<tr align=center><td>18! = <sub>4096</sub>C<sub>2</sub> &times; <sub>1701</sub>C<sub>2</sub> &times; <sub>33</sub>C<sub>2</sub><td>(JR)
+<tr align=center><td>19! = <sub>2432</sub>C<sub>3</sub> &times; <sub>225</sub>C<sub>2</sub> &times; <sub>64</sub>C<sub>2</sub><td>(JR)
+<tr align=center><td>20! = <sub>36</sub>C<sub>5</sub> &times; <sub>513</sub>C<sub>2</sub> &times; <sub>10</sub>C<sub>5</sub> &times; <sub>625</sub>C<sub>2</sub><td>(JP)
+<tr align=center><td>21! = <sub>4096</sub>C<sub>2</sub> &times; <sub>225</sub>C<sub>2</sub> &times; <sub>81</sub>C<sub>2</sub> &times; <sub>22</sub>C<sub>6</sub><td>(JR)
+<tr align=center><td>22! = <sub>4096</sub>C<sub>2</sub> &times; <sub>1216</sub>C<sub>2</sub> &times; <sub>56</sub>C<sub>3</sub> &times; <sub>35</sub>C<sub>3</sub><td>(JR)
+<tr align=center><td>23! = <sub>4096</sub>C<sub>2</sub> &times; <sub>385</sub>C<sub>2</sub> &times; <sub>460</sub>C<sub>2</sub> &times; <sub>57</sub>C<sub>4</sub><td>(JR)
+</table><p>
+<TD>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td>24! = <sub>4096</sub>C<sub>2</sub> &times; <sub>1540</sub>C<sub>2</sub> &times; <sub>576</sub>C<sub>2</sub> &times; <sub>36</sub>C<sub>5</sub><td>(JR)
+<tr align=center><td>25! = <sub>165376</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>2025</sub>C<sub>2</sub> &times; <sub>12</sub>C<sub>2</sub><td>(JR)
+<tr align=center><td>26! = <sub>21505</sub>C<sub>2</sub> &times; <sub>4375</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>209</sub>C<sub>2</sub><td>(JR)
+<tr align=center><td>27! = <sub>76545</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>2376</sub>C<sub>2</sub> &times; <sub>561</sub>C<sub>2</sub><td>(JR)
+<tr align=center><td>28! = <sub>4375</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>24</sub>C<sub>10</sub> &times; <sub>22</sub>C<sub>2</sub><td>(JR)
+<tr align=center><td>29! = <sub>165376</sub>C<sub>2</sub> &times; <sub>76545</sub>C<sub>2</sub> &times; <sub>7425</sub>C<sub>2</sub> &times; <sub>16</sub>C<sub>6</sub><td>(JR)
+<tr align=center><td>30! = <sub>4096</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>2025</sub>C<sub>2</sub> &times; <sub>1701</sub>C<sub>6</sub> &times; <sub>1596</sub>C<sub>2</sub><td>(JR)
+<tr align=center><td>31! = <sub>3301376</sub>C<sub>2</sub> &times; <sub>20736</sub>C<sub>2</sub> &times; <sub>1216</sub>C<sub>2</sub> &times; <sub>136</sub>C<sub>2</sub> &times; <sub>46</sub>C<sub>2</sub><td>(JR)
+<tr align=center><td>32! = <sub>4375</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>36</sub>C<sub>5</sub> &times; <sub>33</sub>C<sub>15</sub><td>(JR)
+<tr align=center><td>33! = <sub>42688</sub>C<sub>2</sub> &times; <sub>2376</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>9801</sub>C<sub>2</sub><td>(JR)
+<tr align=center><td>34! = <sub>165376</sub>C<sub>2</sub> &times; <sub>13312</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>3565</sub>C<sub>2</sub> &times; <sub>3025</sub>C<sub>2</sub><td>(JR)
+<tr align=center><td>35! = <sub>165376</sub>C<sub>2</sub> &times; <sub>76545</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>3025</sub>C<sub>2</sub> &times; <sub>35</sub>C<sub>7</sub><td>(JR)
+<tr align=center><td>36! = <sub>176001</sub>C<sub>2</sub> &times; <sub>76545</sub>C<sub>2</sub> &times; <sub>6480</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>385</sub>C<sub>2</sub> &times; <sub>36</sub>C<sub>2</sub><td>(JR)
+<tr align=center><td>37! = <sub>33264</sub>C<sub>2</sub> &times; <sub>21505</sub>C<sub>2</sub> &times; <sub>4375</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>2432</sub>C<sub>3</sub> &times; <sub>16</sub>C<sub>3</sub><td>(JR)
+<tr align=center><td>38! = <sub>78337</sub>C<sub>2</sub> &times; <sub>20736</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>3025</sub>C<sub>2</sub> &times; <sub>1702</sub>C<sub>3</sub> &times; <sub>225</sub>C<sub>2</sub><td>(JR)
+<tr align=center><td>39! = <sub>2598400</sub>C<sub>2</sub> &times; <sub>303601</sub>C<sub>2</sub> &times; <sub>123201</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>64</sub>C<sub>2</sub> &times; <sub>56</sub>C<sub>3</sub><td>(JR)
+<tr align=center><td>40! = <sub>165376</sub>C<sub>2</sub> &times; <sub>76545</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>3025</sub>C<sub>2</sub> &times; <sub>40</sub>C<sub>17</sub> &times; <sub>34</sub>C<sub>3</sub><td>(JR)
+<tr align=center><td>41! = <sub>10491040</sub>C<sub>2</sub> &times; <sub>282625</sub>C<sub>2</sub> &times; <sub>15873</sub>C<sub>2</sub> &times; <sub>9801</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>25</sub>C<sub>2</sub><td>(JR)
+<tr align=center><td>42! = <sub>1048576</sub>C<sub>2</sub> &times; <sub>2893401</sub>C<sub>2</sub> &times; <sub>244036</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>441</sub>C<sub>2</sub> &times; <sub>225</sub>C<sub>2</sub><td>(JR)
+<tr align=center><td>43! = <sub>36315136</sub>C<sub>2</sub> &times; <sub>18113536</sub>C<sub>2</sub> &times; <sub>176001</sub>C<sub>2</sub> &times; <sub>4096</sub>C<sub>2</sub> &times; <sub>351</sub>C<sub>2</sub> &times; <sub>8</sub>C<sub>4</sub><td>(JR)
+</table><p>
+</TABLE>
+
+
+
+<hr><font size=+2>7. Mountains</font><p>
+
+<center><font size=+3>Infinite Families of Mountains</font></center>
+<center><font size=+2>Triangular</font></center>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td><sub>10(0)</sub>C<sub>2</sub>=4(9)5(0)<td>(EF)
+<tr align=center><td><sub>10(6)7</sub>C<sub>2</sub>=56(8)71(1)<td>(EF)
+<tr align=center><td><sub>1(3)4</sub>C<sub>2</sub>=(8)91(1)<td>(EF)
+<tr align=center><td><sub>160(0)</sub>C<sub>2</sub>=127(9)20(0)<td>(EF)
+<tr align=center><td><sub>1(6)7</sub>C<sub>2</sub>=13(8)6(1)<td>(EF)
+<tr align=center><td><sub>2(0)</sub>C<sub>2</sub>=1(9)(0)<td>(EF)
+<tr align=center><td><sub>22(6)7</sub>C<sub>2</sub>=256(8)51(1)<td>(EF)
+<tr align=center><td><sub>2600(0)</sub>C<sub>2</sub>=337(9)8700(0)<td>(EF)
+<tr align=center><td><sub>2(6)7</sub>C<sub>2</sub>=35(5)1(1)<td>(EF)
+<tr align=center><td><sub>2(6)8</sub>C<sub>2</sub>=3(5)7(7)8<td>(EF)
+<tr align=center><td><sub>300(0)</sub>C<sub>2</sub>=44(9)850(0)<td>(EF)
+<tr align=center><td><sub>(3)4</sub>C<sub>2</sub>=(5)6(1)<td>(EF)
+<tr align=center><td><sub>3400(0)</sub>C<sub>2</sub>=577(9)8300(0)<td>(EF)
+<tr align=center><td><sub>40(0)</sub>C<sub>2</sub>=7(9)80(0)<td>(EF)
+<tr align=center><td><sub>500(0)</sub>C<sub>2</sub>=124(9)750(0)<td>(EF)
+<tr align=center><td><sub>5400(0)</sub>C<sub>2</sub>=1457(9)7300(0)<td>(EF)
+<tr align=center><td><sub>5600(0)</sub>C<sub>2</sub>=1567(9)7200(0)<td>(EF)
+<tr align=center><td><sub>60(0)</sub>C<sub>2</sub>=17(9)0(0)<td>(EF)
+<tr align=center><td><sub>(6)7</sub>C<sub>2</sub>=2(2)1(1)<td>(EF)
+<tr align=center><td><sub>(6)71</sub>C<sub>2</sub>=2(2)4(7)85<td>(JP)
+<tr align=center><td><sub>(6)8</sub>C<sub>2</sub>=2(2)(7)8<td>(EF)
+<tr align=center><td><sub>(6)684</sub>C<sub>2</sub>=2(2)33(4)586<td>(JP)
+<tr align=center><td><sub>(6)686</sub>C<sub>2</sub>=2(2)34(7)955<td>(JP)
+<tr align=center><td><sub>(6)9</sub>C<sub>2</sub>=(2)3(4)6<td>(EF)
+<tr align=center><td><sub>68(6)67</sub>C<sub>2</sub>=2357(5)4411(1)<td>(JP)
+<tr align=center><td><sub>700(0)</sub>C<sub>2</sub>=244(9)650(0)<td>(EF)
+<tr align=center><td><sub>74(6)67</sub>C<sub>2</sub>=2787(5)4311(1)<td>(JP)
+<tr align=center><td><sub>8(6)7</sub>C<sub>2</sub>=37(5)41(1)<td>(EF)
+</table><p>
+
+<center><font size=+2>Tetrahedral</font></center>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td><sub>1(0)1</sub>C<sub>3</sub>=16(66)5(0)
+<tr align=center><td><sub>14(0)1</sub>C<sub>3</sub>=4573(33)10(0)
+<tr align=center><td><sub>2(0)1</sub>C<sub>3</sub>=133(33)0(0)
+<tr align=center><td><sub>3(0)1</sub>C<sub>3</sub>=449(99)5(0)
+<tr align=center><td><sub>42(0)1</sub>C<sub>3</sub>=123479(99)0(0)
+<tr align=center><td><sub>6(0)1</sub>C<sub>3</sub>=3599(99)0(0)
+<tr align=center><td><sub>8(0)1</sub>C<sub>3</sub>=853(33)20(0)
+<tr align=center><td><sub>88(0)1</sub>C<sub>3</sub>=113578(66)520(0)
+</table><p>
+
+<center><font size=+2>Largest-Known Non-Trivial Binomial Mountains</font></center>
+<table align=center border=1 cellpadding=5 bgcolor=FFFFDD>
+<tr align=center><td><sub>130</sub>C<sub>4</sub>=11358880
+<tr align=center><td><sub>145</sub>C<sub>4</sub>=17666220
+<tr align=center><td><sub>50</sub>C<sub>7</sub>=99884400
+<tr align=center><td><sub>51</sub>C<sub>7</sub>=115775100
+<tr align=center><td><sub>434</sub>C<sub>4</sub>=1457898876
+<tr align=center><td><sub>38</sub>C<sub>16</sub>=22239974430
+</table><p>
+
+Jon Palin suggested we also look for valleys.<p>
+
+<hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 10/1/11.<font>
+
+</BODY></HTML>

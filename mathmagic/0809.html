@@ -1,0 +1,570 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month<br>(August 2009)</H1></CENTER>
+
+This month we investigate three problems involving products.<p>
+
+<font size=+2>1.</font> Consider rectangular grids of digits where the product of the numbers in the rows is equal to the product of the numbers in the columns.  Since leading 0's should not exist and trailing 0's are less interesting, we only allow positive digits.  We also have excluded grids that contain multiple copies of the same factor.  We call these <b>multiplicative grids</b>.  Can you find some multiplicative grids?<p>
+
+What about other bases?  What about non-rectangular grids?  What if each entry in the grid is k digits?<p><hr>
+
+<font size=+2>2.</font> Suppose k, m, and n are positive integers.  If we group the integers 1 through mn into m groups of n and multiply the numbers in each group, how close can the sum of k of these products be to the sum of the other m-k products?  For which k, m, and n can we achieve equality?  If not, how close can we get?<p><hr>
+
+<font size=+2>3.</font> For which integers n > 1 and m does the expression P = x<sup>n</sup> + x<sup>n-1</sup> + <sup>. . .</sup> + x<sup>2</sup> + x + m factor over the integers?  What infinite families are there?  Can you find any other polynomials of this form that factor over the integers without a linear factor, other than the ones below?<p>
+
+<P><hr color=black><p><center><h1>ANSWERS</h1></center>
+
+<font size=+2>1.</font> Here are the known small multiplicative grids:<p>
+
+<table align=center border=2 bgcolor=FFFFDD cellpadding=10><tr><td>
+<center><font size=+2>2 &times; 3</font><pre>
+135   156   194   567   576
+154   295   276   432   444
+</pre></center>
+</td></tr></table><p>
+
+<table align=center border=2 bgcolor=FFFFDD cellpadding=10><tr><td>
+<center><font size=+2>2 &times; 4</font><pre>
+1485   1584   1768   2368   2376
+1584   1485   2835   1743   1323
+
+2496   2736   2835   3828   5767
+2365   1281   1155   1798   3339
+</pre></center>
+</td></tr></table><p>
+
+<table align=center border=2 bgcolor=FFFFDD cellpadding=10><tr><td>
+<center><font size=+2>3 &times; 3</font><pre>
+114   117   118   118   119   124   124   126   128
+287   473   468   858   291   426   596   464   363
+325   328   385   245   648   285   285   414   646
+
+132   133   133   147   164   216   216   216   232
+426   597   774   561   852   319   322   567   621
+214   288   212   624   366   273   261   225   126
+
+234   234   246   323   324   342   342   342   357
+441   846   561   429   418   528   684   742   671
+336   228   525   216   264   235   183   148   624
+
+357   429   452   459   524   528   532   533   722
+836   738   982   891   364   442   522   663   468
+525   344   146   648   328   475   144   198   168
+
+819   842   844   846   917   918   918   954      
+896   526   926   936   339   552   588   642      
+222   213   223   323   311   238   295   364      
+</pre></center>
+</td></tr></table><p>
+
+<table align=center border=2 bgcolor=FFFFDD cellpadding=10><tr><td>
+<center><font size=+2>2 &times; 5</font><pre>
+25758   27594   27783   34596   35856
+14931   13794   11715   12138   14384
+
+56576   58548   63984   83776   96558
+14235   13612   11468   12798   16575
+</pre></center>
+</td></tr></table><p>
+
+<table align=center border=2 bgcolor=FFFFDD cellpadding=10><tr><td>
+<center><font size=+2>2 &times; 6</font><pre>
+   289836    
+   117369    
+(Brian Trial)
+</pre></center>
+</td></tr></table><p>
+
+<table align=center border=2 bgcolor=FFFFDD cellpadding=10><tr><td>
+<center><font size=+2>4 &times; 4</font><pre>
+    2424           5294     
+    2448           2642     
+    4433           8442     
+    4466           4721     
+(Brian Trial)  (Brian Trial)
+</pre></center>
+</td></tr></table><p>
+
+Here are the small multiplicative grids in other small bases:<p>
+<table align=center border=2 bgcolor=FFEEDD cellpadding=10><tr><td>
+<center><font size=+2>Base 9</font>
+<pre>
+168   187   385   388   556   671   736
+516   586   487   754   383   116   236
+
+2772   4366   4378   5454   5676   8545
+1124   1643   2855   1145   3122   1573
+
+125   125   125   127   127   147   147   164   214
+327   372   423   351   677   615   732   873   645
+421   416   325   552   416   578   514   376   126
+
+227   236   268   314   317   318   325   332   335
+516   783   772   428   376   336   565   512   673
+358   367   746   154   388   372   286   142   325
+
+448   456   516   626   628   633   754   846      
+578   862   325   428   818   831   683   712      
+748   436   261   372   252   134   376   372      
+
+13488   13776   68468
+11846   12655   25186
+</pre></center>
+</td></tr></table><p>
+
+<table align=center border=2 bgcolor=FFEEDD cellpadding=10><tr><td>
+<center><font size=+2>Base 8</font>
+<pre>
+156   167   174   252   455   536   671
+322   537   264   124   334   272   114
+
+3754   5574   7626   7746
+2327   2563   1231   3257
+
+114   117   124   127   127   146   214   237   242
+531   273   423   352   674   617   347   713   613
+142   512   266   564   416   522   223   375   166
+
+245   322   347   364   423   635   713   724   744
+733   416   671   776   572   454   221   733   743
+356   144   536   421   162   432   174   145   266
+
+37554   57646   67744
+13414   27775   16214
+</pre></center>
+</td></tr></table><p>
+
+<table align=center border=2 bgcolor=FFEEDD cellpadding=10><tr><td>
+<center><font size=+2>Base 7</font>
+<pre>
+366   2256   2525
+543   1452   1155
+
+114   114   125   213   215   216
+223   246   353   316   255   265
+263   312   426   143   366   444
+
+236   422   426   426   624      
+434   514   534   624   426      
+523   112   312   252   252      
+
+16665   22566
+31365   16665
+
+1133   1133   1146   1155   1155   1155   1155   1232
+2336   2453   1363   2163   3212   3663   6144   1352
+1146   1122   4116   2411   1642   2411   1163   1554
+
+1234   1236   1236   1243   1254   1254   1263   1336
+6655   1515   2334   1545   1445   3552   1232   2541
+1322   4221   3115   3266   5223   2556   4431   3651
+
+1344   1353   1353   1354   1364   1412   1425   1445
+3256   2264   2634   3514   2432   1665   1232   2512
+3114   3555   3225   3256   4653   1254   4452   4455
+
+1451   1454   1515   1533   1544   1614   1615   1624
+2464   2214   2532   3655   6312   4234   1122   1242
+1636   5236   1526   2365   2226   1126   3355   4653
+
+1626   1641   1661   1661   1663   2115   2145   2145
+3634   2563   5544   5634   4662   1144   1161   1443
+3115   1463   1361   1363   3564   1163   3222   3342
+
+2163   2214   2214   2226   2256   2256   2265   2316
+3413   1225   1452   5535   5156   5445   5244   1665
+1331   1323   1426   1212   2556   2661   2464   3131
+
+2332   2332   2332   2334   2354   2365   2442   2451
+1152   1464   1515   1124   4233   5332   2352   1135
+2655   2554   2262   5236   2541   3241   2334   3631
+
+2525   2533   2552   2562   2655   2664   3153   3162
+5522   2426   3142   2552   3131   3261   1611   1255
+1521   3232   2442   3614   6561   6464   2266   2343
+
+3234   3355   3362   3362   3414   3524   3531   3635
+1242   4365   5311   5445   3155   3354   2163   4465
+3516   3615   1215   1521   1323   2424   1463   4114
+
+4235   4252   4326   4356   4424   4436   4521   4545
+1545   3546   1416   6621   1131   6336   1532   3144
+4356   1513   4566   2642   4532   2365   1212   5412
+
+4631   4631   5142   5215   5351   5433   5445   5445
+2214   2664   2655   1416   2264   4252   3131   3216
+1553   1636   1133   1445   1551   1544   4133   4361
+
+5522   5654   5663   6135   6135   6226   6321   6336
+2525   2611   3531   3355   3432   4243   1215   2562
+1521   6645   4612   1225   1135   1221   1266   4462
+
+6415   6452   6531   6534   6633
+1122   5526   2266   4642   2144
+3355   1626   2134   2412   4521
+</pre></center>
+</td></tr></table><p>
+
+<table align=center border=2 bgcolor=FFEEDD cellpadding=10><tr><td>
+<center><font size=+2>Base 6</font>
+<pre>
+154   252   5424   132   235   514
+252   154   1144   415   451   241
+                   223   424   252
+
+1135   1143   1155   1225   1232   1243   1243   1244
+3352   1452   2443   4355   2352   1251   1544   2133
+1525   2314   3313   1552   1254   3412   3441   3121
+
+1342   1342   1441   1441   1512   1513   1544   1551
+2452   4445   1254   2541   1344   1344   3543   4335
+2124   1523   2512   1112   1443   2233   4233   1514
+
+1552   2125   2244   2541   3143   3315   3344   3552
+3552   1252   1412   3544   2124   1143   2152   3512
+2453   2242   4425   1443   1324   3424   4514   2544
+
+4334   4353   4515   5324   5424   5513   5532       
+1554   2132   5522   2421   2153   1315   1332       
+5424   4132   1144   2125   3525   2332   4222       
+</pre></center>
+</td></tr></table><p>
+
+<table align=center border=2 bgcolor=FFEEDD cellpadding=10><tr><td>
+<center><font size=+2>Base 5</font>
+<pre>
+344   2433   413   422   23443
+332   1314   224   322   13324
+             211   143        
+
+1124   1124   1224   1312   1314   1344   1433
+1342   4343   2141   1443   1232   4144   1411
+2141   1122   2123   1234   2334   3432   3441
+
+1441   1442   1443   1443   2241   2244   2431
+2442   2324   2421   3342   1314   4343   2142
+1342   3234   3443   3343   2123   2442   1342
+
+2442   3124   3212   3231   3322   3333   3342
+4343   1441   1144   1141   3423   2134   2234
+2244   2123   1312   1232   1111   3414   3234
+
+3432   3441   4141   4422                     
+4314   1444   1322   1434                     
+1423   3423   1124   3234                     
+</pre></center>
+</td></tr></table><p>
+
+<table align=center border=2 bgcolor=FFEEDD cellpadding=10><tr><td>
+<center><font size=+2>Base 4</font>
+<pre>
+1122   1331   3212     22332           132322    
+1221   2223   1332     11112           112123    
+1123   1312   1222     23212           123312    
+                   (Philip Mason)  (Philip Mason)
+</pre></center>
+</td></tr></table><p>
+
+<table align=center border=2 bgcolor=FFEEDD cellpadding=10><tr><td>
+<center><font size=+2>Base 3</font>
+<pre>
+     2212     
+     1212     
+     1221     
+(Philip Mason)
+</pre></center>
+</td></tr></table><p>
+
+<a href="mailto:">Philip Mason</a> also found some small multiplicative grids in bases <a href="0809/11.txt">11</a>, <a href="0809/12.txt">12</a>, <a href="0809/13.txt">13</a>, <a href="0809/14.txt">14</a>, <a href="0809/15.txt">15</a>, and <a href="0809/16.txt">16</a>.<p>
+
+
+
+Here are the multiplicative non-rectangular polyominoes with small area:<p>
+
+<table align=center border=2 bgcolor=FFDDDD cellpadding=10><tr><td>
+<center><font size=+2>Area 3</font><pre>
+1    1    2    4 
+64   95   65   98
+</pre></center>
+</td></tr></table><p>
+
+<table align=center border=2 bgcolor=FFDDDD cellpadding=10><tr><td>
+<center><font size=+2>Area 4</font><pre>
+ 1     1 
+288   448
+
+147   156   159   168   189   945
+ 2     2     3     3     4     2 
+<hr>24    28    37    93    96 
+ 28    48    48    15    48
+<hr>1     2     3     4     8  
+448   664   476   495   246
+
+168   195   264   495   567
+4     3     2     4     4  
+
+  1     1     1     3
+288   378   784   798
+</pre></center>
+</td></tr></table><p>
+
+<table align=center border=2 bgcolor=FFDDDD cellpadding=10><tr><td>
+<center><font size=+2>Area 5</font><pre>
+2      3   
+1764   4896
+<hr>154   189   273   372   492   544   588   648   675
+16    64    18    12    16    18    64    35    35 
+
+434   546
+ 12    25
+
+16    28    56    94 
+448   345   234   276
+<hr>7896   9765
+  4      2 
+<hr>366    498    648    984 
+  15     36     15     15
+<hr>164   432   618
+  9     1     2
+  2     6     4
+<hr> 1     1     1     2     2     4     6     9 
+264   495   945   165   684   198   285   147
+ 5     8     7     4     5     5     4     5 
+<hr>138   248   615
+ 4     6     2 
+ 5     5     3 
+
+ 1     1     1     1     2     2     3     4     6 
+ 6     6     8     8     4     6     7     9     7 
+324   784   345   465   186   178   288   328   128
+<hr>16    17    26    31    38    41 
+ 7     4     6     2     5     2 
+ 24    88    34    48    54    36
+
+55    61    66    71    72    77 
+ 9     2     9     4     1     4 
+ 48    24    35    28    63    85
+
+ 15    18    35    39    68
+ 4     6     3     6     6 
+24    12    16    14    13 
+<hr>1 7   1 8   2 1   2 3   2 4   3 8   4 2
+432   748   432   112   861   224   864
+
+4 6   4 7   6 9   7 8   8 1   8 2   8 7
+224   225   336   444   645   441   444
+
+126   144   184   329   336   344   348
+5 3   2 8   5 6   5 4   5 4   6 3   5 7
+
+594   644   644   663   693   748   855   861
+5 8   3 6   9 2   5 4   6 5   7 5   4 7   2 4
+<hr>
+16    19    28    37    63    92 
+ 49    23    46    46    74    36
+  8     8     9     9     2     4
+
+ 18    18    19    19    19    27    29    29
+24    32    36    54    72    14    54    81 
+7     6     8     7     6     8     8     7  
+
+ 36    38    39    57    58    76    78    87
+12    16    72    14    24    12    32    21 
+8     9     8     9     9     9     9     9  
+<hr>11    12    23    26    27    38    44    44    55 
+ 36    15    48    35    24    54    26    63    24
+ 2     6     5     7     9     5     9     2     8 
+
+61    62    63    72    77    88    99    99    99 
+ 24    15    12    14    22    44    21    43    66
+ 2     7     5     6     6     7     4     6     8 
+
+ 15    15    28    35    36    65    77    88    99
+24    62    14    26    21    12    22    44    66 
+ 4     4     5     4     5     4     6     7     8 
+
+ 1     2     2     2     2     3     6     6     8 
+77    13    36    63    88    12    26    38    36 
+ 64    45    44    11    65    45    34    45    45
+
+ 1     1     1     3     3     6     6     6     7     9 
+ 65    75    85    35    46    45    48    68    35    45
+39    35    77    16    15    48    18    13    15    35 
+</pre></center>
+</td></tr></table><p>
+
+Here are the small multiplicative grids when we allow some of the grid entries to be 2 digit numbers:<p>
+<table align=center border=2 bgcolor=FFDDFF cellpadding=10><tr><td>
+<center><font size=+2>2 &times; 2</font>
+<pre>
+ 1  3    1  3    1 6    1 9    2 4    2  7    3  9    4  1
+33 25   38 64   66 4   99 5   49 8   77 56   99 75   16 64
+
+ 4 9    8  3   12  4   16  6   19  9   21  7   24  9   49  9
+99 8   33 32   49 96   66 64   99 95   77 75   99 96   99 98
+</pre></center>
+</td></tr></table><p><hr>
+
+
+
+
+
+<font size=+2>2.</font> Here are the best known results.  When the left hand side and right hand side differ, the difference is given in red.<p>
+
+<table align=center border=1 bgcolor=lightyellow cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>n \ m<th>2<th>3
+
+<tr align=center><th bgcolor=DDFFDD>1
+<td>2 &asymp; 1 <font color=red>[1]
+<td>3 = 1 + 2
+
+<tr align=center><th bgcolor=DDFFDD>2
+<td>2&sdot;3 &asymp; 1&sdot;4 <font color=red>[2]
+<td>4&sdot;5 = 1&sdot;2 + 3&sdot;6
+
+<tr align=center><th bgcolor=DDFFDD>3
+<td>1&sdot;5&sdot;6 &asymp; 2&sdot;3&sdot;4 <font color=red>[6]
+<td>4&sdot;5&sdot;9 = 1&sdot;2&sdot;6 + 3&sdot;7&sdot;8
+
+<tr align=center><th bgcolor=DDFFDD>4
+<td>2&sdot;3&sdot;5&sdot;7 &asymp; 1&sdot;4&sdot;6&sdot;8 <font color=red>[18]
+<td>4&sdot;5&sdot;8&sdot;12 &asymp; 1&sdot;2&sdot;7&sdot;10 + 3&sdot;6&sdot;9&sdot;11 <font color=red>[2]
+
+<tr align=center><th bgcolor=DDFFDD>5
+<td>2&sdot;4&sdot;5&sdot;6&sdot;8 &asymp; 1&sdot;3&sdot;7&sdot;9&sdot;10 <font color=red>[30]
+<td>4&sdot;5&sdot;10&sdot;11&sdot;15 = 1&sdot;2&sdot;6&sdot;8&sdot;13 + 3&sdot;7&sdot;9&sdot;12&sdot;14
+
+<tr align=center><th bgcolor=DDFFDD>6
+<td>2&sdot;4&sdot;5&sdot;6&sdot;9&sdot;10 &asymp; 1&sdot;3&sdot;7&sdot;8&sdot;11&sdot;12 <font color=red>[576]
+<td>1&sdot;7&sdot;12&sdot;13&sdot;15&sdot;18 &asymp; 2&sdot;4&sdot;8&sdot;10&sdot;14&sdot;16 + 3&sdot;5&sdot;6&sdot;9&sdot;11&sdot;17 <font color=red>[10]</font><br>(Berend van der Zwaag)
+
+<tr align=center><th bgcolor=DDFFDD>7
+<td>2&sdot;4&sdot;6&sdot;7&sdot;8&sdot;10&sdot;11 &asymp; 1&sdot;3&sdot;5&sdot;9&sdot;12&sdot;13&sdot;14 <font color=red>[840]
+<td>2&sdot;4&sdot;8&sdot;16&sdot;17&sdot;18&sdot;20 &asymp; 1&sdot;5&sdot;9&sdot;10&sdot;13&sdot;15&sdot;21 + 3&sdot;6&sdot;7&sdot;11&sdot;12&sdot;14&sdot;19  <font color=red>[18]</font><br>(Berend van der Zwaag)
+
+<tr align=center><th bgcolor=DDFFDD>8
+<td>2&sdot;4&sdot;6&sdot;8&sdot;9&sdot;10&sdot;11&sdot;12 &asymp; 1&sdot;3&sdot;5&sdot;7&sdot;13&sdot;14&sdot;15&sdot;16 <font color=red>[24480]
+<td> 3&sdot;6&sdot;9&sdot;12&sdot;15&sdot;17&sdot;18&sdot;23 = 1&sdot;2&sdot;8&sdot;10&sdot;13&sdot;16&sdot;20&sdot;24 + 4&sdot;5&sdot;7&sdot;11&sdot;14&sdot;19&sdot;21&sdot;22<br>(Berend van der Zwaag)
+
+<tr align=center><th bgcolor=DDFFDD>9
+<td>2&sdot;4&sdot;5&sdot;7&sdot;8&sdot;10&sdot;14&sdot;15&sdot;17 &asymp; 1&sdot;3&sdot;6&sdot;9&sdot;11&sdot;12&sdot;13&sdot;16&sdot;18 <font color=red>[93696]
+
+<tr align=center><th bgcolor=DDFFDD>10
+<td>3&sdot;4&sdot;5&sdot;7&sdot;8&sdot;10&sdot;13&sdot;14&sdot;15&sdot;17 &asymp; 1&sdot;2&sdot;6&sdot;9&sdot;11&sdot;12&sdot;16&sdot;18&sdot;19&sdot;20 <font color=red>[800640]
+
+<tr align=center><th bgcolor=DDFFDD>11
+<td>4&sdot;5&sdot;6&sdot;7&sdot;9&sdot;10&sdot;11&sdot;12&sdot;14&sdot;15&sdot;16 &asymp; 1&sdot;2&sdot;3&sdot;8&sdot;13&sdot;17&sdot;18&sdot;19&sdot;20&sdot;21&sdot;22 <font color=red>[7983360]
+
+<tr align=center><th bgcolor=DDFFDD>12
+<td>3&sdot;5&sdot;6&sdot;7&sdot;8&sdot;10&sdot;12&sdot;14&sdot;16&sdot;17&sdot;18&sdot;19 &asymp; 1&sdot;2&sdot;4&sdot;9&sdot;11&sdot;13&sdot;15&sdot;20&sdot;21&sdot;22&sdot;23&sdot;24 <font color=red>[65318400]
+
+<tr align=center><th bgcolor=DDFFDD>13
+<td>1&sdot;2&sdot;4&sdot;8&sdot;10&sdot;16&sdot;17&sdot;19&sdot;20&sdot;22&sdot;23&sdot;24&sdot;25 &asymp; 3&sdot;5&sdot;6&sdot;7&sdot;9&sdot;11&sdot;12&sdot;13&sdot;14&sdot;15&sdot;18&sdot;21&sdot;26 <font color=red>[2286926400]
+
+</table><p>
+
+<table align=center border=1 bgcolor=lightyellow cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>n \ m<th>4<th>5
+<tr align=center><th bgcolor=DDFFDD>1
+<td>4 &asymp; 1 + 2 + 3 <font color=red>[2]</font>
+<br>1 + 4 = 2 + 3
+<td>5 &asymp; 1 + 2 + 3 + 4 <font color=red>[5]</font>
+<br>3 + 4 &asymp; 1 + 2 + 5 <font color=red>[1]
+
+<tr align=center><th bgcolor=DDFFDD>2
+<td>5&sdot;8 = 1&sdot;6 + 2&sdot;3 + 4&sdot;7
+<br>3&sdot;8 + 4&sdot;5 = 1&sdot;2 + 6&sdot;7
+<td>8&sdot;10 = 1&sdot;3 + 2&sdot;9 + 4&sdot;6 + 5&sdot;7
+<br>1&sdot;9 + 6&sdot;10 = 2&sdot;4 + 3&sdot;7 + 5&sdot;8
+
+<tr align=center><th bgcolor=DDFFDD>3
+<td>7&sdot;8&sdot;11 = 1&sdot;3&sdot;12 + 2&sdot;4&sdot;5 + 6&sdot;9&sdot;10
+<br>2&sdot;5&sdot;6 + 8&sdot;9&sdot;11 = 1&sdot;3&sdot;4 + 7&sdot;10&sdot;12
+<td>9&sdot;12&sdot;15 = 1&sdot;4&sdot;6 + 2&sdot;3&sdot;11 + 5&sdot;7&sdot;14 + 8&sdot;10&sdot;13
+<br>2&sdot;3&sdot;11 + 5&sdot;14&sdot;15 = 1&sdot;8&sdot;9 + 4&sdot;12&sdot;13 + 6&sdot;7&sdot;10
+
+<tr align=center><th bgcolor=DDFFDD>4
+<td>6&sdot;8&sdot;9&sdot;12 = 1&sdot;11&sdot;14&sdot;16 + 2&sdot;3&sdot;10&sdot;15 + 4&sdot;5&sdot;7&sdot;13
+<br>1&sdot;9&sdot;13&sdot;16 + 3&sdot;8&sdot;11&sdot;12 = 2&sdot;4&sdot;7&sdot;15 + 5&sdot;6&sdot;10&sdot;14
+<td>10&sdot;12&sdot;14&sdot;19 = 1&sdot;3&sdot;4&sdot;7 + 2&sdot;13&sdot;17&sdot;18 + 5&sdot;8&sdot;11&sdot;15 + 6&sdot;9&sdot;16&sdot;20
+<br>2&sdot;4&sdot;18&sdot;19 + 9&sdot;10&sdot;13&sdot;16 = 1&sdot;6&sdot;8&sdot;14 + 3&sdot;7&sdot;12&sdot;17 + 5&sdot;11&sdot;15&sdot;20
+
+<tr align=center><th bgcolor=DDFFDD>5
+<td>3&sdot;11&sdot;13&sdot;14&sdot;16 = 1&sdot;4&sdot;17&sdot;18&sdot;19 + 2&sdot;5&sdot;7&sdot;15&sdot;20 + 6&sdot;8&sdot;9&sdot;10&sdot;12
+<br>1&sdot;2&sdot;13&sdot;18&sdot;20 + 6&sdot;8&sdot;11&sdot;14&sdot;15 = 3&sdot;4&sdot;10&sdot;12&sdot;17 + 5&sdot;7&sdot;9&sdot;16&sdot;19
+<td>11&sdot;13&sdot;14&sdot;24&sdot;25 = 1&sdot;3&sdot;5&sdot;16&sdot;23 + 2&sdot;4&sdot;7&sdot;9&sdot;15 + 6&sdot;10&sdot;17&sdot;18&sdot;21 + 8&sdot;12&sdot;19&sdot;20&sdot;22
+<br>5&sdot;9&sdot;14&sdot;17&sdot;25 + 6&sdot;10&sdot;15&sdot;19&sdot;22 = 1&sdot;2&sdot;3&sdot;11&sdot;23 + 4&sdot;12&sdot;18&sdot;20&sdot;21 + 7&sdot;8&sdot;13&sdot;16&sdot;24
+
+<tr align=center><th bgcolor=DDFFDD>6
+<td>2&sdot;8&sdot;13&sdot;21&sdot;23&sdot;24 = 1&sdot;7&sdot;9&sdot;14&sdot;16&sdot;20 + 3&sdot;4&sdot;17&sdot;18&sdot;19&sdot;22 + 5&sdot;6&sdot;10&sdot;11&sdot;12&sdot;15
+<br>1&sdot;7&sdot;11&sdot;12&sdot;21&sdot;24 + 2&sdot;9&sdot;13&sdot;16&sdot;17&sdot;23 = 3&sdot;4&sdot;14&sdot;15&sdot;20&sdot;22 + 5&sdot;6&sdot;8&sdot;10&sdot;18&sdot;19
+
+</table><p>
+
+
+
+
+<table align=center border=1 bgcolor=lightyellow cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>n \ m<th>6<th>7
+<tr align=center><th bgcolor=DDFFDD>1
+<td>6 &asymp; 1 + 2 + 3 + 4 + 5 <font color=red>[9]</font>
+<br>5 + 6 &asymp; 1 + 2 + 3 + 4 <font color=red>[1]</font>
+<br>1 + 3 + 6 &asymp; 2 + 4 + 5 <font color=red>[1]
+<td>7 &asymp; 1 + 2 + 3 + 4 + 5 + 6 <font color=red>[14]</font>
+<br>6 + 7 &asymp; 1 + 2 + 3 + 4 + 5 <font color=red>[2]</font>
+<br>1 + 6 + 7 = 2 + 3 + 4 + 5
+
+<tr align=center><th bgcolor=DDFFDD>2
+<td>10&sdot;12 = 1&sdot;9 + 2&sdot;8 + 3&sdot;7 + 4&sdot;11 + 5&sdot;6
+<br>3&sdot;11 + 6&sdot;12 = 1&sdot;7 + 2&sdot;9 + 4&sdot;10 + 5&sdot;8
+<br>1&sdot;7 + 4&sdot;12 + 5&sdot;9 = 2&sdot;11 + 3&sdot;10 + 6&sdot;8
+<td>13&sdot;14 = 1&sdot;12 + 2&sdot;11 + 3&sdot;10 + 4&sdot;9 + 5&sdot;8 + 6&sdot;7
+<br>5&sdot;13 + 7&sdot;14 = 1&sdot;8 + 2&sdot;12 + 3&sdot;9 + 4&sdot;11 + 6&sdot;10
+<br>2&sdot;12 + 4&sdot;13 + 6&sdot;14 = 1&sdot;8 + 3&sdot;9 + 5&sdot;11 + 7&sdot;10
+
+<tr align=center><th bgcolor=DDFFDD>3
+<td>9&sdot;17&sdot;18 = 1&sdot;8&sdot;12 + 2&sdot;13&sdot;14 + 3&sdot;4&sdot;7 + 5&sdot;6&sdot;15 + 10&sdot;11&sdot;16
+<br>3&sdot;12&sdot;18 + 7&sdot;13&sdot;14 = 1&sdot;10&sdot;16 + 2&sdot;4&sdot;11 + 5&sdot;6&sdot;15 + 8&sdot;9&sdot;17
+<br>1&sdot;8&sdot;15 + 2&sdot;5&sdot;7 + 11&sdot;14&sdot;17 = 3&sdot;13&sdot;16 + 4&sdot;6&sdot;10 + 9&sdot;12&sdot;18
+<td>15&sdot;16&sdot;18 = 1&sdot;6&sdot;7 + 2&sdot;10&sdot;21 + 3&sdot;9&sdot;20 + 4&sdot;12&sdot;19 + 5&sdot;13&sdot;14 + 8&sdot;11&sdot;17
+<br>6&sdot;14&sdot;21 + 7&sdot;11&sdot;13 = 1&sdot;9&sdot;19 + 2&sdot;18&sdot;20 + 3&sdot;12&sdot;17 + 4&sdot;8&sdot;16 + 5&sdot;10&sdot;15
+<br>2&sdot;9&sdot;15 + 4&sdot;18&sdot;20 + 8&sdot;17&sdot;21 = 1&sdot;5&sdot;12 + 3&sdot;6&sdot;14 + 7&sdot;10&sdot;13 + 11&sdot;16&sdot;19
+
+<tr align=center><th bgcolor=DDFFDD>4
+<td>8&sdot;18&sdot;21&sdot;22 = 1&sdot;4&sdot;11&sdot;13 + 2&sdot;5&sdot;17&sdot;20 + 3&sdot;9&sdot;12&sdot;23 + 6&sdot;14&sdot;19&sdot;24 + 7&sdot;10&sdot;15&sdot;16
+<br>5&sdot;14&sdot;18&sdot;23 + 7&sdot;10&sdot;15&sdot;20 = 1&sdot;6&sdot;8&sdot;21 + 2&sdot;4&sdot;13&sdot;24 + 3&sdot;12&sdot;17&sdot;19 + 9&sdot;11&sdot;16&sdot;22
+<br>3&sdot;6&sdot;9&sdot;20 + 4&sdot;5&sdot;7&sdot;19 + 11&sdot;14&sdot;16&sdot;22 = 1&sdot;12&sdot;13&sdot;23 + 2&sdot;10&sdot;18&sdot;21 + 8&sdot;15&sdot;17&sdot;24
+</table><p>
+
+<a href="mailto:mathidentity@yahoo.com">Bryce Herdt</a>, noted that sometimes we can do better with mn consecutive positive integers if we don't use 1 through mn, such as 2&sdot;5&sdot;7 &asymp; 3&sdot;4&sdot;6 <font color=red>[2]</font> and 3&sdot;5&sdot;9&sdot;10 &asymp; 4&sdot;6&sdot;7&sdot;8 <font color=red>[6]</font>.<p>
+
+
+<hr><font size=+2>3.</font> Here is what is known about the factorability of P = x<sup>n</sup> + x<sup>n-1</sup> + <sup>. . .</sup> + x<sup>2</sup> + x + m:<p>
+
+
+When m = &ndash; (k<sup>n</sup> + k<sup>n-1</sup> + <sup>. . .</sup> + k<sup>2</sup> + k), then there is a linear factor (x &ndash; k) of P.<p>
+
+As special cases of this:<p>
+
+<UL>
+<LI>When m = 0, then x is a factor of P.<p>
+<LI>When m = &ndash;n, then (x &ndash; 1) is a factor of P.<p>
+<LI>When n = 2 and m = &ndash;k(k + 1), then P factors as (x + k)(x &ndash; k + 1).<p>
+</UL>
+
+Also, when m = 1 and (n+1) is composite, P factors since P is a factor of x<sup>n+1</sup> &ndash; 1.<p>
+
+Here are the known exceptional cases:<p>
+
+<table align=center border=1 bgcolor=DDFFFF cellpadding=10>
+<tr align=center><td>x<sup>7</sup> + x<sup>6</sup> + x<sup>5</sup> + x<sup>4</sup> + x<sup>3</sup> + x<sup>2</sup> + x &ndash; 2 = (x<sup>3</sup> + x &ndash; 1)(x<sup>4</sup> + x<sup>3</sup> + x + 2)
+<tr align=center><td>x<sup>13</sup> + x<sup>12</sup> + x<sup>11</sup> + <sup>. . .</sup> + x<sup>3</sup> + x<sup>2</sup> + x &ndash; 3 = (x<sup>3</sup> + x<sup>2</sup> &ndash; 1)(x<sup>10</sup> + x<sup>8</sup> + x<sup>7</sup> + 2x<sup>5</sup> + x<sup>3</sup> + 2x<sup>2</sup> &ndash; x + 3)
+<tr align=center><td>x<sup>4</sup> + x<sup>3</sup> + x<sup>2</sup> + x + 12 = (x<sup>2</sup> + 3x + 4)(x<sup>2</sup> &ndash; 2x + 3)
+<tr align=center><td>x<sup>8</sup> + x<sup>7</sup> + x<sup>6</sup> + x<sup>5</sup> + x<sup>4</sup> + x<sup>3</sup> + x<sup>2</sup> + x + 20 = (x<sup>4</sup> &ndash; x<sup>3</sup> + x<sup>2</sup> &ndash; 3x + 4)(x<sup>4</sup> + 2x<sup>3</sup> + 2x<sup>2</sup> + 4x + 5)
+<tr align=center><td>x<sup>10</sup> + x<sup>9</sup> + x<sup>8</sup> + <sup>. . .</sup> + x<sup>3</sup> + x<sup>2</sup> + x &ndash; 22 = (x<sup>2</sup> + x + 2)(x<sup>8</sup> &ndash; x<sup>6</sup> + 2x<sup>5</sup> + x<sup>4</sup> &ndash; 4x<sup>3</sup> + 3x<sup>2</sup> + 6x &ndash; 11)
+<tr align=center><td>x<sup>5</sup> + x<sup>4</sup> + x<sup>3</sup> + x<sup>2</sup> + x &ndash; 55 = (x<sup>2</sup> &ndash; x + 5)(x<sup>3</sup> + 2x<sup>3</sup> &ndash; 2x &ndash; 11)
+</table><p>
+
+Victor Miller gave this analysis: Consider a monic polynomial to have unknown coefficients, and use long division to find a factor with degree k with constant remainder m.  This gives k-1 equations in k unknowns, so there is some space curve that the coefficients satisfy.  If this is of genus > 1, by Falting's Theorem it will have only a finite number of rational points on the curve.  If this has genus 1, it might have an inifinite number of rational points, and if it has genus 0, it definitely does.  He calculates the curve has genus 0 for n=4 and k=2, genus 1 for n=5 and k=2, genus 2 for n=6 and k=2, genus 4 for n=6 and k=3, genus 4 for n=7 and k=2, and genus 11 for n=7 and k=3.<p>
+<p><hr color=black><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 8/1/09.<font></BODY></HTML>
+

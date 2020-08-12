@@ -1,0 +1,332 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1><CENTER><H1>Problem of the Month (December 2004)</H1></CENTER>
+There are lots of ways to tile a rectangle with squares.  But there are only 3 ways to do it so that the number of neighbors of each square is equal to its side length.  Can you prove that these are the only ways?<p>
+
+This month we generalize this problem to polyominoes.  Given a polyomino P, what rectangles can be tiled with various sized copies of P so that the scaling factor of each polyomino is equal to the number of (horizontally and vertically) adjacent copies of P?<p>
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Joe DeVincentis and Emilio Schiavi proved that there are only 3 neighborly tilings of squares.  Here's Emilio's proof:<p>
+
+In such a rectangle, the smallest tiling square must have size 1 or 2, since if a corner square has more than 2 neighbors, at least one of its neighbors must be smaller than size 3.  If the smallest square has side 1, this is only possible in a corner, and leads to the 1&times;2 rectangle.  If the smallest square has side 2, again these squares must be in the corners.  If these are the only squares we get the 4&times;4 rectangle. If not, a square between two of them must be bigger, so opposite corner squares must touch, and we get the 4&times;8 rectangle.<p>
+
+Clint Weaver found many new solutions.<p>
+
+Joe DeVincentis analyzed lots of cases of wrapping large rectangles with small ones, but didn't find any new tilings.<p>
+
+Here are the known neighborly tilings of various polyominoes:<p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/c1x2.gif">
+<td><img src="1204/c4x4.gif">
+<td><img src="1204/c4x8.gif">
+</tr><tr align=center>
+<td>1&times;2<td>4&times;4<td>4&times;8
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/d1x4.gif">
+<td><img src="1204/d2x2.gif">
+<td><img src="1204/d2x6.gif">
+<td><img src="1204/d2x10.gif">
+<td><img src="1204/d4x6.gif">
+<td><img src="1204/d4x8.gif">
+<td><img src="1204/d4x16.gif">
+<td><img src="1204/d7x12.gif">
+</tr><tr align=center>
+<td>1&times;4<td>2&times;2<td>2&times;6<td>2&times;10...<td>4&times;6<td>4&times;8<td>4&times;16<td>7&times;12
+</tr></table></center>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/d8x8.gif">
+<td><img src="1204/d18x54.gif">
+</tr><tr align=center>
+<td>8&times;8<td>18&times;54
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/e1x6.gif">
+<td><img src="1204/e2x3.gif">
+<td><img src="1204/e4x12.gif">
+<td><img src="1204/e4x24.gif">
+<td><img src="1204/e6x13.gif">
+</tr><tr align=center>
+<td>1&times;6<td>2&times;3<td>4&times;12<td>4&times;24<td>6&times;13... (CW)
+</tr></table></center>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/e8x12.gif">
+<td><img src="1204/e18x42.gif">
+</tr><tr align=center>
+<td>8&times;12<td>18&times;42
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/f2x3.gif">
+<td><img src="1204/f6x8.gif">
+<td><img src="1204/f6x17.gif">
+</tr><tr align=center>
+<td>2&times;3<td>6&times;8<td>6&times;17
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/g1x8.gif">
+<td><img src="1204/g2x4.gif">
+<td><img src="1204/g4x16.gif">
+<td><img src="1204/g4x32.gif">
+<td><img src="1204/g8x16.gif">
+</tr><tr align=center>
+<td>1&times;8<td>2&times;4<td>4&times;16<td>4&times;32<td>8&times;16
+</tr></table></center>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/g12x30.gif">
+<td><img src="1204/g12x54.gif">
+</tr><tr align=center>
+<td>12&times;30<td>12&times;54...
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/h8x8.gif">
+</tr><tr align=center>
+<td>8&times;8
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/i2x4.gif">
+<td><img src="1204/i8x8.gif">
+<td><img src="1204/i8x8b.gif">
+<td><img src="1204/i8x16.gif">
+<td><img src="1204/i12x22.gif">
+</tr><tr align=center>
+<td>2&times;4<td>8&times;8<td>8&times;8<td>8&times;16<td>12&times;22... (CW)
+</tr></table></center>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/i12x28.gif">
+<td><img src="1204/i16x24.gif">
+</tr><tr align=center>
+<td>12&times;28... (CW)<td>16&times;24
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/j1x10.gif">
+<td><img src="1204/j2x5.gif">
+<td><img src="1204/j4x20.gif">
+</tr><tr align=center>
+<td>1&times;10<td>2&times;5<td>4&times;20
+</tr></table></center>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/j4x40.gif">
+<td><img src="1204/j8x20.gif">
+</tr><tr align=center>
+<td>4&times;40<td>8&times;20
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/k2x5.gif">
+<td><img src="1204/k8x10.gif">
+</tr><tr align=center>
+<td>2&times;5<td>8&times;10
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/l2x5.gif">
+<td><img src="1204/l8x10.gif">
+</tr><tr align=center>
+<td>2&times;5<td>8&times;10
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/m2x6.gif">
+<td><img src="1204/m3x4.gif">
+<td><img src="1204/m8x12.gif">
+<td><img src="1204/m8x24.gif">
+<td><img src="1204/m12x13.gif">
+<td><img src="1204/m12x16.gif">
+<td><img src="1204/m12x17.gif">
+<td><img src="1204/m12x25.gif">
+<td><img src="1204/m12x26.gif">
+</tr><tr align=center>
+<td>2&times;6<td>3&times;4<td>8&times;12<td>8&times;24<td>12&times;13<td>12&times;16<td>12&times;17<td>12&times;25<td>12&times;26
+</tr></table></center>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/m12x33.gif">
+<td><img src="1204/m12x34.gif">
+<td><img src="1204/m12x35.gif">
+<td><img src="1204/m36x48.gif">
+</tr><tr align=center>
+<td>12&times;33<td>12&times;34<td>12&times;35...<td>36&times;48
+</tr></table></center>
+
+<P><img src="pixel.gif" width=1000 height=2><p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/n2x6.gif">
+<td><img src="1204/n8x12.gif">
+</tr><tr align=center>
+<td>2&times;6 (CW)<td>8&times;12 (CW)
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/o2x6.gif">
+<td><img src="1204/o3x4.gif">
+<td><img src="1204/o6x16.gif">
+<td><img src="1204/o8x12.gif">
+</tr><tr align=center>
+<td>2&times;6 (CW)<td>3&times;4 (CW)<td>6&times;16 (CW)<td>8&times;12 (CW)
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/p3x4.gif">
+<td><img src="1204/p6x16.gif">
+</tr><tr align=center>
+<td>3&times;4 (CW)<td>6&times;16 (CW)
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/q3x4.gif">
+<td><img src="1204/q8x12.gif">
+</tr><tr align=center>
+<td>3&times;4 (CW)<td>8&times;12 (CW)
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/r3x4.gif">
+<td><img src="1204/r8x12.gif">
+</tr><tr align=center>
+<td>3&times;4 (CW)<td>8&times;12 (CW)
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/s1x12.gif">
+<td><img src="1204/s2x6.gif">
+<td><img src="1204/s4x24.gif">
+</tr><tr align=center>
+<td>1&times;12<td>2&times;6<td>4&times;24
+</tr></table></center>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/s4x48.gif">
+<td><img src="1204/s8x24.gif">
+</tr><tr align=center>
+<td>4&times;48<td>8&times;24
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+Okay, this isn't a polyomino, but I couldn't resist trying isosceles right triangles:<p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/z1x1.gif">
+<td><img src="1204/zs2xs2.gif">
+<td><img src="1204/z4x4.gif">
+<td><img src="1204/z8x8.gif">
+</tr><tr align=center>
+<td>1&times;1<td>&radic;8x&radic;8<td>4&times;4<td>8&times;8
+</tr></table></center>
+
+<P><center><img src="pixel.gif" width=700 height=2></center><p>
+
+Jeremy Galvagni sent me several tilings of squares with lots of neighborly squares.<p>
+
+Emilio Schiavi, Claudio Baiocchi and I were convinced that the number of neighborly squares in a tiling of an n&times;n square grows no faster than (n/4 &ndash; 2)<sup>2</sup>, since the most efficient way to tile the interior of the square is by 4&times;4 neighborly squares.  Claudio Baiocchi pointed out that there are counterexamples for small n.<p>
+
+Sasha Ravsky managed to prove a slightly weaker bound: Let n &ge; 4. Fix a tiling of an n&times;n square. Let S<sub>2</sub> be the set of neighborly squares placed in the corners,
+let S<sub>3</sub> be the set of neighborly squares placed along the sides,
+and let S<sub>4</sub> be the set of all other neighborly squares.
+Each square from the set S<sub>i</sub> has a side at least i.
+So, we have: 4|S<sub>2</sub>|+9|S<sub>3</sub>|+16|S<sub>4</sub>| &le; n<sup>2</sup> (condition on the area), 
+4|S<sub>2</sub>|+ 3|S<sub>3</sub>| &le; 4n (condition on the perimeter), and
+|S<sub>2</sub>| &le; 4. (the square has four corners).  Combining these gives |S<sub>2</sub>|+|S<sub>3</sub>|+|S<sub>4</sub>| &le; (3n<sup>2</sup>+28n+32)/48.<p>
+
+<hr>
+
+Here are the most neighborly tilings of squares by squares:<p>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/a1.gif">
+<td><img src="1204/a2.gif">
+<td><img src="1204/a3.gif">
+<td><img src="1204/a4.gif">
+<td><img src="1204/a5.gif">
+<td><img src="1204/a6.gif">
+<td><img src="1204/a7.gif">
+<td><img src="1204/a8.gif">
+<td><img src="1204/a9.gif">
+<td><img src="1204/a10.gif">
+<td><img src="1204/a11.gif">
+<td><img src="1204/a12.gif">
+</tr><tr align=center>
+<td>0<td>0<td>0<td>4<td>1<td>4<td>4<td>4<td>5<td>6<td>6<td>8
+</tr></table></center>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/a13.gif">
+<td><img src="1204/a14.gif">
+<td><img src="1204/a15.gif">
+<td><img src="1204/a16.gif">
+<td><img src="1204/a17.gif">
+</tr><tr align=center>
+<td>8<td>9<td>12<td>16<td>12
+</tr></table></center>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/a18.gif">
+<td><img src="1204/a19.gif">
+<td><img src="1204/a20.gif">
+<td><img src="1204/a21.gif">
+</tr><tr align=center>
+<td>20<td>16<td>21<td>24
+</tr></table></center>
+
+<center><table cellpadding=5><tr valign=bottom>
+<td><img src="1204/a22.gif">
+<td><img src="1204/a23.gif">
+<td><img src="1204/a24.gif">
+</tr><tr align=center>
+<td>21<td>22<td>32
+</tr></table></center>
+
+Claudio Baiocchi remarked that cylinders, tori, M&ouml;bius strips, and Klein bottles have nice neighborly tilings without edge problems.  He also gave some lower bounds for the number of neighborly squares that would fit in a square.  If we let <b>N(n)</b> be the maximum number of neighborly squares that will fit inside an n&times;n square, he showed N(n) &ge; (n/4)<sup>2</sup> &ndash; 2n/3 + 4 for n=12m, N(n) &ge; (n/4)<sup>2</sup> &ndash; 5n/6 + 13/3 for n=12m+4, N(n) &ge; (n/4)<sup>2</sup> &ndash; 2n/3 + 16/3 for n=12m+8, and N(n) &ge; (n/4)<sup>2</sup> &ndash; 7n/12 + 41/4 for n=12m+18.  The tilings can be seen below.<p>
+
+<center><table cellpadding=10><tr><td>
+<img src="1204/Fig1.gif"><td>
+<img src="1204/Fig2.gif"><td>
+<img src="1204/Fig3.gif"><td>
+<img src="1204/Fig4.gif"></table></center>
+
+
+<p><hr>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 6/28/18.<font></BODY></HTML>

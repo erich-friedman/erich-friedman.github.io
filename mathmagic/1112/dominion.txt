@@ -1,0 +1,59 @@
+For this one, we need these cards:
+Throne Room: Action: Choose an Action card in your hand and play it twice. (cost 4)
+Masquerade: Action: +2 Cards, then each player passes a card from their hand to the left at once, then you may trash a card from your hand. (cost 3) [he doesn't have to trash a card]
+Council Room: Action: +4 Cards, +1 Buy, each other player draws a card. (cost 5)
+Pawn: Action: Choose two: +1 Card, +1 Action, +1 Buy, +1 Coin (the two must be different). (cost 2)
+Contraband: Treasure: +3 Coins, +1 Buy, When you play this card, the player to your left names a card. You can't buy that card this turn. (cost 5)
+Talisman: Treasure: +1 Coin, while this card is in play, when you buy a card costing 4 or less that is not a victory card, gain a copy of it. (cost 4)
+Peddler: Action: +1 Card, +1 Action, +1 Coin. During your Buy phase, this costs 2 less per Action card you have in play, but not less than 0. (cost 8 before the application of its rule)
+
+Player 1 buys Throne Room and Masquerade on his first two turns.
+Player 2 buys Council Room and Pawn on his first two turns.
+
+Turn 5
+Player 1 holds Throne Room, Masquerade, and 3 Coppers
+Player 2 holds Council Room, Pawn, 2 Coppers, and an Estate
+Player 1 plays Masquerade, draws 2 Coppers, passes a Throne Room to player 2 and receives an Estate, and trashes the Estate.
+Player 1 now holds 5 Coppers and plays them all to buy a Contraband.
+
+Turn 6
+Player 1 holds 2 Coppers and 3 Estates (deck empty, discard pile contains Masquerade, Contraband, 5 Copper)
+Player 2 holds Council Room, Pawn, 2 Coppers, and a Throne Room (discard empty, deck contains 5 Coppers and 2 Estates)
+Player 2 Plays Pawn, choosing +1 Coin and +1 Action.
+Player 2 plays Throne Room, and selects Council Room to be played twice. Player 2 draws all his remaining cards while player 1 reshuffles, then draws Masquerade and Contraband.
+Player 2 plays 7 Coppers, and has 8 Coins and 3 Buys. He buys 2 Talismans.
+
+Turn 7
+Player 1 holds 2 Coppers, 3 Estates, Masquerade, and Contraband (discard empty, deck contains 5 Copper)
+Player 2 holds Pawn, Throne Room, Council Room, and 2 Talismans (discard empty, deck contains 7 Coppers and 2 Estates)
+Player 1 plays Masquerade, draws 2 Coppers, passes an Estate, gets a Talisman, and trashes an Estate.
+Player 1 plays 4 Coppers, Talisman, and Contraband for a total of 8 Coins and 2 Buys.
+Player 2 names Province as the card he can't buy (for Contraband).
+Player 1 buys a Throne Room and a Talisman, and the Talisman triggers on each purchase to give him an extra copy of both.
+
+Turn 8
+Player 1 holds 3 Coppers and 2 Throne Rooms (the last two cards after a shuffle) (discard empty, deck contains 4 Coppers, 1 Estate, Masquerade, Contraband, 3 Talisman)
+Player 2 holds Pawn, Throne Room, Council Room, Talisman, Estate (discard empty, deck contains 7 Coppers and 2 Estates)
+Player 2 plays Pawn, choosing +1 Action and +1 Card, and draws an Estate.
+Player 2 plays Throne Room, and selects Council Room to be played twice. Player 2 draws all his remaining cards (7 Coppers and an Estate). Player 1 draws Masquerade and Contraband.
+Player 2 plays a Talisman and 7 Coppers.
+Player 2 buys a Throne Room and a Talisman, and the Talisman triggers on each purchase to give him an extra copy of both.
+
+Turn 9
+Player 1 holds 3 Coppers, 2 Throne Rooms, Masquerade, and Contraband. (discard empty, deck contains 4 Coppers, 1 Estate, 3 Talisman)
+Player 2 holds Council Room, 3 Talismans, and Throne Room (discard empty, deck contains Pawn, 3 Estates, 7 Coppers)
+Player 1 plays a Throne Room, selecting his other Throne Room to be played twice.
+To resolve the first of two copies of Throne Room, he chooses Masquerade to be played twice.
+For one Masquerade, he draws 2 Talismans, passes a Copper, and gets a Council Room.
+For the other Masquerade, he draws a Talisman and an Estate, passes the Estate, and gets a Talisman.
+To resolve the last Throne Room, he chooses Council Room to be played twice. He draws the rest of his deck (4 Coppers) and player 2 draws 2 Coppers.
+Player 1 plays 4 Talismans, 6 Coppers, and Contraband. Player 2 names Curse as the card he can't buy.
+Player 1 has 13 Coins (4 from Talsiman, 6 from Copper, 3 from Contraband) and 4 Buys (1 initial, 2 from Council Room, and 1 from Contraband).
+Player 1 buys a Throne Room. His 4 Talismans give him 4 more copies of it.
+Player 1 buys a Talisman. His 4 Talismans give him 3 more copies of it and fail on the 4th copy because the supply is empty.
+Player 1 has 4 action cards in play (2 Throne Room, Masquerade, and Council Room) so Peddler costs 0. He buys one, and his Talismans give him 4 more. Then he buys another Peddler, and his Talismans give him 4 more.
+
+The 10 Throne rooms were taken on turn 1, turn 7 (2), turn 8 (2), and turn 9 (5).
+The 10 Talismans were taken on turn 6 (2), turn 7 (2), turn 8 (2), and turn 9 (4).
+The 10 Peddlers were all taken on turn 9.
+So these stacks are depleted and the game is over.

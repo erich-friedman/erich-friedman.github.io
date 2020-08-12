@@ -1,0 +1,20 @@
+<HTML>
+<CENTER>n=5 players, N=7 games:</CENTER>
+<pre>
+A plays B.  call the winner A by symmetry.
+A plays C 
+IF A WINS, A plays D
+   IF A WINS, A plays E 4 times (A wins ties)
+   IF D WINS, A plays D twice more
+      IF SAME WINNER (say A) BOTH TIMES, 
+         A plays E twice (E loses ties)
+      IF DIFFERENT WINNERS, 
+         A plays E and winner plays D
+IF C WINS, A plays C again
+   IF A WINS, A plays C again
+      IF A WINS, A plays D, A plays E, winners play
+      IF C WINS, A plays D
+         IF A WINS, A plays E and winner plays C
+         IF D WINS, C plays E and winner plays D
+   IF C WINS, D plays E, and winner plays C best-of-3
+</pre>

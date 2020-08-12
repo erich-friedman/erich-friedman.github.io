@@ -1,0 +1,161 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+<CENTER><H1>Problem of the Month (January 2006)</H1></CENTER>
+
+In <a href="http://www.stetson.edu/~efriedma/mathmagic/0802.html">August 2002</a>, we searched for Partridge Tilings of squares and other shapes.  This month we generalize and look for <b>Sub-Partridge Tilings</b>.  We say there is a {a<sub>1</sub>, a<sub>2</sub>, ... a<sub>n</sub>} tiling if we can tile a rectangle with  a<sub>1</sub> squares of side a<sub>1</sub>, a<sub>2</sub> squares of side a<sub>2</sub>, . . . and a<sub>n</sub> squares of side a<sub>n</sub>.  For example, a {4,6,8,10} tiling is shown below.  What sub-partridge tilings exist?<p>
+
+<center><img src="0106/4,6,8,10.gif"></center><p>
+
+We can also look for <b>Border Sub-Partridge Tilings</b>, a tiling of a rectangle with squares with a border of width 1 around each square.  For example, a {1,3,4,5,7} border tiling is shown below.  What border sub-partridge tilings exist?
+
+<center><img src="0106/z1,3,4,5,7.gif"></center><p>
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Mike Reid proved three infinite families of sub-partridge tilings.  The first, is {4,8,12,...4n}, as shown by the following tiling:<p>
+
+<center><img src="0106/fig1.gif"></center><p>
+
+The second is {2,4,6,...2n}, as shown by the following tiling:<p>
+
+<center><img src="0106/fig2.gif"></center><p>
+
+The third is {4,8,24,60,...4F<sub>n</sub>F<sub>n+1</sub>} (where F<sub>n</sub> is the n<sup>th</sup> Fibonacci number), as shown by the following tiling:<p>
+
+<center><img src="0106/fig3.gif"></center><p>
+
+Jeremy Galvagni showed that {a<sup>2</sup>bc,ab<sup>2</sup>c} tilings exist.  He conjectured that these are the only sub-partridge tilings using only two sizes of squares.<p>
+
+Luke Pebody showed that this conjecture isn't true by finding the {35,70} tiling below.  He and Emilio Schiavi showed that an {n,2n} tiling does not exist precisely when n is an odd prime or n=1, 9, 15, 21, 25, 27, or 33.<p>
+
+<center><img src="0106/luke.gif"></center><p>
+
+Patrick Hamlyn found many sub-partridge tilings with his tiling program.<p>
+
+Patrick Hamlyn and Jeremy Galvagni noted that border tilings are equivalent to tiling n-1 copies of each square of side n without borders.<p>
+
+Claudio Baiocchi</a> notes that if there is a {a<sub>1</sub>, a<sub>2</sub>, . . . a<sub>n</sub>} tiling, then there is a {k a<sub>1</sub>, k a<sub>2</sub>, . . . k a<sub>n</sub>} tiling for every k, and that for every {a<sub>1</sub>, a<sub>2</sub>, . . . a<sub>n</sub>}, there exists some k so that there is a {k a<sub>1</sub>, k a<sub>2</sub>, . . . k a<sub>n</sub>} tiling.<p>
+
+
+<center><font size=+3>Known Sub-Partridge Tilings</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=5>
+<tr bgcolor=palegreen><th>Largest<br>Square<th>Number<br>of Sizes<th>Tilings
+
+<tr align=center><td>4<td>2<td><a href="0106/2,4.gif">{2,4}</a>
+
+<tr align=center><td>6<td>3<td><a href="0106/2,4,6.gif">{2,4,6}</a>
+
+<tr align=center><td rowspan=5>8<td>2<td><a href="0106/4,8.gif">{4,8}</a>
+<tr align=center><td>3<td><a href="0106/4,6,8.gif">{4,6,8}</a>
+<tr align=center><td>4<td><a href="0106/2,4,6,8.gif">{2,4,6,8}</a>
+<tr align=center><td>7<td><a href="0106/1,2,4,5,6,7,8.gif"><font color=red>{1,2,4,5,6,7,8}</a>, <a href="0106/2,3,4,5,6,7,8.gif"><font color=red>{2,3,4,5,6,7,8}</a>
+<tr align=center><td>8<td><a href="0106/1,2,3,4,5,6,7,8.gif">{1,2,3,4,5,6,7,8}</a>
+
+<tr align=center><td rowspan=5>9<td>2<td><a href="0106/3,9.gif">{3,9}</a>
+<tr align=center><td>6<td><a href="0106/4,5,6,7,8,9.gif"><font color=red>{4,5,6,7,8,9}</a>
+<tr align=center><td>7<td><a href="0106/2,3,5,6,7,8,9.gif"><font color=red>{2,3,5,6,7,8,9}</a>, <a href="0106/3,4,5,6,7,8,9.gif"><font color=red>{3,4,5,6,7,8,9}</a>
+<tr align=center><td>8<td><a href="0106/1,2,3,4,6,7,8,9.gif"><font color=red>{1,2,3,4,6,7,8,9}</a>, <a href="0106/1,2,3,5,6,7,8,9.gif"><font color=red>{1,2,3,5,6,7,8,9}</a>, <a href="0106/1,2,4,5,6,7,8,9.gif"><font color=red>{1,2,4,5,6,7,8,9}</a>, <a href="0106/2,3,4,5,6,7,8,9.gif"><font color=red>{2,3,4,5,6,7,8,9}</a>
+<tr align=center><td>9<td><a href="0106/1,2,3,4,5,6,7,8,9.gif">{1,2,3,4,5,6,7,8,9}</a>
+
+<tr align=center><td rowspan=3>10<td>4<td><a href="0106/4,6,8,10.gif">{4,6,8,10}</a>
+<tr align=center><td>5<td><a href="0106/2,4,6,8,10.gif">{2,4,6,8,10}</a>
+<tr align=center><td>10<td><a href="0106/1,2,3,4,5,6,7,8,9,10.gif">{1,2,3,4,5,6,7,8,9,10}</a>
+
+<tr align=center><td rowspan=2>11<td>8<td><a href="0106/1,2,4,5,6,7,8,11.gif"><font color=red>{1,2,4,5,6,7,8,11}</a>
+<tr align=center><td>11<td><a href="0106/1,2,3,4,5,6,7,8,9,10,11.gif">{1,2,3,4,5,6,7,8,9,10,11}</a>
+
+<tr align=center><td rowspan=6>12<td>2<td><a href="0106/6,12.gif">{6,12}</a>
+<tr align=center><td>3<td><a href="0106/4,8,12.gif">{4,8,12}</a>
+<tr align=center><td>4<td><a href="0106/3,6,9,12.gif">{3,6,9,12}</a>, <a href="0106/4,6,8,12.gif">{4,6,8,12}</a>, <a href="0106/6,8,10,12.gif">{6,8,10,12}</a>
+<tr align=center><td>5<td><a href="0106/4,6,8,10,12.gif"><font color=red>{4,6,8,10,12}</a>
+<tr align=center><td>11<td><a href="0106/1,2,3,4,5,6,7,8,9,10,12.gif"><font color=red>{1,2,3,4,5,6,7,8,9,10,12}</a>
+<tr align=center><td>12<td><a href="0106/1,2,3,4,5,6,7,8,9,10,11,12.gif">{1,2,3,4,5,6,7,8,9,10,11,12}</a>
+
+<tr align=center><td>13<td>13<td><a href="0106/1,2,3,4,5,6,7,8,9,10,11,12,13.gif">{1,2,3,4,5,6,7,8,9,10,11,12,13}</a>
+
+<tr align=center><td rowspan=2>14<td>4<td><a href="0106/6,8,12,14.gif">{6,8,12,14}</a>
+<tr align=center><td>14<td>{1,2,3,4,5,6,7,8,9,10,11,12,13,14}
+
+<tr align=center><td rowspan=3>15<td>3<td><a href="0106/5,10,15.gif">{5,10,15}</a>, <a href="0106/9,12,15.gif">{9,12,15}</a>
+<tr align=center><td>4<td><a href="0106/6,9,12,15.gif">{6,9,12,15}</a>
+<tr align=center><td>15<td>{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+
+<tr align=center><td rowspan=5>16<td>2<td><a href="0106/4,16.gif">{4,16}</a>, <a href="0106/8,16.gif">{8,16}</a>
+<tr align=center><td>3<td><a href="0106/4,8,16.gif">{4,8,16}</a>, <a href="0106/8,12,16.gif">{8,12,16}</a>
+<tr align=center><td>4<td><a href="0106/2,4,6,16.gif">{2,4,6,16}</a>, <a href="0106/4,8,12,16.gif">{4,8,12,16}</a>
+<tr align=center><td>8<td>{2,4,6,8,10,12,14,16}
+<tr align=center><td>16<td>{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16}
+
+<tr align=center><td>17<td>17<td>{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17}
+
+<tr align=center><td rowspan=4>18<td>2<td><a href="0106/6,18.gif">{6,18}</a>, <a href="0106/12,18.gif">{12,18}</a>
+<tr align=center><td>3<td><a href="0106/2,4,18.gif">{2,4,18}</a>, <a href="0106/4,8,18.gif">{4,8,18}</a>, <a href="0106/6,12,18.gif">{6,12,18}</a>
+<tr align=center><td>9<td>{2,4,6,8,10,12,14,16,18}
+<tr align=center><td>18<td>{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}
+
+<tr align=center><td>19<td>19<td>{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19}
+
+<tr align=center><td rowspan=6>20<td>2<td><a href="0106/10,20.gif">{10,20}</a>
+<tr align=center><td>3<td><a href="0106/10,15,20.gif">{10,15,20}</a>, <a href="0106/12,16,20.gif">{12,16,20}</a>
+<tr align=center><td>4<td>{8,12,16,20}
+<tr align=center><td>5<td>{4,8,12,16,20}
+<tr align=center><td>10<td>{2,4,6,8,10,12,14,16,18,20}
+<tr align=center><td>20<td> {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}
+
+</table>
+<font color=red>Patrick Hamlyn</font>
+</center><p>
+
+
+<center><font size=+3>Known Border Sub-Partridge Tilings</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=5>
+<tr bgcolor=palegreen><th>Largest<br>Square<th>Number<br>of Sizes<th>Tilings
+
+<tr align=center><td>5<td>2<td><a href="0106/z2,5.gif">{2,5}</a>
+
+<tr align=center><td rowspan=2>7<td>5<td><a href="0106/z1,3,4,5,7.gif">{1,3,4,5,7}</a>
+<tr align=center><td>6<td><a href="0106/z2,3,4,5,6,7.gif"><font color=red>{2,3,4,5,6,7}</a>
+
+<tr align=center><td rowspan=2>8<td>7<td><a href="0106/z2,3,4,5,6,7,8.gif"><font color=red>{2,3,4,5,6,7,8}</a>
+<tr align=center><td>8<td><a href="0106/z1,2,3,4,5,6,7,8.gif"><font color=red>{1,2,3,4,5,6,7,8}</a>
+
+<tr align=center><td rowspan=6>9<td>2<td><a href="0106/z4,9.gif">{4,9}</a>, <a href="0106/z5,9.gif">{5,9}</a>
+<tr align=center><td>3<td><a href="0106/z5,8,9.gif">{5,8,9}</a>
+<tr align=center><td>6<td><a href="0106/z3,4,5,6,8,9.gif"><font color=red>{3,4,5,6,8,9}</a>
+<tr align=center><td>7<td><a href="0106/z1,2,4,6,7,8,9.gif"><font color=red>{1,2,4,6,7,8,9}</a>
+<tr align=center><td>8<td><a href="0106/z1,2,3,4,5,7,8,9.gif"><font color=red>{1,2,3,4,5,7,8,9}</a>, <a href="0106/z1,2,4,5,6,7,8,9.gif"><font color=red>{1,2,4,5,6,7,8,9}</a>
+<tr align=center><td>9<td><a href="0106/z1,2,3,4,5,6,7,8,9.gif"><font color=red>{1,2,3,4,5,6,7,8,9}</a>
+
+<tr align=center><td>10<td>8<td><a href="0106/z1,2,3,5,6,7,9,10.gif"><font color=red>{1,2,3,5,6,7,9,10}</a>
+
+<tr align=center><td rowspan=4>11<td>2<td><a href="0106/z3,11.gif">{3,11}</a>
+<tr align=center><td>4<td><a href="0106/z2,5,8,11.gif">{2,5,8,11}</a>
+<tr align=center><td>7<td><a href="0106/z1,3,4,5,7,9,11.gif"><font color=red>{1,3,4,5,7,9,11}</a>
+<tr align=center><td>8<td><a href="0106/z1,2,3,4,5,6,9,11.gif">{1,2,3,4,5,6,9,11}</a>
+
+<tr align=center><td>13<td>2<td><a href="0106/z6,13.gif">{6,13}</a>
+
+<tr align=center><td rowspan=3>14<td>2<td><a href="0106/z5,14.gif">{5,14}</a>, <a href="0106/z9,14.gif">{9,14}</a>
+<tr align=center><td>3<td><a href="0106/z5,9,14.gif">{5,9,14}</a>
+<tr align=center><td>4<td><a href="0106/z2,8,11,14.gif"><font color=red>{2,8,11,14}</a>
+
+<tr align=center><td>15<td>4<td><a href="0106/z5,8,9,15.gif"><font color=red>{5,8,9,15}</a>
+
+<tr align=center><td>16<td>3<td><a href="0106/z3,11,16.gif">{3,11,16}</a>
+
+<tr align=center><td rowspan=2>17<td>2<td><a href="0106/z8,17.gif">{8,17}</a>
+<tr align=center><td>4<td><a href="0106/z5,8,9,17.gif"><font color=red>{5,8,9,17}</a>, <a href="0106/z8,9,14,17.gif"><font color=red>{8,9,14,17}</a>
+
+<tr align=center><td>18<td>3<td><a href="0106/z8,17,18.gif">{8,17,18}</a>
+
+<tr align=center><td rowspan=2>19<td>2<td><a href="0106/z4,19.gif">{4,19}</a>
+<tr align=center><td>3<td><a href="0106/z4,9,19.gif">{4,9,19}</a>
+
+</table>
+<font color=red>Patrick Hamlyn</font>
+</center><p>
+
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 1/31/06.<font>
+
+</BODY></HTML>

@@ -1,0 +1,640 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month<br>(October 2008)</H1></CENTER>
+
+This month we investigate the mathematics of anagrams, rearrangements of the letters of a word that are also a word.<p>
+
+<font size=+2>1.</font> Some English names for numbers can be anagrammed to other numbers.  There are some trivial cases like 67 = 76 (<font color=blue>SIXTY SEVEN = SEVENTY SIX</font>).  Then there are slightly more interesting cases like 112 = 211 (<font color=blue>ONE HUNDRED TWELVE = TWO HUNDRED ELEVEN</font>).
+But we consider this example trivial since this still corresponds to anagramming the digits of the numbers.  Also 2,010 = 10,002 (<font color=blue>TWO THOUSAND TEN = TEN THOUSAND TWO</FONT>) is trivial since it just anagrams the non-zero digits (Thanks to Claudio Baiocchi for noticing this).  What non-trivial number anagrams can you find?  What are the answers in other languages?<p><hr>
+
+<font size=+2>2.</font> For each English anagram, there is a corresponding permutation of the letters.  We give permutations in cycle format, so MANGO - AMONG illustrates the permutation (12)(345).  This month we ask which permutations have English anagrams to illustrate them.  I'm only allowing Scrabble words, those without capitalization, hyphenation, or contraction.<p>
+
+Apparently all permutations on 5 letters or fewer can be illustrated with an anagram.  Can you find examples of them all?  Apparently not all permutations on 6 letters can be illustrated with an anagram.  Can you find any of the missing cases?  Which permutations of 7 letters illustrate an English anagram?  What are the answers in other languages?
+
+
+<P><hr color=black><p><center><h1>ANSWERS</h1></center>
+
+
+<font size=+2>1.</font><p>
+
+Here are the smallest known non-trivial number anagrams in various languages:<p>
+
+<center><font size=+3>Non-Trivial Number Anagrams</font></center>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<th align=center bgcolor=DDDDFF>Language<th align=center bgcolor=DDDDFF>Anagram
+<tr align=center><td>Estonian<td>29 = 81 <br><font color=blue>KAKSK&Uuml;MMEND &Uuml;HEKSA =<BR>KAHEKSAK&Uuml;MMEND &Uuml;KS<br><font color=red>(Anti S&#x0151;lg)</font>
+</font>
+<tr align=center><td>Danish<td>1,210 = 8,900 <br><font color=blue>EN TUSIND TO HUNDREDE TI =<BR>OTTE TUSIND NI HUNDREDE</font>
+<tr align=center><td>Hungarian<td>1,452 = 2,545 <br><font color=blue>EZERN&Eacute;GYSZ&Aacute;Z&Ouml;TVENKETT&Ouml; =<BR>K&Eacute;TEZER&Ouml;TSZ&Aacute;ZNEGYVEN&Ouml;T<br><font color=red>(Attila M&aacute;rtonfi, communicated by K&aacute;roly Hajba)</font>
+<tr align=center><td>Esperanto<td>2,010 = 20,000 <br><font color=blue>DU MIL DEK =<BR>DUDEK MIL=</font>
+<tr align=center><td>Croatian<td>2,010 = 20,000 <br><font color=blue>DESET TISUCA DVA =<BR>DVADESET TISUCA=</font>
+<tr align=center><td>Norwegian<td>5,010 = 50,000 <br><font color=blue>FEMTUSEN TI =<BR>FEMTI TUSEN</font>
+<tr align=center><td>French<td>182 = 224 <br><font color=blue>CENT QUATRE VINGT DEUX =<BR>DEUX CENT VINGT QUATRE<br><font color=red>(Jean-Charles Meyrignac)</font>
+<tr align=center><td>Spanish<td>5,007,367 = 13,176,600 <br><font color=blue>CINCO MILL&Oacute;NES SIETE MIL TRESCIENTOS SESENTA Y SIETE =<BR>TRECE MILL&Oacute;NES CIENTO SETENTA Y SEIS MIL SEISCIENTOS<br><font color=red>(Joe DeVincentis)</font>
+<tr align=center><td>Hebrew<td>8,020,001 = 11,080,000 <br><font color=blue>&#1513;&#1502;&#1493;&#1504;&#1492; &#1502;&#1497;&#1500;&#1497;&#1493;&#1503; &#1506;&#1513;&#1512;&#1497;&#1501; &#1488;&#1500;&#1507; &#1488;&#1495;&#1514; =<BR>&#1488;&#1495;&#1514; &#1506;&#1513;&#1512;&#1492; &#1502;&#1497;&#1500;&#1497;&#1493;&#1503; &#1513;&#1502;&#1493;&#1504;&#1497;&#1501; &#1488;&#1500;&#1507; </font>
+<tr align=center><td>Portuguese<td>9,012,080 = 10,098,000<br><font color=blue>NOVE MILH&Atilde;O DOZE MIL OITENTA =<br>DEZ MILH&Atilde;O NOVENTA E OITO MIL</font>
+<tr align=center><td>Swedish<td>10,013,501 = 15,030,100 <br><font color=blue>TIO MILJON TRETTON TUSEN FEM HUNDRA EN =<BR>FEMTON MILJON TRETTIO TUSEND EN HUNDRA</font>
+<tr align=center><td>Italian<td>10,017,338 = 13,016,837 <br><font color=blue>DIECI MILIONI DICIASSETTE MILA TRECENTO TRENTOTTO =<BR>TREDICI MILIONI SEDICIMILA OTTOCENTO TRENTASETTE<br><font color=red>(Claudio Baiocchi)</font></font>
+<tr align=center><td>English<td>1,008,020,068 = 10,010,082,086<br><font color=blue>ONE BILLION EIGHT MILLION TWENTY THOUSAND SIXTY EIGHT =<br>TEN BILLION TEN MILLION EIGHTY TWO THOUSAND EIGHTY SIX</font>
+<tr align=center><td>Dutch<td>1,013,020,401 = 14,021,300,000<br><font color=blue>EENMILJARD DERTIENMILJOEN TWINTIGDUIZEND VIERHONDERDEEN =<BR>VEERTIENMILJARD EENENTWINTIGMILJOEN DRIEHONDERDDUIZEND</font>
+</table><p>
+
+<a href="mailto:jcmeyrignac@gmail.com">Jean-Charles Meyrignac</a> supposedly found all the French number anagrams up to 1 million, and confirmed that a solution of Eric Angelini's was minimal, but then found the shorter solution above.<p>
+
+Attila M&aacute;rtonfi found all the Hungarian number anagrams smaller than 10,000, and confirmed his solution is minimal.<p>
+
+The smallest anagram sum in English is 11 + 2 = 12 + 1 (<font color=blue>ELEVEN + TWO = TWELVE + ONE</font>).  <a href="mailto:jcmeyrignac@gmail.com">Jean-Charles Meyrignac</a> found the smallest anagram sum in French:<br>
+
+<center>345 + 221 + 215 = 592 + 156 + 32 + 1<br>(<font color=blue>TROIS CENT QUARANTE CINQ + DEUX CENT VINGT ET UN + DEUX CENT QUINZE =<br>CINQ CENT QUATRE VINGT DOUZE + CENT CINQUANTE SIX + TRENTE DEUX + UN</font>).</center><P>
+
+<a href="mailto:claudio.baiocchi-p314@poste.it">Claudio Baiocchi</a> would change the definition of "non trivial" anagrams to exclude the rearrangement of words.<p><HR><P>
+
+<font size=+2>2.</font><p>
+
+The number of non-trivial permutations of length n is n!-1.  Each anagram pair illustrates both a permutation and its inverse.  Some permutations are their own inverse and some are not.  Thus the number of permutations needed to illustrate a complete set of anagrams of length 2-7 are 1, 4, 16, 72, 397, and 2635.<P>
+
+<a href="mailto:richardsabey@hotmail.co.uk">Richard Sabey</a> points out that all the permutations of 6 letters (using a very large dictionary) can be found in the book "Making the Alphabet Dance" by Ross Eckler, and in the Nov 1977 and May 1978 issues of <a href="http://www.wordways.com/">Word Ways</a>.<p>
+
+Here are the known cases of length 6 or less:<p>
+
+<center><font size=+3>Length 2 </font></center>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<th align=center bgcolor=DDDDFF>Perm<th align=center bgcolor=DDDDFF>Anagram
+<tr align=center><td>(12)<td>NO - ON
+</table><p><HR><P>
+
+<center><font size=+3>Length 3</font></center>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<th align=center bgcolor=DDDDFF>Perm<th align=center bgcolor=DDDDFF>Anagram
+<tr align=center><td>(12)<td>WON - OWN
+<tr align=center><td>(13)<td>RAT - TAR
+<tr align=center><td>(23)<td>EAR - ERA
+<tr align=center><td>(123)<td>ONE - EON
+</table><p><HR><P>
+
+<center><font size=+3>Length 4</font></center>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<th align=center bgcolor=DDDDFF>Perm<th align=center bgcolor=DDDDFF>Anagram
+<tr align=center><td>(12)<td>ABLE - BALE
+<tr align=center><td>(13)<td>CAPE - PACE
+<tr align=center><td>(14)<td>MORN - NORM
+<tr align=center><td>(23)<td>BARN - BRAN
+<tr align=center><td>(24)<td>GORY - GYRO
+<tr align=center><td>(34)<td>COAL - COLA
+<tr align=center><td>(12)(34)<td>NOSE - ONES
+<tr align=center><td>(13)(24)<td>ARCH - CHAR
+<tr align=center><td>(14)(23)<td>BARD - DRAB
+<tr align=center><td>(123)<td>ACRE - RACE
+<tr align=center><td>(124)<td>ALUM - MAUL
+<tr align=center><td>(134)<td>LAMB - BALM
+<tr align=center><td>(234)<td>BAKE - BEAK
+<tr align=center><td>(1234)<td>AVER - RAVE
+<tr align=center><td>(1243)<td>IDLE - LIED
+<tr align=center><td>(1324)<td>SHAG - GASH
+</table><p><HR><P>
+
+<center><font size=+3>Length 5</font></center>
+<table border=0 align=center><tr><td>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<th align=center bgcolor=DDDDFF>Perm<th align=center bgcolor=DDDDFF>Anagram
+<tr align=center><td>(12)<td>RACED - ARCED
+<tr align=center><td>(13)<td>CAPES - PACES
+<tr align=center><td>(14)<td>MORNS - NORMS
+<tr align=center><td>(15)<td>SMITE - EMITS
+<tr align=center><td>(23)<td>BARNS - BRANS
+<tr align=center><td>(24)<td>STAKE - SKATE
+<tr align=center><td>(25)<td>SNAIL - SLAIN
+<tr align=center><td>(34)<td>COALS - COLAS
+<tr align=center><td>(35)<td>WIDER - WIRED
+<tr align=center><td>(45)<td>ANGEL - ANGLE
+
+<tr align=center><td>(12)(34)<td>AMENS - MANES
+<tr align=center><td>(12)(35)<td>NOTES - ONSET
+<tr align=center><td>(12)(45)<td>MOIST - OMITS
+<tr align=center><td>(13)(24)<td>EMITS - ITEMS
+<tr align=center><td>(13)(25)<td>CRUEL - ULCER
+<tr align=center><td>(13)(45)<td>LAPSE - PALES
+<tr align=center><td>(14)(23)<td>EMITS - TIMES
+<tr align=center><td>(14)(25)<td>SHALE - LEASH
+<tr align=center><td>(14)(35)<td>LASER - EARLS
+<tr align=center><td>(15)(23)<td>DRIES - SIRED
+<tr align=center><td>(15)(24)<td>STRAP - PARTS
+<tr align=center><td>(15)(34)<td>SONIC - COINS
+<tr align=center><td>(23)(45)<td>PORES - PROSE
+<tr align=center><td>(24)(35)<td>MERIT - MITER
+<tr align=center><td>(25)(34)<td>PLATE - PETAL
+
+</table>
+<td width=20><td>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<th align=center bgcolor=DDDDFF>Perm<th align=center bgcolor=DDDDFF>Anagram
+
+<tr align=center><td>(123)<td>ACRES - RACES
+<tr align=center><td>(124)<td>SITAR - ASTIR
+<tr align=center><td>(125)<td>TEARS - STARE
+<tr align=center><td>(134)<td>GROAN - ARGON
+<tr align=center><td>(135)<td>TIDES - SITED
+<tr align=center><td>(145)<td>CANED - DANCE
+<tr align=center><td>(234)<td>BAKES - BEAKS
+<tr align=center><td>(235)<td>PETAL - PLEAT
+<tr align=center><td>(245)<td>CADRE - CEDAR
+<tr align=center><td>(345)<td>LAGER - LARGE
+
+<tr align=center><td>(1234)<td>LARGE - GLARE
+<tr align=center><td>(1235)<td>ONSET - TONES
+<tr align=center><td>(1243)<td>EARLY - RELAY
+<tr align=center><td>(1245)<td>COINS - SCION
+<tr align=center><td>(1253)<td>ARGOT - GATOR
+<tr align=center><td>(1254)<td>REACT - CRATE
+<tr align=center><td>(1324)<td>COATS - TACOS
+<tr align=center><td>(1325)<td>DRAIN - NADIR
+<tr align=center><td>(1345)<td>ACRES - SCARE
+<tr align=center><td>(1354)<td>RINSE - SIREN
+<tr align=center><td>(1425)<td>SHELF - FLESH
+<tr align=center><td>(1435)<td>PETAL - LEAPT
+<tr align=center><td>(2345)<td>LAPSE - LEAPS
+<tr align=center><td>(2354)<td>PALER - PEARL
+<tr align=center><td>(2435)<td>STEAK - SKATE
+
+</table>
+<td width=20><td>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<th align=center bgcolor=DDDDFF>Perm<th align=center bgcolor=DDDDFF>Anagram
+
+<tr align=center><td>(12345)<td>EARTH - HEART
+<tr align=center><td>(12354)<td>OATHS - HOAST
+<tr align=center><td>(12435)<td>HARES - SHEAR
+<tr align=center><td>(12453)<td>LAPSE - PLEAS
+<tr align=center><td>(12534)<td>IDEAL - AILED
+<tr align=center><td>(12543)<td>REBID - BRIDE
+<tr align=center><td>(13245)<td>COAST - TACOS
+<tr align=center><td>(13254)<td>TRUCE - CUTER
+<tr align=center><td>(13425)<td>TREAD - DATER
+<tr align=center><td>(13524)<td>IDEAS - ASIDE
+<tr align=center><td>(14235)<td>OPTED - DEPOT
+<tr align=center><td>(14325)<td>CHEAT - TEACH
+
+<tr align=center><td>(12)(345)<td>MANGO - AMONG
+<tr align=center><td>(13)(245)<td>ONSET - STONE
+<tr align=center><td>(14)(235)<td>ENDOW - OWNED
+<tr align=center><td>(15)(234)<td>SPEAR - RAPES
+<tr align=center><td>(23)(145)<td>RACES - SCARE
+<tr align=center><td>(24)(135)<td>CEDAR - RACED
+<tr align=center><td>(25)(134)<td>GLARE - REGAL
+<tr align=center><td>(34)(125)<td>PENIS - SPINE
+<tr align=center><td>(35)(124)<td>LANCE - CLEAN
+<tr align=center><td>(45)(123)<td>LAGER - GLARE
+</table>
+</table><p><HR><P>
+
+
+<center><font size=+3>Length 6</font></center>
+<table border=0 align=center><tr><td>
+
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<th align=center bgcolor=DDDDFF>Perm<th align=center bgcolor=DDDDFF>Anagram
+<tr align=center><td>(12)<td>INCEST - NICEST
+<tr align=center><td>(13)<td>CARING - RACING
+<tr align=center><td>(14)<td>TRACES - CRATES
+<tr align=center><td>(15)<td>COURSE - SOURCE
+<tr align=center><td>(16)<td>RUSTED - DUSTER
+<tr align=center><td>(23)<td>CARVED - CRAVED
+<tr align=center><td>(24)<td>SMILED - SLIMED
+<tr align=center><td>(25)<td>STRIPE - SPRITE
+<tr align=center><td>(26)<td>GROVEL - GLOVER
+<tr align=center><td>(34)<td>TRAILS - TRIALS
+<tr align=center><td>(35)<td>INCEST - INSECT
+<tr align=center><td>(36)<td>WARDEN - WANDER
+<tr align=center><td>(45)<td>ANGELS - ANGLES
+<tr align=center><td>(46)<td>BURDEN - BURNED
+<tr align=center><td>(56)<td>SHRIEK - SHRIKE
+
+<tr align=center><td>(12)(34)<td>OPINES - PONIES
+<tr align=center><td>(12)(35)<td>INSECT - NICEST
+<tr align=center><td>(12)(36)<td>INSERT - NITERS<br><font color=red>(Joe DeVincentis)
+<tr align=center><td>(12)(45)<td>FAILED - AFIELD
+<tr align=center><td>(12)(46)<td><font color=red>?
+<tr align=center><td>(12)(56)<td>CANOED - ACNODE<br><font color=red>(Corey Plover)
+<tr align=center><td>(13)(24)<td>AMBLED - BLAMED
+<tr align=center><td>(13)(25)<td>ASPIRE - PRAISE
+<tr align=center><td>(13)(26)<td>BORATE - REBATO
+<tr align=center><td>(13)(45)<td>DERAIL - REDIAL
+<tr align=center><td>(13)(46)<td>STIFLE - ITSELF
+<tr align=center><td>(13)(56)<td>LAMING - MALIGN<br><font color=red>(Corey Plover)
+<tr align=center><td>(14)(23)<td>CARTED - TRACED
+<tr align=center><td>(14)(25)<td>INSURE - URSINE
+<tr align=center><td>(14)(26)<td>MYRTLE - TERMLY<br><font color=red>(Joe DeVincentis)
+<tr align=center><td>(14)(35)<td>UNLIST - INSULT
+<tr align=center><td>(14)(36)<td>DANGER - GARDEN
+<tr align=center><td>(14)(56)<td>ENLIST - INLETS
+<tr align=center><td>(15)(23)<td>DERATS - TREADS<br><font color=red>(Corey Plover)
+<tr align=center><td>(15)(24)<td>REBUTS - TUBERS
+<tr align=center><td>(15)(26)<td>ANEMIC - ICEMAN
+<tr align=center><td>(15)(34)<td>THROWS - WHORTS<br><font color=red>(Joe DeVincentis)
+<tr align=center><td>(15)(36)<td>SHIRTY - THYRSI<br><font color=red>(Joe DeVincentis)
+<tr align=center><td>(15)(46)<td>CRISTA - TRIACS<br><font color=red>(Corey Plover)
+<tr align=center><td>(16)(23)<td>RAILED - DIALER
+<tr align=center><td>(16)(24)<td>SPARED - DRAPES
+<tr align=center><td>(16)(25)<td>SALTED - DELTAS
+<tr align=center><td>(16)(34)<td>DUTIES - SUITED
+<tr align=center><td>(16)(35)<td>ACTORS - SCROTA<br><font color=red>(Corey Plover)
+<tr align=center><td>(16)(45)<td>HATRED - DALETH
+<tr align=center><td>(23)(45)<td>CRUSTY - CURTSY
+<tr align=center><td>(23)(46)<td>SANDER - SNARED
+<tr align=center><td>(23)(56)<td>BRUISE - BURIES
+<tr align=center><td>(24)(35)<td>BARLEY - BLEARY
+<tr align=center><td>(24)(36)<td>LADING - LIGAND<br><font color=red>(Joe DeVincentis)
+<tr align=center><td>(24)(56)<td>SORTED - STRODE
+<tr align=center><td>(25)(34)<td>MAIDEN - MEDIAN
+<tr align=center><td>(25)(36)<td>RUSTIC - RICTUS
+<tr align=center><td>(25)(46)<td>PLAYER - PEARLY
+<tr align=center><td>(26)(34)<td>CAUDLE - CEDULA<br><font color=red>(Corey Plover)
+<tr align=center><td>(26)(35)<TD>CLOSER - CRESOL
+<tr align=center><td>(26)(45)<td>ANTRES - ASTERN<br><font color=red>(Joe DeVincentis)
+<tr align=center><td>(34)(56)<td>RECAST - REACTS
+<tr align=center><td>(35)(46)<td>TEPHRA - TERAPH<br><font color=red>(Joe DeVincentis)
+<tr align=center><td>(36)(45)<td>PISTOL - PILOTS
+
+<tr align=center><td>(12)(34)(56)<td>ONSIDE - NOISED
+<tr align=center><td>(12)(35)(46)<td>ESCHAR - SEARCH<br><font color=red>(Corey Plover)
+<tr align=center><td>(12)(36)(45)<td>INSERT - NITRES<br><font color=red>(Corey Plover)
+<tr align=center><td>(13)(24)(56)<td>INFEST - FEINTS
+<tr align=center><td>(13)(25)(46)<td>CORSET - RECTOS
+<tr align=center><td>(13)(26)(45)<td>ULNARE - NEURAL<br><font color=red>(Bojan Basic)
+<tr align=center><td>(14)(23)(56)<td>ERUPTS - PUREST
+<tr align=center><td>(14)(25)(36)<td>LAYOUT - OUTLAY
+<tr align=center><td>(14)(26)(35)<td>TRANCE - NECTAR
+<tr align=center><td>(15)(23)(46)<td><font color=red>?
+<tr align=center><td>(15)(24)(36)<td><font color=red>?
+<tr align=center><td>(15)(26)(34)<td>ALMOST - STOMAL<br><font color=red>(Joe DeVincentis)
+<tr align=center><td>(16)(23)(45)<td>DOTERS - STORED<br><font color=red>(Joe DeVincentis)
+<tr align=center><td>(16)(24)(35)<td>TANREC - CREANT<br><font color=red>(Bojan Basic)
+<tr align=center><td>(16)(25)(34)<td>REPAID - DIAPER
+
+<tr align=center><td>(123)<td>RIPEST - PRIEST
+<tr align=center><td>(124)<td>ASCENT - SECANT
+<tr align=center><td>(125)<td>REACTS - TRACES
+<tr align=center><td>(126)<td>SPIDER - PRIDES
+<tr align=center><td>(134)<td>LATHER - HALTER
+<tr align=center><td>(135)<td>PALTRY - RAPTLY
+<tr align=center><td>(136)<td>BUSIER - RUBIES
+<tr align=center><td>(145)<td>LIFERS - RIFLES
+<tr align=center><td>(146)<td>WHORES - SHOWER
+<tr align=center><td>(156)<td>LIMPED - DIMPLE
+<tr align=center><td>(234)<td>BREAST - BAREST
+<tr align=center><td>(235)<td>TRIPOD - TORPID
+<tr align=center><td>(236)<td>PASTEL - PLATES
+<tr align=center><td>(245)<td>AUGERS - ARGUES
+<tr align=center><td>(246)<td>RUSTLE - RESULT
+<tr align=center><td>(256)<td>MANTLE - MENTAL
+<tr align=center><td>(345)<td>ALERTS - ALTERS
+<tr align=center><td>(346)<td>WANDER - WARNED
+<tr align=center><td>(356)<td>MOLEST - MOTELS
+<tr align=center><td>(456)<td>RETINA - RETAIN
+
+<tr align=center><td>(123)(456)<td>ARMING - MARGIN
+<tr align=center><td>(123)(465)<td>REPOST - PRESTO<font color=red><br>(Bryce Herdt)
+<tr align=center><td>(124)(356)<td><font color=red>?
+<tr align=center><td>(124)(365)<td>ARIELS - RESAIL<br><font color=red>(Corey Plover)
+<tr align=center><td>(125)(346)<td><font color=red>?
+<tr align=center><td>(125)(364)<td>AMINES - MESIAN<br><font color=red>(Corey Plover)
+<tr align=center><td>(126)(345)<td>ASCEND - DANCES
+<tr align=center><td>(126)(354)<td>PLAINS - SPINAL
+<tr align=center><td>(134)(256)<td>AIGLET - GELATI<br><font color=red>(Corey Plover)
+<tr align=center><td>(134)(265)<td>ASCENT - ENACTS
+<tr align=center><td>(135)(246)<td>RIPEST - STRIPE
+<tr align=center><td>(135)(264)<td>PYLORI - ROPILY<br><font color=red>(Corey Plover)
+<tr align=center><td>(136)(245)<td>BISTRO - ORBITS
+<tr align=center><td>(136)(254)<td>SLEUTH - HUSTLE
+<tr align=center><td>(145)(236)<td>IGNORE - REGION
+<tr align=center><td>(145)(263)<td><font color=red>?
+<tr align=center><td>(146)(235)<td>FILETS - STIFLE
+<tr align=center><td>(146)(253)<td>AFTERS - STRAFE
+<tr align=center><td>(156)(234)<td>ALMOND - DOLMAN<br><font color=red>(Corey Plover)
+<tr align=center><td>(156)(243)<td>TAILED - DILATE
+
+</table>
+<td width=20><td>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<th align=center bgcolor=DDDDFF>Perm<th align=center bgcolor=DDDDFF>Anagram
+
+<tr align=center><td>(1234)<td>PARSED - SPARED
+<tr align=center><td>(1235)<td>OCTAVE - VOCATE
+<tr align=center><td>(1236)<td>OUSTER - ROUTES
+<tr align=center><td>(1243)<td>NEURAL - UNREAL
+<tr align=center><td>(1245)<td>INGEST - SIGNET
+<tr align=center><td>(1246)<td>TRADES - STARED
+<tr align=center><td>(1253)<td>ACTORS - TAROCS<br><font color=red>(Corey Plover)
+<tr align=center><td>(1254)<td>CHASTE - SCATHE
+<tr align=center><td>(1256)<td>INLETS - SILENT
+<tr align=center><td>(1263)<td>DISOWN - INDOWS<br><font color=red>(Corey Plover)
+<tr align=center><td>(1264)<td>NEBULA - UNBALE<br><font color=red>(Corey Plover)
+<tr align=center><td>(1265)<td>ESCARP - RECAPS<br><font color=red>(Corey Plover)
+<tr align=center><td>(1324)<td>SLIMED - MISLED
+<tr align=center><td>(1325)<td>BRIEFS - FIBERS
+<tr align=center><td>(1326)<td>ADORES - SOARED
+<tr align=center><td>(1345)<td>ALINES - ELAINS<br><font color=red>(Corey Plover)
+<tr align=center><td>(1346)<td>ARMLET - TRAMEL<br><font color=red>(Corey Plover)
+<tr align=center><td>(1354)<td>WOLVES - VOWELS
+<tr align=center><td>(1356)<td>BAREST - TABERS<br><font color=red>(Corey Plover)
+<tr align=center><td>(1364)<td>FIDGIT - GIFTED
+<tr align=center><td>(1365)<td>WATERS - RAWEST
+<tr align=center><td>(1425)<td>ENLIST - SILENT
+<tr align=center><td>(1426)<td>IMBRUE - ERBIUM
+<tr align=center><td>(1435)<td>ITCHES - ETHICS
+<tr align=center><td>(1436)<td>LADIES - SAILED
+<tr align=center><td>(1456)<td>EQUALS - SQUEAL
+<tr align=center><td>(1465)<td>KINDLE - LINKED
+<tr align=center><td>(1526)<td>CHARTS - STARCH
+<tr align=center><td>(1536)<td>DAUBER - EARBUD<br><font color=red>(Corey Plover)
+<tr align=center><td>(1546)<td>RANSOM - MANORS
+<tr align=center><td>(2345)<td>DIVERS - DRIVES
+<tr align=center><td>(2346)<td>CARTEL - CLARET
+<tr align=center><td>(2354)<td>HATERS - HEARTS
+<tr align=center><td>(2356)<td>BUSIER - BRUISE
+<tr align=center><td>(2364)<td>PARLEY - PLAYER
+<tr align=center><td>(2365)<td>GIRDLE - GLIDER
+<tr align=center><td>(2456)<td>ONAGER - ORANGE<br><font color=red>(Corey Plover)
+<tr align=center><td>(2465)<td>PATHOS - POTASH
+<tr align=center><td>(2546)<td>PANTIE - PINETA<br><font color=red>(Corey Plover)
+<tr align=center><td>(3456)<td>REIGNS - RESIGN
+<tr align=center><td>(3465)<td>STAYED - STEADY
+<tr align=center><td>(3546)<td>RUSTED - RUDEST
+
+<tr align=center><td>(12)(345)<td>ADONIS - DANIOS<br><font color=red>(Corey Plover)
+<tr align=center><td>(12)(346)<td>ALIGNS - LASING<br><font color=red>(Corey Plover)
+<tr align=center><td>(12)(356)<td>AROINT - RATION<br><font color=red>(Corey Plover)
+<tr align=center><td>(12)(456)<td>ESCORT - SECTOR
+<tr align=center><td>(13)(245)<td>HOARSE - RASPED
+<tr align=center><td>(13)(246)<td>CHASER - ARCHES
+<tr align=center><td>(13)(256)<td><font color=red>?
+<tr align=center><td>(13)(456)<td>SUBLET - BUSTLE
+<tr align=center><td>(14)(235)<td>MUSCLY - CLUMSY
+<tr align=center><td>(14)(236)<td>CASTER - TRACES
+<tr align=center><td>(14)(256)<td>UNITER - TRIUNE
+<tr align=center><td>(14)(356)<td>DONGLE - GOLDEN<br><font color=red>(Corey Plover)
+<tr align=center><td>(15)(234)<td>AIRBUS - URBIAS<br><font color=red>(Corey Plover)
+<tr align=center><td>(15)(236)<td>ARSINO - NORIAS<br><font color=red>(Corey Plover)
+<tr align=center><td>(15)(246)<td>DIREST - STRIDE
+<tr align=center><td>(15)(346)<td>PHRASE - SHERPA<br><font color=red>(Corey Plover)
+<tr align=center><td>(16)(234)<td>GROANS - SARONG
+<tr align=center><td>(16)(235)<td>SINGER - REIGNS
+<tr align=center><td>(16)(245)<td>ENACTS - STANCE
+<tr align=center><td>(16)(345)<td>BEARDS - SERDAB<br><font color=red>(Corey Plover)
+<tr align=center><td>(23)(145)<td>CARETS - TRACES<br><font color=red>(Corey Plover)
+<tr align=center><td>(23)(146)<td>PAIRED - DIAPER
+<tr align=center><td>(23)(156)<td>CARNET - TRANCE<br><font color=red>(Corey Plover)
+<tr align=center><td>(23)(456)<td>PALEST - PLATES
+<tr align=center><td>(24)(135)<td>CORSET - ESCORT
+<tr align=center><td>(24)(136)<td>CODENS - SECOND<br><font color=red>(Corey Plover)
+<tr align=center><td>(24)(156)<td>MELONS - SOLEMN
+<tr align=center><td>(24)(356)<td>PALEST - PETALS
+<tr align=center><td>(25)(134)<td>REMAIN - AIRMEN
+<tr align=center><td>(25)(136)<td>LASTED - DELTAS
+<tr align=center><td>(25)(146)<td>POSTED - DESPOT
+<tr align=center><td>(25)(346)<td>DIALER - DERAIL
+<tr align=center><td>(26)(134)<td>LYRATE - REALTY<br><font color=red>(Corey Plover)
+<tr align=center><td>(26)(135)<td>ALERTS - ESTRAL<br><font color=red>(Corey Plover)
+<tr align=center><td>(26)(145)<td>INSOLE - LESION
+<tr align=center><td>(26)(345)<td>STANCE - SECANT
+<tr align=center><td>(34)(125)<td>AGONES - GENOAS<br><font color=red>(Corey Plover)
+<tr align=center><td>(34)(126)<td>ARGUES - SAUGER<br><font color=red>(Corey Plover)
+<tr align=center><td>(34)(156)<td>ARPENT - TREPAN<br><font color=red>(Corey Plover)
+<tr align=center><td>(34)(256)<td>CAUSER - CESURA<br><font color=red>(Corey Plover)
+<tr align=center><td>(35)(124)<td>CANOES - OCEANS
+<tr align=center><td>(35)(126)<td>PRECIS - SPICER<br><font color=red>(Corey Plover)
+<tr align=center><td>(35)(146)<td>CHALET - THECAL<br><font color=red>(Corey Plover)
+<tr align=center><td>(35)(246)<td>BASTER - BREAST
+<tr align=center><td>(36)(124)<td>RELOAD - ORDEAL
+<tr align=center><td>(36)(125)<td>ENGIRD - REDING<br><font color=red>(Corey Plover)
+<tr align=center><td>(36)(145)<td>SENORA - REASON
+<tr align=center><td>(36)(245)<td>MISTER - MERITS
+<tr align=center><td>(45)(123)<td>LAGERS - GLARES
+<tr align=center><td>(45)(126)<td>ARIELS - SAILER<br><font color=red>(Corey Plover)
+<tr align=center><td>(45)(136)<td>BESTUD - DEBUTS<br><font color=red>(Corey Plover)
+<tr align=center><td>(45)(236)<td>PASTIL - PLAITS<br><font color=red>(Corey Plover)
+<tr align=center><td>(46)(123)<td>INBRED - BINDER
+<tr align=center><td>(46)(125)<td><font color=red>?
+<tr align=center><td>(46)(135)<td>MANTLE - LAMENT
+<tr align=center><td>(46)(235)<td>BUSTLE - BLUEST
+<tr align=center><td>(56)(123)<td>RUBIES - BRUISE
+<tr align=center><td>(56)(124)<td>AIRMEN - MARINE
+<tr align=center><td>(56)(134)<td>GAMIER - MAIGRE<br><font color=red>(Corey Plover)
+<tr align=center><td>(56)(234)<td>FINEST - FEINTS
+<tr align=center><td>(135246)<td>POSTER - REPOST<br><font color=red>(Bryce Herdt)
+<tr align=center><td>(153426)<td>THREAD - DEARTH<br><font color=red>(Bryce Herdt)
+
+</table>
+<td width=20><td>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<th align=center bgcolor=DDDDFF>Perm<th align=center bgcolor=DDDDFF>Anagram
+
+<tr align=center><td>(12345)<td>UNWARY - RUNWAY
+<tr align=center><td>(12346)<td>ALIENS - SALINE
+<tr align=center><td>(12354)<td>THROES - OTHERS
+<tr align=center><td>(12356)<td>SCRAPE - ESCARP
+<tr align=center><td>(12364)<td>PARSEC - SPACER
+<tr align=center><td>(12365)<td>UNRIPE - PUNIER
+<tr align=center><td>(12435)<td>ACORNS - NARCOS<br><font color=red>(Corey Plover)
+<tr align=center><td>(12436)<td>OLDIES - SOILED
+<tr align=center><td>(12453)<td>AIVERS - VARIES<br><font color=red>(Corey Plover)
+<tr align=center><td>(12456)<td>HORNET - THRONE
+<tr align=center><td>(12463)<td>ORCHID - RHODIC<br><font color=red>(Corey Plover)
+<tr align=center><td>(12465)<td><font color=red>?
+<tr align=center><td>(12534)<td>TENSOR - STONER
+<tr align=center><td>(12536)<td>ITSELF - FILETS
+<tr align=center><td>(12543)<td>HATRED - THREAD
+<tr align=center><td>(12546)<td><font color=red>?
+<tr align=center><td>(12563)<td>AORIST - RATIOS<br><font color=red>(Corey Plover)
+<tr align=center><td>(12564)<td><font color=red>?
+<tr align=center><td>(12634)<td>NEBULA - UNABLE
+<tr align=center><td>(12635)<td>ARKOSE - RESOAK<br><font color=red>(Corey Plover)
+<tr align=center><td>(12643)<td>UNBRED - BURDEN
+<tr align=center><td>(12645)<td>ANTICK - CATKIN<br><font color=red>(Corey Plover)
+<tr align=center><td>(12653)<td>ASPIRE - PARIES<br><font color=red>(Corey Plover)
+<tr align=center><td>(12654)<td>AIMFUL - FAMULI<br><font color=red>(Corey Plover)
+<tr align=center><td>(13245)<td>SUNLIT - INSULT
+<tr align=center><td>(13246)<td>CHISEL - LICHES<br><font color=red>(Corey Plover)
+<tr align=center><td>(13254)<td>BRUTES - TUBERS
+<tr align=center><td>(13256)<td>BEARDS - SABRED<br><font color=red>(Corey Plover)
+<tr align=center><td>(13264)<td>GRISON - SIGNOR<br><font color=red>(Corey Plover)
+<tr align=center><td>(13265)<td>HASTEN - SNATHE<br><font color=red>(Corey Plover)
+<tr align=center><td>(13425)<td>BELONS - NOBLES<br><font color=red>(Corey Plover)
+<tr align=center><td>(13426)<td><font color=red>?
+<tr align=center><td>(13456)<td>COILED - DOCILE
+<tr align=center><td>(13465)<td>ORPINS - PRISON<br><font color=red>(Corey Plover)
+<tr align=center><td>(13524)<td>BOWELS - ELBOWS
+<tr align=center><td>(13526)<td>CRAPES - SECPAR<br><font color=red>(Corey Plover)
+<tr align=center><td>(13546)<td>DUSTER - RUDEST
+<tr align=center><td>(13564)<td>MILNEB - NIMBLE<br><font color=red>(Corey Plover)
+<tr align=center><td>(13624)<td>CAPERS - ESCARP
+<tr align=center><td>(13625)<td>BEDLAM - AMBLED
+<tr align=center><td>(13645)<td>FOREST - SOFTER
+<tr align=center><td>(13654)<td>MISTER - TIMERS
+<tr align=center><td>(14235)<td>IDEALS - LADIES
+<tr align=center><td>(14236)<td>ORGANS - SARONG
+<tr align=center><td>(14256)<td>PLATES - STAPLE
+<tr align=center><td>(14265)<td>SCRAPE - PARSEC
+<tr align=center><td>(14325)<td>ARMPIT - IMPART
+<tr align=center><td>(14326)<td>PETALS - STAPLE
+<tr align=center><td>(14356)<td>KNEADS - SNAKED
+<tr align=center><td>(14365)<td>PHRASE - SHAPER
+<tr align=center><td>(14526)<td>TRIODE - EDITOR
+<tr align=center><td>(14536)<td>SILENT - TINSEL
+<tr align=center><td>(14625)<td>SEARCH - CHASER
+<tr align=center><td>(14635)<td>TRANCE - CRETAN
+<tr align=center><td>(15236)<td>HASTED - DEATHS
+<tr align=center><td>(15246)<td>LUSTER - RESULT
+<tr align=center><td>(15326)<td>EDITOR - RIOTED
+<tr align=center><td>(15346)<td>DANGLE - LAGEND<br><font color=red>(Corey Plover)
+<tr align=center><td>(15426)<td>CHANTS - SNATCH
+<tr align=center><td>(15436)<td>LAYMEN - NAMELY
+<tr align=center><td>(23456)<td>FINGER - FRINGE
+<tr align=center><td>(23465)<td>BARONG - BROGAN<br><font color=red>(Corey Plover)
+<tr align=center><td>(23546)<td>FINDER - FRIEND
+<tr align=center><td>(23564)<td>BLUDGE - BUGLED<br><font color=red>(Corey Plover)
+<tr align=center><td>(23645)<td>PISTON - POINTS
+<tr align=center><td>(23654)<td>BAYMEN - BYNAME<br><font color=red>(Corey Plover)
+<tr align=center><td>(24356)<td>CEROUS - COURSE<br><font color=red>(Corey Plover)
+<tr align=center><td>(24365)<td>PASTEL - PETALS
+<tr align=center><td>(24536)<td>SPROUT - STUPOR
+<tr align=center><td>(24635)<td>BLAMED - BEDLAM
+<tr align=center><td>(25346)<td>BARYTE - BETRAY<br><font color=red>(Corey Plover)
+<tr align=center><td>(25436)<td>VALINE - VEINAL
+
+<tr align=center><td>(1234)(56)<td>VOCATE - AVOCET
+<tr align=center><td>(1235)(46)<td>ESTRAL - STALER<br><font color=red>(Corey Plover)
+<tr align=center><td>(1236)(45)<td>CODERS - SCORED<br><font color=red>(Corey Plover)
+<tr align=center><td>(1243)(56)<td>ALMUDE - MAULED<br><font color=red>(Corey Plover)
+<tr align=center><td>(1245)(36)<td>ADSORB - DOBRAS<br><font color=red>(Corey Plover)
+<tr align=center><td>(1246)(35)<td>CAPERS - SCRAPE
+<tr align=center><td>(1253)(46)<td>CRUSET - RECTUS<br><font color=red>(Corey Plover)
+<tr align=center><td>(1254)(36)<td>CHESTY - SCYTHE
+<tr align=center><td>(1256)(34)<td>ENACTS - SECANT
+<tr align=center><td>(1263)(45)<td>INLETS - LISTEN
+<tr align=center><td>(1264)(35)<td><font color=red>?
+<tr align=center><td>(1265)(34)<td>SPACER - ESCARP
+<tr align=center><td>(1324)(56)<td>STAPLE - PASTEL
+<tr align=center><td>(1325)(46)<td>BLUEST- SUBTLE
+<tr align=center><td>(1326)(45)<td>ARTELS - STALER<br><font color=red>(Corey Plover)
+<tr align=center><td>(1345)(26)<td>ALVINE - VEINAL<br><font color=red>(Corey Plover)
+<tr align=center><td>(1346)(25)<td>NAILED - DENIAL
+<tr align=center><td>(1354)(26)<td><font color=red>?
+<tr align=center><td>(1356)(24)<td>LEMONS - SOLEMN
+<tr align=center><td>(1364)(25)<td>CORSET - SECTOR
+<tr align=center><td>(1365)(24)<td>METALS - LAMEST
+<tr align=center><td>(1425)(36)<td>PERILS - LISPER
+<tr align=center><td>(1426)(35)<td>GELANT - TANGLE<br><font color=red>(Corey Plover)
+<tr align=center><td>(1435)(26)<td>BELADY - DYABLE<br><font color=red>(Corey Plover)
+<tr align=center><td>(1436)(25)<td>ENTRAP - PARENT
+<tr align=center><td>(1456)(23)<td>TIMERS - SMITER
+<tr align=center><td>(1465)(23)<td><font color=red>?
+<tr align=center><td>(1526)(34)<td>ALINED - DENIAL<br><font color=red>(Corey Plover)
+<tr align=center><td>(1536)(24)<td>ESCARP - PARSEC
+<tr align=center><td>(1546)(23)<td>CERIUM - UREMIC<br><font color=red>(Corey Plover)
+<tr align=center><td>(2345)(16)<td>ANEMIC - CINEMA
+<tr align=center><td>(2346)(15)<td>PRIEST - STRIPE
+<tr align=center><td>(2354)(16)<td>DRAPES - SPREAD
+<tr align=center><td>(2356)(14)<td>FILTER - TRIFLE
+<tr align=center><td>(2364)(15)<td>UNPILE - LINEUP
+<tr align=center><td>(2365)(14)<td>TORQUE - QUOTER
+<tr align=center><td>(2456)(13)<td>MARINE - REMAIN
+<tr align=center><td>(2465)(13)<td>VECTOR - COVERT
+<tr align=center><td>(2546)(13)<td><font color=red>?
+<tr align=center><td>(3456)(12)<td>AMBLER - MARBLE
+<tr align=center><td>(3465)(12)<td>ARISTO - RATIOS<br><font color=red>(Corey Plover)
+<tr align=center><td>(3546)(12)<td>WORSEN - OWNERS
+
+</table>
+</table><p><hr><p>
+
+Here are the known cases of switching two letters in words of length 7 or more:<p>
+
+<center><font size=+3>Length 7 Transpositions</font></center>
+<table border=0 align=center><tr><td>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<th align=center bgcolor=DDDDFF>Perm<th align=center bgcolor=DDDDFF>Anagram
+<tr align=center><td>(12)<td>NUCLEAR - UNCLEAR
+<tr align=center><td>(13)<td>CERTIFY - RECTIFY
+<tr align=center><td>(14)<td>LEADING - DEALING
+<tr align=center><td>(15)<td>GLANCED - CLANGED
+<tr align=center><td>(16)<td>COMBATS - TOMBACS<br><font color=red>(Corey Plover)
+<tr align=center><td>(17)<td>LATCHES - SATCHEL
+<tr align=center><td>(23)<td>BRAKING - BARKING
+<tr align=center><td>(24)<td>SKATING - STAKING
+<tr align=center><td>(25)<td>BILTONG - BOLTING<br><font color=red>(Corey Plover)
+<tr align=center><td>(26)<td>ANCHORS - ARCHONS<br><font color=red>(Corey Plover)
+<tr align=center><td>(27)<td>SNICKET - STICKEN<br><font color=red>(Gavin Theobald)
+<tr align=center><td>(34)<td>BEDLAMS - BELDAMS<br><font color=red>(Corey Plover)
+<tr align=center><td>(35)<td>UNMATED - UNTAMED
+<tr align=center><td>(36)<td>WARDENS - WANDERS
+<tr align=center><td>(37)<td>HURTLES - HUSTLER
+<tr align=center><td>(45)<td>INFRACT - INFARCT
+<tr align=center><td>(46)<td>IMPUTES - IMPETUS
+<tr align=center><td>(47)<td>MISLEAD - MISDEAL
+<tr align=center><td>(56)<td>CITHERN - CITHREN<br><font color=red>(Corey Plover)
+<tr align=center><td>(57)<td>TUMBLER - TUMBREL
+<tr align=center><td>(67)<td>CALIBER - CALIBRE
+</table>
+</table><p><hr><p>
+
+<center><font size=+3>Length 8 Transpositions</font></center>
+<table border=0 align=center><tr><td>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<th align=center bgcolor=DDDDFF>Perm<th align=center bgcolor=DDDDFF>Anagram
+<tr align=center><td>(12)<td>COHERING - OCHERING<br><font color=red>(Corey Plover)
+<tr align=center><td>(13)<td>BERATING - REBATING
+<tr align=center><td>(14)<td>COUTHIER - TOUCHIER<br><font color=red>(Corey Plover)
+<tr align=center><td>(15)<td>COURSING - SOURCING
+<tr align=center><td>(17)<td>RINGLETS - TINGLERS<br><font color=red>(Corey Plover)
+<tr align=center><td>(23)<td>CRAVINGS - CARVINGS
+<tr align=center><td>(24)<td>PLASTERY - PSALTERY<br><font color=red>(Corey Plover)
+<tr align=center><td>(25)<td>CUSTOMER - COSTUMER
+<tr align=center><td>(34)<td>COINFERS - CONIFERS<br><font color=red>(Corey Plover)
+<tr align=center><td>(35)<td>MOLARITY - MORALITY<br><font color=red>(Corey Plover)
+<tr align=center><td>(36)<td>TRAPLINE - TRIPLANE<br><font color=red>(Corey Plover)
+<tr align=center><td>(37)<td>CLEMATIS - CLIMATES<br><font color=red>(Corey Plover)
+<tr align=center><td>(45)<td>INFARCTS - INFRACTS<br><font color=red>(Corey Plover)
+<tr align=center><td>(48)<td>OUTRIDES - OUTSIDER<br><font color=red>(Corey Plover)
+<tr align=center><td>(56)<td>COMPILED - COMPLIED
+<tr align=center><td>(57)<td>GAMBLERS - GAMBRELS<br><font color=red>(Corey Plover)
+<tr align=center><td>(67)<td>QUICKEST - QUICKSET
+<tr align=center><td>(78)<td>BLANKETS - BLANKEST<br><font color=red>(Corey Plover)
+</table>
+</table><p><hr><p>
+
+<center><font size=+3>Length 9 Transpositions</font></center>
+<table border=0 align=center><tr><td>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<th align=center bgcolor=DDDDFF>Perm<th align=center bgcolor=DDDDFF>Anagram
+<tr align=center><td>(13)<td>GELATIONS - LEGATIONS<br><font color=red>(Corey Plover)
+<tr align=center><td>(23)<td>WARSTLING - WRASTLING<br><font color=red>(Corey Plover)
+<tr align=center><td>(24)<td>COPULATED - CUPOLATED<br><font color=red>(Gavin Theobald)
+<tr align=center><td>(25)<td>COSTUMING - CUSTOMING<br><font color=red>(Gavin Theobald)
+<tr align=center><td>(36)<td>TRAPLINES - TRIPLANES<br><font color=red>(Corey Plover)
+<tr align=center><td>(37)<td>HEMATOXIC - HEXATOMIC<br><font color=red>(Gavin Theobald)
+<tr align=center><td>(45)<td>INFARCTED - INFRACTED<br><font color=red>(Corey Plover)
+<tr align=center><td>(49)<td>FLUKEWORT - FLUTEWORK<br><font color=red>(Gavin Theobald)
+<tr align=center><td>(56)<td>COMPILERS - COMPLIERS<br><font color=red>(Corey Plover)
+<tr align=center><td>(67)<td>COMPLAINT - COMPLIANT
+<tr align=center><td>(68)<td>OVERSLIPT - OVERSPILT<br><font color=red>(Corey Plover)
+<tr align=center><td>(89)<td>HARMONIES - HARMONISE<br><font color=red>(Corey Plover)
+</table>
+</table><p>
+
+<center><font size=+3>Length 10 Transpositions</font></center>
+<table border=0 align=center><tr><td>
+<table border=1 bgcolor=FFFFDD cellpadding=4 align=center>
+<th align=center bgcolor=DDDDFF>Perm<th align=center bgcolor=DDDDFF>Anagram
+<tr align=center><td>(13)<td>BOLSTERING - LOBSTERING<br><font color=red>(Gavin Theobald)
+<tr align=center><td>(14)<td>DORMANCIES - MORDANCIES<br><font color=red>(Gavin Theobald)
+<tr align=center><td>(23)<td>PERVIOUSLY - PREVIOUSLY<br><font color=red>(Gavin Theobald)
+<tr align=center><td>(79)<td>CHRYSOLITE - CHRYSOTILE<br><font color=red>(Gavin Theobald)
+</table>
+</table><p>
+
+<a href="mailto:corey.plover@gmail.com">Corey Plover</a> found all the 7, 8, and 9 letter anagrams of official Scrabble words.  They are listed in excel spreadsheets <a href="1008/7.xls">here</a>,  <a href="1008/8.xls">here</a>, and <a href="1008/9.xls">here</a> respectively.<p>
+
+In 2010, <a href="mailto:claudiomeller@gmail.com">Claudio Meller</a> sent me anagrams for 2 to 5 letters in Spanish.  They can be found in the text file <a href="1008/spanish.txt">here</a>.<p>
+<p><hr color=black><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 6/6/10.<font></BODY></HTML>
+

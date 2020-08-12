@@ -1,0 +1,109 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (November 2018)</H1></CENTER>
+
+Skyline is a computer game similar to Tetris. A computer generates squares or triangles randomly, with equal probability. These can be placed on top of something until the next piece does not fit anywhere.  Squares can only be placed on a horizontal surface, directly on top of another square or an upside-down triangle.  Triangles can be placed right-side-up on a horizontal surface, or upside-down supported on each side by two other triangles. We are interested in computingthe average number of moves that can be made in different types of positions.  For example, here are some small positions:<p>
+
+<table cellpadding=5><tr><td><img src="1118/s.gif"> <td><font size=+1> In this position, if we call the average number of movies remaining E, half the time we get a square leaving the same situation with 1 more move, and half the time we get a triangle that we can place but would end the game.  Thus E = &frac12;(E+1) + &frac12;(1), or E=2.</table><p>
+
+<table cellpadding=5><tr><td><img src="1118/t-t.gif"> <td><font size=+1> In this position, half the time we get a square which ends the game immediately, and half the time we get a triangle that we can place upside-down to leave the previous example.  Thus E = &frac12;(0) + &frac12;(1+2), or E=3/2.</table><p>
+
+<table cellpadding=5><tr><td><img src="1118/s-t.gif"> <td><font size=+1> In this position, half the time we get a square which leads to our first example, and half the time we get a triangle that leads to our second example.  Thus E = &frac12;(2+1) + &frac12;(3/2+1), or E=11/4.</table><p>
+
+Can you find how long the game will last on average from the positions below, which are enough to completely solve the width 2 cases?  How about positions of width 3?  Warning: some of them are tricky because it is unclear what the best placement of a piece is.  And there are infinite chains you will have to deal with for seemingly simple positions.<p>
+
+<table align=center><tr align=center><td><img src="1118/s-st.gif"> &nbsp; <img src="1118/s-ss.gif"> &nbsp; <img src="1118/s-s.gif"></table>
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Joe DeVincentis sent the correct answers to the width 2 cases, which are shown below.<p>
+
+<table border=0 align=center cellpadding=5>
+<tr align=center>
+<td><font size=+2>end
+
+<tr align=center>
+<td><font size=+4>&uarr;
+
+<tr align=center>
+<td><img src="1118/t-t.gif"><br><font size=+2>3/2=1.5<td><font size=+4>&larr;
+<td><img src="1118/s-t.gif"><br><font size=+2>11/4=2.75<td><font size=+4>&larr;
+<td><img src="1118/s-s.gif"><br><font size=+2>37/8=4.625
+
+<tr align=center>
+<td><font size=+4>&darr;
+<td><font size=+4>&#8601;<td><font size=+4>&uarr;
+<td><td><font size=+4>&#8597;
+
+<tr align=center>
+<td><img src="1118/s.gif"><br><font size=+2>2<td>
+<td><img src="1118/s-st.gif"><br><font size=+2>19/8=2.375<td><font size=+4>&larr;
+<td><img src="1118/s-ss.gif"><br><font size=+2>9/2=4.5
+
+<tr align=center>
+<td><font size=+4>&#8634;<td><font size=+4>&#8600;
+<td><font size=+4>&darr;
+
+<tr align=center>
+<td><td>
+<td><img src="1118/t.gif"><br><font size=+2>0
+</table><p>
+
+
+
+Here are my solutions for expected lifetimes for width 3 positions.  Evert Stenlund corrected some of my calculations.<p>
+
+<table border=0 align=center cellpadding=5>
+<tr align=center>
+<td><td>
+<td><td><img src="1118/s.gif"><br><font size=+2>2
+<td><font size=+4>&larr;<td><img src="1118/h.gif"><br>223/36=6.194+
+<td><font size=+4>&larr;<td><img src="1118/i.gif"><br>295/36=8.194+ (ES)
+<td><font size=+4>&larr;<td><img src="1118/j.gif"><br>463/48=9.645+ (ES)
+
+<tr align=center>
+<td><td><td>
+<td><td><font size=+4>&swarr;
+<td><td><font size=+4>&swarr;
+<td><td><font size=+4>&swarr;
+<td><td><font size=+4>&nwarr;
+
+<tr align=center>
+<td><font size=+4>&larr;<td><img src="1118/a.gif"><br>13/2=6.5
+<td><font size=+4>&larr;<td><img src="1118/c.gif"><br>151/18=8.388+
+<td><font size=+4>&larr;<td><img src="1118/e.gif"><br>295/36=8.194+
+<td><font size=+4>&larr;<td><img src="1118/f.gif"><br>655/72=9.097+
+<td><font size=+4>&larr;<td><img src="1118/g.gif"><br>10949/1008=10.862+ (ES)
+<td><font size=+4>&larr;<td><img src="1118/o.gif"><br>709/63=11.253+ (ES)
+
+<tr align=center>
+<td><td><font size=+4>&darr;
+<td><td><font size=+4>&darr;
+<td><td><font size=+4>&darr;
+<td><td><font size=+4>&darr;
+<td><td><font size=+4>&darr;
+<td><font size=+4>&nearr;
+
+<tr align=center>
+<td><font size=+4>&larr;<td><img src="1118/b.gif"><br>51/8=6.375
+<td><font size=+4>&larr;<td><img src="1118/d.gif"><br>149/18=8.277+
+<td><td><img src="1118/k.gif"><br>6
+<td><font size=+4>&larr;<td><img src="1118/m.gif"><br>8
+<td><font size=+4>&larr;<td><img src="1118/n.gif"><br>1339/126=10.626+ (ES)
+
+<tr align=center>
+<td><td><font size=+4>&darr;
+<td><td><font size=+4>&darr;
+<td><td><font size=+4>&#8634;
+<td><font size=+4>&searr;<td><font size=+4>&#8634;
+
+<tr align=center>
+<td><td colspan=3>these lead to a collection of towers where squares are put on the left and triangles are put on the right<td><td><img src="1118/s.gif"><br><font size=+2>2
+<td><font size=+4>&larr;<td><img src="1118/l.gif"><br>4
+</table><p>
+
+
+<HR><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 11/23/18.<font>
+
+
+</BODY></HTML>

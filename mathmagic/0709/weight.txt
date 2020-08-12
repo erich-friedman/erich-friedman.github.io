@@ -1,0 +1,30 @@
+XXXXXXXXXX
+XXXXX
+
+In the simplest fill, there are four layers consisting of the three or four sumominoes in the same macro-orientation. The individual sumominoes are therefore easy to pick out from the higher weights.
+
+3343333433
+3343300000
+
+5545544444
+0000044444
+
+4444400000
+5545544444
+
+0000055455
+4444444444
+
+This generalizes to 2x * 2y * (9n+3) boxes, where x * y = 4n+1 and x≠y.  Here is the example for x=1 and y=9:
+
+676766666666667676
+676766666.........
+
+878788888777777777
+.........777777777
+
+777777777.........
+878788888777777777
+
+.........888887878
+777777777777777777

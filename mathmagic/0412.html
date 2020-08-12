@@ -1,0 +1,679 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (April 2012)</H1></CENTER>
+ 
+Friedman numbers, numbers that can be written in a non-trivial way using their own digits using only +, &ndash;, &times;, /, ^, concatenation of digits, and any number of parentheses, was the <a href="http://www2.stetson.edu/~efriedma/mathmagic/0800.html">August 2000 Math Magic problem</a>.  There are several other web sites allowing differing operations: 
+<a href="http://ezmdd.com/vamp/vmp.htm">Vampire Numbers</a>,
+<a href="http://www.magic-squares.net/narciss.htm#Wild%20Narcissistic%20Numbers">Narcissistic Numbers</a>,
+<a href="http://www.cadaeic.net/wild.htm">Wild Narcissistic Numbers</a>,
+<a href="http://www.numq.com/pwn/">Pretty Wild Narcissistic Numbers</a>.
+This month we investigate a related question with what we will generally call <b>self-reproducing numbers</b>. Which numbers can be written using only one or two operations?  We allow !, &radic;, and decimal points as well, since they are popular choices among recreational math enthusiasts.  What about Fibonacci numbers, Catalan numbers, or binomial coefficients?  What other operations yield self-reproducing numbers?<p>
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Zsb&aacute;n Ambrus, Mark Mammel, Joe DeVincentis, and Bryce Herdt sent solutions.<p>
+
+As before, numbers are nicer if they can written with the digits in the original order, and below these are shown in red.<p>
+
+<center><font size=+2>Exponentiation</font></center>
+<table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center><tr>
+<td>25 = 5<sup>2</sup>
+<td>4096 = (4<sup>6</sup>)<sup>9<sup>0</sup></sup> <font color=green>(MM)
+<td>15625 = (5<sup>6</sup>)<sup>1<sup>2<sup>5</sup></sup></sup><td>19683 = (3<sup>9</sup>)<sup>1<sup>6<sup>8</sup></sup></sup>
+<td>59049 = (9<sup>5</sup>)<sup>4<sup>0<sup>9</sup></sup></sup><tr>
+<td>78125 = (5<sup>7</sup>)<sup>1<sup>8<sup>2</sup></sup></sup>
+<td>117649 = ((7<sup>6</sup>)<sup>1<sup>4</sup></sup>)<sup>1<sup>9</sup></sup>
+<td>390625 = (5<sup>2<sup>3</sup></sup>)<sup>6<sup>0<sup>9</sup></sup></sup> <font color=green>(MM)
+<td>1953125 = ((5<sup>9</sup>)<sup>1<sup>3</sup></sup>)<sup>1<sup>2<sup>5</sup></sup></sup>
+<td>5764801 = ((7<sup>8</sup>)<sup>1<sup>5<sup>6</sup></sup></sup>)<sup>4<sup>0</sup></sup>
+
+<tr>
+<td>10077696 = (((6<sup>9</sup>)<sup>1<sup>6</sup></sup>)<sup>7<sup>0</sup></sup>)<sup>7<sup>0</sup></sup>
+<td>40353607 = (((7<sup>3</sup>)<sup>3</sup>)<sup>4<sup>0</sup></sup>)<sup>5<sup>0<sup>6</sup></sup></sup>
+<td>43046721 = (((3<sup>4</sup>)<sup>4</sup>)<sup>6<sup>0</sup></sup>)<sup>1<sup>2<sup>7</sup></sup></sup>
+<td>134217728 = ((8<sup>3<sup>2</sup></sup>)<sup>1<sup>4<sup>7</sup></sup></sup>)<sup>1<sup>2<sup>7</sup></sup></sup> <font color=orange>(JD)
+<td>244140625 = (((5<sup>2</sup>)<sup>6</sup>)<sup>1<sup>4<sup>4</sup></sup></sup>)<sup>2<sup>0<sup>4</sup></sup></sup>
+<tr>
+<td>387420489 = ((3<sup>2</sup>)<sup>9</sup>)<sup>8<sup>0<sup>7<sup>4<sup>4<sup>8</sup></sup></sup></sup></sup></sup></table><p>
+
+<center><font size=+2>Exponentiation and Addition</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center><tr><td>125 = 5<sup>1+2</sup><td>216 = 6<sup>2+1</sup><td>289 = (8 + 9)<sup>2</sup><td><font color=red>343 = (3 + 4)<sup>3</sup><td>347 = 7<sup>3</sup> + 4<tr>
+<td><font color=red>736 = 7 + 3<sup>6</sup><td><font color=red>2187 = (2 + 1<sup>8</sup>)<sup>7</sup><td><font color=red>3125 = (3<sup>1</sup> + 2)<sup>5</sup><td>3375 = (3 + 5 + 7)<sup>3</sup><td>3378 = (7 + 8)<sup>3</sup> + 3<tr>
+<td>13824 = (8<sup>1</sup> + 2<sup>4</sup>)<sup>3</sup><td><font color=red>14641 = (1 + 4 + 6)<sup>4<sup>1</sup></sup><td>14645 = (5 + 6)<sup>4</sup> + 4<sup>1</sup><td>14647 = (4 + 7)<sup>4</sup> + 6<sup>1</sup><td>15626 = 5<sup>6</sup> + 1<sup>2<sup>6</sup></sup><tr>
+<td>15627 = (5<sup>6</sup>)<sup>1<sup>7</sup></sup> + 2<td>15628 = 5<sup>6</sup> + 1<sup>8</sup> + 2<td>15631 = (5<sup>1+1</sup>)<sup>3</sup> + 6 <td>15632 = (5<sup>2</sup>)<sup>3</sup> + 6 + 1<td>15641 = 5<sup>6</sup> + 4<sup>1+1</sup><tr>
+<td><font color=red>15642 = 1 + 5<sup>6</sup> + 4<sup>2</sup><td>15661 = 5<sup>6</sup> + 6<sup>1+1</sup><td><font color=red>15662 = 1 + 5<sup>6</sup> + 6<sup>2</sup><td>16384 = 4<sup>6+1<sup>3<sup>8</sup></sup></sup> <td>16815 = (1 + 6)<sup>5</sup> + 8<sup>1</sup><tr>
+<td><font color=red>17536 = 1 + 7<sup>5</sup> + 3<sup>6</sup><td>19732 = 3<sup>9</sup> + 7<sup>1<sup>2</sup></sup><td><font color=red>32771  =  3 + 2<sup>7+7+1</sup> <td>32775 = 2<sup>3+5+7</sup> + 7<td>32778 = 2<sup>7+8</sup> + 7 + 3<tr>
+<td>38416 = (6<sup>1<sup>3</sup></sup> + 8)<sup>4</sup><td>44977 = (7 + 7)<sup>4</sup> + 9<sup>4</sup><td><font color=red>46660 = (4 + 6<sup>6</sup>)<sup>6<sup>0</sup></sup><td>46661 = 6<sup>6</sup> + 4 + 1<sup>6</sup><td>59050 = 9<sup>5</sup> + 5<sup>0</sup> + 0<tr>
+<td>59051 = 9<sup>5</sup> + 5<sup>0</sup> + 1<td>59052 = 9<sup>5</sup> + 5<sup>0</sup> + 2<td>59053 = 9<sup>5</sup> + 5<sup>0</sup> + 3<td>59054 = 9<sup>5</sup> + 5<sup>0</sup> + 4<td>59055 = 9<sup>5</sup> + 5<sup>0</sup> + 5<tr>
+<td>59056 = 9<sup>5</sup> + 5<sup>0</sup> + 6<td>59057 = 9<sup>5</sup> + 5<sup>0</sup> + 7<td>59058 = 9<sup>5</sup> + 5<sup>0</sup> + 8<td>59059 = 9<sup>5</sup> + 5<sup>0</sup> + 9<td>78225 = 5<sup>7</sup> + (2 + 8)<sup>2</sup><tr>
+<td>104976 = (1 + 9 + 7 + 6<sup>0</sup>)<sup>4</sup> <font color=orange>(JD)
+<td><font color=red>117650 = 1<sup>1</sup> + (7<sup>6</sup>)<sup>5<sup>0</sup></sup>
+<td>1679616 = 6<sup>(7+1)<sup>1<sup>9<sup>6<sup>6</sup></sup></sup></sup></sup> <font color=orange>(JD)
+<td>2097152 = (2<sup>7</sup>)<sup>2+1+0<sup>9+5</sup></sup> <font color=orange>(JD)
+<td>2097153 = 2<sup>0+7+9+5</sup> + 1<sup>3</sup> <font color=orange>(JD)
+<tr>
+<td><font color=red>16777216 = (1<sup>6+7+7</sup> + 7)<sup>2<sup>1</sup>+6</sup> <font color=orange>(JD)</table></center><p>
+
+
+
+
+<center><font size=+2>Exponentiation and Subtraction</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center><tr><td>127 = 2<sup>7</sup> &ndash; 1 <td>128 = 2<sup>8&ndash;1</sup><td>625 = 5<sup>6&ndash;2</sup>
+<td>4088 = 8<sup>4</sup> &ndash; 8 &ndash; 0<tr>
+<td>13825 = 1 &ndash; (8 &ndash; 2<sup>5</sup>)<sup>3</sup><td>15617 = 5<sup>6</sup> &ndash; 7<sup>1</sup> &ndash; 1<td>15618 = 1 &ndash; (8<sup>1</sup> &ndash; 5<sup>6</sup>) <td>15621 = 5<sup>6</sup> &ndash; 2 &ndash; 1 &ndash; 1<tr>
+<td>15622 = 5<sup>6</sup> &ndash; 2 &ndash; (2 &ndash; 1)<td>15623 = 5<sup>6</sup> &ndash; (3 &ndash; 2) &ndash; 1<td>15624 = 5<sup>6</sup> &ndash; (4 &ndash; 2 &ndash; 1)<td>15626 = 5<sup>6</sup> &ndash; (1<sup>6</sup> &ndash; 2)<tr>
+<td>15632 = 5<sup>6</sup> &ndash; (1 &ndash; 2<sup>3</sup>)<td>15633 = 5<sup>6</sup> &ndash; (1 &ndash; 3)<sup>3</sup><td>16374 = 4<sup>7</sup> &ndash; 1 &ndash; 6 &ndash; 3<td>16375 = (5 &ndash; 1)<sup>7</sup> &ndash; 6 &ndash; 3<tr><td>16377 = (1 &ndash; (3 &ndash; 6))<sup>7</sup> &ndash; 7<td>16378 = (8 &ndash; 3 &ndash; 1)<sup>7</sup> &ndash; 6<td>16384 = 4<sup>8&ndash;1<sup>6&ndash;3</sup></sup> <td>16743 = 7<sup>6&ndash;1</sup> &ndash; 4<sup>3</sup><tr><td>16794 = 7<sup>6&ndash;1</sup> &ndash; 9 &ndash; 4<td>16798 = 7<sup>6&ndash;1<sup>8</sup></sup> &ndash; 9<td>16807 = 7<sup>6&ndash;1</sup> &ndash; 0<sup>8</sup>
+<td>19692 = 9 &ndash; (1 &ndash; (2 &ndash; 6))<sup>9</sup><tr>
+<td>19693 = 1 &ndash; ((3 &ndash; 6)<sup>9</sup> &ndash; 9)<td><font color=red>32759 = (3 &ndash; (2 &ndash; 7))<sup>5</sup> &ndash; 9 <td>32761 = (2<sup>6&ndash;1</sup>)<sup>3</sup> &ndash; 7 <td>32762 = (2<sup>7&ndash;2</sup>)<sup>3</sup> &ndash; 6 <tr>
+<td>32768 = ((8 &ndash; 6)<sup>3</sup>)<sup>7&ndash;2</sup><td>32775 = 7 &ndash; (2 &ndash; 3 &ndash; 7)<sup>5</sup><td>43264 = (6<sup>3</sup> &ndash; 4 &ndash; 4)<sup>2</sup><td>45632 = (6<sup>3</sup>)<sup>2</sup> &ndash; 4<sup>5</sup><tr>
+<td>46633 = 6<sup>6</sup> &ndash; (3<sup>3</sup> &ndash; 4)<td>46644 = 6<sup>6</sup> &ndash; 4 &ndash; 4 &ndash; 4<td>46648 = (4 &ndash; (4 &ndash; 6))<sup>6</sup> &ndash; 8<td>46650 = 6<sup>6</sup> &ndash; 5 &ndash; 4<sup>0</sup><tr>
+<td>46651 = 6<sup>6</sup> &ndash; 1<sup>5</sup> &ndash; 4<td>46653 = 6<sup>6</sup> &ndash; 3<sup>5&ndash;4</sup> <td>46655 = 6<sup>6</sup> &ndash; 4<sup>5&ndash;5</sup><td>46656 = (6<sup>6</sup>)<sup>(5&ndash;4)<sup>6</sup></sup><tr>
+<td>46657 = 6<sup>6</sup> &ndash; (4 &ndash; 5)<sup>7</sup><td>46660 = 4 &ndash; (0<sup>6</sup> &ndash; 6<sup>6</sup>)<td>46661 = 6<sup>6</sup> &ndash; (1<sup>4</sup> &ndash; 6)<td>46663 = 6<sup>6</sup> &ndash; (3 &ndash; 4 &ndash; 6)<tr>
+<td>54958 = 9<sup>5</sup> &ndash; (8<sup>4</sup> &ndash; 5)<td>58921 = 9<sup>5</sup> &ndash; 2<sup>8&ndash;1</sup><td>59038 = 9<sup>5</sup> &ndash; 8 &ndash; 3 &ndash; 0<td>59039 = 9<sup>5</sup> &ndash; 9 &ndash; 3<sup>0</sup><tr>
+<td>59044 = 9<sup>5</sup> &ndash; 4 &ndash; 4<sup>0</sup><td>59045 = 9<sup>5</sup> &ndash; 4 &ndash; 0<sup>5</sup><td>59046 = 9<sup>5</sup> &ndash; (4 &ndash; 6<sup>0</sup>)<td>59048 = 9<sup>5</sup> &ndash; (4<sup>0</sup>)<sup>8</sup><tr>
+<td>59050 = 9<sup>5</sup> &ndash; (0 &ndash; 5<sup>0</sup>)<td>59052 = 9<sup>5</sup> &ndash; 2 &ndash; (0 &ndash; 5)<td>59053 = 9<sup>5</sup> &ndash; (3<sup>0</sup> &ndash; 5)<td>59054 = 9<sup>5</sup> &ndash; (0<sup>4</sup> &ndash; 5)<tr>
+<td>59129 = 9<sup>5</sup> &ndash; (1 &ndash; 9<sup>2</sup>)<td>59263 = 9<sup>5</sup> &ndash; (2 &ndash; 6<sup>3</sup>)<td>59392 = 9<sup>5</sup> &ndash; (2 &ndash; 9)<sup>3</sup><td>78115 = 5<sup>7</sup> &ndash; 8 &ndash; 1 &ndash; 1<tr>
+<td>78116 = (6 &ndash; 1)<sup>7</sup> &ndash; 8 &ndash; 1<td>78117 = (6 &ndash; 1)<sup>7</sup> &ndash; 8<sup>1</sup><td>78123 = (8 &ndash; 3)<sup>7</sup> &ndash; 2<sup>1</sup><td>78133 = 8 &ndash; (1 &ndash; 3 &ndash; 3)<sup>7</sup><tr>
+<td>78135 = 8 &ndash; (1 &ndash; 5<sup>7</sup> &ndash; 3)<td>78136 = 8 &ndash; ((1 &ndash; 6)<sup>7</sup> &ndash; 3)<td>97966 = 7<sup>6</sup> &ndash; (9 &ndash; 6)<sup>9</sup>
+<td>246519 = 4<sup>9</sup> &ndash; 5<sup>6<sup>1<sup>2</sup></sup></sup> <font color=orange>(JD)
+<tr>
+<td>248832 = (8&ndash;(2&ndash;2&ndash;4))<sup>8&ndash;3</sup> <font color=orange>(JD)
+<td>259743 = 4<sup>9</sup> &ndash; 7<sup>5&ndash;(3&ndash;2)</sup> <font color=orange>(JD)
+<td>278640 = 6<sup>7</sup> &ndash; (8 &ndash; 2)<sup>4</sup> &ndash; 0 <font color=orange>(JD)
+<td>279680 = 6<sup>7</sup> &ndash; 2<sup>8</sup> &ndash; 0<sup>9</sup> <font color=orange>(JD)
+<tr>
+<td>279936 = 6<sup>7</sup> &ndash; (9 &ndash; 9)<sup>3/2</sup> <font color=orange>(JD)
+<td>524284 = 2<sup>8&ndash;(2&ndash;5&ndash;8)</sup> &ndash; 4 <font color=orange>(JD)
+<td>524288 = 2<sup>8&ndash;(4&ndash;5&ndash;2&ndash;8)</sup> <font color=orange>(JD)
+<td>531441 = 3<sup>(5<sup>1</sup>&ndash;(1&ndash;4&ndash;4))</sup> <font color=orange>(JD)
+<tr><td>1048576 = 4<sup>5&ndash;(8&ndash;7&ndash;6)&ndash;0<sup>1</sup></sup> <font color=orange>(JD)
+<td>1679608 = 6<sup>8</sup> &ndash; 7 &ndash; 1<sup>9<sup>6<sup>0</sup></sup></sup> <font color=orange>(JD)
+<td>1679616 = 6<sup>(9&ndash;1)<sup>1<sup>7<sup>6<sup>6</sup></sup></sup></sup></sup> <font color=orange>(JD)
+<td>1946564 = 5<sup>9</sup> &ndash; (4&ndash;(1<sup>6</sup>&ndash;6))<sup>4</sup> <font color=orange>(JD)
+<tr>
+<td>1950724 = 5<sup>9</sup> &ndash; 7<sup>4</sup> &ndash; 0<sup>1<sup>2</sup></sup> <font color=orange>(JD)
+<td>1952395 = 5<sup>9</sup> &ndash; 9<sup>3</sup> &ndash; 1<sup>2<sup>5</sup></sup> <font color=orange>(JD)
+<td>1952396 = 5<sup>9</sup> &ndash; 9<sup>3<sup>6<sup>1<sup>2</sup></sup></sup></sup> <font color=orange>(JD)
+<td>1952868 = 5<sup>9</sup> &ndash; 2<sup>8</sup> &ndash; 1<sup>6<sup>8</sup></sup> <font color=orange>(JD)
+<tr>
+<td>1952869 = 5<sup>9</sup> &ndash; 2<sup>8<sup>1<sup>6<sup>9</sup></sup></sup></sup> <font color=orange>(JD)
+<td>1952997 = 5<sup>9</sup> &ndash; 2<sup>7<sup>1<sup>9<sup>9</sup></sup></sup></sup> <font color=orange>(JD)
+<td>1953042 = 5<sup>9</sup> &ndash; 3<sup>4</sup> &ndash; 2<sup>1<sup>0</sup></sup> <font color=orange>(JD)
+<td>1953043 = 5<sup>9</sup> &ndash; 3<sup>4</sup> &ndash; 1<sup>3<sup>0</sup></sup> <font color=orange>(JD)
+<tr>
+<td>1953044 = 5<sup>9</sup> &ndash; 3<sup>4</sup> &ndash; 0<sup>1<sup>4</sup></sup> <font color=orange>(JD)
+<td>1953113 = (5<sup>3</sup>)<sup>3</sup> &ndash; 9 &ndash; 1 &ndash; 1 &ndash; 1 <font color=orange>(JD)
+<td>1953114 = (5<sup>3</sup>)<sup>4&ndash;1</sup> &ndash; 9 &ndash; 1 &ndash; 1 <font color=orange>(JD)
+<td>1953115 = 5<sup>9</sup> &ndash; 5 &ndash; 3 &ndash; 1 &ndash; 1<sup>1</sup>  <font color=orange>(JD)
+<tr>
+<td>1953116 = 5<sup>9</sup> &ndash; 6 &ndash; 3<sup>1<sup>1<sup>1</sup></sup></sup> <font color=orange>(JD)
+<td>1953117 = 5<sup>9</sup> &ndash; 7 &ndash; 1<sup>1<sup>1<sup>3</sup></sup></sup> <font color=orange>(JD)
+<td>1953118 = 5<sup>9</sup> &ndash; (8&ndash;1)<sup>1<sup>1<sup>3</sup></sup></sup> <font color=orange>(JD)
+<td>1953119 = 5<sup>9</sup> &ndash; 3 &ndash; 1 &ndash; 1 &ndash; 1<sup>9</sup> <font color=orange>(JD)
+<tr>
+<td>1953120 = 5<sup>9</sup> &ndash; 3<sup>1</sup> &ndash; 2<sup>1<sup>0</sup></sup> <font color=orange>(JD)
+<td>1953121 = 5<sup>9</sup> &ndash; 3<sup>1<sup>2<sup>1</sup></sup></sup> &ndash; 1 <font color=orange>(JD)
+<td>1953122 = 5<sup>9</sup> &ndash; 3<sup>1<sup>2<sup>2<sup>1</sup></sup></sup></sup> <font color=orange>(JD)
+<td>1953123 = 5<sup>9</sup> &ndash; 2<sup>1<sup>1<sup>3<sup>3</sup></sup></sup></sup> <font color=orange>(JD)
+<tr>
+<td>1953124 = 5<sup>9</sup> &ndash; 1<sup>3<sup>1<sup>2<sup>4</sup></sup></sup></sup> <font color=orange>(JD)
+<td>2097151 = 2<sup>(9&ndash;(0<sup>1</sup>&ndash;7&ndash;5))</sup> &ndash; 1 <font color=orange>(JD)<td>2097152 = 2<sup>(9&ndash;(0<sup>2&ndash;1</sup>&ndash;7&ndash;5))</sup> <font color=orange>(JD)<td>4194300 = 4<sup>9&ndash;(1&ndash;3&ndash;0)</sup> &ndash; (4 &ndash; 0) <font color=orange>(JD)
+<tr>
+<td>4194301 = 4<sup>9&ndash;(1&ndash;3&ndash;0)</sup> &ndash; (4 &ndash; 1) <font color=orange>(JD)
+<td>4194302 = 4<sup>9&ndash;(1&ndash;3&ndash;0)</sup> &ndash; (4 &ndash; 2) <font color=orange>(JD)
+<td>4194303 = 4<sup>9&ndash;(1&ndash;3&ndash;0)</sup> &ndash; (4 &ndash; 3) <font color=orange>(JD)
+<td>4194304 = 4<sup>9&ndash;(1&ndash;3&ndash;0)</sup> &ndash; (4 &ndash; 4) <font color=orange>(JD)
+<tr>
+<td>4194305 = 4<sup>9&ndash;(1&ndash;3&ndash;0)</sup> &ndash; (4 &ndash; 5) <font color=orange>(JD)
+<td>4194306 = 4<sup>9&ndash;(1&ndash;3&ndash;0)</sup> &ndash; (4 &ndash; 6) <font color=orange>(JD)
+<td>4194307 = 4<sup>9&ndash;(1&ndash;3&ndash;0)</sup> &ndash; (4 &ndash; 7) <font color=orange>(JD)
+<td>4194308 = 4<sup>9&ndash;(1&ndash;3&ndash;0)</sup> &ndash; (4 &ndash; 8) <font color=orange>(JD)
+<tr>
+<td>4194309 = 4<sup>9&ndash;(1&ndash;3&ndash;0)</sup> &ndash; (4 &ndash; 9) <font color=orange>(JD)
+<td>4782969 = 9<sup>7<sup>(9&ndash;8)<sup>2<sup>4<sup>6</sup></sup></sup></sup></sup> <font color=orange>(JD)<td>8388608 = (8 &ndash; 6)<sup>8&ndash;(3<sup>0</sup>&ndash;8&ndash;8)</sup> <font color=orange>(JD)
+</table></center><p>
+
+
+
+
+<center><font size=+2>Exponentiation and Multiplication</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center><tr><td><font color=red>2592 = 2<sup>5</sup> &times; 9<sup>2</sup>
+<td>2916 = (1 &times; 6 &times; 9)<sup>2</sup>
+<td><font color=red>23328 = (2 &times; 3<sup>3</sup>)<sup>2</sup> &times; 8
+<td>28672 = 7 &times; 2<sup>6</sup> &times; 8<sup>2</sup>
+<tr>
+<td>32805 = 5 &times; 3<sup>8</sup> &times; 2<sup>0</sup>
+<td>34805 = 5<sup>2<sup>0</sup></sup> &times; 3<sup>8</sup>
+<td>34992 = 3 &times; 9 &times; (4 &times; 9)<sup>2</sup>
+<td>82944 = (8 &times; 9)<sup>2</sup> &times; 4 &times; 4
+<tr>
+<td>262144 = (2 &times; 4)<sup>6</sup> &times; 1<sup>2&times;4</sup> <font color=orange>(JD)
+<td>1594323 = 9<sup>4</sup> &times; 3<sup>5</sup> &times; 1<sup>2&times;3</sup> <font color=purple>(BH)
+<td>1679616 = 6<sup>7</sup> &times; 6<sup>1</sup> &times; 1<sup>6&times;9</sup> <font color=orange>(JD)
+<td>14348907 = 3<sup>7</sup> &times; 9<sup>4</sup> &times; 1<sup>4&times;8&times;0</sup> <font color=purple>(BH)
+</table></center><p>
+
+
+<center><font size=+2>Exponentiation and Division</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center><tr>
+<td><font color=red>11664 = 1 / (1 / 6<sup>6</sup>)) / 4 <font color=purple>(BH)
+<td>46656 = 6<sup>(6<sup>5</sup>/6<sup>4</sup>)</sup> <font color=orange>(JD)
+<td>279936 = 6<sup>7<sup>(9/9)<sup>3/2</sup></sup></sup> <font color=orange>(JD)
+<td>2097152 = (2<sup>7</sup>)<sup>9<sup>1/2<sup>5<sup>0</sup></sup></sup></sup></sup> <font color=orange>(JD)
+<td>1679616 = 6<sup>9</sup> / 6<sup>1</sup> / 1<sup>6/7</sup> <font color=orange>(JD)
+<tr>
+<td>4782969 = 9<sup>7<sup>(8/4/2)<sup>6<sup>9</sup></sup></sup></sup> <font color=orange>(JD)</table></center><p>
+
+
+
+<center><font size=+2>Exponentiation and Concatenation</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center><tr><td>121 = 11<sup>2</sup>
+<td>9216 = (96<sup>2</sup>)<sup>1</sup>
+<td>11025 = (105<sup>2</sup>)<sup>1</sup>
+<td>13824 = (24<sup>3</sup>)<sup>1<sup>8</sup></sup>
+<td>19321 = (139<sup>2</sup>)<sup>1</sup>
+<tr>
+<td>39304 = (34<sup>3</sup>)<sup>9<sup>0</sup></sup>
+<td>81225 = (285<sup>2</sup>)<sup>1</sup>
+<td>131072 = 2<sup>17<sup>1<sup>30</sup></sup></sup> <font color=orange>(JD)
+<td>161051 = 11<sup>5<sup>16<sup>0</sup></sup></sup> <font color=purple>(BH)
+<td>1771561 = 11<sup>6<sup>1<sup>577</sup></sup></sup> <font color=purple>(BH)
+<tr>
+<td>2097152 = 2<sup>21<sup>975<sup>0</sup></sup></sup> <font color=orange>(JD)
+<td>19487171 = 11<sup>7<sup>1<sup>4789</sup></sup></sup> <font color=purple>(BH)
+</table></center><p>
+
+
+
+<center><font size=+2>Exponentiation and Decimal Points</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center><tr><td>2097152 = (2<sup>7</sup>)<sup>9<sup>0.5<sup>1<sup>2</sup></sup></sup></sup></sup> <font color=orange>(JD)
+</table></center><p>
+
+
+
+
+
+
+
+
+<HR>
+
+
+<center><font size=+2>Roots</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center><tr><td>0 = &radic;(0)
+<td>1 = &radic;(1)
+</table></center><p>
+
+
+
+<center><font size=+2>Roots and Exponentiation</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center><tr><td>64 = &radic;(4)<sup>6</sup>
+<td>2097152 = (2<sup>7</sup>)<sup>&radic;9<sup>1<sup>2<sup>5<sup>0</sup></sup></sup></sup></sup></sup><font color=orange>(JD)
+</table></center><p>
+
+
+<center><font size=+2>Roots and Decimal Points</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td><font color=red>1024 = <sup>1</sup>&radic;(<sup>0.2</sup>&radic;4) <font color=orange>(JD)
+<td><font color=red>3125 = <sup>(<sup>3</sup>&radic;1)</sup>&radic;(<sup>.2</sup>&radic;(5)) <font color=orange>(JD)
+</table></center><p>
+
+
+<HR>
+
+<center><font size=+2>Factorial</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td><font color=red>1 = 1!
+<td><font color=red>2 = 2!
+</table></center><p>
+
+
+
+<center><font size=+2>Factorial and Addition</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td><font color=red>144 = (1 + 4)! + 4!
+<td><font color=red>145 = 1 + 4! + 5!
+<td><font color=red>733 = 7 + 3! + (3!)!
+<td><font color=red>5160 = 5! + (1 + 6)! + 0
+<tr>
+<td><font color=red>5161 = 5! + (1 + 6)! + 1
+<td><font color=red>5162 = 5! + (1 + 6)! + 2
+<td><font color=red>5163 = 5! + (1 + 6)! + 3
+<td><font color=red>5164 = 5! + (1 + 6)! + 4
+<tr>
+<td><font color=red>5165 = 5! + (1 + 6)! + 5
+<td><font color=red>5166 = 5! + (1 + 6)! + 6
+<td><font color=red>5167 = 5! + (1 + 6)! + 7
+<td><font color=red>5168 = 5! + (1 + 6)! + 8
+<tr>
+<td><font color=red>5169 = 5! + (1 + 6)! + 9
+<td><font color=red>40440 = (4 + 0!)! + (4 + 4)! + 0
+<td><font color=red>40441 = (4 + 0!)! + (4 + 4)! + 1
+<td><font color=red>40442 = (4 + 0!)! + (4 + 4)! + 2
+<tr>
+<td><font color=red>40443 = (4 + 0!)! + (4 + 4)! + 3
+<td><font color=red>40444 = (4 + 0!)! + (4 + 4)! + 4
+<td><font color=red>40445 = (4 + 0!)! + (4 + 4)! + 5
+<td><font color=red>40446 = (4 + 0!)! + (4 + 4)! + 6
+<tr>
+<td><font color=red>40447 = (4 + 0!)! + (4 + 4)! + 7
+<td><font color=red>40448 = (4 + 0!)! + (4 + 4)! + 8
+<td><font color=red>40449 = (4 + 0!)! + (4 + 4)! + 9
+<td><font color=red>40584 = (4 + 0!)! + 5! + 8! + 4!
+<tr>
+<td><font color=red>40585 = 4! + 0! + 5! + 8! + 5!
+<td><font color=red>363000 = (3 + 6)! + (3 + 0! + 0!)! + 0 <font color=purple>(BH)
+<td><font color=red>363001 = (3 + 6)! + (3 + 0! + 0!)! + 1 <font color=purple>(BH)
+<td><font color=red>363002 = (3 + 6)! + (3 + 0! + 0!)! + 2 <font color=purple>(BH)
+<tr>
+<td><font color=red>363003 = (3 + 6)! + (3 + 0! + 0!)! + 3 <font color=purple>(BH)
+<td><font color=red>363004 = (3 + 6)! + (3 + 0! + 0!)! + 4 <font color=purple>(BH)
+<td><font color=red>363005 = (3 + 6)! + (3 + 0! + 0!)! + 5 <font color=purple>(BH)
+<td><font color=red>363006 = (3 + 6)! + (3 + 0! + 0!)! + 6 <font color=purple>(BH)
+<tr>
+<td><font color=red>363007 = (3 + 6)! + (3 + 0! + 0!)! + 7 <font color=purple>(BH)
+<td><font color=red>363008 = (3 + 6)! + (3 + 0! + 0!)! + 8 <font color=purple>(BH)
+<td><font color=red>363009 = (3 + 6)! + (3 + 0! + 0!)! + 9 <font color=purple>(BH)
+<td><font color=red>363024 = (3 + 6)! + (3 + 0 + 2)! + 4! <font color=purple>(BH)
+<tr>
+<td><font color=red>363613 = (3 + 6)! + 3! + 6! + 1 + 3! <font color=purple>(BH)
+</table></center><p>
+
+
+<center><font size=+2>Factorial and Subtraction</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td><font color=red>715 = (7 &ndash; 1)! &ndash; 5
+<td><font color=red>720 = (7 &ndash; (2 &ndash; 0!))!
+<td>1435 = (4 &ndash; 1)!! &ndash; (5 &ndash; 3!!)
+<td>1463 = 4! &ndash; (1 &ndash; 6! &ndash; 3!!)
+<tr>
+<td>4296 = (9 &ndash; 2)! &ndash; 4! &ndash; 6!
+<td>4317 = 7! &ndash; 3!! &ndash; (4! &ndash; 1)
+<td>5017 = 7! &ndash; ((5 &ndash; 1)! &ndash; 0!)
+<td><font color=red>5035 = ( 5 &ndash; (0! &ndash; 3))! &ndash; 5
+<tr>
+<td>5037 = 7! &ndash; 0! &ndash; (5 &ndash; 3)
+<td>5038 = (8 &ndash; 0)! &ndash; (5 &ndash; 3)
+<td>5039 = (9 &ndash; (5 &ndash; 3))! &ndash; 0!
+<td><font color=red>5040 = (5 &ndash; (0! &ndash; 4) &ndash; 0!)!
+<tr>
+<td>5637 = 7! &ndash; (5! &ndash; 6!) &ndash; 3
+<td><font color=red>6476 = 6! &ndash; (4 &ndash; 7! &ndash; 6!)
+<td><font color=red>10077 = -1 &ndash; 0! &ndash; (0! &ndash; 7! &ndash; 7!)
+<td>10078 = (8 &ndash; 0!)! &ndash; 0! &ndash; (1 &ndash; 7!)
+<tr>
+<td>10079 = (9 &ndash; 0! &ndash; 0!)! &ndash; (1 &ndash; 7!)
+<td>35280 = 8! &ndash; (5 &ndash; (2 &ndash; 3 &ndash; 0!))!
+<td>39600 = (9 &ndash; (3 &ndash; 0! &ndash; 0!))! &ndash; 6!
+<td>40287 = 8! &ndash; 4! &ndash; 7 &ndash; 2 &ndash; 0
+<tr>
+<td>40289 = 8! &ndash; 4! &ndash; (9 &ndash; 2 &ndash; 0)
+<td>40294 = (9 &ndash; 0!)! &ndash; 4! &ndash; (4 &ndash; 2))
+<td>40296 = (9 &ndash; 0!)! &ndash; (6 &ndash; (4 &ndash; 2))!
+<td>40298 = 8! &ndash; (9 &ndash; 4 &ndash; 0!)! &ndash; 2
+<tr>
+<td>40308 = 8! &ndash; 4 &ndash; 0! &ndash; 3! &ndash; 0!
+<td>40309 = (9 &ndash; 0!)! &ndash; 4 &ndash; 0! &ndash; 3!
+<td>40314 = (4 &ndash; (1 &ndash; 0! &ndash; 4))! &ndash; 3!
+<td>40315 = (5 &ndash; (0 &ndash; 3))! &ndash; 4 &ndash; 1
+<tr>
+<td>40316 = (6 &ndash; (1 &ndash; 3))! &ndash; 4 &ndash; 0
+<td><font color=red>40318 = 4 &ndash; 0! &ndash; (3! &ndash; 1 &ndash; 8!)
+<td>40319 = (9 &ndash; 1)! &ndash; (4 &ndash; 3 &ndash; 0)
+<td><font color=red>40320 = (4 &ndash; (0! &ndash; 3 &ndash; 2))! &ndash; 0
+<tr>
+<td>40321 = (3! &ndash; (2 &ndash; 4))! &ndash; (0 &ndash; 1)
+<td>40322 = (3! &ndash; (2 &ndash; 4))! &ndash; (0 &ndash; 2)
+<td>40323 = (3! &ndash; (2 &ndash; 4))! &ndash; (0 &ndash; 3)
+<td>40324 = (3! &ndash; (2 &ndash; 4))! &ndash; (0 &ndash; 4)
+<tr>
+<td>40325 = (3! &ndash; (2 &ndash; 4))! &ndash; (0 &ndash; 5)
+<td>40326 = (3! &ndash; (2 &ndash; 4))! &ndash; (0 &ndash; 6)
+<td>40327 = (3! &ndash; (2 &ndash; 4))! &ndash; (0 &ndash; 7)
+<td><font color=red>40328 = 4 &ndash; (0! &ndash; 3 &ndash; 2 &ndash; 8!)
+<tr>
+<td>40329 = (3! &ndash; (2 &ndash; 4))! &ndash; (0 &ndash; 9)
+</table></center><p>
+
+
+
+<center><font size=+2>Factorial and Multiplication</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td><font color=red>36 = 3! &times; 6
+<td><font color=red>40320 = (4 &times; (0 &times; 3)! &times; 2)! &times; 0! <font color=orange>(JD)
+<td><font color=red>82944 = 8 &times; 2 &times; 9 &times; 4! &times; 4!
+</table></center><p>
+
+
+
+<center><font size=+2>Factorial and Division</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td>120960 = 9! / (6/2) / 1 / 0! / 0! <font color=orange>(JD)
+<td>255024 = 4!! / (5 / ((0/5)! / 2 / 2))!<font color=orange>(JD)
+<tr>
+<td>362880 = (3 / (2/6))! / (8/8) / 0! <font color=orange>(JD)
+<td>479001600 = (9! / 7! / 6)! / (0/4)! / 0! / 0! / 0! <font color=orange>(JD)
+</table></center><p>
+
+
+
+
+<center><font size=+2>Factorial and Exponentiation</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td>13824 = (4!)<sup>3<sup>1<sup>8<sup>2</sup></sup></sup></sup> <font color=orange>(JD)
+</table></center><p>
+
+
+<HR>
+
+
+
+<center><font size=+2>Multiplication and Concatenation</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center><tr><td>126 = 6 &times; 21<td>153 = 3 &times; 51<td>688 = 8 &times; 86<td>1206 = 6 &times; 201<td>1255 = 5 &times; 251
+<tr><td>1260 = 6 &times; 210<td>1395 = 15 &times; 93<td>1435 = 35 &times; 41<td>1503 = 3 &times; 501<td>1530 = 3 &times; 510
+<tr><td>1827 = 21 &times; 87<td>2187 = 27 &times; 81<td>3159 = 9 &times; 351<td>3784 = 8 &times; 473<td>6880 = 8 &times; 860
+<tr>
+<td>10251 = 51 &times; 201<td>10255 = 5 &times; 2051<td>10426 = 26 &times; 401<td>10521 = 21 &times; 501<td>10525 = 5 &times; 2105<tr>
+<td>10575 = 15 &times; 705<td>11259 = 9 &times; 1251<td>11439 = 9 &times; 31 &times; 41<td>11844 = 84 &times; 141<td>11848 = 8 &times; 1481
+<tr><td>12006 = 6 &times; 2001<td>12060 = 6 &times; 2010<td>12384 = 3 &times; 4128<td>12505 = 5 &times; 2501<td>12546 = 51 &times; 246
+<tr><td>12550 = 5 &times; 2510<td>12595 = 5 &times; 2519<td>12600 = 6 &times; 2100<td>12762 = 6 &times; 2127<td>12768 = 8 &times; 21 &times; 76
+<tr><td>12798 = 2 &times; 79 &times; 81<td>12843 = 3 &times; 4281<td>12955 = 5 &times; 2591<td>12964 = 14 &times; 926
+<td>13243 = 41 &times; 323
+<tr><td>13545 = 3 &times; 4515<td>13764 = 6 &times; 31 &times; 74<td>13950 = 15 &times; 930<td>14035 = 35 &times; 401<td>14350 = 35 &times; 410
+<tr><td>15003 = 3 &times; 5001<td>15030 = 3 &times; 5010<td>15246 = 6 &times; 2541<td>15300 = 3 &times; 5100<td>15435 = 3 &times; 5145
+<tr>
+<td>15624 = 24 &times; 651<td>15795 = 9 &times; 1755<td>15975 = 5 &times; 5 &times; 9 &times; 71<td>16272 = 6 &times; 2712<td>16368 = 8 &times; 31 &times; 66<tr><td>17325 = 75 &times; 231
+<td>17346 = 6 &times; 7 &times; 413<td>17428 = 2 &times; 8714<td>17437 = 47 &times; 371<td>17482 = 2 &times; 8741<tr><td>17892 = 9 &times; 28 &times; 71
+<td>18225 = 81 &times; 225<td>18265 = 65 &times; 281<td>18270 = 21 &times; 870<td>19026 = 21 &times; 906<tr><td>19215 = 21 &times; 915
+<td>19845 = 5 &times; 49 &times; 81
+<td>21375 = 3 &times; 7125<td>21586 = 86 &times; 251<td>21753 = 3 &times; 7251
+<tr><td>21870 = 27 &times; 810<td>24768 = 4 &times; 72 &times; 86<td>25105 = 5 &times; 5021<td>25375 = 35 &times; 725<td>25474 = 47 &times; 542
+<tr><td>25510 = 5 &times; 5102
+<td>28476 = 42 &times; 678<td>29184 = 4 &times; 8 &times; 912<td>29632 = 32 &times; 926<td>31509 = 9 &times; 3501<tr><td>31590 = 9 &times; 3510
+<td>33579 = 7 &times; 9 &times; 533<td>33655 = 53 &times; 635<td>33696 = 36 &times; 936
+<td>34992 = 9 &times; 9 &times; 432<tr><td>36855 = 63 &times; 585<td>37668 = 6 &times; 73 &times; 86
+<td>37840 = 8 &times; 4730<td>37845 = 87 &times; 435<td>39784 = 8 &times; 4973
+<tr><td>41665 = 65 &times; 641<td>42898 = 89 &times; 482
+<td>44676 = 6 &times; 7446<td>45684 = 54 &times; 846<td>45760 = 65 &times; 704<tr><td>45864 = 84 &times; 546<td>47538 = 57 &times; 834<td>48672 = 78 &times; 624<td>49855 = 59 &times; 845<td>49896 = 6 &times; 84 &times; 99<tr><td>49968 = 8 &times; 9 &times; 694<td>51759 = 9 &times; 5751<td>52168 = 8 &times; 6521<td>53865 = 63 &times; 855<td>56295 = 9 &times; 6255<tr><td>56875 = 65 &times; 875<td>62968 = 68 &times; 926<td>63895 = 65 &times; 983<td>67149 = 9 &times; 7461<td>67392 = 72 &times; 936<tr><td>67950 = 75 &times; 906<td>68800 = 8 &times; 8600
+<td>69984 = 9 &times; 9 &times; 864<td>71199 = 9 &times; 7911<td>78975 = 9 &times; 8775</table></center><p>
+
+
+
+<HR>
+
+
+
+<center><font size=+2>Fibonacci</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td><font color=red>0 = F<sub>0</sub>
+<td><font color=red>1 = F<sub>1</sub>
+<td><font color=red>5 = F<sub>5</sub>
+</table></center><p>
+
+
+
+
+<center><font size=+2>Fibonacci and Addition</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td><font color=red>55 = F<sub>5+5</sub> 
+<td><font color=red>233 = F<sub>F<sub>(F<sub>2</sub>+3+3)</sub></sub>
+<td><font color=red>234 = F<sub>2</sub> + F<sub>F<sub>3+4</sub></sub>
+<td><font color=red>235 = 2 + F<sub>F<sub>(F<sub>3</sub>+4)</sub></sub>
+<td>236 = 3 + F<sub>F<sub>(F<sub>2</sub>+6)</sub></sub>
+<tr>
+<td><font color=red>237 = 2 + F<sub>3</sub> + F<sub>F<sub>7</sub></sub>
+<td><font color=red>267 = F<sub>(F<sub>2</sub>+F<sub>6</sub>)</sub> + F<sub>F<sub>7</sub></sub>
+<td><font color=red>2584 = F<sub>(F<sub>2</sub>+5+8+4)</sub>
+<td><font color=red>2585 = F<sub>2</sub> + F<sub>5+8+5</sub>
+<td>2589 = F<sub>(F<sub>2</sub>+8+9)</sub> + 5
+<tr>
+<td><font color=red>6772 = 6 + F<sub>(F<sub>7</sub>+7)</sub> + F<sub>2</sub>
+<td><font color=red>6773 = 6 + F<sub>(F<sub>7</sub>+7)</sub> + F<sub>3</sub>
+<td><font color=red>6774 = 6 + F<sub>(F<sub>7</sub>+7)</sub> + F<sub>4</sub>
+</table></center><p>
+
+
+<center><font size=+2>Fibonacci and Subtraction</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td>376 = F<sub>(7&ndash;F<sub>F<sub>6</sub></sub>)</sub> &ndash; F<sub>F<sub>3</sub></sub>
+<td>377 = F<sub>(F<sub>F<sub>(7&ndash;F<sub>F<sub>3</sub></sub>)</sub></sub>&ndash;7)</sub>
+<td>1576 = F<sub>(F<sub>7</sub>&ndash;(1&ndash;5))</sub> &ndash; F<sub>F<sub>6</sub></sub>
+<td>1596 = F<sub>(F<sub>F<sub>6</sub></sub>&ndash;(9&ndash;5))</sub> &ndash; 1
+<tr>
+<td>1597 = F<sub>(F<sub>9</sub>&ndash;F<sub>7</sub>&ndash;(5&ndash;1))</sub>
+<td><font color=red>2582 = F<sub>(2&ndash;(5&ndash;F<sub>8</sub>))</sub> &ndash; 2
+<td><font color=red>2583 = F<sub>(F<sub>3</sub>&ndash;(5&ndash;F<sub>8</sub>))</sub> &ndash; F<sub>2</sub>
+<td>2584 = F<sub>(F<sub>8</sub>&ndash;2&ndash;(5&ndash;4))</sub>
+<tr>
+<td>4177 = F<sub>(F<sub>7</sub>&ndash;(1&ndash;7))</sub> &ndash; 4
+<td>4180 = F<sub>(F<sub>8</sub>&ndash;F<sub>F<sub>4</sub></sub>)</sub> &ndash; 1 &ndash; 0
+<td><font color=red>4181 = F<sub>(4&ndash;(1&ndash;F<sub>8</sub>&ndash;1))</sub>
+<td><font color=red>6763 = F<sub>(F<sub>F<sub>6</sub></sub>&ndash;(7&ndash;6))</sub> &ndash; F<sub>3</sub> <font color=purple>(BH)
+<tr>
+<td><font color=red>6764 = F<sub>(F<sub>F<sub>6</sub></sub>&ndash;(7&ndash;6))</sub> &ndash; F<sub>F<sub>F<sub>4</sub></sub></sub> <font color=purple>(BH)
+<td><font color=red>6765 = F<sub>(F<sub>(F<sub>F<sub>6</sub></sub>&ndash;F<sub>7</sub>)</sub>&ndash;(6&ndash;5))</sub>
+<td>10857 = F<sub>F<sub>8</sub></sub> &ndash; F<sub>0&ndash;(1&ndash;5&ndash;7)</sub> <font color=purple>(BH)
+<td><font color=red>10943 = F<sub>F<sub>F<sub>1&ndash;(0&ndash;9)&ndash;4</sub></sub></sub> &ndash; 3 <font color=purple>(BH)
+<tr>
+<td><font color=red>10944 = F<sub>F<sub>F<sub>1&ndash;(0&ndash;9)&ndash;4</sub></sub></sub> &ndash; F<sub>F<sub>4</sub></sub> <font color=purple>(BH)
+<td><font color=red>10946 = F<sub>F<sub>1&ndash;(0&ndash;9&ndash;4)&ndash;6</sub></sub> <font color=purple>(BH)
+<td>17711 = F<sub>(F<sub>7</sub>&ndash;7)</sub> &ndash; (1&ndash;1&ndash;1) <font color=purple>(BH)
+<td><font color=red>28657 = F<sub>(2&ndash;(8&ndash;F<sub>F<sub>6</sub></sub>)&ndash;(5&ndash;F<sub>7</sub>))</sub> <font color=purple>(BH)
+</table></center><p>
+
+
+<center><font size=+2>Fibonacci and Multiplication</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td><font color=red>34 = F<sub>(3&times;F<sub>4</sub>)</sub>
+<td><font color=red>63 = F<sub>F<sub>6</sub></sub> &times; 3
+<td><font color=red>84 = F<sub>8</sub> &times; 4
+<td><font color=red>144 = 1 &times; F<sub>(F<sub>4</sub>&times;4)</sub>
+<td><font color=red>168 = 1 &times; F<sub>6</sub> &times; F<sub>8</sub>
+<tr>
+<td><font color=red>189 = 1 &times; F<sub>8</sub> &times; 9
+<td>273 = F<sub>F<sub>2&times;3</sub></sub> &times; F<sub>7</sub>
+<td>495 = F<sub>(F<sub>F<sub>4</sub></sub>&times;5)</sub> &times; 9
+<td><font color=red>882 = F<sub>8</sub> &times; F<sub>8</sub> &times; 2
+<td>1296 = 1 &times; F<sub>2&times;6</sub> &times; 9
+<tr>
+<td><font color=red>2646 = 2 &times; F<sub>F<sub>6</sub></sub> &times; F<sub>4</sub> &times; F<sub>F<sub>6</sub></sub>
+<td><font color=red>2688 = 2 &times; F<sub>6</sub> &times; F<sub>8</sub> &times; 8
+</table></center><p>
+
+<HR>
+
+
+
+<center><font size=+2>Lucas</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td><font color=red>1 = L<sub>1</sub>
+</table></center><p>
+
+
+
+<center><font size=+2>Lucas and Addition</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td><font color=red>32 = 3 + L<sub>L<sub>L<sub>L<sub>2</sub></sub></sub></sub>
+<td><font color=red>58 = L<sub>5</sub> + L<sub>8</sub>
+<td><font color=red>123 = L<sub>(1+2+L<sub>L<sub>3</sub></sub>)</sub>
+<td><font color=red>124 = 1 + L<sub>(L<sub>2</sub>+L<sub>4</sub>)</sub>
+<td><font color=red>199 = L<sub>1+9</sub> + L<sub>9</sub>
+<tr>
+<td><font color=red>201 = 2 + L<sub>L<sub>(L<sub>L<sub>L<sub>0</sub></sub></sub>+1)</sub></sub>
+<td><font color=red>202 = L<sub>2</sub> + L<sub>L<sub>(L<sub>0</sub>+L<sub>2</sub>)</sub></sub>
+<td><font color=red>203 = L<sub>L<sub>2</sub></sub> + L<sub>L<sub>(L<sub>0</sub>+3)</sub></sub>
+<td><font color=red>205 = L<sub>L<sub>2</sub></sub> + L<sub>0</sub> + L<sub>L<sub>5</sub></sub>
+<td><font color=red>228 = L<sub>L<sub>L<sub>L<sub>2</sub></sub></sub></sub> + L<sub>(L<sub>2</sub>+8)</sub>
+<tr>
+<td><font color=red>235 = L<sub>L<sub>L<sub>2</sub></sub></sub> + L<sub>L<sub>L<sub>3</sub></sub></sub> + L<sub>L<sub>5</sub></sub>
+<td><font color=red>257 = L<sub>L<sub>L<sub>L<sub>2</sub></sub></sub></sub> + L<sub>L<sub>5</sub></sub> + L<sub>7</sub>
+<td><font color=red>275 = L<sub>2+7</sub> + L<sub>L<sub>5</sub></sub>
+<td><font color=red>322 = L<sub>(3+2+L<sub>L<sub>L<sub>2</sub></sub></sub>)</sub>
+<td><font color=red>325 = 3 + L<sub>(L<sub>L<sub>L<sub>2</sub></sub></sub>+5)</sub>
+<tr>
+<td><font color=red>329 = L<sub>L<sub>3</sub></sub> + L<sub>(L<sub>2</sub>+9)</sub>
+<td><font color=red>351 = L<sub>L<sub>L<sub>3</sub></sub></sub> + L<sub>(L<sub>5</sub>+1)</sub>
+<td>398 = L<sub>9</sub> + L<sub>(L<sub>3</sub>+8)</sub>
+<td><font color=red>521 = L<sub>(5+L<sub>L<sub>L<sub>2</sub></sub></sub>+1)</sub>
+<td><font color=red>526 = 5 + L<sub>(L<sub>L<sub>L<sub>2</sub></sub></sub>+6)</sub>
+<tr>
+<td>528 = L<sub>L<sub>L<sub>2</sub></sub></sub> + L<sub>5+8</sub>
+</table></center><p>
+
+
+
+<center><font size=+2>Lucas and Subtraction</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td><font color=red>22 = L<sub>L<sub>L<sub>L<sub>2</sub></sub></sub></sub> &ndash; L<sub>L<sub>L<sub>2</sub></sub></sub>
+<td>27 = L<sub>7</sub> &ndash; 2
+<td><font color=red>29 = L<sub>L<sub>L<sub>L<sub>(L<sub>L<sub>L<sub>2</sub></sub></sub>&ndash;9)</sub></sub></sub></sub>
+<td>123 = L<sub>(L<sub>(L<sub>L<sub>3</sub></sub>&ndash;2)</sub>&ndash;1)</sub>
+<td>521 = L<sub>(L<sub>(L<sub>L<sub>L<sub>2</sub></sub></sub>&ndash;1)</sub>&ndash;5)</sub>
+<td><font color=red>843 = L<sub>(L<sub>8</sub>&ndash;4&ndash;L<sub>L<sub>L<sub>3</sub></sub></sub>)</sub>
+</table></center><p>
+
+
+<center><font size=+2>Lucas and Multiplication</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td><font color=red>35 = L<sub>L<sub>3</sub></sub> &times; 5
+<td><font color=red>55 = L<sub>5</sub> &times; 5
+<td><font color=red>126 = 1 &times; L<sub>L<sub>L<sub>2</sub></sub></sub> &times; L<sub>6</sub>
+<td><font color=red>145 = L<sub>L<sub>1&times;4</sub></sub> &times; 5
+<td><font color=red>203 = L<sub>2&times;L<sub>0</sub></sub> &times; L<sub>L<sub>L<sub>3</sub></sub></sub>
+<tr>
+<td><font color=red>232 = 2 &times; L<sub>3</sub> &times; L<sub>L<sub>L<sub>L<sub>2</sub></sub></sub></sub>
+<td><font color=red>235 = L<sub>(2&times;L<sub>3</sub>)</sub> &times; 5
+<td><font color=red>245 = L<sub>L<sub>L<sub>2</sub></sub></sub> &times; L<sub>4</sub> &times; 5
+<td><font color=red>282 = 2 &times; L<sub>8</sub> &times; L<sub>2</sub>
+<td><font color=red>304 = L<sub>(3&times;L<sub>L<sub>0</sub></sub>)</sub> &times; 4
+<tr>
+<td><font color=red>322 = L<sub>3&times;2&times;2</sub>
+<td><font color=red>343 = L<sub>L<sub>3</sub></sub> &times; L<sub>4</sub> &times; L<sub>L<sub>3</sub></sub>
+<td><font color=red>435 = L<sub>L<sub>4</sub></sub> &times; 3 &times; 5
+</table></center><p>
+
+
+
+<HR>
+
+
+<center><font size=+2>Binomial</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td>28 = <sub>8</sub>C<sub>2</sub> <font color=blue>(ZA)
+</table></center><p>
+
+
+<center><font size=+2>Binomial and Addition</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td><font color=red>6435 = <sub><sub>6</sub>C<sub>4</sub></sub>C<sub>3+5</sub> 
+<td>6438 = <sub><sub>6</sub>C<sub>4</sub></sub>C<sub>8</sub> + 3
+<td>18564 = <sub>1+8+5+4</sub>C<sub>6</sub> 
+<td>18565 = <sub>8+5+5</sub>C<sub>6</sub> + 1
+<td>18569 = <sub>1+8+9</sub>C<sub>6</sub> + 5
+<tr>
+<td>20475 = <sub><sub>(7+<sub>5</sub>C<sub>0</sub>)</sub>C<sub>2</sub></sub>C<sub>4</sub>
+<td>26235 = <sub><sub>5+6</sub>C<sub>2</sub></sub>C<sub><sub>3</sub>C<sub>2</sub></sub>
+<td>75582 = <sub>7+5+5+2</sub>C<sub>8</sub> 
+<td>75587 = <sub>7+5+7</sub>C<sub>8</sub> + 5
+<td>75589 = <sub>5+5+9</sub>C<sub>8</sub> + 7
+<tr>
+<td>92378 = <sub>3+7+9</sub>C<sub>2+8</sub>
+<td>118755 = <sub>(<sub>8</sub>C<sub>1</sub>+<sub>7</sub>C<sub>5</sub>)</sub>C<sub><sub>5</sub>C<sub>1</sub></sub>
+<td>118756 = <sub>(1+<sub><sub>8</sub>C<sub>7</sub></sub>C<sub>6</sub>)</sub>C<sub>5</sub> + 1
+<td>122265 = <sub>(<sub>1+6+5</sub>C<sub>2+2</sub>)</sub>C<sub>2</sub>
+<td>122266 = <sub>(<sub>6+6</sub>C<sub>2+2</sub>)</sub>C<sub>2</sub> + 1
+<tr>
+<td>123753 = <sub>(<sub>7+5</sub>C<sub>1+3</sub>+3)</sub>C<sub>2</sub>
+<td>123754 = <sub>(<sub>7+5</sub>C<sub>4</sub>+3)</sub>C<sub>2</sub> + 1
+<td>134596 = <sub>(<sub>5</sub>C<sub>3</sub>+1+4+9)</sub>C<sub>6</sub>
+<td>148995 = <sub><sub>(1+<sub>5</sub>C<sub><sub>9</sub>C<sub>9</sub></sub>)</sub>C<sub>8</sub></sub>C<sub>4</sub>
+<td>167960 = <sub>1+6+7+6</sub>C<sub>9</sub> + 0
+<tr>
+<td>167961 = <sub>1+6+7+6</sub>C<sub>9</sub> + 1
+<td>167962 = <sub>1+6+7+6</sub>C<sub>9</sub> + 2
+<td>167963 = <sub>1+6+7+6</sub>C<sub>9</sub> + 3
+<td>167964 = <sub>1+6+7+6</sub>C<sub>9</sub> + 4
+<td>167965 = <sub>1+6+7+6</sub>C<sub>9</sub> + 5
+<tr>
+<td>167966 = <sub>1+6+7+6</sub>C<sub>9</sub> + 6
+<td>167967 = <sub>1+6+7+6</sub>C<sub>9</sub> + 7
+<td>167968 = <sub>1+6+7+6</sub>C<sub>9</sub> + 8
+<td>167969 = <sub>1+6+7+6</sub>C<sub>9</sub> + 9
+<td>184756 = <sub>8+7+5</sub>C<sub>(4+<sub>6</sub>C<sub>1</sub>)</sub>
+</table></center><p>
+
+
+<center><font size=+2>Binomial and Subtraction</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td>4996 = <sub><sub>6</sub>C<sub>4</sub></sub>C<sub>9</sub> &ndash; 9
+<td>7139 = <sub><sub>9</sub>C<sub>7</sub></sub>C<sub>3</sub> &ndash; 1
+<td>12376 = <sub>(<sub>7</sub>C<sub>2</sub>&ndash;1&ndash;3)</sub>C<sub>6</sub>
+<td>38760 = <sub><sub>6</sub>C<sub>3</sub></sub>C<sub>(7&ndash;<sub>8</sub>C<sub>0</sub>)</sub>
+<td>43758 = <sub>(<sub>7</sub>C<sub><sub>5</sub>C<sub>4</sub></sub>&ndash;3)</sub>C<sub>8</sub>
+<tr>
+<td>46376 = <sub>(<sub>7</sub>C<sub>3</sub>&ndash;<sub>6</sub>C<sub>6</sub>)</sub>C<sub>4</sub>
+<td>54738 = <sub><sub>8</sub>C<sub>4</sub></sub>C<sub>3</sub> &ndash; (7 &ndash; 5)
+<td>77515 = <sub>(<sub>7</sub>C<sub>5</sub>&ndash;1)</sub>C<sub>7</sub> &ndash; 5
+<td>77520 = <sub>(<sub>7</sub>C<sub>5</sub>&ndash;<sub>2</sub>C<sub>0</sub>)</sub>C<sub>7</sub>
+<td>92375 = <sub>(<sub>7</sub>C<sub>5</sub>&ndash;2)</sub>C<sub>9</sub> &ndash; 3
+<tr>
+<td>92378 = <sub>(<sub>7</sub>C<sub>8&ndash;3</sub>&ndash;2)</sub>C<sub>9</sub>
+<td>95284 = <sub><sub>9</sub>C<sub><sub>4</sub>C<sub>2</sub></sub></sub>C</sub><sub>3</sub>
+<td>98265 = <sub><sub>8</sub>C<sub>2</sub></sub>C<sub>5</sub> &ndash; 6 &ndash; 9
+<td>116277 = <sub><sub>7</sub>C<sub>6&ndash;1</sub></sub>C<sub>7</sub> &ndash; 1 &ndash; 2
+<td>116278 = <sub><sub>8&ndash;1</sub>C<sub>6&ndash;1</sub></sub>C<sub>7</sub> &ndash; 2
+<tr>
+<td>116279 = <sub><sub>9&ndash;2</sub>C<sub>6&ndash;1</sub></sub>C<sub>7</sub> &ndash; 1
+<td>125963 = <sub><sub>6</sub>C<sub>3</sub></sub>C<sub>9&ndash;1</sub> &ndash; 2 &ndash; 5
+<td>125965 = <sub><sub>6</sub>C<sub>5&ndash;2</sub></sub>C<sub>9&ndash;1</sub> &ndash; 5
+<td>125968 = <sub><sub>6</sub>C<sub>8&ndash;5</sub></sub>C<sub>9&ndash;1</sub> &ndash; 2
+<td>125970 = <sub>(<sub>7</sub>C<sub>2</sub>&ndash;<sub>5</sub>C<sub>0</sub>)</sub>C<sub>9&ndash;1</sub>
+<tr>
+<td>134596 = <sub>(<sub>9&ndash;1</sub>C<sub>5&ndash;3</sub>&ndash;4)</sub>C<sub>6</sub>
+<td>167945 = <sub>(<sub>7</sub>C<sub>5</sub>&ndash;1)</sub>C<sub>9</sub> &ndash; <sub>6</sub>C<sub>4</sub>
+<td>167952 = <sub>(<sub>7</sub>C<sub>5</sub>&ndash;1)</sub>C<sub>9</sub> &ndash; 6 &ndash; 2
+<td>167953 = <sub><sub>6</sub>C<sub>5&ndash;(3&ndash;1)</sub></sub>C<sub>9</sub> &ndash; 7
+<td>167954 = <sub><sub>6</sub>C<sub>7&ndash;4</sub></sub>C<sub>9</sub> &ndash; 1 &ndash; 5
+<tr>
+<td>167955 = <sub><sub>6</sub>C<sub>7&ndash;(5&ndash;1)</sub></sub>C<sub>9</sub> &ndash; 5
+<td>167958 = <sub>(<sub>7</sub>C<sub>5</sub>&ndash;1)</sub>C<sub>9</sub> &ndash; (8 &ndash; 6)
+<td>167959 = <sub><sub>6</sub>C<sub>7&ndash;(9&ndash;5)</sub></sub>C<sub>9</sub> &ndash; 1
+<td>167960 = <sub>(<sub>7</sub>C<sub>6&ndash;1</sub>&ndash;<sub>6</sub>C<sub>0</sub>)</sub>C<sub>9</sub>
+<td>194580 = <sub>(<sub>8</sub>C<sub>5</sub>&ndash;9)</sub>C<sub>4</sub> &ndash; <sub>1</sub>C<sub>0</sub>
+<tr>
+<td>203487 = <sub><sub>7</sub>C<sub>2</sub></sub>C<sub>8</sub> &ndash; <sub>3</sub>C<sub><sub>4</sub>C<sub>0</sub></sub>
+
+</table></center><p>
+
+
+<center><font size=+2>Binomial and Multiplication</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td>2268 = 6 &times; <sub><sub>8</sub>C<sub>2</sub></sub>C<sub>2</sub>
+<td>2376 = 3 &times; <sub>2&times;6</sub>C<sub>7</sub>
+<td>15504 = <sub>(5&times;4&times;<sub>1</sub>C<sub>0</sub>)</sub>C<sub>5</sub> 
+<td><font color=red>17892 = 1 &times; 7 &times; <sub>8&times;9</sub>C<sub>2</sub>
+<td>22896 = 2 &times; 8 &times; <sub>6&times;9</sub>C<sub>2</sub>
+<tr>
+<td>24384 = 3 &times; <sub>4&times;4&times;8</sub>C<sub>2</sub>
+<td>24864 = 4 &times; <sub>(4&times;<sub>8</sub>C<sub>6</sub>)</sub>C<sub>2</sub>
+<td>32725 = 5 &times; <sub>(<sub>7</sub>C<sub>2&times;2</sub>)</sub>C<sub>3</sub>
+<td>36288 = 3 &times; 6 &times; <sub>8&times;8</sub>C<sub>2</sub>
+<td>39711 = 1 &times; 1 &times; <sub>9&times;7</sub>C<sub>3</sub>
+<tr>
+<td>74382 = 7 &times; <sub>(8&times;<sub>3</sub>C<sub>2</sub>)</sub>C<sub>4</sub>
+<td>82368 = 8 &times; <sub>8&times;6&times;3</sub>C<sub>2</sub>
+<td>92664 = 9 &times; <sub>6&times;6&times;4</sub>C<sub>2</sub>
+<td>123984 = 1 &times; 3 &times; <sub>9&times;8&times;4</sub>C<sub>2</sub>
+<td>139536 = 1 &times; 9 &times; <sub><sub>6</sub>C<sub>3</sub></sub>C<sub>3&times;5</sub>
+<tr>
+<td>142506 = <sub>1</sub>C<sub>0</sub> &times; <sub>2&times;<sub>6</sub>C<sub>4</sub></sub>C<sub>5</sub>
+<td><font color=red>174832 = 1 &times; 7 &times; <sub>4&times;<sub>8</sub>C<sub>3</sub></sub>C<sub>2</sub>
+<td>198432 = 1 &times; 8 &times; <sub>9&times;<sub>4</sub>C<sub>2</sub></sub>C<sub>3</sub>
+</table></center><p>
+
+
+
+<center><font size=+2>Binomial and Fibonacci</font></center><table cellpadding=5 border=2 bordercolor=black bgcolor=#FFFFFF align=center>
+<tr>
+<td>56 = <sub>F<sub>6</sub></sub>C<sub>5</sub> <font color=blue>(ZA)
+</table></center><p>
+
+
+
+
+
+
+<HR><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 4/28/12.<font>
+</BODY></HTML>

@@ -1,0 +1,321 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (March 2018)</H1></CENTER>
+
+Define the n<sup>th</sup> <b>primorial</b> P<sub>n</sub> to be the product of the first n primes.<p>
+
+<b>Problem #1.</b> How can we write P<sub>n</sub> as a product of k positive integers as to minimize their sum?<p>
+
+<b>Problem #2.</b> How can we write P<sub>n</sub> as a ratio of factorials a<sub>1</sub>! &middot;&middot;&middot; a<sub>j</sub>! / b<sub>1</sub>! &middot;&middot;&middot; b<sub>k</sub>! as to minimize the sum &Sigma; a<sub>i</sub> + &Sigma; b<sub>i</sub> of the numbers used?<p>
+
+<b>Problem #3.</b> What is the largest palindromic factor of P<sub>n</sub>?<p>
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Joe DeVincentis sent solutions.  Mark Mammel confirmed them as optimal.<p>
+
+<b>Problem #1.</b><p>
+
+The best known solutions are shown below. <p>
+
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n \ k<th>2<th>3<th>4
+<tr align=center><th bgcolor=FFFFDD>2
+<td>2&middot;3<td><td>
+<tr align=center><th bgcolor=FFFFDD>3
+<td>5&middot;6
+<td>2&middot;3&middot;5<td>
+<tr align=center><th bgcolor=FFFFDD>4
+<td>14&middot;15
+<td>5&middot;6&middot;7
+<td>2&middot;3&middot;5&middot;7
+<tr align=center><th bgcolor=FFFFDD>5
+<td>42&middot;55
+<td>11&middot;14&middot;15
+<td>5&middot;6&middot;7&middot;11
+<tr align=center><th bgcolor=FFFFDD>6
+<td>165&middot;182
+<td>26&middot;33&middot;35
+<td>11&middot;13&middot;14&middot;15
+<tr align=center><th bgcolor=FFFFDD>7
+<td>714&middot;715
+<td>77&middot;78&middot;85
+<td>17&middot;26&middot;33&middot;35
+<tr align=center><th bgcolor=FFFFDD>8
+<td>3094&middot;3135
+<td>209&middot;210&middot;221
+<td>38&middot;51&middot;65&middot;77
+<tr align=center><th bgcolor=FFFFDD>9
+<td>14858&middot;15015
+<td>595&middot;598&middot;627
+<td>114&middot;115&middot;119&middot;143
+<tr align=center><th bgcolor=FFFFDD>10
+<td>79534&middot;81345
+<td>1771&middot;1885&middot;1938
+<td>255&middot;266&middot;299&middot;319
+<br>253&middot;273&middot;290&middot;323 (JD)
+<tr align=center><th bgcolor=FFFFDD>11
+<td>447051&middot;448630
+<td>5642&middot;5865&middot;6061
+<br>5681&middot;5797&middot;6090 (JD)
+<td>663&middot;665&middot;667&middot;682
+<tr align=center><th bgcolor=FFFFDD>12
+<td>2714690&middot;2733549
+<td>19285&middot;19499&middot;19734
+<td>1547&middot;1653&middot;1702&middot;1705
+<br>1581&middot;1595&middot;1702&middot;1729 (JD)
+<tr align=center><th bgcolor=FFFFDD>13
+<td>17395070&middot;17490603
+<td>65527&middot;67773&middot;68510
+<br>66215&middot;66526&middot;69069 (JD)
+<td>4123&middot;4147&middot;4182&middot;4255
+<tr align=center><th bgcolor=FFFFDD>14
+<td>114371070&middot;114388729
+<td>235135&middot;235382&middot;236379
+<td>10619&middot;10621&middot;10695&middot;10846
+<tr align=center><th bgcolor=FFFFDD>15
+<td>783152070&middot;785147363
+<td>848003&middot;848470&middot;854601
+<td>27417&middot;27962&middot;27965&middot;28681
+<tr align=center><th bgcolor=FFFFDD>16
+<td>5708587335&middot;5708795638
+<td>3185331&middot;3191342&middot;3205865
+<td>74777&middot;75361&middot;76038&middot;76055
+<tr align=center><th bgcolor=FFFFDD>17
+<td>43848093003&middot;43850489690
+<td>12427387&middot;12436905&middot;12440362
+<td>207389&middot;209346&middot;209627&middot;211265
+<br>208034&middot;208131&middot;210197&middot;211265 (JD)
+<tr align=center><th bgcolor=FFFFDD>18
+<td>342444658094&middot;342503171205
+<td>48892415&middot;48964209&middot;48993082
+<td>582521&middot;584749&middot;585858&middot;587735
+<br>583338&middot;583451&middot;586339&middot;587735 (JD)
+<tr align=center><th bgcolor=FFFFDD>19
+<td>2803119896185&middot;2803419704514
+<td>198654665&middot;198867819&middot;198914534
+<td>1671461&middot;1672923&middot;1675895&middot;1676914
+<tr align=center><th bgcolor=FFFFDD>20
+<td>23619540863730&middot;23622001517543
+<td>822802210&middot;823456751&middot;823477809
+<td>4855051&middot;4859994&middot;4860505&middot;4864937
+<tr align=center><th bgcolor=FFFFDD>21
+<td>201813981102615&middot;201817933409378 (JD)
+<td>3439818590&middot;3440510367&middot;3441538199 (JD)
+<td>14177401&middot;14187435&middot;14228357&middot;14231666 (JD)
+<tr align=center><th bgcolor=FFFFDD>22
+<td>1793779293633437&middot; 1793779635410490 (JP)
+<td>14760901545&middot; 14764086722&middot; 14764495937 (JP)
+<td>42312479&middot; 42329845&middot; 42371327&middot; 42398538 (JP)
+<tr align=center><th bgcolor=FFFFDD>23
+<td>16342050964565645&middot; 16342166369958702 (JP)
+<td>64395106531&middot; 64396600554&middot; 64402152085 (JP)
+<td>127716061&middot; 127815945&middot; 127886317&middot; 127926806 (JP)
+<tr align=center><th bgcolor=FFFFDD>24
+<td>154170926013430326&middot; 154171363634898185 (JP)
+<td>287510512978&middot; 287515496485&middot; 287535325407 (JP)
+<td>392579957&middot; 392599190&middot; 392654027&middot; 392752191 (JP)
+<tr align=center><th bgcolor=FFFFDD>25
+<td>1518409177581024365&middot; 1518410187442699518 (JP)
+<td>1321040331310&middot; 1321053487611&middot; 1321117514527 (JP)
+<td>1232056113&middot; 1232133266&middot; 1232345405&middot; 1232415943 (JP)
+<tr align=center><th bgcolor=FFFFDD>26
+<td>15259825120722837478&middot; 15259831781575946565 (JP)
+<td>6152118202714&middot; 6152283617385&middot; 6152311036963 (JP)
+<td>3905885951&middot; 3906450065&middot; 3906457914&middot; 3906738277 (JP)
+<tr align=center><th bgcolor=FFFFDD>27
+<td>154870329715038713659&middot; 154870358790203939190 (JP)
+<td>28838629412905&middot; 28839046111953&middot; 28839054633794 (JP)
+<td>12442617557&middot; 12445176145&middot; 12445467951&middot; 12445504214 (JP)
+<tr align=center><th bgcolor=FFFFDD>28
+<td>1601991088154989174258&middot; 1601991507050573600715 (JP)
+<td>136910623022555&middot; 136911506585854&middot; 136912534109751 (JP)
+<td>40020828198&middot; 40024802239&middot; 40026264145&middot; 40027639663 (JP)
+<tr align=center><th bgcolor=FFFFDD>29
+<td>16725278985898957454695&middot; 16725281357261594271714 (JP)
+<td>654006091489961&middot; 654007088607990&middot; 654007237018157 (JP)
+<td>129321763571&middot; 129323808095&middot; 129327682403&middot; 129331765218 (JP)
+<tr align=center><th bgcolor=FFFFDD>30
+<td>177792163538134124432895&middot; 177792170427340904920562 (JP)
+<td>3161847646225658&middot; 3161854114512095&middot; 3161858853009549 (JP)
+<td>421634654870&middot; 421656389051&middot; 421659275007&middot; 421666019761 (JP)</table><p>
+
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n \ k<th>5<th>6<th>7
+<tr align=center><th bgcolor=FFFFDD>5
+<td>2&middot;3&middot;5&middot;7&middot;11<td><td>
+<tr align=center><th bgcolor=FFFFDD>6
+<td>5&middot;6&middot;7&middot;11&middot;13
+<td>2&middot;3&middot;5&middot;7&middot;11&middot;13<td>
+<tr align=center><th bgcolor=FFFFDD>7
+<td>11&middot;13&middot;14&middot;15&middot;17
+<td>5&middot;6&middot;7&middot;11&middot;13&middot;17
+<td>2&middot;3&middot;5&middot;7&middot;11&middot;13&middot;17
+<tr align=center><th bgcolor=FFFFDD>8
+<td>17&middot;19&middot;26&middot;33&middot;35
+<td>11&middot;13&middot;14&middot;15&middot;17&middot;19
+<td>5&middot;6&middot;7&middot;11&middot;13&middot;17&middot;19
+<tr align=center><th bgcolor=FFFFDD>9
+<td>23&middot;38&middot;51&middot;65&middot;77
+<td>17&middot;19&middot;23&middot;26&middot;33&middot;35
+<td>11&middot;13&middot;14&middot;15&middot;17&middot;19&middot;23
+<tr align=center><th bgcolor=FFFFDD>10
+<td>58&middot;69&middot;95&middot;119&middot;143
+<td>23&middot;29&middot;38&middot;51&middot;65&middot;77
+<td>17&middot;19&middot;23&middot;26&middot;29&middot;33&middot;35
+<tr align=center><th bgcolor=FFFFDD>11
+<td>155&middot;161&middot;174&middot;209&middot;221
+<td>31&middot;58&middot;69&middot;95&middot;119&middot;143
+<td>23&middot;29&middot;31&middot;38&middot;51&middot;65&middot;77
+<tr align=center><th bgcolor=FFFFDD>12
+<td>341&middot;370&middot;377&middot;391&middot;399
+<td>74&middot;93&middot;145&middot;161&middot;209&middot;221
+<td>31&middot;37&middot;58&middot;69&middot;95&middot;119&middot;143
+<tr align=center><th bgcolor=FFFFDD>13
+<td>715&middot;777&middot;779&middot;782&middot;899
+<td>205&middot;217&middot;222&middot;299&middot;319&middot;323
+<td>41&middot;74&middot;93&middot;145&middot;161&middot;209&middot;221
+<tr align=center><th bgcolor=FFFFDD>14
+<td>1547&middot;1653&middot;1702&middot;1705&middot;1763
+<br>1581&middot;1595&middot;1702&middot;1729&middot;1763 (JD)
+<td>437&middot;465&middot;473&middot;493&middot;518&middot;533
+<td>86&middot;123&middot;185&middot;217&middot;299&middot;319&middot;323
+<tr align=center><th bgcolor=FFFFDD>15
+<td>3478&middot;3553&middot;3565&middot;3731&middot;3741
+<td>893&middot;899&middot;903&middot;935&middot;943&middot;962
+<td>235&middot;258&middot;287&middot;403&middot;407&middot;437&middot;493
+<tr align=center><th bgcolor=FFFFDD>16
+<td>7473&middot;7843&middot;8170&middot;8177&middot;8323
+<td>1739&middot;1763&middot;1767&middot;1771&middot;1802&middot;1885
+<td>583&middot;589&middot;602&middot;611&middot;615&middot;629&middot;667
+<tr align=center><th bgcolor=FFFFDD>17
+<td>17759&middot;17917&middot;18073&middot;18241&middot;18330
+<td>3127&middot;3478&middot;3553&middot;3565&middot;3731&middot;3741
+<td>1003&middot;1045&middot;1081&middot;1113&middot;1118&middot;1147&middot;1189 (JP)
+<tr align=center><th bgcolor=FFFFDD>18
+<td>40579&middot;40687&middot;41287&middot;41366&middot;41595
+<td>6601&middot;6837&middot;6919&middot;7163&middot;7198&middot;7285
+<td>1769&middot;1829&middot;2014&middot;2021&middot;2035&middot;2091&middot;2093 (JP)
+<tr align=center><th bgcolor=FFFFDD>19
+<td>93869&middot;94658&middot;95381&middot;96145&middot;96441 (JD)
+<td>13601&middot;13674&middot;13981&middot;14335&middot;14467&middot;14573 (JP)
+<td>3478&middot;3551&middot;3553&middot;3565&middot;3599&middot;3731&middot;3741 (JP)
+<tr align=center><th bgcolor=FFFFDD>20
+<td>222547&middot;223138&middot;223445&middot;224147&middot;224331 (JD)
+<td>28249&middot;28294&middot;28365&middot;28897&middot;29087&middot;29279 (JP)
+<td>4757&middot;6601&middot;6837&middot;6919&middot;7163&middot;7198&middot;7285 (JP)
+<tr align=center><th bgcolor=FFFFDD>21
+<td>524117&middot; 526870&middot; 527137&middot; 528027&middot; 529907 (JP)
+<td>57523&middot; 58007&middot; 58327&middot; 58830&middot; 59059&middot; 60233 (JP)
+<td>10366&middot; 12261&middot; 12341&middot; 12455&middot; 12617&middot; 12673&middot; 13039 (JP)
+<tr align=center><th bgcolor=FFFFDD>22
+<td>1255990&middot; 1260181&middot; 1266449&middot; 1266769&middot; 1267167 (JP)
+<td>120734&middot; 120745&middot; 121107&middot; 121481&middot; 121693&middot; 123281 (JP)
+<td>22265&middot; 22578&middot; 22607&middot; 22673&middot; 22847&middot; 23069&middot; 23693 (JP)
+<tr align=center><th bgcolor=FFFFDD>23
+<td>3051381&middot; 3056053&middot; 3056510&middot; 3059297&middot; 3062749 (JP)
+<td>252343&middot; 253394&middot; 253399&middot; 254301&middot; 254405&middot; 254771 (JP)
+<td>42107&middot; 42143&middot; 42911&middot; 43070&middot; 43239&middot; 43301&middot; 43493 (JP)
+<tr align=center><th bgcolor=FFFFDD>24
+<td>7489873&middot; 7495631&middot; 7497805&middot; 7508002&middot; 7520817 (JP)
+<td>533281&middot; 535866&middot; 536015&middot; 536129&middot; 536731&middot; 539251 (JP)
+<td>80934&middot; 81055&middot; 81257&middot; 81437&middot; 81673&middot; 81833&middot; 81923 (JP)
+<tr align=center><th bgcolor=FFFFDD>25
+<td>18706015&middot; 18709243&middot; 18740819&middot; 18741701&middot; 18756114 (JP)
+<td>1144891&middot; 1147715&middot; 1148581&middot; 1149969&middot; 1152346&middot; 1152787 (JP)
+<td>154919&middot; 155701&middot; 156655&middot; 156907&middot; 156953&middot; 156981&middot; 157826 (JP)
+<tr align=center><th bgcolor=FFFFDD>26
+<td>47097337&middot; 47116949&middot; 47137515&middot; 47162758&middot; 47201947 (JP)
+<td>2469955&middot; 2475149&middot; 2477261&middot; 2479711&middot; 2488838&middot; 2491377 (JP)
+<td>301701&middot; 301903&middot; 302105&middot; 302731&middot; 302867&middot; 303707&middot; 303902 (JP)
+<tr align=center><th bgcolor=FFFFDD>27
+<td>119048682&middot; 119102533&middot; 119112805&middot; 119165147&middot; 119174471 (JP)
+<td>5363547&middot; 5364973&middot; 5369045&middot; 5370829&middot; 5375422&middot; 5377321 (JP)
+<td>583573&middot; 585466&middot; 586339&middot; 586993&middot; 587735&middot; 588729&middot; 589469 (JP)
+<tr align=center><th bgcolor=FFFFDD>28
+<td>303209555&middot; 303225937&middot; 303295031&middot; 303346742&middot; 303393621 (JP)
+<td>11689139&middot; 11693443&middot; 11693487&middot; 11701355&middot; 11703826&middot; 11724311 (JP)
+<td>1139467&middot; 1140005&middot; 1144891&middot; 1145443&middot; 1145542&middot; 1146251&middot; 1147317 (JP)
+<tr align=center><th bgcolor=FFFFDD>29
+<td>774767161&middot; 774992291&middot; 775159495&middot; 775200578&middot; 775305843 (JP)
+<td>25557485&middot; 25559933&middot; 25571431&middot; 25574494&middot; 25586333&middot; 25591683 (JP)
+<td>2230709&middot; 2233579&middot; 2235937&middot; 2236645&middot; 2236926&middot; 2238751&middot; 2241757 (JP)
+<tr align=center><th bgcolor=FFFFDD>30
+<td>1994810095&middot; 1994903339&middot; 1995040999&middot; 1995110259&middot; 1995644158 (JP)
+<td>56197006&middot; 56203997&middot; 56225113&middot; 56232605&middot; 56244959&middot; 56278527 (JP)
+<td>4386238&middot; 4387795&middot; 4389569&middot; 4391783&middot; 4396717&middot; 4397379&middot; 4406579 (JP)
+</table><p>
+
+
+<b>Problem #2.</b><p>
+
+The best known solutions are shown below. <p>
+
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n<th>Ratio<th>Author
+<tr align=center><td>1<td>2!<td>
+<tr align=center><td>2<td>3!<td>
+<tr align=center><td>3<td>5! / 2! 2!<td>
+<tr align=center><td>4<td>7! / 4!<td>
+<tr align=center><td>5<td>11! / 6! 4!<td>
+<tr align=center><td>6<td>13! / 6! 4! 3! 2!<td>
+<tr align=center><td>7<td>17! / 8! 6! 4!<td>
+<tr align=center><td>8<td>19! / 9! 6! 4! 2!<td>
+<tr align=center><td>9<td>23! / 12! 8! 3!<td>Joe DeVincentis
+<tr align=center><td>10<td>29! / 14! 10! 6! 3!<br> 29! / 15! 9! 5! 4!<td>Joe DeVincentis
+<tr align=center><td>11<td>31! / 15! 9! 6! 5!<td>Joe DeVincentis
+<tr align=center><td>12<td>37! / 18! 11! 10! 2!<td>Joe DeVincentis
+<tr align=center><td>13<td>41! / 20! 13! 10! 2!<td>Jon Palin
+<tr align=center><td>14<td>43! / 21! 16! 6! 3!<td>Jon Palin
+<tr align=center><td>15<td>47! / 27! 12! 8! 2!<td>Jon Palin
+<tr align=center><td>16<td>53! / 28! 17! 7! 5! 2!<td>Jon Palin
+<tr align=center><td>17<td>59! / 29! 22! 10! 2!<td>Jon Palin
+<tr align=center><td>18<td>61! / 29! 22! 10! 5!<td>Jon Palin
+<tr align=center><td>19<td>67! / 31! 22! 16! 4!<td>Jon Palin
+<tr align=center><td>20<td>71! / 35! 28! 8! 3! 2!<td>Jon Palin
+<tr align=center><td>21<td>73! / 36! 28! 8! 4!<td>Jon Palin
+<tr align=center><td>22<td>79! / 39! 25! 14! 7! 2!<td>Jon Palin
+<tr align=center><td>23<td>83! / 42! 28! 12! 6!<td>Jon Palin
+<tr align=center><td>24<td>89! 13! / 44! 30! 18! 12! 2!<td>Woohyun Rim
+<tr align=center><td>25<td>97! / 47! 32! 19! 7!<td>Alex Rower
+<tr align=center><td>26<td>101! 3! 2! / 49! 31! 22! 6! 5!<td>Alex Rower
+<tr align=center><td>27<td>103! / 47! 35! 21! 7! 3! <td>Alex Rower
+<tr align=center><td>28<td>107! 6! 2! / 53! 31! 19! 11! 8!<td>Alex Rower
+<tr align=center><td>29<td>109! 5! / 53! 31! 19! 12! 7! 3!<td>Alex Rower
+<tr align=center><td>30<td>113! 3! / 54! 38! 14! 11! 7! 2!<td>Alex Rower
+<tr align=center><td>31<td>128! 29! 20! / 61! 41! 31! 23! 17! 11! 8!<td>Alex Rower
+<tr align=center><td>32<td>131! 29! 19! / 61! 43! 31! 23! 17! 13! 5!<td>Alex Rower
+<tr align=center><td>33<td>137! 13! 8! 2! 2! / 67! 43! 23! 17! 11! 5! 5! 3!<td>Alex Rower
+<tr align=center><td>34<td>140! 13! 2! 2! / 67! 46! 25! 17! 7! 3!<td>Alex Rower
+<tr align=center><td>35<td>150! 33! 24! 18! 9! 3! 3! 2! / 73! 47! 37! 29! 13! 11! 11! 8! 7!<td>Alex Rower
+<tr align=center><td>36<td>151! 31! 24! 18! 2! / 73! 50! 37! 30! 22! 13! 5! 3!<td>Alex Rower
+<tr align=center><td>37<td>157! 24! 9! 6! 4! 3! 2! / 73! 47! 38! 19! 14! 11! 7! 5!<td>Alex Rower
+<tr align=center><td>38<td>163! 13! 5! 2! / 79! 55! 32! 12! 9!<td>Alex Rower
+<tr align=center><td>39<td>167! 13! 6! / 83! 55! 33! 11! 8!<td>Alex Rower
+<tr align=center><td>40<td>173! 42! 6! 2! / 83! 53! 44! 31! 19!<td>Alex Rower</table><p>
+
+<b>Problem #3.</b>
+
+The best known solutions are shown below. <p>
+
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n<th>Palindromic Factor<th>Factorization<th>Author
+<tr align=center><td>1<td>2<td>2<td>
+<tr align=center><td>2&ndash;3<td>6<td>2 &middot; 3<td>
+<tr align=center><td>4<td>7<td>7<td>
+<tr align=center><td>5<td>77<td>7 &middot; 11<td>
+<tr align=center><td>6&ndash;7<td>6006<td>2 &middot; 3 &middot; 7 &middot; 11 &middot; 13<td>
+<tr align=center><td>8&ndash;10<td>969969<td>3 &middot; 7 &middot; 11 &middot; 13 &middot; 17 &middot; 19<td>
+<tr align=center><td>11<td>36399363<td>3 &middot; 7 &middot; 11 &middot; 13 &middot; 17 &middot; 23 &middot; 31<td>
+<tr align=center><td>12&ndash;14<td>1346776431<td>3 &middot; 7 &middot; 11 &middot; 13 &middot; 17 &middot; 23 &middot; 31 &middot; 37<td>
+<tr align=center><td>15&ndash;17<td>5330660335<td>5 &middot; 7 &middot; 11 &middot; 13 &middot; 17 &middot; 31 &middot; 43 &middot; 47<td>Joe DeVincentis
+<tr align=center><td>18&ndash;21<td>5041813181405<td>5 &middot; 7 &middot; 11 &middot; 13 &middot; 17 &middot; 19 &middot; 29 &middot; 41 &middot; 43 &middot; 61<td>
+<tr align=center><td>22&ndash;28<td>74833599533847<td>3 &middot; 7 &middot; 11 &middot; 29 &middot; 31 &middot; 37 &middot; 43 &middot; 47 &middot; 61 &middot; 79<td>Joe DeVincentis
+<tr align=center><td>29<td>502073167761370205<td>5 &middot; 7 &middot; 11 &middot; 13 &middot; 23 &middot; 31 &middot; 41 &middot; 53 &middot; 73 &middot; 79 &middot; 103 &middot; 109<td>Jon Palin
+<tr align=center><td>30&ndash;34<td>5521159517777159511255<td>3 &middot; 5 &middot; 7 &middot; 11 &middot; 13 &middot; 17 &middot; 29  &middot; 31 &middot; 41 &middot; 71 &middot; 79 &middot; 89 &middot; 101 &middot; 103 &middot; 113<td>Woohyun Rim
+</table><p>
+
+<HR><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 3/1/18.<font>
+
+
+</BODY></HTML>

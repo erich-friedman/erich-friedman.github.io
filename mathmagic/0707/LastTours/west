@@ -1,0 +1,20 @@
+<html><body><small>
+Following <a href=http://www.stetson.edu/~efriedma/mathmagic/0707.html>Erich Friedman </a> we look for closed tours of rectangular chessboards by Kings, Rooks or Queens so that no piece attacks any other as they move around the tour.
+<hr>
+To build a path (no need to fill the whole board!) you must click near to the boundary between the squares to join:<br>
+<table><tr>
+<td><img src="mini.gif"></td>
+<td><ul>
+<li><small>To join horizontally (squares 1 and 2, or 3 and 4) click close to the mid-point of the <u>yellow</u> separating line; a second click will destroy the link.</small></li>
+<li><small>To join vertically (squares 1 and 3, or 2 and 4) click close to the mid-point of the <u>blue</u> separating line; a second click will destroy the link.</small></li>
+<li><small>A first click close to a vertex <u>(green)</u> will join the squares 1 and 4; a second click will suppress this link and create the other diagonal one (squares 2 and 3); a third click will create both links, and a fourth click will destroy both.</small></li>
+</ul></td>
+</tr></table>
+On the right, the path is written in red; also red become the centers of squares linked with exactly two other squares. Squares having just one link will appear with a blue center; a black center will denote squares having more than two links.
+<hr>
+To play with your path you must validate it. The program will complain if blue and/or black centers are present, while any other path will be accepted, possibly with a warning message; you will thus get the &quot;animation-page&quot;, where <U>you still need to fix number and position of the pieces</U>.
+<hr>
+An accepted closed tour will appear in the text-area close to the checking-button in terms of the numeric-keypad directions (<a href="kpd" target="_self">HELP</a>); you can copy such a string and save it for future use. In fact, there is a fast way of build a known tour: you can directly insert the corresponding string into the text-area and force the program to accept it. In the file (<a href="ex" target="_self">EXAMPLES</a>) are collecred some pre-built strings. 
+<hr>
+For a bigger board, simply change the values of variables "rows" and "cols" at the beginning of the file "east"; animation-parameters can be modified in the file "prog.js"
+</small></body></html>

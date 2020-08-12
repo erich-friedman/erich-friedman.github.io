@@ -1,0 +1,30 @@
+<HTML>
+<CENTER>n=4 players, N=10 games:</CENTER>
+<pre>
+A plays B (by symmetry, assume A wins).  A plays C and D
+IF A WINS BOTH, C plays D (by symmetry, assume C wins).  A plays C
+   IF A WINS, A plays B
+      IF A WINS, B plays C, and the winner plays A 3 times and needs to win all 3
+      IF B WINS, A plays B 4 times (A wins ties)
+   IF C WINS, A plays C twice more
+      IF SOMEONE WINS BOTH (say A), A plays B 3 times, and B needs to win all 3
+      IF THEY SPLIT, A plays C best-of-3
+IF A WINS EXACTLY ONE (say, against C), A plays D twice more
+   IF A WINS BOTH, B plays C (by symmetry, assume B wins).  A plays B
+      IF A WINS, A plays D 3 times, and D needs to win all 3
+      IF B WINS, A plays B best-of-3
+   IF THEY SPLIT, A plays D twice more
+      IF A WINS BOTH, B plays C, and the winner plays A twice (A wins ties)
+      IF THEY SPLIT, A plays D best-of-3
+      IF D WINS BOTH, B plays C, and the winner plays D twice (D wins ties)
+   IF D WINS BOTH, B plays C, and the winner plays D 4 times (D wins ties)
+IF A LOSES BOTH, C plays D twice
+   IF ONE PLAYER WINS BOTH (say C), A plays B
+      IF A WINS, A plays C
+         IF A WINS, A plays C best-of-3
+         IF C WINS, C plays D 3 times, and D needs to win all 3
+      IF B WINS, B plays C 4 times (C wins ties)
+   IF THEY SPLIT, C plays D twice more
+      IF ONE PLAYER WINS BOTH (say C), A plays B, and winner plays C twice (C wins ties)
+      IF THEY SPLIT, C plays D best-of-3
+</pre>

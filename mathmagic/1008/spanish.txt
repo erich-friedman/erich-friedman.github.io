@@ -1,0 +1,113 @@
+Length 2
+
+Perm    Anagram
+(12)    Al - La
+
+Length 3
+
+Perm    Anagram
+(12)    Sea - Esa
+(13)    Ser - Res
+(23)    Rae - Rea
+(123)   Esa - Aes
+
+Length 4 
+
+Perm     Anagram
+(12)     Apto - Pato
+(13)     Caso - Saco
+(14)     Arco - Orca
+(23)     Acre - Arce
+(24)     Gato - Gota
+(34)     Caso - Caos
+(12)(34) Acal - Cala
+(13)(24) Cabo - Boca
+(14)(23) Anal - Lana
+(123)    Acto - Taco
+(124)    Lota - Alto
+(134)    Caos - Saco
+(234)    Amor - Armo
+(1234)   Amor - Ramo
+(1243)   Esta - Teas
+(1324)   Toca - Acto
+
+Length 5
+
+Perm    Anagram
+(12)    Albor - Labor
+(13)    Burlo - Rublo
+(14)    Cursa - Surca
+(15)    Astro - Ostra
+(23)    Cerdo - Credo
+(24)    Calor - Colar
+(25)    Casto - Costa
+(34)    Culpa - Cupla
+(35)    Coral - Colar
+(45)    Curas - Cursa 
+
+(12)(34) Acero - Careo
+(12)(35) Orlas - Rosal
+(12)(45) Optar - Potra
+(13)(24) Damos - Modas
+(13)(25) Galio - Logia
+(13)(45) Metro - Temor
+(14)(23) Turba - Bruta
+(14)(25) Corte - Terco
+(14)(35) Droga - Grado 
+(15)(23) Av’en - Nivea
+(15)(24) Notar - Rat—n
+(15)(34) Atine - Etnia
+(23)(45) Claro - Calor
+(24)(35) Calor - Coral
+(25)(34) Farol - Flora
+
+(123)    Beato - Abeto 
+(124)    N’veo - Env’o
+(125)    Estan - Netas
+(134)    Cielo - Liceo
+(135)    Duras - Sudar
+(145)    Donar - Ronda 
+(234)    Bateo - Beato
+(235)    Biela - Baile
+(245)    Hebra - Haber
+(345)    Cines - Cisne
+
+(1234)    Orina - Noria
+(1235)    Vuelo - Ovule
+(1243)    Astro - Tarso
+(1245)    Bardo - Obrad 
+(1253)    Antes - Tasen
+(1254)    Notar - Antro
+(1324)    Broca - Cobra
+(1325)    Grial - Ligar
+(1345)    Negar - Renga
+(1354)    Carne - Nacer
+(1425)    Beoda - Adobe
+(1435)    Enoja - Anjeo
+(2345)    Claro - Colar
+(2354)    Traes - Tersa
+(2435)    Basto - Botas
+
+(12345)    Estar - Resta
+(12354)    Ronca - Croan
+(12435)    Corta - Actor
+(12453)    Estan - Tensa
+(12534)    Rapto - Tropa
+(12543)    Urato - Autor
+(13245)    Cruel - Lucre
+(13254)    Tripa - Pitar
+(13425)    Trapo - Optar
+(13524)    Calvo - Vocal
+(14235)    Idean - Nadie
+(14325)    Novia - Avino
+
+(12)(345)    Actos - Casto
+(13)(245)    Impar - Prima
+(14)(235)    Tropa - Parto
+(15)(234)    Abril - Libra
+(23)(145)    Rodea - Adore
+(24)(135)    Toser - Retos
+(25)(134)    Barco - Cobra
+(34)(125)    Norte - Entro
+(35)(124)    Renta - Traen
+(45)(123)    Entro - Tenor  

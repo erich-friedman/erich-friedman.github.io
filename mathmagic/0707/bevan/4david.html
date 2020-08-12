@@ -1,0 +1,82 @@
+<html><head>
+
+<script type="text/javascript">
+
+// preloading images
+var sinistra=new Image(); sinistra.src="3x4left.gif"
+var centro=new Image(); centro.src="3x4cntr.gif"
+var destra=new Image(); destra.src="3x4right.gif"
+var re=new Image(); re.src="king.gif"
+
+
+var // movements
+ movLT='38386', movLB='2481888',
+ movCT='268386', movCB='248184',
+ movR='268622248184', moves
+
+/****************** come nel tastierino:
+789
+456
+123
+*****************************/
+//                0=fake  1  2   3   4  5=fake   6   7  8  9
+var incL=new Array(   0 ,-1, 0 , 1 ,-1 ,   0   , 1 ,-1, 0, 1)
+var incT=new Array(   0 , 1, 1 , 1 , 0 ,   0   , 0 ,-1,-1,-1)
+
+
+var s=eval(prompt('Following David Bevan, K(4,r*s)>=2s. With r=3, give me s>=2 ',2))
+
+if(s<2)s=2
+
+var parti=s-2, numK=2*s, lun, x, who=new Array(), whereTop=new Array(), whereLef=new Array(), counter=0, now=6
+
+function put(obj,whT,whL){ obj.style.top=whT; obj.style.left=whL }
+
+
+function moveObj(){var x, del, c=new Array()
+ for(x=0;x<numK;x++){
+  c[x]=moves.charAt(now+6*x)
+  whereTop[x]+=incT[c[x]];whereLef[x]+=incL[c[x]];
+  put(who[x],whereTop[x],whereLef[x])
+ }
+ counter+=1;del=2;if(counter==30){now+=1;counter=0;del=250}
+ if(now<lun){window.setTimeout(moveObj,del)} else return
+} 
+
+
+function prepareObj(){var u=10, v=10, c=0
+ for(x=0;x<numK;x++){
+  who[x]=document.images['k'+x.toString()]
+  whereTop[x]=u;whereLef[x]=v;put(who[x],u,v)
+  for(var y=6*x;y<6*x+6;y++){c=moves.charAt(y);u+=incT[c]*30;v+=incL[c]*30}
+  whereTop[x]=u;whereLef[x]=v;put(who[x],u,v)
+ }
+ alert('With s = '+s+', the kings are '+numK+'; let\'s go...')
+}
+
+var offTop, offLef
+
+function init(){var u,v,mov=movLT
+ for(x=0;x<parti;x++)mov+=movCT
+ mov+=movR;for(x=0;x<parti;x++)mov+=movCB;
+ mov+=movLB;moves=mov;lun=mov.length
+ for(x=0;x<numK;x++){
+  if(x&1==1)moves+=mov
+ }
+ prepareObj()
+ moveObj()
+}
+
+function scrivi(){
+ document.write('<img src='+sinistra.src+' style="posirion:absolute;top:'+offTop+'; left:'+offLef+'">')
+ for(x=0;x<parti;x++){document.write('<img src='+centro.src+' style="posirion:absolute; top:'+offTop+'; left:'+(offLef+30*x)+'">')}
+ document.write('<img src='+destra.src+' style="posirion:absolute;top:'+offTop+'; left:'+(offLef+30*parti)+'"><p>')
+ for(x=0;x<parti+2;x++){document.write('<img src='+re.src+' id=k'+x.toString()+' style="position:absolute; z-index: 10;">')}
+ for(x=parti+2;x<numK;x++){document.write('<img src='+re.src+' id=k'+x.toString()+' style="position:absolute; z-index: 10;">')}
+}
+
+</script></head><body onload="init()">
+
+<script>scrivi()</script>
+
+</body></html>

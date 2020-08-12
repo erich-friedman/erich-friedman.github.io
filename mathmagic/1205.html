@@ -1,0 +1,226 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+<CENTER><H1>Problem of the Month (December 2005)</H1></CENTER>
+
+This month we consider several problems concerning finite sets of points in the plane.<p>
+
+
+
+<font size=+2>Problem #1.</font>
+Consider n marksmen standing in a field (so that all their pairwise distances are different).  Each round, each marksman simultaneously shoots and kills the closest marksman.  This is repeated until fewer than 2 marksmen remain alive.  How do we arrange n marksmen so that the maximum number of rounds are necessary?  (We count a surviving marksman as an additional half round to prefer it over the same number of rounds in which everyone is killed.)<p>
+
+A recent Macalester College problem of the week hints at an easier question: for n marksmen, what is the smallest number of marksmen that can be killed during the first round of shooting?<p>
+
+
+
+<hr><p><font size=+2>Problem #2.</font>
+The Erd&ouml;s distance problem is well-known.  Given n points in the plane, what is the fewest number of different distances &Delta;(n) they can determine?  For large n, &Delta;(n) is known to be of the order n/&radic;(log n).  But what are the small values of &Delta;(n)?<p>
+
+
+
+<hr><p><font size=+2>Problem #3.</font>
+A set of n points in the plane is called <b>k-hidden</b> if each point can "not see" exactly k other points because they are hidden behind other points.  For a given k, what is the smallest number of points that can be k-hidden?  For a given k, which n can exhibit a k-hidden arrangement?<p>
+
+
+
+<hr><p><font size=+2>Problem #4.</font>
+A <b>matchstick graph</b> is a planar graph whose edges are unit line segments.  The problem of finding the smallest regular matchstick graphs (finding arrangements of non-crossing matchsticks so that exactly n matchsticks meet at every matchstick end) is well-known.  The smallest known n-regular matchstick graphs (for 2&le;n&le;4) are shown below (the last graph is due to H. Harborth and M. Timm).  No 5-regular matchstick graph exists.<p>
+
+<center><img src="1205/d23.gif" align=middle><img src="1205/d4.gif" align=middle></center><p>
+
+We search for the smallest matchstick graphs whose vertices have 2 different degrees.  An <b>m/n matchstick graph</b> is a matchstick graph where the vertices have degree m or n, with each occurring at least once.  An <b>equal m/n matchstick graph</b> is a matchstick graph where half the vertices have degree m and half have degree n.  Find the smallest possible m/n matchstick graphs and equal m/n matchstick graphs for small m and n.
+
+
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+<p><font size=+2>Problem #1:</font><p>
+
+Joe DeVincentis noted that for n&le;8, the best arrangement achieves r(n)=n/2 rounds, since only 2 marksmen die per round.<p>
+
+In 2018, Alexander Ravsky noted it is clear that r(n) is non-decreasing and r(n+2) &le; r(n)+1.  He also sent me this <a href="http://mks.mff.cuni.cz/kalva/short/soln/sh00g7.html">link</a> showing that at least 3 of 10 marksmen must die the first round, showing r(10)=4.5.<p>
+
+As far as long term behavior, Alexander Ravsky used <a href="https://math.stackexchange.com/questions/2324964/shooting-game-for-fun/2599875#2599875">this</a> to show r(n) &le; r(<img src="lfloor.gif" align=center>7n/9<img src="rfloor.gif" align=center>)+1.
+
+<center><font size=+3>Longest Known Marksmen Duels</font></center><br>
+<center><table><tr align=center>
+<td>n=1<br><img src="1205/a1.gif"><br>lasts .5 rounds
+<td>n=2<br><img src="1205/a2.gif"><br>lasts 1 round
+<td>n=3<br><img src="1205/a3.gif"><br>lasts 1.5 rounds
+<td>n=4<br><img src="1205/a4.gif"><br>lasts 2 rounds
+</tr></table>
+</center>
+
+<center><table><tr align=center>
+<td>n=5<br><img src="1205/a5.gif"><br>lasts 2.5 rounds
+<td>n=6<br><img src="1205/a6.gif"><br>lasts 3 rounds
+<td>n=7<br><img src="1205/a7.gif"><br>lasts 3.5 rounds
+</tr></table>
+</center>
+
+<center><table><tr align=center>
+<td>n=8<br><img src="1205/a8.gif"><br>lasts 4 rounds
+<td>n=12<br><img src="1205/a12.gif"><br>lasts 5 rounds
+</tr></table>
+</center>
+
+<center><table><tr align=center>
+<td>n=10<br><img src="1205/a10.gif"><br>(Gavin Theobald)<br>lasts 4.5 rounds
+</tr></table>
+</center>
+
+
+
+<hr><p><font size=+2>Problem #2:</font><p>
+
+Joe DeVincentis noted that for small n, n points in a regular n-gon gives <img src="lfloor.gif" align=anscenter>n/2<img src="rfloor.gif" align=anscenter> distances.  He also noted that for some n, circular collections of points from the triangular lattice do better.<p>
+
+<center><font size=+3>Largest Known Number of Points That Determine Only n Distances</font></center><br>
+<center><table><tr align=center>
+<td>n=0<br><img src="1205/b0.gif"><br>1 point
+<td>n=1<br><img src="1205/b1.gif"><br>3 points
+<td>n=2<br><img src="1205/b2.gif"><br>5 points
+<td>n=3<br><img src="1205/b3.gif"><br>7 points
+<td>n=4<br><img src="1205/b4.gif"><br>9 points
+</tr></table>
+</center>
+
+<center><table><tr align=center>
+<td>n=5<br><img src="1205/b12.gif"><br>12 points
+<td>n=6<br><img src="1205/b13.gif"><br>13 points
+<td>n=7<br><img src="1205/b16.gif"><br>16 points
+</tr></table>
+</center>
+
+<center><table><tr align=center>
+<td>n=8<br><img src="1205/b19.gif"><br>19 points
+<td>n=9<br><img src="1205/b21.gif"><br>21 points
+</tr></table>
+</center>
+
+
+<hr><p><font size=+2>Problem #3:</font><p>
+
+Joe DeVincentis noted that hiddenness is reflective, so the total number points hidden from each point is even, so when k is odd, n must be even.  He also found amazingly small k-hidden arrangements for k&ge;3.<p>
+
+Corey Plover was able to find all the 1 hidden arrangements, and 2 hidden arrangements with 3k or 4k points.<p>
+
+<center><font size=+3>Minimal k-Hidden Arrangements</font></center><br>
+<center><table cellpadding=5><tr align=center>
+<td>k=1<br><img src="1205/c6.gif"><br>n=6 
+<td>k=2<br><img src="1205/c8.gif"><br>n=8
+<td>k&ge;3<br><img src="1205/c3,12.gif"><br>(Joe DeVincentis)<br>n=2k+6
+</tr></table></center>
+
+<center><font size=+3>Other k-Hidden Arrangements</font></center><br>
+<center><table cellpadding=5><tr align=center>
+<td>k=3<br><img src="1205/c12.gif"><br>n=12
+<td>k=4<br><img src="1205/c16.gif"><br>(Joe DeVincentis)<br>n=16
+<td>k=4<br><img src="1205/aronfaystar.gif"><br>(Aron Fay)<br>n=20
+<td>k=4<br><img src="1205/c20hidden.gif"><br>n=20
+<td>k=5<br><img src="1205/c20.gif"><br>(Joe DeVincentis)<br>n=20
+</tr></table></center>
+
+<center><font size=+3>Other k-Hidden Arrangements</font></center><br>
+<center><table cellpadding=5><tr align=center>
+<td>k=6<br><img src="1205/c6,22.gif"><br>(Joe DeVincentis)<br>n=22
+<td>k=6<br><img src="1205/c24.gif"><br>(Joe DeVincentis)<br>n=24
+<td>k=7<br><img src="1205/c7,24.gif"><br>(Joe DeVincentis)<br>n=24
+</tr></table></center>
+
+<center><table cellpadding=5><tr align=center>
+<td>k=8<br><img src="1205/c28.gif"><br>(Joe DeVincentis)<br>n=28
+<td>k=9<br><img src="1205/c9,32.gif"><br>(Joe DeVincentis)<br>n=32
+<td>k=10<br><img src="1205/c10,32.gif"><br>(Joe DeVincentis)<br>n=32
+</tr></table></center>
+
+<center><table cellpadding=5><tr align=center>
+<td>k=11<br><img src="1205/c11,32.gif"><br>(Joe DeVincentis)<br>n=32
+<td>k=12<br><img src="1205/c12,36.gif"><br>(Joe DeVincentis)<br>n=36
+</tr></table></center>
+
+<hr><p><font size=+2>Problem #4:</font><p>
+
+Joe DeVincentis gave several results equalling or bettering the best known graphs.<p>
+
+Fred Helenius found the best known equal 1/4 and 1/5 matchstick graphs.<p>
+
+Gavin Theobald found the best known equal 2/5 matchstick graph.<p>
+
+Jeremy Galvagni and Joe DeVincentis completely solved the problem for m=2, by adding triangles and then skinny diamonds to the small configurations below.<p>
+
+<center><font size=+3>Smallest Known m/n Matchstick Graphs</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=2>
+<tr bgcolor=palegreen><th>m/n<th>2<th>3<th>4<th>5<th>6<th>7<th>8</tr>
+<tr><th bgcolor=palegreen>1<td><img src="1205/d1,2.gif"><td><img src="1205/d1,3.gif"><td><img src="1205/d1,4.gif"><td><img src="1205/d1,5.gif"><td><img src="1205/d1,6.gif"><td><img src="1205/d1,7.gif"><td><img src="1205/d1,8.gif"></tr>
+<tr><th bgcolor=palegreen>2<td>&nbsp;<td><img src="1205/d2,3.gif"><td><img src="1205/d2,4.gif"><td><img src="1205/d2,5.gif"><td><img src="1205/d2,6.gif"><td><img src="1205/d2,7.gif"><td><img src="1205/d2,8.gif"></tr>
+<tr><th bgcolor=palegreen>3<td>&nbsp;<td>&nbsp;<td><img src="1205/d3,4.gif"><td><img src="1205/d3,5.gif"><td><img src="1205/d3,6.gif"><td><img src="1205/d3,7.gif"><td><img src="1205/d3,8.gif"></tr>
+</table></center><p>
+
+<center><table border=1 bgcolor=lightyellow cellpadding=5>
+<tr bgcolor=palegreen><th>m/n<th>5<th>6</tr>
+<tr align=center><th bgcolor=palegreen>4<td><img src="1205/d4,5.gif"><p>(Mike Winkler, 115 matches)<td><img src="1205/d4,6.gif"><p>(Mike Winkler, 117 matches)</tr>
+</table></center><p>
+
+<center><table border=1 bgcolor=lightyellow cellpadding=5>
+<tr bgcolor=palegreen><th>m/n<th>7<th>8</tr>
+<tr align=center><th bgcolor=palegreen>4<td><img src="1205/d4,7.gif"><br>(Mike Winkler, 159 matches)<td><img src="1205/d4,8.gif"><br>(Peter Dinkelacker, 126 matches)</tr>
+</table></center><p>
+
+<center><table border=1 bgcolor=lightyellow cellpadding=5>
+<tr bgcolor=palegreen><th>m/n<th>9<th>10</tr>
+<tr align=center><th bgcolor=palegreen>4<td><img src="1205/d4,9.gif"><br>(Peter Dinkelacker, 273 matches)
+<td><img src="1205/d4,10.gif"><br>(Peter Dinkelacker, 231 matches)</table></center><p>
+
+
+<center><table border=1 bgcolor=lightyellow cellpadding=5>
+<tr bgcolor=palegreen><th>m/n<th>11</tr>
+<tr align=center><th bgcolor=palegreen>4<td><img src="1205/d4,11.gif"><br>(Mike Winkler, Stefan Vogel, and Peter Dinkelacker, 771 matches)</tr>
+</table></center><p>
+
+<center><font size=+3>Minimal Equal m/n Matchstick Graphs</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=5>
+<tr bgcolor=palegreen><th>m/n<th>2<th>3<th>4<th>5<th>6</tr>
+<tr align=center><th bgcolor=palegreen>1<td><img src="1205/dd1,2.gif"><td><img src="1205/dd1,3.gif"><td><img src="1205/dd1,4.gif"><br>(Fred Helenius)<td><img src="1205/dd1,5.gif"><br>(Fred Helenius)<td><img src="1205/dd1,6.gif"><p>(Joe DeVincentis)</tr>
+<tr align=center><th bgcolor=palegreen>2<td>&nbsp;<td><img src="1205/dd2,3.gif"><td><img src="1205/dd2,4.gif"><td><img src="1205/dd2,5.gif"><br>(Gavin Theobald)<td><img src="1205/dd2,6.gif"><p>(Joe DeVincentis)</tr>
+<tr align=center><th bgcolor=palegreen>3<td>&nbsp;<td>&nbsp;<td><img src="1205/dd3,4.gif"><td><img src="1205/dd3,5.gif"><br>(Joe DeVincentis)<td><img src="1205/dd3,6.gif"><p>(Joe DeVincentis)</tr>
+</table></center><p>
+
+<center><table border=1 bgcolor=lightyellow cellpadding=5>
+<tr bgcolor=palegreen><th>m/n<th>5<th>6</tr>
+<tr align=center><th bgcolor=palegreen>4<td><img src="1205/dd4,5.gif"><p>(Joe DeVincentis)<td><img src="1205/dd4,6.gif"><p>(Joe DeVincentis)</tr>
+</table></center><p>
+
+Joe DeVincentis suggested at looking at infinite equal matchstick graphs when no finite graph sufficed.<p>
+
+<center><font size=+3>Infinite Equal n Matchstick Graphs</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=5>
+<tr align=center><td><img src="1205/dd5inf.gif"><p>n=5<td><img src="1205/dd6inf.gif"><p>n=6</tr>
+</table></center><p>
+
+<center><font size=+3>Infinite Equal m/n Matchstick Graphs</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=5>
+<tr align=center><td><img src="1205/dd3,7inf.gif"><p>m=3 n=7<br>(Joe DeVincentis)<td><img src="1205/dd5,6inf.gif"><p>m=5 n=6</tr>
+</table></center><p>
+
+Joe DeVincentis also suggested at looking at  matchstick graphs in three dimensions.<p>
+
+<center><font size=+3>Minimal m/n Matchstick Graphs in Three Dimensions</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=5>
+<tr bgcolor=palegreen><th>m/n<th>3<th>4<th>5<th>6</tr>
+<tr align=center><th bgcolor=palegreen>3<td><img src="1205/ddd3.gif"><p>(Joe DeVincentis)<td><img src="1205/ddd3,4.gif"><td><img src="1205/ddd3,5.gif"><td><img src="1205/ddd3,6.gif"></tr>
+<tr align=center><th bgcolor=palegreen>4<td>&nbsp;<td><img src="1205/ddd4.gif"><p>(Joe DeVincentis)<td><img src="1205/ddd4,5.gif"><td><img src="1205/ddd4,6.gif"><p>(Gavin Theobald)</tr>
+<tr align=center><th bgcolor=palegreen>5<td>&nbsp;<td>&nbsp;<td><img src="1205/ddd5.gif"><p>(Joe DeVincentis)<td><img src="1205/ddd5,6.gif"></tr>
+</table></center><p>
+
+I wondered whether there was a 3-regular matchstick graph with no triangles.  I found one, but then Gavin Theobald found a smaller one, shown below left.  But in 2006, Giuseppe Mazzuoccolo found an even smaller one, shown below right.  Is this the smallest one?<p>
+
+<table align=center><tr><td><img src="1205/d3notri.gif"><td width=20><td><img src="1205/d3notri2.gif"></table><p>
+
+In 2010, Giuseppe Mazzuoccolo informed me that he and Sascha Kurz found a smaller 3-regular matchstick graph with girth 4, shown below left.  They also found a 3-regular matchstick graph with girth 5, shown below right.  These were published in Geombinatorics, Vol XIX (4) in 2009.<p>
+
+<table align=center><tr><td><img src="1205/d3notri3.gif"><td width=20><td><img src="1205/3regg5.gif"></table><p>
+
+Sascha Kurz proved that there are no 5-regular matchstick graphs.  His proof is <a href="1205/proof.pdf">here</a>.
+
+<p><hr>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 3/15/16.<font></BODY></HTML>

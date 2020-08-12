@@ -1,0 +1,2052 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (June 2011)</H1></CENTER>
+
+The matrix below has the property that, ignoring spaces, every row and column is a power of 2.<p>
+
+<TABLE border=1 align=center><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1<TD>6<TD> <TD> <TD> <TR><TD>6<TD>5<TD>5<TD>3<TD>6<TR><TD> <TD>5<TD>1<TD>2<TD> <TR><TD> <TD>3<TD>2<TD> <TD> <TR><TD> <TD>6<TD> <TD> <TD>4</TABLE></TABLE><p>
+
+What is the smallest symmetric matrix of digits and spaces that contains a row of b<sup>n</sup> where every row and column is some power of b?  (Here "smallest" means fewest entries, or smallest sum of powers for the same sized matrices.)  What if the matrices do not need to be symmetric?  What if the matrices are not allowed to use any power of b more than once?<p>
+
+We can ask the same question of any sequence of numbers that grows at least exponentially.  What about Fibonacci numbers?  What about factorials?<p>
+
+Are there non-trivial matrices where every row is a power of b and every column is a power of c?  (The trivial examples are 1&times;1 matrices, when b is a power of c, or "disconnected" matrices that are a combination of smaller results.)
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Solvers this month include Joe DeVincentis, Bryce Herdt, Jon Palin, and Berend van der Zwaag.<p>
+
+Joe DeVincentis pointed out that there are many powers that use only two digits, such as 81619<sup>2</sup> = 6661661161, but here we only consider small bases.<p>
+
+Jon Palin proved that there are solutions for all Fibonacci numbers, factorials, and powers of 2, 3,  4, and 5.  Bryce Herdt proved it for all powers of 6.  Berend van der Zwaag proved it for powers of 8, 11, 12, 16, and 21.  Joe DeVincentis proved it for powers of 51.<p>
+
+Joe DeVincentis conjectured that there are no other solutions for powers of 7 and 9, but was not quite able to prove this.<p>
+
+Here are the best-known solutions for symmetric matrices:<p>
+
+<center><font size=+2>Powers of 2</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>2<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>2</TABLE></TABLE>
+<td>4<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>4</TABLE></TABLE>
+<td>8<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>8</TABLE></TABLE>
+<td>16<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>1<TR><TD>1<TD>6</TABLE></TABLE>
+<td>32<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>3<TD>2<TR><TD>2<TD> </TABLE></TABLE>
+<td>64<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>6<TD>4<TR><TD>4<TD> </TABLE></TABLE>
+<td>128<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1<TD>2<TD>8<TR><TD>2<TD> <TD> <TR><TD>8<TD> <TD> </TABLE></TABLE>
+<td>256<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>2<TD> <TR><TD>2<TD>5<TD>6<TR><TD> <TD>6<TD>4</TABLE></TABLE>
+<td>512<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>5<TD>1<TD>2<TR><TD>1<TD> <TD> <TR><TD>2<TD> <TD> </TABLE></TABLE>
+<td>1024<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>1<TD> <TD> <TR><TD>1<TD>0<TD>2<TD>4<TR><TD> <TD>2<TD> <TD> <TR><TD> <TD>4<TD> <TD> </TABLE></TABLE>
+<td>2048<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>2<TD> <TD> <TR><TD>2<TD>0<TD>4<TD>8<TR><TD> <TD>4<TD> <TD> <TR><TD> <TD>8<TD> <TD> </TABLE></TABLE>
+<td>4096<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD>4<TD> <TD> <TD> <TR><TD> <TD>1<TD>0<TD> <TD>2<TD>4<TR><TD>4<TD>0<TD>9<TD>6<TD> <TD> <TR><TD> <TD> <TD>6<TD>4<TD> <TD> <TR><TD> <TD>2<TD> <TD> <TD> <TD> <TR><TD> <TD>4<TD> <TD> <TD> <TD> </TABLE></TABLE>
+<td>8192<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD>8<TD> <TR><TD> <TD> <TD>1<TD> <TR><TD>8<TD>1<TD>9<TD>2<TR><TD> <TD> <TD>2<TD> </TABLE></TABLE>
+<td>16384 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD>1<TD> <TD> <TR><TD> <TD>1<TD>6<TD> <TD> <TR><TD>1<TD>6<TD>3<TD>8<TD>4<TR><TD> <TD> <TD>8<TD> <TD> <TR><TD> <TD> <TD>4<TD> <TD> </TABLE></TABLE>
+<td>32768<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD>3<TD> <TD> <TD>2<TR><TD> <TD> <TD>2<TD> <TD> <TD> <TR><TD>3<TD>2<TD>7<TD>6<TD>8<TD> <TR><TD> <TD> <TD>6<TD>4<TD> <TD> <TR><TD> <TD> <TD>8<TD> <TD> <TD> <TR><TD>2<TD> <TD> <TD> <TD> <TD> </TABLE></TABLE>
+</table><p>
+<table align=center cellpadding=5><tr align=center>
+<td>65536<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1<TD>6<TD> <TD> <TD> <TR><TD>6<TD>5<TD>5<TD>3<TD>6<TR><TD> <TD>5<TD>1<TD>2<TD> <TR><TD> <TD>3<TD>2<TD> <TD> <TR><TD> <TD>6<TD> <TD> <TD>4</TABLE></TABLE>
+<td>131072 (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD>
+<TR><TD> <TD> <TD> <TD> <TD>1<TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD> <TD>3<TD> <TD> <TD> <TD>2
+<TR><TD> <TD> <TD> <TD> <TD>1<TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD>1<TD>0<TD> <TD>2<TD>4<TD> 
+<TR><TD>1<TD>3<TD>1<TD>0<TD>7<TD>2<TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD> <TD>2<TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD>2<TD> <TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD>4<TD> <TD> <TD> <TD> <TD> 
+<TR><TD> <TD>2<TD> <TD> <TD> <TD> <TD> <TD> <TD> 
+</TABLE></TABLE>
+<td>262144 (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD>
+<TR><TD> <TD>2<TD> <TD> <TD> <TD> 
+<TR><TD>2<TD>6<TD>2<TD>1<TD>4<TD>4
+<TR><TD> <TD>2<TD> <TD> <TD> <TD> 
+<TR><TD> <TD>1<TD> <TD> <TD> <TD> 
+<TR><TD> <TD>4<TD> <TD> <TD> <TD> 
+<TR><TD> <TD>4<TD> <TD> <TD> <TD> 
+</TABLE></TABLE>
+<td>524288 (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD>
+<TR><TD>5<TD>2<TD>4<TD>2<TD>8<TD>8
+<TR><TD>2<TD> <TD> <TD> <TD> <TD> 
+<TR><TD>4<TD> <TD> <TD> <TD> <TD> 
+<TR><TD>2<TD> <TD> <TD> <TD> <TD> 
+<TR><TD>8<TD> <TD> <TD> <TD> <TD> 
+<TR><TD>8<TD> <TD> <TD> <TD> <TD> 
+</TABLE></TABLE>
+<td>1048576 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+     1
+ 1   0  24
+     4
+     8
+    25 6
+1048576
+     64
+    6  4
+ 2
+ 4</PRE></TABLE>
+<td>2097152 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+   8
+    2
+   10   24
+8 1 9 2
+ 2097152
+    1
+   25 6
+    2
+  2
+  4</PRE></TABLE>
+<td>4194304 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+      1
+   4
+   1
+ 4194304
+   4
+   3  2
+1  0 24
+   4</PRE></TABLE>
+<td>8388608 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+     8
+     3 2
+     8
+     8
+    16
+8388608
+     8
+ 2</PRE></TABLE>
+<td>16777216 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+      3     2
+     32
+    12     8
+   16
+  16777216
+ 32 7 6   8
+32  768
+    2
+    1
+    6    4
+     8
+  8
+2</PRE></TABLE>
+</table><p>
+<table align=center cellpadding=5><tr align=center>
+<td>33554432 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+ 3 2
+33554432
+ 51   2
+25 6
+ 4
+ 4
+ 32
+ 2</PRE></TABLE>
+<td>67108864 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+    1
+ 16
+ 67108864
+  1
+1 0 2  4
+  8
+  8
+  6 4
+  4</PRE></TABLE>
+<td>134217728 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+       3   2
+      1     
+      32    
+      4     
+      2     
+      1     
+ 134217728  
+3 2   76  8 
+      2     
+      8     
+       8    
+2           </PRE></TABLE>
+<td>268435456 (BH)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+     2   
+ 1   6   
+     8   
+     4   
+     3 2 
+268435456
+     4   
+    25 6 
+     6  4
+</PRE></TABLE>
+<td>536870912 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+       8    
+     5 1   2
+     3    2 
+     64     
+     8      
+ 536870912  
+   4 09 6   
+81   9 2    
+     16     
+     2      
+  2         
+ 2          
+</PRE></TABLE>
+<td>1073741824 (BH)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+     3      2
+   1
+  10 2     4
+ 1073741824
+   3   2
+3 27 6 8
+   4
+   128
+   8
+   2
+   4
+  4
+2</PRE></TABLE>
+<td>2147483648 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+   2      
+   1      
+   4      
+2147483648
+   4      
+   8      
+   3  2   
+   6   4  
+   4      
+   8      
+</PRE></TABLE>
+<td>4294967296 (BH)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+       4     
+ 1     2 8   
+         1   
+     819    2
+       4     
+   8 1 9   2 
+   1   6     
+42 94967296  
+       2     
+ 81    9 2   
+       6  4  
+     2       
+   2         
+</PRE></TABLE>
+</table><p>
+<table align=center cellpadding=5><tr align=center>
+<td>8589934592 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+         8  
+ 1 2 8      
+     5   1 2
+ 2 048      
+   409 6    
+ 8589934592 
+     32     
+    64      
+     5  12  
+8 1  9  2   
+     2      
+  2         </PRE></TABLE>
+<td>17179869184 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+       1      
+   3  27  68  
+  5    12     
+ 3 2   76   8 
+    81 92     
+    12 8      
+ 2    56      
+17179869184   
+  262  14    4
+       8      
+ 6     4      
+ 8            
+   8          
+        4     </PRE></TABLE>
+<td>34359738368 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+1     28      
+        3     
+  5    12     
+   34359738368
+   4          
+   3 2        
+2  5    6     
+8 19   2      
+ 327  6 8     
+   3     2    
+   8          
+   3       2  
+   6        4 
+   8          
+</PRE></TABLE>
+<td>68719476736 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+         4     
+       1  6    
+   1  63  8   4
+  13   1 07  2 
+          1    
+     4 0  9  6 
+  6       4    
+ 131 0    7  2 
+             1 
+4  0     96    
+ 6871947 6736  
+          32   
+          6  4 
+   2 6 21   44 
+  4            
+</PRE></TABLE>
+<td>137438953472 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+        4       
+            3 2 
+    1   0   2  4
+    3    2      
+  137438953472  
+    4           
+    3     2     
+    8           
+4 0 9   6       
+   25       6   
+    3 2         
+    4           
+ 32 7    6  8   
+    2           
+ 2              
+  4             
+</PRE></TABLE>
+<td>274877906944 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+         1       
+       32        
+      327  68    
+            1    
+        4        
+        8        
+  3   2 7     6 8
+ 32     7    6 8 
+ 27 4877906 944  
+1       02 4     
+        6 4      
+  6      4       
+  81    9   2    
+       64        
+      6 4        
+       8         
+      8          </PRE></TABLE>
+<td>549755813888 (BH)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+    512        
+    4
+  819  2      
+  1
+549 7 55813888
+1
+2   5 6
+  2 5  6  
+    8
+    1
+    3     2
+    8
+    8
+    8
+</PRE></TABLE>
+</table><p>
+
+
+<center><font size=+2>Powers of 3</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>3<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>3</TABLE></TABLE>
+<td>9<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>9</TABLE></TABLE>
+<td>27<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>2<TD>7<TD> <TR><TD>7<TD>2<TD>9<TR><TD> <TD>9<TD> </TABLE></TABLE>
+<td>81<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>8<TD>1<TR><TD>1<TD> </TABLE></TABLE>
+<td>243 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>7<TD>2<TD> <TD>9<TR><TD>2<TD>4<TD>3<TD> <TR><TD> <TD>3<TD> <TD> <TR><TD>9<TD> <TD> <TD> </TABLE></TABLE>
+<td>729<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>7<TD>2<TD>9<TR><TD>2<TD>7<TD> <TR><TD>9<TD> <TD> </TABLE></TABLE>
+<td>2187<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>2<TD>1<TD>8<TD>7<TD> <TR><TD>1<TD> <TD> <TD> <TD> <TR><TD>8<TD> <TD>1<TD> <TD> <TR><TD>7<TD> <TD> <TD>2<TD>9<TR><TD> <TD> <TD> <TD>9<TD> </TABLE></TABLE>
+<td>6561 (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD>
+<TR><TD> <TD> <TD> <TD> <TD> <TD>1<TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD> <TD> <TD>9<TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD>1<TD> <TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD>1<TD>9<TD>6<TD> <TD>8<TD>3<TD> 
+<TR><TD> <TD> <TD> <TD>6<TD>5<TD>6<TD>1<TD> <TD> 
+<TR><TD>1<TD>9<TD> <TD> <TD>6<TD>8<TD> <TD> <TD>3
+<TR><TD> <TD> <TD> <TD>8<TD>1<TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD>3<TD> <TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD> <TD> <TD>3<TD> <TD> <TD> 
+</TABLE></TABLE>
+<td>19683 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD>1<TD> <TD> <TR><TD> <TD> <TD>9<TD> <TD> <TR><TD>1<TD>9<TD>6<TD>8<TD>3<TR><TD> <TD> <TD>8<TD>1<TD> <TR><TD> <TD> <TD>3<TD> <TD> </TABLE></TABLE>
+</table><p>
+<table align=center cellpadding=5><tr align=center>
+<td>59049 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD>
+<TR><TD> <TD> <TD> <TD> <TD> <TD> <TD>1<TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD> <TD> <TD> <TD>9<TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD>7<TD> <TD> <TD> <TD> <TD>2<TD> <TD> <TD>9
+<TR><TD> <TD> <TD> <TD>6<TD> <TD>5<TD>6<TD> <TD> <TD>1<TD> 
+<TR><TD> <TD> <TD> <TD> <TD> <TD>9<TD> <TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD>5<TD>9<TD>0<TD> <TD>4<TD>9<TD> <TD> 
+<TR><TD>1<TD>9<TD> <TD>6<TD> <TD> <TD>8<TD>3<TD> <TD> <TD> 
+<TR><TD> <TD> <TD>2<TD> <TD> <TD>4<TD>3<TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD> <TD> <TD>9<TD> <TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD>1<TD> <TD> <TD> <TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD>9<TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD> 
+</TABLE></TABLE>
+<td>177147 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD>
+<TR><TD> <TD> <TD> <TD> <TD> <TD>1<TD> 
+<TR><TD> <TD>2<TD> <TD> <TD> <TD>7<TD> 
+<TR><TD> <TD> <TD>2<TD> <TD> <TD>7<TD> 
+<TR><TD> <TD> <TD> <TD> <TD> <TD>1<TD> 
+<TR><TD> <TD> <TD> <TD> <TD>2<TD>4<TD>3
+<TR><TD>1<TD>7<TD>7<TD>1<TD>4<TD>7<TD> 
+<TR><TD> <TD> <TD> <TD> <TD>3<TD> <TD> 
+</TABLE></TABLE>
+<td>531441 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+      2  7
+     2  7
+  531441
+  3
+  1
+ 24  3
+2 4   3
+  1
+ 7       29
+7       29
+        9</PRE></TABLE>
+<td>1594323 (BH)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+    2 7 
+  1     
+ 1594323
+  9     
+2 4 3   
+  3     
+7 2   9 
+  3     </PRE></TABLE>
+<td>4782969 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+2    4   3
+ 2   7
+     8  1
+   7 2 9
+     9
+4782969
+     9
+   9
+  1
+3</PRE></TABLE>
+<td>14348907 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+      1
+ 2    4    3
+      3
+   2  4   3
+      8  1
+      9
+14348907
+      729
+       9
+    1
+   3
+ 3</PRE></TABLE>
+</table><p>
+
+
+<center><font size=+2>Powers of 4</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>4<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>4</TABLE></TABLE>
+<td>16<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>1<TR><TD>1<TD>6</TABLE></TABLE>
+<td>64<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>6<TD>4<TR><TD>4<TD> </TABLE></TABLE>
+<td>256<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>1<TD> <TD> <TD> <TR><TD>1<TD>0<TD>2<TD> <TD>4<TR><TD> <TD>2<TD>5<TD>6<TD> <TR><TD> <TD> <TD>6<TD>4<TD> <TR><TD> <TD>4<TD> <TD> <TD> </TABLE></TABLE>
+<td>1024<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>1<TD> <TD> <TD> <TR><TD>1<TD>0<TD>2<TD>4<TD> <TR><TD> <TD>2<TD>5<TD> <TD>6<TR><TD> <TD>4<TD> <TD> <TD> <TR><TD> <TD> <TD>6<TD> <TD>4</TABLE></TABLE>
+<td>4096<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD>4<TD> <TD> <TD> <TD> <TR><TD> <TD>1<TD>0<TD> <TD>2<TD> <TD>4<TR><TD>4<TD>0<TD>9<TD>6<TD> <TD> <TD> <TR><TD> <TD> <TD>6<TD>4<TD> <TD> <TD> <TR><TD> <TD>2<TD> <TD> <TD>5<TD>6<TD> <TR><TD> <TD> <TD> <TD> <TD>6<TD>4<TD> <TR><TD> <TD>4<TD> <TD> <TD> <TD> <TD> </TABLE></TABLE>
+<td>16384 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD> <TD>1<TD> <TR><TD> <TD>1<TD> <TD>6<TD> <TD> <TR><TD> <TD> <TD>2<TD>5<TD>6<TD> <TR><TD> <TD>6<TD>5<TD>5<TD>3<TD>6<TR><TD>1<TD> <TD>6<TD>3<TD>8<TD>4<TR><TD> <TD> <TD> <TD>6<TD>4<TD> </TABLE></TABLE>
+</table><p>
+<table align=center cellpadding=5><tr align=center>
+<td>65536 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD> <TD>1<TD> <TR><TD> <TD>1<TD> <TD>6<TD> <TD> <TR><TD> <TD> <TD>2<TD>5<TD>6<TD> <TR><TD> <TD>6<TD>5<TD>5<TD>3<TD>6<TR><TD>1<TD> <TD>6<TD>3<TD>8<TD>4<TR><TD> <TD> <TD> <TD>6<TD>4<TD> </TABLE></TABLE>
+<td>262144 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>2<TD>6<TD>2<TD>1<TD>4<TD>4<TR><TD>6<TD>4<TD> <TD> <TD> <TD> <TR><TD>2<TD> <TD>5<TD>6<TD> <TD> <TR><TD>1<TD> <TD>6<TD> <TD> <TD> <TR><TD>4<TD> <TD> <TD> <TD> <TD> <TR><TD>4<TD> <TD> <TD> <TD> <TD> </TABLE></TABLE>
+<td>1048576 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+      1    
+    1 02  4
+     2 5 6 
+    6 4    
+ 1 63 8  4 
+  2   5 6  
+10 48576   
+ 25   6    
+     6  4  
+  6 4      
+ 4         </PRE></TABLE>
+<td>4194304 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+    4     
+       1  
+      4   
+      1   
+4   0 9 6 
+      4   
+  4194304 
+ 1    02 4
+    6 4   
+       4  </PRE></TABLE>
+<td>16777216 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+      1       
+     16       
+    16        
+   16         
+  16777  2  16
+ 16 777 2  16 
+16  7772  16  
+      2  56   
+     2  56    
+    2  56     
+      16      
+     16       
+    16        
+    6        4</PRE></TABLE>
+</table><p>
+
+
+<center><font size=+2>Powers of 5</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>5<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>5</TABLE></TABLE>
+<td>25<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>2<TD>5<TR><TD>5<TD> </TABLE></TABLE>
+<td>125<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>1<TD> <TR><TD>1<TD>2<TD>5<TR><TD> <TD>5<TD> </TABLE></TABLE>
+<td>625<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>6<TD>2<TD>5<TR><TD>2<TD>5<TD> <TR><TD>5<TD> <TD> </TABLE></TABLE>
+<td>3125<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>3<TD>1<TD>2<TD>5<TR><TD>1<TD> <TD> <TD> <TR><TD>2<TD> <TD>5<TD> <TR><TD>5<TD> <TD> <TD> </TABLE></TABLE>
+<td>15625<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD>1<TD> <TD> <TR><TD> <TD> <TD>5<TD> <TD> <TR><TD>1<TD>5 <TD>6<TD>2<TD>5<TR><TD> <TD> <TD>2<TD>5<TD> <TR><TD> <TD> <TD>5<TD> <TD> </TABLE></TABLE>
+<td>78125 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD>
+<TR><TD>9<TD>7<TD> <TD>6<TD>5<TD>6<TD>2<TD>5
+<TR><TD>7<TD>8<TD>1<TD> <TD> <TD>2<TD>5<TD> 
+<TR><TD> <TD>1<TD> <TD> <TD> <TD> <TD> <TD> 
+<TR><TD>6<TD> <TD> <TD>2<TD> <TD>5<TD> <TD> 
+<TR><TD>5<TD> <TD> <TD> <TD> <TD> <TD> <TD> 
+<TR><TD>6<TD>2<TD> <TD>5<TD> <TD> <TD> <TD> 
+<TR><TD>2<TD>5<TD> <TD> <TD> <TD> <TD> <TD> 
+<TR><TD>5<TD> <TD> <TD> <TD> <TD> <TD> <TD> 
+</TABLE></TABLE>
+<td>390625 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+   31   25
+ 1 953125 
+     1    
+39 062 5  
+15 625    
+ 3125     
+ 1        
+ 2 5      
+25        
+5         
+</PRE></TABLE>
+<td>1953125 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>1<TD> <TD> <TD> <TD> <TD> <TR><TD>1<TD>9<TD>5<TD>3<TD>1<TD>2<TD>5<TR><TD> <TD>5<TD> <TD> <TD> <TD> <TD> <TR><TD> <TD>3<TD> <TD>1<TD>2<TD>5<TD> <TR><TD> <TD>1<TD> <TD>2<TD>5<TD> <TD> <TR><TD> <TD>2<TD> <TD>5<TD> <TD> <TD> <TR><TD> <TD>5<TD> <TD> <TD> <TD> <TD> </TABLE></TABLE>
+<td>9765625 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD>
+<TR><TD>9<TD>7<TD> <TD>6<TD>5<TD>6<TD>2<TD>5
+<TR><TD>7<TD>8<TD>1<TD> <TD> <TD>2<TD>5<TD> 
+<TR><TD> <TD>1<TD> <TD> <TD> <TD> <TD> <TD> 
+<TR><TD>6<TD> <TD> <TD>2<TD> <TD>5<TD> <TD> 
+<TR><TD>5<TD> <TD> <TD> <TD> <TD> <TD> <TD> 
+<TR><TD>6<TD>2<TD> <TD>5<TD> <TD> <TD> <TD> 
+<TR><TD>2<TD>5<TD> <TD> <TD> <TD> <TD> <TD> 
+<TR><TD>5<TD> <TD> <TD> <TD> <TD> <TD> <TD> 
+</TABLE></TABLE>
+</table><p>
+<table align=center cellpadding=5><tr align=center>
+<td>48828125 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+9         765   625
+ 9   7  65     625
+  9 7 65      625
+   488  2 8  125
+  78      1  25
+ 7 8 1     2 5
+  6       25   
+  5
+ 6 2      5
+ 5
+7  81 2 5
+6    25
+5
+   125
+  625
+ 625
+625
+25
+5
+</PRE></TABLE>
+<td>244140625 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+           31      25
+ 1         95 3  125 
+  2 44  14 06    25  
+           62    5   
+  4 88 2 8    125    
+  4 88  28   125     
+         2    5      
+    2  5             
+  1  2  5            
+  4 882  8125        
+         1           
+3906     2 5         
+1562     5           
+     1               
+ 3  125              
+    25               
+    5                
+ 125                 
+ 25                  
+25                   
+5                    </PRE></TABLE>
+<td>1220703125 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+      3    12  5
+    1 9 5312  5
+    2        5
+    2       5
+ 1220703 125
+    78 1 25
+39  0 62 5
+    3125
+ 5
+ 3  125
+ 1  25
+12  5
+2  5
+  5
+ 5
+5</PRE></TABLE>
+<td>6103515625 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+  6   2   5
+  1        
+6103515625 
+  31   25  
+  5        
+  1        
+2 5        
+  62   5   
+  25       
+  5        
+5          </PRE></TABLE>
+</table><p>
+
+
+<center><font size=+2>Powers of 6</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>6<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>6</TABLE></TABLE>
+<td>36<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>3<TD>6<TR><TD>6<TD> </TABLE></TABLE>
+<td>216<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>2<TD>1<TD>6<TR><TD>1<TD> <TD> <TR><TD>6<TD> <TD> </TABLE></TABLE>
+<td>1296<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD>1<TD> <TD> <TD> <TR><TD> <TD> <TD>2<TD> <TD>1<TD>6<TR><TD>1<TD>2<TD>9<TD>6<TD> <TD> <TR><TD> <TD> <TD>6<TD> <TD> <TD> <TR><TD> <TD>1<TD> <TD> <TD> <TD> <TR><TD> <TD>6<TD> <TD> <TD> <TD> </TABLE></TABLE>
+<td>7776<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>7<TD>7<TD>7<TD> <TD> <TD>6<TR><TD>7<TD>7<TD>7<TD> <TD>6<TD> <TR><TD>7<TD>7<TD>7<TD>6<TD> <TD> <TR><TD> <TD> <TD>6<TD> <TD> <TD> <TR><TD> <TD>6<TD> <TD> <TD> <TD> <TR><TD>6<TD> <TD> <TD> <TD> <TD> </TABLE></TABLE>
+<td>46656 (BH)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+77        7  6
+77        7 6 
+   6          
+  60  466176  
+      6       
+      6       
+   4665   6   
+   6          
+   6          
+   1          
+77 7  6       
+   6          
+ 6            
+6             </PRE></TABLE>
+<td>279936 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD>
+<TR><TD> <TD> <TD> <TD>2<TD>1<TD> <TD> <TD> <TD>6<TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD> <TD>2<TD>1<TD> <TD> <TD> <TD>6<TD> <TD> 
+<TR><TD> <TD> <TD> <TD> <TD> <TD>2<TD> <TD> <TD> <TD> <TD>1<TD>6 
+<TR><TD>2<TD> <TD> <TD>7<TD>9<TD>9<TD>3<TD>6<TD> <TD> <TD> <TD> 
+<TR><TD>1<TD>2<TD> <TD>9<TD>6<TD> <TD> <TD> <TD> <TD> <TD> <TD> 
+<TR><TD> <TD>1<TD>2<TD>9<TD> <TD>6<TD> <TD> <TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD>3<TD> <TD> <TD>6<TD> <TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD>6<TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD> 
+<TR><TD>6<TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD> 
+<TR><TD> <TD>6<TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD>1<TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD>6<TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD> 
+</TABLE></TABLE>
+</table><p>
+<table align=center cellpadding=5><tr align=center>
+<td>1679616 (BH)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+    1     
+ 7776     
+ 777    6 
+ 77 7    6
+16 79616  
+    6     
+    1     
+    6     
+  6       
+   6      
+</PRE></TABLE>
+<td>10077696 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+           1  
+ 2 1       6  
+  60   46617 6
+ 10077 6   96 
+   777     6  
+   777 6      
+           1  
+  46 6 5   6  
+  6           
+  6           
+  1           
+16796 16      
+   6          
+  6           </PRE></TABLE>
+<td>60466176 (BH)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+77        7  6
+77        7 6 
+   6          
+  60  466176  
+      6       
+      6       
+   4665   6   
+   6          
+   6          
+   1          
+77 7  6       
+   6          
+ 6            
+6             </PRE></TABLE>
+<td>362797056 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+       1           
+        3         6
+  2  1  6          
+        2    1   6 
+    7   7  7    6  
+  1  2  9    6     
+      7 7    7 6   
+1      00 77696    
+ 36279705    6     
+             1     
+       7  77 6     
+    7  7  76       
+       6           
+   1 679616        
+       6           
+      6            
+    6              
+   6               
+ 6                 </PRE></TABLE>
+<td>2176782336 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+     21     6
+     1       
+  7 77     6 
+     6       
+  7 77    6  
+2176782336   
+1    29 6    
+     3 6     
+     36      
+     6       
+    6        
+  6          
+6            </PRE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 7</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>7<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>7</TABLE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 8</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>8<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>8</TABLE></TABLE>
+<td>64 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+  64
+    5           12
+6   4
+4  09            6
+ 549755813888
+    51           2
+    5 1  2
+    8
+    1
+    3 2  7    68
+    8
+    8
+    8
+                 1
+         6       4 
+         8
+ 1
+ 2 6 2       14  4</PRE></TABLE>
+<td>512 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+  64
+    5           12
+6   4
+4  09            6
+ 549755813888
+    51           2
+    5 1  2
+    8
+    1
+    3 2  7    68
+    8
+    8
+    8
+                 1
+         6       4 
+         8
+ 1
+ 2 6 2       14  4</PRE></TABLE>
+<td>4096 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+  64
+    5           12
+6   4
+4  09            6
+ 549755813888
+    51           2
+    5 1  2
+    8
+    1
+    3 2  7    68
+    8
+    8
+    8
+                 1
+         6       4 
+         8
+ 1
+ 2 6 2       14  4</PRE></TABLE>
+<td>32768 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+  64
+    5           12
+6   4
+4  09            6
+ 549755813888
+    51           2
+    5 1  2
+    8
+    1
+    3 2  7    68
+    8
+    8
+    8
+                 1
+         6       4 
+         8
+ 1
+ 2 6 2       14  4</PRE></TABLE>
+</table><p>
+<table align=center cellpadding=5><tr align=center>
+<td>262144 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+  64
+    5           12
+6   4
+4  09            6
+ 549755813888
+    51           2
+    5 1  2
+    8
+    1
+    3 2  7    68
+    8
+    8
+    8
+                 1
+         6       4 
+         8
+ 1
+ 2 6 2       14  4</PRE></TABLE>
+<td>2097152 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+           51 2
+ 5   1 2             
+     6     4        
+    4  0   9  6
+   40  9          6
+ 16  7 7   7   216
+               6  4
+ 2 097 1   5  2    
+           5  12   
+           8      
+           1       
+5 49 7 55813       888
+1                 
+               1
+2  6   21      4 4
+     26 2    144
+     1             
+     6        4 
+    6 4           
+           8
+           8
+           8</PRE></TABLE>
+<td>16777216 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+           51 2
+ 5   1 2             
+     6     4        
+    4  0   9  6
+   40  9          6
+ 16  7 7   7   216
+               6  4
+ 2 097 1   5  2    
+           5  12   
+           8      
+           1       
+5 49 7 55813       888
+1                 
+               1
+2  6   21      4 4
+     26 2    144
+     1             
+     6        4 
+    6 4           
+           8
+           8
+           8</PRE></TABLE>
+<td>134217728<br>?
+<td>1073741824<br>?
+</table><p>
+<table align=center cellpadding=5><tr align=center>
+<td>8589934592 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+            5    1    2
+ 6 4
+  6         4
+ 4 0        9         6
+    6      4
+     6    4
+      6             4
+                     8
+                     5 1 2
+                     8
+     4    0          9   6
+    4      0         9    6
+5 49        75581    3      888
+            5 1       2
+            512
+            8
+            1
+1                       
+                  6  4
+                     51  2
+      4             09     6
+       858993     4592
+2  6         2     1  4    4
+        1           
+                         1
+        2 6        2    144
+           6             4
+                    6 4
+            8
+            8
+            8   
+</PRE></TABLE>
+<td>68719476736 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+       5        1     2
+ 6     4
+  6   4
+     409              6
+    409         6
+   409         6
+  409         6
+54 9   755813 8            88
+       5          1   2
+       5 1          2
+       8
+       1
+       3    2 7   6       8
+              1
+      68    719476736
+     6        4      
+1   6         7 7 7 2 1 6
+              6       4
+        1   6 7 7 721  6
+              3   27 6   8
+         2    6 2 1    44
+                   6  4
+2  6    2       14   4
+                  6 4
+                6   4
+                   8
+            8
+       8
+       8</PRE></TABLE>
+<td>549755813888 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+  64
+    5           12
+6   4
+4  09            6
+ 549755813888
+    51           2
+    5 1  2
+    8
+    1
+    3 2  7    68
+    8
+    8
+    8
+                 1
+         6       4 
+         8
+ 1
+ 2 6 2       14  4</PRE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 9</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>9<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>9</TABLE></TABLE>
+<td>81<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>8<TD>1<TR><TD>1<TD> </TABLE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 10</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>10 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>1<TR><TD>1<TD>0</TABLE></TABLE>
+<td>100 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD>1<TR><TD> <TD>1<TD>0<TR><TD>1<TD>0<TD>0</TABLE></TABLE>
+<td>1000 (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD>1<TR><TD> <TD> <TD>1<TD>0<TR><TD> <TD>1<TD> <TD>0<TR><TD>1<TD>0<TD>0<TD>0</TABLE></TABLE>
+<td>10000 (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD> <TD>1<TR><TD> <TD> <TD> <TD>1<TD>0<TR><TD> <TD> <TD>1<TD> <TD>0<TR><TD> <TD>1<TD> <TD> <TD>0<TR><TD> 1<TD>0<TD>0<TD>0<TD>0</TABLE></TABLE>
+<TD>Clearly this trend continues.
+</table><p>
+
+<center><font size=+2>Powers of 11</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>11 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>1<TR><TD>1<TD>1</TABLE></TABLE>
+<td>121 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>1<TD> <TR><TD>1<TD>2<TD>1<TR><TD> <TD>1<TD> </TABLE></TABLE>
+<td>1331 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>1<TD>1<TD> <TR><TD>1<TD>3<TD>3<TD>1<TR><TD>1<TD>3<TD>3<TD>1<TR><TD> <TD>1<TD>1<TD> </TABLE></TABLE>
+<td>14641 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+        11         
+      1   21       
+   1      1        
+  14  6   4  1     
+     11            
+    13    3   1    
+ 1 61 0   5    1   
+       1948717  1  
+1      94 8717   1 
+1      4 6    4   1
+ 214 3588 8  1     
+ 1     77  1 56  1 
+       11          
+   1   77 15 6  1  
+     1   4 6  41   
+      1       1    
+       1     1     
+        1  1       
+         1         </PRE></TABLE>
+<td>161051 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+        11         
+      1   21       
+   1      1        
+  14  6   4  1     
+     11            
+    13    3   1    
+ 1 61 0   5    1   
+       1948717  1  
+1      94 8717   1 
+1      4 6    4   1
+ 214 3588 8  1     
+ 1     77  1 56  1 
+       11          
+   1   77 15 6  1  
+     1   4 6  41   
+      1       1    
+       1     1     
+        1  1       
+         1         </PRE></TABLE>
+<td>1771561 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+        11         
+      1   21       
+   1      1        
+  14  6   4  1     
+     11            
+    13    3   1    
+ 1 61 0   5    1   
+       1948717  1  
+1      94 8717   1 
+1      4 6    4   1
+ 214 3588 8  1     
+ 1     77  1 56  1 
+       11          
+   1   77 15 6  1  
+     1   4 6  41   
+      1       1    
+       1     1     
+        1  1       
+         1         </PRE></TABLE>
+<td>19487171 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+        11         
+      1   21       
+   1      1        
+  14  6   4  1     
+     11            
+    13    3   1    
+ 1 61 0   5    1   
+       1948717  1  
+1      94 8717   1 
+1      4 6    4   1
+ 214 3588 8  1     
+ 1     77  1 56  1 
+       11          
+   1   77 15 6  1  
+     1   4 6  41   
+      1       1    
+       1     1     
+        1  1       
+         1         </PRE></TABLE>
+<td>214358881 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+        11         
+      1   21       
+   1      1        
+  14  6   4  1     
+     11            
+    13    3   1    
+ 1 61 0   5    1   
+       1948717  1  
+1      94 8717   1 
+1      4 6    4   1
+ 214 3588 8  1     
+ 1     77  1 56  1 
+       11          
+   1   77 15 6  1  
+     1   4 6  41   
+      1       1    
+       1     1     
+        1  1       
+         1         </PRE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 12</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>12 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>1<TR><TD>1<TD>2</TABLE></TABLE>
+<td>144 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD>1<TR><TD> <TD> <TD>1<TD> <TR><TD> <TD>1<TD>4<TD>4<TR><TD>1<TD> <TD>4<TD>4</TABLE></TABLE>
+<td>1728 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+         1
+       1  
+      1   
+    1   2 
+   14   4 
+     1728 
+  1  72 8 
+ 1   2    
+   2488 32
+1       2 </PRE></TABLE>
+<td>20736 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+                      1
+                    1  
+                   1   
+              1      2 
+           1     2     
+          1      4   4 
+         1    72 8     
+        14     4       
+       1  7 2  8       
+      14    4          
+     1  7 2 8          
+    1      7  28       
+        248 83    2    
+            3583180  8 
+   1  7    2 8         
+      248  8 3 2       
+             1    7 28 
+    248      8    32   
+            20  736    
+  1              2     
+ 1              2      
+   2 4       8  8    32
+1                    2 </PRE></TABLE>
+<td>248832 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+         1
+       1  
+      1   
+    1   2 
+   14   4 
+     1728 
+  1  72 8 
+ 1   2    
+   2488 32
+1       2 </PRE></TABLE>
+<td>2985984 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+                                   1
+                                 1  
+                                1   
+                               1    
+                          1       2 
+                         1   2      
+                     1       4    4 
+                    1      2        
+             1     2                
+            1      4       4        
+           1     2                  
+          1    2                    
+         1    2                     
+        1     4  4                  
+            248    8  3 2           
+           2   9 8    5 9  8     4  
+                1   728             
+          2  4 8   8  3       2     
+                      1  728        
+        24    8  8 3     2          
+       1        7   2 8             
+      1         2                   
+              35831 8 0 8           
+                       358 3180   8 
+              29      859    8   4  
+     1            72   8            
+    1             2                 
+       2 4     8  8    3   2        
+                       1      7 2 8 
+     24                88     32    
+                 2     0    736     
+   1                         2      
+  1                         2       
+ 1             4        4           
+    2 4                8    8     32
+1                                 2 </PRE></TABLE>
+<td>35831808 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+                      1
+                    1  
+                   1   
+              1      2 
+           1     2     
+          1      4   4 
+         1    72 8     
+        14     4       
+       1  7 2  8       
+      14    4          
+     1  7 2 8          
+    1      7  28       
+        248 83    2    
+            3583180  8 
+   1  7    2 8         
+      248  8 3 2       
+             1    7 28 
+    248      8    32   
+            20  736    
+  1              2     
+ 1              2      
+   2 4       8  8    32
+1                    2 </PRE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 15</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>15 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>1<TR><TD>1<TD>5</TABLE></TABLE>
+<td>225 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD>
+<TR><TD> <TD> <TD> <TD> <TD> <TD>1
+<TR><TD> <TD> <TD> <TD> <TD>1<TD> 
+<TR><TD> <TD> <TD>2<TD>2<TD> <TD>5
+<TR><TD> <TD> <TD>2<TD>2<TD>5<TD> 
+<TR><TD> <TD>1<TD> <TD>5<TD> <TD> 
+<TR><TD>1<TD> <TD>5<TD> <TD> <TD> 
+</TABLE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 16</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>16 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>1<TR><TD>1<TD>6</TABLE></TABLE>
+<td>256 (JP)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+         1
+        1 
+       1  
+   1  6   
+     25  6
+    2 5 6 
+   65536
+  1   6   
+ 1   6    
+1   6   </PRE></TABLE>
+<td>65536 (JP)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+         1
+        1 
+       1  
+   1  6   
+     25  6
+    2 5 6 
+   65536
+  1   6   
+ 1   6    
+1   6   </PRE></TABLE>
+<td>1048576<br>?
+<td>16777216 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+              1
+       1
+      16
+     16
+    16
+   16777  2  16
+  16 777 2  16
+ 16  7772  16
+       2  56
+      2  56
+     2  56
+       16 
+      16    
+     16
+1    6  </PRE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 21</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>21 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>2<TD>1<TR><TD>1<TD> </TABLE></TABLE>
+<td>441 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>4<TD>4<TD> <TD>1<TR><TD>4<TD>4<TD>1<TD> <TR><TD> <TD>1<TD> <TD> <TR><TD>1<TD> <TD> <TD> </TABLE></TABLE>
+<td>9261 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+                 1
+        1
+  1     944      8        1
+       44                1
+        4         4     1
+     4 08 4 1    0     1
+                 1
+   4 0 8 4 1     0    1
+ 19448  1
+  4    4 1
+  4  4    1
+       1   9   448   1
+     1        9448  1
+              2 1
+            9261
+           44 1
+           441
+1 8  010   88    541
+    4            41
+                 1
+            1
+           1
+       1
+     1
+    1   
+   1 
+  1</PRE></TABLE>
+<td>194481 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+               1
+        1
+  1     944    8        1
+       44              1
+        4       4     1
+     4 08 4 1  0     1
+               1
+   4 0 8 4 1   0    1
+ 19448  1
+  4    4 1
+  4  4    1
+       1    9448   1
+     1     9 448  1
+           441
+           44 1
+1 8  010   88  541
+    4          41
+               1
+            1
+           1
+       1
+     1
+    1
+   1   
+  1</PRE></TABLE>
+<td>4084101 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+               1
+        1
+  1     944    8        1
+       44              1
+        4       4     1
+     4 08 4 1  0     1
+               1
+   4 0 8 4 1   0    1
+ 19448  1
+  4    4 1
+  4  4    1
+       1    9448   1
+     1     9 448  1
+           441
+           44 1
+1 8  010   88  541
+    4          41
+               1
+            1
+           1
+       1
+     1
+    1
+   1   
+  1</PRE></TABLE>
+</table><p>
+<table align=center cellpadding=5><tr align=center>
+<td>85766121 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+             1
+       1 
+  1    9   4481
+       4                    4            1
+       4                     4          1
+      4                       4        1
+     408 41  0  1                       
+ 1944 8      1
+        4    0     8    4 1 0         1
+      4  0   8          4  1 0       1
+      1   9448                      1
+  4       41
+  4       4 1
+1 8   01088        5          4    1
+  1                  94  4   8    1
+                     2           1
+      1             9 4  4  8   1
+                            44 1
+                    2        1
+        8    5     76612    1
+                9 26     1
+              92   6    1
+              4 4  1
+                   2   1  
+        44           1
+              4 4   1   
+        1
+         1
+   4    0       84 1         01
+    4    0    8  41         01
+     4       4              1
+                 1
+                1
+               1
+              1
+             1
+          1
+         1
+        1
+     1
+    1
+   1</PRE></TABLE>
+<td>1801088541 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+               1
+        1
+  1     944    8        1
+       44              1
+        4       4     1
+     4 08 4 1  0     1
+               1
+   4 0 8 4 1   0    1
+ 19448  1
+  4    4 1
+  4  4    1
+       1    9448   1
+     1     9 448  1
+           441
+           44 1
+1 8  010   88  541
+    4          41
+               1
+            1
+           1
+       1
+     1
+    1
+   1   
+  1</PRE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 38</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>1444 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+     1
+    1
+   1
+  1444
+ 1 444
+1  444</PRE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 51</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>51 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>5<TD>1<TR><TD>1<TD> </TABLE></TABLE>
+<td>2601 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+ 13    2   6           51
+13    26              51
+3 45   02         52 51
+  5 1
+   132  65        1
+    2 6 01
+ 2   60       1
+260       1 
+  2 60  1
+    51
+       1  3 2      651
+6          765  2  01
+          2601
+           51
+      1       3265 1
+              2601
+           2  601
+              51
+  5 1         
+  2       60  1
+          51 
+  5       1
+ 51  
+51
+1</PRE></TABLE>
+<td>132651 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+ 13    2   6           51
+13    26              51
+3 45   02         52 51
+  5 1
+   132  65        1
+    2 6 01
+ 2   60       1
+260       1 
+  2 60  1
+    51
+       1  3 2      651
+6          765  2  01
+          2601
+           51
+      1       3265 1
+              2601
+           2  601
+              51
+  5 1         
+  2       60  1
+          51 
+  5       1
+ 51  
+51
+1</PRE></TABLE>
+<td>6765201 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+ 13    2   6           51
+13    26              51
+3 45   02         52 51
+  5 1
+   132  65        1
+    2 6 01
+ 2   60       1
+260       1 
+  2 60  1
+    51
+       1  3 2      651
+6          765  2  01
+          2601
+           51
+      1       3265 1
+              2601
+           2  601
+              51
+  5 1         
+  2       60  1
+          51 
+  5       1
+ 51  
+51
+1</PRE></TABLE>
+<td>345025251 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+ 13    2   6           51
+13    26              51
+3 45   02         52 51
+  5 1
+   132  65        1
+    2 6 01
+ 2   60       1
+260       1 
+  2 60  1
+    51
+       1  3 2      651
+6          765  2  01
+          2601
+           51
+      1       3265 1
+              2601
+           2  601
+              51
+  5 1         
+  2       60  1
+          51 
+  5       1
+ 51  
+51
+1</PRE></TABLE>
+</table><p>
+
+
+
+<center><font size=+2>Fibonacci Numbers</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>2<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>2</TABLE></TABLE>
+<td>3<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>3</TABLE></TABLE>
+<td>5<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>5</TABLE></TABLE>
+<td>8<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>8</TABLE></TABLE>
+<td>13<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>1<TR><TD>1<TD>3</TABLE></TABLE>
+<td>21 (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>2<TD>1<TR><TD>1<TD> </TABLE></TABLE>
+<td>34<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>3<TR><TD>3<TD>4</TABLE></TABLE>
+<td>55<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>5<TR><TD>5<TD>5</TABLE></TABLE>
+<td>89<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>8<TR><TD>8<TD>9</TABLE></TABLE>
+<td>144<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD>1<TR><TD> <TD>3<TD>4<TR><TD>1<TD>4<TD>4</TABLE></TABLE>
+<td>233<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD>2<TR><TD> <TD> <TD>3<TR><TD>2<TD>3<TD>3</TABLE></TABLE>
+<td>377 (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>2<TD>3<TD>3<TR><TD>3<TD>7<TD>7<TR><TD>3<TD>7<TD>7</TABLE></TABLE>
+<td>610 (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD> <TD>1<TR><TD> <TD>6<TD> <TD>1<TD>0<TR><TD> <TD> <TD>8<TD> <TD>9<TR><TD> <TD>1<TD> <TD>4<TD>4<TR><TD>1<TD>0<TD>9<TD>4<TD>6</TABLE></TABLE>
+<td>987<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>8<TD> <TD>9<TR><TD> <TD> <TD>8<TR><TD>9<TD>8<TD>7</TABLE></TABLE>
+<td>1597 (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD>1<TR><TD> <TD> <TD> <TD>5<TR><TD> <TD> <TD>8<TD>9<TR><TD>1<TD>5<TD>9<TD>7</TABLE></TABLE>
+</table><p>
+<table align=center cellpadding=5><tr align=center>
+<td>2584<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD>2<TR><TD> <TD> <TD> <TD>5<TR><TD> <TD> <TD> <TD>8<TR><TD>2<TD>5<TD>8<TD>4</TABLE></TABLE>
+<td>4181<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>4<TD>1<TD>8<TD>1<TR><TD>1<TD> <TD> <TD> <TR><TD>8<TD> <TD> <TD> <TR><TD>1<TD> <TD> <TD> </TABLE></TABLE>
+<td>6765<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD>3<TD> <TD> <TR><TD> <TD>6<TD>7<TD>6<TD>5<TR><TD>3<TD>7<TD> <TD>7<TD> <TR><TD> <TD>6<TD>7<TD>6<TD>5<TR><TD> <TD> 5<TD> <TD>5<TD> </TABLE></TABLE>
+<td>10946 (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD> <TD>1<TR><TD> <TD>6<TD> <TD>1<TD>0<TR><TD> <TD> <TD>8<TD> <TD>9<TR><TD> <TD>1<TD> <TD>4<TD>4<TR><TD>1<TD>0<TD>9<TD>4<TD>6</TABLE></TABLE>
+<td>17711 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>1<TD>3<TD> <TD> <TR><TD>1<TD>7<TD>7<TD>1<TD>1<TR><TD>3<TD>7<TD>7<TD> <TD> <TR><TD> <TD>1<TD> <TD> <TD> <TR><TD> <TD> 1<TD> <TD> <TD> </TABLE></TABLE>
+<td>28657<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD> <TD> <TD>3<TR><TD> <TD> <TD> <TD>2<TD> <TD> <TR><TD> <TD> <TD> <TD>8<TD> <TD> <TR><TD> <TD>2<TD>8<TD>6<TD>5<TD>7<TR><TD> <TD> <TD> <TD>5<TD> <TD> <TR><TD>3<TD> <TD> <TD>7<TD> <TD>7</TABLE></TABLE>
+<td>46368<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>3<TD>4<TD> <TD> <TD> <TD> <TR><TD>4<TD>6<TD>3<TD> <TD>6<TD>8<TR><TD> <TD>3<TD> <TD> <TD> <TD> <TR><TD> <TD> <TD> <TD> <TD>1<TD> <TR><TD> <TD>6<TD> <TD>1<TD>0<TD> <TR><TD> <TD>8<TD> <TD> <TD> <TD> </TABLE></TABLE>
+<td>75025 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>3<TD> <TD> <TD> <TD> <TR><TD>3<TD>7<TD> <TD>7<TD> <TD> <TR><TD> <TD> <TD> <TD>5<TD> <TD> <TR><TD> <TD>7<TD>5<TD>0<TD>2<TD>5<TR><TD> <TD> <TD> <TD>2<TD> <TD> <TR><TD> <TD> <TD> <TD>5<TD> <TD> </TABLE></TABLE>
+<td>121393 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD> <TD>1<TD> <TR><TD> <TD> <TD> <TD> <TD>2<TD> <TR><TD> <TD> <TD> <TD> <TD>1<TD> <TR><TD> <TD> <TD> <TD> <TD>3<TD> <TR><TD>1<TD>2<TD>1<TD>3<TD>9<TD>3<TR><TD> <TD> <TD> <TD> <TD>3<TD> </TABLE></TABLE>
+<td>196418 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD>1<TD>3<TD> <TD> <TR><TD> <TD>8<TD>9<TD> <TD> <TD> <TR><TD>1<TD>9<TD>6<TD>4<TD>1<TD>8<TR><TD>3<TD> <TD>4<TD> <TD> <TD> <TR><TD> <TD> <TD>1<TD> <TD> <TD> <TR><TD> <TD> <TD>8<TD> <TD> <TD> </TABLE></TABLE>
+</table><p>
+<table align=center cellpadding=5><tr align=center>
+<td>317811 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD>3<TD> <TD> <TD> <TR><TD> <TD> <TD>1<TD> <TD> <TD> <TR><TD>3<TD>1<TD>7<TD>8<TD>1<TD>1<TR><TD> <TD> <TD>8<TD> <TD> <TD> <TR><TD> <TD> <TD>1<TD> <TD> <TD> <TR><TD> <TD> <TD>1<TD> <TD> <TD> </TABLE></TABLE>
+<td>514229 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD> <TD> <TD>5<TR><TD> <TD> <TD> <TD> <TD> <TD>1<TR><TD> <TD> <TD>3<TD> <TD> <TD>4<TR><TD> <TD> <TD> <TD> <TD> <TD>2<TR><TD> <TD> <TD> <TD> <TD> <TD>2<TR><TD>5<TD>1<TD>4<TD>2<TD>2<TD>9</TABLE></TABLE>
+<td>832040 (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD> <TD> <TD>8<TR><TD> <TD> <TD> <TD> <TD> <TD>3<TR><TD> <TD> <TD> <TD> <TD> <TD>2<TR><TD> <TD> <TD> <TD>6<TD>1<TD>0<TR><TD> <TD> <TD> <TD>1<TD>4<TD>4<TR><TD>8<TD>3<TD>2<TD>0<TD>4<TD>0</TABLE></TABLE>
+<td>1346269 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+   1   
+   3   
+  14 4 
+1346269
+   233 
+  46368
+   9 87</PRE></TABLE>
+<td>2178309 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+       8
+   2  1 
+   1    
+ 2178309
+   8  9 
+   3  4 
+ 1 0946 
+8  9    </PRE></TABLE>
+<td>3524578 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD> <TD> <TD>3<TD> <TR><TD> <TD> <TD> <TD> <TD> <TD>5<TD> <TR><TD> <TD> <TD> <TD> <TD> <TD>2<TD> <TR><TD> <TD> <TD> <TD>3<TD> <TD>4<TD> <TR><TD> <TD> <TD> <TD> <TD> <TD>5<TD> <TR><TD>3<TD>5<TD>2<TD>4<TD>5<TD>7<TD>8<TR><TD> <TD> <TD> <TD> <TD> <TD>8<TD> </TABLE></TABLE>
+<td>5702887 (JP)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD>
+<TR><TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD>3
+<TR><TD> <TD> <TD> <TD>5<TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD>3<TD>7<TD> <TD> <TD> <TD>7
+<TR><TD> <TD>5<TD>7<TD>0<TD>2<TD>8<TD>8<TD>7
+<TR><TD> <TD> <TD> <TD>2<TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD>8<TD> <TD> <TD> <TD> 
+<TR><TD> <TD> <TD> <TD>8<TD> <TD> <TD> <TD> 
+<TR><TD>3<TD> <TD>7<TD>7<TD> <TD> <TD> <TD> 
+</TABLE></TABLE>
+<td>9227465 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+8 9    
+  233  
+9227465
+ 37  7 
+ 34    
+  67 65
+  5  5 </PRE></TABLE>
+</table><p>
+
+<center><font size=+2>Factorials</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>1<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>1</TABLE></TABLE>
+<td>2<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>2</TABLE></TABLE>
+<td>6<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>6</TABLE></TABLE>
+<td>24<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>2<TR><TD>2<TD>4</TABLE></TABLE>
+<td>120<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD>1<TR><TD> <TD> <TD>2<TR><TD>1<TD>2<TD>0</TABLE></TABLE>
+<td>720<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD> <TD>1<TR><TD> <TD> <TD> <TD> <TD>2<TR><TD> <TD> <TD>7<TD>2<TD>0<TR><TD> <TD> <TD>2<TD> <TD> <TR><TD> 1<TD>2<TD>0<TD> <TD> </TABLE></TABLE>
+<td>5040<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD>1<TR><TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD>2<TR><TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD>2<TD> <TR><TD> <TD> <TD> <TD> <TD> <TD> <TD>1<TD> <TD> <TR><TD> <TD> <TD> <TD> <TD> <TD> <TD>2<TD> <TD> <TR><TD> <TD> <TD> <TD> <TD> <TD>5<TD>0<TD>4<TD>0<TR><TD> <TD> <TD> <TD>1<TD>2<TD>0<TD> <TD> <TD> <TR><TD> <TD> <TD>2<TD> <TD> <TD>4<TD> <TD> <TD> <TR><TD>1<TD>2<TD> <TD> <TD> <TD>0<TD> <TD> <TD> </TABLE></TABLE>
+<td>40320<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD>1<TR><TD> <TD> <TD> <TD> <TD> <TD> <TD> <TD>2<TR><TD> <TD> <TD> <TD> <TD>1<TD> <TD> <TD> <TR><TD> <TD> <TD> <TD>2<TD> <TD>4<TD> <TD> <TR><TD> <TD> <TD>1<TD> <TD>2<TD>0<TD> <TD> <TR><TD> <TD> <TD> <TD>4<TD>0<TD>3<TD>2<TD>0<TR><TD> <TD> <TD> <TD> <TD> <TD>2<TD>4<TD> <TR><TD>1<TD>2<TD> <TD> <TD> <TD>0<TD> <TD> </TABLE></TABLE>
+<td>362880 (BH)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+                  1
+                 1 
+                  2
+                 2 
+                1  
+               1   
+      2 4          
+       40     3 2 0
+      40     3 2 0 
+              6    
+             6     
+              2    
+             2     
+        3 6 288 0  
+       3 6 2 880   
+     1  2     0    
+    1  2     0     
+ 1 2    0          
+1 2    0           
+</PRE></TABLE>
+</table><p>
+<table align=center cellpadding=5><tr align=center>
+<td>3628800 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+                     1
+                     2
+                    1 
+                    2 
+                   1  
+                   2  
+                  1   
+                 1    
+        2 4           
+         40     3 2  0
+        40     3 2  0 
+                6     
+               6      
+                2     
+               2      
+          3 6 288  0  
+         3 6 2 8800   
+       1  2     0     
+      1  2      0     
+    12         0      
+  12      0           
+12       0            
+     
+</PRE></TABLE>
+<td>39916800 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+                              1
+                              2
+                             1 
+                             2 
+                            1  
+                            2  
+                           1   
+                           2   
+                          1    
+                          2    
+                         1     
+                        1      
+            2   4              
+               40      3 2    0
+                       6       
+             4 0  3     2    0 
+            40   3     2    0  
+                399 1 68  00   
+               3 991 6 800     
+                  1            
+                 1             
+                  6            
+                 6             
+             36 288    0       
+           1   2  0            
+          1  2    0            
+        12       0             
+      12         0             
+    12          0              
+  12           0               
+12           0                 
+</PRE></TABLE>
+<td>479001600 (BZ)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+                  1
+                  2
+                 1 
+                 2 
+                1  
+                2  
+             1     
+             2     
+            1      
+         2 4       
+           72     0
+         479001600 
+        1 20       
+      12   0       
+           1       
+           6       
+    12     0       
+  12       0       
+12        0        
+</PRE></TABLE>
+</table><p>
+
+<center><font size=+2>Mersenne Primes</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>3 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>3</TABLE></TABLE>
+<td>7 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>7</TABLE></TABLE>
+<td>31 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD> <TD>3<TR><TD>3<TD>1</TABLE></TABLE>
+<td>127 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFFFDD><TR><TD>3<TD>1<TD><TR><TD>1<TD>2<TD>7<TR><TD> <TD>7<TD> </TABLE></TABLE>
+<td>131071 (JD)<br><TABLE border=1 bgcolor=FFFFDD><TR><TD><PRE>
+      3
+ 3  1
+    3
+   31
+ 131071
+    7
+3   1</PRE></TABLE>
+</table><p>
+
+
+
+
+
+
+
+<HR>Here are the best-known solutions for non-symmetric matrices when they are smaller:<p>
+
+<center><font size=+2>Powers of 2</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>64<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=DDFFFF><TR><TD>1<TD> <TR><TD>6<TD>4</TABLE></TABLE>
+<TD>128<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=DDFFFF><TR><TD>1<TD>2<TD>8</TABLE></TABLE>
+<TD>2048<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=DDFFFF><TR><TD> <TD>1<TD> <TD> <TR><TD>2<TD>0<TD>4<TD>8<TR><TD> <TD>2<TD> <TD> <TR><TD> <TD>4<TD> <TD> </TABLE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 4</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>64<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=DDFFFF><TR><TD>1<TD> <TR><TD>6<TD>4</TABLE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 5</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>125<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=DDFFFF><TR><TD>1<TD>2<TD>5<TR><TD> <TD>5<TD> </TABLE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 11</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>11 (JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=DDFFFF><TR><TD>1<TD>1</TABLE></TABLE>
+</table><p>
+
+<center><font size=+2>Fibonacci Numbers</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>13<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=DDFFFF><TR><TD>1<TD>3</TABLE></TABLE>
+<td>21<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=DDFFFF><TR><TD>2<TD>1</TABLE></TABLE>
+<td>55<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=DDFFFF><TR><TD>5<TD>5</TABLE></TABLE>
+<td>144 (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=DDFFFF><TR><TD>2<TD>3<TD>3<TR><TD>1<TD>4<TD>4</TABLE></TABLE>
+<td>233<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=DDFFFF><TR><TD>2<TD>3<TD>3</TABLE></TABLE>
+<td>2584<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=DDFFFF><TR><TD> <TD> <TD> <TD>3<TR><TD>2<TD>5<TD>8<TD>4</TABLE></TABLE>
+<td>4181<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=DDFFFF><TR><TD>3<TD> <TD> <TD> <TR><TD>4<TD>1<TD>8<TD>1</TABLE></TABLE>
+<td>17711 (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=DDFFFF><TR><TD> <TD> <TD>3<TD> <TD> <TR><TD> <TD>3<TD> <TD> <TD> <TR><TD>1<TD>7<TD>7<TD>1<TD>1<TR><TD>3<TD>7<TD>7<TD> <TD> </TABLE></TABLE>
+</table><p>
+
+
+
+
+
+<HR>Here are the best-known solutions for matrices that are not allowed to repeat a row or column:<p>
+
+<center><font size=+2>Powers of 2</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>1, 4, 16, 64<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDFF><TR><TD>1<TD> <TR><TD>6<TD>4</TABLE></TABLE>
+<TD>2, 8, 128<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDFF><TR><TD>1<TD>2<TD>8</TABLE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 4</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>1, 4, 16, 64<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDFF><TR><TD>1<TD> <TR><TD>6<TD>4</TABLE></TABLE>
+</table><p>
+
+<center><font size=+2>Fibonacci Numbers</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>1, 3, 13<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDFF><TR><TD>1<TD>3</TABLE></TABLE>
+<TD>2, 21<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDFF><TR><TD>2<TD>1</TABLE></TABLE>
+<td>144 (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDFF><TR><TD> <TD> <TD> <TD> <TD>1<TR><TD> <TD> <TD> <TD>3<TD>4<TR><TD>2<TD>5<TD>8<TD> <TD>4</TABLE></TABLE>
+<TD>233<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDFF><TR><TD> <TD> <TD>1<TR><TD>2<TD>3<TD>3</TABLE></TABLE>
+<td>5, 8, 34, 2584<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDFF><TR><TD> <TD> <TD> <TD>3<TR><TD>2<TD>5<TD>8<TD>4</TABLE></TABLE>
+<td>55 (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDFF><TR><TD> <TD> <TD> <TD>3<TR><TD>2<TD>5<TD>8<TD>4<TR><TD> <TD>5<TD> <TD> </TABLE></TABLE>
+<td>4181<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDFF><TR><TD>3<TD> <TD> <TD> <TR><TD> <TD>2<TD> <TD> <TR><TD>4<TD>1<TD>8<TD>1</TABLE></TABLE>
+</table><p>
+
+
+
+
+
+
+<HR>
+Joe DeVincentis proved that 5 does not have any solutions with even bases.<p>
+
+Here are the best-known solutions for matrices whose rows are powers of b and whose columns are powers of c:<p>
+
+<center><font size=+2>Powers of 2 and 3</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>(BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD>8<TD>1</TABLE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 2 and 6</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>(JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD>1<TD>6</TABLE></TABLE>
+<TD>(BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD> <TD> <TD>1<TR><TD>2<TD>1<TD>6</TABLE></TABLE>
+<TD>(BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD> <TD> <TD> <TD> <TD> <TD>  1<TR><TD> <TD> <TD>1<TD> <TD> <TD> <TR><TD> <TD>1<TD> <TD> <TD> <TD> <TR><TD> <TD> <TD> <TD>2<TD>1<TD>6<TR><TD>4<TD>6<TD>6<TD>5<TD>6<TD> <TR><TD> <TD> <TD> <TD>6<TD> <TD> </TABLE></TABLE>
+<td>(JD)<br><TABLE border=1 bgcolor=FFDDDD><TR><TD><PRE>
+       1
+      1
+     1
+    1
+  1
+ 1
+1
+  6
+ 6
+6
+777    6
+777   6
+777  6
+  216
+ 216
+216
+ 6
+1
+6       
+</PRE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 2 and 9</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>(BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD>8<TD>1</TABLE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 2 and 11</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>(JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD>1<TD>2<TD>1</TABLE></TABLE>
+<TD>(JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD> <TD> <TD>1<TD>3<TD>3<TD>1<TD> <TD> <TR><TD> <TD>1<TD> <TD>2<TD> <TD> <TD>1<TD> <TR><TD>1<TD> <TD> <TD> <TD>2<TD> <TD> <TD>1</TABLE></TABLE>
+<TD>(JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD> <TD> <TD>1<TD> <TD> <TR><TD>1<TD>4<TD>6<TD>4<TD>1</TABLE></TABLE>
+<td>(BH)<br><TABLE border=1 bgcolor=FFDDDD><TR><TD><PRE>
+     1      
+   1  21    
+  16105 1   
+ 1   2   1  
+1    46   41</PRE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 2 and 12</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>(JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD>1<TD>2</TABLE></TABLE>
+<TD>(JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD>1<TD>4<TD>4</TABLE></TABLE>
+<td>(BH)<br><TABLE border=1 bgcolor=FFDDDD><TR><TD><PRE>
+               1
+           24883   2
+               1
+     358318    0  8
+        20     736
+      1        2
+    1    2
+   1     4       4
+  1             2
+ 1    2
+1    2
+</PRE></TABLE>
+<TD>(JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD>2<TD>4<TD>8<TD>8<TD>3<TD>2<TR><TD> <TD> <TD> <TD> <TD>2<TD> </TABLE></TABLE>
+<td><TABLE border=1 bgcolor=FFDDDD><TR><TD><PRE>
+          1
+    35831808
+     1 2
+   1 2
+  1 2
+ 1        2
+1         4 4</PRE></TABLE>
+</table><p>
+
+
+<center><font size=+2>Powers of 2 and 21</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>(BH)<br><TABLE border=1 bgcolor=FFDDDD><TR><TD><PRE>
+21</PRE></TABLE>
+<td>(BH)<br><TABLE border=1 bgcolor=FFDDDD><TR><TD><PRE>
+441</PRE></TABLE>
+<td>(BH)<br><TABLE border=1 bgcolor=FFDDDD><TR><TD><PRE>
+     1
+ 1
+4084101
+     2   1
+ 2      1
+ 4   4 1</PRE></TABLE>
+</table><p>
+
+
+<center><font size=+2>Powers of 2 and 38</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>(BH)<br><TABLE border=1 bgcolor=FFDDDD><TR><TD><PRE>
+1444</PRE></TABLE>
+</table><p>
+
+
+<center><font size=+2>Powers of 3 and 8</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>(BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD>8<TD>1</TABLE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 3 and 11</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>(JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD>1<TD>3<TD>3<TD>1</TABLE></TABLE>
+<td>(JD)<br><TABLE border=1 bgcolor=FFDDDD><TR><TD><PRE>
+1         2     1
+ 1      2      1
+  1   2       1
+    19487171
+   1  3     31
+       1</PRE></TABLE>
+<td>(JD)<br><TABLE border=1 bgcolor=FFDDDD><TR><TD><PRE>
+                 12 1
+                1  2 1           
+               1  77  1   561
+                                        121
+                                    121
+                               121
+              1           9     4  8 7 1 7 1
+                              1 3 31
+                       16105 1
+        12 1
+       1  2 1
+      1  77  1          5  6                1
+   121
+  1 4                   6 4                  1
+                                                    121
+                           1                     21
+                        1                     21
+ 1                        9                   4 87 1 7 1
+1   3                                         3 1
+</PRE></TABLE>
+</table><p>
+
+
+<center><font size=+2>Powers of 4 and 38</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>(BH)<br><TABLE border=1 bgcolor=FFDDDD><TR><TD><PRE>
+1444</PRE></TABLE>
+</table><p>
+
+
+<center><font size=+2>Powers of 5 and 15</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>(JD) (BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD> <TD> <TD>2<TD>2<TD>5<TR><TD> <TD>1<TD> <TD>5<TD> <TR><TD>1<TD> <TD>5<TD> <TD> </TABLE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 4 and 6</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>(JD)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD>1<TD>6</TABLE></TABLE>
+<TD>(BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD> <TD> <TD> <TD> <TD> <TD>  1<TR><TD> <TD> <TD>1<TD> <TD> <TD> <TR><TD> <TD>1<TD> <TD> <TD> <TD> <TR><TD> <TD> <TD> <TD>2<TD>1<TD>6<TR><TD>4<TD>6<TD>6<TD>5<TD>6<TD> <TR><TD> <TD> <TD> <TD>6<TD> <TD> </TABLE></TABLE>
+<td>(JD)<br><TABLE border=1 bgcolor=FFDDDD><TR><TD><PRE>
+       1
+      1
+     1
+    1
+  1
+ 1
+1
+  6
+ 6
+6
+777    6
+777   6
+777  6
+  216
+ 216
+216
+ 6
+1
+6       
+</PRE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 8 and 9</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>(BH)<br><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD>8<TD>1</TABLE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 11 and anything</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD><TABLE border=1><TR><TD><TABLE border=0 bgcolor=FFDDDD><TR><TD>1<TD>1</TABLE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 12 and 38</font></center>
+<table align=center cellpadding=5><tr align=center>
+<TD>(JD)<br><TABLE border=1 bgcolor=FFDDDD><TR><TD><PRE>
+    1
+   1
+  144
+ 1 44
+1  44
+</PRE></TABLE>
+</table><p>
+
+<center><font size=+2>Powers of 21 and 38</font></center>
+<table align=center cellpadding=5><tr align=center>
+<td>(BH)<br><TABLE border=1 bgcolor=FFDDDD><TR><TD><PRE>
+ 1
+1
+44  1
+44 1
+441</PRE></TABLE>
+</table><p>
+
+
+<HR><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 8/6/13.<font>
+
+</BODY></HTML>

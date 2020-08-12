@@ -1,0 +1,209 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+
+<CENTER><H1>Problem of the Month (September 2005)</H1></CENTER>
+
+This month we consider 4 problems concerning squares.<p>
+
+
+<font size=+2>1. Square Chain Tilings</font><p>
+
+We say a tiling of a square by integer-sided squares is a <b>square chain tiling</b> if every square of side s>1 shares part of a side with a square of s-1.  For each n, we are interested in finding the square chain tiling of a square of side n using the fewest number of squares.  <p>
+
+What are the minimal square chain tilings for various squares?  In particular, what is the fewest number of squares you can find for a chain tiling of a square of side 100?<p>
+
+What are the best chain tilings of rectangles by squares?  How about equilateral triangle chain tilings?<p>
+
+
+<font size=+2>2. Square Bridges</font><p>
+
+A </b>square bridge</b> is a collection of integer-sided squares on a grid so that a) every square but one rests partly on another square, and b) the tops of the squares which do not have a square resting on them are level.  The <b>width</b> of a square bridge is the length of the top edge.  For each n, we are interested in finding the square bridge of width n whose combined area is as small as possible.  <p>
+
+What are the minimal square bridges for various n?  Do squares of side 5 or greater ever appear in the optimal bridges?  What is the smallest possible area of a square bridge of width 100?<p>
+
+
+<font size=+2>3. Covering Squares Without Overlap</font><p>
+
+The <a href="http://www.stetson.edu/~efriedma/mathmagic/0900.html">September 2000</a> problem investigated covering the largest square using squares of sides 1 through n.  This month we are interested in the largest square that can be covered by non-overlapping squares of sides 1 through n.  <p>
+
+What are the best coverings for various n?  In particular, what is the smallest n for which non-overlapping squares of sides 1 through n can cover a square of side 100?  What is the largest area rectangle that non-overlapping squares of sides 1 through n can cover?<p>
+
+
+
+<font size=+2>4. Sorted Square Packings</font><p>
+
+A <b>sorted square packing</b> is a packing of a square with integer-sided squares so that all squares above and to the right of a square are strictly smaller.  For each n, we are interested in the sorted square packing of a square of side n with the smallest wasted area. <p>
+
+What are the best packings for various squares?  In particular, what is the best sorted square packing of a square of side 100?<p>
+
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+<font size=+2>1.</font> Here are the best known small square chain tilings:<p>
+
+<center><table cellpadding=10><tr align=center>
+<td>1<br><img src="0905/a1.gif"><br>1 square
+<td>2<br><img src="0905/a2.gif"><br>4 squares
+<td>3<br><img src="0905/a3.gif"><br>6 squares
+<td>4<br><img src="0905/a4.gif"><br>7 squares
+<td>5<br><img src="0905/a5.gif"><br>8 squares
+<td>6<br><img src="0905/a6.gif"><br>11 squares
+<td>7<br><img src="0905/a7.gif"><br>9 squares
+<td>8<br><img src="0905/a8.gif"><br>15 squares
+</tr></table></center>
+
+<center><table cellpadding=10><tr align=center>
+<td>9<br><img src="0905/a9.gif"><br>13 squares
+<td>10<br><img src="0905/a10.gif"><br>15 squares
+<td>11<br><img src="0905/a11.gif"><br>15 squares
+<td>12<br><img src="0905/a12.gif"><br>15 squares<br>(Berend van der Zwaag)
+<td>13<br><img src="0905/a13.gif" width=125><br>20 squares<br>(Maurizio Morandi)
+</tr></table></center>
+
+<center><table cellpadding=10><tr align=center>
+<td>14<br><img src="0905/a14.gif"><br>18 squares<br>(George Sicherman)
+<td>15<br><img src="0905/a15.gif"><br>17 squares<br>(Jeremy Galvagni)
+<td>16<br><img src="0905/a16.gif"><br>21 squares<br>(George Sicherman)
+<td>17<br><img src="0905/a17.gif"><br>23 squares
+</tr></table></center>
+
+<center><table cellpadding=10><tr align=center>
+<td>18<br><img src="0905/a18.gif"><br>22 squares<br>(Berend van der Zwaag)
+<td>19<br><img src="0905/a19.gif"><br>27 squares<br>(Berend van der Zwaag)
+<td>20<br><img src="0905/a20.gif"><br>24 squares<br>(Jeremy Galvagni)
+</tr></table></center><p>
+
+Jeremy Galvagni developed the idea of an efficiency ratio r(n) for a chain tiling of a square of side n: the area divided by the number of squares.  He notes that r(kn) is an increasing function of k, since we can just tile a square of side kn with chain tilings of a square of side n.  Presumably r(n) diverges to &infin;, but how quickly?<p>
+
+Jeremy Galvagni also found a chain tiling of a square of side 100 containing 230 squares.  Then Emilio Schiavi found a tiling using only 186 squares.  Then in 2009, Berend van der Zwaag found a tiling using only 128 squares:<p>
+
+<center>100<br><img src="0905/a100.png"><br>128 squares (Berend van der Zwaag)</center><p>
+
+Finally, in 2011, Maurizio Morandi improved 2 parts of the tiling to reduce the number of squares:<p>
+
+<center>100<br><img src="0905/a100.gif"><br>125 squares (Maurizio Morandi)</center><p>
+
+Jeremy Galvagni also investigated triangle chain tilings.  Here are his best results:
+
+<center><font size=+2>Minimum Number of Triangles in<br>Chain Tiling of Triangle of Side n</font></center>
+<center><TABLE BORDER cellpadding=4 bgcolor=lightyellow>
+<TR align=center><th bgcolor=palegreen>n<td>1<td>2<td>3<td>4<td>5<td>6<td>7<td>8<td>9<td>10<td>11
+<TR align=center><th bgcolor=palegreen>Triangles<td>1<td>4<td>6<td>7<td>11<td>14<td>16<td>12<td>19<td>18<td>26</tr></table></center>
+
+
+<P><hr><p><font size=+2>2.</font> Here are the best known small square bridges:<p>
+
+<center><table cellpadding=10><tr align=center>
+<td>1<br><img src="0905/b1.gif"><br>area 1
+<td>2<br><img src="0905/b2.gif"><br>area 4
+<td>3<br><img src="0905/b3.gif"><br>area 9
+<td>4<br><img src="0905/b4.gif"><br>area 12
+<td>5<br><img src="0905/b5.gif"><br>area 18
+<td>6<br><img src="0905/b6.gif"><br>area 22
+<td>7<br><img src="0905/b7.gif"><br>area 30
+<td>8<br><img src="0905/b8.gif"><br>area 35<br>(Corey Plover)
+<td>9<br><img src="0905/b9.gif"><br>area 43
+</tr></table></center>
+
+<center><table cellpadding=10><tr align=center>
+<td>10<br><img src="0905/b10.gif"><br>area 48
+<td>11<br><img src="0905/b11.gif"><br>area 57
+<td>12<br><img src="0905/b12.gif"><br>area 64
+<td>13<br><img src="0905/b13.gif"><br>area 73
+<td>14<br><img src="0905/b14.gif"><br>area 80<br>(Corey Plover)
+</tr></table></center><p>
+
+Corey Plover found this square bridge of width 100:<p>
+
+<center>100<br><img src="0905/b100.gif"><br>area 1106 (Corey Plover)</center><p>
+
+Corey Plover also sent me solutions for all n&le;100 based on recursion.  And he sent me an analysis of this problem when the squares do not have to lie on a grid.  He used only unit squares to show that in this case, the area needed is no more than n+1+k2<sup>k</sup> where k=<img src="lfloor.gif" align=abscenter>log<sub>2</sub>n<img src="rfloor.gif" align=abscenter>-1.<p>
+
+
+
+<P><hr><p><font size=+2>3.</font> Here are the best known small non-overlapping square coverings:<p>
+
+<center><table cellpadding=10><tr align=center>
+<td>1<br><img src="0905/c1.gif"><br>side 1
+<td>2<br><img src="0905/c2.gif"><br>side 2
+<td>3<br><img src="0905/c3.gif"><br>side 3
+<td>4<br><img src="0905/c4.gif"><br>side 4
+<td>5<br><img src="0905/c5.gif" width=88><br>side 6<br>(Maurizio Morandi)
+<td>6<br><img src="0905/c6.gif" width=105><br>side 8.4744<br>(Maurizio Morandi)
+<td>7<br><img src="0905/c7.gif"><br>side 11
+</tr></table></center>
+
+<center><table cellpadding=10><tr align=center>
+<td>8<br><img src="0905/c8.gif"><br>side 13
+<td>9<br><img src="0905/c9.gif"><br>side 16
+<td>10<br><img src="0905/c10.gif"><br>side 18
+<td>11<br><img src="0905/c11.gif"><br>side 21
+</tr></table></center><p>
+
+<center><table cellpadding=10><tr align=center>
+<td>12<br><img src="0905/c12.gif"><br>side 23
+<td>13<br><img src="0905/c13.gif" width=250><br>side 26.5583<br>(Maurizio Morandi)
+<td>14<br><img src="0905/c14.gif" width=250><br>side 333/&radic;122 = 30.1484<br>(Maurizio Morandi)
+</tr></table></center><p>
+
+<center><table cellpadding=10><tr align=center>
+<td>15<br><img src="0905/c15.gif"><br>side 34<br>(Vedran Gli&scaron;i&cacute;)
+<td>16<br><img src="0905/c16.gif"><br>side 37.1557<br>(Maurizio Morandi)
+<td>17<br><img src="0905/c17.gif" width=250><br>side 41<br>(Maurizio Morandi)
+</tr></table></center><p>
+
+<center><table cellpadding=10><tr align=center>
+<td>18<br><img src="0905/c18.gif" width=250><br>side 44<br>(Maurizio Morandi)
+<td>19<br><img src="0905/c19.gif" width=250><br>side 48<br>(Maurizio Morandi)
+<td>20<br><img src="0905/c20.gif" width=250><br>side 52<br>(Maurizio Morandi)
+</tr></table></center><p>
+
+<center><table cellpadding=10><tr align=center>
+<td>21<br><img src="0905/c21.gif" width=250><br>side 55<br>(Maurizio Morandi)
+<td>22<br><img src="0905/c22.gif" width=250><br>side 59<br>(Maurizio Morandi)
+</tr></table></center><p>
+
+<P><hr><p><font size=+2>4.</font> Here are the best known small sorted square packings:<p>
+
+<center><table cellpadding=10><tr align=center>
+<td>2<br><img src="0905/d2.gif"><br>2 wasted
+<td>3<br><img src="0905/d3.gif"><br>3 wasted
+<td>4<br><img src="0905/d4.gif"><br>5 wasted
+<td>5<br><img src="0905/d5.gif"><br>5 wasted
+<td>6<br><img src="0905/d6.gif"><br>8 wasted
+<td>7<br><img src="0905/d7.gif"><br>5 wasted
+<td>8<br><img src="0905/d8.gif"><br>9 wasted
+<td>9<br><img src="0905/d9.gif"><br>8 wasted
+</tr></table></center>
+
+<center><table cellpadding=10><tr align=center>
+<td>10<br><img src="0905/d10.gif"><br>8 wasted
+<td>11<br><img src="0905/d11.gif"><br>11 wasted
+<td>12<br><img src="0905/d12.gif"><br>13 wasted
+<td>13<br><img src="0905/d13.gif"><br>12 wasted
+<td>14<br><img src="0905/d14.gif"><br>13 wasted (VG)
+</tr></table></center>
+
+<center><table cellpadding=10><tr align=center>
+<td>15<br><img src="0905/d15.gif"><br>16 wasted (VG)
+<td>16<br><img src="0905/d16.gif"><br>14 wasted
+<td>17<br><img src="0905/d17.gif" width=170><br>17 wasted (MM)
+</tr></table></center>
+
+<center><table cellpadding=10><tr align=center>
+<td>18<br><img src="0905/d18.gif" width=180><br>21 wasted (MM)
+<td>19<br><img src="0905/d19.gif" width=190><br>19 wasted (MM)
+<td>20<br><img src="0905/d20.gif" width=200><br>17 wasted (MM)
+</tr></table></center><p>
+
+Corey Plover sent the following sorted square packing of a square of side 100.<p>  
+<center>100<br><img src="0905/d100.gif"><br>124 wasted</center><p>
+
+In 2011, Vedran Gli&scaron;i&cacute; improved the packing:<p>
+<center><img src="0905/d100.png"></center><p>
+
+Then a few weeks later, Maurizio Morandi did even better:<p>
+<center>100<br><img src="0905/d101.gif"><br>92 wasted</center><p>
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 11/12/11.<font></BODY></HTML>

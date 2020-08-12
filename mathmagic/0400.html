@@ -1,0 +1,148 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><CENTER><H1> Problem of the Month (April 2000)</H1></CENTER><font size=+1>Packing non-overlapping unit squares into the smallest possible square is an interesting problem.  It is not completely solved, but there has been much recent progress.  For example, here is a <a href="http://www.stetson.edu/~efriedma/papers/squares/squares.html">paper</a> of mine on the subject published as a dynamic survey in the <a href="http://www.combinatorics.org/">Electronic Journal of Combinatorics</a>.<p>This month's problem is this: If you are pack n squares of one size and m squares of another (possibly equal) size inside a unit square, what is the largest area they can cover?  What about using more than 2 sizes of squares?<p>
+
+<P><hr><p><center><h1>ANSWERS</h1></center>Define <b>S(n,m)</b> to be the maximum area that n squares of one size and m squares of another size can cover in a packing of a unit square.<p>Brendan Owen and all the solvers noted that if n, m, or n+m is square, then S(n,m)=1.  Also, If there are positive integers a, b and c such that m/a<sup>2</sup> and  n/b<sup>2</sup> are integers which add to c<sup>2</sup>, then S(n,m)=1.<p>Joseph DeVincentis gave packings for n,m &le; 11, which were mostly optimal.<p>Trevor Green gave packings for n &le; 20 and m &le; 5, which were mostly optimal.<p>Ulrich Schimke gave packings for n,m &le; 5, which were mostly optimal.<p>Green and Schimke independently conjectured that if 0 &le; k &le; n<sup>2</sup>, then S(n<sup>2</sup>-1,k) = 1 - (1-S(0,k))/n<sup>2</sup> unless  S(n<sup>2</sup>-1,k) = 1.  That is, the n<sup>2</sup>-1 squares should have length 1/n.  But this is not true for many pairs.<p>
+
+David Cantrell improved several of my packings in 2007.<p>
+
+Maurizio Morandi improved several packings in 2012 and 2014.<p>
+
+Here are the best known lower bounds for S(n,n). <p><center><h2>Largest Area Covered by n Squares of Two Sizes</h2></center>
+<TABLE align=center cellpadding=10><TR align=center>
+<TD><IMG SRC="0400/d11.gif"><br>S(1,1) = 1 
+<TD><IMG SRC="0400/d22.gif"><br>S(2,2) = 1
+<TD><IMG SRC="0400/d33.gif"><br>S(3,3) = 15/16 = .9375
+<TD><IMG SRC="0400/d44.gif"><br>S(4,4) = 1
+</TR><TR align=center>
+<TD><IMG SRC="0400/d55.gif"><br>S(5,5) &ge; 125/144 = .868+
+<TD><IMG SRC="0400/d66.gif"><br>S(6,6) &ge; .862+
+<TD><IMG SRC="0400/d77.gif"><br>S(7,7) &ge; 35/36 = .972+
+<TD><IMG SRC="0400/d88.gif"><br>S(8,8) = 1
+</TR><TR align=center>
+<TD><IMG SRC="0400/d99.gif"><br>S(9,9) = 1
+<TD><IMG SRC="0400/d1010.gif"><br>S(10,10) &ge; 65/72 = .902+
+<TD><IMG SRC="0400/d1111.gif"><br>S(11,11) &ge; 187/200 = .935
+<TD><IMG SRC="0400/d1212.gif"><br>S(12,12) &ge; 24/25 = .960
+</TR><TR align=center>
+<TD><IMG SRC="0400/d1313.gif"><br>S(13,13) &ge; 377/392 = .961+
+<TD><IMG SRC="0400/d1414.gif"><br>S(14,14) &ge; 35/36 = .972+
+<TD><IMG SRC="0400/d1515.gif"><br>S(15,15) &ge; 255/256 = .996+
+<TD><IMG SRC="0400/d1616.gif"><br>S(16,16) = 1
+</TR><TR align=center>
+<TD><IMG SRC="0400/d1717.gif"><br>S(17,17) &ge; 221/225 = .982+<br>&nbsp;
+<TD><IMG SRC="0400/d1818.gif"><br>S(18,18) = 1<br>&nbsp;
+<TD><IMG SRC="0400/d1919.gif"><br>S(19,19) &ge; 247/256 = .964+<br>(David Cantrell)
+<TD><IMG SRC="0400/d2020.gif"><br>S(20,20) = 1<br>&nbsp;
+</TR><TR align=center>
+<TD><IMG SRC="0400/d2121.gif"><br>S(21,21) &ge; 609/625 = .974+<br>&nbsp;
+<TD><IMG SRC="0400/d2222.gif"><br>S(22,22) &ge; 286/289 = .989+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d2323.gif"><br>S(23,23) &ge; .982+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d2424.gif"><br>S(24,24) &ge; 624/625 = .998+<br>&nbsp;
+</TR><TR align=center>
+<TD><IMG SRC="0400/d2525.gif"><br>S(25,25) = 1<br>&nbsp;
+<TD><IMG SRC="0400/d2626.gif"><br>S(26,26) &ge; 221/225 = .982+<br>&nbsp;
+<TD><IMG SRC="0400/d2727.gif"><br>S(27,27) &ge; 74/75 = .986+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d2828.gif"><br>S(28,28) &ge; 952/961 = .990+<br>(Maurizio Morandi)
+</TR><TR align=center>
+<TD><IMG SRC="0400/d2929.gif"><br>S(29,29) &ge; 5945/6084 = .977+<br>&nbsp;
+<TD><IMG SRC="0400/d3030.gif"><br>S(30,30) &ge; 39/40 = .975<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d3131.gif"><br>S(31,31) &ge; 775/784 = .988+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d3232.gif"><br>S(32,32) = 1<br>&nbsp;
+</TR><TR align=center>
+<TD><IMG SRC="0400/d3333.gif"><br>S(33,33) &ge; 583/588 = .991+<br>&nbsp;
+<TD><IMG SRC="0400/d3434.gif"><br>S(34,34) &ge; .991+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d3535.gif"><br>S(35,35) &ge; 1295/1296 = .999+<br>&nbsp;
+<TD><IMG SRC="0400/d3636.gif"><br>S(36,36) = 1<br>&nbsp;
+</TR><TR align=center>
+<TD><IMG SRC="0400/d3737.gif"><br>S(37,37) &ge; 481/484 = .993+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d3838.gif"><br>S(38,38) &ge; 950/961 = .988+<br>(David Cantrell)
+<TD><IMG SRC="0400/d3939.gif"><br>S(39,39) &ge; 195/196 = .994+<br>&nbsp;
+<TD><IMG SRC="0400/d4040.gif"><br>S(40,40) &ge; 80/81 = .987+<br>&nbsp;
+</TR><TR align=center>
+<TD><IMG SRC="0400/d4141.gif"><br>S(41,41) &ge; 3485/3528 = .987+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d4242.gif"><br>S(42,42) &ge; 119/120 = .991+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d4343.gif"><br>S(43,43) &ge; 1075/1089 = .987+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d4444.gif"><br>S(44,44) &ge; 440/441 = .997+<br>&nbsp;
+</TR><TR align=center>
+<TD><IMG SRC="0400/d4545.gif"><br>S(45,45) = 1<br>(David Cantrell)
+<TD><IMG SRC="0400/d4646.gif"><br>S(46,46) &ge; 391/392 = .997+<br>&nbsp;
+<TD><IMG SRC="0400/d4747.gif"><br>S(47,47) &ge; 1222/1225 = .997+<br>&nbsp;
+<TD><IMG SRC="0400/d4848.gif"><br>S(48,48) &ge; 2400/2401 = .999+<br>&nbsp;
+</TR><TR align=center>
+<TD><IMG SRC="0400/d4949.gif"><br>S(49,49) = 1<br>&nbsp;
+<TD><IMG SRC="0400/d5050.gif"><br>S(50,50) = 1<br>&nbsp;
+<TD><IMG SRC="0400/d5151.gif"><br>S(51,51) &ge; 255/256 = .996+<br>&nbsp;
+<TD><IMG SRC="0400/d5252.gif"><br>S(52,52) = 1<br>(Maurizio Morandi)
+</TR><TR align=center>
+<TD><IMG SRC="0400/d5353.gif"><br>S(53,53) &ge; 3233/3249 = .995+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d5454.gif"><br>S(54,54) &ge; 1836/1849 = .992+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d5555.gif"><br>S(55,55) &ge; 2035/2048 = .993+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d5656.gif"><br>S(56,56) &ge; 340/343 = .991+<br>(Maurizio Morandi)
+</TR><TR align=center>
+<TD><IMG SRC="0400/d5757.gif"><br>S(57,57) &ge; 471/475 = .991+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d5858.gif"><br>S(58,58) &ge; 2378/2401 = .990+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d5959.gif"><br>S(59,59) &ge; 20591/20736 = .993+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d6060.gif"><br>S(60,60) &ge; 255/256 = .996+<br>&nbsp;
+</TR><TR align=center>
+<TD><IMG SRC="0400/d6161.gif"><br>S(61,61) &ge; .992+<br>(David Cantrell)
+<TD><IMG SRC="0400/d6262.gif"><br>S(62,62) &ge; 1147/1152 = .995+<br>&nbsp;
+<TD><IMG SRC="0400/d6363.gif"><br>S(63,63) &ge; 4095/4096 = .999+<br>&nbsp;
+<TD><IMG SRC="0400/d6464.gif"><br>S(64,64) = 1<br>&nbsp;
+</TR><TR align=center>
+<TD><IMG SRC="0400/d6565.gif"><br>S(65,65) &ge; .990+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d6666.gif"><br>S(66,66) &ge; 2860/2883 = .992+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d6767.gif"><br>S(67,67) &ge; 1675/1681 = .996+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d6868.gif"><br>S(68,68) &ge; 3944/3969 = .993+<br>(Maurizio Morandi)
+</TR><TR align=center>
+<TD><IMG SRC="0400/d6969.gif"><br>S(69,69) &ge; 299/300 = .996+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d7070.gif"><br>S(70,70) &ge; 6230/6241 = .998+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d7171.gif"><br>S(71,71) &ge; 4331/4356 = .994+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d7272.gif"><br>S(72,72) = 1<br>&nbsp;
+</TR><TR align=center>
+<TD><IMG SRC="0400/d7373.gif"><br>S(73,73) &ge; 25769/25921 = .994+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d7474.gif"><br>S(74,74) &ge; 10249/10368 = .988+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d7575.gif"><br>S(75,75) &ge; 3250/3267 = .994+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d7676.gif"><br>S(76,76) &ge; 323/324 = .996+<br>(Maurizio Morandi)
+</TR><TR align=center>
+<TD><IMG SRC="0400/d7777.gif"><br>S(77,77) &ge; 6545/6561 = .997+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d7878.gif"><br>S(78,78) &ge; 3445/3456 = .996+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d7979.gif"><br>S(79,79) &ge; .996+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d8080.gif"><br>S(80,80) = 1<br>&nbsp;
+</TR><TR align=center>
+<TD><IMG SRC="0400/d8181.gif"><br>S(81,81) = 1<br>&nbsp;
+<TD><IMG SRC="0400/d8282.gif"><br>S(82,82) .994+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d8383.gif"><br>S(83,83) &ge; 8051/8100 = .993+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d8484.gif"><br>S(84,84) &ge; 1365/1369 = .997+<br>(Maurizio Morandi)
+</TR><TR align=center>
+<TD><IMG SRC="0400/d8585.gif"><br>S(85,85) &ge; 1445/1458 = .991+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d8686.gif"><br>S(86,86) &ge; 1247/1250 = .997+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d8787.gif"><br>S(87,87) &ge; 3161/3174 = .995+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d8888.gif"><br>S(88,88) &ge; 440/441 = .997+<br>(Maurizio Morandi)
+</TR><TR align=center>
+<TD><IMG SRC="0400/d8989.gif"><br>S(89,89) &ge; 48149/48400 = .994+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d9090.gif"><br>S(90,90) = 1<br>&nbsp;
+<TD><IMG SRC="0400/d9191.gif"><br>S(91,91) &ge; 9919/10000 = .991+<br>&nbsp;
+<TD><IMG SRC="0400/d9292.gif"><br>S(92,92) &ge; 391/392 = .997+<br>(Maurizio Morandi)
+</TR><TR align=center>
+<TD><IMG SRC="0400/d9393.gif"><br>S(93,93) &ge; 2697/2704 = .997+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d9494.gif"><br>S(94,94) &ge; 799/800 = .998+<br>&nbsp;
+<TD><IMG SRC="0400/d9595.gif"><br>S(95,95) &ge; 323/324 = .996+<br>&nbsp;
+<TD><IMG SRC="0400/d9696.gif"><br>S(96,96) &ge; 2400/2401 = .999+<br>(Maurizio Morandi)
+</TR><TR align=center>
+<TD><IMG SRC="0400/d9797.gif"><br>S(97,97) &ge; 8633/8649 = .998+<br>(Maurizio Morandi)
+<TD><IMG SRC="0400/d9898.gif"><br>S(98,98) = 1<br>&nbsp;
+<TD><IMG SRC="0400/d9999.gif"><br>S(99,99) &ge; 9999/10000 = .999+<br>&nbsp;
+<TD><IMG SRC="0400/d100100.gif"><br>S(100,100) = 1<br>&nbsp;
+</TABLE><p>
+
+<HR>
+Here are the best known lower bounds for S(n,m).  Click on the values for pictures.<p><center><h2>Largest Area Covered by Squares of Two Sizes</h2></center><CENTER><TABLE BORDER bgcolor=cornsilk><TR><th bgcolor=lightgreen>n \ m</th><th bgcolor=lightgreen width=40>1</th><th bgcolor=lightgreen>2</th><th bgcolor=lightgreen>3</th><th bgcolor=lightgreen width=40>4</th><th bgcolor=lightgreen>5</th><th bgcolor=lightgreen>6</th><th bgcolor=lightgreen>7</th><th bgcolor=lightgreen>8</th><th bgcolor=lightgreen width=40>9</th><th bgcolor=lightgreen>10</th><th bgcolor=lightgreen>11</th><th bgcolor=lightgreen>12</th><th bgcolor=lightgreen>13</th><th bgcolor=lightgreen>14</th><th bgcolor=lightgreen>15</th><th bgcolor=lightgreen width=40>16</th><th bgcolor=lightgreen>17</th><th bgcolor=lightgreen width=40>18</th></TR><TR align=center><th bgcolor=lightgreen>1</th><td>1</td><td>  <td>  <td>  <td>  <td>  <td>  <td>  <td>  <td> <td>  <td>  <td> <td> <td>  <td> <td> <td> </TR><TR align=center><th bgcolor=lightgreen>2</th><td>1</td><td>1</td><td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> </TR><TR align=center><th bgcolor=lightgreen>3</th><td>1</td><td><A HREF="0400/d23.gif">7/8</A></td><td><A HREF="0400/d33.gif">15/16</A></td><td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> </TR><TR align=center><th bgcolor=lightgreen>4</th><td>1</td><td>1</td><td>1</td><td>1</td><td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> </TR><TR align=center><th bgcolor=lightgreen>5</th><td>1</td><td><A HREF="0400/d25.gif">13/16</A></td><td><A HREF="0400/d35.gif">.920+</A></td><td>1</td><td><A HREF="0400/d55.gif">125/144</A></td><td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> </TR><TR align=center><th bgcolor=lightgreen>6</th><td>1</td><td><A HREF="0400/d26.gif">8/9</A></td><td>1</td><td>1</td><td><A HREF="0400/d56.gif">74/81</A></td><td><A HREF="0400/d66.gif">.862+</A></td><td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> </TR><TR align=center><th bgcolor=lightgreen>7</th><td>1</td><td>1</td><td><A HREF="0400/d37.gif">17/18</A></td><td>1</td><td><A HREF="0400/d57.gif">11/12</A></td><td><A HREF="0400/d67.gif">17/18</A></td><td><A HREF="0400/d77.gif">35/36</A></td><td> <td> <td> <td> <td> <td> <td> <td> <td> <td> <td> </TR><TR align=center><th bgcolor=lightgreen>8</th><td>1</td><td><A HREF="0400/d28.gif">1</A></td><td><A HREF="0400/d38.gif">35/36</A></td><td>1</td><td><A HREF="0400/d58.gif">.964+</A></td><td><A HREF="0400/d68.gif">26/27</A></td><td><A HREF="0400/d78.gif">1</A></td><td>1</td><td> <td> <td> <td> <td> <td> <td> <td> <td> <td> </TR><TR align=center><th bgcolor=lightgreen>9</th><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td> <td> <td> <td> <td> <td> <td> <td> <td> </TR><TR align=center><th bgcolor=lightgreen>10</th><td>1</td><td><A HREF="0400/d210.gif">29/32</A></td><td><A HREF="0400/d310.gif">.931+</A></td><td>1</td><td><A HREF="0400/d510.gif">15/16</A></td><td>1</td><td><A HREF="0400/d710.gif">43/45</A></td><td><A HREF="0400/d810.gif">.969+</A></td><td>1</td><td><A HREF="0400/d1010.gif">65/72</A></td><td> <td> <td> <td> <td> <td> <td> <td> </TR><TR align=center><th bgcolor=lightgreen>11</th><td>1</td><td bgcolor=lightblue><font><A HREF="0400/d211.gif">.855+</A></td><td><A HREF="0400/d311.gif">.932+</A></td><td>1</td><td>1</td><td bgcolor=FFBB88><A HREF="0400/d611.gif">49/50</A></td><td><A HREF="0400/d711.gif">211/225</A></td><td><A HREF="0400/d811.gif">.970+</A></td><td>1</td><td><A HREF="0400/d1011.gif">139/144</A></td><td><A HREF="0400/d1111.gif">187/200</A></td><td> <td> <td> <td> <td> <td> <td> </TR><TR align=center><th bgcolor=lightgreen>12</th><td>1</td><td><A HREF="0400/d212.gif">7/8</A></td><td><A HREF="0400/d312.gif">24/25</A></td><td>1</td><td><A HREF="0400/d512.gif">19/20</A></td><td><A HREF="0400/d612.gif">1</A></td><td><A HREF="0400/d712.gif">17/18</A></td><td><A HREF="0400/d812.gif">120/121</A></td><td>1</td><td><A HREF="0400/d1012.gif">23/24</A></td><td><A HREF="0400/d1112.gif">.932+</A></td><td><A HREF="0400/d1212.gif">24/25</A></td><td> <td> <td> <td> <td> <td> </TR><TR align=center><th bgcolor=lightgreen>13</th><td>1</td><td><A HREF="0400/d213.gif">15/16</A></td><td>1</td><td>1</td><td><A HREF="0400/d513.gif">137/144</A></td><td><A HREF="0400/d613.gif">213/225</A></td><td bgcolor=FFBB88><A HREF="0400/d713.gif">115/121</A></td><td><A HREF="0400/d813.gif">141/144</A></td><td>1</td><td bgcolor=FFBB88><A HREF="0400/d1013.gif">71/72</A></td><td bgcolor=FFBB88><A HREF="0400/d1113.gif">63/64</A></td><td>1</td><td><A HREF="0400/d1313.gif">377/392</A></td><td> <td> <td> <td> <td> </TR><TR align=center><th bgcolor=lightgreen>14</th><td>1</td><td>1</td><td><A HREF="0400/d314.gif">31/32</A></td><td>1</td><td><A HREF="0400/d514.gif">61/64</A></td><td><A HREF="0400/d614.gif">31/32</A></td><td><A HREF="0400/d714.gif">63/64</A></td><td><A HREF="0400/d814.gif">1</A></td><td>1</td><td><A HREF="0400/d1014.gif">39/40</A></td><td>1</td><td bgcolor=FFBB88><A HREF="0400/d1214.gif">53/54</A></td><td bgcolor=FFBB88><A HREF="0400/d1314.gif">109/112</A></td><td><A HREF="0400/d1414.gif">35/36</A></td><td> <td> <td> <td> </TR><TR align=center><th bgcolor=lightgreen>15</th><td>1</td><td><A HREF="0400/d215.gif">31/32</A></td><td><A HREF="0400/d315.gif">63/64</A></td><td>1</td><td><A HREF="0400/d515.gif">.980+</A></td><td><A HREF="0400/d615.gif">47/48</A></td><td><A HREF="0400/d715.gif">71/72</A></td><td><A HREF="0400/d815.gif">143/144</A></td><td>1</td><td>1</td><td><A HREF="0400/d1115.gif">.983+</A></td><td bgcolor=FFBB88><A HREF="0400/d1215.gif">145/147</A></td><td><A HREF="0400/d1315.gif">253/256</A></td><td><A HREF="0400/d1415.gif">127/128</A></td><td><A HREF="0400/d1515.gif">255/256</A></td><td> 
+<td> 
+<td> </TR><TR align=center><th bgcolor=lightgreen>16</th><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td> 
+<td> </TR><TR align=center><th bgcolor=lightgreen>17</th><td>1</td><td><A HREF="0400/d217.gif">1</A></td><td><A HREF="0400/d317.gif">19/20</A></td><td>1</td><td bgcolor=FFBB88><A HREF="0400/d517.gif">113/121</A></td><td bgcolor=FFBB88><A HREF="0400/d617.gif">249/256</A></td><td><A HREF="0400/d717.gif">80/81</A></td><td>1</td><td>1</td><td bgcolor=FFBB88><A HREF="0400/d1017.gif">.962+</A></td><td><A HREF="0400/d1117.gif">61/64</A></td><td><A HREF="0400/d1217.gif">311/324</A></td><td bgcolor=FFBB88><A HREF="0400/d1317.gif">.957+</A></td><td><A HREF="0400/d1417.gif">143/144</A></td><td><A HREF="0400/d1517.gif">.985+</A></td><td>1</td><td><A HREF="0400/d1717.gif">221/225</A></td><td> </TR>
+
+<TR align=center><th bgcolor=lightgreen>18</th><td>1</td><td><A HREF="0400/d218.gif">1</A></td><td bgcolor=FFBB88><A HREF="0400/d318.gif">.943+</A></td><td>1</td><td bgcolor=FFBB88><A HREF="0400/d518.gif">117/121</A></td><td bgcolor=FFBB88><A HREF="0400/d618.gif">24/25</A></td><td>1<td><A HREF="0400/d818.gif">1</A></td><td>1</td><td bgcolor=FFBB88><A HREF="0400/d1018.gif">162/169</A></td><td bgcolor=FFBB88><A HREF="0400/d1118.gif">31/32</A></td><td bgcolor=FFBB88><A HREF="0400/d1218.gif">35/36</A></td><td bgcolor=FFBB88><A HREF="0400/d1318.gif">27/28</A></td><td><A HREF="0400/d1418.gif">1</A></td><td bgcolor=FFBB88><A HREF="0400/d1518.gif">.985+</A></td><td>1</td><td><A HREF="0400/d1718.gif">1</A></td><td>1</td></TR></TABLE></CENTER><center><font color=lightblue>David Cantrell</font><br>
+<font color=orange>Maurizio Morandi</font></center><p>
+
+
+<hr>
+If you can extend any of these results, please <a href="mailto:erich.friedman@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 5/24/15.<font></BODY></HTML>

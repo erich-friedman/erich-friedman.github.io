@@ -1,0 +1,156 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1><CENTER><H1>Problem of the Month (November 2003)</H1></CENTER>This month we are interested in three problems involving packing or tiling squares.<p>
+
+<font size=+2>1. </font> A <b>Hanoi Square Tiling</b> is a tiling of a large square by smaller integer sided squares so that each  square either lies on the bottom layer or lies on top of one or more larger squares.  Some examples of Hanoi Square Tilings are shown below:<center><table cellpadding=20><tr><td><img src="1103/d6.gif"><td><img src="1103/d10.gif"></tr></table></center><p>
+
+What is the smallest odd square that has a Hanoi Square Tiling?  What is the smallest square that has such a tiling with 3 squares on the bottom layer?  Can you show that arbitrarily large squares all have Hanoi Square Tilings?  Which is the largest square that does not have such a tiling?<p>
+
+What about the same problem for cubes?  Can you find a Hanoi Cube Tiling for a cube of side 44?  How about a cube of side 2003?  Which cubes have these tilings?  Do arbitrarily large cubes have Hanoi Cube Tilings?<p>
+
+<font size=+2>2. </font> A <b>bumpy square</b> is the union of a square of side 2 or more and a unit square along one edge of the unit square.  A <b>Bumpy Square Tiling</b> is a tiling of a rectangle with different sized bumpy squares.  Some examples of Bumpy Square Tilings are shown below:
+
+<center><table cellpadding=20><tr><td><img src="1103/7x11.gif"><td><img src="1103/10x16.gif"></tr></table></center><p>
+
+What Bumpy Square Tilings exist?  Are there infinitely many of them?  Can bumpy squares tile a square, or a bumpy square?  Are there any Bumpy Square Tilings possible in 3 dimensions?<p>
+
+<font size=+2>3. </font> A <b>Neighborly Square Packing</b> is a packing of a square by smaller integer squares so that only squares whose sides differ by 1 touch along sides, and no squares touch only at corners.  These are plenty of such packings, but the challenge is to find the packing using the largest area for a given square.  For example, here is a packing of a square of side 10 with area 82:<p>
+
+<center><img src="1103/n10.gif"></center><p>
+
+What do the small optimal Neighborly Square Packings look like?  If <b>W(n)</b> is the smallest wasted area for a square of side n, does W(n) approach &infin;?  Does W(n)/n approach 0?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+
+<font size=+2>1. Hanoi Square Tilings</font><p>
+
+Bill Clagett wrote a computer program which showed that the smallest odd number with a Hanoi Square Tiling is 21.  He also showed the smallest number with a tiling having 3 squares on the bottom row is 24.  Robert Wainwright and Jon Wharf found these as well.<p>
+
+Philippe Fondanaiche sent several Hanoi Square Tilings, but missed a few.  He, Jeremy Galvagni, and Sasha Ravsky noted that if n is a sum of some its proper divisors, then n has such a tiling.  Sasha Ravsky noted that if a and b are numbers such each of them is a sum of different proper divisors of the other, then the square of side a+b has such a tiling.<p>
+
+Dean Hickerson succeeded in proving that all sufficiently large squares have Hanoi Square Tilings.  His current lower bound is that this is true for all n&ge;221.  I proved that all even n>8 have such tilings by doing n&lt;36 by hand and finding a general pattern for n&ge;36.  In both proofs, the key Lemma is that all rectangles (except 2 by odd) that are at least 5 wider than they are tall can be so tiled.  Jon Wharf also sent me a proof that large squares could be so tiled, but his bound was enormous.<p>
+
+So it appears the only squares which do NOT have these tilings are: 1, 2, 3, 4, 5, 7, 8, 9, 11, 13, 15, 17, 19, 23, and 33.<p>
+
+<p><CENTER><font size=+2>Small Hanoi Square Tilings</font></CENTER>
+<CENTER><TABLE callpadding=10><TR><td><img src="1103/d6.gif"><td><img src="1103/d10.gif"><td><img src="1103/d14.gif"><td><img src="1103/d21.gif">
+<td><img src="1103/d22.gif"><td><img src="1103/d25.gif">
+</TR></TABLE></CENTER>
+
+<CENTER><TABLE callpadding=10><TR><td><img src="1103/d26.gif"><td><img src="1103/d27.gif"><td><img src="1103/d29.gif"><td><img src="1103/d31.gif">
+</TR></TABLE></CENTER><p>
+
+Philippe Fondanaiche and Jon Wharf found a Hanoi Cube Tiling for the n=44 cube.  Sasha Ravsky noted that if a number has a Hanoi Cube Tiling, then it has a Hanoi Square Tiling as well. <p>
+
+The cubes that I found that have Hanoi Cube Tilings are multiples of 6, 20, 28, 44, 52, 68, 76, 92, 116, 124, 148,....  Here is the beginning of the Hanoi Cube Tilings of the cubes of side 44 and 52.  On the left, the red cubes have side 22, orange 11, green 10, yellow 8, and blue 6.  On the right, the red cubes have side 26, orange 13, blue 12, green 10, and yellow 8.<p>
+
+<center><table cellpadding=10><tr><td><img src="1103/cube44.gif"><td><img src="1103/cube52.gif"></tr></table></center><p>
+
+<hr>
+
+<font size=+2>2. Bumpy Square Tilings</font><p>
+
+Patrick Hamlyn wrote a program to find Bumpy Square Tilings, and found several of the tilings below.  I found the 38&times;43 and the 41&times;46 tilings, as did Joseph DeVincentis.  The 25&times;45 tiling was found by Berend Jan van der Zwaag.  Patrick Hamlyn</a> also searched for Bumpy Square Tilings of Bumpy Squares, up to 26&times;26, without finding any.<p>
+
+<p><CENTER><font size=+2>Small Bumpy Square Tilings</font></CENTER>
+<CENTER><TABLE callpadding=10><TR>
+<td><img src="1103/3x5.gif">
+<td><img src="1103/7x11.gif">
+<td><img src="1103/10x16.gif">
+<td><img src="1103/13x15.gif">
+<td><img src="1103/14x15.gif">
+<td><img src="1103/14x23.gif">
+<td><img src="1103/15x24.gif">
+<td><img src="1103/17x18.gif">
+<td><img src="1103/17x29.gif">
+<td><img src="1103/19x31.gif">
+</TR></TABLE></CENTER>
+
+<CENTER><TABLE callpadding=10><TR>
+<td><img src="1103/20x45.gif">
+<td><img src="1103/21x52.gif">
+<td><img src="1103/22x25.gif">
+<td><img src="1103/23x26.gif">
+<td><img src="1103/23x44.gif">
+</TR></TABLE></CENTER>
+
+<CENTER><TABLE callpadding=10><TR>
+<td><img src="1103/25x34.gif">
+<td><img src="1103/25x45.gif">
+<td><img src="1103/25x56.gif">
+<td><img src="1103/28x40.gif">
+</TR></TABLE></CENTER>
+
+<CENTER><TABLE callpadding=10><TR>
+<td><img src="1103/30x35.gif">
+<td><img src="1103/30x41.gif">
+<td><img src="1103/38x43.gif">
+<td><img src="1103/41x46.gif">
+</TR></TABLE></CENTER>
+
+Patrick Hamlyn also found many Bumpy Square Tilings on projective planes:<p>
+
+<center><img src="1103/projective.gif"></center><p>
+
+
+<hr>
+
+<font size=+2>3. Neighborly Square Packings</font><p>
+
+Berend Jan van der Zwaag assumed that squares could be located anywhere.  His best solutions are:<p>
+
+<center></center>
+
+<p><CENTER><font size=+2>Small Neighborly Square Packings</font></CENTER>
+<CENTER><TABLE callpadding=10><TR><td><img src="1103/side2.gif"><td><img src="1103/side3.gif"><td><img src="1103/side4.gif"><td><img src="1103/side5.gif"><td><img src="1103/side6.gif"><td><img src="1103/side7.gif"><td><img src="1103/side8.gif"><td><img src="1103/side9.gif"><td><img src="1103/side10.gif">
+</TR></TABLE></CENTER><p>
+
+<CENTER><TABLE callpadding=10><TR><td><img src="1103/side11.gif"><td><img src="1103/side12.gif"><td><img src="1103/side13.gif"><td><img src="1103/side14.gif">
+
+</TR></TABLE></CENTER>
+
+For odd n, Berend Jan van der Zwaag can prove W(n)/n&lt;1.<p>
+
+Joseph DeVincentis thought that the corners of the squares must be located on the integer lattice. His best solutions are shown below.  I found the packing of the 11&times;11 square.<p>
+
+<p><CENTER><font size=+2>Small Lattice Neighborly Square Packings</font></CENTER>
+<CENTER><TABLE callpadding=10><TR><td><img src="1103/j2.gif"><td><img src="1103/j3.gif"><td><img src="1103/j4.gif"><td><img src="1103/j5.gif"><td><img src="1103/j6.gif"><td><img src="1103/j7.gif"><td><img src="1103/j8.gif"><td><img src="1103/j9.gif"><td><img src="1103/j10.gif">
+</TR></TABLE></CENTER>
+
+<CENTER><TABLE callpadding=10><TR><td><img src="1103/j11.gif"><td><img src="1103/j12.gif"><td><img src="1103/j13.gif"><td><img src="1103/j15.gif"><td><img src="1103/j16.gif"></TR></TABLE></CENTER>
+
+<CENTER><TABLE callpadding=10><TR><td><img src="1103/j19.gif"><td><img src="1103/j20.gif"><td><img src="1103/j23.gif">
+</TR></TABLE></CENTER>
+
+Joseph DeVincentis can prove W(n)/n&lt;2 for these tilings.<p>
+
+<hr>
+
+This got me thinking about <b>Neighborly Square Tilings</b>, tilings of a square by smaller squares so that no squares whose sides differ by more than 1 meet edge to edge, and the squares are coprime.  Here are the tilings Jeremy Galvagni and I have found with the smallest number of squares.<p>
+
+<p><CENTER><font size=+2>Small Neighborly Square Tilings</font></CENTER>
+<CENTER><TABLE callpadding=10><TR><td><img src="1103/t2.gif"><td><img src="1103/t3.gif"><td><img src="1103/t4.gif"><td><img src="1103/t5.gif"><td><img src="1103/t6.gif"><td><img src="1103/t7.gif"><td><img src="1103/t8.gif"><td><img src="1103/t9.gif"><td><img src="1103/t10.gif"><td><img src="1103/t11.gif"><td><img src="1103/t12.gif"><td><img src="1103/t13.gif">
+</TR></TABLE></CENTER>
+
+<CENTER><TABLE callpadding=10><TR><td><img src="1103/t14.gif"><td><img src="1103/t15.gif"><td><img src="1103/t16.gif"><td><img src="1103/t17.gif"><td><img src="1103/t18.gif"><td><img src="1103/t19.gif">
+</TR></TABLE></CENTER>
+
+<CENTER><TABLE callpadding=10><TR><td><img src="1103/t20.gif"><td><img src="1103/t21.gif"><td><img src="1103/t22.gif"><td><img src="1103/t23.gif"><td><img src="1103/t24.gif">
+</TR></TABLE></CENTER>
+
+<CENTER><TABLE callpadding=10><TR><td><img src="1103/t25.gif"><td><img src="1103/t26.gif"><td><img src="1103/t27.gif"><td><img src="1103/t28.gif">
+</TR></TABLE></CENTER>
+
+<CENTER><TABLE callpadding=10>
+<td><img src="1103/t29.gif"><td><img src="1103/t30.gif"><td><img src="1103/t31.gif"><td><img src="1103/t32.gif">
+</TR></TABLE></CENTER>
+
+<CENTER><TABLE callpadding=10>
+<td><img src="1103/t33.gif"><td><img src="1103/t34.gif"><td><img src="1103/t35.gif">
+</TR></TABLE></CENTER>
+
+<CENTER><TABLE callpadding=10>
+<td><img src="1103/t36.gif"><td><img src="1103/t37.gif"><td><img src="1103/t38.gif">
+</TR></TABLE></CENTER><p>
+
+Robert Wainwright notes that there exists a Neighborly Square Tiling of 4 squares of side 1, 8 squares of side 2, ... 4n squares of side n inside a square of side n(n+1).
+<p><HR>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 6/19/05.<font></BODY></HTML>

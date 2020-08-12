@@ -1,0 +1,287 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+
+<CENTER><H1>Problem of the Month (October 2005)</H1></CENTER>
+
+This month we consider 4 problems concerning circles.<p>
+
+
+<font size=+2>Problem #1. Packing Circles with Two Different Sized Circles</font><p>
+
+Given positive integers 1&lt;m&le;n, we wish to pack m circles of one size and n circles of another size into a unit circle so that the total area of the circles is maximized.  What are the maximal area packings for various m and n?  The corresponding problem for squares was the problem of the month in <a href="http://www.stetson.edu/~efriedma/mathmagic/0400.html">April 2000</a>.  What are the best solutions for packing circles in a square or squares in a circle?<p>
+
+
+<font size=+2>Problem #2. Covering a Square with Circles of Any Size</font><p>
+
+The problem of covering a unit square with n circles of equal size has been well studied.  You can the best known solutions <a href="http://www.stetson.edu/~efriedma/circovsqu/">here</a>.  A variant of this problem is to cover a unit square with n circles of any size and minimal combined area.  What are the minimal covers for various n?  What are the minimal circle covers of an equilateral triangle of length 1?<p>
+
+
+<font size=+2>Problem #3. Packing Discrete Circles on a Square Torus</font><p>
+
+Say we have circles of diameter d, all centered at half lattice points, packed inside a square torus with side n.  If d and n are fixed, how many non-overlapping circles C(n,d) will fit?  For each n, C(n,d) is a non-increasing piecewise constant function of d, which can be illustrated by exhibiting the packings at the discontinuities.  For example, for n=5, the discontinuities occur for d=1, &radic;2, &radic;5, 2&radic;2, and 5.  For each n, can you find the discontinuities of C(n,d), and the value of C(n,d) at those points?  It is clear that C(n,1)=n<sup>2</sup> and C(n,n)=1 are always discontinuities.  What other general formulas are true?<p>
+
+
+<font size=+2>Problem #4. Packing Circles of Radii 1, 2, 3, ... , n in a Circle.</font><p>
+
+What is the smallest Circle that contains non-overlapping circles of radii 1, 2, 3, ... , n?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+<font size=+2>Problem #1:</font><p>Here are the best known two circle packings:<p>
+
+<center><font size=+2>Best Known Packings of m equal Circles and n equal Circles in a Circle</font></center>
+<center><table cellpadding=10><tr align=center>
+<td>m=2, n=2<br><img src="1005/a22.gif"><br>area 13&pi;/18 = 2.268+
+<td>m=2, n=3<br><img src="1005/a23.gif"><br>area 2.345+<br>(David W. Cantrell)
+<td>m=2, n=4<br><img src="1005/a24.gif"><br>area 3&pi;/4 = 2.356+
+</tr></table></center>
+
+<center><table cellpadding=10><tr align=center>
+<td>m=2, n=5<br><img src="1005/a25.gif"><br>area 7&pi;/9 = 2.443+<br>(David W. Cantrell)
+<td>m=2, n=6<br><img src="1005/a26.gif"><br>area 2.438+<br>(David W. Cantrell)
+<td>m=3, n=3<br><img src="1005/a33.gif"><br>area 2.502+
+</tr></table></center>
+
+<center><table cellpadding=10><tr align=center>
+<td>m=3, n=4<br><img src="1005/a34.gif"><br>area 2.445+<br>(David W. Cantrell)
+<td>m=3, n=5<br><img src="1005/a35.gif"><br>area 2.459+
+<td>m=3, n=6<br><img src="1005/a36.gif"><br>area 2.537+<br>(Philippe Fondanaiche)
+</tr></table></center><p>
+
+<center><table cellpadding=10><tr align=center>
+<td>m=3, n=8, 9<br><img src="1005/a39.gif"><br>area 2.537+, 2.601+<br>(Philippe Fondanaiche)
+<td>m=4, n=4, 5<br><img src="1005/a45.gif"><br>area = 2.525+, 2.618+
+<td>m=4, n=6<br><img src="1005/a46.gif"><br>area = 2.523+<br>(David W. Cantrell)
+</tr></table></center><p>
+
+<center><table cellpadding=10><tr align=center>
+<td>m=4, n=8, 9<br><img src="1005/a49.gif"><br>area = 2.541+, 2.590+<br>(Philippe Fondanaiche)
+<td>m=5, n=5, 6, 7<br><img src="1005/a56.gif"><br>area 2.459+, 2.520+, 2.662+<br>(David W. Cantrell)
+</tr></table></center><p>
+
+<center><table cellpadding=10><tr align=center>
+<td>m=6, n=6<br><img src="1005/a66.gif"><br>area = 2.531+<br>(David W. Cantrell)
+<td>m=2, 3, 4, 5, 6, n=7<br><img src="1005/a67.gif"><br>area 2.531+, 2.575+, 2.662+, 2.618+, 2.706+<br>(David W. Cantrell, Maurizio Morandi)
+</tr></table></center><p>
+
+
+
+<P><hr><p><font size=+2>Problem #2:</font><p>Here are the best known coverings of a square by circles:<p>
+
+<center><font size=+2>Best Known Coverings of a Square by n Circles</font></center>
+<center><table cellpadding=10><tr align=center>
+<td>n=1<br><img src="1005/b1.gif"><br>area &pi;/2 = 1.570+
+<td>n=3<br><img src="1005/b3.gif"><br>area 1.442+
+<td>n=4<br><img src="1005/b4.gif"><br>area 1.397+
+</tr></table></center>
+
+<center><table cellpadding=10><tr align=center>
+<td>n=5<br><img src="1005/b5.gif"><br>area 5&pi;/12 = 1.309+
+<td>n=6<br><img src="1005/b6.gif"><br>area 1.2965+<br>(David W. Cantrell)
+<td>n=7<br><img src="1005/b7.gif"><br>area 1.2813+<br>(Philippe Fondanaiche)
+</tr></table></center><p>
+
+<center><table cellpadding=10><tr align=center>
+<td>n=8<br><img src="1005/b8.gif"><br>area 1.2687+<br>(David W. Cantrell)
+<td>n=9<br><img src="1005/b9.gif"><br>area 1.2558+<br>(David W. Cantrell)
+<td>n=13<br><img src="1005/b13.gif"><br>area 1.185+
+</tr></table></center><p>
+
+And here are the best known coverings of a equilateral triangle by circles:<p>
+
+<center><font size=+2>Best Known Coverings of a Equilateral Triangle by n Circles</font></center>
+<center><table cellpadding=10><tr align=center>
+<td>n=1<br><img src="1005/t1.gif"><br>area &pi;/3 = 1.047+ 
+<td>n=2<br><img src="1005/t2.gif"><br>area 7&pi;/24 = .916+<br>(Hans Melissen)
+<td>n=3<br><img src="1005/t3.gif"><br>area &pi;/4 = .785+<br>(Hans Melissen)
+</tr></table></center>
+
+<center><table cellpadding=10><tr align=center>
+<td>n=4<br><img src="1005/t4.gif"><br>area 5&pi;/24 = .654+<br>(Hans Melissen)
+<td>n=5<br><img src="1005/t5.gif"><br>area .644+<br>(David W. Cantrell)
+</tr></table></center><p>
+
+<center><table cellpadding=10><tr align=center>
+<td>n=6<br><img src="1005/t6.gif"><br>area .630+<br>(David W. Cantrell)
+<td>n=7<br><img src="1005/t7.gif"><br>area .624+<br>(David W. Cantrell)
+</tr></table></center><p>
+
+
+<P><hr><p><font size=+2>Problem #3:</font><p> Here are the small discontinuities of discrete packings of circles on a torus:<p>
+
+<center><table cellpadding=10 border=1><tr align=center>
+<td>n=1, d=1<br><img src="1005/1,1.gif"><br>1 circle
+<td><table cellpadding=10><tr align=center>
+<td>n=2, d=1<br><img src="1005/2,4.gif"><br>4 circles
+<td>n=2, d=&radic;2<br><img src="1005/2,2.gif"><br>2 circles
+<td>n=2, d=2<br><img src="1005/2,1.gif"><br>1 circle
+</tr></table></td>
+<td><table cellpadding=10><tr align=center>
+<td>n=3, d=1<br><img src="1005/3,9.gif"><br>9 circles
+<td>n=3, d=&radic;2<br><img src="1005/3,3.gif"><br>3 circles
+<td>n=3, d=2<br><img src="1005/3,1.gif"><br>1 circle
+</tr></table></td>
+</tr></table></center><br>
+
+<center><table cellpadding=10 border=1><tr align=center>
+<td><table cellpadding=10><tr align=center>
+<td>n=4, d=1<br><img src="1005/4,16.gif"><br>16 circles
+<td>n=4, d=&radic;2<br><img src="1005/4,8.gif"><br>8 circles
+<td>n=4, d=2<br><img src="1005/4,4.gif"><br>4 circles
+<td>n=4, d=2&radic;2<br><img src="1005/4,2.gif"><br>2 circles
+<td>n=4, d=4<br><img src="1005/4,1.gif"><br>1 circle
+</tr></table></td>
+</tr></table></center><br>
+
+<center><table cellpadding=10 border=1><tr align=center>
+<td><table cellpadding=10><tr align=center>
+<td>n=5, d=1<br><img src="1005/5,25.gif"><br>25 circles
+<td>n=5, d=&radic;2<br><img src="1005/5,10.gif"><br>10 circles
+<td>n=5, d=&radic;5<br><img src="1005/5,5.gif"><br>5 circles
+<td>n=5, d=2&radic;2<br><img src="1005/5,2.gif"><br>2 circles
+<td>n=5, d=5<br><img src="1005/5,1.gif"><br>1 circle
+</tr></table></td>
+</tr></table></center><br>
+
+<center><table cellpadding=10 border=1><tr align=center>
+<td><table cellpadding=10><tr align=center>
+<td>n=6, d=1<br><img src="1005/6,36.gif"><br>36 circles
+<td>n=6, d=&radic;2<br><img src="1005/6,18.gif"><br>18 circles
+<td>n=6, d=2<br><img src="1005/6,9.gif"><br>9 circles
+<td>n=6, d=&radic;5<br><img src="1005/6,6.gif"><br>6 circles
+</tr><tr align=center>
+<td>n=6, d=3<br><img src="1005/6,4.gif"><br>4 circles
+<td>n=6, d=3&radic;2<br><img src="1005/6,2.gif"><br>2 circles
+<td>n=6, d=6<br><img src="1005/6,1.gif"><br>1 circle
+</tr></table></td>
+</tr></table></center><br>
+
+<center><table cellpadding=10 border=1><tr align=center>
+<td><table cellpadding=10><tr align=center>
+<td>n=7, d=1<br><img src="1005/7,49.gif"><br>49 circles
+<td>n=7, d=&radic;2<br><img src="1005/7,21.gif"><br>21 circles
+<td>n=7, d=2<br><img src="1005/7,10.gif"><br>10 circles
+<td>n=7, d=&radic;5<br><img src="1005/7,8.gif"><br>8 circles
+</tr><tr align=center>
+<td>n=7, d=2&radic;2<br><img src="1005/7,5.gif"><br>5 circles
+<td>n=7, d=&radic;10<br><img src="1005/7,4.gif"><br>4 circles
+<td>n=7, d=3&radic;2<br><img src="1005/7,2.gif"><br>2 circles
+<td>n=7, d=7<br><img src="1005/7,1.gif"><br>1 circle
+</tr></table></td>
+</tr></table></center><br>
+
+<center><table cellpadding=10 border=1><tr align=center>
+<td><table cellpadding=10><tr align=center>
+<td>n=8, d=1<br><img src="1005/8,64.gif"><br>64 circles
+<td>n=8, d=&radic;2<br><img src="1005/8,32.gif"><br>32 circles
+<td>n=8, d=2<br><img src="1005/8,16.gif"><br>16 circles
+</tr><tr align=center>
+<td>n=8, d=&radic;5<br><img src="1005/8,10.gif"><br>10 circles
+<td>n=8, d=2&radic;2<br><img src="1005/8,8.gif"><br>8 circles
+<td>n=8, d=4<br><img src="1005/8,4.gif"><br>4 circles
+</tr><tr align=center>
+<td>n=8, d=2&radic;5<br><img src="1005/8,3.gif"><br>3 circles
+<td>n=8, d=4&radic;2<br><img src="1005/8,2.gif"><br>2 circles
+<td>n=8, d=8<br><img src="1005/8,1.gif"><br>1 circle
+</tr></table></td>
+</tr></table></center><br>
+
+<center><table cellpadding=10 border=1><tr align=center>
+<td><table cellpadding=10><tr align=center>
+<td>n=9, d=1<br><img src="1005/9,81.gif"><br>81 circles
+<td>n=9, d=&radic;2<br><img src="1005/9,36.gif"><br>36 circles
+<td>n=9, d=2<br><img src="1005/9,16.gif"><br>16 circles
+</tr><tr align=center>
+<td>n=9, d=&radic;5<br><img src="1005/9,13.gif"><br>13 circles
+<td>n=9, d=3<br><img src="1005/9,9.gif"><br>9 circles
+<td>n=9, d=&radic;10<br><img src="1005/9,6.gif"><br>6 circles
+</tr><tr align=center>
+<td>n=9, d=&radic;13<br><img src="1005/9,5.gif"><br>5 circles
+<td>n=9, d=&radic;17<br><img src="1005/9,4.gif"><br>4 circles
+<td>n=9, d=3&radic;2<br><img src="1005/9,3.gif"><br>3 circles
+</tr><tr align=center>
+<td>n=9, d=4&radic;2<br><img src="1005/9,2.gif"><br>2 circles
+<td>n=9, d=9<br><img src="1005/9,1.gif"><br>1 circle
+</tr></table></td>
+</tr></table></center><br>
+
+<center><table cellpadding=10 border=1><tr align=center>
+<td><table cellpadding=10><tr align=center>
+<td>n=10, d=1<br><img src="1005/10,100.gif"><br>100 circles
+<td>n=10, d=&radic;2<br><img src="1005/10,50.gif"><br>50 circles
+<td>n=10, d=2<br><img src="1005/10,25.gif"><br>25 circles
+</tr><tr align=center>
+<td>n=10, d=&radic;5<br><img src="1005/10,20.gif"><br>20 circles
+<td>n=10, d=2&radic;2<br><img src="1005/10,12.gif"><br>12 circles
+<td>n=10, d=&radic;10<br><img src="1005/10,10.gif"><br>10 circles
+</tr><tr align=center>
+<td>n=10, d=&radic;13<br><img src="1005/10,7.gif"><br>7 circles
+<td>n=10, d=2&radic;5<br><img src="1005/10,5.gif"><br>5 circles
+<td>n=10, d=5<br><img src="1005/10,4.gif"><br>4 circles
+</tr><tr align=center>
+<td>n=10, d=&radic;26<br><img src="1005/10,3.gif"><br>3 circles
+<td>n=10, d=5&radic;2<br><img src="1005/10,2.gif"><br>2 circles
+<td>n=10, d=10<br><img src="1005/10,1.gif"><br>1 circle
+</tr></table></td>
+</tr></table></center><br>
+
+<center><table cellpadding=10 border=1><tr align=center>
+<td><table cellpadding=10><tr align=center>
+<td>n=11, d=1<br><img src="1005/11,121.gif"><br>121 circles
+<td>n=11, d=&radic;2<br><img src="1005/11,60.gif"><br>60 circles
+<td>n=11, d=2<br><img src="1005/11,25.gif"><br>25 circles
+</tr><tr align=center>
+<td>n=11, d=&radic;5<br><img src="1005/11,21.gif"><br>21 circles
+<td>n=11, d=2&radic;2<br><img src="1005/11,13.gif"><br>13 circles
+<td>n=11, d=&radic;10<br><img src="1005/11,10.gif"><br>10 circles
+</tr><tr align=center>
+<td>n=11, d=&radic;13<br><img src="1005/11,8.gif"><br>8 circles
+<td>n=11, d=&radic;17<br><img src="1005/11,6.gif"><br>6 circles
+<td>n=11, d=2&radic;5<br><img src="1005/11,5.gif"><br>5 circles
+</tr><tr align=center>
+<td>n=11, d=&radic;26<br><img src="1005/11,4.gif"><br>4 circles
+<td>n=11, d=5&radic;2<br><img src="1005/11,2.gif"><br>2 circles
+<td>n=11, d=11<br><img src="1005/11,1.gif"><br>1 circle
+</tr></table></td>
+</tr></table></center><br>
+
+
+
+It is clear that C(n,1)=n<sup>2</sup> and C(n,n)=1 are always discontinuities.<p>
+
+Joseph DeVincentis noted that the possible discontinuities are square roots of the sum of two squares of integers, and showed C(n,&radic;2)=n <img src="lfloor.gif" align=abscenter> n/2 <img src="rfloor.gif" align=abscenter> and C(n,<img src="lfloor.gif" align=abscenter> n/2 <img src="rfloor.gif" align=abscenter> &radic;2)=2 are always discontinuities for n&ge;4.  He also showed that C(2n,2)=n<sup>2</sup>, but wasn't sure this was a discontinuity.
+
+
+
+
+<P><hr><p><font size=+2>Problem #4:</font><p> The Al Zimmerman Programming Contest featured this <a href="http://www.recmath.org/contest/CirclePacking/index.php">problem</a>.  The best results for small n are shown below.  Fixed circles are shown in blue, and rattlers are shown in purple.<p>
+
+<TABLE BORDER=0 width=100% cellspacing=0><TR><TD><font size=+3>1. <img src="1005/c1.gif" align=abscenter><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD><font size=+3>2. <img src="1005/c2.gif" align=abscenter><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD><font size=+3>3. <img src="1005/c3.gif" align=abscenter></tr><tr><td align=center><font size=+1>r = 1<br>Trivial.<TD><td align=center><font size=+1>r = 3<br>Trivial.
+<TD><td align=center><font size=+1>r = 5<br>Trivial.
+</TR></TABLE><p>
+<TABLE BORDER=0 width=100% cellspacing=0><TR><TD><font size=+3>4. <img src="1005/c4.gif" align=abscenter><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD><font size=+3>5. <img src="1005/c5.gif" align=abscenter><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD><font size=+3>6. <img src="1005/c6.gif" align=abscenter></tr><tr><td align=center><font size=+1>r = 7<br>Trivial.<TD><td align=center><font size=+1>r = 9.001397+<br>Found by Klaus Nagel and Hugo Pfoertner<br>in October 2005.
+<TD><td align=center><font size=+1>r = 11.057040+<br>Found by Fred Mellender<br>in October 2005.
+</TR></TABLE><p>
+<TABLE BORDER=0 width=100% cellspacing=0><TR><TD><font size=+3>7. <img src="1005/c7.gif" align=abscenter><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD><font size=+3>8. <img src="1005/c8.gif" align=abscenter><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD><font size=+3>9. <img src="1005/c9.gif" align=abscenter></tr><tr><td align=center><font size=+1>r = 13.462110+<br>Found by Gerrit de Blaauw<br>in October 2005.<TD><td align=center><font size=+1>r = 16.221746+<br>Found by Gerrit de Blaauw<br>in October 2005.
+<TD><td align=center><font size=+1>r = 19.233193+<br>Found by Gerrit de Blaauw<br>in October 2005.
+</TR></TABLE><p>
+
+<TABLE BORDER=0 width=100% cellspacing=0><TR><TD><font size=+3>10. <img src="1005/c10.gif" align=abscenter><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD><font size=+3>11. <img src="1005/c11.gif" align=abscenter><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD><font size=+3>12. <img src="1005/c12.gif" align=abscenter></tr><tr><td align=center><font size=+1>r = 22.000193+<br>Found by Steve Trevorrow<br>in November 2005.<TD><td align=center><font size=+1>r = 24.960634+<br>Found by Gerrit de Blaauw<br>in October 2005.
+<TD><td align=center><font size=+1>r = 28.371389+<br>Found by Steve Trevorrow<br>in November 2005.
+</TR></TABLE><p>
+
+<TABLE BORDER=0 width=100% cellspacing=0><TR><TD><font size=+3>13. <img src="1005/c13.gif" align=abscenter><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD><font size=+3>14. <img src="1005/c14.gif" align=abscenter><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD><font size=+3>15. <img src="1005/c15.gif" align=abscenter></tr><tr><td align=center><font size=+1>r = 31.545867+<br>Found by Steve Trevorrow<br>in November 2005.<TD><td align=center><font size=+1>r = 35.095647+<br>Found by Tomas Rokicki<br>in November 2005.
+<TD><td align=center><font size=+1>r = 38.837995+<br>Found by Tomas Rokicki<br>in November 2005.
+</TR></TABLE><p>
+<TABLE BORDER=0 width=100% cellspacing=0><TR><TD><font size=+3>16. <img src="1005/c16.gif" align=abscenter><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD><font size=+3>17. <img src="1005/c17.gif" align=abscenter><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD><font size=+3>18. <img src="1005/c18.gif" align=abscenter></tr><tr><td align=center><font size=+1>r = 42.458116+<br>Found by Tomas Rokicki<br>in November 2005.<TD><td align=center><font size=+1>r = 46.291242+<br>Found by Tomas Rokicki<br>in November 2005.
+<TD><td align=center><font size=+1>r = 50.119762+<br>Found by Boris von Loesch<br>in November 2005.
+</TR></TABLE><p>
+<TABLE BORDER=0 width=100% cellspacing=0><TR><TD><font size=+3>19. <img src="1005/c19.gif" align=abscenter><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD><font size=+3>20. <img src="1005/c20.gif" align=abscenter><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD><font size=+3>21. <img src="1005/c21.gif" align=abscenter></tr><tr><td align=center><font size=+1>r = 54.240293+<br>Found by Tomas Rokicki<br>in November 2005.<TD><td align=center><font size=+1>r = 58.400567+<br>Found by Addis Locatelli and Schoen<br>in November 2005.
+<TD><td align=center><font size=+1>r = 62.558877+<br>Found by Boris von Loesch<br>in November 2005.
+</TR></TABLE><p>
+
+<TABLE BORDER=0 width=100% cellspacing=0><TR align=center><TD><font size=+3>22. <img src="1005/c22.gif" align=abscenter><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<TD><font size=+3>23. <img src="1005/c23.gif" align=abscenter></tr><tr align=center><td align=center><font size=+1>r = 66.760286+<br>Found by Tomas Rokicki<br>in November 2005.<TD><td align=center><font size=+1>r = 71.199461+<br>Found by Boris von Loesch<br>in December 2005.
+</TR></TABLE>
+
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 7/14/07.<font></BODY></HTML>

@@ -1,0 +1,33 @@
+<HTML>
+<CENTER>n=3 players, N=10 games:</CENTER>
+<pre>
+A plays B twice.
+IF ONE PLAYER WINS BOTH (say A), A plays C twice
+   IF A WINS BOTH, C plays C, and winner plays A 5 times and needs to win 4
+   IF THEY SPLIT, A plays C twice more
+      IF A WINS BOTH, C plays C, and winner plays A 3 times and needs to win all 3
+      IF THEY SPLIT, A plays C 4 more times (A wins ties)
+      IF C WINS BOTH, A plays C again
+         IF A WINS, A plays C best-of-3
+         IF C WINS, C plays B 3 times, and B needs to win all 3
+   IF C WINS BOTH, A plays C again
+      IF A WINS, A plays C again
+         IF A WINS, A plays C 4 times (A wins ties)
+         IF C WINS, A plays B
+            IF A WINS, A plays C best-of-3
+            IF C WINS, C plays B 3 times, and B needs to win all 3
+      IF C WINS, A plays C
+         IF A WINS, A plays C 4 times, and A needs to win all 4
+         IF B WINS, C plays B 4 times (C wins ties)
+IF THEY SPLIT, A plays B twice again.  
+   IF ONE PLAYER WINS BOTH (say A), A plays C twice
+      IF A WINS BOTH, C plays C, and winner plays A 3 times and needs to win all 3
+      IF THEY SPLIT, A plays C 4 times (A wins ties)
+      IF C WINS BOTH, A plays C again
+         IF A WINS, A plays C best-of-3
+         IF C WINS, C plays B 3 times, and B needs to win all 3
+   IF THEY SPLIT, A plays B again (say A wins).  A plays C twice
+      IF A WINS BOTH, A plays B 3 times, and B needs to win all 3
+      IF THEY SPLIT, A plays C best-of-3
+      IF C WINS BOTH, A plays C, and winner plays C twice (C wins ties)
+</pre>

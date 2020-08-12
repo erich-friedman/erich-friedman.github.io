@@ -1,0 +1,11 @@
+Each turn, nobody takes any cards until the trading phase, when they buy all the cards on the board. This ensures that only worker cards get dealt to the board, so that stack will run out quickly. In a two-player game, the initial board has only 4 worker cards and gets 4 building cards for the second phase, so those cards have to be purchased as well.
+
+Each player starts with 25 rubles.
+
+Turn 1: The cards are four of the worker who costs 3 and four buildings which cost 1, 1, 2, and 5. In the trading phase each player buys two of the workers (the second at a 1-ruble discount for the duplicate), and one player buys the 1, 1, 2 buildings while the other buys the 5 building. This leaves one player with 16 rubles and the other with 15.
+
+Turn 2: In the worker phase, the players get credit for the workers they played last turn - each receives 6 rubles. In the trading phase each player buys a 3-cost worker (for 1) and three 4-cost workers (for 4, 3, and 2), leaving the players with 12 and 11 rubles, respectively.
+
+Turn 3: Each player receives 18 rubles. Each player buys three 5-cost workers (for 5, 4, 3) and one 6-cost worker for 6, breaking even on rubles for the turn.
+
+Turn 4: Each player receives 30 rubles. Each player buys two 6-cost workers (for 5, 4) and two 7-cost workers (for 7, 6). When the cards are replenished at the end of the trading phase of this turn, the workers are depleted, so the game ends at the end of turn 4.

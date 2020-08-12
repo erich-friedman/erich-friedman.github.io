@@ -1,0 +1,150 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1><CENTER><H1>Problem of the Month (July 2004)</H1></CENTER>One of the most famous problems in recreational mathematics is to find s(n), the side of the smallest square that can contain non-overlapping squares of sides 1 through n.  Clearly s(n) &ge; &radic;(n(n+1)(2n+1)/6) from area considerations, and in most cases s(n) is the next largest integer.  The values of s(n) are now known for n &le; 25.  The <b>packing sequence</b> 1, 3, 5, 7, 9, 11, 13, 15, 18, 21, 24, 27, 30, 33, 36, 39, 43, 47, 50, 54, 58, 62, 66, 71, 75, ... of s(n)'s is sequence <A HREF="http://oeis.org/search?q=A005842&language=english&go=Search">A005842</A> of the <A HREF="http://oeis.org/">Encyclopedia of Integer Sequences</A>.<p>
+
+The smallest values of n for which s(n) is not known are n = 26, 28, 32, 33, 34, 38, and 40.  It is barely possible that s(26)=79, s(28)=88, and s(40)=149.  These were thought to be impossible until the s(37)=133 packing was found.  Can you find one of these packings?  It is known that s(32)&le;108, s(33)&le;113, s(34)&le;118, and s(38)&le;139, and because the amount of wasted space is so small, these are believed to be optimal, but they might be 1 smaller.  Can you prove these?<p>
+
+This month's problem is to consider the same packing problem for other shapes: Given a shape P find its packing sequence, in which the n<sup>th</sup> term is the smallest magnification of P that contains copies of size 1 through n of P.  For example, the domino seems to have packing sequence 1, 3, 4, 6, 8, 10, 12, 15, 18, 20, 23, ....  Can you verify or extend this sequence?  What about the packing sequences of other small polyominoes?  What about equilateral triangles?  What about other triangles?<p>
+
+I'll give $10 to the first person who finds a shape with s(9) = 17.
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Matt Galati, an ex-student of mine, had some thoughts on how to find new packings: For each s, formulate the problem as a linear integer program, with decisions on where to place each square (sizes 1...n) on a board of size s.  For a straightforward model, this leads to problems with O(n<sup>4</sup>) variables and O(n<sup>3</sup>) constraints. Then, use branch and bound with a subproblem tree. At the root, we solve the relaxed problem, fix a decision, then form 2 subproblems, fix another decision, solve 2 more subproblems, and so on.  At some arbitrary point in the tree, if we can prove that each leaf contains a subproblem which is infeasible, we can show that the original problem is infeasible.  To prove that a subproblem is infeasible means to show that there is a direction of improvement that would cause the dual to be unbounded.<p>
+
+Bill Clagett gave the sequences for the 2&times;3, 2&times;5, and 3&times;5 rectangles, as well as correcting a few of my sequences.<p>
+
+Maurizio Morandi extended several sequences.<p>
+
+Berend van der Zwaag sent solutions for the 3&times;4 rectangle.  And he collected the $10 prize in 2011 for the packing below:<p>
+
+<center><img src="0704/s9.gif"></center><p>
+
+Here are the best known values of the packing sequences of various shapes, in lexigraphical order:<p>
+
+<center><table border=1 bgcolor=lightyellow cellpadding=2>
+<tr><th bgcolor=CCFFCC>Shape<th bgcolor=CCFFCC>1<th bgcolor=CCFFCC>2<th bgcolor=CCFFCC>3<th bgcolor=CCFFCC>4<th bgcolor=CCFFCC>5<th bgcolor=CCFFCC>6<th bgcolor=CCFFCC>7<th bgcolor=CCFFCC>8<th bgcolor=CCFFCC>9<th bgcolor=CCFFCC>10<th bgcolor=CCFFCC>11<th bgcolor=CCFFCC>12<th bgcolor=CCFFCC>13<th bgcolor=CCFFCC>14<th bgcolor=CCFFCC>15<th bgcolor=CCFFCC>16<th bgcolor=CCFFCC>17<th bgcolor=CCFFCC>18<th bgcolor=CCFFCC>19<th bgcolor=CCFFCC>20<th bgcolor=CCFFCC>21<th bgcolor=CCFFCC>22<th bgcolor=CCFFCC>23<th bgcolor=CCFFCC>24<th bgcolor=CCFFCC>25
+
+<tr><td align=center><img src="0704/p2.gif"><td><font color=blue>1<td><font color=blue>3<td><font color=blue>4<td><font color=blue>6<td><font color=blue>8<td><font color=blue>10<td><font color=blue>12<td><font color=blue>15<td>18<td><font color=blue>20<td><font color=blue>23<td><font color=blue>26<td><font color=blue>29<td><font color=blue>32<td><font color=blue>36<td><font color=blue>39<td><font color=blue>43<td bgcolor=FFDDFF>47<td bgcolor=FFDDFF><font color=blue>50<td bgcolor=FFDDFF><font color=blue>54<td bgcolor=FFDDFF><font color=blue>58<td bgcolor=FFDDFF><font color=blue>62<td bgcolor=FFDDFF><font color=blue>66<td bgcolor=FFDDFF>71<td bgcolor=FFDDFF><font color=blue>75
+
+<tr><td align=center><img src="0704/p12.gif"><td><font color=blue>1<td bgcolor=DDDDFF><font color=blue>3<td bgcolor=DDDDFF><font color=blue>4<td bgcolor=DDDDFF><font color=blue>6<td bgcolor=DDDDFF><font color=blue>8<td bgcolor=DDDDFF><font color=blue>10<td bgcolor=DDDDFF><font color=blue>12<td bgcolor=DDDDFF><font color=blue>15<td bgcolor=DDDDFF>18<td bgcolor=DDDDFF><font color=blue>20<td bgcolor=DDDDFF><font color=blue>23<td bgcolor=DDDDFF><font color=blue>26<td bgcolor=FFDDFF><font color=blue>29<td bgcolor=FFDDFF>33<td bgcolor=FFDDFF><font color=blue>36<td bgcolor=FFDDFF><font color=blue>39<td bgcolor=FFDDFF><font color=blue>43<td bgcolor=FFDDFF>47<td bgcolor=FFDDFF><font color=blue>50<td bgcolor=FFDDFF><font color=blue>54<td bgcolor=FFDDFF><font color=blue>58<td bgcolor=FFDDFF><font color=blue>62<td bgcolor=FFDDFF><font color=blue>66<td bgcolor=FFDDFF>71<td bgcolor=FFDDFF><font color=blue>75
+
+<tr><td align=center><img src="0704/p15.gif"><td><font color=blue>1<td bgcolor=DDFFDD><font color=blue>3<td bgcolor=DDFFDD>5<td bgcolor=DDFFDD><font color=blue>6<td bgcolor=DDFFDD><font color=blue>8<td bgcolor=DDFFDD><font color=blue>10<td bgcolor=DDFFDD>13<td bgcolor=DDFFDD><font color=blue>15<td bgcolor=FFDDFF>18<td bgcolor=FFDDFF><font color=blue>20<td bgcolor=FFDDFF><font color=blue>23<td bgcolor=FFDDFF><font color=blue>26<td bgcolor=FFDDFF><font color=blue>29<td bgcolor=FFDDFF>33<td bgcolor=FFDDFF><font color=blue>36<td bgcolor=FFDDFF><font color=blue>39<td bgcolor=FFDDFF><font color=blue>43<td bgcolor=FFDDFF>47<td bgcolor=FFDDFF><font color=blue>50<td bgcolor=FFDDFF><font color=blue>54<td bgcolor=FFDDFF><font color=blue>58<td bgcolor=FFDDFF><font color=blue>62<td bgcolor=FFDDFF><font color=blue>66<td bgcolor=FFDDFF>71<td bgcolor=FFDDFF><font color=blue>75
+
+<tr><td align=center><img src="0704/p5P.gif"><td><font color=blue>1<td><font color=blue>3<td>5<td><font color=blue>6<td><font color=blue>8<td><font color=blue>10<td>13<td><font color=blue>15<td>18<td>21<td>24<td><font color=blue>26
+
+<tr><td align=center><img src="0704/p6.gif"><td><font color=blue>1<td bgcolor=DDFFDD><font color=blue>3<td bgcolor=DDFFDD>5<td bgcolor=DDFFDD><font color=blue>6<td bgcolor=DDFFDD><font color=blue>8<td bgcolor=DDFFDD>11<td bgcolor=DDFFDD>13<td bgcolor=DDFFDD><font color=blue>15<td bgcolor=FFDDFF>18<td bgcolor=FFDDFF><font color=blue>20<td bgcolor=FFDDFF><font color=blue>23<td bgcolor=FFDDFF><font color=blue>26<td bgcolor=FFDDFF><font color=blue>29<td bgcolor=FFDDFF><font color=blue>32<td bgcolor=FFDDFF><font color=blue>36<td bgcolor=FFDDFF><font color=blue>39<td bgcolor=FFDDFF><font color=blue>43<td bgcolor=FFDDFF>47<td bgcolor=FFDDFF><font color=blue>50<td bgcolor=FFDDFF><font color=blue>54<td bgcolor=FFDDFF><font color=blue>58<td bgcolor=FFDDFF><font color=blue>62<td bgcolor=FFDDFF><font color=blue>66<td bgcolor=FFDDFF>71<td bgcolor=FFDDFF><font color=blue>75
+
+<tr><td align=center><img src="0704/p10.gif"><td><font color=blue>1<td bgcolor=DDFFDD><font color=blue>3<td bgcolor=DDFFDD>5<td bgcolor=DDFFDD>7<td bgcolor=DDFFDD>9<td bgcolor=DDFFDD>11<td bgcolor=DDFFDD>13<td bgcolor=FFDDFF><font color=blue>15<td bgcolor=FFDDFF>18<td bgcolor=FFDDFF>21<td bgcolor=FFDDFF><font color=blue>23<td bgcolor=FFDDFF>27<td bgcolor=FFDDFF>30<td bgcolor=FFDDFF>33<td bgcolor=FFDDFF><font color=blue>36<td bgcolor=FFDDFF><font color=blue>39<td bgcolor=FFDDFF><font color=blue>43<td bgcolor=FFDDFF>47<td bgcolor=FFDDFF><font color=blue>50<td bgcolor=FFDDFF><font color=blue>54<td bgcolor=FFDDFF><font color=blue>58<td bgcolor=FFDDFF><font color=blue>62<td bgcolor=FFDDFF><font color=blue>66<td bgcolor=FFDDFF>71<td bgcolor=FFDDFF><font color=blue>75
+
+<tr><td align=center><img src="0704/p3I.gif"><td><font color=blue>1<td><font color=blue>3<td>5<td>7<td>9<td>11<td>13<td><font color=blue>15<td>18<td>21<td>24<td bgcolor=FFDDFF><font color=blue>26<td>30<td>33<td><font color=blue>36<td><font color=blue>39<td><font color=blue>43<td>47<td><font color=blue>50<td><font color=blue>54<td><font color=blue>58<td><font color=blue>62<td><font color=blue>66<td>71<td><font color=blue>75
+
+<tr><td align=center><img src="0704/p4I.gif"><td><font color=blue>1<td><font color=blue>3<td>5<td>7<td>9<td>11<td>13<td><font color=blue>15<td>18<td>21<td>24<td>27<td>30<td>33<td><font color=blue>36<td><font color=blue>39<td><font color=blue>43<td>47<td><font color=blue>50<td><font color=blue>54<td><font color=blue>58<td><font color=blue>62<td><font color=blue>66<td>71<td><font color=blue>75
+
+<tr><td align=center><img src="0704/p5I.gif"><td><font color=blue>1<td><font color=blue>3<td>5<td>7<td>9<td>11<td>13<td><font color=blue>15<td>18<td>21<td>24<td>27<td>30<td>33<td><font color=blue>36<td><font color=blue>39<td><font color=blue>43<td>47<td><font color=blue>50<td><font color=blue>54<td><font color=blue>58<td><font color=blue>62<td><font color=blue>66<td>71<td><font color=blue>75
+
+<tr><td align=center><img src="0704/p1.gif"><td><font color=blue>1<td><font color=blue>3<td>5<td>7<td>9<td>11<td>13<td><font color=blue>15<td>18<td>21<td>24<td>27<td>30<td>33<td><font color=blue>36<td><font color=blue>39<td><font color=blue>43<td>47<td><font color=blue>50<td><font color=blue>54<td><font color=blue>58<td><font color=blue>62<td><font color=blue>66<td>71<td><font color=blue>75
+
+<tr><td align=center><img src="0704/p3L.gif"><td><font color=blue>1<td><font color=blue>3<td>5<td>7<td>9<td>11<td>13<td><font color=blue>15<td>18<td>21<td>24<td>27
+
+<tr><td align=center><img src="0704/p4L.gif"><td><font color=blue>1<td><font color=blue>3<td>5<td>7<td>9<td>11<td>13<td><font color=blue>15<td>18<td>21
+
+<tr><td align=center><img src="0704/p5L.gif"><td><font color=blue>1<td><font color=blue>3<td>5<td>7<td>9<td>11<td>13<td>16<td>18
+
+<tr><td align=center><img src="0704/p4T.gif"><td><font color=blue>1<td><font color=blue>3<td>5<td>7<td>9<td>12<td>14<td>16<td>19
+
+<tr><td align=center><img src="0704/p5S.gif"><td><font color=blue>1<td><font color=blue>3<td>5<td>7<td>9<td>12<td>14
+
+<tr><td align=center><img src="0704/p5Y.gif"><td><font color=blue>1<td><font color=blue>3<td>5<td>7<td>9<td>12<td>14
+
+<tr><td align=center><img src="0704/p5V.gif"><td><font color=blue>1<td><font color=blue>3<td>5<td>7<td>9<td>12<td>15<td>18<td>21<td>24<td>27<td>30<td>33<td>36
+
+<tr><td align=center><img src="0704/p4S.gif"><td><font color=blue>1<td><font color=blue>3<td>5<td>8<td>10<td>12<td>14<td>16
+
+<tr><td align=center><img src="0704/p5T.gif"><td><font color=blue>1<td><font color=blue>3<td>6<td>8<td>10<td>12<td>15<td>18<td>21<td>24<td>27
+
+<tr><td align=center><img src="0704/p5W.gif"><td><font color=blue>1<td><font color=blue>3<td>6<td>8<td>10<td>12<td>15<td>18<td>21<td>24<td>27
+
+<tr><td align=center><img src="0704/p5R.gif"><td><font color=blue>1<td><font color=blue>3<td>6<td>8<td>10<td>12<td>15<td>18
+
+<tr><td align=center><img src="0704/p5U.gif"><td><font color=blue>1<td>4<td>6<td>8<td>10<td>12<td>14<td>17<td>19<td>22
+
+<tr><td align=center><img src="0704/p5Z.gif"><td><font color=blue>1<td>4<td>6<td>8<td>10<td>12<td>15
+
+<tr><td align=center><img src="0704/p5X.gif"><td><font color=blue>1<td>4<td>6<td>9<td>12<td>15<td>18<td>21<td>24<td>27<td>30<td>33
+</table><font color=FFAAFF> Maurizio Morandi</font><br><font color=AAFFAA> Bill Clagett</font><br><font color=AAAAFF> Berend van der Zwaag</font></center><p>
+
+<hr>
+
+Here are the best known packings for squares:<p>
+
+<center><img src="0704/a1.gif"> <img src="0704/a2.gif"> <img src="0704/a3.gif"> <img src="0704/a4.gif"> 
+<img src="0704/a5.gif"> <img src="0704/a6.gif"> <img src="0704/a7.gif"> <img src="0704/a8.gif"> 
+<img src="0704/a9.gif"> <img src="0704/a10.gif"><br><img src="0704/a11.gif"> <img src="0704/a12.gif"> 
+<img src="0704/a13.gif"> <img src="0704/a14.gif"> <img src="0704/a15.gif"> <img src="0704/a16.gif"><br>
+<img src="0704/a17.gif"> <img src="0704/a18.gif"> <img src="0704/a19.gif"> <img src="0704/a20.gif"> 
+<img src="0704/a21.gif"><br><img src="0704/a22.gif"> <img src="0704/a23.gif"> <img src="0704/a24.gif"> 
+<img src="0704/a25.gif"><br><img src="0704/a26.gif"> <img src="0704/a27.gif"> <img src="0704/a28.gif"><br>
+<img src="0704/a29.gif"><img src="0704/a30.gif"> <img src="0704/a31.gif"><br><img src="0704/a32.gif"> 
+<img src="0704/a33.gif"> <img src="0704/a34.gif"><br><img src="0704/a35.gif"> <img src="0704/a36.gif"></center>
+
+<p>And here are the best known packings for dominoes that are better:<p>
+
+<center><img src="0704/b3.gif"> <img src="0704/b4.gif"> <img src="0704/b5.gif"> <img src="0704/b6.gif"> 
+<img src="0704/b7.gif"> <img src="0704/b10.gif"><br><img src="0704/b11.gif"> <img src="0704/b12.gif"> 
+<img src="0704/b13.gif"> <img src="0704/b14.gif"> </center><p>
+
+<hr>
+
+Maurizio Morandi pointed out that the smallest multiples, especially for rectangles, are not necessarily integers.  Here are the best multiples if fractions are allowed:<p>
+
+<table align=center border=1 bgcolor=lightyellow cellpadding=2>
+<tr align=center><th bgcolor=CCFFCC>Shape<th bgcolor=CCFFCC>1<th bgcolor=CCFFCC>2<th bgcolor=CCFFCC>3<th bgcolor=CCFFCC>4<th bgcolor=CCFFCC>5<th bgcolor=CCFFCC>6<th bgcolor=CCFFCC>7<th bgcolor=CCFFCC>8<th bgcolor=CCFFCC>9<th bgcolor=CCFFCC>10<th bgcolor=CCFFCC>11<th bgcolor=CCFFCC>12<th bgcolor=CCFFCC>13<th bgcolor=CCFFCC>14<th bgcolor=CCFFCC>15<th bgcolor=CCFFCC>16<th bgcolor=CCFFCC>17<th bgcolor=CCFFCC>18<th bgcolor=CCFFCC>19<th bgcolor=CCFFCC>20<th bgcolor=CCFFCC>21<th bgcolor=CCFFCC>22<th bgcolor=CCFFCC>23<th bgcolor=CCFFCC>24<th bgcolor=CCFFCC>25
+
+<tr align=center><td align=center><img src="0704/p2.gif"><td>1<td bgcolor=FFDDFF>5/2<td>4<td>6<td>8<td>10<td>12<td>15<td bgcolor=FFDDFF>35/2<td>20<td>23<td>26<td>29<td>32<td>36<td>39<td>43<td bgcolor=FFDDFF>93/2<td bgcolor=FFDDFF>50<td bgcolor=FFDDFF>54<td bgcolor=FFDDFF>58<td bgcolor=FFDDFF>62<td bgcolor=FFDDFF>66<td bgcolor=FFDDFF>141/2<td bgcolor=FFDDFF>75
+
+<tr align=center><td align=center><img src="0704/p15.gif"><td>1<td bgcolor=FFDDFF>13/5<td bgcolor=FFDDFF>21/5<td bgcolor=DDFFDD>6<td bgcolor=DDFFDD>8<td bgcolor=DDFFDD>10<td bgcolor=FFDDFF>63/5<td bgcolor=DDFFDD>15<td bgcolor=FFDDFF>86/5<td bgcolor=FFDDFF>20<td bgcolor=FFDDFF>23<td bgcolor=FFDDFF>26<td bgcolor=FFDDFF>29<td bgcolor=FFDDFF>97/3<td bgcolor=FFDDFF>179/5<td bgcolor=FFDDFF>39<td bgcolor=FFDDFF>214/5<td bgcolor=FFDDFF>139/3<td bgcolor=FFDDFF>50<td bgcolor=FFDDFF>54<td bgcolor=FFDDFF>58<td bgcolor=FFDDFF>62<td bgcolor=FFDDFF>66<td bgcolor=FFDDFF>71<td bgcolor=FFDDFF>75
+
+<tr align=center><td align=center><img src="0704/p12.gif"><td>1<td bgcolor=FFDDFF>8/3<td bgcolor=DDDDFF>4<td bgcolor=DDDDFF>6<td bgcolor=DDDDFF>8<td bgcolor=DDDDFF>10<td bgcolor=DDDDFF>12<td bgcolor=DDDDFF>15<td bgcolor=FFDDFF>52/3<td bgcolor=DDDDFF>20<td bgcolor=DDDDFF>23<td bgcolor=DDDDFF>26<td bgcolor=FFDDFF>29<td bgcolor=FFDDFF>129/4<td bgcolor=FFDDFF>143/4<td bgcolor=FFDDFF>39<td bgcolor=FFDDFF>171/4<td bgcolor=FFDDFF>139/3<td bgcolor=FFDDFF>50<td bgcolor=FFDDFF>54<td bgcolor=FFDDFF>58<td bgcolor=FFDDFF>62<td bgcolor=FFDDFF>66<td bgcolor=FFDDFF>71<td bgcolor=FFDDFF>75
+
+<tr align=center><td align=center><img src="0704/p6.gif"><td>1<td bgcolor=FFDDFF>8/3<td bgcolor=FFDDFF>13/3<td bgcolor=DDFFDD>6<td bgcolor=DDFFDD>8<td bgcolor=FFDDFF>31/3<td bgcolor=FFDDFF>38/3<td bgcolor=DDFFDD>15<td bgcolor=FFDDFF>35/2<td bgcolor=FFDDFF>20<td bgcolor=FFDDFF>23<td bgcolor=FFDDFF>26<td bgcolor=FFDDFF>29<td bgcolor=FFDDFF>32<td bgcolor=FFDDFF>107/3<td bgcolor=FFDDFF>39<td bgcolor=FFDDFF>128/3<td bgcolor=FFDDFF>93/2<td bgcolor=FFDDFF>50<td bgcolor=FFDDFF>54<td bgcolor=FFDDFF>58<td bgcolor=FFDDFF>62<td bgcolor=FFDDFF>66<td bgcolor=FFDDFF>71<td bgcolor=FFDDFF>75
+
+</table><p>
+
+
+<center><font size=+2>2&times;1 Rectangles</font></center>
+<table align=center cellpadding=5><tr><td><img src="0704/2x1-2.gif"><td><img src="0704/2x1-9.gif" width=300>
+</table><p>
+<table align=center cellpadding=5><tr><td><img src="0704/2x1-18.gif" width=400><td><img src="0704/2x1-24.gif">
+</table><p>
+
+<center><font size=+2>5&times;3 Rectangles</font></center>
+<table align=center cellpadding=5><tr><td><img src="0704/5x3-2.gif"><td><img src="0704/5x3-3.gif"><td><img src="0704/5x3-7.gif" width=300>
+</table>
+<table align=center cellpadding=5><tr><td><img src="0704/5x3-9.gif" width=300><td><img src="0704/5x3-14.gif" width=400>
+</table>
+<table align=center cellpadding=5><tr><td><img src="0704/5x3-15.gif" width=400><td><img src="0704/5x3-17.gif">
+</table>
+<table align=center cellpadding=5><tr><td><img src="0704/5x3-18.gif">
+</table>
+
+<center><font size=+2>4&times;3 Rectangles</font></center>
+<table align=center cellpadding=5><tr><td><img src="0704/4x3-2.gif"><td><img src="0704/4x3-9.gif">
+<td><img src="0704/4x3-14.gif" width=300>
+</table>
+<table align=center cellpadding=5><tr><td><img src="0704/4x3-15.gif" width=300><td><img src="0704/4x3-17.gif">
+</table>
+<table align=center cellpadding=5><tr><td><td><img src="0704/4x3-18.gif">
+</table><p>
+
+<center><font size=+2>3&times;2 Rectangles</font></center>
+<table align=center cellpadding=5><tr><td><img src="0704/3x2-2.gif" width=120><td><img src="0704/3x2-3.gif"><td><img src="0704/3x2-6.gif" width=200><td><img src="0704/3x2-7.gif" width=250>
+</table>
+<table align=center cellpadding=5><tr><td><img src="0704/3x2-9.gif" width=350>
+<td><img src="0704/3x2-15.gif" width=400>
+</table>
+<table align=center cellpadding=5><tr><td><img src="0704/3x2-17.gif"><td><img src="0704/3x2-18.gif">
+</table><p>
+
+
+
+<p><HR>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 6/5/15.<font>
+</BODY></HTML>

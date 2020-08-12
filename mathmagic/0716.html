@@ -1,0 +1,1354 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (July 2016)</H1></CENTER>
+
+Given a non-negative integer k, what connected sets of polyominoes on the square grid have the property that each polyomino is horizontally or vertically adjacent to polyominoes that have total area k times its own area?  If there is a configuration of polyominoes with certain areas, what is the smallest such configuration?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Solutions were received from Bryce Herdt, Joe DeVincentis, George Sicherman, Jeremy Galvagni, and Maurizio Morandi.<p>
+
+Jeremy Galvagni showed that every integer k has at least one solution.  In particular, a 1&times;k<sup>2</sup> rectangle can be surrounded by k<sup>2</sup> non-touching copies of a 1&times;k rectangle.  <p>
+
+Here are the smallest known configurations for integer values of k:<p>
+
+<CENTER><FONT SIZE=+3>k=2</FONT></CENTER>
+<table align=center border=1>
+<tr align=center><td>
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>1<br><img src="0716/2.1.gif">
+<td><font size=+2>2<br><img src="0716/2.2.gif">
+<td><font size=+2>12<br><img src="0716/2.12.gif">
+<td><font size=+2>3<br><img src="0716/2.3.gif">
+<td><font size=+2>13<br><img src="0716/no.gif">
+<td><font size=+2>23<br><img src="0716/no.gif">
+<td><font size=+2>123<br><img src="0716/2.123.gif">
+<td><font size=+2>4<br><img src="0716/2.4.gif">
+<tr align=center>
+<td><font size=+2>14<br><img src="0716/no.gif">
+<td><font size=+2>24<br><img src="0716/2.24.gif">
+<td><font size=+2>124<br><img src="0716/no.gif">
+<td><font size=+2>34<br><img src="0716/no.gif">
+<td><font size=+2>134<br><img src="0716/no.gif">
+<td><font size=+2>234<br><img src="0716/no.gif">
+<td><font size=+2>1234<br><img src="0716/2.1234.gif">
+<td><font size=+2>5<br><img src="0716/2.5.gif">
+</TABLE></table><p>
+
+Joe DeVincentis showed that the only numerical configurations where area 6 is the largest area are the ones shown below:
+
+<table align=center border=0 cellpadding=10><tr align=center>
+<td><font size=+2>6<br><img src="0716/2.6.gif">
+<td><font size=+2>36<br><img src="0716/2.36.gif">
+<td><font size=+2>246<br><img src="0716/2.246.gif">
+<td><font size=+2>123456<br><img src="0716/2.123456.gif">
+</table><p>
+
+And then he proved that all such solutions for the k=2 case are just scaled up versions of one of the solutions above.  Thus only area sets that are multiples of {1}, {1,2}, {1,2,3}, {1,2,3,4}, and {1,2,3,4,5,6} are possible!<p>
+
+<CENTER><FONT SIZE=+3>k=3</FONT></CENTER>
+<table align=center border=1>
+<tr align=center><td>
+<TABLE cellpadding=5>
+<tr align=center>
+<td><font size=+2>1<br><img src="0716/no.gif">
+<td><font size=+2>2<br><img src="0716/3.2.gif">
+<td><font size=+2>12<br><img src="0716/3.12.gif">
+<td><font size=+2>3<br><img src="0716/3.3.gif">
+<td><font size=+2>13<br><img src="0716/3.13.gif">
+<td><font size=+2>23<br><img src="0716/3.23.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>123<br><img src="0716/3.123.gif">
+<td><font size=+2>4<br><img src="0716/3.4.gif">
+<tr align=center>
+<td><font size=+2>14<br><img src="0716/no.gif">
+<td><font size=+2>24<br><img src="0716/3.24.gif">
+<td><font size=+2>124<br><img src="0716/3.124.gif">
+<td><font size=+2>34<br><img src="0716/no.gif">
+<td><font size=+2>134<br><img src="0716/3.134.gif">
+<td><font size=+2>234<br><img src="0716/3.234.gif">
+<td><font size=+2>1234<br><img src="0716/3.1234.gif"><br></font>(George Sicherman)
+<td><font size=+2>5<br><img src="0716/3.5.gif">
+<tr align=center>
+<td><font size=+2>15<br><img src="0716/no.gif">
+<td><font size=+2>25<br><img src="0716/no.gif">
+<td><font size=+2>125<br><img src="0716/3.125.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>35<br><img src="0716/no.gif">
+<td><font size=+2>135<br><img src="0716/3.135.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>235<br><img src="0716/3.235.gif">
+<td><font size=+2>1235<br><img src="0716/3.1235.gif">
+<td><font size=+2>45<br><img src="0716/no.gif">
+<tr align=center>
+<td><font size=+2>145<br><img src="0716/no.gif">
+<td><font size=+2>245<br><img src="0716/no.gif">
+<td><font size=+2>1245<br><img src="0716/3.1245.gif">
+<td><font size=+2>345<br><img src="0716/3.345.gif">
+<td><font size=+2>1345<br><img src="0716/3.1345.gif">
+<td><font size=+2>2345<br><img src="0716/3.2345.gif">
+<td><font size=+2>12345<br><img src="0716/3.12345.gif">
+<td><font size=+2>6<br><img src="0716/3.6.gif">
+<tr align=center>
+<td><font size=+2>16<br><img src="0716/no.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>26<br><img src="0716/3.26.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>126<br><img src="0716/no.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>36<br><img src="0716/3.36.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>136<br><img src="0716/3.136.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>236<br><img src="0716/3.236.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1236<br><img src="0716/3.1236.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>46<br><img src="0716/3.46.gif"><br></font>(Maurizio Morandi)
+<tr align=center>
+<td><font size=+2>146<br><img src="0716/no.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>246<br><img src="0716/3.246.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1246<br><img src="0716/3.1246.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>346<br><img src="0716/3.346.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1346<br><img src="0716/3.1346.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2346<br><img src="0716/3.2346.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12346<br><img src="0716/3.12346.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>56<br><img src="0716/no.gif"><br></font>(Maurizio Morandi)
+<tr align=center>
+<td><font size=+2>156<br><img src="0716/no.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>256<br><img src="0716/no.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1256<br><img src="0716/3.1256.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>356<br><img src="0716/no.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1356<br><img src="0716/3.1356.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2356<br><img src="0716/3.2356.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12356<br><img src="0716/3.12356.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>456<br><img src="0716/no.gif"><br></font>(Maurizio Morandi)
+<tr align=center>
+<td><font size=+2>1456<br><img src="0716/no.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2456<br><img src="0716/3.2456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12456<br><img src="0716/3.12456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3456<br><img src="0716/3.3456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>13456<br><img src="0716/3.13456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>23456<br><img src="0716/3.23456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>123456<br><img src="0716/3.123456.gif"><br></font>(Maurizio Morandi)
+</TABLE></table><p>
+
+<CENTER><FONT SIZE=+3>k=4</FONT></CENTER>
+<table align=center border=1>
+<tr align=center><td>
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1<br><img src="0716/no.gif">
+<td><font size=+2>2<br><img src="0716/no.gif">
+<td><font size=+2>12<br><img src="0716/no.gif">
+<td><font size=+2>3<br><img src="0716/4.3.gif"><br></font>(George Sicherman)
+<td><font size=+2>13<br><img src="0716/4.13.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>23<br><img src="0716/4.23.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>123<br><img src="0716/4.123.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>4<br><img src="0716/4.4.gif"><br></font>(George Sicherman)
+<tr align=center>
+<td><font size=+2>14<br><img src="0716/4.14.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>24<br><img src="0716/4.24.gif">
+<td><font size=+2>124<br><img src="0716/4.124.gif">
+<td><font size=+2>34<br><font size=+4>?
+<td><font size=+2>134<br><img src="0716/4.134.gif">
+<td><font size=+2>234<br><img src="0716/4.234.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1234<br><img src="0716/4.1234.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>5<br><img src="0716/4.5.gif">
+<TR ALIGN=CENTER>
+<td><font size=+2>15<br><img src="0716/no.gif">
+<td><font size=+2>25<br><img src="0716/no.gif">
+<td><font size=+2>125<br><img src="0716/4.125.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>35<br><img src="0716/no.gif">
+<td><font size=+2>135<br><img src="0716/4.135.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>235<br><img src="0716/4.235.gif"><br></font>(George Sicherman)
+<td><font size=+2>1235<br><img src="0716/4.1235.gif"><br></font>(George Sicherman)
+<td><font size=+2>45<br><img src="0716/no.gif">
+<tr align=center>
+<td><font size=+2>145<br><img src="0716/4.145.gif">
+<td><font size=+2>245<br></font><img src="0716/4.245.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1245<br><img src="0716/4.1245.gif"><br></font>(George Sicherman)
+<td><font size=+2>345<br><img src="0716/4.345.gif"><br></font>(George Sicherman)
+<td><font size=+2>1345<br><img src="0716/4.1345.gif"><br></font>(George Sicherman)
+<td><font size=+2>2345<br><img src="0716/4.2345.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12345<br><img src="0716/4.12345.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>6<br><img src="0716/4.6.gif">
+<tr align=center>
+<td><font size=+2>16<br><img src="0716/no.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>26<br><img src="0716/4.26.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>126<br><img src="0716/4.126.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>36<br><img src="0716/4.36.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>136<br><img src="0716/4.136.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>236<br><img src="0716/4.236.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1236<br><img src="0716/4.1236.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>46<br><img src="0716/4.46.gif"><br></font>(Maurizio Morandi)
+<tr align=center>
+<td><font size=+2>146<br><img src="0716/4.146.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>246<br><img src="0716/4.246.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1246<br><img src="0716/4.1246.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>346<br><img src="0716/4.346.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1346<br><img src="0716/4.1346.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2346<br><img src="0716/4.2346.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12346<br><img src="0716/4.12346.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>56<br><img src="0716/no.gif"><br></font>(Maurizio Morandi)
+<tr align=center>
+<td><font size=+2>156<br><img src="0716/no.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>256<br><img src="0716/no.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1256<br><img src="0716/4.1256.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>356<br><img src="0716/no.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1356<br><img src="0716/4.1356.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2356<br><img src="0716/4.2356.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12356<br><img src="0716/4.12356.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>456<br><img src="0716/4.456.gif"><br></font>(Maurizio Morandi)
+<tr align=center>
+<td><font size=+2>1456<br><img src="0716/4.1456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2456<br><img src="0716/4.2456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12456<br><img src="0716/4.12456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3456<br><img src="0716/4.3456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>13456<br><img src="0716/4.13456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>23456<br><img src="0716/4.23456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>123456<br><img src="0716/4.123456.gif"><br></font>(Maurizio Morandi)
+</TABLE></table><p>
+
+
+
+<CENTER><FONT SIZE=+3>k=5</FONT></CENTER>
+<table align=center border=1>
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>24<br><img src="0716/5.24.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>124<br><img src="0716/5.124.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>5<br><img src="0716/5.5.gif"><br></font>(George Sicherman)
+<td><font size=+2>125<br><img src="0716/5.125.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1235<br><img src="0716/5.1235.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>145<br><img src="0716/5.145.gif"><br></font>(George Sicherman)
+<td><font size=+2>1245<br><img src="0716/5.1245.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12345<br><img src="0716/5.12345.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>6<br><img src="0716/5.6.gif">
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>26<br><img src="0716/5.26.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>126<br><img src="0716/5.126.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>36<br><img src="0716/5.36.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>236<br><img src="0716/5.236.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1236<br><img src="0716/5.1236.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>46<br><img src="0716/5.46.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>246<br><img src="0716/5.246.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1246<br><img src="0716/5.1246.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2346<br><img src="0716/5.2346.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12346<br><img src="0716/5.12346.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1256<br><img src="0716/5.1256.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>2356<br><img src="0716/5.2356.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12356<br><img src="0716/5.12356.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1456<br><img src="0716/5.1456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2456<br><img src="0716/5.2456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12456<br><img src="0716/5.12456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3456<br><img src="0716/5.3456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>13456<br><img src="0716/5.13456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>23456<br><img src="0716/5.23456.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>123456<br><img src="0716/5.123456.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>7<br><img src="0716/5.7.gif">
+<td><font size=+2>1457<br><img src="0716/5.1457.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12457<br><img src="0716/5.12457.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>13457<br><img src="0716/5.13457.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>34567<br><img src="0716/5.34567.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>8<br><img src="0716/5.8.gif">
+<td><font size=+2>28<br><img src="0716/5.28.gif">
+<td><font size=+2>128<br><img src="0716/5.128.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>48<br><img src="0716/5.48.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>148<br><img src="0716/5.148.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>248<br><img src="0716/5.248.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1248<br><img src="0716/5.1248.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>268<br><img src="0716/5.268.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2468<br><img src="0716/5.2468.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12468<br><img src="0716/5.12468.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>23468<br><img src="0716/5.23468.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>123468<br><img src="0716/5.123468.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12568<br><img src="0716/5.12568.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>3568<br><img src="0716/5.3568.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>14568<br><img src="0716/5.14568.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>124568<br><img src="0716/5.124568.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>34568<br><img src="0716/5.34568.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>234568<br><img src="0716/5.234568.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2578<br><img src="0716/5.2578.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12578<br><img src="0716/5.12578.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>24578<br><img src="0716/5.24578.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>124578<br><img src="0716/5.124578.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>9<br><img src="0716/5.9.gif"><br></font>(George Sicherman)
+<td><font size=+2>39<br><img src="0716/5.39.gif">
+<td><font size=+2>349<br><img src="0716/5.349.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2359<br><img src="0716/5.2359.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12359<br><img src="0716/5.12359.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>13459<br><img src="0716/5.13459.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>123459<br><img src="0716/5.123459.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>69<br><img src="0716/5.69.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>369<br><img src="0716/5.369.gif"><br></font>(George Sicherman)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>2369<br><img src="0716/5.2369.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>569<br><img src="0716/5.569.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1569<br><img src="0716/5.1569.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3569<br><img src="0716/5.3569.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>123569<br><img src="0716/5.123569.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1234569<br><img src="0716/5.1234569.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>123489<br><img src="0716/5.123489.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>23589<br><img src="0716/5.23589.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>235689<br><img src="0716/5.235689.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>10<br><img src="0716/5.10.gif">
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>2 10<br><img src="0716/5.210.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 10<br><img src="0716/5.1410.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 10<br><img src="0716/5.2410.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 10<br><img src="0716/5.12410.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>5 10<br><img src="0716/5.510.gif">
+<td><font size=+2>2 5 10<br><img src="0716/5.2510.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 5 10<br><img src="0716/5.12510.gif"><br></font>(George Sicherman)
+<td><font size=+2>2 3 5 10<br><img src="0716/5.23510.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 5 10<br><img src="0716/5.123510.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 5 10<br><img src="0716/5.14510.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 5 10<br><img src="0716/5.24510.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1 2 4 5 10<br><img src="0716/5.124510.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 5 10<br><img src="0716/5.134510.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 5 10<br><img src="0716/5.1234510.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 6 10<br><img src="0716/5.2610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 6 10<br><img src="0716/5.12610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 6 10<br><img src="0716/5.23610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 6 10<br><img src="0716/5.123610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>4 6 10<br><img src="0716/5.4610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 6 10<br><img src="0716/5.14610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 6 10<br><img src="0716/5.24610.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1 2 4 6 10<br><img src="0716/5.124610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 6 10<br><img src="0716/5.34610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 6 10<br><img src="0716/5.234610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 6 10<br><img src="0716/5.1234610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 5 6 10<br><img src="0716/5.25610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 5 6 10<br><img src="0716/5.125610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 5 6 10<br><img src="0716/5.235610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 5 6 10<br><img src="0716/5.1235610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>4 5 6 10<br><img src="0716/5.45610.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1 4 5 6 10<br><img src="0716/5.145610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 5 6 10<br><img src="0716/5.245610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 5 6 10<br><img src="0716/5.1245610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 5 6 10<br><img src="0716/5.345610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 5 6 10<br><img src="0716/5.1345610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 5 6 10<br><img src="0716/5.2345610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 5 6 10<br><img src="0716/5.12345610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 7 10<br><img src="0716/5.34710.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 5 7 10<br><img src="0716/5.345710.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>2 3 4 5 7 10<br><img src="0716/5.2345710.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 5 6 7 10<br><img src="0716/5.3456710.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 8 10<br><img src="0716/5.2810.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 8 10<br><img src="0716/5.24810.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 8 10<br><img src="0716/5.124810.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 5 8 10<br><img src="0716/5.25810.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>4 5 8 10<br><img src="0716/5.45810.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 5 8 10<br><img src="0716/5.245810.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 5 8 10<br><img src="0716/5.1245810.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 6 8 10<br><img src="0716/5.26810.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 6 8 10<br><img src="0716/5.236810.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>2 4 6 8 10<br><img src="0716/5.246810.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 7 8 10<br><img src="0716/5.347810.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 5 7 8 10<br><img src="0716/5.23457810.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>11<br><img src="0716/5.11.gif"><br></font>(George Sicherman)
+<td><font size=+2>1 4 11<br><img src="0716/5.1411.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 11<br><img src="0716/5.12411.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 5 11<br><img src="0716/5.2511.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>1 2 5 11<br><img src="0716/5.12511.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>1 2 3 5 11<br><img src="0716/5.123511.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>4 5 11<br><img src="0716/5.4511.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 5 11<br><img src="0716/5.14511.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>2 4 5 11<br><img src="0716/5.24511.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 5 11<br><img src="0716/5.124511.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 5 11<br><img src="0716/5.134511.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 6 11<br><img src="0716/5.134611.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 6 11<br><img src="0716/5.1234611.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 5 6 11<br><img src="0716/5.345611.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 5 6 11<br><img src="0716/5.1345611.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 5 6 11<br><img src="0716/5.2345611.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 5 6 11<br><img src="0716/5.12345611.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1 2 3 4 5 8 11<br><img src="0716/5.12345811.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 5 6 8 11<br><img src="0716/5.123456811.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 10 11<br><img src="0716/5.141011.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 10 11<br><img src="0716/5.1241011.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 6 10 11<br><img src="0716/5.3461011.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 6 10 11<br><img src="0716/5.23461011.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 6 10 11<br><img src="0716/5.123461011.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 5 6 10 11<br><img src="0716/5.134561011.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>3 4 6 8 10 11<br><img src="0716/5.34681011.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12<br><img src="0716/5.12.gif">
+<td><font size=+2>3 12<br><img src="0716/5.312.gif">
+<td><font size=+2>4 12<br><img src="0716/5.412.gif">
+<td><font size=+2>1 4 12<br><img src="0716/5.1412.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 12<br><img src="0716/5.2412.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 12<br><img src="0716/5.12412.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 12<br><img src="0716/5.3412.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 12<br><img src="0716/5.13412.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 12<br><img src="0716/5.23412.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 12<br><img src="0716/5.123412.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1 5 12<br><img src="0716/5.1512.gif">
+<td><font size=+2>1 2 5 12<br><img src="0716/5.12512.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>3 5 12<br><img src="0716/5.3512.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 5 12<br><img src="0716/5.13512.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 5 12<br><img src="0716/5.123512.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 5 12<br><img src="0716/5.14512.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 5 12<br><img src="0716/5.124512.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 5 12<br><img src="0716/5.34512.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 5 12<br><img src="0716/5.134512.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 5 12<br><img src="0716/5.1234512.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>6 12<br><img src="0716/5.612.gif">
+<td><font size=+2>2 6 12<br><img src="0716/5.2612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 6 12<br><img src="0716/5.12612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 6 12<br><img src="0716/5.3612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 6 12<br><img src="0716/5.23612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 6 12<br><img src="0716/5.123612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>4 6 12<br><img src="0716/5.4612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 6 12<br><img src="0716/5.14612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 6 12<br><img src="0716/5.24612.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1 2 4 6 12<br><img src="0716/5.124612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 6 12<br><img src="0716/5.34612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 6 12<br><img src="0716/5.134612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 6 12<br><img src="0716/5.234612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 6 12<br><img src="0716/5.1234612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 5 6 12<br><img src="0716/5.35612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 5 6 12<br><img src="0716/5.135612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 5 6 12<br><img src="0716/5.235612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 5 6 12<br><img src="0716/5.1235612.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1 3 4 5 6 12<br><img src="0716/5.1345612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 5 6 12<br><img src="0716/5.2345612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 5 6 12<br><img src="0716/5.12345612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 7 12<br><img src="0716/5.134712.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 6 7 12<br><img src="0716/5.346712.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 6 7 12<br><img src="0716/5.1346712.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 6 7 12<br><img src="0716/5.2346712.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 6 7 12<br><img src="0716/5.12346712.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 5 6 7 12<br><img src="0716/5.1356712.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1 3 4 5 6 7 12<br><img src="0716/5.13456712.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 5 6 7 12<br><img src="0716/5.123456712.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>8 12<br><img src="0716/5.812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 8 12<br><img src="0716/5.23812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 8 12<br><img src="0716/5.123812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>4 8 12<br><img src="0716/5.4812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 8 12<br><img src="0716/5.14812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 8 12<br><img src="0716/5.24812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 8 12<br><img src="0716/5.124812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 8 12<br><img src="0716/5.34812.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>2 3 4 8 12<br><img src="0716/5.234812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 8 12<br><img src="0716/5.1234812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 5 8 12<br><img src="0716/5.15812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 5 8 12<br><img src="0716/5.125812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 5 8 12<br><img src="0716/5.35812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 5 8 12<br><img src="0716/5.135812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 5 8 12<br><img src="0716/5.1235812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 5 8 12<br><img src="0716/5.1345812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 5 8 12<br><img src="0716/5.12345812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 6 8 12<br><img src="0716/5.26812.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>4 6 8 12<br><img src="0716/5.46812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 6 8 12<br><img src="0716/5.146812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 6 8 12<br><img src="0716/5.246812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 6 8 12<br><img src="0716/5.1246812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 6 8 12<br><img src="0716/5.2346812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 6 8 12<br><img src="0716/5.12346812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 5 6 8 12<br><img src="0716/5.13456812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 5 6 8 12<br><img src="0716/5.123456812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 5 6 7 8 12<br><img src="0716/5.1234567812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 9 12<br><img src="0716/5.3912.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>3 4 9 12<br><img src="0716/5.34912.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 9 12<br><img src="0716/5.234912.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 6 9 12<br><img src="0716/5.36912.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 6 9 12<br><img src="0716/5.236912.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 6 9 12<br><img src="0716/5.1236912.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 9 12<br><img src="0716/5.134912.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 9 12<br><img src="0716/5.1234912.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 6 9 12<br><img src="0716/5.346912.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1 3 4 6 9 12<br><img src="0716/5.1346912.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 6 9 12<br><img src="0716/5.2346912.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 6 9 12<br><img src="0716/5.12346912.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 8 9 12<br><img src="0716/5.2348912.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 8 9 12<br><img src="0716/5.12348912.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 6 8 9 12<br><img src="0716/5.23468912.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 6 8 9 12<br><img src="0716/5.123468912.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>4 10 12<br><img src="0716/5.41012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 10 12<br><img src="0716/5.141012.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>2 4 10 12<br><img src="0716/5.241012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 10 12<br><img src="0716/5.1241012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 10 12<br><img src="0716/5.341012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 10 12<br><img src="0716/5.1341012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 10 12<br><img src="0716/5.2341012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 5 10 12<br><img src="0716/5.351012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 5 10 12<br><img src="0716/5.2351012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 5 10 12<br><img src="0716/5.23451012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 5 10 12<br><img src="0716/5.12451012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 5 10 12<br><img src="0716/5.123451012.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>2 6 10 12<br><img src="0716/5.261012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>4 6 10 12<br><img src="0716/5.461012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 6 10 12<br><img src="0716/5.1461012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 6 10 12<br><img src="0716/5.2461012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 6 10 12<br><img src="0716/5.12461012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 6 10 12<br><img src="0716/5.3461012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 6 10 12<br><img src="0716/5.13461012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 6 10 12<br><img src="0716/5.23461012.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1 2 3 4 6 10 12<br><img src="0716/5.123461012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 5 6 10 12<br><img src="0716/5.2561012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 5 6 10 12<br><img src="0716/5.13561012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>4 5 6 10 12<br><img src="0716/5.4561012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 5 6 10 12<br><img src="0716/5.14561012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 5 6 10 12<br><img src="0716/5.24561012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 5 6 10 12<br><img src="0716/5.124561012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 5 6 10 12<br><img src="0716/5.34561012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 5 6 10 12<br><img src="0716/5.134561012.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>2 3 4 5 6 10 12<br><img src="0716/5.234561012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 5 6 10 12<br><img src="0716/5.1234561012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 8 10 12<br><img src="0716/5.281012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 8 10 12<br><img src="0716/5.2481012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 8 10 12<br><img src="0716/5.12481012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 5 8 10 12<br><img src="0716/5.124581012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 6 8 10 12<br><img src="0716/5.12681012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 6 8 10 12<br><img src="0716/5.2681012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 6 8 10 12<br><img src="0716/5.24681012.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1 2 4 6 8 10 12<br><img src="0716/5.124681012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 5 6 8 10 12<br><img src="0716/5.245681012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 5 6 8 10 12<br><img src="0716/5.1245681012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 11 12<br><img src="0716/5.141112.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 5 11 12<br><img src="0716/5.1451112.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 5 11 12<br><img src="0716/5.12451112.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 7 11 12<br><img src="0716/5.3471112.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 7 11 12<br><img src="0716/5.23471112.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 5 7 11 12<br><img src="0716/5.14571112.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1 2 4 5 7 11 12<br><img src="0716/5.124571112.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 6 7 11 12<br><img src="0716/5.34671112.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 6 7 11 12<br><img src="0716/5.234671112.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 6 8 11 12<br><img src="0716/5.134681112.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 7 8 11 12<br><img src="0716/5.34781112.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 7 8 11 12<br><img src="0716/5.234781112.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 6 7 8 11 12<br><img src="0716/5.346781112.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 6 7 8 11 12<br><img src="0716/5.2346781112.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>13<br><img src="0716/5.13.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1 5 13<br><img src="0716/5.1513.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>1 2 5 13<br><img src="0716/5.12513.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>2 5 13<br><img src="0716/5.2513.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>14<br><img src="0716/5.14.gif">
+<td><font size=+2>1 5 14<br><img src="0716/5.1514.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>7 14<br><img src="0716/5.714.gif">
+<td><font size=+2>2 8 10 14<br><img src="0716/5.281014.gif"><br></font>(George Sicherman)
+<td><font size=+2>5 15<br><img src="0716/5.515.gif"><br></font>(Joe DeVincentis)
+</TABLE>
+
+</table><p>
+
+
+
+
+
+<CENTER><FONT SIZE=+3>k=6</FONT></CENTER>
+<table align=center border=1>
+<tr align=center><td>
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>248<br><img src="0716/6.248.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 10<br><img src="0716/6.13410.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>5 10<br><img src="0716/6.510.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 5 10<br><img src="0716/6.123510.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 6 8 10<br><img src="0716/6.12346810.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 7 11<br><img src="0716/6.13711.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 7 11<br><img src="0716/6.123711.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 8 11<br><img src="0716/6.1234811.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 12<br><img src="0716/6.312.gif">
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1 3 12<br><img src="0716/6.1312.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 12<br><img src="0716/6.12312.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 12<br><img src="0716/6.3412.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 12<br><img src="0716/6.123412.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 5 12<br><img src="0716/6.13512.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 5 12<br><img src="0716/6.134512.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 5 12<br><img src="0716/6.1234512.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>6 12<br><img src="0716/6.612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 6 12<br><img src="0716/6.3612.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>2 3 6 12<br><img src="0716/6.23612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 6 12<br><img src="0716/6.123612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 6 12<br><img src="0716/6.34612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 4 6 12<br><img src="0716/6.234612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 6 12<br><img src="0716/6.1234612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 5 6 12<br><img src="0716/6.1345612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 4 5 6 12<br><img src="0716/6.12345612.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 8 12<br><img src="0716/6.34812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 5 8 12<br><img src="0716/6.135812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 5 8 12<br><img src="0716/6.1345812.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>3 6 9 12<br><img src="0716/6.36912.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 6 10 12<br><img src="0716/6.13461012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 5 6 10 12<br><img src="0716/6.13561012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 5 6 10 12<br><img src="0716/6.134561012.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 14<br><img src="0716/6.2414.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 14<br><img src="0716/6.12414.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 6 14<br><img src="0716/6.24614.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 6 14<br><img src="0716/6.123614.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 6 14<br><img src="0716/6.124614.gif"><br></font>(Maurizio Morandi)
+</TABLE>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>2 4 6 10 14<br><img src="0716/6.2461014.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 6 8 10 12 14<br><img src="0716/6.12468101214.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>5 15<br><img src="0716/6.515.gif">
+<td><font size=+2>3 6 15<br><img src="0716/6.3615.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 6 12 15<br><img src="0716/6.361215.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 6 12 15<br><img src="0716/6.2361215.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 5 6 12 15<br><img src="0716/6.3561215.gif"><br></font>(Maurizio Morandi)
+</TABLE></table><p>
+<hr>
+
+Bryce Herdt noted that only integer k were possible, and suggested that we use non-integral multiples and round.  He suggested rounding to the nearest integer, but it is easier to round down to avoid ambiguities. 
+Here are the smallest known solutions for various fractional values of k:<p>
+
+<CENTER><FONT SIZE=+3>k = <sup>5</sup>&frasl;<sub>2</sub> (rounding down)</FONT></CENTER>
+<table align=center border=1 bordercolor=red>
+<tr align=center><td>
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>1<br><img src="0716/2.1.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>2<br><img src="0716/no.gif">
+<td><font size=+2>12<br><img src="0716/2.5-12.gif">
+<td><font size=+2>3<br><img src="0716/no.gif">
+<td><font size=+2>13<br><img src="0716/no.gif">
+<td><font size=+2>23<br><img src="0716/2.5-23.gif">
+<td><font size=+2>123<br><img src="0716/2.5-123.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>4<br><img src="0716/no.gif">
+<tr align=center>
+<td><font size=+2>14<br><img src="0716/no.gif">
+<td><font size=+2>24<br><img src="0716/no.gif">
+<td><font size=+2>124<br><img src="0716/2.5-124.gif">
+<td><font size=+2>34<br><img src="0716/2.5-34.gif">
+<td><font size=+2>134<br><img src="0716/no.gif">
+<td><font size=+2>234<br><img src="0716/2.5-234.gif">
+<td><font size=+2>1234<br><img src="0716/2.5-1234.gif"><br></font>(George Sicherman)
+<td><font size=+2>5<br><img src="0716/no.gif">
+<tr align=center>
+<td><font size=+2>15<br><img src="0716/no.gif">
+<td><font size=+2>25<br><img src="0716/2.5-25.gif"><br></font>(George Sicherman)
+<td><font size=+2>125<br><img src="0716/no.gif">
+<td><font size=+2>35<br><img src="0716/no.gif">
+<td><font size=+2>135<br><img src="0716/no.gif">
+<td><font size=+2>235<br><img src="0716/2.5-235.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1235<br><img src="0716/2.5-1235.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>45<br><img src="0716/2.5-45.gif">
+<tr align=center>
+<td><font size=+2>145<br><img src="0716/no.gif">
+<td><font size=+2>245<br><img src="0716/2.5-245.gif">
+<td><font size=+2>1245<br><img src="0716/no.gif">
+<td><font size=+2>345<br><img src="0716/no.gif">
+<td><font size=+2>1345<br><img src="0716/no.gif">
+<td><font size=+2>2345<br><img src="0716/2.5-2345.gif">
+<td><font size=+2>12345<br><img src="0716/2.5-12345.gif">
+<td><font size=+2>6<br><img src="0716/no.gif">
+</TABLE></table><p>
+
+<CENTER><FONT SIZE=+3>k = <sup>7</sup>&frasl;<sub>2</sub> (rounding down)</FONT></CENTER>
+<table align=center border=1 bordercolor=red>
+<tr align=center><td>
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>1<br><img src="0716/no.gif">
+<td><font size=+2>2<br><img src="0716/no.gif">
+<td><font size=+2>12<br><img src="0716/3.5-12.gif">
+<td><font size=+2>3<br><img src="0716/no.gif">
+<td><font size=+2>13<br><img src="0716/3.5-13.gif">
+<td><font size=+2>23<br><img src="0716/3.5-23.gif"><br></font>(George Sicherman)
+<td><font size=+2>123<br><img src="0716/3.5-123.gif"><br></font>(George Sicherman)
+<td><font size=+2>4<br><img src="0716/no.gif">
+<tr align=center>
+<td><font size=+2>14<br><img src="0716/no.gif">
+<td><font size=+2>24<br><img src="0716/no.gif">
+<td><font size=+2>124<br><img src="0716/3.5-124.gif">
+<td><font size=+2>34<br><img src="0716/3.5-34.gif">
+<td><font size=+2>134<br><img src="0716/3.5-134.gif"><br></font>(George Sicherman)
+<td><font size=+2>234<br><img src="0716/3.5-234.gif">
+<td><font size=+2>1234<br><img src="0716/3.5-1234.gif"><br></font>(George Sicherman)
+<td><font size=+2>5<br><img src="0716/no.gif">
+<tr align=center>
+<td><font size=+2>15<br><img src="0716/no.gif">
+<td><font size=+2>25<br><img src="0716/3.5-25.gif">
+<td><font size=+2>125<br><img src="0716/3.5-125.gif">
+<td><font size=+2>35<br><img src="0716/3.5-35.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>135<br><img src="0716/3.5-135.gif"><br></font>(George Sicherman)
+<td><font size=+2>235<br><img src="0716/3.5-235.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1235<br><img src="0716/3.5-1235.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>45<br><img src="0716/3.5-45.gif"><br></font>(George Sicherman)
+<tr align=center>
+<td><font size=+2>145<br><img src="0716/no.gif">
+<td><font size=+2>245<br><img src="0716/3.5-245.gif">
+<td><font size=+2>1245<br><img src="0716/3.5-1245.gif">
+<td><font size=+2>345<br><img src="0716/3.5-345.gif"><br></font>(George Sicherman)
+<td><font size=+2>1345<br><img src="0716/3.5-1345.gif"><br></font>(George Sicherman)
+<td><font size=+2>2345<br><img src="0716/3.5-2345.gif"><br></font>(George Sicherman)
+<td><font size=+2>12345<br><img src="0716/3.5-12345.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>6<br><img src="0716/no.gif">
+</TABLE></table><p>
+
+<CENTER><FONT SIZE=+3>k = <sup>9</sup>&frasl;<sub>2</sub> (rounding down)</FONT></CENTER>
+<table align=center border=1 bordercolor=red>
+<tr align=center><td>
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>23 <font size=+4>?
+<br><font size=+2>14 <font size=+4>?
+<br><font size=+2>34 <font size=+4>?
+<td><font size=+2>234 <font size=+4>?
+<br><font size=+2>145 <font size=+4>?
+<br><font size=+2>345 <font size=+4>?
+<td><font size=+2>13<br><img src="0716/4.5-13.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>123<br><img src="0716/4.5-123.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>124<br><img src="0716/4.5-124.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>134<br><img src="0716/4.5-134.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1234<br><img src="0716/4.5-1234.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>25<br><img src="0716/4.5-25.gif"><br></font>(George Sicherman)
+<td><font size=+2>125<br><img src="0716/4.5-125.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>35<br><img src="0716/4.5-35.gif"><br></font>(George Sicherman)
+<td><font size=+2>135<br><img src="0716/4.5-135.gif"><br></font>(Bryce Herdt)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>235<br><img src="0716/4.5-235.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1235<br><img src="0716/4.5-1235.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>45<br><img src="0716/4.5-45.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>245<br><img src="0716/4.5-245.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1245<br><img src="0716/4.5-1245.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1345<br><img src="0716/4.5-1345.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>2345<br><img src="0716/4.5-2345.gif"><br></font>(George Sicherman)
+<td><font size=+2>12345<br><img src="0716/4.5-12345.gif"><br></font>(George Sicherman)
+<td><font size=+2>136<br><img src="0716/4.5-136.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>56<br><img src="0716/4.5-56.gif"><br></font>(George Sicherman)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>37<br><img src="0716/4.5-37.gif">
+<td><font size=+2>137<br><img src="0716/4.5-137.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>237<br><img src="0716/4.5-237.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1237<br><img src="0716/4.5-1237.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>347<br><img src="0716/4.5-347.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1347<br><img src="0716/4.5-1347.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2347<br><img src="0716/4.5-2347.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12347<br><img src="0716/4.5-12347.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2457<br><img src="0716/4.5-2457.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>367<br><img src="0716/4.5-367.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1367<br><img src="0716/4.5-1367.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>148<br><img src="0716/4.5-148.gif">
+<td><font size=+2>12358<br><img src="0716/4.5-12358.gif"><br></font>(George Sicherman)
+<td><font size=+2>13458<br><img src="0716/4.5-13458.gif"><br></font>(George Sicherman)
+<td><font size=+2>123458<br><img src="0716/4.5-123458.gif"><br></font>(George Sicherman)
+<td><font size=+2>378<br><img src="0716/4.5-378.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>29<br><img src="0716/4.5-29.gif"><br></font>(George Sicherman)
+<td><font size=+2>49<br><img src="0716/4.5-49.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>149<br><img src="0716/4.5-149.gif">
+<td><font size=+2>249<br><img src="0716/4.5-249.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1249<br><img src="0716/4.5-1249.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1349<br><img src="0716/4.5-1349.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>359<br><img src="0716/4.5-359.gif"><br></font>(George Sicherman)
+<td><font size=+2>1469<br><img src="0716/4.5-1469.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 10<br><img src="0716/4.5-310.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 10<br><img src="0716/4.5-1310.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 4 10<br><img src="0716/4.5-3410.gif"><br></font>(Joe DeVincentis)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>1 3 4 10<br><img src="0716/4.5-13410.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 4 5 10<br><img src="0716/4.5-24510.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>3 4 8 10<br><img src="0716/4.5-34810.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 8 10<br><img src="0716/4.5-134810.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>4 9 10<br><img src="0716/4.5-4910.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 9 10<br><img src="0716/4.5-14910.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>8 9 10<br><img src="0716/4.5-8910.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 8 9 10<br><img src="0716/4.5-148910.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>5 11<br><img src="0716/4.5-511.gif"><br></font>(George Sicherman)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5>
+<TR ALIGN=CENTER>
+<td><font size=+2>3 7 11<br><img src="0716/4.5-3711.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>5 12<br><img src="0716/4.5-512.gif"><br></font>(George Sicherman)
+<td><font size=+2>7 12<br><img src="0716/4.5-712.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>5 7 12<br><img src="0716/4.5-5712.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 13<br><img src="0716/4.5-1413.gif"><br></font>(George Sicherman)
+<td><font size=+2>2 5 13<br><img src="0716/4.5-2513.gif"><br></font>(George Sicherman)
+<td><font size=+2>1 3 5 8 14<br><img src="0716/4.5-135814.gif"><br></font>(George Sicherman)
+</TABLE></table><p>
+
+<hr>
+
+<CENTER><FONT SIZE=+3>k = <sup>7</sup>&frasl;<sub>3</sub> (rounding down)</FONT></CENTER>
+<table align=center border=1 bordercolor=green>
+<tr align=center><td>
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>1<br><img src="0716/2.1.gif">
+<td><font size=+2>2<br><img src="0716/2.2.gif">
+<td><font size=+2>12<br><img src="0716/2.12.gif">
+<td><font size=+2>3<br><img src="0716/no.gif">
+<td><font size=+2>13<br><img src="0716/no.gif">
+<td><font size=+2>23<br><img src="0716/no.gif">
+<td><font size=+2>123<br><img src="0716/2.33-123.gif"><br></font>(George Sicherman)
+<td><font size=+2>4<br><img src="0716/no.gif">
+<tr align=center>
+<td><font size=+2>14<br><img src="0716/no.gif">
+<td><font size=+2>24<br><img src="0716/no.gif">
+<td><font size=+2>124<br><img src="0716/no.gif">
+<td><font size=+2>34<br><img src="0716/2.33-34.gif"><br></font>(George Sicherman)
+<td><font size=+2>134<br><img src="0716/no.gif">
+<td><font size=+2>234<br><img src="0716/2.33-234.gif">
+<td><font size=+2>1234<br><img src="0716/2.33-1234.gif"><br></font>(George Sicherman)
+<td><font size=+2>5<br><img src="0716/no.gif">
+<tr align=center>
+<td><font size=+2>15<br><img src="0716/no.gif">
+<td><font size=+2>25<br><img src="0716/no.gif">
+<td><font size=+2>125<br><img src="0716/no.gif">
+<td><font size=+2>35<br><img src="0716/no.gif">
+<td><font size=+2>135<br><img src="0716/no.gif">
+<td><font size=+2>235<br><img src="0716/no.gif">
+<td><font size=+2>1235<br><img src="0716/2.33-1235.gif">
+<td><font size=+2>45<br><img src="0716/no.gif">
+<tr align=center>
+<td><font size=+2>145<br><img src="0716/no.gif">
+<td><font size=+2>245<br><img src="0716/no.gif">
+<td><font size=+2>1245<br><img src="0716/no.gif">
+<td><font size=+2>345<br><img src="0716/no.gif">
+<td><font size=+2>1345<br><img src="0716/no.gif">
+<td><font size=+2>2345<br><img src="0716/no.gif">
+<td><font size=+2>12345<br><img src="0716/2.33-12345.gif">
+<td><font size=+2>6<br><img src="0716/no.gif">
+</TABLE></table><p>
+
+<CENTER><FONT SIZE=+3>k = <sup>8</sup>&frasl;<sub>3</sub> (rounding down)</FONT></CENTER>
+<table align=center border=1 bordercolor=green>
+<tr align=center><td>
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>1<br><img src="0716/2.1.gif">
+<td><font size=+2>2<br><img src="0716/no.gif">
+<td><font size=+2>12<br><img src="0716/2.67-12.gif"><br></font>(George Sicherman)
+<td><font size=+2>3<br><img src="0716/no.gif">
+<td><font size=+2>13<br><img src="0716/no.gif">
+<td><font size=+2>23<br><img src="0716/2.67-23.gif"><br></font>(George Sicherman)
+<td><font size=+2>123<br><img src="0716/2.67-123.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>4<br><img src="0716/no.gif">
+<tr align=center>
+<td><font size=+2>14<br><img src="0716/no.gif">
+<td><font size=+2>24<br><img src="0716/no.gif">
+<td><font size=+2>124<br><img src="0716/2.67-124.gif">
+<td><font size=+2>34<br><img src="0716/2.67-34.gif"><br></font>(George Sicherman)
+<td><font size=+2>134<br><img src="0716/no.gif">
+<td><font size=+2>234<br><img src="0716/2.67-234.gif">
+<td><font size=+2>1234<br><img src="0716/2.67-1234.gif"><br></font>(George Sicherman)
+<td><font size=+2>5<br><img src="0716/no.gif">
+<tr align=center>
+<td><font size=+2>15<br><img src="0716/no.gif">
+<td><font size=+2>25<br><img src="0716/2.67-25.gif"><br></font>(George Sicherman)
+<td><font size=+2>125<br><img src="0716/no.gif">
+<td><font size=+2>35<br><img src="0716/2.67-35.gif"><br></font>(George Sicherman)
+<td><font size=+2>135<br><img src="0716/no.gif">
+<td><font size=+2>235<br><img src="0716/2.67-235.gif">
+<td><font size=+2>1235<br><img src="0716/2.67-1235.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>45<br><img src="0716/2.67-45.gif"><br></font>(George Sicherman)
+<tr align=center>
+<td><font size=+2>145<br><img src="0716/no.gif">
+<td><font size=+2>245<br><img src="0716/2.67-245.gif">
+<td><font size=+2>1245<br><img src="0716/no.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>345<br><img src="0716/2.67-345.gif">
+<td><font size=+2>1345<br><img src="0716/no.gif">
+<td><font size=+2>2345<br><img src="0716/2.67-2345.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>12345<br><img src="0716/2.67-12345.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>6<br><img src="0716/no.gif">
+</TABLE></table><p>
+
+<CENTER><FONT SIZE=+3>k = <sup>10</sup>&frasl;<sub>3</sub> (rounding down)</FONT></CENTER>
+<table align=center border=1 bordercolor=green>
+<tr align=center><td>
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>1<br><img src="0716/no.gif">
+<td><font size=+2>2<br><img src="0716/3.2.gif">
+<td><font size=+2>12<br><img src="0716/3.12.gif">
+<td><font size=+2>3<br><img src="0716/no.gif">
+<td><font size=+2>13<br><img src="0716/3.33-13.gif"><br></font>(George Sicherman)
+<td><font size=+2>23<br><img src="0716/3.33-23.gif">
+<td><font size=+2>123<br><img src="0716/3.33-123.gif">
+<td><font size=+2>4<br><img src="0716/no.gif">
+<tr align=center>
+<td><font size=+2>14<br><img src="0716/no.gif">
+<td><font size=+2>24<br><img src="0716/no.gif">
+<td><font size=+2>124<br><img src="0716/no.gif">
+<td><font size=+2>34<br><img src="0716/3.33-34.gif">
+<td><font size=+2>134<br><img src="0716/3.33-134.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>234<br><img src="0716/3.33-234.gif"><br></font>(George Sicherman)
+<td><font size=+2>1234<br><img src="0716/3.33-1234.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>5<br><img src="0716/no.gif">
+<tr align=center>
+<td><font size=+2>15<br><img src="0716/no.gif">
+<td><font size=+2>25<br><img src="0716/no.gif">
+<td><font size=+2>125<br><img src="0716/3.33-125.gif">
+<td><font size=+2>35<br><img src="0716/3.33-35.gif">
+<td><font size=+2>135<br><img src="0716/3.33-135.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>235<br><img src="0716/3.33-235.gif"><br></font>(George Sicherman)
+<td><font size=+2>1235<br><img src="0716/3.33-1235.gif"><br></font>(George Sicherman)
+<td><font size=+2>45<br><img src="0716/3.33-45.gif">
+<tr align=center>
+<td><font size=+2>145<br><img src="0716/no.gif">
+<td><font size=+2>245<br><img src="0716/3.33-245.gif"><br></font>(George Sicherman)
+<td><font size=+2>1245<br><img src="0716/3.33-1245.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>345<br><img src="0716/3.33-345.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>1345<br><img src="0716/3.33-1345.gif"><br></font>(George Sicherman)
+<td><font size=+2>2345<br><img src="0716/3.33-2345.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12345<br><img src="0716/3.33-12345.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>6<br><img src="0716/no.gif">
+</TABLE></table><p>
+
+<CENTER><FONT SIZE=+3>k = <sup>11</sup>&frasl;<sub>3</sub> (rounding down)</FONT></CENTER>
+<table align=center border=1 bordercolor=green>
+<tr align=center><td>
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>1<br><img src="0716/no.gif">
+<td><font size=+2>2<br><img src="0716/no.gif">
+<td><font size=+2>12<br><img src="0716/3.5-12.gif">
+<td><font size=+2>3<br><img src="0716/no.gif">
+<td><font size=+2>13<br><img src="0716/3.67-13.gif">
+<td><font size=+2>23<br><img src="0716/3.67-23.gif">
+<td><font size=+2>123<br><img src="0716/3.67-123.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>4<br><img src="0716/no.gif">
+<tr align=center>
+<td><font size=+2>14<br><img src="0716/no.gif">
+<td><font size=+2>24<br><img src="0716/no.gif">
+<td><font size=+2>124<br><img src="0716/3.67-124.gif">
+<td><font size=+2>34<br><img src="0716/3.67-34.gif">
+<td><font size=+2>134<br><img src="0716/3.67-134.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>234<br><img src="0716/3.67-234.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1234<br><img src="0716/3.67-1234.gif"><br></font>(George Sicherman)
+<td><font size=+2>5<br><img src="0716/no.gif">
+<tr align=center>
+<td><font size=+2>15<br><img src="0716/no.gif">
+<td><font size=+2>25<br><img src="0716/3.67-25.gif">
+<td><font size=+2>125<br><img src="0716/3.67-125.gif">
+<td><font size=+2>35<br><img src="0716/3.67-35.gif"><br></font>(George Sicherman)
+<td><font size=+2>135<br><img src="0716/3.67-135.gif"><br></font>(George Sicherman)
+<td><font size=+2>235<br><img src="0716/3.67-235.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1235<br><img src="0716/3.67-1235.gif"><br></font>(George Sicherman)
+<td><font size=+2>45<br><img src="0716/3.67-45.gif">
+<tr align=center>
+<td><font size=+2>145<br><img src="0716/no.gif">
+<td><font size=+2>245<br><img src="0716/3.67-245.gif">
+<td><font size=+2>1245<br><img src="0716/3.67-1245.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>345<br><img src="0716/3.67-345.gif"><br></font>(Bryce Herdt)
+<td><font size=+2>1345<br><img src="0716/3.67-1345.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2345<br><img src="0716/3.67-2345.gif"><br></font>(George Sicherman)
+<td><font size=+2>12345<br><img src="0716/3.67-12345.gif"><br></font>(George Sicherman)
+<td><font size=+2>6<br><img src="0716/no.gif">
+</TABLE></table><p>
+
+
+
+
+<CENTER><FONT SIZE=+3>k = <sup>13</sup>&frasl;<sub>3</sub> (rounding down)</FONT></CENTER>
+<table align=center border=1 bordercolor=green>
+<tr align=center><td>
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>34 <font size=+4>?
+<br><font size=+2>45 <font size=+4>?
+<br><font size=+2>345 <font size=+4>?
+<td><font size=+2>13<br><img src="0716/4.5-13.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>23<br><img src="0716/4.33-23.gif"><br></font>(George Sicherman)
+<td><font size=+2>123<br><img src="0716/4.33-123.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>14<br><img src="0716/4.33-14.gif">
+<td><font size=+2>124<br><img src="0716/4.33-124.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>134<br><img src="0716/4.33-134.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>234<br><img src="0716/4.33-234.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>1234<br><img src="0716/4.33-1234.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>125<br><img src="0716/4.33-125.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>35<br><img src="0716/4.33-35.gif">
+<td><font size=+2>135<br><img src="0716/4.33-135.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>235<br><img src="0716/4.33-235.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>1235<br><img src="0716/4.33-1235.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>145<br><img src="0716/4.33-145.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>245<br><img src="0716/4.33-245.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>1245<br><img src="0716/4.33-1245.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>1345<br><img src="0716/4.33-1345.gif"><br></font>(Joe DeVincentis)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>2345<br><img src="0716/4.33-2345.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>12345<br><img src="0716/4.33-12345.gif"><br></font>(George Sicherman)
+<td><font size=+2>26<br><img src="0716/4.33-26.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1236<br><img src="0716/4.33-1236.gif"><br></font>(George Sicherman)
+<td><font size=+2>146<br><img src="0716/4.33-146.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1246<br><img src="0716/4.33-1246.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>1346<br><img src="0716/4.33-1346.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2356<br><img src="0716/4.33-2356.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>37<br><img src="0716/4.33-37.gif"><br></font>(George Sicherman)
+<td><font size=+2>137<br><img src="0716/4.33-137.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>1237<br><img src="0716/4.33-1237.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>247<br><img src="0716/4.33-247.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>1247<br><img src="0716/4.33-1247.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1257<br><img src="0716/4.33-1257.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>367<br><img src="0716/4.33-367.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>28<br><img src="0716/4.33-28.gif"><br></font>(George Sicherman)
+<td><font size=+2>138<br><img src="0716/4.33-138.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>238<br><img src="0716/4.33-238.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1238<br><img src="0716/4.33-1238.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1248<br><img src="0716/4.33-1248.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>58<br><img src="0716/4.33-58.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>258<br><img src="0716/4.33-258.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>268<br><img src="0716/4.33-268.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2568<br><img src="0716/4.33-2568.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>139<br><img src="0716/4.33-139.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1239<br><img src="0716/4.33-1239.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>269<br><img src="0716/4.33-269.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>13489<br><img src="0716/4.33-13489.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>23489<br><img src="0716/4.33-23489.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>123489<br><img src="0716/4.33-123489.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 10<br><img src="0716/4.33-310.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>1 3 10<br><img src="0716/4.33-1310.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 3 10<br><img src="0716/4.33-12310.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 6 10<br><img src="0716/4.33-3610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 6 10<br><img src="0716/4.33-13610.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>1 2 3 6 10<br><img src="0716/4.33-123610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 11<br><img src="0716/4.33-1311.gif"><br></font>(George Sicherman)
+<td><font size=+2>2 4 11<br><img src="0716/4.33-2411.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>1 2 4 11<br><img src="0716/4.33-12411.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 12<br><img src="0716/4.33-1412.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>2 8 12<br><img src="0716/4.33-2812.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+</table><p>
+
+
+
+
+<CENTER><FONT SIZE=+3>k = <sup>14</sup>&frasl;<sub>3</sub> (rounding down)</FONT></CENTER>
+<table align=center border=1 bordercolor=green>
+<tr align=center><td>
+
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>13 <font size=+4>?
+<br><font size=+2>23 <font size=+4>?
+<br><font size=+2>14 <font size=+4>?
+<br><font size=+2>34 <font size=+4>?
+<td><font size=+2>134 <font size=+4>?
+<br><font size=+2>234 <font size=+4>?
+<br><font size=+2>125 <font size=+4>?
+<br><font size=+2>35 <font size=+4>?
+<td><font size=+2>135 <font size=+4>?
+<br><font size=+2>235 <font size=+4>?
+<br><font size=+2>45 <font size=+4>?
+<br><font size=+2>145 <font size=+4>?
+<td><font size=+2>1245 <font size=+4>?
+<br><font size=+2>345 <font size=+4>?
+<br><font size=+2>1345 <font size=+4>?
+<br><font size=+2>2345 <font size=+4>?
+<td><font size=+2>123<br><img src="0716/4.67-123.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>124<br><img src="0716/4.67-124.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1234<br><img src="0716/4.67-1234.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>25<br><img src="0716/4.67-25.gif"><br></font>(George Sicherman)
+<td><font size=+2>1235<br><img src="0716/4.67-1235.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>245<br><img src="0716/4.67-245.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>12345<br><img src="0716/4.67-12345.gif"><br></font>(George Sicherman)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>236<br><img src="0716/4.67-236.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1246<br><img src="0716/4.67-1246.gif"><br></font>(George Sicherman)
+<td><font size=+2>12346<br><img src="0716/4.67-12346.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>137<br><img src="0716/4.67-137.gif"><br></font>(George Sicherman)
+<td><font size=+2>27<br><img src="0716/4.67-27.gif"><br></font>(George Sicherman)
+<td><font size=+2>237<br><img src="0716/4.67-237.gif"><br></font>(George Sicherman)
+<td><font size=+2>247<br><img src="0716/4.67-247.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2347<br><img src="0716/4.67-2347.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>267<br><img src="0716/4.67-267.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1367<br><img src="0716/4.67-1367.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>2367<br><img src="0716/4.67-2367.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2467<br><img src="0716/4.67-2467.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>38<br><img src="0716/4.67-38.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>138<br><img src="0716/4.67-138.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>368<br><img src="0716/4.67-368.gif"><br></font>(George Sicherman)
+<td><font size=+2>29<br><img src="0716/4.67-29.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>149<br><img src="0716/4.67-149.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>249<br><img src="0716/4.67-249.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1249<br><img src="0716/4.67-1249.gif"><br></font>(Maurizio Morandi)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>259<br><img src="0716/4.67-259.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1459<br><img src="0716/4.67-1459.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1379<br><img src="0716/4.67-1379.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>4 10<br><img src="0716/4.67-410.gif"><br></font>(Joe DeVincentis)
+<td><font size=+2>1 2 4 10<br><img src="0716/4.67-12410.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 3 4 10<br><img src="0716/4.67-13410.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 4 6 10<br><img src="0716/4.67-14610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>1 2 4 6 10<br><img src="0716/4.67-124610.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 11<br><img src="0716/4.67-311.gif"><br></font>(Joe DeVincentis)
+</TABLE><p>
+
+<tr align=center><td>
+
+<TABLE cellpadding=5><TR ALIGN=CENTER>
+<td><font size=+2>1 3 11<br><img src="0716/4.67-1311.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>2 3 9 11<br><img src="0716/4.67-23911.gif"><br></font>(George Sicherman)
+<td><font size=+2>4 6 12<br><img src="0716/4.67-4612.gif"><br></font>(George Sicherman)
+<td><font size=+2>2 7 12<br><img src="0716/4.67-2712.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 7 12<br><img src="0716/4.67-3712.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>3 8 12<br><img src="0716/4.67-3812.gif"><br></font>(Maurizio Morandi)
+<td><font size=+2>5 13<br><img src="0716/4.67-513.gif"><br></font>(Joe DeVincentis)
+</TABLE><p>
+
+</table>
+
+
+
+<HR><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 11/21/19.<font>
+
+</BODY></HTML>

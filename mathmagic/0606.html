@@ -1,0 +1,1031 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD>
+<TITLE>Math Magic</TITLE>
+<LINK REL="SHORTCUT ICON" HREF="../logos/mm.ico"></HEAD>
+
+<CENTER><H1>Problem of the Month (June 2006)</H1></CENTER><font size=+1>
+
+This month we consider a group of combinatorial games.  The two players each have a polyomino they can place.  The players take turns placing copies of their polyomino on vacant squares of a board.  The player who finds himself unable to move is the loser.  We are interested in playing this game where both players have tetrominoes to place, and the board is one or more rectangles.<p>
+
+For game theory novices, the question is who wins starting from a single rectangle.  For example, consider the example where <img src="0606/I.gif"> is playing <img src="0606/T.gif">.  Then <img src="0606/I.gif"> wins no matter who starts on a 4&times;4 board (the unique winning move for <img src="0606/I.gif"> is <img src="0606/IT44.gif" align=center> ).  It is harder to see, but the first player can win on a 6&times;4 board (the unique winning move for <img src="0606/T.gif"> is <img src="0606/TI46.gif" align=center>, and there are many winning moves for <img src="0606/I.gif"> ).  For each of the 15 pairs of tetrominoes, who wins starting from small rectangles?  Which winning moves are unique?<p>
+
+For game theory experts, the question is who wins starting with more than one rectangle.  To help determine this, each rectangle can be assigned a value, roughly how many moves a given polyomino wins by.  Positions in which neither player can win going first are assigned value 0.  In the example above, a 9&times;1 board has value 2 (since 2 copies of <img src="0606/I.gif"> will fit), and a 3&times;3 board has value -1 (since 1 copy of <img src="0606/T.gif"> will fit).  For larger rectangles, the values are not numbers, but can be symbolized inductively with brace notation, indicating what values each player can move to.  For example, a 4&times;2 board has value {1 | 0} since <img src="0606/I.gif"> can move to a position of value 1 (by moving to <img src="0606/IT24.gif" align=center> ) and <img src="0606/T.gif"> can move to a position with value 0 (by moving to <img src="0606/TI24.gif" align=center> ).<p>
+
+Simplifying games in brace notation is relatively hard.  We give a few simple rules here that will help with most small rectangles.  If a&lt;b, {a | b} is the "simplest" number between a and b, which means the integer with the smallest absolute value if there is one, or the dyadic rational with the smallest denominator.  If a&gt;b, {a | b}, cannot be simplified, and is said to have temperature a-b.  Since they pop up so often, we give a special names to {0 | 0} = *, the game with only one move by either player, and {0,* | 0,*} = **, the game with one or two moves by either player.  These are equivalent to Nim piles, and have temperature 0.<p>
+
+When playing with more than one rectangle, a player should play in the rectangle with the highest temperature, since they have the most to gain.  For example, continue our example by starting from rectangles of size 4&times;3, 4&times;2, and 7&times;2.  The values of these rectangles are {2 | -1}, {1 | 0}, and {&frac12; | -2} respectively.  If <img src="0606/I.gif"> starts, the game will go like this: <img src="0606/IT34.gif" align=center> <img src="0606/TI27.gif" align=center> <img src="0606/IT24.gif" align=center>, leaving value (2) + (-2) + (1) = 1, a win for <img src="0606/I.gif">.  If <img src="0606/T.gif"> starts, the game will go like this: <img src="0606/T34.gif" align=center> <img src="0606/IT27.gif" align=center> <img src="0606/TI24.gif" align=center>, leaving value (-1) + (&frac12;) + (0) = -&frac12;, a win for <img src="0606/T.gif">.  For each of the 15 pairs of tetrominoes, what are the values of small rectangles?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+For each of the 15 pairs of tetrominoes, a table of rectangles is given.  The color of the rectangle indicates the winner (yellow = second player, white = first player, color = only that player).  Unique winning moves are shown.  The value of some of the rectangled are also given.<p>
+
+
+<table border=1 align=center cellpadding=5><tr bgcolor=FFFFDD>
+<th><img src="0606/I.gif"><p><img src="0606/I.gif">
+<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13
+
+<tr align=center><th bgcolor=FFFFDD>1 
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCCC><img src="0606/IL14.gif"><br>*
+<td bgcolor=FFCCCC><img src="0606/IL15.gif"><br>*
+<td bgcolor=FFCCCC>*
+<td bgcolor=FFCCCC>*
+<td bgcolor=FFCCCC>**
+<td bgcolor=FFCCCC><img src="0606/II19.gif"><br>**
+<td bgcolor=FFCCCC><img src="0606/II110.gif"><br>**
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCCC><img src="0606/II112.gif"><br>***
+<td bgcolor=FFCCCC><img src="0606/II113.gif"><br>***
+
+<tr align=center><th bgcolor=FFFFDD>2 
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>3 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCCC>*
+<td bgcolor=FFCCCC>*
+<td bgcolor=FFCCCC>*
+<td bgcolor=FFCCCC>*
+<td bgcolor=FFCCCC>**
+<td bgcolor=FFCCCC>**
+<td bgcolor=FFCCCC>**
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCCC>***
+<td bgcolor=FFCCCC>***
+
+<tr align=center><th bgcolor=FFFFDD>4 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCCC>*
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCCC>*
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCCC>*
+
+<tr align=center><th bgcolor=FFFFDD>5 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCCC>*
+
+</table><p>
+
+
+
+
+<table border=1 align=center cellpadding=5><tr bgcolor=FFFFDD>
+<th><img src="0606/I.gif"><p><img src="0606/L.gif">
+<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13
+
+<tr align=center><th bgcolor=FFFFDD>1 
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCCC><img src="0606/IL14.gif"><br>1
+<td bgcolor=FFCCCC><img src="0606/IL15.gif"><br>1
+<td bgcolor=FFCCCC>1
+<td bgcolor=FFCCCC>1
+<td bgcolor=FFCCCC>2
+<td bgcolor=FFCCCC>2
+<td bgcolor=FFCCCC>2
+<td bgcolor=FFCCCC>2
+<td bgcolor=FFCCCC>3
+<td bgcolor=FFCCCC>3
+
+<tr align=center><th bgcolor=FFFFDD>2 
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td bgcolor=CCFFFF><img src="0606/LI23.gif"><br>-1
+<td><img src="0606/IL24.gif"><br>{1 | -1}
+<td bgcolor=CCFFFF><br>{* | -1}
+<td bgcolor=CCFFFF><br>{* | -1}
+<td bgcolor=CCFFFF> <img src="0606/LI27.gif"><br>{* | -2}
+<td><img src="0606/IL28.gif">
+<td><img src="0606/IL29.gif">
+<td><img src="0606/IL210.gif">
+<td bgcolor=CCFFFF>
+<td><img src="0606/IL212.gif">
+<td bgcolor=CCFFFF>
+
+<tr align=center><th bgcolor=FFFFDD>3 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCFFFF>-2
+<td><img src="0606/IL34.gif"><br>{2 | -1}
+<td><img src="0606/IL35.gif"><br>{0 | -2}
+<td><img src="0606/IL36.gif"><br>{0 | -3}
+<td bgcolor=CCFFFF>
+<td bgcolor=CCFFFF>
+<td bgcolor=CCFFFF>
+
+<tr align=center><th bgcolor=FFFFDD>4 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCFFFF>
+<td><img src="0606/IL45.gif">
+<td>
+<td><img src="0606/IL47.gif">
+
+<tr align=center><th bgcolor=FFFFDD>5 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCFFFF>
+
+</table><p>
+
+
+
+
+<table border=1 align=center cellpadding=5><tr bgcolor=FFFFDD>
+<th><img src="0606/I.gif"><p><img src="0606/T.gif">
+<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13
+
+<tr align=center><th bgcolor=FFFFDD>1 
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCCC><img src="0606/IL14.gif"><br>1
+<td bgcolor=FFCCCC><img src="0606/IL15.gif"><br>1
+<td bgcolor=FFCCCC>1
+<td bgcolor=FFCCCC>1
+<td bgcolor=FFCCCC>2
+<td bgcolor=FFCCCC>2
+<td bgcolor=FFCCCC>2
+<td bgcolor=FFCCCC>2
+<td bgcolor=FFCCCC>3
+<td bgcolor=FFCCCC>3
+
+<tr align=center><th bgcolor=FFFFDD>2 
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td bgcolor=CCFFCC><img src="0606/TI23.gif"><br>-1
+<td><img src="0606/IT24.gif"> <img src="0606/TI24.gif"><br>{1 | 0}
+<td><img src="0606/IT25.gif"><br>{1 | -1}
+<td><img src="0606/IT26.gif"> <img src="0606/TI26.gif"><br>{1 | -1}
+<td><img src="0606/IT27.gif"> <img src="0606/TI27.gif"><br>{&frac12; | -2}
+<td><img src="0606/TI28.gif">
+<td><img src="0606/IT29.gif"> <img src="0606/TI29.gif">
+<td bgcolor=FFCCCC><img src="0606/IT210.gif">
+<td bgcolor=CCFFCC><img src="0606/TI211.gif">
+<td><img src="0606/IT212.gif">
+<td>
+
+<tr align=center><th bgcolor=FFFFDD>3 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCFFCC><br>-1
+<td><img src="0606/IT34.gif"><br>{2 | -1}
+<td><img src="0606/IT35.gif"><br>{2 | -1 + {0,*}}
+<td>
+<td><img src="0606/IT37.gif">
+<td><img src="0606/IT38.gif">
+<td><img src="0606/IT39.gif">
+
+<tr align=center><th bgcolor=FFFFDD>4 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFCCCC><img src="0606/IT44.gif"><br>{{2|1} | 1}
+<td bgcolor=FFCCCC>
+<td><img src="0606/TI46.gif">
+<td>
+
+<tr align=center><th bgcolor=FFFFDD>5 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td><img src="0606/TI55.gif">
+
+</table><p>
+
+
+
+<table border=1 align=center cellpadding=5><tr bgcolor=FFFFDD>
+<th><img src="0606/I.gif"><p><img src="0606/S.gif">
+<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13
+
+<tr align=center><th bgcolor=FFFFDD>1 
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCCC><img src="0606/IL14.gif"><br>1
+<td bgcolor=FFCCCC><img src="0606/IL15.gif"><br>1
+<td bgcolor=FFCCCC>1
+<td bgcolor=FFCCCC>1
+<td bgcolor=FFCCCC>2
+<td bgcolor=FFCCCC>2
+<td bgcolor=FFCCCC>2
+<td bgcolor=FFCCCC>2
+<td bgcolor=FFCCCC>3
+<td bgcolor=FFCCCC>3
+
+<tr align=center><th bgcolor=FFFFDD>2 
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCFF><img src="0606/SI23.gif"><br>-1
+<td><img src="0606/IS24.gif"> <img src="0606/SI24.gif"><br>{1 | 0}
+<td><img src="0606/IS25.gif"><br>{1 | -1}
+<td><img src="0606/IS26.gif"> <img src="0606/SI26.gif"><br>{1 | -1}
+<td><img src="0606/IS27.gif"> <img src="0606/SI27.gif"><br>{&frac12; | -2}
+<td><img src="0606/SI28.gif">
+<td><img src="0606/IS29.gif"> <img src="0606/SI29.gif">
+<td bgcolor=FFCCCC><img src="0606/IS210.gif">
+<td bgcolor=FFCCFF><img src="0606/SI211.gif">
+<td><img src="0606/IS212.gif">
+<td>
+
+<tr align=center><th bgcolor=FFFFDD>3 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFCCFF><img src="0606/SI33.gif"><br>-1
+<td><img src="0606/IS34.gif"><br>{2 | -1}
+<td><img src="0606/IS35.gif"><br>{2 | -1}
+<td><br>{2 | -2}
+<td><br>{1 | -1&frac12;}
+<td>
+<td bgcolor=FFCCCC>
+
+<tr align=center><th bgcolor=FFFFDD>4 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFCCCC><img src="0606/IT44.gif"><br>1
+<td bgcolor=FFCCCC>
+<td bgcolor=FFCCCC>
+<td><img src="0606/SI47.gif">
+
+<tr align=center><th bgcolor=FFFFDD>5 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFCCCC>
+
+</table><p>
+
+
+
+
+<table border=1 align=center cellpadding=5><tr bgcolor=FFFFDD>
+<th><img src="0606/I.gif"><p><img src="0606/O.gif">
+<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13
+
+<tr align=center><th bgcolor=FFFFDD>1 
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCCC><img src="0606/IL14.gif"><br>1
+<td bgcolor=FFCCCC><img src="0606/IL15.gif"><br>1
+<td bgcolor=FFCCCC>1
+<td bgcolor=FFCCCC>1
+<td bgcolor=FFCCCC>2
+<td bgcolor=FFCCCC>2
+<td bgcolor=FFCCCC>2
+<td bgcolor=FFCCCC>2
+<td bgcolor=FFCCCC>3
+<td bgcolor=FFCCCC>3
+
+<tr align=center><th bgcolor=FFFFDD>2 
+<td bgcolor=CCCCCC>
+<td bgcolor=FFCC99><img src="0606/OI22.gif"><br>-1
+<td bgcolor=FFCC99><img src="0606/OI23.gif"><br>-1
+<td><img src="0606/IO24.gif"><br>{1 | -1}
+<td><img src="0606/IO25.gif"><br>{1 | -1}
+<td><br>{1 | -2}
+<td><img src="0606/OI27.gif"><br>{&frac12; | -2}
+<td><img src="0606/OI28.gif">
+<td bgcolor=FFCCCC><img src="0606/IO29.gif"> 
+<td><img src="0606/IO210.gif"> <img src="0606/OI210.gif">
+<td bgcolor=FFCC99>
+<td><img src="0606/IO212.gif">
+<td>
+
+<tr align=center><th bgcolor=FFFFDD>3 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFCC99><img src="0606/OI33.gif"><br>-1
+<td><img src="0606/IO34.gif"> <img src="0606/OI34.gif"><br>{2 | -&frac12;}
+<td><img src="0606/IO35.gif"><br>{2 | -&frac12;}
+<td><br>{2 | -1}
+<td><img src="0606/OI37.gif">
+<td><img src="0606/OI38.gif">
+<td bgcolor=FFCCCC>
+
+<tr align=center><th bgcolor=FFFFDD>4 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCCC>
+<td><img src="0606/OI46.gif">
+<td><img src="0606/OI47.gif">
+
+<tr align=center><th bgcolor=FFFFDD>5 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFCCCC>
+
+</table><p>
+
+
+
+<table border=1 align=center cellpadding=5><tr bgcolor=FFFFDD>
+<th><img src="0606/L.gif"><p><img src="0606/L.gif">
+<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13
+
+<tr align=center><th bgcolor=FFFFDD>1 
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>2 
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td bgcolor=CCFFFF><img src="0606/LT23.gif"><br>*
+<td bgcolor=CCFFFF><img src="0606/LL24.gif"><br>**
+<td bgcolor=CCFFFF><img src="0606/LL25.gif"><br>**
+<td bgcolor=FFFFDD>0
+<td bgcolor=CCFFFF><img src="0606/LL27.gif"><br>***
+<td bgcolor=CCFFFF><img src="0606/LL28.gif"><br>****
+<td bgcolor=CCFFFF>*
+<td bgcolor=FFFFDD>0
+<td bgcolor=CCFFFF>*****
+<td bgcolor=CCFFFF>***
+<td bgcolor=CCFFFF>***
+
+<tr align=center><th bgcolor=FFFFDD>3 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCFFFF><img src="0606/LT33.gif"><br>**
+<td bgcolor=FFFFDD>0
+<td bgcolor=CCFFFF>***
+<td bgcolor=CCFFFF>*
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>4 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>5 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+
+</table><p>
+
+
+
+<table border=1 align=center cellpadding=5><tr bgcolor=FFFFDD>
+<th><img src="0606/L.gif"><p><img src="0606/T.gif">
+<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13
+
+<tr align=center><th bgcolor=FFFFDD>1 
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>2 
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td><img src="0606/LT23.gif"> <img src="0606/TL23.gif"><br>*
+<td><img src="0606/TL24.gif"><br>{1 | 0}
+<td><img src="0606/TL25.gif"><br>{1 | 0,*}
+<td bgcolor=CCFFFF><img src="0606/LT26.gif"><br>{1 | *}
+<td><img src="0606/LT27.gif"> <img src="0606/TL27.gif"><br>{1+* | {0,*,{-1|1}}
+<td><img src="0606/TL28.gif">
+<td> <img src="0606/TL29.gif">
+<td bgcolor=CCFFFF>
+<td><img src="0606/TL211.gif">
+<td><img src="0606/TL212.gif">
+<td><img src="0606/TL213.gif">
+
+<tr align=center><th bgcolor=FFFFDD>3 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td> <img src="0606/LT33.gif"> <img src="0606/TL33.gif"><br>{0,* | 0}
+<td bgcolor=CCFFFF><br>{1 | *}
+<td><img src="0606/TL35.gif">
+<td><img src="0606/TL36.gif">
+<td bgcolor=CCFFFF>
+<td bgcolor=CCFFFF>
+<td bgcolor=CCFFFF>
+
+<tr align=center><th bgcolor=FFFFDD>4 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCFFFF>
+<td bgcolor=CCFFFF>
+<td bgcolor=CCFFFF>
+
+<tr align=center><th bgcolor=FFFFDD>5 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCFFFF>
+
+</table><p>
+
+
+
+<table border=1 align=center cellpadding=5><tr bgcolor=FFFFDD>
+<th><img src="0606/L.gif"><p><img src="0606/S.gif">
+<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13
+
+<tr align=center><th bgcolor=FFFFDD>1 
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>2 
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td><img src="0606/LS23.gif"> <img src="0606/SL23.gif"><br>*
+<td><img src="0606/SL24.gif"><br>{1 | 0}
+<td><img src="0606/SL25.gif"><br>{1 | 0,*}
+<td bgcolor=CCFFFF><img src="0606/LS26.gif"><br>{1 | *}
+<td><img src="0606/LS27.gif"> <img src="0606/SL27.gif"><br>{1+* | {0,*,{-1|1}}
+<td><img src="0606/SL28.gif">
+<td><img src="0606/SL29.gif">
+<td bgcolor=CCFFFF>
+<td><img src="0606/SL211.gif">
+<td><img src="0606/SL212.gif">
+<td><img src="0606/SL213.gif">
+
+<tr align=center><th bgcolor=FFFFDD>3 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCFFFF><img src="0606/LS33.gif"><br>{0,* | 0}
+<td bgcolor=CCFFFF><br>{1 | *}
+<td bgcolor=CCFFFF><br>{2 | {1|0}}
+<td><img src="0606/SL36.gif">
+<td bgcolor=CCFFFF>
+<td bgcolor=CCFFFF>
+<td bgcolor=CCFFFF>
+
+<tr align=center><th bgcolor=FFFFDD>4 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCFFFF>
+<td bgcolor=CCFFFF>
+<td bgcolor=CCFFFF>
+
+<tr align=center><th bgcolor=FFFFDD>5 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCFFFF>
+
+</table><p>
+
+
+
+<table border=1 align=center cellpadding=5><tr bgcolor=FFFFDD>
+<th><img src="0606/L.gif"><p><img src="0606/O.gif">
+<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13
+
+<tr align=center><th bgcolor=FFFFDD>1 
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>2 
+<td bgcolor=CCCCCC>
+<td bgcolor=FFCC99><img src="0606/OI22.gif"><br>-1
+<td><img src="0606/LS23.gif"> <img src="0606/OI23.gif"><br>*
+<td>{1 | -1}
+<td><img src="0606/LO25.gif"> <img src="0606/OL25.gif"><br>{1 | -1}
+<td><img src="0606/LO26.gif"> <img src="0606/OL26.gif"><br>{0,* | -2}
+<td><img src="0606/LO27.gif"> <img src="0606/OL27.gif"><br>{1+* | -1+*}
+<td><img src="0606/LO28.gif"> <img src="0606/OL28.gif">
+<td bgcolor=CCFFFF><img src="0606/LO210.gif">
+<td bgcolor=FFCC99>
+<td> 
+<td> 
+<td> 
+
+<tr align=center><th bgcolor=FFFFDD>3 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td><img src="0606/LS33.gif"> <img src="0606/OT33.gif"><br>{0,* | 0}
+<td bgcolor=CCFFFF><br>{1 | *}
+<td bgcolor=CCFFFF><br>{2 | 1+*}
+<td bgcolor=CCFFFF>
+<td bgcolor=CCFFFF>
+<td bgcolor=CCFFFF>
+<td bgcolor=CCFFFF>
+
+<tr align=center><th bgcolor=FFFFDD>4 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCFFFF>
+<td bgcolor=CCFFFF>
+<td><img src="0606/OL46.gif">
+
+<tr align=center><th bgcolor=FFFFDD>5 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCFFFF>
+
+</table><p>
+
+
+
+
+
+<table border=1 align=center cellpadding=5><tr bgcolor=FFFFDD>
+<th><img src="0606/T.gif"><p><img src="0606/T.gif">
+<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13
+
+<tr align=center><th bgcolor=FFFFDD>1 
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>2 
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td bgcolor=CCFFCC><img src="0606/TS23.gif"><br>*
+<td bgcolor=CCFFCC><img src="0606/TS24.gif"><br>*
+<td bgcolor=CCFFCC><img src="0606/TS25.gif"><br>**
+<td bgcolor=FFFFDD>0
+<td bgcolor=CCFFCC><img src="0606/TS27.gif"><br>***
+<td bgcolor=CCFFCC><img src="0606/TS28.gif"><br>*
+<td bgcolor=CCFFCC><img src="0606/TS29.gif"><br>*
+<td bgcolor=FFFFDD>0
+<td bgcolor=CCFFCC><img src="0606/TS211.gif"><br>***
+<td bgcolor=CCFFCC><img src="0606/TS212.gif"><br>***
+<td bgcolor=CCFFCC>**
+
+<tr align=center><th bgcolor=FFFFDD>3 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCFFCC><br>*
+<td bgcolor=CCFFCC><br>**
+<td bgcolor=CCFFCC><br>***
+<td bgcolor=CCFFCC><img src="0606/TT36.gif">
+<td bgcolor=CCFFCC>****
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>4 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td bgcolor=CCFFCC><img src="0606/TT45.gif"><br>**
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>5 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+</table><p>
+
+
+
+<table border=1 align=center cellpadding=5><tr bgcolor=FFFFDD>
+<th><img src="0606/T.gif"><p><img src="0606/S.gif">
+<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13
+
+<tr align=center><th bgcolor=FFFFDD>1 
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>2 
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td><img src="0606/TS23.gif"> <img src="0606/ST23.gif"><br>*
+<td><img src="0606/TS24.gif"> <img src="0606/ST24.gif"><br>*
+<td><img src="0606/TS25.gif"> <img src="0606/ST25.gif"><br>**
+<td bgcolor=FFFFDD>0
+<td><img src="0606/TS27.gif"> <img src="0606/ST27.gif"><br>***
+<td><img src="0606/TS28.gif"> <img src="0606/ST28.gif"><br>*
+<td><img src="0606/TS29.gif"> <img src="0606/ST29.gif"><br>*
+<td bgcolor=FFFFDD>0
+<td><img src="0606/TS211.gif"> <img src="0606/ST211.gif"><br>***
+<td><img src="0606/TS212.gif"> <img src="0606/ST212.gif"><br>***
+<td><img src="0606/TS213.gif"> <img src="0606/ST213.gif"><br>**
+
+<tr align=center><th bgcolor=FFFFDD>3 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td><img src="0606/ST33.gif"><br>*
+<td><br>**
+<td bgcolor=CCFFCC><br>{0,{1|0} | *}
+<td>
+<td bgcolor=CCFFCC>
+<td bgcolor=CCFFCC>
+<td bgcolor=CCFFCC>
+
+<tr align=center><th bgcolor=FFFFDD>4 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td><img src="0606/ST45.gif">
+<td bgcolor=CCFFCC>
+
+<tr align=center><th bgcolor=FFFFDD>5 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCFFCC>
+</table><p>
+
+
+
+<table border=1 align=center cellpadding=5><tr bgcolor=FFFFDD>
+<th><img src="0606/T.gif"><p><img src="0606/O.gif">
+<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13
+
+<tr align=center><th bgcolor=FFFFDD>1 
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>2 
+<td bgcolor=CCCCCC>
+<td bgcolor=FFCC99><img src="0606/OI22.gif"><br>-1
+<td><img src="0606/TO23.gif"> <img src="0606/OT23.gif"><br>*
+<td><img src="0606/TO24.gif"><br>{0 | -1}
+<td><img src="0606/TO25.gif"> <img src="0606/OT25.gif"><br>{0,* | -1}
+<td bgcolor=FFCC99><img src="0606/OT26.gif"><br>{* | -2}
+<td><img src="0606/TO27.gif"> <img src="0606/OT27.gif">
+<td><img src="0606/TO28.gif">
+<td><img src="0606/TO29.gif">
+<td bgcolor=FFCC99>
+<td><img src="0606/TO211.gif">
+<td><img src="0606/TO212.gif"> 
+<td><img src="0606/TO213.gif"> 
+
+<tr align=center><th bgcolor=FFFFDD>3 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td><img src="0606/OT33.gif"><br>*
+<td><img src="0606/OT34.gif"><br>**
+<td bgcolor=CCFFCC><br>{1 | *}
+<td><img src="0606/OT36.gif">
+<td bgcolor=CCFFCC>
+<td bgcolor=CCFFCC>
+<td bgcolor=CCFFCC>
+
+<tr align=center><th bgcolor=FFFFDD>4 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td><img src="0606/TO44.gif"> <img src="0606/OT44.gif">
+<td bgcolor=CCFFCC>
+<td><img src="0606/OT46.gif">
+
+<tr align=center><th bgcolor=FFFFDD>5 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCFFCC>
+</table><p>
+
+
+
+<table border=1 align=center cellpadding=5><tr bgcolor=FFFFDD>
+<th><img src="0606/S.gif"><p><img src="0606/S.gif">
+<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13
+
+<tr align=center><th bgcolor=FFFFDD>1 
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>2 
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCFF><img src="0606/SO23.gif"><br>*
+<td bgcolor=FFCCFF><img src="0606/SO24.gif"><br>*
+<td bgcolor=FFCCFF><img src="0606/SO25.gif"><br>**
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCFF><img src="0606/SO27.gif"><br>***
+<td bgcolor=FFCCFF><img src="0606/SO28.gif"><br>*
+<td bgcolor=FFCCFF><img src="0606/SO29.gif"><br>*
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCFF><img src="0606/SO211.gif"><br>***
+<td bgcolor=FFCCFF><img src="0606/SO212.gif"><br>***
+<td bgcolor=FFCCFF><img src="0606/SO213.gif"><br>**
+
+<tr align=center><th bgcolor=FFFFDD>3 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFCCFF><img src="0606/SO33.gif"><br>*
+<td bgcolor=FFCCFF>**
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCFF>***
+<td bgcolor=FFCCFF>*
+<td bgcolor=FFCCFF>*
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>4 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCFF><img src="0606/ST45.gif"><br>*
+<td bgcolor=FFCCFF><img src="0606/SS46.gif"><br>**
+<td bgcolor=FFCCFF>***
+
+<tr align=center><th bgcolor=FFFFDD>5 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCCFF>***
+</table><p>
+
+
+
+<table border=1 align=center cellpadding=5><tr bgcolor=FFFFDD>
+<th><img src="0606/S.gif"><p><img src="0606/O.gif">
+<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13
+
+<tr align=center><th bgcolor=FFFFDD>1 
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>2 
+<td bgcolor=CCCCCC>
+<td bgcolor=FFCC99><img src="0606/OS22.gif"><br>-1
+<td><img src="0606/SO23.gif"> <img src="0606/OS23.gif"><br>*
+<td><img src="0606/SO24.gif"><br>{0 | -1}
+<td><img src="0606/SO25.gif"> <img src="0606/OS25.gif"><br>{0,* | -1}
+<td bgcolor=FFCC99><img src="0606/OS26.gif"><br>{* | -2}
+<td><img src="0606/SO27.gif"> <img src="0606/OS27.gif">
+<td><img src="0606/SO28.gif">
+<td><img src="0606/SO29.gif">
+<td bgcolor=FFCC99>
+<td><img src="0606/SO211.gif">
+<td><img src="0606/SO212.gif"> 
+<td><img src="0606/SO213.gif"> 
+
+<tr align=center><th bgcolor=FFFFDD>3 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td><img src="0606/SO33.gif"> <img src="0606/OS33.gif"><br>*
+<td><img src="0606/OS34.gif"><br>**
+<td bgcolor=FFFFDD>0
+<td><img src="0606/OS36.gif">
+<td>
+<td>
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>4 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFCC99><img src="0606/OS44.gif">
+<td bgcolor=FFCCFF>
+<td><img src="0606/SO46.gif">
+
+<tr align=center><th bgcolor=FFFFDD>5 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+</table><p>
+
+
+
+<table border=1 align=center cellpadding=5><tr bgcolor=FFFFDD>
+<th><img src="0606/O.gif"><p><img src="0606/O.gif">
+<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13
+
+<tr align=center><th bgcolor=FFFFDD>1 
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>2 
+<td bgcolor=CCCCCC>
+<td bgcolor=FFCC99><img src="0606/OS22.gif"><br>*
+<td bgcolor=FFCC99><img src="0606/OS23.gif"><br>*
+<td bgcolor=FFCC99><img src="0606/OO24.gif"><br>**
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCC99><img src="0606/OS26.gif"><br>***
+<td bgcolor=FFCC99>*
+<td bgcolor=FFCC99>*
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCC99><img src="0606/OO210.gif"><br>***
+<td bgcolor=FFCC99>***
+<td bgcolor=FFCC99>**
+<td bgcolor=FFCC99><img src="0606/OO213.gif"><br>**
+
+<tr align=center><th bgcolor=FFFFDD>3 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFCC99><img src="0606/OS33.gif"><br>*
+<td bgcolor=FFCC99><img src="0606/OS34.gif"><br>**
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCC99><img src="0606/OS36.gif"><br>***
+<td bgcolor=FFCC99>*
+<td bgcolor=FFCC99>*
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCC99><img src="0606/OO310.gif"><br>***
+<td bgcolor=FFCC99>***
+<td bgcolor=FFCC99>**
+<td bgcolor=FFCC99><img src="0606/OO313.gif"><br>**
+
+<tr align=center><th bgcolor=FFFFDD>4 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFCC99><img src="0606/OS44.gif"><br>*
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFCC99>***
+<td bgcolor=FFCC99>**
+<td bgcolor=FFCC99>*
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>5 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+<td bgcolor=FFFFDD>0
+
+<tr align=center><th bgcolor=FFFFDD>6 
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=CCCCCC>
+<td bgcolor=FFCC99><img src="0606/OO66.gif"><br>****
+</table><p>
+
+
+
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 6/12/06.<font>
+
+<!-- Stats Script Start -->
+<script type="text/javascript">
+<!--
+var FCS_Account="580";
+var FCS_Server="http://www.statisfy.com/";
+var FCS_Page="DetectName";
+var FCS_Url="DetectUrl";
+var FCS_Offset="0";
+var FCS_Interval="24";
+var FCS_Cntimg="100";
+// -->
+</script>
+<script type="text/javascript" src="http://www.statisfy.com//js.php?usr=580">
+</script>
+<noscript>
+<a href="http://www.statisfy.com/" target="_blank">
+<img src="http://www.statisfy.com//stat.php?usr=580&offset=0&interval=24&cntimg=100" border="0" title="Statisfy Free Web Stats!" alt="Statisfy Free Web Stats!" /></a>
+</noscript>
+<!-- Stats Script  End  --></BODY></HTML>
+
+
+

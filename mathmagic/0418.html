@@ -1,0 +1,282 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (April 2018)</H1></CENTER>
+
+Given an n &times; m rectangle, how can we pack the 9 polyominoes below into it to maximize the total of the numbers packed?
+
+<TABLE align=center><TR>
+<TD><img src="0418/1.gif">
+<TD><img src="0418/2.gif">
+<TD><img src="0418/3.gif">
+<TD><img src="0418/4.gif">
+<TD><img src="0418/5.gif">
+<TD><img src="0418/6.gif">
+<TD><img src="0418/7.gif">
+<TD><img src="0418/8.gif">
+<TD><img src="0418/9.gif">
+</TABLE><p>
+
+We break ties in the total by preferring larger polyominoes.
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+George Sicherman, Maurizio Morandi, and Joe DeVincentis sent improvements. <p>
+
+The best known solutions are shown below. <p>
+
+<center><font size=+3>Rectangles</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n \ m<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12
+<tr align=center><th bgcolor=FFFFDD>5
+<td><img src="0418/1x5.gif"><br>1
+<td><img src="0418/2x5.gif"><br>2
+<td><img src="0418/3x5.gif"><br>3
+<td><img src="0418/4x5.gif"><br>4
+<td><img src="0418/5x5.gif"><br>5
+<td>
+<td>
+<td>
+<td>
+<td>
+<td>
+<td>
+<tr align=center><th bgcolor=FFFFDD>6
+<td><img src="0418/1x6.gif"><br>1
+<td><img src="0418/2x6.gif"><br>2
+<td><img src="0418/3x6.gif"><br>3
+<td><img src="0418/4x6.gif"><br>6
+<td><img src="0418/5x6.gif"><br>7
+<td><img src="0418/6x6.gif"><br>8
+<td>
+<td>
+<td>
+<td>
+<td>
+<td>
+<tr align=center><th bgcolor=FFFFDD>7
+<td><img src="0418/1x7.gif"><br>1
+<td><img src="0418/2x7.gif"><br>2
+<td><img src="0418/3x7.gif"><br>3
+<td><img src="0418/4x7.gif"><br>6
+<td><img src="0418/5x7.gif"><br>8 (GS)
+<td><img src="0418/6x7.gif"><br>9
+<td><img src="0418/7x7.gif"><br>11 (GS)
+<td>
+<td>
+<td>
+<td>
+<td>
+<tr align=center><th bgcolor=FFFFDD>8
+<td><img src="0418/1x8.gif"><br>1
+<td><img src="0418/2x8.gif"><br>2
+<td><img src="0418/3x8.gif"><br>4
+<td><img src="0418/4x8.gif"><br>8
+<td><img src="0418/5x8.gif"><br>9
+<td><img src="0418/6x8.gif"><br>12
+<td><img src="0418/7x8.gif"><br>14 (GS)
+<td><img src="0418/8x8.gif"><br>16
+<td>
+<td>
+<td>
+<td>
+<tr align=center><th bgcolor=FFFFDD>9
+<td><img src="0418/1x9.gif"><br>1
+<td><img src="0418/2x9.gif"><br>2
+<td><img src="0418/3x9.gif"><br>4
+<td><img src="0418/4x9.gif"><br>8
+<td><img src="0418/5x9.gif"><br>12
+<td><img src="0418/6x9.gif"><br>13 (GS)
+<td><img src="0418/7x9.gif"><br>17
+<td><img src="0418/8x9.gif"><br>18 (JD)
+<td><img src="0418/9x9.gif"><br>21
+<td>
+<td>
+<td>
+<tr align=center><th bgcolor=FFFFDD>10
+<td><img src="0418/1x10.gif"><br>2
+<td><img src="0418/2x10.gif"><br>4
+<td><img src="0418/3x10.gif"><br>6
+<td><img src="0418/4x10.gif"><br>11
+<td><img src="0418/5x10.gif"><br>13
+<td><img src="0418/6x10.gif"><br>18
+<td><img src="0418/7x10.gif"><br>20
+<td><img src="0418/8x10.gif"><br>22
+<td><img src="0418/9x10.gif"><br>24
+<td><img src="0418/10x10.gif"><br>29
+<td>
+<td>
+<tr align=center><th bgcolor=FFFFDD>11
+<td><img src="0418/1x11.gif"><br>2
+<td><img src="0418/2x11.gif"><br>4
+<td><img src="0418/3x11.gif"><br>6
+<td><img src="0418/4x11.gif"><br>11
+<td><img src="0418/5x11.gif"><br>15
+<td><img src="0418/6x11.gif"><br>19
+<td><img src="0418/7x11.gif"><br>21
+<td><img src="0418/8x11.gif"><br>23
+<td><img src="0418/9x11.gif"><br>27 (GS)
+<td><img src="0418/10x11.gif"><br>31
+<td><img src="0418/11x11.gif"><br>34 (GS)
+<td>
+<tr align=center><th bgcolor=FFFFDD>12
+<td><img src="0418/1x12.gif"><br>2
+<td><img src="0418/2x12.gif"><br>4
+<td><img src="0418/3x12.gif"><br>6
+<td><img src="0418/4x12.gif"><br>12
+<td><img src="0418/5x12.gif"><br>16
+<td><img src="0418/6x12.gif"><br>20
+<td><img src="0418/7x12.gif"><br>22
+<td><img src="0418/8x12.gif"><br>25 (MM)
+<td><img src="0418/9x12.gif"><br>29 (GS)
+<td><img src="0418/10x12.gif"><br>36
+<td><img src="0418/11x12.gif"><br>38
+<td><img src="0418/12x12.gif"><br>40 (GS)
+<tr align=center><th bgcolor=FFFFDD>13
+<td><img src="0418/1x13.gif"><br>2 (GS)
+<td><img src="0418/2x13.gif"><br>4 (GS)
+<td><img src="0418/3x13.gif"><br>7 (GS)
+<td><img src="0418/4x13.gif"><br>13 (GS)
+<td><img src="0418/5x13.gif"><br>17 (GS)
+<td><img src="0418/6x13.gif"><br>21 (GS)
+<td><img src="0418/7x13.gif"><br>23 (GS)
+<td><img src="0418/8x13.gif"><br>26 (MM)
+<td><img src="0418/9x13.gif"><br>31 (GS)
+<td><img src="0418/10x13.gif"><br>38
+<td><img src="0418/11x13.gif"><br>40
+<td><img src="0418/12x13.gif"><br>43 (GS)
+<tr align=center><th bgcolor=FFFFDD>14
+<td><img src="0418/1x14.gif"><br>2 (GS)
+<td><img src="0418/2x14.gif"><br>4 (GS)
+<td><img src="0418/3x14.gif"><br>7 (GS)
+<td><img src="0418/4x14.gif"><br>14 (GS)
+<td><img src="0418/5x14.gif"><br>18 (GS)
+<td><img src="0418/6x14.gif"><br>24 (GS)
+<td><img src="0418/7x14.gif"><br>26 (GS)
+<td><img src="0418/8x14.gif"><br>30 (GS)
+<td><img src="0418/9x14.gif"><br>34 (MM)
+<td><img src="0418/10x14.gif"><br>40 (GS)
+<td><img src="0418/11x14.gif"><br>44 (MM)
+<td><img src="0418/12x14.gif"><br>48 (MM)
+<tr align=center><th bgcolor=FFFFDD>15
+<td><img src="0418/1x15.gif"><br>3 (GS)
+<td><img src="0418/2x15.gif"><br>6 (GS)
+<td><img src="0418/3x15.gif"><br>9 (GS)
+<td><img src="0418/4x15.gif"><br>18 (GS)
+<td><img src="0418/5x15.gif"><br>21 (GS)
+<td><img src="0418/6x15.gif"><br>25 (GS)
+<td><img src="0418/7x15.gif"><br>28 (GS)
+<td><img src="0418/8x15.gif"><br>36 (GS)
+<td><img src="0418/9x15.gif"><br>39 (GS)
+<td><img src="0418/10x15.gif"><br>43 (GS)
+<td><img src="0418/11x15.gif"><br>46 (MM)
+<td><img src="0418/12x15.gif"><br>54 (MM)
+</table><p>
+
+<center><font size=+3>Larger Squares</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center>
+<td>n=13<br><img src="0418/13x13.gif"><br>47 (MM)
+<td>n=14<br><img src="0418/14x14.gif"><br>57
+<td>n=15<br><img src="0418/15x15.gif"><br>64 (MM)
+<td>n=16<br><img src="0418/16x16.gif"><br>75 (MM)
+</table>
+
+<table align=center border=1 cellpadding=5>
+<tr align=center>
+<td>n=17<br><img src="0418/17x17.gif"><br>82 (MM)
+<td>n=18<br><img src="0418/18x18.gif"><br>94 (MM)
+<td>n=19<br><img src="0418/19x19.gif"><br>106 (MM)
+</table>
+
+<table align=center border=1 cellpadding=5>
+<tr align=center>
+<td>n=20<br><img src="0418/20x20.gif"><br>117 (MM)
+<td>n=21<br><img src="0418/21x21.gif"><br>130 (MM)
+<td>n=22<br><img src="0418/22x22.gif"><br>144 (MM)
+</table><p>
+
+<center><font size=+3>Triangles</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center>
+<td>n=5<br><img src="0418/t5.gif"><br>1
+<td>n=6<br><img src="0418/t6.gif"><br>4
+<td>n=7<br><img src="0418/t7.gif"><br>5
+<td>n=8<br><img src="0418/t8.gif"><br>6
+<td>n=9<br><img src="0418/t9.gif"><br>8
+<td>n=10<br><img src="0418/t10.gif"><br>12
+<td>n=11<br><img src="0418/t11.gif"><br>14
+</table>
+
+<table align=center border=1 cellpadding=5>
+<tr align=center>
+<td>n=12<br><img src="0418/t12.gif"><br>17 (GS)
+<td>n=13<br><img src="0418/t13.gif"><br>21 (GS)
+<td>n=14<br><img src="0418/t14.gif"><br>24 (MM)
+<td>n=15<br><img src="0418/t15.gif"><br>28 (MM)
+<td>n=16<br><img src="0418/t16.gif"><br>34 (MM)
+</table>
+
+<table align=center border=1 cellpadding=5>
+<tr align=center>
+<td>n=17<br><img src="0418/t17.gif"><br>38 (GS)
+<td>n=18<br><img src="0418/t18.gif"><br>42 (MM)
+<td>n=19<br><img src="0418/t19.gif"><br>47 (MM)
+<td>n=20<br><img src="0418/t20.gif"><br>53 (GS)
+</table><p>
+
+<center><font size=+3>Pyramids</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center>
+<td>n=3<br><img src="0418/p3.gif"><br>1
+<td>n=4<br><img src="0418/p4.gif"><br>2
+<td>n=5<br><img src="0418/p5.gif"><br>4 (GS)
+<td>n=6<br><img src="0418/p6.gif"><br>6 (GS)
+<td>n=7<br><img src="0418/p7.gif"><br>9
+<td>n=8<br><img src="0418/p8.gif"><br>13 (GS)
+<td>n=9<br><img src="0418/p9.gif"><br>17 (GS)
+</table>
+
+<table align=center border=1 cellpadding=5>
+<tr align=center>
+<td>n=10<br><img src="0418/p10.gif"><br>22 (GS)
+<td>n=11<br><img src="0418/p11.gif"><br>27 (MM)
+<td>n=12<br><img src="0418/p12.gif"><br>34 (GS)
+<td>n=13<br><img src="0418/p13.gif"><br>40 (GS)
+</table>
+
+<table align=center border=1 cellpadding=5>
+<tr align=center>
+<td>n=14<br><img src="0418/p14.gif"><br>48 (MM)
+<td>n=15<br><img src="0418/p15.gif"><br>55 (GS)
+<td>n=16<br><img src="0418/p16.gif"><br>63 (GS)
+</table><p>
+
+<center><font size=+3>Diamonds</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center>
+<td>n=3<br><img src="0418/d3.gif"><br>1 (GS)
+<td>n=4<br><img src="0418/d4.gif"><br>3 (GS)
+<td>n=5<br><img src="0418/d5.gif"><br>7 (GS)
+<td>n=6<br><img src="0418/d6.gif"><br>11 (GS)
+<td>n=7<br><img src="0418/d7.gif"><br>17 (GS)
+</table>
+
+<table align=center border=1 cellpadding=5>
+<tr align=center>
+<td>n=8<br><img src="0418/d8.gif"><br>24 (MM)
+<td>n=9<br><img src="0418/d9.gif"><br>32 (GS)
+<td>n=10<br><img src="0418/d10.gif"><br>41 (MM)
+</table>
+
+<table align=center border=1 cellpadding=5>
+<tr align=center>
+<td>n=11<br><img src="0418/d11.gif"><br>52 (MM)
+<td>n=12<br><img src="0418/d12.gif"><br>63 (MM)
+<td>n=13<br><img src="0418/d13.gif"><br>76 (GS)
+</table>
+
+<HR><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 4/26/18.<font>
+
+
+</BODY></HTML>

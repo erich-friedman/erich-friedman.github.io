@@ -1,0 +1,304 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+<CENTER><H1>Problem of the Month (August 2005)</H1></CENTER>
+
+One of the best-known recreational math puzzles of all time is finding a <b>knight tour</b> of all 64 squares on a 8&times;8 chessboard:<p>
+
+<center><img src="0805/tour.gif"></center><p>
+
+This month, we investigate <b>trivial knight tours</b> (TNTs), knight tours with the property that the only squares on the tour which are a knight's move apart are neighbours on the tour.  Thus after the first knight move, all further knight moves in the loop are determined.  The problem is to find the longest such tour for a given board.<p>
+
+Jonathan Welton, who suggested this problem, has found TNTs on square chessboards from 3&times;3 to 10&times;10, and shown them to be maximal by exhaustive search:<p>
+
+<center><table cellpadding=10><tr align=center><td><img src="0805/n3x3.gif"><p>length 8<td><img src="0805/n4x4.gif"><p>length 10<td><img src="0805/n5x5.gif"><p>length 16<td><img src="0805/n6x6.gif"><p>length 20<td><img src="0805/n7x7.gif"><p>length 22</tr></table></center>
+
+<center><table cellpadding=10><tr align=center><td><img src="0805/n8x8.gif"><p>length 32<td><img src="0805/n9x9.gif"><p>length 40<td><img src="0805/n10x10.gif"><p>length 48</tr></table></center><p>
+
+What are the maximal TNTs on larger square boards?  What about rectangular boards?  What about paths instead of cycles?<p>
+
+What are the maximal trivial tours for other chess pieces: rooks, bishops, kings, and queens?  What about other "fairy chess" pieces?
+
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+<font size=+3>Knights</font><p>
+
+<center><font size=+2>Maximum Length of Trivial Knight<br>Tour of m &times; n Rectangles</font></center>
+<center><TABLE BORDER cellpadding=4 bgcolor=lightyellow><TR bgcolor=palegreen><th>m \ n<th width=20>3<th width=20>4<th width=20>5<th width=20>6<th width=20>7<th width=20>8<th width=20>9<th width=20>10</TR><TR align=center><th bgcolor=palegreen>3<td><a href="0805/n3x3.gif"><font color=brown>8</a><td><td><td><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>4<td><a href="0805/n4x3.gif"><font color=brown>10</a><td><a href="0805/n4x4.gif"><font color=brown>10</a><td><td><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>5<td><font color=brown>10<td><font color=brown>10<td><a href="0805/n5x5.gif"><font color=brown>16</a><td><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>6<td><font color=brown>10<td><font color=brown>10<td><font color=brown>16<td><a href="0805/n6x6.gif"><font color=brown>20</a><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>7<td><a href="0805/n7x3.gif"><font color=brown>12</a><td><a href="0805/n7x4.gif"><font color=green>14</a><td><font color=brown>16<td><a href="0805/n7x6.gif"><font color=brown>22</a><td><a href="0805/n7x7.gif"><font color=brown>22</a><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>8<td><a href="0805/n8x3.gif"><font color=brown>14</a><td><a href="0805/n8x4.gif"><font color=brown>16</a><td><a href="0805/n8x5.gif"><font color=brown>18</a><td><font color=brown>22<td><font color=brown>26<td><a href="0805/n8x8.gif"><font color=brown>32</a><td><td></TR>
+<TR align=center><th bgcolor=palegreen>9<td><font color=brown>14<td><a href="0805/n9x4.gif"><font color=brown>18</a><td><a href="0805/n9x5.gif"><font color=brown>20</a><td><font color=brown>28<td><font color=brown>30<td><font color=brown><font color=brown>34<td><a href="0805/n9x9.gif"><font color=brown>40</a><td></TR>
+<TR align=center><th bgcolor=palegreen>10<td><a href="0805/n10x3.gif"><font color=brown>18</a><td><a href="0805/n10x4.gif"><font color=brown>20</a><td><a href="0805/n10x5.gif"><font color=brown>22</a><td><font color=brown>32<td><font color=brown>34<td><font color=green>38<td><font color=green>44<td><a href="0805/n10x10.gif"><font color=brown>48</a></TR>
+<TR align=center><th bgcolor=palegreen>11<td><font color=brown>18<td><a href="0805/n11x4.gif"><font color=green>22</a><td><font color=brown>24<td><font color=brown>34<td><font color=brown>38<td><font color=green>42<td><td></TR>
+<TR align=center><th bgcolor=palegreen>12<td><a href="0805/n12x3.gif"><font color=brown>22</a><td><font color=brown>22<td><font color=brown>28<td><font color=green>34<td><font color=green>40<td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>13<td><font color=brown>22<td><font color=brown>26<td><font color=brown>30<td><font color=green>40<td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>14<td><a href="0805/n14x3.gif"><font color=brown>24</a><td><font color=brown>28<td><font color=green>30<td><font color=green>44<td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>15<td><a href="0805/n15x3.gif"><font color=brown>26</a><td><font color=brown>30<td><font color=green>32<td><font color=green>46<td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>16<td><font color=brown>28<td><font color=brown>30<td><font color=green>36<td><td> <td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>17<td><font color=brown>30<td><font color=brown>32<td><font color=green>38<td><td> <td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>18<td><font color=brown>32<td><font color=brown>36<td><font color=green>40<td><td> <td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>19<td><font color=brown>34<td><font color=green>38<td><td><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>20<td><font color=brown>36<td><font color=green>40<td><td><td><td><td><td></TR>
+</table>
+<font color=brown>Jonathan Welton</font><br>
+<font color=green>Dave Langers</font></center><p>
+
+Here are the smallest known 3-regular and 4-regular realizations for knights:<p>
+
+<center><table cellpadding=10><tr align=center><td><img src="0805/n-3.gif"><br>(Tino Jonker)<td><img src="0805/n-4.gif"><br>(Tino Jonker)</tr></table></center><p>
+
+In 2009, Jonathan Welton found the disjoint tours below that have 24 knights on a 7&times;7 board and a 4&times;12 board:<p>
+
+<table align=center><tr><td><img src="0805/n-disjoint.jpg"><td width=20><td><img src="0805/n12x4.gif"></table><p>
+
+
+
+<font size=+3>Queens</font><p>
+
+<center><font size=+2>Maximum Length of Trivial Queen<br>Tour of m &times; n Rectangles</font></center>
+<center><TABLE BORDER cellpadding=4 bgcolor=lightyellow><TR bgcolor=palegreen><th>m \ n<th width=20>1<th width=20>2<th width=20>3<th width=20>4<th width=20>5<th width=20>6<th width=20>7<th width=20>8<th width=20>9<th width=20>10</TR><TR align=center><th bgcolor=palegreen>2<td>0<td><a href="0805/q2x2.gif">3</a><td><td><td><td><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>3<td>3<td><a href="0805/q3x2.gif">4</a><td><a href="0805/q3x3.gif">4</a><td><td><td><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>4<td>3<td>4<td><a href="0805/q4x3.gif">4</a><td><a href="0805/q4x4.gif">6</a><td><td><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>5<td>3<td>4<td><a href="0805/q5x3.gif">6</a><td><a href="0805/q5x4.gif">6</a><td><a href="0805/q5x5.gif">7</a><td><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>6<td>3<td>4<td>6<td><a href="0805/q6x4.gif">8</a><td><a href="0805/q6x5.gif">8</a><td><a href="0805/q6x6.gif">9</a><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>7<td>3<td>4<td>6<td>8<td><a href="0805/q7x5.gif">9</a><td><a href="0805/q7x6.gif">10</a><td><a href="0805/q7x7.gif">11</a><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>8<td>3<td>4<td>6<td>8<td><a href="0805/q8x5.gif">10</a><td><a href="0805/q8x6.gif">11</a><td><a href="0805/q8x7.gif">12</a><td><a href="0805/q8x8.gif">13</a><td><td></TR>
+<TR align=center><th bgcolor=palegreen>9<td>3<td>4<td>6<td>8<td>10<td><a href="0805/q9x6.gif">12</a><td><a href="0805/q9x7.gif">13</a><td><a href="0805/q9x8.gif">14</a><td><font color=green>14<td></TR>
+<TR align=center><th bgcolor=palegreen>10<td>3<td>4<td>6<td>8<td>10<td>12</a><td><a href="0805/q10x7.gif"><font color=green>14</a><td><font color=green>14<td><a href="0805/q10x9.gif"><font color=green>16</a><td><font color=green>16</TR>
+<TR align=center><th bgcolor=palegreen>11<td>3<td>4<td>6<td>8<td>10<td>12</a><td><font color=green>14<td><a href="0805/q11x8.gif"><font color=green>15</a><td><font color=green>16<td></TR>
+<TR align=center><th bgcolor=palegreen>12<td>3<td>4<td>6<td>8<td>10<td>12</a><td><font color=green>14<td><a href="0805/q12x8.gif"><font color=green>16</a><td><td></TR>
+</table>
+<font color=green>Dave Langers</font></center><p>
+
+Ed Pegg suggested that we look for other graphs besides cycles, the only connected 2-regular graphs.  The next natural candidates are the disconnected 2-regular graphs.  Here are the smallest known boards that a queen can realize for the disconnected 2-regular graphs of size 6 through 9.<p>
+
+<center><table cellpadding=10><tr align=center><td><font size=+3>6<td><img src="0805/q33.gif"><br>(Dave Langers)<td><font size=+3>7<td><img src="0805/q43.gif"><br>(Dave Langers)<td><font size=+3>8<td><img src="0805/q44.gif"><br>(Dave Langers)<td><img src="0805/q53.gif"><br>(Dave Langers)</tr></table></center>
+
+<center><table cellpadding=10><tr align=center><td><font size=+3>9<td><img src="0805/q333.gif"><br>(Dave Langers)<td><img src="0805/q54.gif"><br>(Dave Langers)<td><img src="0805/q63.gif"><br>(Dave Langers)</tr></table></center><p>
+
+
+Here are the smallest known boards that a queen can realize for the 3-regular graphs of size 4, 6, 8, and 10.  Can anyone improve these?<p>
+
+<center><table cellpadding=10><tr align=center><td><font size=+3>4<td><img src="0805/q-41.gif"><td><font size=+3>6<td><img src="0805/q-61.gif"><td><img src="0805/q-62.gif"><br>(Dave Langers)</tr></table></center>
+
+<center><table cellpadding=10><tr align=center><td><font size=+3>8<td><img src="0805/q-84.gif"><td><img src="0805/q-82.gif"><br>(Dave Langers)<td><img src="0805/q-83.gif"><br>(Dave Langers)<td><img src="0805/q-85.gif"><br>(Dave Langers)<td><img src="0805/q-81.gif"><br>(Dave Langers)<td><img src="0805/q-86.gif"><br>(Dave Langers)</tr></table></center>
+
+<center><table cellpadding=10><tr align=center><td><font size=+3>10<td><img src="0805/q-107.gif"><td><img src="0805/q-1014.gif"><td><img src="0805/q-103.gif"><td><img src="0805/q-105.gif"></tr></table></center>
+
+<center><table cellpadding=10><tr align=center><td><img src="0805/q-1017.gif"><td><img src="0805/q-1016.gif"><td><img src="0805/q-1015.gif"><br>(Dave Langers)<td><img src="0805/q-106.gif"><br>(Dave Langers)<td><img src="0805/q-108.gif"><br>(Dave Langers)</tr></table></center>
+
+<center><table cellpadding=10><tr align=center><td><img src="0805/q-1011.gif"><br>(Dave Langers)<td><img src="0805/q-1019.gif"><br>(Daniele Degiorgi)<td><img src="0805/q-1018.gif"><br>(Dave Langers)<td><img src="0805/q-109.gif"><br>(Dave Langers)<td><img src="0805/q-1013.gif"><br>(Dave Langers)</tr></table></center>
+
+<center><table cellpadding=10><tr align=center><td><img src="0805/q-102.gif"><br>(Dave Langers)<td><img src="0805/q-1012.gif"><br>(Dave Langers)<td><img src="0805/q-104.gif"><br>(Dave Langers)<td><img src="0805/q-1010.gif"><br>(Dave Langers)</tr></table></center>
+
+<center><table cellpadding=10><tr align=center><td><img src="0805/q-101.gif"><br>(Dave Langers)<td><img src="0805/q-1020.gif"><br>(Dave Langers)<td><img src="0805/q-1021.gif"><br>(Dave Langers)</tr></table></center><p>
+
+Here is the smallest known realization for the Heawood graph, and the dodecahedron graph:<p>
+
+<center><table cellpadding=10><tr align=center><td><img src="0805/heawood.gif"><br>(Geoff Exoo)<td><img src="0805/dodec.gif"><br>(Geoff Exoo)</table></center><p>
+
+Geoff Exoo showed that all 3-regular graphs with 14 vertices can also be realized by queens.  I conjecture that all 3-regular graphs can be realized this way.<p>
+
+Here is the smallest known 4-regular realization for queens, and the smallest known realization for the 4-cube.  What are some other 4 regular graphs?<p>
+
+<center><table cellpadding=10><tr align=center><td><img src="0805/q-4.gif"><td><img src="0805/4cube.gif"><br>(Geoff Exoo)</table></center><p>
+<center></center><p>
+
+Dave Langers asks "For small n, what is the smallest board that contains a cycle of winding number (the number of revolutions you turn while you follow the cycle) n?"<p>
+
+
+
+<font size=+3>Kings</font><p>
+
+On an n&times;n chessboard, the maximum tours are apparently vertical zig-zags, and have length 2(n&ndash;5)<sub>&lfloor;</sub>(n+5)/4<sub>&rfloor;</sub> + 12, for n&ge;4.  Can anyone prove this?  What is the formula for an m&times;n chessboard?<p>
+
+Kings have a trivial 3-regular configuration on a 2&times;2 board, but the next smallest connected 3-regular graph I found was on a 7&times;5 board.  Is there one in between these two?  It's clear that kings can only produce planar regular graphs.<p>
+
+<center><table cellpadding=10><tr align=center><td><img src="0805/k-4.gif"><td><img src="0805/k-16.gif"></tr></table></center>
+
+<font size=+3>Bishops</font><p>
+
+The problem for bishops is easier.  On an m&times;n chessboard, the maximum tour apparently has length 2n&ndash;4, for m=n&ge;4, and 2(<img src="lfloor.gif">(m&ndash;1)/4<img src="rfloor.gif"> + <img src="lfloor.gif">(n&ndash;1)/4<img src="rfloor.gif">) if m&ne;n. Can anyone prove this?  It is easy to prove that bishops do not admit 3-regular configurations.<p>
+
+
+<font size=+3>Rooks</font><p>
+
+The problem for rooks is trivial.  On an m&times;n chessboard, the maximum tour has length 2 min{m,n}, and each optimal tour either contains 2 rooks in each row or 2 rooks in each column.  Rooks also do not admit 3-regular configurations.<p>
+
+
+<p><hr><p><h1>Fairy Chess Pieces</h1><p>
+
+
+<font size=+3>Amazons</font><p>
+
+<center><table><tr><td width=150>Amazons move either like a queen or knight.<td><img src="0805/amazon.gif" align=middle><td>
+
+<center><font size=+2>Maximum Length of Trivial Amazon<br>Tour of m &times; n Rectangles</font></center>
+<center><TABLE BORDER cellpadding=4 bgcolor=lightyellow><TR bgcolor=palegreen><th>m \ n<th width=20>1<th width=20>2<th width=20>3<th width=20>4<th width=20>5<th width=20>6<th width=20>7<th width=20>8</TR><TR align=center><th bgcolor=palegreen>2<td>0<td><a href="0805/a2x2.gif">3</a><td><td><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>3<td><a href="0805/a3x1.gif">3</a><td>3<td>3<td><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>4<td>3<td><a href="0805/a4x2.gif">4</a><td>4<td><a href="0805/a4x4.gif">5</a><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>5<td>3<td>4<td>4<td><a href="0805/a5x4.gif">6</a><td>6<td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>6<td>3<td>4<td>4<td>6<td><a href="0805/a6x5.gif">8</a><td>8<td><td></TR>
+<TR align=center><th bgcolor=palegreen>7<td>3<td>4<td><a href="0805/a7x3.gif">6</a><td>6<td>8<td><a href="0805/a7x6.gif">9</a><td>9<td></TR>
+<TR align=center><th bgcolor=palegreen>8<td>3<td>4<td>6<td><a href="0805/a8x4.gif">7</a><td><a href="0805/a8x5.gif">9</a><td><a href="0805/a8x6.gif">10</a><td><a href="0805/a8x7.gif">11</a><td><a href="0805/a8x8.gif">12</a></TR>
+<TR align=center><th bgcolor=palegreen>9<td>3<td>4<td>6<td>7<td>9<td>10<td><td></TR>
+<TR align=center><th bgcolor=palegreen>10<td>3<td>4<td><a href="0805/a10x4.gif">8</a><td>7<td>9<td><a href="0805/a10x6.gif">11</a><td><td></TR>
+<TR align=center><th bgcolor=palegreen>11<td>3<td>4<td>8<td>7<td><a href="0805/a11x5.gif">10</a><td><td><td></TR>
+</table></center>
+</tr></table></center>
+
+
+<font size=+3>Archbishops</font><p>
+
+<center><table><tr><td width=150>Archbishops move either like a bishop or knight.<td><img src="0805/archbishop.gif" align=middle><td>
+
+<center><font size=+2>Maximum Length of Trivial Archbishop<br>Tour of m &times; n Rectangles</font></center>
+<center><TABLE BORDER cellpadding=4 bgcolor=lightyellow><TR bgcolor=palegreen><th>m \ n<th width=20>2<th width=20>3<th width=20>4<th width=20>5<th width=20>6<th width=20>7<th width=20>8</TR><TR align=center><th bgcolor=palegreen>3<td><a href="0805/ab3x2.gif">6</a><td>6<td><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>4<td>6<td>6<td>6<td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>5<td>6<td>6<td>6<td><a href="0805/ab5x5.gif">8</a><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>6<td>6<td><a href="0805/ab6x3.gif">7</a><td>7<td><a href="0805/ab6x5.gif">12</a><td><a href="0805/ab6x6.gif">13</a><td><td></TR>
+<TR align=center><th bgcolor=palegreen>7<td><a href="0805/ab7x2.gif">8</a><td>8<td>8<td>12<td><a href="0805/ab7x6.gif">16</a><td>16<td></TR>
+<TR align=center><th bgcolor=palegreen>8<td>8<td><a href="0805/ab8x3.gif">10</a><td>10<td><a href="0805/ab8x5.gif">14</a><td>16<td><a href="0805/ab8x7.gif">18</a><td><a href="0805/ab8x8.gif">20</a></TR>
+<TR align=center><th bgcolor=palegreen>9<td><a href="0805/ab9x2.gif">10</a><td><a href="0805/ab9x3.gif">11</a><td>11<td><a href="0805/ab9x5.gif">16</a><td><a href="0805/ab9x6.gif">18</a><td><td></TR>
+<TR align=center><th bgcolor=palegreen>10<td><a href="0805/ab10x2.gif">12</a><td>12<td>12<td><a href="0805/ab10x5.gif">18</a><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>11<td>12<td><a href="0805/ab11x3.gif">14</a><td>14<td><td><td><td></TR>
+</table></center>
+</tr></table></center>
+
+
+<font size=+3>Empresses</font><p>
+
+<center><table><tr><td width=150>Empresses move either like a rook or knight.<td><img src="0805/empress.gif" align=middle><td>
+
+<center><font size=+2>Maximum Length of Trivial Empress<br>Tour of m &times; n Rectangles</font></center>
+<center><TABLE BORDER cellpadding=4 bgcolor=lightyellow><TR bgcolor=palegreen><th>m \ n<th width=20>1<th width=20>2<th width=20>3<th width=20>4<th width=20>5<th width=20>6<th width=20>7<th width=20>8</TR><TR align=center><th bgcolor=palegreen>2<td>0<td><a href="0805/e2x2.gif">4</a><td><td><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>3<td><a href="0805/e3x1.gif">3</a><td>4<td>4<td><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>4<td>3<td>4<td>4<td><a href="0805/e4x4.gif">5</a><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>5<td>3<td>4<td><a href="0805/e5x3.gif">5</a><td><a href="0805/e5x4.gif">6</a><td><a href="0805/e5x5.gif">8</a><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>6<td>3<td>4<td><a href="0805/e6x3.gif">6</a><td><a href="0805/e6x4.gif">7</a><td><a href="0805/e6x5.gif">9</a><td><a href="0805/e6x6.gif">11</a><td><td></TR>
+<TR align=center><th bgcolor=palegreen>7<td>3<td>4<td>6<td><a href="0805/e7x4.gif">8</a><td><a href="0805/e7x5.gif">10</a><td><a href="0805/a7x6.gif">12</a><td><a href="0805/e7x7.gif">14</a><td></TR>
+<TR align=center><th bgcolor=palegreen>8<td>3<td>4<td>6<td>8<td>10<td>12<td>14<td></TR>
+</table></center>
+</tr></table></center>
+
+
+<font size=+3>Fivers</font><p>
+
+<center><table><tr><td width=150>Fivers move to a square exactly 5 units away, either 5 squares horizontally or vertically, or as the hypotenuse of a 3-4-5 triangle.<td><img src="0805/fiver.gif" align=middle><td>
+
+<center><font size=+2>Maximum Length of Trivial Fiver<br>Tour of m &times; n Rectangles</font></center>
+<center><TABLE BORDER cellpadding=4 bgcolor=lightyellow><TR bgcolor=palegreen><th>m \ n<th width=20>4<th width=20>5<th width=20>6<th width=20>7<th width=20>8</TR><TR align=center><th bgcolor=palegreen>6<td>0<td><a href="0805/f6x5.gif">8</a><td><a href="0805/f6x6.gif">12</a><td><td></TR>
+<TR align=center><th bgcolor=palegreen>7<td>0<td><a href="0805/f7x5.gif">16</a><td><a href="0805/f7x6.gif">20</a><td><a href="0805/f7x7.gif">28</a><td></TR>
+<TR align=center><th bgcolor=palegreen>8<td>0<td><a href="0805/f8x5.gif">18</a><td><a href="0805/f8x6.gif">24</a><td><td></TR>
+<TR align=center><th bgcolor=palegreen>9<td><a href="0805/f9x4.gif">18</a><td>18<td><a href="0805/f9x6.gif">26</a><td><td></TR>
+<TR align=center><th bgcolor=palegreen>10<td>18<td><a href="0805/f10x5.gif">20</a><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>11<td>18<td><a href="0805/f11x5.gif">22</a><td><td><td></TR>
+</table></center><p>
+</tr></table></center>
+
+
+<font size=+3>Squirrels</font><p>
+
+<center><table><tr><td width=150>Squirrels move 2 squares either horizontally or vertically, and 0, 1, or 2 squares in a perpendicular direction.<td><img src="0805/ring.gif" align=middle><td>
+
+<center><font size=+2>Maximum Length of Trivial Squirrel<br>Tour of m &times; n Rectangles</font></center>
+<center><TABLE BORDER cellpadding=4 bgcolor=lightyellow><TR bgcolor=palegreen><th>m \ n<th width=20>2<th width=20>3<th width=20>4<th width=20>5<th width=20>6<th width=20>7</TR><TR align=center><th bgcolor=palegreen>3<td><a href="0805/r3x2.gif">4</a><td>4<td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>4<td>4<td>4<td><a href="0805/r4x4.gif">7</a><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>5<td>4<td><a href="0805/r5x3.gif">5</a><td>7<td><a href="0805/r5x5.gif">8</a><td><td></TR>
+<TR align=center><th bgcolor=palegreen>6<td>4<td><a href="0805/r6x3.gif">6</a><td><a href="0805/r6x4.gif">8</a><td><a href="0805/r6x5.gif">10</a><td><a href="0805/r6x6.gif">12</a><td></TR>
+<TR align=center><th bgcolor=palegreen>7<td>4<td><a href="0805/r7x3.gif">7</a><td><a href="0805/r7x4.gif">12</a><td><a href="0805/r7x5.gif">14</a><td>14<td><a href="0805/r7x7.gif">16</a></TR>
+<TR align=center><th bgcolor=palegreen>8<td>4<td><a href="0805/r8x3.gif">8</a><td>12<td>14<td><a href="0805/r8x6.gif">16</a><td><a href="0805/r8x7.gif">18</a></TR>
+</table></center>
+</tr></table></center>
+
+
+<font size=+3>Zebras</font><p>
+
+<center><table><tr><td width=150>Zebras move 3 squares either horizontally or vertically, and 2 squares in a perpendicular direction.<td><img src="0805/zebra.gif" align=middle><td>
+
+<center><font size=+2>Maximum Length of Trivial Zebra<br>Tour of m &times; n Rectangles</font></center>
+<center><TABLE BORDER cellpadding=4 bgcolor=lightyellow><TR bgcolor=palegreen><th>m \ n<th width=20>4<th width=20>5<th width=20>6<th width=20>7</TR><TR align=center><th bgcolor=palegreen>5<td>0<td><a href="0805/z5x5.gif">16</a><td><td></TR>
+<TR align=center><th bgcolor=palegreen>6<td>0<td><a href="0805/z6x5.gif">22</a><td><a href="0805/z6x6.gif">26</a><td></TR>
+<TR align=center><th bgcolor=palegreen>7<td><a href="0805/z7x4.gif">10</a><td><a href="0805/z7x5.gif">24</a><td>26<td></TR>
+<TR align=center><th bgcolor=palegreen>8<td>10<td><a href="0805/z8x5.gif">26</a><td><td></TR>
+</table></center>
+</tr></table></center>
+
+
+<font size=+3>Giraffes</font><p>
+
+<center><table><tr><td width=150>Giraffes move 4 squares either horizontally or vertically, and 1 square in a perpendicular direction.<td><img src="0805/giraffe.gif" align=middle><td>
+
+<center><font size=+2>Maximum Length of Trivial Giraffe<br>Tour of m &times; n Rectangles</font></center>
+<center><TABLE BORDER cellpadding=4 bgcolor=lightyellow><TR bgcolor=palegreen><th>m \ n<th width=20>3<th width=20>4<th width=20>5<th width=20>6<th width=20>7</TR><TR align=center><th bgcolor=palegreen>5<td>0<td>0<td><a href="0805/g5x5.gif">16</a><td><td></TR>
+<TR align=center><th bgcolor=palegreen>6<td>0<td>0<td><a href="0805/g6x5.gif">18</a><td>18<td></TR>
+<TR align=center><th bgcolor=palegreen>7<td>0<td>0<td><a href="0805/g7x5.gif">20</a><td><a href="0805/g7x6.gif">30</a><td><a href="0805/g7x7.gif">32</a></TR>
+<TR align=center><th bgcolor=palegreen>8<td>0<td>0<td><a href="0805/g8x5.gif">22</a><td>30<td></TR>
+<TR align=center><th bgcolor=palegreen>9<td><a href="0805/g9x3.gif">4</a><td>4<td><a href="0805/g9x5.gif">26</a><td><td></TR>
+</table></center>
+</tr></table></center>
+
+
+<font size=+3>Double Kings</font><p>
+
+<center><table><tr><td width=150>Double Kings make 2 king moves.<td><img src="0805/doubleking.gif" align=middle><td>
+
+<center><font size=+2>Maximum Length of Trivial Double King<br>Tour of m &times; n Rectangles</font></center>
+<center><TABLE BORDER cellpadding=4 bgcolor=lightyellow><TR bgcolor=palegreen><th>m \ n<th width=20>1<th width=20>2<th width=20>3<th width=20>4<th width=20>5<th width=20>6</TR><TR align=center><th bgcolor=palegreen>2<td>0<td><a href="0805/d2x2.gif">3</a><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>3<td><a href="0805/d3x1.gif">3</a><td>3<td>3<td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>4<td>3<td>3<td>3<td><a href="0805/d4x4.gif">4</a><td><td></TR>
+<TR align=center><th bgcolor=palegreen>5<td>3<td>3<td>3<td><a href="0805/d5x4.gif">6</a><td><a href="0805/d5x5.gif">8</a><td></TR>
+<TR align=center><th bgcolor=palegreen>6<td>3<td>3<td>3<td>6<td>8<td>8</TR>
+<TR align=center><th bgcolor=palegreen>7<td>3<td>3<td>3<td><a href="0805/d7x4.gif">8</a><td><a href="0805/d7x5.gif">10</a><td>10</TR>
+<TR align=center><th bgcolor=palegreen>8<td>3<td>3<td>3<td><a href="0805/d8x4.gif">10</a><td><a href="0805/d8x5.gif">12</a><td>12</TR>
+</table></center>
+</tr></table></center>
+
+
+<font size=+3>Sparklers</font><p>
+
+<center><table><tr><td width=150>Sparklers move either 1 space horizontally or vertically, or 2 spaces diagonally.<td><img src="0805/sparkler.gif" align=middle><td>
+
+<center><font size=+2>Maximum Length of Trivial Sparkler<br>Tour of m &times; n Rectangles</font></center>
+<center><TABLE BORDER cellpadding=4 bgcolor=lightyellow><TR bgcolor=palegreen><th>m \ n<th width=20>2<th width=20>3<th width=20>4<th width=20>5<th width=20>6<th width=20>7</TR><TR align=center><th bgcolor=palegreen>2<td><a href="0805/s2x2.gif">4</a><td><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>3<td>4<td><a href="0805/s3x3.gif">6</a><td><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>4<td>4<td><a href="0805/s4x3.gif">8</a><td>8<td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>5<td>4<td><a href="0805/s5x3.gif">10</a><td>10<td><a href="0805/s5x5.gif">16</a><td><td></TR>
+<TR align=center><th bgcolor=palegreen>6<td>4<td>10<td><a href="0805/s6x4.gif">14</a><td>16<td><a href="0805/s6x6.gif">17</a><td></TR>
+<TR align=center><th bgcolor=palegreen>7<td>4<td><a href="0805/s7x3.gif">12</a><td>14<td><a href="0805/s7x5.gif">18</a><td><a href="0805/s7x6.gif">19</a><td><a href="0805/s7x7.gif">22</a></TR>
+<TR align=center><th bgcolor=palegreen>8<td>4<td><a href="0805/s8x3.gif">14</a><td><a href="0805/s8x4.gif">16</a><td><a href="0805/s8x5.gif">20</a><td><a href="0805/s8x6.gif">22</a><td></TR>
+<TR align=center><th bgcolor=palegreen>9<td>4<td>14<td><a href="0805/s9x4.gif">20</a><td><a href="0805/s9x5.gif">22</a><td><td></TR>
+</table></center>
+</tr></table></center>
+
+
+<font size=+3>Oxen</font><p>
+
+<center><table><tr><td width=150>Oxen move 3 spaces horizontally or vertically, and 0 or 1 spaces in a perpendicular direction.<td><img src="0805/ox.gif" align=middle><td>
+
+<center><font size=+2>Maximum Length of Trivial Ox<br>Tour of m &times; n Rectangles</font></center>
+<center><TABLE BORDER cellpadding=4 bgcolor=lightyellow><TR bgcolor=palegreen><th>m \ n<th width=20>2<th width=20>3<th width=20>4<th width=20>5<th width=20>6<th width=20>7</TR><TR align=center><th bgcolor=palegreen>4<td><a href="0805/o4x2.gif">4</a><td>4<td><a href="0805/o4x4.gif">6</a><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>5<td>4<td>4<td><a href="0805/o5x4.gif">8</a><td><a href="0805/o5x5.gif">12</a><td><td></TR>
+<TR align=center><th bgcolor=palegreen>6<td>4<td>4<td>8<td><a href="0805/o6x5.gif">15</a><td><a href="0805/o6x6.gif">20</a><td></TR>
+<TR align=center><th bgcolor=palegreen>7<td>4<td>4<td><a href="0805/o7x4.gif">11</a><td><a href="0805/o7x5.gif">16</a><td><a href="0805/o7x6.gif">22</a><td></TR>
+<TR align=center><th bgcolor=palegreen>8<td>4<td>4<td><a href="0805/o8x4.gif">12</a><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>9<td>4<td>4<td><a href="0805/o9x4.gif">16</a><td><td><td></TR>
+<TR align=center><th bgcolor=palegreen>10<td>4<td><a href="0805/o10x3.gif">6</a><td><td><td><td></TR>
+</table></center>
+</tr></table></center><p>
+
+
+Guenter Stertenbrink found a piece (that moves distance &radic;5 or &radic;8) that can realize the Petersen Graph on a 4&times;4 board:<p>
+
+<center><img src="0805/petersen.gif"></center><p>
+
+<p><hr><p><h1>Other Questions</h1><p>
+
+What are best solutions for paths rather than cycles? <p>
+
+When is it possible to cover a board with distinct trivial tours?  What is the smallest number of tours that suffices?<p>
+
+<p><hr>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 6/7/09.<font></BODY></HTML>

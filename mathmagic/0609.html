@@ -1,0 +1,563 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month<br>(June 2009)</H1></CENTER>
+
+This month we consider five tiling problems:<p><hr><p>
+
+<font size=+2>1.</font> An <b>isosceles right trapezoid</b> is a trapezoid having angles of 45<sup>o</sup>, 90<sup>o</sup>, 90<sup>o</sup>, and 135<sup>o</sup>.  Given an isosceles right trapezoid with 3 integer sides, what is the smallest rectangle (in terms of area) that it and larger copies of it can tile so that at least one copy is rotated 45<sup>o</sup>?  <p><hr><p>
+
+<font size=+2>2.</font> Suppose we have n equations of the form X + Y = Z, where X, Y, and Z are each one of n unknowns.  Can we always find distinct unknown shapes that make the equations true?  When n=1, the only possible equation is A + A = A.  There are 9 inequivalent sets of equations when n=2.  Can you find solutions for all of them?  How many sets of equations are there for n=3?  How many can you find solutions for?<p><hr><p>
+
+<font size=+2>3.</font> It is well-known that the only squares that can be tiled by squares of sides a and b are those that have sides that are a multiple of a or b.  Given squares of integer sides a, b, and c, where no two sides have a common factor, what is the smallest square length that is not a multiple of a, b, or c that can be tiled with these squares?<p><hr><p>
+
+<font size=+2>4.</font> Polyominoes that do not contain any 2&times;2 squares can be divided into equivalence classes based on the shape and ignoring the length of their segments.  Given an equivalence class, which we call a <b>stretchomino</b>, what is the smallest rectangle that can be tiled by members of it?  What of the polyomino classes with 5 segments have solutions?  What are the smallest solutions possible?  How about larger polyominoes?<p><hr><p>
+
+<font size=+2>5.</font> Given a n-omino P, we say the <b>extensions</b> of P are the (n+1)-ominoes that cover P.  These are precisely all the different ways to add one more square to P.  Are there any polyominoes P (besides the monomino) with the property that the extensions of P tile a rectangle, using each one exactly once?
+
+<P><hr color=black><p><center><h1>ANSWERS</h1></center>
+
+
+
+
+<font size=+2>1.</font><p>
+
+We will say a n&times;m trapezoid (n&lt;m) is an n&times;m rectangle with a slice removed, leaving a trapezoid with horizontal bases of m and m-n.  Thus this a tiling of 1&times;2 trapezoids:<p>
+
+<center><img src="0609/a1x2.gif"></center><p>
+
+And here is a tiling of 1&times;3 trapezoids:<p>
+
+<center><img src="0609/a1x3.gif"><br>(Bryce Herdt)</center><p>
+
+<a href="mailto:mathidentity@yahoo.com">Bryce Herdt</a> also found tilings of 2&times;(2n+1) trapezoids like this:<p>
+
+<center><img src="0609/a2x3.gif"><br>(Bryce Herdt)</center><p>
+
+Though I intended for all the trapezoids to be scaled by integers or &radic;2 times integers of the smallest trapezoid, <a href="mailto:andrew.bayly@mac.com">Andrew Bayly</a> found the best solutions of a certain form without that assumption.  His results can be seen <a href="0609/trap.gif">here</a>.  One of these was also found by <a href="mailto:b.j.vanderzwaag@utwente.nl">Berend van der Zwaag</a>.  Some of these satisfy the conditions of my intentions, especially those involving two stacked trapezoids on the left and right, and two rotated in the middle.<p>
+
+<a href="mailto:mathidentity@yahoo.com">Bryce Herdt</a> suggested adding smaller trapezoids along one edge of these types of tilings to make them satisfy these conditions, like the one below:<p>
+
+<center><img src="0609/side.gif"><br>(Bryce Herdt)</center><p>
+
+In 2014, George Sicherman found tilings of 1&times;3, 1&times;4, 3&times;4, 2&times;5, and 4&times;5 trapezoids, though Bryce Herdt's 1&times;3 solution is smaller:<p>
+
+<table align=center cellpadding=10><tr align=center><td><img src="0609/g1.gif"><br>(George Sicherman)<td><img src="0609/g2.gif"><br>(George Sicherman)<td><img src="0609/g3.gif" width=300><br>(George Sicherman)</table><p>
+
+<table align=center cellpadding=10><tr align=center><td><img src="0609/g4.gif" width=200><br>(George Sicherman)<td><img src="0609/g5.gif" width=200><br>(George Sicherman)</table><p>
+
+
+
+<HR><P><font size=+2>2.</font><p>
+
+Here are possible answers for n=2:<p>
+
+<table align=center bgcolor=FFFFDD border=1 cellpadding=5><tr><th>Equations<th colspan=2>Figures
+<tr align=center><td>A + A = A<br>A + A = B<td><img src="0609/b1.gif"><td><img src="0609/b2.gif">
+<tr align=center><td>A + A = A<br>A + B = A<td><img src="0609/b1.gif"><td><img src="0609/b3.gif">
+<tr align=center><td>A + A = A<br>A + B = B<td><img src="0609/b9.gif"><td><img src="0609/b12.gif">
+<tr align=center><td>A + A = A<br>B + B = A<td><img src="0609/b9.gif"><td><img src="0609/b8.gif">
+<tr align=center><td>A + A = A<br>B + B = B<td><img src="0609/b1.gif"><td><img src="0609/b5.gif">
+<tr align=center><td>A + A = B<br>A + B = A<td><img src="0609/b4.gif"><td><img src="0609/b3.gif">
+<tr align=center><td>A + A = B<br>A + B = B<td><img src="0609/b10.gif"><td><img src="0609/b11.gif">
+<tr align=center><td>A + A = B<br>B + B = A<td><img src="0609/b6.gif"><td><img src="0609/b7.gif">
+<tr align=center><td>A + B = A<br>A + B = B<td><img src="0609/b13.gif"><td><img src="0609/b14.gif">
+</table><p>
+
+Since there are so many sets of equations for n=3, <a href="mailto:mathidentity@yahoo.com">Bryce Herdt</a> thought that we should only show inseparable sets equations with at least 2 occurrences of every shape.<p>
+
+Here are the 10 sets of 3 equations in 2 unknowns:<p>
+
+<table align=center bgcolor=FFFFDD border=1 cellpadding=5><tr><th>Equations<th colspan=3>Figures<th>Author
+
+<tr align=center><td>A + A = A<br>A + A = B<br>A + B = A<td><img src="0609/b1.gif"><td><img src="0609/b4.gif"><td><img src="0609/b3.gif"><td>Erich Friedman
+<tr align=center><td>A + A = A<br>A + A = B<br>A + B = B<td><img src="0609/b27.gif"><td><img src="0609/b28.gif"><td><img src="0609/b29.gif"><td>Bryce Herdt
+<tr align=center><td>A + A = A<br>A + A = B<br>B + B = A<td><img src="0609/b9.gif"><td><img src="0609/b16.gif"><td><img src="0609/b8.gif"><td>Bryce Herdt
+<tr align=center><td>A + A = A<br>A + A = B<br>B + B = B<td><img src="0609/b1.gif"><td><img src="0609/b2.gif"><td><img src="0609/b15.gif"><td>Bryce Herdt
+
+<tr align=center><td>A + A = A<br>A + B = A<br>A + B = B<td><img src="0609/b27.gif"><td><img src="0609/b30.gif"><td><img src="0609/b29.gif"><td>Bryce Herdt
+<tr align=center><td>A + A = B<br>A + B = A<br>A + B = B<td><img src="0609/b28.gif"><td><img src="0609/b30.gif"><td><img src="0609/b29.gif"><td>Bryce Herdt
+
+<tr align=center><td>A + A = A<br>A + B = A<br>B + B = A<td>?<td>?<td>?<td>?
+<tr align=center><td>A + A = A<br>A + B = A<br>B + B = B<td>?<td>?<td>?<td>?
+<tr align=center><td>A + A = B<br>A + B = A<br>B + B = A<td><img src="0609/b49.gif"><td><img src="0609/b50.gif"><td><img src="0609/b51.gif"><td>Erich Friedman
+<tr align=center><td>A + A = B<br>A + B = A<br>B + B = B<td><img src="0609/b21.gif"><td><img src="0609/b22.gif"><td><img src="0609/b23.gif"><td>Bryce Herdt
+
+</table><p>
+
+Here are the 13 sets of inseparable 3 equations in 3 unknowns where each variable appears exactly 3 times:<p>
+
+<table align=center bgcolor=FFFFDD border=1 cellpadding=5><tr><th>Equations<th colspan=3>Figures<th>Author
+
+<tr align=center><td>A + A = B<br>A + B = C<br>B + C = C<td><img src="0609/b37.gif"><td><img src="0609/b38.gif"><td><img src="0609/b39.gif"><td>Luke Pebody
+<tr align=center><td>A + A = B<br>A + B = C<br>C + C = B<td><img src="0609/b24.gif"><td><img src="0609/b26.gif"><td><img src="0609/b25.gif"><td>Bryce Herdt
+
+<tr align=center><td>A + A = B<br>A + C = B<br>B + C = C<td><img src="0609/b40.gif"><td><img src="0609/b41.gif"><td><img src="0609/b42.gif"><td>Luke Pebody
+<tr align=center><td>A + A = B<br>A + C = B<br>C + C = B<td><img src="0609/b31.gif"><td><img src="0609/b32.gif"><td><img src="0609/b33.gif"><td>Bryce Herdt
+<tr align=center><td>A + A = B<br>A + C = C<br>B + B = C<td><img src="0609/b35.gif"><td><img src="0609/b34.gif"><td><img src="0609/b36.gif"><td>Joe DeVincentis
+<tr align=center><td>A + A = B<br>A + C = C<br>B + C = B<td><img src="0609/b43.gif"><td><img src="0609/b44.gif"><td><img src="0609/b45.gif"><td>Luke Pebody
+
+<tr align=center><td>A + A = B<br>B + C = A<br>B + C = C<td><img src="0609/b61.gif"><td><img src="0609/b62.gif"><td><img src="0609/b63.gif"><td>Bryce Herdt
+<tr align=center><td>A + A = B<br>B + C = A<br>C + C = B<td><img src="0609/b55.gif"><td><img src="0609/b56.gif"><td><img src="0609/b57.gif"><td>Bryce Herdt
+<tr align=center><td>A + A = B<br>B + B = C<br>C + C = A<td><img src="0609/b18.gif"><td><img src="0609/b19.gif"><td><img src="0609/b20.gif"><td>Erich Friedman
+
+<tr align=center><td>A + B = A<br>A + B = C<br>B + C = C<td><img src="0609/b64.gif"><td><img src="0609/b65.gif"><td><img src="0609/b66.gif"><td>Bryce Herdt
+<tr align=center><td>A + B = A<br>A + C = B<br>B + C = C<td><img src="0609/b58.gif"><td><img src="0609/b59.gif"><td><img src="0609/b60.gif"><td>Bryce Herdt
+<tr align=center><td>A + B = A<br>A + C = C<br>B + C = B<td><img src="0609/b46.gif"><td><img src="0609/b47.gif"><td><img src="0609/b48.gif"><td>Luke Pebody
+
+<tr align=center><td>A + B = C<br>A + C = B<br>B + C = A<td><img src="0609/b52.gif"><td><img src="0609/b53.gif"><td><img src="0609/b54.gif"><td>Luke Pebody
+</table><p><hr><p>
+
+
+
+<font size=+2>3.</font><p>
+
+For a &lt; b &lt; c, let f(a,b,c) be the smallest square not divisible by a, b, or c that can be tiled with squares of side a, b, and c.<p>
+
+<a href="mailto:devjoe@gmail.com">Joe DeVincentis</a> proved that f(2,b,c)=c+2b.  Put a square of side c in one corner, two (c-b)&times;(2b) rectangles made of 2&times;2 squares along those same sides, and fill the rest with squares of side b.<p>
+
+<a href="mailto:dimad72@gmail.com">Dan Dima</a> claimed that f(a,b,a+b) = f(a,b,ab-a-b) = ab+a+b.  He also claimed f(3,b,c) &lt; c+4b.  He also gave a general upper bound based on some Diophantine equations.<p>
+
+<a href="mailto:luke.pebody@gmail.com">Luke Pebody</a> proved that f(a,b,c) &le; max(ab+c , 2ab-c).<p>
+
+Here are the results for small a &lt; b &lt; c.  The tilings seem to fall into 4 categories, which I have color-coded: yellow for "stacking" (containing two large squares of b's and c's in opposite corners, and two rectangles of length ab), blue for "twirling" (a square of c's in  the middle, and four rectangles of length ab), purple for "interesting" (two squares in opposite corners and two slightly overlapping rectangles containing all 3 types of square), and red for "chaotic" (asymmetrical):<p>
+
+<table align=center border=1 cellpadding=5 bgcolor=white>
+<tr align=center bgcolor=DDFFDD><th bgcolor=BBFFBB>a=3<th>5<th>7<th>8<th>10<th>11<th>13<th>14
+<tr align=center><th bgcolor=DDFFDD>4
+<td bgcolor=DDFFFF><a href="0609/c345.gif">19</a>
+<td bgcolor=FFFFDD><a href="0609/c347.gif">19</a>
+<td>x
+<td>x
+<td bgcolor=FFFFDD><a href="0609/c3411.gif">23</a>
+<td bgcolor=FFFFDD><a href="0609/c3413.gif">25</a>
+<td>x
+<tr align=center><th bgcolor=DDFFDD>5
+<td>
+<td bgcolor=DDFFFF><a href="0609/c357.gif">23</a>
+<td bgcolor=FFFFDD><a href="0609/c358.gif">23</a>
+<td>x
+<td bgcolor=FFFFDD><a href="0609/c3511.gif">26</a>
+<td bgcolor=FFFFDD><a href="0609/c3513.gif">28</a>
+<td bgcolor=FFFFDD><a href="0609/c3514.gif">29</a>
+<tr align=center><th bgcolor=DDFFDD>7
+<td>
+<td>
+<td bgcolor=DDFFFF><a href="0609/c378.gif">34</a> (GT)
+<td bgcolor=FFFFDD><a href="0609/c3710.gif">31</a>
+<td bgcolor=DDFFFF><a href="0609/c3711.gif">31</a> (BT)
+<td bgcolor=FFFFDD><a href="0609/c3713.gif">34</a>
+<td>x
+<tr align=center><th bgcolor=DDFFDD>8
+<td>
+<td>
+<td>
+<td>x
+<td bgcolor=FFFFDD><a href="0609/c3811.gif">35</a>
+<td bgcolor=DDFFFF><a href="0609/c3813.gif">35</a> (BT)
+<td>x
+<tr align=center><th bgcolor=DDFFDD>10
+<td>
+<td>
+<td>
+<td>
+<td bgcolor=DDFFFF><a href="0609/c31011.gif">49</a> (BT)
+<td bgcolor=FFFFDD><a href="0609/c31013.gif">43</a>
+<td>x
+<tr align=center><th bgcolor=DDFFDD>11
+<td>
+<td>
+<td>
+<td>
+<td>
+<td bgcolor=DDFFFF><a href="0609/c31113.gif">53</a> (GS)
+<td bgcolor=FFFFDD><a href="0609/c31114.gif">47</a>
+<tr align=center><th bgcolor=DDFFDD>13
+<td>
+<td>
+<td>
+<td>
+<td>
+<td>
+<td bgcolor=DDFFFF><a href="0609/c31314.gif">64</a> (BT)
+</table><p>
+
+
+<table align=center border=1 cellpadding=5 bgcolor=white>
+<tr align=center bgcolor=DDFFDD><th bgcolor=BBFFBB>a=4<th>7<th>9<th>11<th>13<th>15
+<tr align=center><th bgcolor=DDFFDD>5
+<td bgcolor=DDFFFF><a href="0609/c457.gif">33</a> (BH)
+<td bgcolor=FFFFDD><a href="0609/c459.gif">29</a>
+<td bgcolor=DDFFFF><a href="0609/c4511.gif">29</a> (BT)
+<td bgcolor=FFFFDD><a href="0609/c4513.gif">33</a>
+<td>x
+<tr align=center><th bgcolor=DDFFDD>7
+<td>
+<td bgcolor=DDDDFF><a href="0609/c479.gif">43</a> (BT)
+<td bgcolor=FFFFDD><a href="0609/c4711.gif">39</a>
+<td bgcolor=DDFFFF><a href="0609/c4713.gif">43</a> (BT)
+<td bgcolor=FFFFDD><a href="0609/c4715.gif">43</a>
+<tr align=center><th bgcolor=DDFFDD>9
+<td>
+<td>
+<td bgcolor=DDDDFF><a href="0609/c4911.gif">53</a> (BT)
+<td bgcolor=FFFFDD><a href="0609/c4913.gif">49</a>
+<td>x
+<tr align=center><th bgcolor=DDFFDD>11
+<td>
+<td>
+<td>
+<td bgcolor=DDDDFF><a href="0609/c41113.gif">63</a> (GS)
+<td bgcolor=FFFFDD><a href="0609/c41115.gif">59</a>
+<tr align=center><th bgcolor=DDFFDD>13
+<td>
+<td>
+<td>
+<td>
+<td bgcolor=DDDDFF><a href="0609/c41315.gif">73</a> (BT)
+</table><p>
+
+
+<table align=center border=1 cellpadding=5 bgcolor=white>
+<tr align=center bgcolor=DDFFDD><th bgcolor=BBFFBB>a=5<th>7<th>8<th>9<th>11<th>12<th>13<th>14
+<tr align=center><th bgcolor=DDFFDD>6
+<td bgcolor=DDDDFF><a href="0609/c567.gif">38</a> (BT)
+<td>x
+<td>x
+<td bgcolor=FFFFDD><a href="0609/c5611.gif">41</a>
+<td>x
+<td bgcolor=DDFFFF><a href="0609/c5613.gif">47</a> (BT)
+<td>x
+<tr align=center><th bgcolor=DDFFDD>7
+<td>
+<td bgcolor=DDFFFF><a href="0609/c578.gif">54</a> (GS)
+<td bgcolor=DDDDFF><a href="0609/c579.gif">46</a> (BT)
+<td bgcolor=DDDDFF><a href="0609/c5711.gif">54</a> (BT)
+<td bgcolor=FFFFDD><a href="0609/c5712.gif">47</a>
+<td bgcolor=DDFFFF><a href="0609/c5713.gif">57</a> (BT)
+<td>x
+<tr align=center><th bgcolor=DDFFDD>8
+<td>
+<td>
+<td bgcolor=DDDDFF><a href="0609/c589.gif">51</a> (BT)
+<td bgcolor=DDDDFF><a href="0609/c5811.gif">54</a> (BT)
+<td>x
+<td bgcolor=FFFFDD><a href="0609/c5813.gif">53</a>
+<td>x
+<tr align=center><th bgcolor=DDFFDD>9
+<td>
+<td>
+<td>
+<td bgcolor=DDFFFF><a href="0609/c5911.gif">68</a> (BT)
+<td>x
+<td bgcolor=DDDDFF><a href="0609/c5913.gif">62</a> (BT)
+<td bgcolor=FFFFDD><a href="0609/c5914.gif">59</a>
+<tr align=center><th bgcolor=DDFFDD>11
+<td>
+<td>
+<td>
+<td>
+<td bgcolor=DDDDFF><a href="0609/c51112.gif">68</a> (BT)
+<td bgcolor=DDFFFF><a href="0609/c51113.gif">71</a> (GS)
+<td bgcolor=DDFFFF><a href="0609/c51114.gif">82</a> (BT)
+<tr align=center><th bgcolor=DDFFDD>12
+<td>
+<td>
+<td>
+<td>
+<td>
+<td bgcolor=DDFFFF><a href="0609/c51213.gif">94</a> (GS)
+<td>x
+<tr align=center><th bgcolor=DDFFDD>13
+<td>
+<td>
+<td>
+<td>
+<td>
+<td>
+<td bgcolor=DDDDFF><a href="0609/c51314.gif">81</a> (BT)
+</table><p>
+
+
+<table align=center border=1 cellpadding=5 bgcolor=white>
+<tr align=center bgcolor=DDFFDD><th bgcolor=BBFFBB>a=6<th>11<th>13
+<tr align=center><th bgcolor=DDFFDD>7
+<td bgcolor=DDFFFF><a href="0609/c6711.gif">62</a> (BT)
+<td bgcolor=FFFFDD><a href="0609/c6713.gif">55</a>
+<tr align=center><th bgcolor=DDFFDD>11
+<td>
+<td bgcolor=FFDDDD><a href="0609/c61113.gif">101</a> (GS)
+</table><p>
+
+
+<table align=center border=1 cellpadding=5 bgcolor=white>
+<tr align=center bgcolor=DDFFDD><th bgcolor=BBFFBB>a=7<th>9<th>10<th>11<th>12<th>13<th>15
+<tr align=center><th bgcolor=DDFFDD>8
+<td bgcolor=DDDDFF><a href="0609/c789.gif">59</a> (BT)
+<td>x
+<td bgcolor=DDDDFF><a href="0609/c7811.gif">65</a> (BT)
+<td>x
+<td bgcolor=DDFFFF><a href="0609/c7813.gif">86</a> (BT)
+<td bgcolor=FFFFDD><a href="0609/c7815.gif">71</a> 
+<tr align=center><th bgcolor=DDFFDD>9
+<td>
+<td bgcolor=DDFFFF><a href="0609/c7910.gif">86</a> (BT)
+<td bgcolor=DDDDFF><a href="0609/c7911.gif">68</a> (BT)
+<td>x
+<td bgcolor=FFDDDD><a href="0609/c7913.gif">93</a> (BT)
+<td>x
+<tr align=center><th bgcolor=DDFFDD>10
+<td>
+<td>
+<td bgcolor=FFDDDD><a href="0609/c71011.gif">93</a> (BT)
+<td>x
+<td bgcolor=DDDDFF><a href="0609/c71013.gif">79</a> (BT)
+<td>x
+<tr align=center><th bgcolor=DDFFDD>11
+<td>
+<td>
+<td>
+<td bgcolor=FFDDDD><a href="0609/c71112.gif">102</a> (BT)
+<td bgcolor=DDFFFF><a href="0609/c71113.gif">102</a> (BH)
+<td bgcolor=DDDDFF><a href="0609/c71115.gif">89</a> (BT)
+<tr align=center><th bgcolor=DDFFDD>12
+<td>
+<td>
+<td>
+<td>
+<td bgcolor=DDDDFF><a href="0609/c71213.gif">87</a> (BT)
+<td>x
+<tr align=center><th bgcolor=DDFFDD>13
+<td>
+<td>
+<td>
+<td>
+<td>
+<td bgcolor=DDDDFF><a href="0609/c71315.gif">132</a> (GS)
+</table><p>
+
+
+<table align=center border=1 cellpadding=5 bgcolor=white>
+<tr align=center bgcolor=DDFFDD><th bgcolor=BBFFBB>a=8<th>11<th>13<th>15
+<tr align=center><th bgcolor=DDFFDD>9
+<td bgcolor=DDFFFF><a href="0609/c8911.gif">89</a> (BT)
+<td bgcolor=DDDDFF><a href="0609/c8913.gif">79</a> (BT)
+<td>x
+<tr align=center><th bgcolor=DDFFDD>11
+<td>
+<td bgcolor=DDDDFF><a href="0609/c81113.gif">116</a> (GS)
+<td bgcolor=DDDDFF><a href="0609/c81115.gif">93</a> (BT)
+<tr align=center><th bgcolor=DDFFDD>13
+<td>
+<td>
+<td bgcolor=DDFFFF><a href="0609/c81315.gif">133</a> (BT)
+</table><p>
+
+
+<table align=center border=1 cellpadding=5 bgcolor=white>
+<tr align=center bgcolor=DDFFDD><th bgcolor=BBFFBB>a=9<th>11<th>13<th>14
+<tr align=center><th bgcolor=DDFFDD>10
+<td bgcolor=DDDDFF><a href="0609/c91011.gif">84</a> (BT)
+<td bgcolor=DDDDFF><a href="0609/c91013.gif">124</a> (BH)
+<td>x
+<tr align=center><th bgcolor=DDFFDD>11
+<td>
+<td bgcolor=DDDDFF><a href="0609/c91113.gif">96</a> (BT)
+<td bgcolor=DDFFFF><a href="0609/c91114.gif">128</a> (BT)
+<tr align=center><th bgcolor=DDFFDD>13
+<td>
+<td>
+<td bgcolor=FFDDDD><a href="0609/c91314.gif">133</a> (BT)
+</table><p>
+
+<table align=center border=1 cellpadding=5 bgcolor=white>
+<tr align=center bgcolor=DDFFDD><th bgcolor=BBFFBB>a=10<th>13
+<tr align=center><th bgcolor=DDFFDD>11
+<td bgcolor=DDDDFF><a href="0609/c101113.gif">138</a> (BT)
+</table><p>
+
+<table align=center border=1 cellpadding=5 bgcolor=white>
+<tr align=center bgcolor=DDFFDD><th bgcolor=BBFFBB>a=11<th>13<th>14<th>15
+<tr align=center><th bgcolor=DDFFDD>12
+<td bgcolor=DDDDFF><a href="0609/c111213.gif">113</a> (BT)
+<td>x
+<td>x
+<tr align=center><th bgcolor=DDFFDD>13
+<td>
+<td bgcolor=DDDDFF><a href="0609/c111314.gif">159</a> (GS)
+<td bgcolor=DDDDFF><a href="0609/c111315.gif">127</a> (BT)
+<tr align=center><th bgcolor=DDFFDD>14
+<td>
+<td>
+<td bgcolor=DDDDFF><a href="0609/c111415.gif">172</a> (BT)
+</table><p>
+
+<table align=center border=1 cellpadding=5 bgcolor=white>
+<tr align=center bgcolor=DDFFDD><th bgcolor=BBFFBB>a=13<th>15
+<tr align=center><th bgcolor=DDFFDD>14
+<td bgcolor=DDDDFF><a href="0609/c131415.gif">146</a> (BT)
+</table><p>
+
+
+<center>(GS) = George Sicherman<br>(GT) = Gavin Theobald<br>(BH) = Bryce Herdt<br>(BT) = Brian Trial</center><p>
+
+
+<hr><p><font size=+2>4.</font><p>
+
+Here are possible answers for stretchominoes with 6 or fewer segments:<p>
+
+<table align=center><tr align=center>
+<td><font size=+2>1<td width=10>
+<td><img src="0609/d1I.gif"><td width=10>
+<td><font size=+2>2<td width=10>
+<td><img src="0609/d2L.gif"><td width=10>
+<td><font size=+2>3<td width=10>
+<td><img src="0609/d3U.gif"><td width=15>
+<td><img src="0609/d3T.gif"><td width=10>
+<td><font size=+2>4<td width=10>
+<td><img src="0609/d4F.gif"><td width=15>
+<td><img src="0609/d4G.gif"><td width=15>
+<td><img src="0609/d4H.gif"><td width=15>
+<td><img src="0609/d4N.gif"><br>(George Sicherman)</table><p>
+
+<table align=center><tr align=center>
+<td><font size=+2>5<td width=10>
+<td><img src="0609/d5E.gif"><td width=15>
+<td><img src="0609/d5J.gif"><td width=15>
+<td><img src="0609/d5C.gif"><td width=15>
+<td><img src="0609/d5O.gif"><td width=15>
+<td><img src="0609/d5P.gif"><td width=15>
+<td><img src="0609/d5K.gif"><td width=15>
+<td><img src="0609/d5M.gif"><td width=15>
+</table><p>
+
+<table align=center><tr align=center>
+<td><img src="0609/d5B.gif"><td width=15>
+<td><img src="0609/d6R.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d5W.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d5Q.gif"><td width=15>
+<td><img src="0609/d5R.gif"><br>(George Sicherman)<td width=15>
+</table><p>
+
+<table align=center><tr align=center>
+<td><font size=+2>6<td width=10>
+<td><img src="0609/d6E.gif"><td width=15>
+<td><img src="0609/d6U.gif"><br>(George<br>Sicherman)<td width=15>
+<td><img src="0609/d6F.gif"><br>(George<br>Sicherman)<td width=15>
+<td><img src="0609/d6M.gif"><br>(George<br>Sicherman)<td width=15>
+<td><img src="0609/d6J.gif"><br>(George<br>Sicherman)<td width=15>
+<td><img src="0609/d6G.gif"><br>(George<br>Sicherman)<td width=15>
+<td><img src="0609/d6P.gif"><br>(George<br>Sicherman)<td width=15>
+</table><p>
+
+<table align=center><tr align=center>
+<td><img src="0609/d6H.gif"><td width=15>
+<td><img src="0609/d6O.gif"><td width=15>
+<td><img src="0609/d6T.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6A.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6K.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6N.gif"><br>(George Sicherman)<td width=15>
+</table><p>
+
+<table align=center><tr align=center>
+<td><img src="0609/d6S.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6Q.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6Z.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6B.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6C.gif"><br>(George Sicherman)<td width=15>
+</table><p>
+
+<table align=center><tr align=center>
+<td><img src="0609/d6GG.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6HH.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6L.gif"><br>(George Sicherman)<td width=15>
+</table><p>
+
+<table align=center><tr align=center>
+<td><img src="0609/d6EE.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6D.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6W.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6CC.gif"><br>(George Sicherman)<td width=15>
+</table><p>
+
+<table align=center><tr align=center>
+<td><img src="0609/d6I.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6V.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6AA.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6Y.gif"><td width=15>
+</table><p>
+
+<table align=center><tr align=center>
+<td><img src="0609/d6X.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6BB.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6DD.gif"><br>(George Sicherman)<td width=15>
+<td><img src="0609/d6FF.gif"><br>(George Sicherman)<td width=15>
+</table><p>
+
+<a href="mailto:colonel@mail.monmouth.com">George Sicherman</a> also investigated the 7-stretchominoes:<p>
+
+<center><img src="0609/sk7.png"></center><p>
+
+<a href="mailto:colonel@mail.monmouth.com">George Sicherman</a> also investigated the 8-stretchominoes:<p>
+
+<center><img src="0609/sk8.png"></center><p>
+
+<a href="mailto:colonel@mail.monmouth.com">George Sicherman</a> also investigated the stretchable polylines:<p>
+
+<table align=center><tr align=center>
+<td><font size=+2>1<td width=5>
+<td><img src="0609/f1I.gif"><td width=5>
+<td><font size=+2>2<td width=5>
+<td><img src="0609/f2L.gif"><td width=5>
+<td><font size=+2>3<td width=5>
+<td><img src="0609/f3T.gif"><td width=5>
+<td><img src="0609/f3U.gif"><td width=5>
+<td><font size=+2>4<td width=5>
+<td><img src="0609/f4G.gif"><td width=5>
+<td><img src="0609/f4F.gif"><td width=5>
+<td><img src="0609/f4S.gif"><td width=5>
+<td><img src="0609/f4H.gif"><td width=5>
+</table><p>
+
+<table align=center><tr align=center>
+<td><font size=+2>5<td width=5>
+<td><img src="0609/f5H.gif"><td width=5>
+<td><img src="0609/f5Y.gif"><td width=5>
+<td><img src="0609/f5R.gif"><td width=5>
+<td><img src="0609/f5S.gif"><td width=5>
+<td><img src="0609/f5Q.gif"><td width=5>
+<td><img src="0609/f5E.gif"><td width=5>
+</table><p>
+
+<table align=center><tr align=center>
+<td><img src="0609/f5W.gif"><td width=5>
+<td><img src="0609/f5L.gif"><td width=5>
+<td><img src="0609/f5J.gif"><td width=5>
+<td><img src="0609/f5T.gif"><td width=5>
+<td><img src="0609/f5U.gif"><td width=5>
+<td><img src="0609/f5G.gif"><td width=5>
+</table><p><hr><p>
+
+
+
+<font size=+2>5.</font><p>
+
+<a href="mailto:colonel@mail.monmouth.com">George Sicherman</a> found all the polyominoes with area 10 or less that have extension tilings, shown below:<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0609/e4L.png"><br>L4
+<td><img src="0609/e5L.png"><br>L5
+<td><img src="0609/e6F.png"><br>F6
+<td><img src="0609/e6P.png"><br>P6
+</table>
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0609/e7P.png"><br>P7
+<td><img src="0609/e8P.png"><br>P8
+<td><img src="0609/e8Q.png"><br>Q8
+<td><img src="0609/e10P.png"><br>P10
+</table>
+
+<a href="mailto:mathidentity@yahoo.com">Bryce Herdt</a> found an 11-omino extension tiling:<p>
+
+<center><img src="0609/e11P.gif"></center><p>
+<p><hr color=black><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 4/10/16.<font></BODY></HTML>
+

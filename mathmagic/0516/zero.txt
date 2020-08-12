@@ -1,0 +1,210 @@
+ZERO, 4*1:
+
+ZERO
+
+ONE, 4*3:
+
+ZERO
+   N
+   E
+
+TWO, 4*3:
+
+ O T
+ N W
+ZERO
+
+THREE, 5*4:
+
+    Z
+THREE
+W   R
+ONE O
+
+FOUR, 6*5:
+
+  ZERO
+     N
+ THREE
+ W    
+FOUR  
+
+FIVE, 8*4:
+
+     Z F
+ THREE I
+ W   R V
+FOUR ONE
+
+SIX, 8*6:
+
+ S Z    
+FIVE TWO
+ X R H N
+  FOUR E
+     E  
+     E  
+
+SEVEN, 8*6:
+
+ S Z    
+FIVE TWO
+ X R H N
+  FOUR E
+     E  
+  SEVEN 
+
+EIGHT, 8*7:
+
+     SIX
+  FIVE  
+TWO  V  
+H U ZERO
+R R  N N
+E      E
+EIGHT   
+
+NINE, 9*6:
+
+ T Z SIX 
+ W E E  T
+FOUR V  H
+I  ONE  R
+V    NINE
+EIGHT   E
+
+TEN, 12*5:
+
+E    Z SIX  
+I FIVE E    
+G O  R V TWO
+H U  ONE E  
+THREE  NINE 
+
+ELEVEN, 11*6:
+
+ T Z T  S S
+ W E H NINE
+FOUR R  X V
+I  ONE T  E
+V    ELEVEN
+EIGHT  N   
+
+TWELVE, 11*7:
+
+ S T  T Z  
+EIGHT W E E
+ X R FOUR L
+   E I  ONE
+ TWELVE   V
+ E   E    E
+ NINE SEVEN
+
+THIRTEEN, 11*8:
+
+ O EIGHT F 
+ N L   H I 
+SEVEN  I V 
+I  V THREE 
+X  E   T  Z
+ TEN TWELVE
+ W     E  R
+FOUR NINE O
+
+FOURTEEN, 12*8:
+
+ F  TWELVE F
+SIX H      O
+ V EIGHT Z U
+TEN R  W E R
+H I T FOUR T
+R N E    ONE
+ELEVEN     E
+E   N  SEVEN
+
+FIFTEEN, 12*9
+   EIGHT Z F
+ T L   W E O
+THREE FOUR U
+ I V  I  O R
+ R E  F S  T
+ T N  TWELVE
+TEN S E V  E
+ E FIVE E  N
+ONE X NINE  
+
+SIXTEEN, 13*9:
+
+TWO FOUR  T F
+H  F N   ZERO
+I NINE S  N U
+R  V  SIX   R
+THREE  X S  T
+E   I  TWELVE
+E   G  E V  E
+N   H  ELEVEN
+ FIFTEEN N   
+
+SEVENTEEN, 14*9:
+
+ EIGHT   F F S
+     H Z I O E
+SIX NINE F U V
+I    R R THREE
+X S  T ONE   N
+TWELVE   E F T
+E V  E TEN I E
+ELEVEN W   V E
+N N   FOURTEEN
+
+EIGHTEEN, 15*9:
+
+ EIGHT FOUR F S
+F    H I   NINE
+ONE  I V  S F V
+U  THREE  I T E
+R S  T  SIXTEEN
+TWELVE      E T
+E V  EIGHTEEN E
+ELEVEN   W    E
+N N   ZERO  TEN
+
+NINETEEN, 16*9:
+
+F THIRTEEN S F S
+I W    I   I ONE
+F O S  G SIX U V
+T   EIGHT  THREE
+E T V  T   E   N
+ELEVEN E Z E F T
+N N NINETEEN I E
+     N N R   V E
+TWELVE  FOURTEEN
+
+TWENTY, 14*11:
+
+THIRTEEN SIX  
+    W L  I   S
+ T SEVEN X ONE
+ W  N V  T   V
+FOURTEEN E T E
+I   Y NINETEEN
+FIVE T N N N T
+T  I H E  Z  E
+E  G R  TWELVE
+EIGHTEEN  R  N
+N  T E   FOUR 
+
+THIRTY, 26*11:
+
+T   TWENTYSEVEN TWENTYTWO 
+W S W           W   H    F
+ELEVEN  S THIRTEEN EIGHT I
+N V N  NINE     N Z R    V
+TWENTYSIX N     TWENTYFIVE
+Y N Y  N T      Y R Y I   
+F TWELVE W    TWO O   F S 
+ONE I  T E  F H N  SIXTEEN
+U EIGHTEEN FOURTEEN   E V 
+R N H  E T  U E       E E 
+    TWENTYTHREE TWENTYNINE

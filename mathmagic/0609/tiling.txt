@@ -1,0 +1,67 @@
+THEOREM 
+ ~~~~~~~ 
+ A rectangle can be tiled with (axa) and (bxb) squares, Ê iff 
+ 
+
+(i) gcd(a,b)=1 , and any of the following hold: 
+ 
+
+either: Êboth sides of the rectangle are multiples of a; 
+ Ê Ê or: Êboth sides of the rectangle are multiples of b; 
+ Ê Ê or: Êone side is a multiple of (ab), and the other is any length EXCEPT 
+ Ê Ê Ê Ê Êone of a finite number of "bad" lengths: those numbers which are 
+ Ê Ê Ê Ê ÊNOT positive integer combinations of a & b. { By Sylvester's theorem 
+ Ê Ê Ê Ê Êthere are (a-1)(b-1)/2 of these, the largest being (a-1)(b-1)-1. } 
+ 
+
+(ii) gcd(a,b) = d . 
+ Ê Ê ÊThen merely apply (i) to the problem with a,b replaced 
+ Ê Ê Êby a/d, b/d Êand the rectangle lengths also divided by d. 
+ Ê Ê Êi.e. Êall cells must appear in (dxd) subsquares. 
+ 
+
+------ 
+ PROOF 
+ It is clear that (ii) follows from (i), and that simple constructions give 
+ the "if" part of (i). For the "only if" part, we prove that... 
+ 
+
+(S) If one side of the rectangle is not divisible by a, and the other is 
+ Ê Ê not divisible by b, then the tiling is impossible. 
+ 
+
+The results in (i) follow immediately from (S). 
+ 
+
+To prove (S): Ê( Chakraborty-Hoey style ). 
+ Ê Ê Ê Ê Ê Ê Ê Ê Ê~~~~~~~~~~~~~~~~ 
+ Let the width of the rectangle be a NON-(a-multiple). Then the number of 
+ bxb squares starting (i.e. top edge) at row 1 must be a NON-a-multiple. 
+ Thus the number of bxb starting at row 2 must BE an a-multiple. Similarly 
+ for the number starting at rows 3,4,...,b . Then the number starting at 
+ row (b+1) must be a NON-a-multiple again. 
+ 
+
+Similarly the number starting at rows (2b+1), (3b+1), (4b+1),... must all be 
+ non-a-multiples. So if the number of rows is NOT a multiple of b, (call it 
+ bx+r), then row (bx+1) must have a NON-a-multiple of bxb squares starting 
+ there, i.e. at least one, and there is no room left to squeeze it in. Ê Ê [QED] 
+ ---- 
+ 
+
+A Rickard-style proof of (S) is Ê Ê..BBB....BBWWW...WBBB....BBWWW ...W(..etc) 
+ Ê ~~~~~~~ Ê also possible, by Ê Ê Ê..BBB....BBWWW...WBBB....BBWWW ...W 
+ coloring the rectangle in Ê Ê Ê Ê Ê..BBB....BBWWW...WBBB....BBWWW ...W 
+ vertical strips as shown here: Ê Ê Ê <- Êa Ê->< b-a ><- Êa Ê->< b-a > 
+ 
+
+Every square tile covers an a-multiple of black squares. But if the width 
+ is a NON-b-multiple, and the number of rows is a NON-a-multiple, then there 
+ are a NON-a-multiple of black squares in total. Ê Ê[QED] 
+ 
+
+(Note: the coloring must have 1 column of blacks on the right, and any 
+ Ê==== Ê Ê spare columns of whites on the left.) 
+ ------------------------------ ----- 
+ Bill Taylor. Ê Ê Ê Ê Ê Êw...@math.canterbury.ac.nz 
+    

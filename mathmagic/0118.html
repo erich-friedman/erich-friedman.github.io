@@ -1,0 +1,86 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (January 2018)</H1></CENTER>
+
+Break a stick of length 1 into n pieces at random locations.  Order the pieces from smallest to largest length: X<sub>1</sub> < X<sub>2</sub> < <sup>. . .</sup> < X<sub>n-1</sub> < X<sub>n</sub>.  What can be said about these  X<sub>i</sub>?<p>
+
+What are the expected values E(X<sub>i</sub>) for various n and i?  What are the medians and modes?<p>
+
+Given some subset S of {1,2,3,...,n}, let X<sub>S</sub> = &Sigma; X<sub>i</sub>, i&isin;S.  What is the probability that P(X<sub>S</sub> > 1/2) for various n and S?  That is, what is the chance that the sum of the X<sub>i</sub> for i in S is larger than the sum of the X<sub>i</sub> for i not in S?<p>
+
+More generally, if S and T are non-overlapping subsets of {1,2,3,...,n}, what is P(X<sub>S</sub> &gt; X<sub>T</sub>)?
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+<center><font size=+2>Expected Value of X<sub>i</sub></font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n \ i<th>1<th>2<th>3<th>4<th>5
+<tr align=center><th bgcolor=FFFFDD>1<td>1
+<tr align=center><th bgcolor=FFFFDD>2<td>1 / 4<td>3 / 4
+<tr align=center><th bgcolor=FFFFDD>3<td>2 / 18<td>5 / 18<td>11 / 18
+<tr align=center><th bgcolor=FFFFDD>4<td>3 / 48<td>7 / 48<td>13 / 48<td>25 / 48
+<tr align=center><th bgcolor=FFFFDD>5<td>12 / 300<td>27 / 300<td>47 / 300<td>77 / 300<td>137 / 300
+</table><p>
+
+George Sicherman noticed that column 1 of the table was 1/n<sup>2</sup> and the main diagonal was S(n)/(n n!), where S(n) is the n<sup>th</sup> Stirling number of the first kind.<p>
+
+Dan Dima said this problem was the January 2006 IBM Ponder This problem of the month.  You can find the <a href="https://www.research.ibm.com/haifa/ponderthis/challenges/January2006.html">question</a> and <a href="https://www.research.ibm.com/haifa/ponderthis/solutions/January2006.html">answer</a> here.  Thus with n pieces, E(X<sub>i</sub>) = 1 / (n &Sigma; 1/(n-k)) where the sum ranges over 0&le;k&lt;i.<p>
+
+<center><font size=+2>Medians of X<sub>i</sub></font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n \ i<th>1<th>2<th>3<th>4
+<tr align=center><th bgcolor=FFFFDD>1<td>1
+<tr align=center><th bgcolor=FFFFDD>2<td>1 / 4<td>3 / 4
+<tr align=center><th bgcolor=FFFFDD>3<td>(2&ndash;&radic;2)/6<td>&radic;3/6<td>(6&ndash;&radic;6)/6
+<tr align=center><th bgcolor=FFFFDD>4<td>(2&ndash;<sup>3</sup>&radic;4)/8 <td>.144+ <td>.275+ <td>1 / 2
+</table><p>
+
+<center><font size=+2>Modes of X<sub>i</sub></font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n \ i<th>1<th>2<th>3<th>4
+<tr align=center><th bgcolor=FFFFDD>1<td>1
+<tr align=center><th bgcolor=FFFFDD>2<td>(0, 1/2)<td>(1/2, 1)
+<tr align=center><th bgcolor=FFFFDD>3<td>0<td>1 / 3<td>1 / 2
+<tr align=center><th bgcolor=FFFFDD>4<td>0<td>1 / 7<td>2 / 7<td>5 / 11
+</table><p>
+
+
+
+<center><font size=+2>P(S) = P( X<sub>S</sub> > 1/2 )</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n<th>S<th>P(S)
+
+<tr align=center><th bgcolor=FFFFDD>3<td>{3}<td> 3 / 4
+
+<tr align=center><th bgcolor=FFFFDD rowspan=2>4<td>{4}<td> 1 / 2
+<tr align=center><td>{4,1}<td> 3 / 4
+
+<tr align=center><th bgcolor=FFFFDD rowspan=6>5<td>{5}<td> 5 / 16
+<tr align=center><td>{5,4}<td> 95 / 96
+<tr align=center><td>{5,3}<td> 15 / 16
+<tr align=center><td>{5,2}<td> 5 / 8
+<tr align=center><td>{5,1}<td> 5 / 12
+<tr align=center><td>{4,3}<td> 5 / 32
+</table><p>
+
+
+
+<center><font size=+2>P(S,T) = P( X<sub>S</sub> > X<sub>T</sub> )</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>n<th>S<th>T<th>P(S,T)
+
+<tr align=center><th bgcolor=FFFFDD>3<td>{3}<td>{2,1}<td> 3 / 4
+
+<tr align=center><th bgcolor=FFFFDD rowspan=6>4<td>{4,1}<td>{3,2}<td> 3 / 4
+<tr align=center><td>{4}<td>{3,2,1}<td> 1 / 2
+<tr align=center><td>{4}<td>{3,2}<td> 3 / 5
+<tr align=center><td>{4}<td>{3,1}<td> 4 / 5
+<tr align=center><td>{4}<td>{2,1}<td> 14 / 15
+<tr align=center><td>{3}<td>{2,1}<td> 2 / 3
+</table><p>
+
+<HR><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 1/1/18.<font>
+
+
+</BODY></HTML>

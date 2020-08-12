@@ -1,0 +1,58 @@
+<html><head><script language=javascript>
+
+// erich 11-07 
+
+var a, b, maxLevel=20, found, again, maxV=new Array(), state=new Array()
+
+function next(level,n){var stringN=n.toString(),left,mid,right,startMid,endMid
+  function Next(u){var x, lef=left, maxX=(parseInt(lef+'0',10)==0)?1:3
+   state[level]=lef+mid.bold()+right
+   for(x=0;x<maxX;x++){
+    if(again)next(level+1,parseInt(lef+u+right,10))
+    lef+='0'
+  }}
+ if(level>maxLev)return
+ if(n>maxV[level])return
+ if(n==b){
+  found=true
+  for(var x=0;x<level;x++){document.write(state[x]+' ')}
+  document.write(n.toString().bold()+'</B> (found at level '+level+')<br></big>')
+  if(level<maxLev)maxLev=level
+  again=(confirm('Found one! Again ? '))
+  return
+ }
+ for(startMid=0;startMid<stringN.length;startMid++){
+  left=(startMid==0)?'':stringN.substring(0,startMid)
+  for(endMid=startMid+1;endMid<=stringN.length;endMid++){
+   mid=stringN.substring(startMid,endMid)
+   right=(endMid==stringN.length)?'':stringN.substring(endMid,stringN.length)
+   var nn=parseInt(mid,10)
+   if(nn>0){
+    if( nn%b == 0 )Next(nn/b)
+    if(!again)return
+    Next(nn*a)
+    if(!again)return
+}}}}
+
+ a=parseInt(prompt('a = ? ',3),10)
+ b=parseInt(prompt('b = ? ',11),10)
+ found=false
+ again=true
+ maxLev=3;while(!found){
+  maxV=null;maxV=new Array();maxLev++
+  state=null;state=new Array()
+  state[0]=('<big><font color=red>'+a+'-'+b+' : </font>')
+  maxV[maxLev+1]=b
+  for(var x=maxLev;x>0;x--)maxV[x]=b*maxV[x+1];
+  next(1,1)
+  if(found){
+   document.write((again)?'no more solutions<br>':'stopped<br>')
+  }else{
+   document.write(state[0]+'not found at level '+maxLev+'</big><br>')
+ }}
+
+</script></head><body>
+
+To change data, reload the program.
+
+</body></html>

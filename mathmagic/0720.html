@@ -1,0 +1,383 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (July 2020)</H1></CENTER>
+
+Ten years ago, I published a set of <a href="https://www2.stetson.edu/~efriedma/published/replacement/index.html">Replacement Puzzles</a> in GAMES magazine.   This got me thinking, what is the longest possible length M of such puzzles with a unique solution, and how does it depend on S (the number of different symbols allowed), L (the maximum length of strings) and R (the number of transformation rules)? <p>
+
+Graph theorists use the word <b>girth</b> to represent the length of the shortest cycle in a directed graph.  Given S, L, and R, what is the largest girth G that is possible?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Clearly if S=1, then M=L&ndash;1. (for example, the goal <font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;&heartsuit;</font> with the rule <font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>)<p>
+
+Similarly, if R=1, then M=L&ndash;1. (for example, the goal &spadesuit;<font color=blue>&diamondsuit;&diamondsuit;&diamondsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;&spadesuit; with the rule &spadesuit;<font color=blue>&diamondsuit;</font>&rarr;&spadesuit;&spadesuit;)<p>
+
+If L=1, then M=min{S&ndash;1,R&ndash;1}. (for example, the goal &spadesuit;&rarr;<font color=red>&heartsuit;</font> with the rules &spadesuit;&rarr;<font color=green>&clubsuit;</font>, <font color=green>&clubsuit;</font>&rarr;<font color=blue>&diamondsuit;</font>, and <font color=blue>&diamondsuit;</font>&rarr;<font color=red>&heartsuit;</font>)<p>
+
+M is clearly non-decreasing in S, L, and R.  Because of the number of states, M &le; S+S<sup>2</sup>+...+S<sup>L</sup>&ndash;1= (S<sup>L+1</sup>&ndash;2S+1)/(S&ndash;1).  This upper bound can always be achieved with R=M, by having every rule move to or from a state with length L.<p>
+
+Here are the longest known puzzles for other cases.  Only those for S=2 L=2 have been proved optimal.<p>
+
+
+
+<center><font size=+2>Longest Unique Puzzles for S=2</font></center>
+<table border=1 align=center cellpadding=5>
+<tr align=center bgcolor=FFFFDD><TH>L \ R<TH>2<TH>3<TH>4<TH>5<TH>&infin;
+<tr align=center><TH bgcolor=FFFFDD>2
+
+<td>M=3<br>Goal: &spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font><br>
+Rule #1: &spadesuit;&rarr;<font color=red>&heartsuit;</font><br>
+Rule #2: <font color=red>&heartsuit;</font>&spadesuit;&rarr;&spadesuit;<br><hr>
+Solution: &spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;&rarr;&spadesuit;&rarr;<font color=red>&heartsuit;</font>
+
+<td>M=5<br>Goal: <font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;<br>
+Rule #1: <font color=red>&heartsuit;</font>&rarr;&spadesuit;<br>
+Rule #2: &spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font><br>
+Rule #3: &spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font><br> <hr>
+Solution: <font color=red>&heartsuit;</font>&rarr;&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;
+
+<td>M=5
+<td>M=5
+<td>M=5
+
+<tr align=center><TH bgcolor=FFFFDD>3
+
+<td>M=5<br>Goal: &spadesuit;&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font><br>
+Rule #1: &spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font><br>
+Rule #2: <font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font><br><hr>
+Solution: &spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br><font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>
+
+<td>M=9<br>Goal: <font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;<br>
+Rule #1: <font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<br>
+Rule #2: <font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;</font><br>
+Rule #3: &spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font><br><hr>
+Solution: <font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br><font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;
+
+<td>M=11<br>Goal: <font color=red>&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;<br>
+Rule #1: <font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;<br>
+Rule #2: &spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font><br>
+Rule #3: <font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<br>
+Rule #4: &spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;<br><hr>
+Solution: <font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;<br>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&rarr;<br>&spadesuit;&spadesuit;&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;
+
+<td>M=11?
+
+<td>M=13
+
+<tr align=center><TH bgcolor=FFFFDD>4
+
+<td>M=7<br>Goal: <font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&spadesuit;<br>
+Rule #1: <font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;<br>
+Rule #2: &spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;<br><hr>
+Solution: <font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;&rarr;<br><font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&rarr;&spadesuit;&spadesuit;&spadesuit;&spadesuit;&rarr;<br><font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&spadesuit;
+
+<td>M=13<br>Goal: &spadesuit;&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&spadesuit;<br>
+Rule #1: &spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font><br>
+Rule #2: <font color=red>&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font><br>
+Rule #3: &spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;<br><hr>
+Solution: &spadesuit;&spadesuit;&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br><font color=red>&heartsuit;</font>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&spadesuit;
+
+<td>M=15<br>Goal: <font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;&heartsuit;</font><br>
+Rule #1: <font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<br>
+Rule #2: <font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font><br>
+Rule #3: &spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font><br>
+Rule #4: <font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font><br><hr>
+Solution: <font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;<br><font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&rarr;<br>&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br><font color=red>&heartsuit;&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>
+
+<td>M=17<br>Goal: <font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font><br>
+Rule #1: &spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;<br>
+Rule #2: <font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;<br>
+Rule #3: &spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font><br>
+Rule #4: &spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font><br>
+Rule #5: <font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font><br><hr>
+Solution: <font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&spadesuit;&rarr;<br><font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br>&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br>&spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<br>&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>
+
+<td>M=29
+
+<tr align=center><TH bgcolor=FFFFDD>5
+
+<td>M=9<br>Goal: &spadesuit;&spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;&spadesuit;<br>
+Rule #1: &spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font><br>
+Rule #2: <font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;&spadesuit;<br><hr>
+Solution: &spadesuit;&spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<br>&spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<br>&spadesuit;&spadesuit;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;&spadesuit;
+
+<td>M=18<br>Goal: <font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font><br>
+Rule #1: &spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font><br>
+Rule #2: <font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<br>
+Rule #3: <font color=red>&heartsuit;</font>&spadesuit;&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font><br><hr>
+Solution: <font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&rarr;<br><font color=red>&heartsuit;</font>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<br><font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&spadesuit;&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;<br><font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;&spadesuit;&spadesuit;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br>&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font>
+ 
+<td>M=18?
+
+<td>M=19<br>Goal: <font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;<br>
+Rule #1: &spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;<br>
+Rule #2: &spadesuit;&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font><br>
+Rule #3: <font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;<br>
+Rule #4: <font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<br>
+Rule #5: <font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;</font><br>
+Solution: <font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br><font color=red>&heartsuit;&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;<br>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<br>&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br>&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br><font color=red>&heartsuit;</font>&spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;
+<td>M=61
+
+</table><p>
+
+
+
+
+
+<center><font size=+2>Longest Unique Puzzles for S=3</font></center>
+<table border=1 align=center cellpadding=5>
+<tr align=center bgcolor=FFFFDD><TH>L \ R<TH>2<TH>3<TH>4<TH>5<TH>&infin;
+<tr align=center><TH bgcolor=FFFFDD>2
+
+<td>M=3? 
+
+<td>M=5? 
+
+<td>M=7<br>Goal: &spadesuit;<font color=green>&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit; <br>
+Rule #1: &spadesuit;&rarr;<font color=green>&clubsuit;</font><br>
+Rule #2: <font color=green>&clubsuit;</font><font color=green>&clubsuit;</font>&rarr;&spadesuit;<br>
+Rule #3: <font color=green>&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font><br>
+Rule #4: <font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<br><hr>
+Solution: &spadesuit;<font color=green>&clubsuit;</font>&rarr;<font color=green>&clubsuit;</font><font color=green>&clubsuit;</font>&rarr;&spadesuit;&rarr;<br><font color=green>&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&rarr;<font color=green>&clubsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;
+
+<td>M=9<br>Goal: <font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;</font><font color=green>&clubsuit;</font><br>
+Rule #1: <font color=green>&clubsuit;</font>&rarr;&spadesuit;<br>
+Rule #2: &spadesuit;&rarr;<font color=red>&heartsuit;</font><br>
+Rule #3: <font color=red>&heartsuit;</font>&rarr;<font color=green>&clubsuit;&clubsuit;</font><br>
+Rule #4: &spadesuit;&spadesuit;&rarr;<font color=green>&clubsuit;</font><br>
+Rule #5: <font color=red>&heartsuit;</font><font color=red>&heartsuit;</font>&rarr;<font color=green>&clubsuit;</font>&spadesuit;<br><hr>
+Solution: <font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;</font><font color=red>&heartsuit;</font>&rarr;<br><font color=green>&clubsuit;</font>&spadesuit;&rarr;&spadesuit;&spadesuit;&rarr;<font color=green>&clubsuit;</font>&rarr;&spadesuit;&rarr;<br><font color=red>&heartsuit;</font>&rarr;<font color=green>&clubsuit;&clubsuit;</font>&rarr;&spadesuit;<font color=green>&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font><font color=green>&clubsuit;</font>
+
+<td>M=11
+
+<tr align=center><TH bgcolor=FFFFDD>3
+
+<td>M=5? 
+
+<td>M=9?
+
+<td>M=15<br>Goal: <font color=red>&heartsuit;</font>&rarr;&spadesuit;<font color=green>&clubsuit;</font>&spadesuit;<br>
+Rule #1: &spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font><font color=green>&clubsuit;</font><br>
+Rule #2: <font color=green>&clubsuit;&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font><br>
+Rule #3: <font color=red>&heartsuit;</font><font color=green>&clubsuit;</font>&rarr;<font color=green>&clubsuit;</font>&spadesuit;<br>
+Rule #4: <font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<br><hr>
+Solution: <font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font><font color=green>&clubsuit;</font>&rarr;&spadesuit;&spadesuit;<font color=green>&clubsuit;</font>&rarr;<br><font color=red>&heartsuit;</font><font color=green>&clubsuit;&clubsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font><font color=green>&clubsuit;</font>&rarr;<br><font color=red>&heartsuit;</font><font color=green>&clubsuit;</font>&spadesuit;&rarr;<font color=green>&clubsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=green>&clubsuit;</font><font color=red>&heartsuit;</font><font color=green>&clubsuit;</font>&rarr;<font color=green>&clubsuit;&clubsuit;</font>&spadesuit;&rarr;<br><font color=red>&heartsuit;</font>&spadesuit;&rarr;&spadesuit;&spadesuit;&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font><font color=green>&clubsuit;</font>&rarr;&spadesuit;<font color=green>&clubsuit;</font>&spadesuit;
+
+<td>M=18<br>Goal: <font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<font color=green>&clubsuit;</font><br>
+Rule #1: <font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=green>&clubsuit;</font>&spadesuit;<br>
+Rule #2: <font color=green>&clubsuit;</font><font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=green>&clubsuit;</font><font color=red>&heartsuit;</font><font color=green>&clubsuit;</font><br>
+Rule #3: <font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font><font color=green>&clubsuit;</font><br>
+Rule #4: <font color=green>&clubsuit;</font>&rarr;&spadesuit;<br>
+Rule #5: &spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font><br><hr>
+Solution: <font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=green>&clubsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font><font color=green>&clubsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&rarr;<br><font color=red>&heartsuit;</font><font color=green>&clubsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=green>&clubsuit;</font>&spadesuit;&spadesuit;&rarr;&spadesuit;&spadesuit;&spadesuit;&rarr;<br><font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=green>&clubsuit;</font>&spadesuit;&rarr;&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font><font color=green>&clubsuit;</font>&rarr;<br><font color=red>&heartsuit;</font><font color=green>&clubsuit;&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=green>&clubsuit;</font>&rarr;<font color=green>&clubsuit;</font>&spadesuit;<font color=green>&clubsuit;</font>&rarr;&spadesuit;&spadesuit;<font color=green>&clubsuit;</font>
+
+<td>M=38
+
+<tr align=center><TH bgcolor=FFFFDD>4
+
+<td>M=7?
+
+<td>M=13? 
+
+<td>M=17<br>Goal: <font color=green>&clubsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=green>&clubsuit;&clubsuit;</font>&spadesuit;<font color=red>&heartsuit;</font> <br>
+Rule #1: <font color=green>&clubsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=green>&clubsuit;</font><br>
+Rule #2: <font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=green>&clubsuit;&clubsuit;</font><font color=red>&heartsuit;</font><br>
+Rule #3: <font color=red>&heartsuit;</font>&rarr;&spadesuit;<br>
+Rule #4: <font color=green>&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;<br><hr>
+Solution: <font color=green>&clubsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=green>&clubsuit;</font>&spadesuit;&spadesuit;&spadesuit;&rarr;<font color=green>&clubsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<br><font color=green>&clubsuit;&clubsuit;</font><font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=green>&clubsuit;&clubsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=green>&clubsuit;&clubsuit;</font>&rarr;<font color=green>&clubsuit;</font><font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=green>&clubsuit;</font>&spadesuit;&spadesuit;&rarr;<br><font color=green>&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=green>&clubsuit;&clubsuit;</font><font color=red>&heartsuit;</font>&rarr;<font color=green>&clubsuit;</font><font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=green>&clubsuit;</font>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br><font color=green>&clubsuit;</font><font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=green>&clubsuit;&clubsuit;</font><font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=green>&clubsuit;&clubsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>
+
+<td>M=23<br>Goal: <font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=green>&clubsuit;</font><font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font><br>
+Rule #1: &spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font><br>
+Rule #2: <font color=red>&heartsuit;&heartsuit;</font><font color=green>&clubsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font><br>
+Rule #3: &spadesuit;&rarr;<font color=green>&clubsuit;&clubsuit;</font><br>
+Rule #4: <font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<br>
+Rule #5: <font color=green>&clubsuit;&clubsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font><br><hr>
+Solution: <font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font><font color=green>&clubsuit;&clubsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;<br><font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font><font color=green>&clubsuit;&clubsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font><font color=green>&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font><font color=green>&clubsuit;</font>&rarr;<br>&spadesuit;&spadesuit;<font color=green>&clubsuit;</font>&rarr;&spadesuit;<font color=green>&clubsuit;&clubsuit;</font><font color=green>&clubsuit;</font>&rarr;&spadesuit;<font color=green>&clubsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;<font color=green>&clubsuit;</font><font color=red>&heartsuit;</font>&rarr;<br><font color=green>&clubsuit;&clubsuit;</font><font color=green>&clubsuit;</font><font color=red>&heartsuit;</font>&rarr;<font color=green>&clubsuit;</font>&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=green>&clubsuit;</font><font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=green>&clubsuit;</font>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br><font color=green>&clubsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=green>&clubsuit;</font><font color=red>&heartsuit;</font>&rarr;<font color=green>&clubsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=green>&clubsuit;&clubsuit;</font><font color=green>&clubsuit;</font>&spadesuit;&rarr;<br><font color=green>&clubsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=green>&clubsuit;</font><font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=green>&clubsuit;</font><font color=red>&heartsuit;</font><font color=green>&clubsuit;&clubsuit;</font>&rarr;<font color=green>&clubsuit;</font><font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>
+
+<td>M=119
+
+<tr align=center><TH bgcolor=FFFFDD>5
+
+<td>M=10<br>Goal: <font color=green>&clubsuit;</font>&rarr;<font color=green>&clubsuit;</font>&spadesuit;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font><br>
+Rule #1: <font color=green>&clubsuit;</font>&rarr;<font color=green>&clubsuit;</font>&spadesuit;<br>
+Rule #2: <font color=green>&clubsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=green>&clubsuit;</font><font color=red>&heartsuit;</font><br><hr>
+Solution: <font color=green>&clubsuit;</font>&rarr;<font color=green>&clubsuit;</font>&spadesuit;&rarr;<font color=green>&clubsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=green>&clubsuit;</font><font color=red>&heartsuit;</font>&rarr;<br><font color=green>&clubsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=green>&clubsuit;</font>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=green>&clubsuit;</font><font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=green>&clubsuit;</font>&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<br><font color=green>&clubsuit;</font>&spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=green>&clubsuit;</font><font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;<font color=green>&clubsuit;</font>&spadesuit;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font>
+
+<td>M=18? 
+
+<td>M=18? 
+
+<td>M=19? 
+
+<td>M=362
+
+</table><p><hr>
+
+No loops are possible with R=1.<p>
+
+If S=1 and R&ge;2, then G=L (for example, with rules <font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font> and <font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>.<p>
+
+If L=1, R&ge;2, and S&ge;2, then G=min{S,R}. (for example, with rules &spadesuit;&rarr;<font color=green>&clubsuit;</font>, <font color=green>&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font>, and <font color=red>&heartsuit;</font>&rarr;&spadesuit;)<p>
+
+G is also non-decreasing in S, L, and R.  Because of the number of states, G &le; S+S<sup>2</sup>+...+S<sup>L</sup>= (S<sup>L+1</sup>&ndash;S)/(S&ndash;1).  This upper bound can always be achieved with R=G, by having every rule move to or from a state with length L.<p>
+
+
+
+
+
+
+<center><font size=+2>Largest Girth for S=2</font></center>
+<table border=1 align=center cellpadding=5>
+<tr align=center bgcolor=FFDDFF><TH>L \ R<TH>2<TH>3<TH>4<TH>5
+<tr align=center><TH bgcolor=FFDDFF>2
+
+<td>G=3<br>
+Rule #1: &spadesuit;&rarr;<font color=red>&heartsuit;</font><br>
+Rule #2: <font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<br><hr>
+Cycle: &spadesuit;&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>&rarr;
+
+<td>G=5<br>
+Rule #1: &spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font><br>
+Rule #2: <font color=red>&heartsuit;</font>&rarr;&spadesuit;<br>
+Rule #3: &spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font><br> <hr>
+Cycle: &spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font>&rarr;
+
+<td>G=5?
+
+<td>G=5?
+
+<tr align=center><TH bgcolor=FFDDFF>3
+
+<td>G=4<br>
+Rule #1: &spadesuit;&rarr;<font color=red>&heartsuit;</font><br>
+Rule #2: <font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;<br><hr>
+Cycle: &spadesuit;&spadesuit;&spadesuit;&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;
+
+<td>G=8<br>
+Rule #1: &spadesuit;&rarr;<font color=red>&heartsuit;</font><br>
+Rule #2: <font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<br>
+Rule #3: <font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<br><hr>
+Cycle: &spadesuit;&rarr;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br><font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;
+
+<td>G=9<br>
+Rule #1: &spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;<br>
+Rule #2: &spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font><br>
+Rule #3: <font color=red>&heartsuit;</font>&spadesuit;&rarr;&spadesuit;<br>
+Rule #4: <font color=red>&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font><br><hr>
+Cycle: &spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&rarr;<br><font color=red>&heartsuit;</font>&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;
+
+<td>G=9?
+
+<tr align=center><TH bgcolor=FFDDFF>4
+
+<td>G=5<br>
+Rule #1: &spadesuit;&rarr;<font color=red>&heartsuit;</font><br>
+Rule #2: <font color=red>&heartsuit;&heartsuit;&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;&spadesuit;<br><hr>
+Cycle: &spadesuit;&spadesuit;&spadesuit;&spadesuit;&rarr;&spadesuit;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br>&spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;&heartsuit;</font>&rarr;
+
+<td>G=11<br>
+Rule #1: &spadesuit;&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font><br>
+Rule #2: &spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;&heartsuit;</font><br>
+Rule #3: <font color=red>&heartsuit;</font>&rarr;&spadesuit;<br><hr>
+Cycle: &spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;<br>&spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<br>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font>&rarr;
+
+<td>G=14<br>
+Rule #1: &spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;<br>
+Rule #2: <font color=red>&heartsuit;</font>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font><br>
+Rule #3: &spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font><br>
+Rule #4: <font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<br><hr>
+
+Cycle: &spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<br>&spadesuit;&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&spadesuit;&rarr;<br>&spadesuit;&spadesuit;&spadesuit;&rarr;&spadesuit;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;</font>&rarr;<br><font color=red>&heartsuit;</font>&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>&rarr;
+
+<td>G=14?
+
+
+<tr align=center><TH bgcolor=FFDDFF>5
+
+<td>G=6<br>
+Rule #1: &spadesuit;&rarr;<font color=red>&heartsuit;</font><br>
+Rule #2: <font color=red>&heartsuit;&heartsuit;&heartsuit;&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;&spadesuit;&spadesuit;<br><hr>
+Cycle: &spadesuit;&spadesuit;&spadesuit;&spadesuit;&spadesuit;&rarr;&spadesuit;&spadesuit;&spadesuit;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<br>&spadesuit;&spadesuit;<font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;&heartsuit;&heartsuit;&heartsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;&heartsuit;&heartsuit;&heartsuit;</font>&rarr;
+
+<td>G=11?
+ 
+<td>G=14?
+
+<td>G=14?
+
+</table><p>
+
+
+
+
+
+
+<center><font size=+2>Largest Girth for S=3</font></center>
+<table border=1 align=center cellpadding=5>
+<tr align=center bgcolor=FFDDFF><TH>L \ R<TH>2<TH>3<TH>4<TH>5
+<tr align=center><TH bgcolor=FFDDFF>2
+
+<td>G=3?
+
+<td>G=5?
+
+<td>G=8<br>
+Rule #1: <font color=red>&heartsuit;</font>&rarr;&spadesuit;<br>
+Rule #2: &spadesuit;&rarr;<font color=green>&clubsuit;</font><br>
+Rule #3: <font color=green>&clubsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font><br>
+Rule #4: <font color=green>&clubsuit;&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font><br><hr>
+Cycle: <font color=red>&heartsuit;</font>&rarr;&spadesuit;&rarr;<font color=green>&clubsuit;</font>&rarr;<font color=red>&heartsuit;&heartsuit;</font>&rarr;<br>&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&rarr;<font color=green>&clubsuit;</font>&spadesuit;&rarr;<font color=green>&clubsuit;&clubsuit;</font>&rarr;
+
+<td>G=8?
+
+<tr align=center><TH bgcolor=FFDDFF>3
+
+<td>G=4?
+
+<td>G=8?
+
+<td>G=12<br>
+Rule #1: <font color=green>&clubsuit;</font>&rarr;&spadesuit;<br>
+Rule #2: &spadesuit;&rarr;<font color=green>&clubsuit;&clubsuit;</font><br>
+Rule #3: &spadesuit;&spadesuit;<font color=green>&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font><font color=green>&clubsuit;</font><br>
+Rule #4: <font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;<font color=green>&clubsuit;</font><br><hr>
+Cycle: <font color=green>&clubsuit;</font>&rarr;&spadesuit;&rarr;<font color=green>&clubsuit;&clubsuit;</font>&rarr;<br>&spadesuit;<font color=green>&clubsuit;</font>&rarr;&spadesuit;&spadesuit;&rarr;&spadesuit;<font color=green>&clubsuit;&clubsuit;</font>&rarr;&spadesuit;&spadesuit;<font color=green>&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font><font color=green>&clubsuit;</font>&rarr;<br><font color=red>&heartsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;</font><font color=green>&clubsuit;&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=green>&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font>&spadesuit;&spadesuit;&rarr;
+
+<td>G=13<br>
+Rule #1: <font color=green>&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font><br>
+Rule #2: <font color=red>&heartsuit;</font>&rarr;<font color=green>&clubsuit;&clubsuit;</font><br>
+Rule #3: <font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<br>
+Rule #4: &spadesuit;&spadesuit;&rarr;<font color=green>&clubsuit;</font><br>
+Rule #5: <font color=green>&clubsuit;&clubsuit;</font>&spadesuit;&rarr;<font color=red>&heartsuit;</font>&spadesuit;<font color=green>&clubsuit;</font><br><hr>
+Cycle: <font color=green>&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font>&rarr;<font color=green>&clubsuit;&clubsuit;</font>&rarr;<font color=red>&heartsuit;</font><font color=green>&clubsuit;</font>&rarr;<br><font color=red>&heartsuit;&heartsuit;</font>&rarr;<font color=green>&clubsuit;&clubsuit;</font><font color=red>&heartsuit;</font>&rarr;<font color=red>&heartsuit;</font><font color=green>&clubsuit;</font><font color=red>&heartsuit;</font>&rarr;<br><font color=red>&heartsuit;&heartsuit;&heartsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;</font>&rarr;&spadesuit;<font color=green>&clubsuit;&clubsuit;</font>&rarr;<br>&spadesuit;<font color=red>&heartsuit;</font><font color=green>&clubsuit;</font>&rarr;&spadesuit;<font color=red>&heartsuit;&heartsuit;</font>&rarr;&spadesuit;&spadesuit;&rarr;
+
+<tr align=center><TH bgcolor=FFDDFF>4
+
+<td>G=5?
+
+<td>G=11?
+
+<td>G=14?
+
+<td>G=14?
+
+
+<tr align=center><TH bgcolor=FFDDFF>5
+
+<td>G=6?
+
+<td>G=11?
+ 
+<td>G=14?
+
+<td>G=14?
+
+</table><p>
+
+
+
+
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:erichfriedman68@gmail.com">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 7/1/20.<font>
+</BODY></HTML>
+

@@ -1,0 +1,988 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (September 2016)</H1></CENTER>
+
+On an N&times;N chessboard, when we place Q queens, what is the maximum number of squares that can be attacked exactly A times?
+
+
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+George Sicherman sent solutions.<p>
+
+Let f(N,Q,A) denote the largest number of squares that are attacked exactly A times.  Clearly f(N,Q,A) = 0 if Q&lt;A or Q&gt;N<sup>2</sup>&ndash;A.<p>
+
+The 2&times;2 boards are boring, as each square attacks each other.  Thus f(2,Q,A) = N<sup>2</sup>&ndash;Q when Q=A, and 0 otherwise.<p>
+
+The boards containing one piece are also boring, as a queen on the edge of the board attacks the fewest squares, and a queen in the middle of the board attacks the most squares.  Thus f(N,1,0) = N<sup>2</sup>&ndash;3N+2 and f(N,1,1) = N<sup>2</sup>&ndash;4N+4.<p>
+
+Computer evidence suggests the following formulas.  Can you prove any of them?  What other patterns can you find?<p>
+
+<UL>
+<LI> f(N,2,0) = N<sup>2</sup>&ndash;5N+7
+<LI> f(N,2,1) = 7N&ndash;18 (for N&ge;6)
+<LI> f(N,2,2) = 12 (for N&ge;8)
+<p>
+<LI> f(N,3,0) = N<sup>2</sup>&ndash;6N+9 (for N&ge;6)
+<LI> f(N,3,3) = 5 (for N&ge;4)
+<p>
+<LI> f(N,4,0) = 4 <img src="lfloor.gif" align=center>(N&ndash;3)/2<img src="rfloor.gif" align=center> <img src="lfloor.gif" align=center>(N&ndash;2)/2<img src="rfloor.gif" align=center> (for N&ge;5)
+<LI> f(N,4,2) = 6N&ndash;12 (for even N)
+<LI> f(N,4,3) = 14 (for N&ge;6)
+<LI> f(N,4,4) = 4 (for N&ge;4)
+<p>
+<LI> f(N,5,1) = 9N&ndash;31 (for N&ge;4)
+<LI> f(N,5,4) = 8 (for N&ge;5)
+<LI> f(N,5,5) = 3 (for N&ge;5)
+<p>
+<LI> f(N,6,5) = 4 (for N&ge;4)
+<LI> f(N,6,6) = 2 (for N&ge;4)
+</UL><p>
+
+Here are the best known solutions.  A yellow background means all vacant squares are attacked A times.<p>
+
+
+<center><font size=+3>3&times;3 Board</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Q \ A<th>0<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<tr align=center><th bgcolor=DDFFDD>2
+<td><img src="0916/3-2-0.gif"><br>1 square<br>2 solutions
+<td><img src="0916/3-2-1.gif"><br>5 squares<br>1 solution
+<td><img src="0916/3-2-2.gif"><br>5 squares<br>1 solution
+<tr align=center><th bgcolor=DDFFDD>3
+<td>
+<td><img src="0916/3-3-1.gif"><br>3 squares<br>1 solution
+<td><img src="0916/3-3-2.gif"><br>5 squares<br>1 solution
+<td><img src="0916/3-3-3.gif"><br>4 squares<br>2 solutions
+<tr align=center><th bgcolor=DDFFDD>4
+<td>
+<td><img src="0916/3-4-1.gif"><br>1 square<br>3 solutions
+<td><img src="0916/3-4-2.gif"><br>4 squares<br>4 solutions
+<td bgcolor=FFFFDD><img src="0916/3-4-3.gif"><br>5 squares<br>2 solutions
+<td><img src="0916/3-4-4.gif"><br>2 squares<br>3 solutions
+<tr align=center><th bgcolor=DDFFDD>5
+<td>
+<td>
+<td><img src="0916/3-5-2.gif"><br>3 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/3-5-3.gif"><br>4 squares<br>4 solutions
+<td><img src="0916/3-5-4.gif"><br>2 squares<br>3 solutions
+<td><img src="0916/3-5-5.gif"><br>2 squares<br>1 solution
+<tr align=center><th bgcolor=DDFFDD>6
+<td>
+<td>
+<td><img src="0916/3-6-2.gif"><br>2 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/3-6-3.gif"><br>3 squares<br>2 solutions
+<td><img src="0916/3-6-4.gif"><br>2 squares<br>4 solutions
+<td><img src="0916/3-6-5.gif"><br>1 square<br>3 solutions
+<td><img src="0916/3-6-6.gif"><br>1 square<br>6 solutions
+<tr align=center><th bgcolor=DDFFDD>7
+<td>
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/3-7-3.gif"><br>2 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/3-7-4.gif"><br>2 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/3-7-5.gif"><br>2 squares<br>1 solution
+<td>
+<td><img src="0916/3-7-7.gif"><br>1 square<br>2 solutions
+<tr align=center><th bgcolor=DDFFDD>8
+<td>
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/3-8-3.gif"><br>1 square<br>1 solution
+<td>
+<td bgcolor=FFFFDD><img src="0916/3-8-5.gif"><br>1 square<br>1 solution
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/3-8-8.gif"><br>1 square<br>1 solution
+</table><p>
+
+
+<center><font size=+3>4&times;4 Board</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Q \ A<th>0<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<tr align=center><th bgcolor=DDFFDD>2
+<td><img src="0916/4-2-0.gif"><br>3 squares<br>2 solutions
+<td><img src="0916/4-2-1.gif"><br>12 squares<br>1 solution
+<td><img src="0916/4-2-2.gif"><br>7 squares<br>3 solutions
+<tr align=center><th bgcolor=DDFFDD>3
+<td><img src="0916/4-3-0.gif"><br>2 squares<br>2 solutions
+<td><img src="0916/4-3-1.gif"><br>10 squares<br>1 solution
+<td><img src="0916/4-3-2.gif"><br>10 squares<br>1 solution
+<td><img src="0916/4-3-3.gif"><br>5 squares<br>2 solutions
+<tr align=center><th bgcolor=DDFFDD>4
+<td><img src="0916/4-4-0.gif"><br>1 square<br>25 solutions
+<td><img src="0916/4-4-1.gif"><br>8 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/4-4-2.gif"><br>12 squares<br>1 solution
+<td><img src="0916/4-4-3.gif"><br>9 squares<br>1 solution
+<td><img src="0916/4-4-4.gif"><br>4 squares<br>1 solution
+<tr align=center><th bgcolor=DDFFDD>5
+<td><img src="0916/4-5-0.gif"><br>1 square<br>9 solutions
+<td><img src="0916/4-5-1.gif"><br>5 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/4-5-2.gif"><br>11 squares<br>1 solution
+<td><img src="0916/4-5-3.gif"><br>10 squares<br>1 solutions
+<td><img src="0916/4-5-4.gif"><br>6 squares<br>2 solutions
+<td><img src="0916/4-5-5.gif"><br>2 squares<br>8 solutions
+<tr align=center><th bgcolor=DDFFDD>6
+<td><img src="0916/4-6-0.gif"><br>1 square<br>2 solutions
+<td><img src="0916/4-6-1.gif"><br>4 squares<br>1 solution
+<td><img src="0916/4-6-2.gif"><br>8 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/4-6-3.gif"><br>10 squares<br>1 solution
+<td><img src="0916/4-6-4.gif"><br>6 squares<br>17 solutions
+<td><img src="0916/4-6-5.gif"><br>4 squares<br>2 solutions
+<td><img src="0916/4-6-6.gif"><br>2 squares<br>2 solutions
+<tr align=center><th bgcolor=DDFFDD>7
+<td>
+<td><img src="0916/4-7-1.gif"><br>3 squares<br>1 solution
+<td><img src="0916/4-7-2.gif"><br>6 squares<br>10 solutions
+<td bgcolor=FFFFDD><img src="0916/4-7-3.gif"><br>9 squares<br>2 solutions
+<td><img src="0916/4-7-4.gif"><br>7 squares<br>4 solutions
+<td><img src="0916/4-7-5.gif"><br>5 squares<br>3 solutions
+<td><img src="0916/4-7-6.gif"><br>2 squares<br>32 solutions
+<td><img src="0916/4-7-7.gif"><br>1 square<br>29 solutions
+<tr align=center><th bgcolor=DDFFDD>8
+<td>
+<td><img src="0916/4-8-1.gif"><br>1 square<br>26 solutions
+<td><img src="0916/4-8-2.gif"><br>6 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/4-8-3.gif"><br>8 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/4-8-4.gif"><br>8 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/4-8-5.gif"><br>8 squares<br>1 solution
+<td><img src="0916/4-8-6.gif"><br>4 squares<br>1 solutions
+<td><img src="0916/4-8-7.gif"><br>2 squares<br>5 solutions
+<td><img src="0916/4-8-8.gif"><br>1 square<br>6 solutions
+<tr align=center><th bgcolor=DDFFDD>9
+<td>
+<td><img src="0916/4-9-1.gif"><br>1 square<br>3 solutions
+<td><img src="0916/4-9-2.gif"><br>4 squares<br>8 solutions
+<td bgcolor=FFFFDD><img src="0916/4-9-3.gif"><br>7 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/4-9-4.gif"><br>7 squares<br>1 solution
+<td><img src="0916/4-9-5.gif"><br>6 squares<br>1 solution
+<td><img src="0916/4-9-6.gif"><br>4 squares<br>2 solutions
+<td><img src="0916/4-9-7.gif"><br>3 squares<br>1 solution
+<td><img src="0916/4-9-8.gif"><br>1 square<br>23 solutions
+<tr align=center><th bgcolor=DDFFDD>10
+<td>
+<td>
+<td><img src="0916/4-10-2.gif"><br>4 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/4-10-3.gif"><br>6 squares<br>3 solutions
+<td bgcolor=FFFFDD><img src="0916/4-10-4.gif"><br>6 squares<br>1 solution
+<td><img src="0916/4-10-5.gif"><br>5 squares<br>1 solution
+<td><img src="0916/4-10-6.gif"><br>3 squares<br>12 solutions
+<td><img src="0916/4-10-7.gif"><br>4 squares<br>1 solution
+<td><img src="0916/4-10-8.gif"><br>2 squares<br>2 solutions
+<tr align=center><th bgcolor=DDFFDD>11
+<td>
+<td>
+<td><img src="0916/4-11-2.gif"><br>3 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/4-11-3.gif"><br>5 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/4-11-4.gif"><br>5 squares<br>1 solution
+<td><img src="0916/4-11-5.gif"><br>4 squares<br>7 solutions
+<td><img src="0916/4-11-6.gif"><br>3 squares<br>1 solution
+<td><img src="0916/4-11-7.gif"><br>3 squares<br>5 solutions
+<td><img src="0916/4-11-8.gif"><br>2 squares<br>5 solutions
+<tr align=center><th bgcolor=DDFFDD>12
+<td>
+<td>
+<td><img src="0916/4-12-2.gif"><br>2 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/4-12-3.gif"><br>4 squares<br>3 solutions
+<td bgcolor=FFFFDD><img src="0916/4-12-4.gif"><br>4 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/4-12-5.gif"><br>4 squares<br>4 solutions
+<td><img src="0916/4-12-6.gif"><br>2 squares<br>5 solutions
+<td><img src="0916/4-12-7.gif"><br>3 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/4-12-8.gif"><br>4 squares<br>1 solution
+<tr align=center><th bgcolor=DDFFDD>13
+<td>
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/4-13-3.gif"><br>3 squares<br>2 solutions
+<td><img src="0916/4-13-4.gif"><br>2 squares<br>10 solutions
+<td bgcolor=FFFFDD><img src="0916/4-13-5.gif"><br>3 squares<br>4 solutions
+<td><img src="0916/4-13-6.gif"><br>1 square<br>6 solutions
+<td><img src="0916/4-13-7.gif"><br>2 squares<br>3 solutions
+<td bgcolor=FFFFDD><img src="0916/4-13-8.gif"><br>3 squares<br>1 solution
+<tr align=center><th bgcolor=DDFFDD>14
+<td>
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/4-14-3.gif"><br>2 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/4-14-4.gif"><br>2 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/4-14-5.gif"><br>2 squares<br>5 solutions
+<td>
+<td><img src="0916/4-14-7.gif"><br>1 square<br>3 solutions
+<td bgcolor=FFFFDD><img src="0916/4-14-8.gif"><br>2 squares<br>2 solutions
+<tr align=center><th bgcolor=DDFFDD>15
+<td>
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/4-15-3.gif"><br>1 square<br>1 solution
+<td>
+<td bgcolor=FFFFDD><img src="0916/4-15-5.gif"><br>1 square<br>1 solution
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/4-15-8.gif"><br>1 square<br>1 solution
+</table><p>
+
+
+<center><font size=+3>5&times;5 Board</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Q \ A<th>0<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<tr align=center><th bgcolor=DDFFDD>2
+<td><img src="0916/5-2-0.gif"><br>7 squares<br>4 solutions
+<td><img src="0916/5-2-1.gif"><br>19 squares<br>1 solution
+<td><img src="0916/5-2-2.gif"><br>9 squares<br>1 solution
+<tr align=center><th bgcolor=DDFFDD>3
+<td><img src="0916/5-3-0.gif"><br>5 squares<br>1 solution
+<td><img src="0916/5-3-1.gif"><br>17 squares<br>1 solution
+<td><img src="0916/5-3-2.gif"><br>16 squares<br>1 solution
+<td><img src="0916/5-3-3.gif"><br>5 squares<br>15 solutions
+<tr align=center><th bgcolor=DDFFDD>4
+<td><img src="0916/5-4-0.gif"><br>4 squares<br>6 solutions
+<td><img src="0916/5-4-1.gif"><br>15 squares<br>2 solutions
+<td><img src="0916/5-4-2.gif"><br>18 squares<br>1 solution
+<td><img src="0916/5-4-3.gif"><br>13 squares<br>1 solution
+<td><img src="0916/5-4-4.gif"><br>4 squares<br>2 solutions
+<tr align=center><th bgcolor=DDFFDD>5
+<td><img src="0916/5-5-0.gif"><br>3 squares<br>1 solution
+<td><img src="0916/5-5-1.gif"><br>14 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/5-5-2.gif"><br>20 squares<br>1 solution
+<td><img src="0916/5-5-3.gif"><br>14 squares<br>7 solutions
+<td><img src="0916/5-5-4.gif"><br>8 squares<br>1 solution
+<td><img src="0916/5-5-5.gif"><br>3 squares<br>2 solutions
+<tr align=center><th bgcolor=DDFFDD>6
+<td><img src="0916/5-6-0.gif"><br>2 squares<br>38 solutions
+<td><img src="0916/5-6-1.gif"><br>12 squares<br>2 solutions
+<td><img src="0916/5-6-2.gif"><br>17 squares<br>2 solutions
+<td><img src="0916/5-6-3.gif"><br>17 squares<br>1 solution
+<td><img src="0916/5-6-4.gif"><br>9 squares<br>8 solutions
+<td><img src="0916/5-6-5.gif"><br>4 squares<br>7 solutions
+<td><img src="0916/5-6-6.gif"><br>2 squares<br>8 solutions
+<tr align=center><th bgcolor=DDFFDD>7
+<td><img src="0916/5-7-0.gif"><br>2 squares<br>4 solutions
+<td><img src="0916/5-7-1.gif"><br>10 squares<br>1 solution
+<td><img src="0916/5-7-2.gif"><br>15 squares<br>2 solutions
+<td><img src="0916/5-7-3.gif"><br>17 squares<br>2 solutions
+<td><img src="0916/5-7-4.gif"><br>12 squares<br>8 solutions
+<td><img src="0916/5-7-5.gif"><br>6 squares<br>14 solutions
+<td><img src="0916/5-7-6.gif"><br>2 squares<br>437 solutions
+<td><img src="0916/5-7-7.gif"><br>1 square<br>367 solutions
+<tr align=center><th bgcolor=DDFFDD>8
+<td><img src="0916/5-8-0.gif"><br>1 square<br>1056 solutions
+<td><img src="0916/5-8-1.gif"><br>8 squares<br>1 solution
+<td><img src="0916/5-8-2.gif"><br>13 squares<br>9 solutions
+<td><img src="0916/5-8-3.gif"><br>16 squares<br>3 solutions
+<td><img src="0916/5-8-4.gif"><br>14 squares<br>1 solution
+<td><img src="0916/5-8-5.gif"><br>8 squares<br>1 solution
+<td><img src="0916/5-8-6.gif"><br>5 squares<br>1 solution
+<td><img src="0916/5-8-7.gif"><br>2 squares<br>36 solutions
+<td><img src="0916/5-8-8.gif"><br>1 square<br>99 solutions
+<tr align=center><th bgcolor=DDFFDD>9
+<td><img src="0916/5-9-0.gif"><br>1 square<br>450 solutions
+<td><img src="0916/5-9-1.gif"><br>6 squares<br>2 solutions
+<td><img src="0916/5-9-2.gif"><br>13 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/5-9-3.gif"><br>16 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/5-9-4.gif"><br>16 squares<br>1 solution
+<td><img src="0916/5-9-5.gif"><br>9 squares<br>6 solutions
+<td><img src="0916/5-9-6.gif"><br>6 squares<br>4 solutions
+<td><img src="0916/5-9-7.gif"><br>4 squares<br>1 solution
+<td><img src="0916/5-9-8.gif"><br>1 square<br>898 solutions
+<tr align=center><th bgcolor=DDFFDD>10
+<td><img src="0916/5-10-0.gif"><br>1 square<br>140 solutions
+<td><img src="0916/5-10-1.gif"><br>5 squares<br>1 solution
+<td><img src="0916/5-10-2.gif"><br>10 squares<br>14 solutions
+<td bgcolor=FFFFDD><img src="0916/5-10-3.gif"><br>15 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/5-10-4.gif"><br>15 squares<br>1 solution
+<td><img src="0916/5-10-5.gif"><br>11 squares<br>4 solutions
+<td><img src="0916/5-10-6.gif"><br>7 squares<br>1 solution
+<td><img src="0916/5-10-7.gif"><br>4 squares<br>10 solutions
+<td><img src="0916/5-10-8.gif"><br>2 squares<br>20 solutions
+<tr align=center><th bgcolor=DDFFDD>11
+<td><img src="0916/5-11-0.gif"><br>1 square<br>24 solutions
+<td><img src="0916/5-11-1.gif"><br>4 squares<br>1 solution
+<td><img src="0916/5-11-2.gif"><br>10 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/5-11-3.gif"><br>14 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/5-11-4.gif"><br>14 squares<br>2 solutions
+<td><img src="0916/5-11-5.gif"><br>12 squares<br>2 solutions
+<td><img src="0916/5-11-6.gif"><br>7 squares<br>20 solutions
+<td><img src="0916/5-11-7.gif"><br>5 squares<br>17 solutions
+<td><img src="0916/5-11-8.gif"><br>2 squares<br>248 solutions
+<tr align=center><th bgcolor=DDFFDD>12
+<td><img src="0916/5-12-0.gif"><br>1 square<br>3 solutions
+<td><img src="0916/5-12-1.gif"><br>3 squares<br>9 solutions
+<td><img src="0916/5-12-2.gif"><br>9 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/5-12-3.gif"><br>13 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/5-12-4.gif"><br>13 squares<br>2 solutions
+<td><img src="0916/5-12-5.gif"><br>11 squares<br>9 solutions
+<td><img src="0916/5-12-6.gif"><br>8 squares<br>5 solutions
+<td><img src="0916/5-12-7.gif"><br>7 squares<br>2 solutions
+<td><img src="0916/5-12-8.gif"><br>4 squares<br>3 solutions
+<tr align=center><th bgcolor=DDFFDD>13
+<td>
+<td><img src="0916/5-13-1.gif"><br>3 squares<br>1 solution
+<td><img src="0916/5-13-2.gif"><br>8 squares<br>16 solutions
+<td bgcolor=FFFFDD><img src="0916/5-13-3.gif"><br>12 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/5-13-4.gif"><br>12 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/5-13-5.gif"><br>12 squares<br>2 solutions
+<td><img src="0916/5-13-6.gif"><br>8 squares<br>6 solutions
+<td><img src="0916/5-13-7.gif"><br>7 squares<br>10 solutions
+<td><img src="0916/5-13-8.gif"><br>4 squares<br>20 solutions
+<tr align=center><th bgcolor=DDFFDD>14
+<td>
+<td><img src="0916/5-14-1.gif"><br>1 square<br>404 solutions
+<td><img src="0916/5-14-2.gif"><br>8 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/5-14-3.gif"><br>11 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/5-14-4.gif"><br>11 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/5-14-5.gif"><br>11 squares<br>1 solution
+<td><img src="0916/5-14-6.gif"><br>7 squares<br>15 solutions
+<td><img src="0916/5-14-7.gif"><br>7 squares<br>21 solutions
+<td><img src="0916/5-14-8.gif"><br>6 squares<br>2 solutions
+<tr align=center><th bgcolor=DDFFDD>15
+<td>
+<td><img src="0916/5-15-1.gif"><br>1 square<br>54 solutions
+<td><img src="0916/5-15-2.gif"><br>6 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/5-15-3.gif"><br>10 squares<br>3 solutions
+<td bgcolor=FFFFDD><img src="0916/5-15-4.gif"><br>10 squares<br>3 solutions
+<td bgcolor=FFFFDD><img src="0916/5-15-5.gif"><br>10 squares<br>2 solutions
+<td><img src="0916/5-15-6.gif"><br>6 squares<br>56 solutions
+<td><img src="0916/5-15-7.gif"><br>7 squares<br>11 solutions
+<td><img src="0916/5-15-8.gif"><br>6 squares<br>9 solutions
+<tr align=center><th bgcolor=DDFFDD>16
+<td>
+<td><img src="0916/5-16-1.gif"><br>1 square<br>4 solutions
+<td><img src="0916/5-16-2.gif"><br>5 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/5-16-3.gif"><br>9 squares<br>3 solutions
+<td bgcolor=FFFFDD><img src="0916/5-16-4.gif"><br>9 squares<br>3 solutions
+<td bgcolor=FFFFDD><img src="0916/5-16-5.gif"><br>9 squares<br>4 solutions
+<td><img src="0916/5-16-6.gif"><br>6 squares<br>1 solution
+<td><img src="0916/5-16-7.gif"><br>6 squares<br>99 solutions
+<td bgcolor=FFFFDD><img src="0916/5-16-8.gif"><br>9 squares<br>1 solution
+<tr align=center><th bgcolor=DDFFDD>17
+<td>
+<td>
+<td><img src="0916/5-17-2.gif"><br>4 squares<br>13 solutions
+<td bgcolor=FFFFDD><img src="0916/5-17-3.gif"><br>8 squares<br>4 solutions
+<td bgcolor=FFFFDD><img src="0916/5-17-4.gif"><br>8 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/5-17-5.gif"><br>8 squares<br>14 solutions
+<td><img src="0916/5-17-6.gif"><br>5 squares<br>7 solutions
+<td><img src="0916/5-17-7.gif"><br>6 squares<br>14 solutions
+<td bgcolor=FFFFDD><img src="0916/5-17-8.gif"><br>8 squares<br>3 solutions
+<tr align=center><th bgcolor=DDFFDD>18
+<td>
+<td>
+<td><img src="0916/5-18-2.gif"><br>4 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/5-18-3.gif"><br>7 squares<br>4 solutions
+<td bgcolor=FFFFDD><img src="0916/5-18-4.gif"><br>7 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/5-18-5.gif"><br>7 squares<br>28 solutions
+<td><img src="0916/5-18-6.gif"><br>4 squares<br>12 solutions
+<td><img src="0916/5-18-7.gif"><br>5 squares<br>54 solutions
+<td bgcolor=FFFFDD><img src="0916/5-18-8.gif"><br>7 squares<br>8 solutions
+<tr align=center><th bgcolor=DDFFDD>19
+<td>
+<td>
+<td><img src="0916/5-19-2.gif"><br>3 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/5-19-3.gif"><br>6 squares<br>4 solutions
+<td bgcolor=FFFFDD><img src="0916/5-19-4.gif"><br>6 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/5-19-5.gif"><br>6 squares<br>47 solutions
+<td><img src="0916/5-19-6.gif"><br>3 squares<br>58 solutions
+<td><img src="0916/5-19-7.gif"><br>5 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/5-19-8.gif"><br>6 squares<br>16 solutions
+<tr align=center><th bgcolor=DDFFDD>20
+<td>
+<td>
+<td><img src="0916/5-20-2.gif"><br>2 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/5-20-3.gif"><br>5 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/5-20-4.gif"><br>5 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/5-20-5.gif"><br>5 squares<br>53 solutions
+<td><img src="0916/5-20-6.gif"><br>3 squares<br>5 solutions
+<td><img src="0916/5-20-7.gif"><br>4 squares<br>4 solutions
+<td bgcolor=FFFFDD><img src="0916/5-20-8.gif"><br>5 squares<br>23 solutions
+<tr align=center><th bgcolor=DDFFDD>21
+<td>
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/5-21-3.gif"><br>4 squares<br>3 solutions
+<td bgcolor=FFFFDD><img src="0916/5-21-4.gif"><br>4 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/5-21-5.gif"><br>4 squares<br>48 solutions
+<td><img src="0916/5-21-6.gif"><br>2 squares<br>4 solutions
+<td><img src="0916/5-21-7.gif"><br>3 squares<br>7 solutions
+<td bgcolor=FFFFDD><img src="0916/5-21-8.gif"><br>4 squares<br>23 solutions
+<tr align=center><th bgcolor=DDFFDD>22
+<td>
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/5-22-3.gif"><br>3 squares<br>2 solutions
+<td><img src="0916/5-22-4.gif"><br>2 squares<br>15 solutions
+<td bgcolor=FFFFDD><img src="0916/5-22-5.gif"><br>3 squares<br>25 solutions
+<td><img src="0916/5-22-6.gif"><br>1 square<br>8 solutions
+<td><img src="0916/5-22-7.gif"><br>2 squares<br>7 solutions
+<td bgcolor=FFFFDD><img src="0916/5-22-8.gif"><br>3 squares<br>16 solutions
+<tr align=center><th bgcolor=DDFFDD>23
+<td>
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/5-23-3.gif"><br>2 squares<br>2 solutions
+<td bgcolor=FFFFDD><img src="0916/5-23-4.gif"><br>2 squares<br>1 solution
+<td bgcolor=FFFFDD><img src="0916/5-23-5.gif"><br>2 squares<br>11 solutions
+<td>
+<td><img src="0916/5-23-7.gif"><br>1 square<br>5 solutions
+<td bgcolor=FFFFDD><img src="0916/5-23-8.gif"><br>2 squares<br>8 solutions
+<tr align=center><th bgcolor=DDFFDD>24
+<td>
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/5-24-3.gif"><br>1 square<br>1 solution
+<td>
+<td bgcolor=FFFFDD><img src="0916/5-24-5.gif"><br>1 square<br>2 solutions
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/5-24-8.gif"><br>1 square<br>3 solutions
+</table><p>
+
+
+<center><font size=+3>6&times;6 Board</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Q \ A<th>0<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<tr align=center><th bgcolor=DDFFDD>2
+<td><img src="0916/6-2-0.gif"><br>13 squares<br>3 solutions
+<td><img src="0916/6-2-1.gif"><br>24 squares<br>1 solution
+<td><img src="0916/6-2-2.gif"><br>10 squares<br>3 solutions
+<tr align=center><th bgcolor=DDFFDD>3
+<td><img src="0916/6-3-0.gif"><br>9 squares<br>9 solutions
+<td><img src="0916/6-3-1.gif"><br>26 squares<br>1 solution
+<td><img src="0916/6-3-2.gif"><br>19 squares<br>2 solutions
+<td><img src="0916/6-3-3.gif"><br>5 squares<br>34 solutions
+<tr align=center><th bgcolor=DDFFDD>4
+<td><img src="0916/6-4-0.gif"><br>8 squares<br>2 solutions
+<td><img src="0916/6-4-1.gif"><br>24 squares<br>1 solution
+<td><img src="0916/6-4-2.gif"><br>24 squares<br>1 solution
+<td><img src="0916/6-4-3.gif"><br>14 squares<br>1 solution
+<td><img src="0916/6-4-4.gif"><br>4 squares<br>5 solutions
+<tr align=center><th bgcolor=DDFFDD>5
+<td><img src="0916/6-5-0.gif"><br>6 squares<br>3 solutions
+<td><img src="0916/6-5-1.gif"><br>23 squares<br>1 solution
+<td><img src="0916/6-5-2.gif"><br>24 squares<br>3 solutions
+<td><img src="0916/6-5-3.gif"><br>18 squares<br>3 solutions
+<td><img src="0916/6-5-4.gif"><br>8 squares<br>1 solution
+<td><img src="0916/6-5-5.gif"><br>3 squares<br>4 solutions
+<tr align=center><th bgcolor=DDFFDD>6
+<td><img src="0916/6-6-0.gif"><br>5 squares<br>3 solutions
+<td><img src="0916/6-6-1.gif"><br>21 squares<br>3 solutions
+<td><img src="0916/6-6-2.gif"><br>28 squares<br>2 solutions
+<td><img src="0916/6-6-3.gif"><br>22 squares<br>4 solutions
+<td><img src="0916/6-6-4.gif"><br>12 squares<br>5 solutions
+<td><img src="0916/6-6-5.gif"><br>4 squares<br>27 solutions
+<td><img src="0916/6-6-6.gif"><br>2 squares<br>24 solutions
+<tr align=center><th bgcolor=DDFFDD>7
+<td><img src="0916/6-7-0.png"><br>4 squares<br>13 solutions<br>(GS)
+<td><img src="0916/6-7-1.png"><br>20 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-7-2.png"><br>23 squares<br>9 solutions<br>(GS)
+<td><img src="0916/6-7-3.png"><br>24 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-7-4.png"><br>16 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-7-5.png"><br>7 squares<br>4 solutions<br>(GS)
+<td><img src="0916/6-7-6.png"><br>2 squares<br>2819 solutions<br>(GS)
+<td><img src="0916/6-7-7.png"><br>1 square<br>2444 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>8
+<td><img src="0916/6-8-0.png"><br>4 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-8-1.png"><br>18 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-8-2.png"><br>23 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-8-3.png"><br>25 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-8-4.png"><br>24 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-8-5.png"><br>10 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-8-6.png"><br>5 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-8-7.png"><br>2 squares<br>213 solutions<br>(GS)
+<td><img src="0916/6-8-8.png"><br>1 square<br>652 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>9
+<td><img src="0916/6-9-0.png"><br>3 squares<br>9 solutions<br>(GS)
+<td><img src="0916/6-9-1.png"><br>17 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-9-2.png"><br>21 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-9-3.png"><br>26 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-9-4.png"><br>24 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-9-5.png"><br>12 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-9-6.png"><br>6 squares<br>27 solutions<br>(GS)
+<td><img src="0916/6-9-7.png"><br>4 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-9-8.png"><br>1 square<br>13314 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>10
+<td><img src="0916/6-10-0.png"><br>2 squares<br>1736 solutions<br>(GS)
+<td><img src="0916/6-10-1.png"><br>14 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-10-2.png"><br>20 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-10-3.png"><br>25 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-10-4.png"><br>23 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-10-5.png"><br>14 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-10-6.png"><br>8 squares<br>9 solutions<br>(GS)
+<td><img src="0916/6-10-7.png"><br>4 squares<br>65 solutions<br>(GS)
+<td><img src="0916/6-10-8.png"><br>2 squares<br>157 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>11
+<td><img src="0916/6-11-0.png"><br>2 squares<br>379 solutions<br>(GS)
+<td><img src="0916/6-11-1.png"><br>12 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-11-2.png"><br>18 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-11-3.png"><br>25 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-11-4.png"><br>23 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-11-5.png"><br>16 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-11-6.png"><br>10 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-11-7.png"><br>5 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-11-8.png"><br>2 squares<br>4442 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>12
+<td><img src="0916/6-12-0.png"><br>2 squares<br>53 solutions<br>(GS)
+<td><img src="0916/6-12-1.png"><br>10 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-12-2.png"><br>17 squares<br>2 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-12-3.png"><br>24 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-12-4.png"><br>24 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-12-5.png"><br>19 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-12-6.png"><br>12 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-12-7.png"><br>6 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-12-8.png"><br>2 squares<br>15 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>13
+<td><img src="0916/6-13-0.png"><br>2 squares<br>3 solutions<br>(GS)
+<td><img src="0916/6-13-1.png"><br>8 squares<br>5 solutions<br>(GS)
+<td><img src="0916/6-13-2.png"><br>15 squares<br>59 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-13-3.png"><br>23 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-13-4.png"><br>23 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-13-5.png"><br>19 squares<br>6 solutions<br>(GS)
+<td><img src="0916/6-13-6.png"><br>12 squares<br>6 solutions<br>(GS)
+<td><img src="0916/6-13-7.png"><br>8 squares<br>35 solutions<br>(GS)
+<td><img src="0916/6-13-8.png"><br>4 squares<br>282 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>14
+<td><img src="0916/6-14-0.png"><br>1 square<br>101632 solutions<br>(GS)
+<td><img src="0916/6-14-1.png"><br>7 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-14-2.png"><br>15 squares<br>5 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-14-3.png"><br>22 squares<br>2 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-14-4.png"><br>22 squares<br>6 solutions<br>(GS)
+<td><img src="0916/6-14-5.png"><br>20 squares<br>3 solutions<br>(GS)
+<td><img src="0916/6-14-6.png"><br>13 squares<br>7 solutions<br>(GS)
+<td><img src="0916/6-14-7.png"><br>11 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-14-8.png"><br>6 squares<br>9 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>15
+<td><img src="0916/6-15-0.png"><br>1 square<br>39992 solutions<br>(GS)
+<td><img src="0916/6-15-1.png"><br>6 squares<br>4 solutions<br>(GS)
+<td><img src="0916/6-15-2.png"><br>14 squares<br>10 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-15-3.png"><br>21 squares<br>2 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-15-4.png"><br>21 squares<br>4 solutions<br>(GS)
+<td><img src="0916/6-15-5.png"><br>20 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-15-6.png"><br>13 squares<br>19 solutions<br>(GS)
+<td><img src="0916/6-15-7.png"><br>12 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-15-8.png"><br>6 squares<br>173 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>16
+<td><img src="0916/6-16-0.png"><br>1 square<br>12370 solutions<br>(GS)
+<td><img src="0916/6-16-1.png"><br>5 squares<br>16 solutions<br>(GS)
+<td><img src="0916/6-16-2.png"><br>14 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-16-3.png"><br>20 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-16-4.png"><br>20 squares<br>5 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-16-5.png"><br>20 squares<br>9 solutions<br>(GS)
+<td><img src="0916/6-16-6.png"><br>14 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-16-7.png"><br>12 squares<br>34 solutions<br>(GS)
+<td><img src="0916/6-16-8.png"><br>9 squares<br>2 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>17
+<td><img src="0916/6-17-0.png"><br>1 square<br>2877 solutions<br>(GS)
+<td><img src="0916/6-17-1.png"><br>5 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-17-2.png"><br>13 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-17-3.png"><br>18 squares<br>25 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-17-4.png"><br>19 squares<br>5 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-17-5.png"><br>19 squares<br>3 solutions<br>(GS)
+<td><img src="0916/6-17-6.png"><br>13 squares<br>22 solutions<br>(GS)
+<td><img src="0916/6-17-7.png"><br>13 squares<br>4 solutions<br>(GS)
+<td><img src="0916/6-17-8.png"><br>9 squares<br>23 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>18
+<td><img src="0916/6-18-0.png"><br>1 square<br>482 solutions<br>(GS)
+<td><img src="0916/6-18-1.png"><br>4 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-18-2.png"><br>12 squares<br>2 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-18-3.png"><br>18 squares<br>3 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-18-4.png"><br>18 squares<br>5 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-18-5.png"><br>18 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-18-6.png"><br>13 squares<br>3 solutions<br>(GS)
+<td><img src="0916/6-18-7.png"><br>13 squares<br>6 solutions<br>(GS)
+<td><img src="0916/6-18-8.png"><br>12 squares<br>2 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>19
+<td><img src="0916/6-19-0.png"><br>1 square<br>50 solutions<br>(GS)
+<td><img src="0916/6-19-1.png"><br>3 squares<br>128 solutions<br>(GS)
+<td><img src="0916/6-19-2.png"><br>11 squares<br>3 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-19-3.png"><br>17 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-19-4.png"><br>17 squares<br>6 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-19-5.png"><br>17 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-19-6.png"><br>12 squares<br>26 solutions<br>(GS)
+<td><img src="0916/6-19-7.png"><br>13 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-19-8.png"><br>12 squares<br>10 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>20
+<td><img src="0916/6-20-0.png"><br>1 square<br>3 solutions<br>(GS)
+<td><img src="0916/6-20-1.png"><br>3 squares<br>4 solutions<br>(GS)
+<td><img src="0916/6-20-2.png"><br>10 squares<br>143 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-20-3.png"><br>16 squares<br>3 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-20-4.png"><br>16 squares<br>4 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-20-5.png"><br>16 squares<br>9 solutions<br>(GS)
+<td><img src="0916/6-20-6.png"><br>12 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-20-7.png"><br>12 squares<br>82 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-20-8.png"><br>16 squares<br>1 solution<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>21
+<td>
+<td><img src="0916/6-21-1.png"><br>3 squares<br>1 solution<br>(GS)
+<td><img src="0916/6-21-2.png"><br>10 squares<br>12 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-21-3.png"><br>15 squares<br>4 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-21-4.png"><br>15 squares<br>3 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-21-5.png"><br>15 squares<br>16 solutions<br>(GS)
+<td><img src="0916/6-21-6.png"><br>11 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-21-7.png"><br>12 squares<br>5 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-21-8.png"><br>15 squares<br>3 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>22
+<td>
+<td><img src="0916/6-22-1.png"><br>1 squares<br>8683 solution<br>(GS)
+<td><img src="0916/6-22-2.png"><br>10 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-22-3.png"><br>14 squares<br>2 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-22-4.png"><br>14 squares<br>5 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-22-5.png"><br>14 squares<br>49 solutions<br>(GS)
+<td><img src="0916/6-22-6.png"><br>10 squares<br>5 solutions<br>(GS)
+<td><img src="0916/6-22-7.png"><br>11 squares<br>67 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-22-8.png"><br>14 squares<br>21 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>23
+<td>
+<td><img src="0916/6-23-1.png"><br>1 squares<br>1110 solution<br>(GS)
+<td><img src="0916/6-23-2.png"><br>8 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-23-3.png"><br>13 squares<br>5 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-23-4.png"><br>13 squares<br>2 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-23-5.png"><br>13 squares<br>113 solutions<br>(GS)
+<td><img src="0916/6-23-6.png"><br>9 squares<br>7 solutions<br>(GS)
+<td><img src="0916/6-23-7.png"><br>11 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-23-8.png"><br>13 squares<br>77 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>24
+<td>
+<td><img src="0916/6-24-1.png"><br>1 squares<br>92 solution<br>(GS)
+<td><img src="0916/6-24-2.png"><br>6 squares<br>3 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-24-3.png"><br>12 squares<br>6 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-24-4.png"><br>12 squares<br>4 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-24-5.png"><br>12 squares<br>249 solutions<br>(GS)
+<td><img src="0916/6-24-6.png"><br>8 squares<br>21 solutions<br>(GS)
+<td><img src="0916/6-24-7.png"><br>10 squares<br>8 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-24-8.png"><br>12 squares<br>252 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>25
+<td>
+<td><img src="0916/6-25-1.png"><br>1 squares<br>4 solution<br>(GS)
+<td><img src="0916/6-25-2.png"><br>5 squares<br>28 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-25-3.png"><br>11 squares<br>4 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-25-4.png"><br>11 squares<br>2 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-25-5.png"><br>11 squares<br>413 solutions<br>(GS)
+<td><img src="0916/6-25-6.png"><br>7 squares<br>79 solutions<br>(GS)
+<td><img src="0916/6-25-7.png"><br>9 squares<br>40 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-25-8.png"><br>11 squares<br>567 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>26
+<td>
+<td>
+<td><img src="0916/6-26-2.png"><br>5 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-26-3.png"><br>10 squares<br>5 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-26-4.png"><br>10 squares<br>3 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-26-5.png"><br>10 squares<br>630 solutions<br>(GS)
+<td><img src="0916/6-26-6.png"><br>7 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-26-7.png"><br>8 squares<br>151 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-26-8.png"><br>10 squares<br>1051 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>27
+<td>
+<td>
+<td><img src="0916/6-27-2.png"><br>4 squares<br>16 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-27-3.png"><br>9 squares<br>4 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-27-4.png"><br>9 squares<br>2 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-27-5.png"><br>9 squares<br>777 solutions<br>(GS)
+<td><img src="0916/6-27-6.png"><br>6 squares<br>4 solutions<br>(GS)
+<td><img src="0916/6-27-7.png"><br>7 squares<br>330 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-27-8.png"><br>9 squares<br>1465 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>28
+<td>
+<td>
+<td><img src="0916/6-28-2.png"><br>4 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-28-3.png"><br>8 squares<br>4 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-28-4.png"><br>8 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-28-5.png"><br>8 squares<br>866 solutions<br>(GS)
+<td><img src="0916/6-28-6.png"><br>5 squares<br>7 solutions<br>(GS)
+<td><img src="0916/6-28-7.png"><br>7 squares<br>2 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-28-8.png"><br>8 squares<br>1674 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>29
+<td>
+<td>
+<td><img src="0916/6-29-2.png"><br>3 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-29-3.png"><br>7 squares<br>4 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-29-4.png"><br>7 squares<br>2 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-29-5.png"><br>7 squares<br>784 solutions<br>(GS)
+<td><img src="0916/6-29-6.png"><br>4 squares<br>49 solutions<br>(GS)
+<td><img src="0916/6-29-7.png"><br>6 squares<br>5 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-29-8.png"><br>7 squares<br>1465 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>30
+<td>
+<td>
+<td><img src="0916/6-30-2.png"><br>2 squares<br>2 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-30-3.png"><br>6 squares<br>4 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-30-4.png"><br>6 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-30-5.png"><br>6 squares<br>634 solutions<br>(GS)
+<td><img src="0916/6-30-6.png"><br>4 squares<br>3 solutions<br>(GS)
+<td><img src="0916/6-30-7.png"><br>5 squares<br>8 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-30-8.png"><br>6 squares<br>1051 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>31
+<td>
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/6-31-3.png"><br>5 squares<br>2 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-31-4.png"><br>5 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-31-5.png"><br>5 squares<br>385 solutions<br>(GS)
+<td><img src="0916/6-31-6.png"><br>3 squares<br>3 solutions<br>(GS)
+<td><img src="0916/6-31-7.png"><br>4 squares<br>11 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-31-8.png"><br>5 squares<br>567 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>32
+<td>
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/6-32-3.png"><br>4 squares<br>3 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-32-4.png"><br>4 squares<br>2 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-32-5.png"><br>4 squares<br>198 solutions<br>(GS)
+<td><img src="0916/6-32-6.png"><br>2 squares<br>5 solutions<br>(GS)
+<td><img src="0916/6-32-7.png"><br>3 squares<br>11 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-32-8.png"><br>4 squares<br>252 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>33
+<td>
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/6-33-3.png"><br>3 squares<br>2 solutions<br>(GS)
+<td><img src="0916/6-33-4.png"><br>2 squares<br>21 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-33-5.png"><br>3 squares<br>63 solutions<br>(GS)
+<td><img src="0916/6-33-6.png"><br>1 squares<br>9 solutions<br>(GS)
+<td><img src="0916/6-33-7.png"><br>2 squares<br>9 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-33-8.png"><br>3 squares<br>77 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>34
+<td>
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/6-34-3.png"><br>2 squares<br>2 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-34-4.png"><br>2 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-34-5.png"><br>2 squares<br>19 solutions<br>(GS)
+<td>
+<td><img src="0916/6-34-7.png"><br>1 squares<br>6 solutions<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/6-34-8.png"><br>2 squares<br>21 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>35
+<td>
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/6-35-3.png"><br>1 square<br>1 solution<br>(GS)
+<td>
+<td bgcolor=FFFFDD><img src="0916/6-35-5.png"><br>1 square<br>2 solutions<br>(GS)
+<td>
+<td>
+<td bgcolor=FFFFDD><img src="0916/6-35-8.png"><br>1 square<br>3 solutions<br>(GS)
+</table><p>
+
+
+<center><font size=+3>7&times;7 Board</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Q \ A<th>0<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<tr align=center><th bgcolor=DDFFDD>2
+<td><img src="0916/7-2-0.gif"><br>21 squares<br>6 solutions
+<td><img src="0916/7-2-1.gif"><br>31 squares<br>1 solutions
+<td><img src="0916/7-2-2.gif"><br>11 squares<br>2 solutions
+<tr align=center><th bgcolor=DDFFDD>3
+<td><img src="0916/7-3-0.gif"><br>16 squares<br>5 solutions
+<td><img src="0916/7-3-1.gif"><br>34 squares<br>1 solution
+<td><img src="0916/7-3-2.gif"><br>22 squares<br>3 solutions
+<td><img src="0916/7-3-3.gif"><br>5 squares<br>77 solutions
+<tr align=center><th bgcolor=DDFFDD>4
+<td><img src="0916/7-4-0.gif"><br>16 squares<br>1 solution
+<td><img src="0916/7-4-1.gif"><br>34 squares<br>1 solution
+<td><img src="0916/7-4-2.gif"><br>29 squares<br>1 solution
+<td><img src="0916/7-4-3.gif"><br>14 squares<br>3 solutions
+<td><img src="0916/7-4-4.gif"><br>4 squares<br>11 solutions
+<tr align=center><th bgcolor=DDFFDD>5
+<td><img src="0916/7-5-0.gif"><br>11 squares<br>1 solution
+<td><img src="0916/7-5-1.gif"><br>32 squares<br>5 solutions
+<td><img src="0916/7-5-2.gif"><br>33 squares<br>1 solution
+<td><img src="0916/7-5-3.gif"><br>21 squares<br>2 solutions
+<td><img src="0916/7-5-4.gif"><br>8 squares<br>4 solutions
+<td><img src="0916/7-5-5.gif"><br>3 squares<br>11 solutions
+<tr align=center><th bgcolor=DDFFDD>6
+<td><img src="0916/7-6-0.png"><br>10 squares<br>1 solution<br>(GS)
+<td><img src="0916/7-6-1.png"><br>32 squares<br>1 solution<br>(GS)
+<td><img src="0916/7-6-2.png"><br>34 squares<br>5 solutions<br>(GS)
+<td><img src="0916/7-6-3.png"><br>28 squares<br>1 solution<br>(GS)
+<td><img src="0916/7-6-4.png"><br>12 squares<br>16 solutions<br>(GS)
+<td><img src="0916/7-6-5.png"><br>4 squares<br>65 solutions<br>(GS)
+<td><img src="0916/7-6-6.png"><br>2 squares<br>69 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>7
+<td><img src="0916/7-7-0.png"><br>7 squares<br>38 solutions<br>(GS)
+<td><img src="0916/7-7-1.png"><br>30 squares<br>7 solutions<br>(GS)
+<td><img src="0916/7-7-2.png"><br>38 squares<br>2 solutions<br>(GS)
+<td><img src="0916/7-7-3.png"><br>33 squares<br>1 solution<br>(GS)
+<td><img src="0916/7-7-4.png"><br>16 squares<br>31 solutions<br>(GS)
+<td><img src="0916/7-7-5.png"><br>7 squares<br>18 solutions<br>(GS)
+<td><img src="0916/7-7-6.png"><br>2 squares<br>12279 solutions<br>(GS)
+<td><img src="0916/7-7-7.png"><br>1 square<br>12508 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>8
+<td><img src="0916/7-8-0.png"><br>6 squares<br>174 solutions<br>(GS)
+<td><img src="0916/7-8-1.png"><br>30 squares<br>1 solution<br>(GS)
+<td><img src="0916/7-8-2.png"><br>40 squares<br>1 solution<br>(GS)
+<td><img src="0916/7-8-3.png"><br>33 squares<br>1 solution<br>(GS)
+<td><img src="0916/7-8-4.png"><br>25 squares<br>1 solution<br>(GS)
+<td><img src="0916/7-8-5.png"><br>10 squares<br>9 solutions<br>(GS)
+<td><img src="0916/7-8-6.png"><br>5 squares<br>7 solutions<br>(GS)
+<td><img src="0916/7-8-7.png"><br>2 squares<br>831 solutions<br>(GS)
+<td><img src="0916/7-8-8.png"><br>1 square<br>4030 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>9
+<td><img src="0916/7-9-0.png"><br>6 squares<br>19 solutions<br>(GS)
+<td><img src="0916/7-9-1.png"><br>28 squares<br>1 solution<br>(GS)
+<td bgcolor=FFFFDD><img src="0916/7-9-2.png"><br>40 squares<br>1 solution<br>(GS)
+<td><img src="0916/7-9-3.png"><br>35 squares<br>1 solution<br>(GS)
+<td><img src="0916/7-9-4.png"><br>29 squares<br>1 solution<br>(GS)
+<td><img src="0916/7-9-5.png"><br>12 squares<br>47 solutions<br>(GS)
+<td><img src="0916/7-9-6.png"><br>6 squares<br>102 solutions<br>(GS)
+<td><img src="0916/7-9-7.png"><br>4 squares<br>4 solutions<br>(GS)
+<td><img src="0916/7-9-8.png"><br>1 square<br>123279 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>10
+<td><img src="0916/7-10-0.png"><br>6 squares<br>1 solution<br>(GS)
+<td><img src="0916/7-10-1.png"><br>26 squares<br>2 solutions<br>(GS)
+<td><img src="0916/7-10-2.png"><br>29 squares<br>5 solutions<br>(GS)
+<td><img src="0916/7-10-3.png"><br>36 squares<br>1 solution<br>(GS)
+<td><img src="0916/7-10-4.png"><br>31 squares<br>2 solutions<br>(GS)
+<td><img src="0916/7-10-5.png"><br>16 squares<br>3 solutions<br>(GS)
+<td><img src="0916/7-10-6.png"><br>9 squares<br>4 solutions<br>(GS)
+<td><img src="0916/7-10-7.png"><br>4 squares<br>256 solutions<br>(GS)
+<td><img src="0916/7-10-8.png"><br>2 squares<br>909 solutions<br>(GS)
+</table><p>
+
+
+<center><font size=+3>8&times;8 Board</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Q \ A<th>0<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8
+<tr align=center><th bgcolor=DDFFDD>2
+<td><img src="0916/8-2-0.gif"><br>31 squares<br>6 solutions
+<td><img src="0916/8-2-1.gif"><br>38 squares<br>1 solution
+<td><img src="0916/8-2-2.gif"><br>12 squares<br>2 solutions
+<tr align=center><th bgcolor=DDFFDD>3
+<td><img src="0916/8-3-0.gif"><br>25 squares<br>3 solutions
+<td><img src="0916/8-3-1.gif"><br>43 squares<br>3 solutions
+<td><img src="0916/8-3-2.gif"><br>23 squares<br>5 solutions
+<td><img src="0916/8-3-3.gif"><br>5 squares<br>124 solutions
+<tr align=center><th bgcolor=DDFFDD>4
+<td><img src="0916/8-4-0.gif"><br>24 squares<br>1 solution
+<td><img src="0916/8-4-1.gif"><br>46 squares<br>1 solution
+<td><img src="0916/8-4-2.gif"><br>36 squares<br>1 solution
+<td><img src="0916/8-4-3.gif"><br>14 squares<br>7 solutions
+<td><img src="0916/8-4-4.gif"><br>4 squares<br>22 solutions
+<tr align=center><th bgcolor=DDFFDD>5
+<td><img src="0916/8-5-0.gif"><br>17 squares<br>2 solutions
+<td><img src="0916/8-5-1.gif"><br>43 squares<br>3 solutions
+<td><img src="0916/8-5-2.gif"><br>39 squares<br>2 solutions
+<td><img src="0916/8-5-3.gif"><br>22 squares<br>5 solutions
+<td><img src="0916/8-5-4.gif"><br>8 squares<br>5 solutions
+<td><img src="0916/8-5-5.gif"><br>3 squares<br>16 solutions
+<tr align=center><th bgcolor=DDFFDD>6
+<td><img src="0916/8-6-0.png"><br>15 squares<br>2 solutions<br>(GS)
+<td><img src="0916/8-6-1.png"><br>43 squares<br>1 solution<br>(GS)
+<td><img src="0916/8-6-2.png"><br>34 squares<br>1 solution<br>(GS)
+<td><img src="0916/8-6-3.png"><br>31 squares<br>1 solution<br>(GS)
+<td><img src="0916/8-6-4.png"><br>12 squares<br>36 solutions<br>(GS)
+<td><img src="0916/8-6-5.png"><br>4 squares<br>133 solutions<br>(GS)
+<td><img src="0916/8-6-6.png"><br>2 squares<br>138 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>7
+<td><img src="0916/8-7-0.png"><br>13 squares<br>1 solution<br>(GS)
+<td><img src="0916/8-7-1.png"><br>41 squares<br>11 solutions<br>(GS)
+<td><img src="0916/8-7-2.png"><br>44 squares<br>3 solutions<br>(GS)
+<td><img src="0916/8-7-3.png"><br>38 squares<br>1 solution<br>(GS)
+<td><img src="0916/8-7-4.png"><br>17 squares<br>4 solutions<br>(GS)
+<td><img src="0916/8-7-5.png"><br>7 squares<br>47 solutions<br>(GS)
+<td><img src="0916/8-7-6.png"><br>2 squares<br>40573 solutions<br>(GS)
+<td><img src="0916/8-7-7.png"><br>1 square<br>48799 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>8
+<td><img src="0916/8-8-0.png"><br>11 squares<br>7 solutions<br>(GS)
+<td><img src="0916/8-8-1.png"><br>41 squares<br>2 solutions<br>(GS)
+<td><img src="0916/8-8-2.png"><br>48 squares<br>4 solutions<br>(GS)
+<td><img src="0916/8-8-3.png"><br>41 squares<br>9 solutions<br>(GS)
+<td><img src="0916/8-8-4.png"><br>25 squares<br>1 solution<br>(GS)
+<td><img src="0916/8-8-5.png"><br>10 squares<br>33 solutions<br>(GS)
+<td><img src="0916/8-8-6.png"><br>5 squares<br>11 solutions<br>(GS)
+<td><img src="0916/8-8-7.png"><br>2 squares<br>2655 solutions<br>(GS)
+<td><img src="0916/8-8-8.png"><br>1 square<br>17442 solutions<br>(GS)
+</table><p>
+
+
+<center><font size=+3>9&times;9 Board</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Q \ A<th>0<th>1<th>2<th>3<th>4<th>5<th>6<th>7
+<tr align=center><th bgcolor=DDFFDD>2
+<td><img src="0916/9-2-0.gif"><br>43 squares<br>10 solutions
+<td><img src="0916/9-2-1.gif"><br>45 squares<br>1 solution
+<td><img src="0916/9-2-2.gif"><br>12 squares<br>4 solutions
+<tr align=center><th bgcolor=DDFFDD>3
+<td><img src="0916/9-3-0.gif"><br>36 squares<br>4 solutions
+<td><img src="0916/9-3-1.gif"><br>54 squares<br>3 solutions
+<td><img src="0916/9-3-2.gif"><br>25 squares<br>6 solutions
+<td><img src="0916/9-3-3.gif"><br>5 squares<br>219 solutions
+<tr align=center><th bgcolor=DDFFDD>4
+<td><img src="0916/9-4-0.gif"><br>36 squares<br>1 solution
+<td><img src="0916/9-4-1.gif"><br>56 squares<br>2 solutions
+<td><img src="0916/9-4-2.gif"><br>40 squares<br>1 solution
+<td><img src="0916/9-4-3.gif"><br>14 squares<br>12 solutions
+<td><img src="0916/9-4-4.gif"><br>4 squares<br>36 solutions
+<tr align=center><th bgcolor=DDFFDD>5
+<td><img src="0916/9-5-0.png"><br>27 squares<br>1 solution<br>(GS)
+<td><img src="0916/9-5-1.png"><br>56 squares<br>5 solutions<br>(GS)
+<td><img src="0916/9-5-2.png"><br>52 squares<br>1 solution<br>(GS)
+<td><img src="0916/9-5-3.png"><br>23 squares<br>4 solutions<br>(GS)
+<td><img src="0916/9-5-4.png"><br>8 squares<br>11 solutions<br>(GS)
+<td><img src="0916/9-5-5.png"><br>3 squares<br>31 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>6
+<td><img src="0916/9-6-0.png"><br>24 squares<br>1 solution<br>(GS)
+<td><img src="0916/9-6-1.png"><br>55 squares<br>1 solution<br>(GS)
+<td><img src="0916/9-6-2.png"><br>52 squares<br>1 solution<br>(GS)
+<td><img src="0916/9-6-3.png"><br>33 squares<br>2 solutions<br>(GS)
+<td><img src="0916/9-6-4.png"><br>12 squares<br>66 solutions<br>(GS)
+<td><img src="0916/9-6-5.png"><br>4 squares<br>232 solutions<br>(GS)
+<td><img src="0916/9-6-6.png"><br>2 squares<br>299 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>7
+<td><img src="0916/9-7-0.png"><br>20 squares<br>5 solutions<br>(GS)
+<td><img src="0916/9-7-1.png"><br>53 squares<br>19 solutions<br>(GS)
+<td><img src="0916/9-7-2.png"><br>53 squares<br>3 solutions<br>(GS)
+<td><img src="0916/9-7-3.png"><br>42 squares<br>4 solutions<br>(GS)
+<td><img src="0916/9-7-4.png"><br>18 squares<br>8 solutions<br>(GS)
+<td><img src="0916/9-7-5.png"><br>7 squares<br>97 solutions<br>(GS)
+<td><img src="0916/9-7-6.png"><br>2 squares<br>112572 solutions<br>(GS)
+<td><img src="0916/9-7-7.png"><br>1 square<br>161826 solutions<br>(GS)
+</table><p>
+
+
+<center><font size=+3>10&times;10 Board</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Q \ A<th>0<th>1<th>2<th>3<th>4<th>5<th>6<th>7
+<tr align=center><th bgcolor=DDFFDD>2
+<td><img src="0916/10-2-0.gif"><br>57 squares<br>10 solutions
+<td><img src="0916/10-2-1.gif"><br>52 squares<br>1 solution
+<td><img src="0916/10-2-2.gif"><br>12 squares<br>8 solutions
+<tr align=center><th bgcolor=DDFFDD>3
+<td><img src="0916/10-3-0.gif"><br>49 squares<br>3 solutions
+<td><img src="0916/10-3-1.gif"><br>65 squares<br>2 solutions
+<td><img src="0916/10-3-2.gif"><br>26 squares<br>11 solutions
+<td><img src="0916/10-3-3.gif"><br>5 squares<br>316 solutions
+<tr align=center><th bgcolor=DDFFDD>4
+<td><img src="0916/10-4-0.png"><br>48 squares<br>1 solution<br>(GS)
+<td><img src="0916/10-4-1.png"><br>72 squares<br>1 solution<br>(GS)
+<td><img src="0916/10-4-2.png"><br>48 squares<br>1 solution<br>(GS)
+<td><img src="0916/10-4-3.png"><br>14 squares<br>20 solutions<br>(GS)
+<td><img src="0916/10-4-4.png"><br>4 squares<br>60 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>5
+<td><img src="0916/10-5-0.png"><br>37 squares<br>1 solution<br>(GS)
+<td><img src="0916/10-5-1.png"><br>74 squares<br>1 solution<br>(GS)
+<td><img src="0916/10-5-2.png"><br>56 squares<br>2 solutions<br>(GS)
+<td><img src="0916/10-5-3.png"><br>23 squares<br>10 solutions<br>(GS)
+<td><img src="0916/10-5-4.png"><br>8 squares<br>14 solutions<br>(GS)
+<td><img src="0916/10-5-5.png"><br>3 squares<br>40 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>6
+<td><img src="0916/10-6-0.png"><br>33 squares<br>1 solution<br>(GS)
+<td><img src="0916/10-6-1.png"><br>72 squares<br>1 solution<br>(GS)
+<td><img src="0916/10-6-2.png"><br>64 squares<br>1 solution<br>(GS)
+<td><img src="0916/10-6-3.png"><br>34 squares<br>3 solutions<br>(GS)
+<td><img src="0916/10-6-4.png"><br>12 squares<br>110 solutions<br>(GS)
+<td><img src="0916/10-6-5.png"><br>4 squares<br>370 solutions<br>(GS)
+<td><img src="0916/10-6-6.png"><br>2 squares<br>497 solutions<br>(GS)
+<tr align=center><th bgcolor=DDFFDD>7
+<td><img src="0916/10-7-0.png"><br>30 squares<br>2 solutions<br>(GS)
+<td><img src="0916/10-7-1.png"><br>67 squares<br>7 solutions<br>(GS)
+<td><img src="0916/10-7-2.png"><br>65 squares<br>1 solution<br>(GS)
+<td><img src="0916/10-7-3.png"><br>44 squares<br>7 solutions<br>(GS)
+<td><img src="0916/10-7-4.png"><br>18 squares<br>20 solutions<br>(GS)
+<td><img src="0916/10-7-5.png"><br>7 squares<br>164 solutions<br>(GS)
+<td><img src="0916/10-7-6.png"><br>2 squares<br>272297 solutions<br>(GS)
+<td><img src="0916/10-7-7.png"><br>1 square<br>462795 solutions<br>(GS)
+</table><p>
+
+
+<HR><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 9/24/14.<font>
+
+</BODY></HTML>

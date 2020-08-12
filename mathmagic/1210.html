@@ -1,0 +1,324 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (December 2010)</H1></CENTER>
+
+This month we explore 4 "chess on polyominoes" problems:<p>
+
+<font size=+2>1.</font><p>
+Given a collection of 2 or more chess pieces, what is the smallest polyomino with a starting square and an ending square so that it takes the same minimum number of moves by each piece to get from start to finish?  What about 3 pieces?  What about including other fairy chess pieces, such as these leapers: Alfil (2,2), Fers (1,1), Threeleaper (0,3), Dabbaba (0,2), Wazir (0,1), Giraffe (1,4), Zebra (2,3), Camel (1,3)?<p>
+
+
+<font size=+2>2.</font><p>
+Given a polyomino containing one chess piece P, what is the smallest polyomino that can be tiled with copies of P so that 1) no chess piece threatens any other and 2) every vacant square is threatened by at least one piece?  What about larger polyominoes?  What if the polyominoes contain more than one chess piece?<p>
+
+<font size=+2>3.</font><p>
+Given a polyomino containing one chess piece P, what is the smallest polyomino that can be tiled with copies of P so that every square is attacked the same number of times?  What about larger polyominoes?  What if we only require the empty squares to be attacked the same number of times?<p>
+
+<font size=+2>4.</font><p>
+What is the smallest polynomial that contains a "mate in n" chess problem with a unique solution? What if a unique solution is not required?<p>
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Solutions were sent by George Sicherman, Maurizio Morandi, Richard Sabey, Corey Plover, Giovanni Resta, Joe DeVincentis, and Bryce Herdt.<p>
+
+<font size=+2>1.</font><p>
+The best-known results are shown below.<p>
+
+<center><font size=+2>Smallest Chessboards Requiring Equal Travel Time Between Two Pieces</font></center>
+<table border=1 align=center bgcolor=FFFFDD cellpadding=4>
+<tr align=center bgcolor=DDFFDD> <th><th>Alfil<br>(2,2)<th>Fers<br>(1,1)<th>Threeleaper<br>(0,3)<th>Dabbaba<br>(0,2)<th>Wazir<br>(0,1)<th>Giraffe<br>(1,4)<th>Zebra<br>(2,3)<th>Camel<br>(1,3)<th>Rook<th>kNight<th>Bishop<th>Queen
+<tr align=center><th bgcolor=DDFFDD>King
+<td><img src="1210/AK.png"><br>(GS)<td><img src="1210/BK.gif"><td><img src="1210/KT.gif"><td><img src="1210/DK.gif"><td><img src="1210/KR.gif"><td><img src="1210/GK.gif"><td><img src="1210/KZ.gif"><td><img src="1210/CK.gif"><td><img src="1210/KR.gif"><td><img src="1210/KN.gif"><td><img src="1210/BK.gif"><td><img src="1210/KR.gif">
+<tr align=center><th bgcolor=DDFFDD>Queen
+<td><img src="1210/AQ.gif"><td><img src="1210/BK.gif"><td><img src="1210/QT.gif"><td><img src="1210/DQ.gif"><td><img src="1210/KR.gif"><td><img src="1210/GQ.gif"><td><img src="1210/QZ.png"><br>(GR)<td><img src="1210/CQ.gif"><td><img src="1210/KR.gif"><td><img src="1210/NQ.gif"><td><img src="1210/BK.gif">
+<tr align=center><th bgcolor=DDFFDD>Bishop
+<td><img src="1210/AQ.gif"><td><img src="1210/BK.gif"><td><img src="1210/BT.gif"><td><img src="1210/BD.gif"><td><img src="1210/FW.gif"><br>(GS)<td><img src="1210/GK.gif"><td><img src="1210/BZ.gif"><td><img src="1210/CK.gif"><td><img src="1210/BR.gif"><td><img src="1210/KN.gif">
+<tr align=center><th bgcolor=DDFFDD>kNight
+<td><img src="1210/AN.gif"><td><img src="1210/KN.gif"><td><img src="1210/NT.gif"><td><img src="1210/DN.gif"><td><img src="1210/KN.gif"><td><img src="1210/GK.gif"><td><img src="1210/NZ.gif"><td><img src="1210/CK.gif"><td><img src="1210/NR.gif">
+<tr align=center><th bgcolor=DDFFDD>Rook
+<td><img src="1210/AR.gif"><td><img src="1210/DK.gif"><td><img src="1210/QT.gif"><td><img src="1210/DQ.gif"><td><img src="1210/KR.gif"><td><img src="1210/GT.gif"><td><img src="1210/NZ.gif"><td><img src="1210/CR.gif">
+<tr align=center><th bgcolor=DDFFDD>Camel<br>(1,3)
+<td><img src="1210/AC.gif"><td><img src="1210/CK.gif"><td><img src="1210/CT.gif"><td><img src="1210/CR.gif"><td><img src="1210/CK.gif"><td><img src="1210/GK.gif"><td><img src="1210/CZ.gif">
+<tr align=center><th bgcolor=DDFFDD>Zebra<br>(2,3)
+<td><img src="1210/AZ.gif"><td><img src="1210/FZ.png"><br>(GR)<td><img src="1210/CZ.gif"><td><img src="1210/AZ.gif"><td><img src="1210/WZ.gif"><td><img src="1210/GZ.gif">
+<tr align=center><th bgcolor=DDFFDD>Giraffe<br>(1,4)
+<td><img src="1210/AG.png"><br>(GS)<td><img src="1210/GK.gif"><td><img src="1210/GT.gif"><td><img src="1210/DG.png"><br>(GR)<br><td><img src="1210/GK.gif">
+<tr align=center><th bgcolor=DDFFDD>Wazir<br>(0,1)
+<td><img src="1210/AW.gif"><td><img src="1210/FW.gif"><td><img src="1210/TW.gif"><td><img src="1210/DW.gif">
+<tr align=center><th bgcolor=DDFFDD>Dabbaba<br>(0,2)
+<td><img src="1210/AN.gif"><td><img src="1210/DK.gif"><td><img src="1210/DT.gif">
+<tr align=center><th bgcolor=DDFFDD>Threeleaper<br>(0,3)
+<td><img src="1210/AT.png"><br>(BH)<td><img src="1210/FT.gif">
+<tr align=center><th bgcolor=DDFFDD>Fers<br>(1,1)
+<td><img src="1210/AFR.png"><br>(GS)
+</table><p>
+
+
+<center><font size=+2>Smallest Chessboards Requiring Equal Travel Time Between Three Pieces</font></center>
+<table border=1 align=center bgcolor=FFFFDD cellpadding=4>
+<tr align=center bgcolor=DDFFDD> <th bgcolor=00FF66>King+<th>Alfil<br>(2,2)<th>Fers<br>(1,1)<th>Threeleaper<br>(0,3)<th>Dabbaba<br>(0,2)<th>Wazir<br>(0,1)<th>Giraffe<br>(1,4)<th>Zebra<br>(2,3)<th>Camel<br>(1,3)<th>Rook<th>kNight<th>Bishop
+<tr align=center><th bgcolor=DDFFDD>Queen
+<td><img src="1210/AKQ.png"><br>(BH)<td><img src="1210/BK.gif"><br>(GR)<td><img src="1210/KQT.png"><br>(GS)<td><img src="1210/DKQ.png"><br>(GR)<td><img src="1210/KR.gif"><br>(GR)<td><img src="1210/GQ.gif"><br>(GR)<td><img src="1210/KQZ.png"><br>(GR)<td><img src="1210/CQ.gif"><br>(GR)<td><img src="1210/KR.gif"><br>(GR)<td><img src="1210/NQ.gif"><br>(GR)<td><img src="1210/BK.gif"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Bishop
+<td><img src="1210/ABK.png"><br>(GS)<td><img src="1210/BK.gif"><br>(GR)<td><img src="1210/BKT.png"><br>(GS)<td><img src="1210/BDK.png"><br>(GR)<td><img src="1210/FW.gif"><br>(GR)<td><img src="1210/GK.gif"><br>(GR)<td><img src="1210/BKZ.png"><br>(GR)<td><img src="1210/CK.gif"><br>(GR)<td><img src="1210/BKR.png"><br>(GR)<td><img src="1210/KN.gif"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>kNight
+<td><img src="1210/AKN.png"><br>(JD)<td><img src="1210/KN.gif"><br>(GR)<td><img src="1210/KNT.png"><br>(GS)<td><img src="1210/DKN.png"><br>(GR)<td><img src="1210/KN.gif"><br>(GR)<td><img src="1210/GK.gif"><br>(GR)<td><img src="1210/KNZ.png"><br>(GR)<td><img src="1210/CK.gif"><br>(GR)<td><img src="1210/KNR.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Rook
+<td><img src="1210/AKR.png"><br>(GS)<td><img src="1210/DK.gif"><br>(GR)<td><img src="1210/KRT.png"><br>(GS)<td><img src="1210/DK.gif"><br>(GR)<td><img src="1210/KR.gif"><br>(GR)<td><img src="1210/GKR.png"><br>(GR)<td><img src="1210/KRZ.png"><br>(GR)<td><img src="1210/CKR.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Camel<br>(1,3)
+<td><img src="1210/ACK.png"><br>(GS)<td><img src="1210/CK.gif"><br>(GR)<td><img src="1210/CKT.png"><br>(GS)<td><img src="1210/CDK.png"><br>(GR)<td><img src="1210/CK.gif"><br>(GR)<td><img src="1210/GK.gif"><br>(GR)<td><img src="1210/CKZ.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Zebra<br>(2,3)
+<td><img src="1210/AKZ.png"><br>(GS)<td><img src="1210/FZ.png"><br>(GR)<td><img src="1210/KTZ.png"><br>(GS)<td><img src="1210/DKZ.png"><br>(GR)<td><img src="1210/KWZ.png"><br>(GR)<td><img src="1210/GKZ.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Giraffe<br>(1,4)
+<td><img src="1210/AGK.png"><br>(GS)<td><img src="1210/GK.gif"><br>(GR)<td><img src="1210/GKT.png"><br>(GS)<td><img src="1210/DGK.png"><br>(GS)<td><img src="1210/GK.gif"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Wazir<br>(0,1)
+<td><img src="1210/AKW.png"><br>(GS)<td><img src="1210/FW.gif"><br>(GR)<td>none<br>(JD)<td>none<br>(JD)
+<tr align=center><th bgcolor=DDFFDD>Dabbaba<br>(0,2)
+<td><img src="1210/ADK.png"><br>(GS)<td><img src="1210/DK.gif"><br>(GR)<td><img src="1210/DKT.png"><br>(JD)
+<tr align=center><th bgcolor=DDFFDD>Threeleaper<br>(0,3)
+<td><img src="1210/AKT.png"><br>(GS)<td><img src="1210/FT.gif">
+<tr align=center><th bgcolor=DDFFDD>Fers<br>(1,1)
+<td><img src="1210/AFK.gif"><br>(JD)
+</table><p>
+
+<table border=1 align=center bgcolor=FFFFDD cellpadding=4>
+<tr align=center bgcolor=DDFFDD> <th bgcolor=00FF66>Queen+<th>Alfil<br>(2,2)<th>Fers<br>(1,1)<th>Threeleaper<br>(0,3)<th>Dabbaba<br>(0,2)<th>Wazir<br>(0,1)<th>Giraffe<br>(1,4)<th>Zebra<br>(2,3)<th>Camel<br>(1,3)<th>Rook<th>kNight
+<tr align=center><th bgcolor=DDFFDD>Bishop
+<td><img src="1210/ABQ.png"><br>(GR)<td><img src="1210/BK.gif"><br>(GR)<td><img src="1210/BQT.png"><br>(GR)<td><img src="1210/BDQ.png"><br>(GR)<td>none<br>(BH)<td><img src="1210/BGQ.png"><br>(GR)<td><img src="1210/BQZ.png"><br>(GR)<td><img src="1210/BCQ.png"><br>(GR)<td><img src="1210/BR.gif"><br>(GR)<td><img src="1210/NQ.gif"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>kNight
+<td><img src="1210/ANQ.png"><br>(GR)<td><img src="1210/NQ.gif"><br>(GR)<td><img src="1210/NQT.png"><br>(GR)<td><img src="1210/DNQ.png"><br>(GR)<td>none<br>(BH)<td><img src="1210/BGQ.png"><br>(GR)<td><img src="1210/NQZ.png"><br>(GR)<td><img src="1210/CQ.gif"><br>(GR)<td><img src="1210/NQR.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Rook
+<td><img src="1210/AQR.png"><br>(GR)<td><img src="1210/FQR.png"><br>(GR)<td><img src="1210/QT.gif"><br>(GR)<td><img src="1210/DQ.gif"><br>(GR)<td><img src="1210/KR.gif"><br>(GR)<td><img src="1210/GQR.png"><br>(GR)<td><img src="1210/QRZ.png"><br>(GR)<td><img src="1210/CQR.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Camel<br>(1,3)
+<td><img src="1210/ACQ.png"><br>(GR)<td><img src="1210/CQ.gif"><br>(GR)<td><img src="1210/CQT.png"><br>(GR)<td><img src="1210/CQR.png"><br>(GR)<td>none<br>(BH)<td><img src="1210/BGQ.png"><br>(GR)<td><img src="1210/CQZ.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Zebra<br>(2,3)
+<td><img src="1210/AQZ.png"><br>(GR)<td><img src="1210/FQZ.png"><br>(BH)<td><img src="1210/QTZ.png"><br>(GR)<td><img src="1210/DQZ.png"><br>(GR)<td>none<br>(BH)<td><img src="1210/GQZ.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Giraffe<br>(1,4)
+<td><img src="1210/AGQ.png"><br>(GR)<td><img src="1210/BGQ.png"><br>(GR)<td><img src="1210/GQT.png"><br>(GR)<td><img src="1210/DGQ.png"><br>(GR)<td>none<br>(BH)
+<tr align=center><th bgcolor=DDFFDD>Wazir<br>(0,1)
+<td>none<br>(BH)<td>none<br>(BH)<td>none<br>(BH)<td>none<br>(BH)
+<tr align=center><th bgcolor=DDFFDD>Dabbaba<br>(0,2)
+<td><img src="1210/DNQ.png"><br>(GR)<td>none<br>(BH)<td><img src="1210/DQT.gif"><br>(BH)
+<tr align=center><th bgcolor=DDFFDD>Threeleaper<br>(0,3)
+<td><img src="1210/AQT.png"><br>(BH)<td><img src="1210/FQT.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Fers<br>(1,1)
+<td>none<br>(BH)
+</table><p>
+
+<table border=1 align=center bgcolor=FFFFDD cellpadding=4>
+<tr align=center bgcolor=DDFFDD> <th bgcolor=00FF66>Bishop+<th>Alfil<br>(2,2)<th>Fers<br>(1,1)<th>Threeleaper<br>(0,3)<th>Dabbaba<br>(0,2)<th>Wazir<br>(0,1)<th>Giraffe<br>(1,4)<th>Zebra<br>(2,3)<th>Camel<br>(1,3)<th>Rook
+<tr align=center><th bgcolor=DDFFDD>kNight
+<td><img src="1210/ANQ.png"><br>(GR)<td><img src="1210/NQ.gif"><br>(GR)<td><img src="1210/BNT.png"><br>(GS)<td><img src="1210/DNQ.png"><br>(GR)<td><img src="1210/KN.gif"><br>(GR)<td><img src="1210/GK.gif"><br>(GR)<td><img src="1210/NQZ.png"><br>(GR)<td><img src="1210/CK.gif"><br>(GR)<td><img src="1210/BNR.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Rook
+<td><img src="1210/AQR.png"><br>(GR)<td><img src="1210/BKR.png"><br>(GR)<td><img src="1210/BRT.png"><br>(GR)<td><img src="1210/BDR.png"><br>(GR)<td>none<br>(GS)<td><img src="1210/BGR.png"><br>(GR)<td><img src="1210/BRZ.png"><br>(GR)<td><img src="1210/BCR.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Camel<br>(1,3)
+<td><img src="1210/ABC.png"><br>(GR)<td><img src="1210/CK.gif"><br>(GR)<td><img src="1210/BCT.png"><br>(GR)<td><img src="1210/BCD.png"><br>(GR)<td><img src="1210/CK.gif"><br>(GR)<td><img src="1210/GK.gif"><br>(GR)<td><img src="1210/CQZ.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Zebra<br>(2,3)
+<td><img src="1210/AQZ.png"><br>(GR)<td><img src="1210/BFZ.png"><br>(GR)<td><img src="1210/BTZ.png"><br>(GR)<td><img src="1210/BDZ.png"><br>(GR)<td><img src="1210/BWZ.png"><br>(GR)<td><img src="1210/BGZ.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Giraffe<br>(1,4)
+<td><img src="1210/ABG.png"><br>(GS)<td><img src="1210/GK.gif"><br>(BH)<td><img src="1210/BGT.png"><br>(GS)<td><img src="1210/BDG.png"><br>(GR)<td><img src="1210/GK.gif"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Wazir<br>(0,1)
+<td><img src="1210/ABW.png"><br>(GS)<td><img src="1210/FW.gif"><br>(GR)<td><img src="1210/BTW.png"><br>(GS)<td><img src="1210/BDW.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Dabbaba<br>(0,2)
+<td><img src="1210/DNQ.png"><br>(GR)<td>none<br>(GS)<td><img src="1210/BDT.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Threeleaper<br>(0,3)
+<td><img src="1210/ABT.png"><br>(GS)<td><img src="1210/FT.gif"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Fers<br>(1,1)
+<td><img src="1210/ABF.png"><br>(GS)
+</table><p>
+
+<table border=1 align=center bgcolor=FFFFDD cellpadding=4>
+<tr align=center bgcolor=DDFFDD> <th bgcolor=00FF66>kNight+<th>Alfil<br>(2,2)<th>Fers<br>(1,1)<th>Threeleaper<br>(0,3)<th>Dabbaba<br>(0,2)<th>Wazir<br>(0,1)<th>Giraffe<br>(1,4)<th>Zebra<br>(2,3)<th>Camel<br>(1,3)
+<tr align=center><th bgcolor=DDFFDD>Rook
+<td><img src="1210/ANR.png"><br>(GR)<td><img src="1210/FNR.png"><br>(GR)<td><img src="1210/NRT.png"><br>(GR)<td><img src="1210/DNR.png"><br>(GR)<td><img src="1210/NR.gif"><br>(GR)<td><img src="1210/GNR.png"><br>(GR)<td><img src="1210/NRZ.png"><br>(GR)<td><img src="1210/CNR.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Camel<br>(1,3)
+<td><img src="1210/ACN.png"><br>(GR)<td><img src="1210/CK.gif"><br>(GR)<td><img src="1210/CNT.png"><br>(GR)<td><img src="1210/CDN.png"><br>(GR)<td><img src="1210/CK.gif"><br>(GR)<td><img src="1210/GK.gif"><br>(GR)<td><img src="1210/CNZ.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Zebra<br>(2,3)
+<td><img src="1210/ANZ.png"><br>(GR)<td><img src="1210/FNZ.png"><br>(GR)<td><img src="1210/NTZ.png"><br>(GR)<td><img src="1210/ANZ.png"><br>(GR)<td><img src="1210/NRZ.png"><br>(GR)<td><img src="1210/GNZ.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Giraffe<br>(1,4)
+<td><img src="1210/AGN.png"><br>(GS)<td><img src="1210/GK.gif"><br>(GR)<td><img src="1210/GNT.png"><br>(GR)<td><img src="1210/DGN.png"><br>(GR)<td><img src="1210/GK.gif"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Wazir<br>(0,1)
+<td><img src="1210/ANW.png"><br>(GS)<td><img src="1210/KN.gif"><br>(GR)<td><img src="1210/NTW.png"><br>(GS)<td><img src="1210/DNW.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Dabbaba<br>(0,2)
+<td><img src="1210/AN.gif"><br>(GR)<td><img src="1210/DFN.png"><br>(GR)<td><img src="1210/DNT.gif"><br>(BH)
+<tr align=center><th bgcolor=DDFFDD>Threeleaper<br>(0,3)
+<td><img src="1210/ANT.png"><br>(BH)<td><img src="1210/FNT.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Fers<br>(1,1)
+<td><img src="1210/AFN.png"><br>(GS)
+</table><p>
+
+<table border=1 align=center bgcolor=FFFFDD cellpadding=4>
+<tr align=center bgcolor=DDFFDD> <th bgcolor=00FF66>Rook+<th>Alfil<br>(2,2)<th>Fers<br>(1,1)<th>Threeleaper<br>(0,3)<th>Dabbaba<br>(0,2)<th>Wazir<br>(0,1)<th>Giraffe<br>(1,4)<th>Zebra<br>(2,3)
+<tr align=center><th bgcolor=DDFFDD>Camel<br>(1,3)
+<td><img src="1210/ACR.png"><br>(GR)<td><img src="1210/CFR.png"><br>(GR)<td><img src="1210/CRT.png"><br>(GR)<td><img src="1210/CDR.png"><br>(GR)<td><img src="1210/CRW.png"><br>(GR)<td><img src="1210/CGR.png"><br>(GR)<td><img src="1210/CRZ.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Zebra<br>(2,3)
+<td><img src="1210/ARZ.png"><br>(GR)<td><img src="1210/FRZ.png"><br>(GR)<td><img src="1210/RTZ.png"><br>(GR)<td><img src="1210/DRZ.png"><br>(GR)<td><img src="1210/NRZ.png"><br>(GR)<td><img src="1210/GRZ.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Giraffe<br>(1,4)
+<td><img src="1210/AGR.png"><br>(GR)<td><img src="1210/FGR.png"><br>(GR)<td><img src="1210/GRT.png"><br>(GR)<td><img src="1210/DGR.png"><br>(GR)<td><img src="1210/GRW.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Wazir<br>(0,1)
+<td>none<br>(GS)<td>none<br>(GS)<td><img src="1210/RTW.png"><br>(GS)<td><img src="1210/DRW.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Dabbaba<br>(0,2)
+<td><img src="1210/ADR.png"><br>(GR)<td><img src="1210/DFR.png"><br>(GR)<td><img src="1210/DRT.gif"><br>(BH)
+<tr align=center><th bgcolor=DDFFDD>Threeleaper<br>(0,3)
+<td><img src="1210/ART.png"><br>(BH)<td><img src="1210/FRT.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Fers<br>(1,1)
+<td><img src="1210/AFR.png"><br>(GS)
+</table><p>
+
+<table border=1 align=center bgcolor=FFFFDD cellpadding=4>
+<tr align=center bgcolor=DDFFDD> <th bgcolor=00FF66>Camel+<th>Alfil<br>(2,2)<th>Fers<br>(1,1)<th>Threeleaper<br>(0,3)<th>Dabbaba<br>(0,2)<th>Wazir<br>(0,1)<th>Giraffe<br>(1,4)
+<tr align=center><th bgcolor=DDFFDD>Zebra<br>(2,3)
+<td><img src="1210/ACZ.png"><br>(GS)<td><img src="1210/CFZ.png"><br>(GR)<td><img src="1210/CTZ.png"><br>(GR)<td><img src="1210/CDZ.png"><br>(GR)<td><img src="1210/CWZ.png"><br>(GR)<td><img src="1210/CGZ.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Giraffe<br>(1,4)
+<td><img src="1210/ACG.png"><br>(GS)<td><img src="1210/GK.gif"><br>(GR)<td><img src="1210/CGT.png"><br>(GS)<td><img src="1210/CDG.png"><br>(GR)<td><img src="1210/GK.gif"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Wazir<br>(0,1)
+<td><img src="1210/ACW.png"><br>(GS)<td><img src="1210/CK.gif"><br>(GR)<td><img src="1210/CTW.png"><br>(GS)<td><img src="1210/CDW.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Dabbaba<br>(0,2)
+<td><img src="1210/ACD.png"><br>(GR)<td><img src="1210/CDF.png"><br>(GR)<td><img src="1210/CDT.gif"><br>(BH)
+<tr align=center><th bgcolor=DDFFDD>Threeleaper<br>(0,3)
+<td><img src="1210/ACT.png"><br>(GS)<td><img src="1210/CFT.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Fers<br>(1,1)
+<td><img src="1210/ACF.png"><br>(GS)
+</table><p>
+
+<table border=1 align=center bgcolor=FFFFDD cellpadding=4>
+<tr align=center bgcolor=DDFFDD> <th bgcolor=00FF66>Zebra+<th>Alfil<br>(2,2)<th>Fers<br>(1,1)<th>Threeleaper<br>(0,3)<th>Dabbaba<br>(0,2)<th>Wazir<br>(0,1)
+<tr align=center><th bgcolor=DDFFDD>Giraffe<br>(1,4)
+<td><img src="1210/AGZ.png"><br>(GS)<td><img src="1210/FGZ.png"><br>(GR)<td><img src="1210/GTZ.png"><br>(GS)<td><img src="1210/DGZ.png"><br>(GR)<td><img src="1210/GWZ.png"><br>(GR)
+<tr align=center><th bgcolor=DDFFDD>Wazir<br>(0,1)
+<td><img src="1210/AWZ.png"><br>(GS)<td><img src="1210/FWZ.png"><br>(GR)<td><img src="1210/TWZ.png"><br>(GS)<td><img src="1210/DWZ.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Dabbaba<br>(0,2)
+<td><img src="1210/ADZ.png"><br>(GR)<td><img src="1210/DFZ.png"><br>(GR)<td><img src="1210/DTZ.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Threeleaper<br>(0,3)
+<td><img src="1210/ATZ.png"><br>(GS)<td><img src="1210/FTZ.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Fers<br>(1,1)
+<td><img src="1210/AFZ.png"><br>(GS)
+</table><p>
+
+<table border=1 align=center bgcolor=FFFFDD cellpadding=4>
+<tr align=center bgcolor=DDFFDD> <th bgcolor=00FF66>Giraffe+<th>Alfil<br>(2,2)<th>Fers<br>(1,1)<th>Threeleaper<br>(0,3)<th>Dabbaba<br>(0,2)
+<tr align=center><th bgcolor=DDFFDD>Wazir<br>(0,1)
+<td><img src="1210/AGW.png"><br>(GS)<td><img src="1210/GK.gif"><br>(GR)<td><img src="1210/GTW.png"><br>(GS)<td><img src="1210/DGW.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Dabbaba<br>(0,2)
+<td><img src="1210/ADG.png"><br>(GS)<td><img src="1210/DFG.png"><br>(GS)<td><img src="1210/DGT.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Threeleaper<br>(0,3)
+<td><img src="1210/AGT.png"><br>(GS)<td><img src="1210/FGT.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Fers<br>(1,1)
+<td><img src="1210/AFG.png"><br>(GS)
+</table><p>
+
+<table border=1 align=center bgcolor=FFFFDD cellpadding=4>
+<tr align=center bgcolor=DDFFDD> <th bgcolor=00FF66>Wazir+<th>Alfil<br>(2,2)<th>Fers<br>(1,1)<th>Threeleaper<br>(0,3)
+<tr align=center><th bgcolor=DDFFDD>Dabbaba<br>(0,2)
+<td><img src="1210/AW.gif"><br>(GS)<td><img src="1210/DFW.png"><br>(GS)<td><img src="1210/DTW.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Threeleaper<br>(0,3)
+<td><img src="1210/ATW.png"><br>(GS)<td><img src="1210/FTW.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Fers<br>(1,1)
+<td><img src="1210/AFW.png"><br>(GS)
+</table><p>
+
+<table border=1 align=center bgcolor=FFFFDD cellpadding=4>
+<tr align=center bgcolor=DDFFDD> <th bgcolor=00FF66>Dabbaba+<th>Alfil<br>(2,2)<th>Fers<br>(1,1)
+<tr align=center><th bgcolor=DDFFDD>Threeleaper<br>(0,3)
+<td><img src="1210/ADT.png"><br>(GS)<td><img src="1210/DFT.png"><br>(GS)
+<tr align=center><th bgcolor=DDFFDD>Fers<br>(1,1)
+<td><img src="1210/ADF.png"><br>(GS)
+</table><p>
+
+<table border=1 align=center bgcolor=FFFFDD cellpadding=4>
+<tr align=center bgcolor=DDFFDD> <th bgcolor=00FF66>Threeleaper+<th>Alfil<br>(2,2)
+<tr align=center><th bgcolor=DDFFDD>Fers<br>(1,1)
+<td><img src="1210/AFT.png"><br>(GS)
+</table><p>
+
+<center><font size=+2>Smallest Chessboards Requiring Equal Travel Time<br>Between Four or More Traditional Pieces</font></center>
+<table border=1 align=center bgcolor=FFFFDD><TR><TD>
+<table border=0 align=center cellpadding=4><tr align=center>
+<td><img src="1210/BKNQ.png"><br>BKNQ<br>(GR)
+<td><img src="1210/BKNR.png"><br>BKNR<br>(GR)
+<td><img src="1210/BKQR.png"><br>BKQR<br>(GR)
+<td><img src="1210/BNQR.png"><br>BNQR<br>(GR)
+<td><img src="1210/KNQR.png"><br>KNQR<br>(GR)
+<td><img src="1210/BKNQR.png"><br>BKNQR<br>(GS)
+</table></table><p>
+
+<hr><p><font size=+2>2.</font><p>
+The best-known results are shown below.<p>
+
+<center><font size=+2>Smallest Chessboards With Every Unoccupied Square Attacked and No Pieces Attacked</font></center>
+<table border=1 align=center bgcolor=DDFFFF><TR><TD>
+<table border=0 align=center cellpadding=4><tr align=center>
+<td><img src="1210/2I-B.gif"><td><img src="1210/2I-N.gif">
+<td><img src="1210/3I-B1.gif"><td><img src="1210/3I-B2.gif"><td><img src="1210/3I-N1.gif"><td><img src="1210/3I-N2.gif"><br>(GS)<td><img src="1210/3I-K.gif"></table>
+<table border=0 align=center cellpadding=4><tr align=center>
+<td><img src="1210/3L-B1.gif"><td><img src="1210/3L-B2.gif"><br>(GS)<td><img src="1210/3L-N1.gif"><td><img src="1210/3L-N2.gif"><br>(GS)<td><img src="1210/3L-R.gif"></table>
+<table border=0 align=center cellpadding=4><tr align=center>
+<td><img src="1210/4I-B1.gif"><td><img src="1210/4I-B2.gif"><td><img src="1210/4I-N1.gif"><br>(GS)<td><img src="1210/4I-N2.gif"><td><img src="1210/4I-K1.gif"><td><img src="1210/4I-K2.gif"><td><img src="1210/4O-B.gif"><td><img src="1210/4O-N.gif"><td><img src="1210/4O-R.gif"></table>
+<table border=0 align=center cellpadding=4><tr align=center>
+<td><img src="1210/4S-B1.gif"><td><img src="1210/4S-B2.gif"><td><img src="1210/4S-N1.gif"><br>(CP)<td><img src="1210/4S-N2.gif"><br>(GS)<td><img src="1210/4S-R1.gif"><td><img src="1210/4S-R2.gif"><td><img src="1210/4S-K.gif"><td><img src="1210/4S-Q.gif"></table>
+<table border=0 align=center cellpadding=4><tr align=center>
+<td><img src="1210/4T-B1.gif"><td><img src="1210/4T-B2.gif"><td><img src="1210/4T-B3.gif"><td><img src="1210/4T-N1.gif"><br>(JD)<td><img src="1210/4T-N2.gif"><br>(JD)<td><img src="1210/4T-N3.gif"><td><img src="1210/4T-R1.gif"><td><img src="1210/4T-R2.gif"><td><img src="1210/4T-K.gif"></table>
+<table border=0 align=center cellpadding=4><tr align=center>
+<td><img src="1210/4L-B1.gif"><br>(GS)<td><img src="1210/4L-B2.gif"><td><img src="1210/4L-B3.gif"><td><img src="1210/4L-B4.gif"><br>(GS)<td><img src="1210/4L-N1.gif"><td><img src="1210/4L-N2.gif"><td><img src="1210/4L-N3.gif"><td><img src="1210/4L-N4.gif"></table>
+<table border=0 align=center cellpadding=4><tr align=center>
+<td><img src="1210/4L-R1.gif"><td><img src="1210/4L-R2.gif"><td><img src="1210/4L-R3.gif"><td><img src="1210/4L-K1.gif"><td><img src="1210/4L-K2.gif"><td><img src="1210/4L-K3.gif"><td><img src="1210/4L-Q1.gif"><td><img src="1210/4L-Q2.gif"></table>
+</table><p><HR>
+
+
+<font size=+2>3.</font><p>
+The best-known results are shown below.<p>
+
+<center><font size=+2>Smallest Chessboards With Every Square Attacked an Equal Number of Times</font></center>
+<table border=1 align=center bgcolor=DDDDFF><TR><TD>
+<table border=0 align=center cellpadding=4><tr align=center>
+<td><img src="1210/-1O-B.gif"><td><img src="1210/-1O-N.gif"><td><img src="1210/-1O-R.gif"><td><img src="1210/-1O-K.gif"><td><img src="1210/-1O-Q.gif"><td><img src="1210/-2I-B.gif"><td><img src="1210/-2I-N.gif"><td><img src="1210/-2I-R.gif"><td><img src="1210/-2I-K.gif"><td><img src="1210/-2I-Q.gif"></table>
+<table border=0 align=center cellpadding=4><tr align=center>
+<td><img src="1210/-3I-B1.gif"><td><img src="1210/-3I-B2.gif"><br><font size=+2 color=red>?<td><img src="1210/-3I-N1.gif"><br><font size=+2 color=red>?<td><img src="1210/-3I-N2.gif"><br><font size=+2 color=red>?<td><img src="1210/-3I-R1.gif"><td><img src="1210/-3I-R2.gif"><td><img src="1210/-3I-K1.gif"><br><font size=+2 color=red>?<td><img src="1210/-3I-K2.gif"><br>none<br>(JD)<td><img src="1210/-3I-Q1.gif"><td><img src="1210/-3I-Q2.gif"><br><font size=+2 color=red>?</table>
+<table border=0 align=center cellpadding=4><tr align=center>
+<td><img src="1210/-3L-B1.gif"><td><img src="1210/-3L-B2.gif"><td><img src="1210/-3L-N1.gif"><td><img src="1210/-3L-N2.gif"><br>(GS)<td><img src="1210/-3L-R1.gif"><td><img src="1210/-3L-R2.gif"><td><img src="1210/-3L-K1.gif"><td><img src="1210/-3L-K2.gif"><td><img src="1210/-3L-Q1.gif"><td><img src="1210/-3L-Q2.gif"></table>
+<table border=0 align=center cellpadding=4><tr align=center>
+<td><img src="1210/-4I-B1.gif"><br><font size=+2 color=red>?<td><img src="1210/-4I-B2.gif"><br><font size=+2 color=red>?<td><img src="1210/-4I-N1.gif"><br><font size=+2 color=red>?<td><img src="1210/-4I-N2.gif"><br><font size=+2 color=red>?<td><img src="1210/-4I-R1.gif"><td><img src="1210/-4I-R2.gif"><td><img src="1210/-4I-K1.gif"><br><font size=+2 color=red>?<td><img src="1210/-4I-K2.gif"><br>none<br>(JD)</table>
+<table border=0 align=center cellpadding=4><tr align=center>
+<td><img src="1210/-4I-Q1.gif"><td><img src="1210/-4I-Q2.gif"><br><font size=+2 color=red>?<td><img src="1210/-4O-B.gif"><td><img src="1210/-4O-N.gif"><br><font size=+2 color=red>?<td><img src="1210/-4O-R.gif"><br><font size=+2 color=red>?<td><img src="1210/-4O-K.gif"><br><font size=+2 color=red>?<td><img src="1210/-4O-Q.gif"><br><font size=+2 color=red>?</table>
+<table border=0 align=center cellpadding=4><tr align=center>
+<td><img src="1210/-4S-B1.gif"><td><img src="1210/-4S-B2.gif"><td><img src="1210/-4S-N1.gif"><br><font size=+2 color=red>?<td><img src="1210/-4S-N2.gif"><br><font size=+2 color=red>?<td><img src="1210/-4S-R1.gif"><td><img src="1210/-4S-R2.gif"><td><img src="1210/-4S-K1.gif"><br><font size=+2 color=red>?<td><img src="1210/-4S-K2.gif"><br><font size=+2 color=red>?<td><img src="1210/-4S-Q1.gif"><br><font size=+2 color=red>?<td><img src="1210/-4S-Q2.gif"><br><font size=+2 color=red>?</table>
+<table border=0 align=center cellpadding=4><tr align=center>
+<td><img src="1210/-4T-B1.gif"><br>(GS)<td><img src="1210/-4T-B2.gif"><br><font size=+2 color=red>?<td><img src="1210/-4T-B3.gif"><td><img src="1210/-4T-N1.gif"><br><font size=+2 color=red>?<td><img src="1210/-4T-N2.gif"><br><font size=+2 color=red>?<td><img src="1210/-4T-N3.gif"><br><font size=+2 color=red>?<td><img src="1210/-4T-R1.gif"><td><img src="1210/-4T-R2.gif"><td><img src="1210/-4T-R3.gif"><br><font size=+2 color=red>?</table>
+<table border=0 align=center cellpadding=4><tr align=center><td><img src="1210/-4T-K1.gif"><br><font size=+2 color=red>?<td><img src="1210/-4T-K2.gif"><br>none<br>(JD)<td><img src="1210/-4T-K3.gif"><td><img src="1210/-4T-Q1.gif"><td><img src="1210/-4T-Q2.gif"><br><font size=+2 color=red>?<td><img src="1210/-4T-Q3.gif"></table>
+<table border=0 align=center cellpadding=4><tr align=center>
+<td><img src="1210/-4L-B1.gif"><br>(GS)<td><img src="1210/-4L-B2.gif"><br><font size=+2 color=red>?<td><img src="1210/-4L-B3.gif"><br><font size=+2 color=red>?<td><img src="1210/-4L-B4.gif"><td><img src="1210/-4L-N1.gif"><br><font size=+2 color=red>?<td><img src="1210/-4L-N2.gif"><br><font size=+2 color=red>?<td><img src="1210/-4L-N3.gif"><br><font size=+2 color=red>?<td><img src="1210/-4L-N4.gif"><br>(GS)<td><img src="1210/-4L-R1.gif"><br><font size=+2 color=red>?<td><img src="1210/-4L-R2.gif"><br><font size=+2 color=red>?</table>
+<table border=0 align=center cellpadding=4>
+<tr align=center><td><img src="1210/-4L-R3.gif"><td><img src="1210/-4L-R4.gif"><br><font size=+2 color=red>?<td><img src="1210/-4L-K1.gif"><br><font size=+2 color=red>?<td><img src="1210/-4L-K2.gif"><br><font size=+2 color=red>?<td><img src="1210/-4L-K3.gif"><br><font size=+2 color=red>?<td><img src="1210/-4L-K4.gif"><br><font size=+2 color=red>?<td><img src="1210/-4L-Q1.gif"><br><font size=+2 color=red>?<td><img src="1210/-4L-Q2.gif"><br><font size=+2 color=red>?<td><img src="1210/-4L-Q3.gif"><td><img src="1210/-4L-Q4.gif"><br><font size=+2 color=red>?</table>
+</table><p><HR>
+
+<font size=+2>4.</font><p>
+Richard Sabey pointed out that a board with a "mate in n" also has all smaller mates, so we only show the longest mate on any size board.  The best-known results are shown below.<p>
+
+<center><font size=+2>Longest Unique Mate Problem on a Chessboard of a Given Size</font></center>
+<TABLE border=1 bgcolor=FFDDFF align=center><TR><TD>
+<table align=center cellpadding=7><tr align=center>
+<td>4 squares<br><img src="1210/mate1.gif"><br>mate in 1
+<td>5 squares<br><img src="1210/mate2.gif"><br>mate in 2
+<td>6 squares<br><img src="1210/mate9.gif"><br>mate in 9<br>(MM)
+<td>7 squares<br><img src="1210/mate14.gif"><br>mate in 14<br>(MM)
+<td>9 squares<br><img src="1210/mate24.gif"><br>mate in 24<br>(MM)
+<td>10 squares<br><img src="1210/mate27.gif"><br>mate in 27<br>(MM)
+<td>11 squares<br><img src="1210/mate29.gif"><br>mate in 29<br>(MM)
+<td>12 squares<br><img src="1210/mate31.gif"><br>mate in 31<br>(MM)
+</table></TABLE><p>
+
+<center><font size=+2>Longest (Not Necessarily Unique) Mate<br>Problem on a Chessboard of a Given Size</font></center>
+<TABLE border=1 bgcolor=FFDDFF align=center><TR><TD>
+<table align=center cellpadding=7><tr align=center>
+<td>4 squares<br><img src="1210/mate1.gif"><br>mate in 1
+<td>5 squares<br><img src="1210/mate2.gif"><br>mate in 2
+<td>6 squares<br><img src="1210/mate9.gif"><br>mate in 9<br>(MM)
+<td>7 squares<br><img src="1210/mate14.gif"><br>mate in 14<br>(MM)
+<td>9 squares<br><img src="1210/mmate25.gif"><br>mate in 25<br>(MM)
+<td>10 squares<br><img src="1210/mmate28.gif"><br>mate in 28<br>(MM)
+<td>12 squares<br><img src="1210/mmate32.gif"><br>mate in 32<br>(MM)
+</table></TABLE>
+
+<p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 12/27/10.<font>
+
+</BODY></HTML>

@@ -1,0 +1,35 @@
+Almost Honest numbers
+---------------------
+
+Numbers N that can be represented as a phrase with N-1 letters
+
+5 - "five"
+10 - "twice five"
+11 - "ten plus one"
+13 - "a baker's dozen", "four plus nine", "ten plus three", "six plus seven"
+14 - "two plus twelve", "two plus a dozen"
+15 - "five added to ten", "eleven plus four", "eight plus seven", "four plus eleven", "F in base sixteen"
+16 - "two plus fourteen", "one times sixteen", "thrice six minus two", "sixteen plus zero"
+17 - "five plus one dozen", "five plus twice six", "four plus thirteen", "two cubed plus nine", "eight added to nine", "two five in base six"
+18 - "six plus six plus six", "two added to sixteen", "one eight in base ten", "two two in base eight", "twice nine plus zero", "thrice six plus zero", "twice eight plus two", "forty halves minus two", "forty minus twenty two", "sixty thirds minus two", "twenty six minus eight"
+19 - "two cubed plus eleven", "half a score plus nine", "four added to fifteen", "four plus thrice five", "eight added to eleven", "seven added to twelve", "nine plus ten over one", "sixty minus forty one", "minus one plus a score", "two five in base seven", "seven added to a dozen"
+20 - "twice five added to ten", "nine plus two plus nine", "five plus five plus ten", "twenty four minus four", "twice two plus sixteen", "twice four plus twelve",
+"twice four plus a dozen", "eight more than twelve", "eight more than a dozen", "five more than fifteen" "two more than eighteen", "two plus ninety fifths", "eight more than twelve", "thrice four plus eight", "thrice seven minus one"
+21 - "one plus twelve plus nine", "one plus a dozen plus nine" "two plus eleven plus nine", "five plus eight plus nine", "ten plus one added to ten", "four added to seventeen"
+
+
+Numbers N that can be represented as a phrase with N+1 letters
+
+2 - "two"
+8 - "twice four"
+10 - "twenty halfs", "ten plus zero", "six plus four", "ten times one"
+11 - "B in base twelve"
+12 - "four plus eight", "two added to ten", "twelve over one", "five plus seven", "eleven plus one"
+13 - "D in base fifteen", "D in base sixteen"
+14 - "four more than ten", "two plus one dozen", "two plus twice six", "fourteen over one", "three plus eleven", "two cubed plus six"
+15 - "F in base seventeen", "eleven added to four", "fifteen minus zero"
+16 - "two cubed plus eight", "thirty two over two", "seven more than nine", "seventeen minus one", "four added to a dozen", "six plus half a score", "six plus ten over one", "one added to fifteen", "four added to twelve", "five added to eleven"
+17 - "two plus five plus ten", "two plus six plus nine", "seventeen minus zero", "twenty two minus five", "five plus six plus six", "one more than sixteen", "one plus four squared"
+18 - "four plus ten plus four", "four plus four squared", "twice four added to ten", "seven more than eleven", "four added to fourteen", "eighty minus sixty two", "fifty minus thirty two"
+19 - "seven plus sixty fifths", "seven added to one dozen", "seven added to twice six", "two times six plus seven", "one seven in base twelve"
+20 - "seven plus a baker's dozen", "ten plus zero added to ten", "six plus four added to ten", "ten times one added to ten", "twice four plus one dozen", "twice four plus twice six", "three added to seventeen", "seven more than thirteen"

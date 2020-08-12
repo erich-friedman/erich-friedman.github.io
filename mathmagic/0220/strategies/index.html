@@ -1,0 +1,107 @@
+<HTML><center><font size=+2>Problem 1283: Directing a Tournament</font></center><p>
+
+<font size=+1>You are the director of a tournament involving four players, A, B, C, D. The players are linearly ordered in terms of ability, but you do not know this order. Your job is to design a tournament that consists of a series of N games in order to maximize the probability that the best player is the champion. In every game between two players, the better player has a 2/3 chance of winning.<p>
+
+For example, if N = 3, the best tournament is A vs. B, C vs. D, and then the two winners against each other. The best team will win with probability (2/3)(2/3) = 44.4%. The tournament with A vs. B, with the winner vs. C, and the winner vs. D is not as good. The best player wins that tournament with probability (2/4)(2/3)<sup>3</sup> + (1/4)(2/3)<sup>2</sup> + (1/4)(2/3) = 42.6%.<p>
+
+Suppose you have N=8 games at your disposal.  Design a tournament that has the best player winning more than 53% of the time.<p>
+Problem and small solutions by Erich Friedman.  Large solutions by Piotr Zieli&nacute;ski.</font><p>
+
+<CENTER><FONT SIZE=+2>Optimal Tournaments for Different Numbers of Players and Games</FONT></CENTER>
+<TABLE border=1 align=center cellpadding=4>
+<TR align=center bgcolor=FFFFDD><th rowspan=2 colspan=2><th colspan=6>Players
+<TR align=center bgcolor=FFFFDD><th>2<th>3<th>4<th>5<th>6<th>7
+<TR align=center><th rowspan=13 bgcolor=FFFFDD>G<br>a<br>m<br>e<br>s<th bgcolor=FFFFDD width=20>0
+<td>guess<br><font color=red>1/2 = 50%
+<td>guess<br><font color=red>1/3 = 33.3%
+<td>guess<br><font color=red>1/4 = 25%
+<td>guess<br><font color=red>1/5 = 20%
+<td>guess<br><font color=red>1/6 = 16.7%
+<td>guess<br><font color=red>1/7 = 14.2%
+<TR align=center><th bgcolor=FFFFDD>1
+<td>A vs B<br><font color=red>2/3 = 66.7%
+<td>A vs B<br><font color=red>4/9 = 44.4%
+<td>A vs B<br><font color=red>1/3 = 33.3%
+<td>A vs B<br><font color=red>4/15 = 26.7%
+<td>A vs B<br><font color=red>2/9 = 22.2%
+<td>A vs B<br><font color=red>4/21 = 19.0%
+<TR align=center><th bgcolor=FFFFDD>2
+<td>A vs B<br><font color=red>2/3 = 66.7%
+<td>A vs B<br>winner vs C<br><font color=red>14/27 = 51.9%
+<td>A vs B<br>winner vs C<br><font color=red>7/18 = 38.9%
+<td>A vs B<br>winner vs C<br><font color=red>14/45 = 31.1%
+<td>A vs B<br>winner vs C<br><font color=red>7/27 = 25.9%
+<td>A vs B<br>winner vs C<br><font color=red>2/9 = 22.2%
+<TR align=center><th bgcolor=FFFFDD>3
+<td>A vs B best-of-3<br><font color=red>20/27 = 74.1%
+<td>A vs B<br>winner vs C twice (C loses ties)<br><font color=red>44/81 = 54.3%
+<td>A vs B, C vs D<br>winners play<br><font color=red>4/9 = 44.4%
+<td>A vs B, C vs D<br>winners play<br><font color=red>16/45 = 35.6%
+<td>A vs B, C vs D<br>winners play<br><font color=red>8/27 = 29.6%
+<td>A vs B, C vs D<br>winners play<br><font color=red>16/63 = 25.4%
+<TR align=center><th bgcolor=FFFFDD>4
+<td>A vs B best-of-3<br><font color=red>20/27 = 74.1%
+<td>A vs B<br>winner vs C best-of-3<br><font color=red>140/243 = 57.6%
+<td>A vs B<br>winner vs C and D<br>winners play<br><font color=red>38/81 = 46.9%
+<td>A vs B<br>winner vs C, D vs E<br>winners play<br><font color=red>52/135 = 38.5%
+<td>A vs B<br>winner vs C, D vs E<br>winners play<br><font color=red>26/81 = 32.1%
+<td>A vs B<br>winner vs C, D vs E<br>winners play<br><font color=red>52/189 = 27.5%
+<TR align=center><th bgcolor=FFFFDD>5
+<td>A vs B best-of-5<br><font color=red>64/81 = 79.0%
+<td>A vs B, winner (say A) vs C<br>if A wins, B vs C,<br>winner vs A twice (A wins ties)<br>if C wins, A vs C again<br>if A wins, A vs C twice (A wins ties)<br>if C wins, B vs C twice (C wins ties)<br><font color=red>148/243 = 60.9%
+<td>A vs B, C vs D<br>winners play best-of-3<br><font color=red>40/81 = 49.4%
+<td>A vs B, winner (say A) plays C<br>if A wins, A vs D, A vs E,<br> and winners play<br>if A loses, A vs D<br>if A wins, A vs E and winner plays C<br>if A loses, C vs E and winner plays D<br><font color=red>1496/3645 = 41.0%
+<td>A vs B, C vs D, winners play<br>winner plays winner of E vs F<br><font color=red>28/81 = 34.6%
+<td>A vs B, C vs D, winners play<br>winner plays winner of E vs F<br><font color=red>8/27 = 29.6%
+<TR align=center><th bgcolor=FFFFDD>6
+<td>A vs B best-of-5<br><font color=red>64/81 = 79.0%
+<td>A vs B best-of-3<br>winner vs C rest<br>(C loses ties)<br><font color=red>1376/2187 = 62.9%
+<td>A vs B (say A wins)<br>A vs C, A vs D<br>if A wins both, B plays C,<br>winner plays A twice (A wins ties)<br>otherwise, winners play best-of-3<br><font color=red>1124/2187 = 51.4%
+<td><a href="5,6.html">it's complicated</a><br><font color=red>944/2187 = 43.2%
+<td>A vs B, C vs D<br> winners play (say A wins)<br>A plays E, A plays F, winners play<br><font color=red>268/729 = 36.8%
+<td>A vs B, C vs D, winners play to get to final<br>E vs F, winner plays G to get to final<br><font color=red>20/63 = 31.7%
+<TR align=center><th bgcolor=FFFFDD>7
+<td>A vs B best-of-7<br><font color=red>1808/2187 = 82.7%
+<td><a href="3,7.html">it's complicated</a><br><font color=red>4304/6561 = 65.6%
+<td>A vs B, C vs D<br>winners (say A and C) play twice<br>if split, A vs C best-of-3<br>if A sweeps, B vs D<br>winner plays A twice (A wins ties)<br><font color=red>128/243 = 392/729 = 53.8%
+<td><a href="5,7.html">it's complicated</a><br><font color=red>986/2187 = 45.1%
+<td><a href="6,7.html">it's complicated</a><br><font color=red>7624/19683 = 38.7%
+<td>A vs B, C vs D<br>winners play (assume A wins)<br>E vs F, winner plays A<br>winner plays winner of A and G<br><font color=red>572/1701 = 33.6%
+<TR align=center><th bgcolor=FFFFDD>8
+<td>A vs B best-of-7<br><font color=red>1808/2187 = 82.7%
+<td><a href="3,8.html">it's complicated</a><br><font color=red>13256/19683 = 67.3%
+<td><a href="4,8.html">it's complicated</a><br><font color=red>10936/19683 = 55.6%
+<td><a href="5,8.html">it's complicated</a><br><font color=red>3085/6561 = 47.0%
+<td><a href="6,8.html">it's complicated</a><br><font color=red>296/729 = 40.6%
+<td><a href="7,8.html">it's complicated</a><br><font color=red>243823/688905 = 35.4%
+<TR align=center><th bgcolor=FFFFDD>9
+<td>A vs B best-of-9<br><font color=red>16832/19683 = 85.5%
+<td><a href="3,9.html">it's complicated</a><br><font color=red>13664/19683 = 69.4%
+<td><a href="4,9.html">it's complicated</a><br><font color=red>3776/6561 = 57.2%
+<td><a href="5,9.html">it's complicated</a><br><font color=red>143816/295245 = 48.7%
+<td><a href="6,9.html">it's complicated</a><br><font color=red>124736/295245 = 42.2%
+<td>A vs B, C vs D<br>winners play (assume A beats C)<br>C plays E, F plays G, winners play<br>winner plays A best-of-3<br><font color=red>5680/15309 = 37.1%
+<TR align=center><th bgcolor=FFFFDD>10
+<td>A vs B best-of-9<br><font color=red>16832/19683 = 85.5%
+<td><a href="3,10.html">it's complicated</a><br><font color=red>41936/59049 = 71.0%
+<td><a href="4,10.html">it's complicated</a><br><font color=red>104984/177147 = 59.3%
+<td>it's complicated<br><font color=red>447236/885735 = 50.5%
+<td>it's complicated<br><font color=red>1164556/2657205 = 43.8%
+<td>it's complicated<br><font color=red>1436096/3720087 = 38.6%
+<TR align=center><th bgcolor=FFFFDD>11
+<td>A vs B best-of-11<br><font color=red>640/729 = 87.8%
+<td>it's complicated<br><font color=red>128848/177147 = 72.7%
+<td>it's complicated<br><font color=red>4000/6561 = 61.0%
+<td>it's complicated<br><font color=red>276712/531441 = 52.1%
+<td>it's complicated<br><font color=red>3616384/7971615 = 45.4%
+<td>it's complicated<br><font color=red>4470392/11160261 = 40.1%
+<TR align=center><th bgcolor=FFFFDD>12
+<td>A vs B best-of-11<br><font color=red>640/729 = 87.8%
+<td>it's complicated<br><font color=red>1182112/1594323 = 74.1%
+<td>it's complicated<br><font color=red>332528/531441 = 62.6%
+<td>it's complicated<br><font color=red>4276042/7971615 = 53.6%
+<td>it's complicated<br><font color=red>11194744/23914845 = 46.8%
+<td>it's complicated<br><font color=red>13874431/33480783 = 41.4%
+</TABLE>
+
+</BODY></HTML>

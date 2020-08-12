@@ -1,0 +1,143 @@
+%!
+%% author: Berend Jan van der Zwaag
+%% date: 8 August 2001
+
+
+/a {40 mul} def % define length unit
+/c {closepath} def
+/f {fill} def
+/ii {dup 1 add index exch index} def
+/m {moveto} def
+/n {newpath} def
+/r {rlineto} def
+/rm {rmoveto} def
+/s {setgray} def
+
+/d {0 s n m show} def % display text
+
+/t { % x y g1 ... g8 t: make 8 triangles in a square with colors g1..g8
+9 ii n m 0 .5 a r .5 a 0 r c s f
+8 ii n m .5 a 0 r 0 .5 a r c s f
+7 ii n m .5 a 0 r 0 -.5 a r c s f
+6 ii n m 0 -.5 a r .5 a 0 r c s f
+5 ii n m 0 -.5 a r -.5 a 0 r c s f
+4 ii n m -.5 a 0 r 0 -.5 a r c s f
+3 ii n m -.5 a 0 r 0 .5 a r c s f
+2 ii n m 0 .5 a r -.5 a 0 r c s f
+pop pop
+} def
+
+/e { % x y g1 ... g12 e: make 12 shapes in a hexagon with colors g1..g12
+13 ii n m .57735 a 1 a rm -.57735 a -1 a r .57735 a -1 a r -.2887 a 1 a r c s f
+12 ii n m .57735 a 1 a rm -.2887 a -1 a r .2887 a -1 a r c s f
+11 ii n m .57735 a 1 a rm .2887 a -1 a r -.2887 a -1 a r c s f
+10 ii n m .57735 a 1 a rm .57735 a -1 a r -.57735 a -1 a r .2887 a 1 a r c s f
+9 ii n m -1.1547 a 0 rm 1.1547 a 0 r .57735 a -1 a r -.7217 a .75 a r c s f
+8 ii n m -1.1547 a 0 rm 1.01036 a -.25 a r .7217 a -.75 a r c s f
+7 ii n m -1.1547 a 0 rm .7217 a -.75 a r 1.01036 a -.25 a r c s f
+6 ii n m -1.1547 a 0 rm .57735 a -1 a r 1.1547 a 0 r -1.01036 a .25 a r c s f
+5 ii n m -1.1547 a 0 rm 1.1547 a 0 r .57735 a 1 a r -.7217 a -.75 a r c s f
+4 ii n m -1.1547 a 0 rm 1.01036 a .25 a r .7217 a .75 a r c s f
+3 ii n m -1.1547 a 0 rm .7217 a .75 a r 1.01036 a .25 a r c s f
+2 ii n m -1.1547 a 0 rm .57735 a 1 a r 1.1547 a 0 r -1.01036 a -.25 a r c s f
+pop pop
+} def
+
+/p { % x y g1 ... g12 p: make a pie (radius 1) with 12 segments
+13 ii n m 13 ii 1 a 0 30 arc c s f
+12 ii n m 12 ii 1 a 30 60 arc c s f
+11 ii n m 11 ii 1 a 60 90 arc c s f
+10 ii n m 10 ii 1 a 90 120 arc c s f
+9 ii n m 9 ii 1 a 120 150 arc c s f
+8 ii n m 8 ii 1 a 150 180 arc c s f
+7 ii n m 7 ii 1 a 180 210 arc c s f
+6 ii n m 6 ii 1 a 210 240 arc c s f
+5 ii n m 5 ii 1 a 240 270 arc c s f
+4 ii n m 4 ii 1 a 270 300 arc c s f
+3 ii n m 3 ii 1 a 300 330 arc c s f
+2 ii n m 2 ii 1 a 330 360 arc c s f
+pop pop
+} def
+
+/q { % x y g1 ... g6 p: add a 6-segment frame to a pie with radius 1
+7 ii n m 1.4 a 0 rm 7 ii 1 a 0 60 arc .2 a .3464 a r c s f
+6 ii n m .7 a 1.2124 a rm 6 ii 1 a 60 120 arc -.2 a .3464 a r c s f
+5 ii n m -.7 a 1.2124 a rm 5 ii 1 a 120 180 arc -.4 a 0 r c s f
+4 ii n m -1.4 a 0 rm 4 ii 1 a 180 240 arc -.2 a -.3464 a r c s f
+3 ii n m -.7 a -1.2124 a rm 3 ii 1 a 240 300 arc .2 a -.3464 a r c s f
+2 ii n m .7 a -1.2124 a rm 2 ii 1 a 300 360 arc .4 a 0 r c s f
+pop pop
+} def
+
+/Times-Roman findfont 18 scalefont setfont
+
+(dihedral:) 1 a 20 a d
+(n = 11) 5 a 13 a d
+5 a 12 a 1 1 1 1 .3 .3 .3 .3 t
+5 a 11 a 1 1 1 1 .7 .7 .7 .7 t
+5 a 10 a 1 1 1 1 .3 .3 .3 .3 t
+5 a 9 a 1 1 1 1 .7 .7 .7 .7 t
+6 a 12.5 a 1 1 .7 .5 .3 .7 1 1 t
+6 a 11.5 a .3 .7 .3 .5 .7 .3 .7 .5 t
+6 a 10.5 a .7 .3 .7 .5 .3 .7 .3 .5 t
+6 a 9.5 a .3 .7 .3 .5 .7 .3 .7 .5 t
+6 a 8.5 a .7 .3 1 1 1 1 .3 .5 t
+7 a 12 a .3 .3 .3 .3 .7 .7 .7 .7 t
+7 a 11 a .7 .7 .7 .7 .3 .3 .3 .3 t
+7 a 10 a .3 .3 .3 .3 .7 .7 .7 .7 t
+7 a 9 a .7 .7 .7 .7 .3 .3 .3 .3 t
+8 a 12.5 a 1 1 .3 .5 .7 .3 1 1 t
+8 a 11.5 a .7 .3 .7 .5 .3 .7 .3 .5 t
+8 a 10.5 a .3 .7 .3 .5 .7 .3 .7 .5 t
+8 a 9.5 a .7 .3 .7 .5 .3 .7 .3 .5 t
+8 a 8.5 a .3 .7 1 1 1 1 .7 .5 t
+9 a 12 a .7 .7 .7 .7 1 1 1 1 t
+9 a 11 a .3 .3 .3 .3 1 1 1 1 t
+9 a 10 a .7 .7 .7 .7 1 1 1 1 t
+9 a 9 a .3 .3 .3 .3 1 1 1 1 t
+(n = 11) 5 a 13 a d
+
+(n = 15) 1 a 19.2 a d
+1.8 a 15.5 a .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 p
+1.8 a 17.5 a .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 p
+3.532 a 14.5 a .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 p
+3.532 a 16.5 a .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 p
+3.532 a 18.5 a .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 p
+5.2641 a 15.5 a .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 p
+5.2641 a 17.5 a .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 .7 .3 p
+
+(n = 13) 7.3 a 19.7 a d
+8.154 a 15.4 a .3 .5 .7 .3 .5 .7 .3 .5 .7 .3 .5 .7 p
+8.154 a 17.8 a .7 .3 .5 .7 .3 .5 .7 .3 .5 .7 .3 .5 p
+10.232 a 14.2 a .7 .3 .5 .7 .3 .5 .7 .3 .5 .7 .3 .5 p
+10.232 a 16.6 a .5 .7 .3 .5 .7 .3 .5 .7 .3 .5 .7 .3 p
+10.232 a 19 a .3 .5 .7 .3 .5 .7 .3 .5 .7 .3 .5 .7 p
+12.31 a 15.4 a .3 .5 .7 .3 .5 .7 .3 .5 .7 .3 .5 .7 p
+12.31 a 17.8 a .7 .3 .5 .7 .3 .5 .7 .3 .5 .7 .3 .5 p
+8.154 a 15.4 a .7 .5 .3 .7 .5 .3 q
+8.154 a 17.8 a .5 .3 .7 .5 .3 .7 q
+10.232 a 14.2 a .5 .3 .7 .5 .3 .7 q
+10.232 a 16.6 a .3 .7 .5 .3 .7 .5 q
+10.232 a 19 a .7 .5 .3 .7 .5 .3 q
+12.31 a 15.4 a .7 .5 .3 .7 .5 .3 q
+12.31 a 17.8 a .5 .3 .7 .5 .3 .7 q
+
+(n = 32) 1.2 a 7.2 a d
+2 a 5.3 a .7 .5 .5 .7 .5 .3 .3 .5 .3 .7 .7 .3 e
+2 a 3.3 a .7 .5 .5 .7 .5 .3 .3 .5 .3 .7 .7 .3 e
+3.732 a 6.3 a .7 .5 .5 .7 .5 .3 .3 .5 .3 .7 .7 .3 e
+3.732 a 4.3 a .7 .5 .5 .7 .5 .3 .3 .5 .3 .7 .7 .3 e
+3.732 a 2.3 a .7 .5 .5 .7 .5 .3 .3 .5 .3 .7 .7 .3 e
+5.464 a 5.3 a .7 .5 .5 .7 .5 .3 .3 .5 .3 .7 .7 .3 e
+5.464 a 3.3 a .7 .5 .5 .7 .5 .3 .3 .5 .3 .7 .7 .3 e
+
+(n = 43) 7.9 a 7.2 a d
+8.7 a 5.3 a .7 .5 .3 .7 .5 .3 .7 .5 .3 .7 .5 .3 e
+8.7 a 3.3 a .7 .5 .3 .7 .5 .3 .7 .5 .3 .7 .5 .3 e
+10.432 a 6.3 a .7 .5 .3 .7 .5 .3 .7 .5 .3 .7 .5 .3 e
+10.432 a 4.3 a .7 .5 .3 .7 .5 .3 .7 .5 .3 .7 .5 .3 e
+10.432 a 2.3 a .7 .5 .3 .7 .5 .3 .7 .5 .3 .7 .5 .3 e
+12.164 a 5.3 a .7 .5 .3 .7 .5 .3 .7 .5 .3 .7 .5 .3 e
+12.164 a 3.3 a .7 .5 .3 .7 .5 .3 .7 .5 .3 .7 .5 .3 e
+
+showpage             % We're done... eject the page

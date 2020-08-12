@@ -1,0 +1,40 @@
+<HTML>
+<CENTER>n=5 players, N=11 games:</CENTER>
+<pre>
+A plays B, say A wins by symmetry.  C plays D, say C wins by symmetry.  A plays C, say A wins by symmetry.
+A plays C again.
+IF A WINS, D plays E
+  IF D WINS, A plays D again
+    IF A WINS, A plays E
+      IF A WINS, B plays D, and the winner plays A 3 times and needs to win them all
+      IF E WINS, E plays A 4 times (A wins ties)
+    IF D WINS, A plays D twice more
+      IF A WINS BOTH, E plays A 3 times and needs to win them all
+      IF THEY SPLIT, A plays D best-of-3
+      IF D WINS BOTH, B plays C, and winner plays D twice (D wins ties)
+  IF E WINS, A plays E twice
+    IF A WINS BOTH, B plays D, and winner plays A 3 times and needs to win them all
+    IF THEY SPLIT, E plays A 4 times (A wins ties)
+    IF E WINS BOTH, A plays E again
+      IF A WINS, A plays E best-of-3
+      IF E WINS, B plays E 3 times and needs to win them all
+IF C WINS, A plays C again
+  IF A WINS, C plays E
+    IF C WINS, A plays C twice more
+      IF A WINS BOTH, D plays E, and winner plays A twice (A wins ties)
+      IF THEY SPLIT, A plays C best-of-3
+      IF C WINS BOTH, A plays B, and winner plays C twice (C wins ties)
+    IF E WINS, A plays E twice
+      IF A WINS BOTH, D plays A 3 times and needs to win them all
+      IF THEY SPLIT, A plays E best-of-3
+      IF E WINS BOTH, A plays D, and winner plays E twice (E wins ties)
+  IF C WINS, A plays E
+    IF A WINS, A plays C twice
+      IF A WINS BOTH, C plays D, and winner plays A twice (A wins ties)
+      IF THEY SPLIT, A plays C best-of-3
+      IF C WINS BOTH, B plays E, and winner plays C twice (C wins ties)
+    IF E WINS, C plays E twice
+      IF C WINS BOTH, B plays C 3 times and needs to win them all
+      IF THEY SPLIT, C plays E best-of-3
+      IF E WINS BOTH, B plays C, and winner plays E (E wins ties)
+</pre>

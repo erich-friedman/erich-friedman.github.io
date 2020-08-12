@@ -1,0 +1,65 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1><CENTER><H1> Problem of the Month (October 1999)</H1></CENTER>This month we play with arrangements of squares of side 1, 2, 3, . . . n in the plane.  We want all these squares to be non-overlapping, unrotated, and have vertices with integer corrdinates.<p><h3>Question #1:</h3> If these squares are "stacked" on a flat surface, what is the longest flat surface that rests on some of these squares?  Squares must be fully supported below.  For example, f(5)=8:<p><center><img src="1099/flat5.gif"></center><p>Let <b>f(n)</b> be the longest flat surface obtainable from the squares 1, 2, 3, . . . n.  Can you find good bounds for f(n)?  What can you prove about f(n)?  Does f(n)/n &rarr; &infin; as n&rarr; &infin;?<h3>Question #2:</h3> For which n does there exist an edge-connected arrangement of these n squares so that the area covered has some sort of symmetry?<p><h3>Question #3:</h3> What is the smallest square that these n squares will fit into?  This is an old question, dating back to Martin Gardner's column in <i>Scientific American</i> some 30 years ago.  This sequence starts 1, 3, 5, 7, 9, 11, 13, 15, 18, 21, 24, 27, 30, 33, 36, 39, 43, 47, 51, 54, 58, 63, 67, 71, . . . and is <A HREF="http://www.research.att.com/cgi-bin/access.cgi/as/njas/sequences/eisA.cgi?Anum=005842" >A005842</A> of the Encyclopedia of Integer Sequences.  Can anyone calculate the next term, involving squares of sides 1, 2, 3, . . . 25?<p><P><hr><p><center><h1>ANSWERS</h1></center><h3>Question #1:</h3><p>Joseph DeVincentis found most of the best bounds on f(n) for n&le;30.  He also showed that f(99) &ge; 892.  He made the following conjecture, which would imply that f(n)/n &rarr; &infin; as n&rarr; &infin;.  This is based on a flat surface at height roughly 2n.<p><b>Conjecture:</b> The optimal solutions for large n have two layers and f(n) &asymp; (1+4+9+ . . . n<sup>2</sup>) / 2n &asymp; n<sup>2</sup>/6. <p>Trevor Green showed f(9999) &ge; 165448.  He also proved that f(n)/n &rarr; &infin; by showing<p><b>Theorem:</b> Let G(n)=<img src="lfloor.gif" align="center">log(&radic;3(2n - 6)/(1+&radic;3))<img src="rfloor.gif" align="center"> / log(2+&radic;3).  Then f(n) &ge; n (G(n) - 2)/2.<p>Here are the best known lower bounds for f(n):<p>
+<p><CENTER><H2>Length of Longest Flat Surface</H2></CENTER><TABLE bgcolor="FFFFCF" cellpadding=5 align=center border=1><TR align=center bgcolor=lightgreen><TH>n<TH>f(n)<TH>Picture<TH>Author
+<TR align=center><td>1<td>1<td><img src="1099/s1.gif"><td>Trivial
+<TR align=center><td>2<td>2<td><img src="1099/s2.gif"><td>Trivial
+<TR align=center><td>3<td>4<td><img src="1099/s3.gif"><td>Trivial
+<TR align=center><td>4<td>5<td><img src="1099/s4.gif"><td>Erich Friedman
+<TR align=center><td>5<td>8<td><img src="1099/s5.gif"><td>Erich Friedman
+<TR align=center><td>6<td>9<td><img src="1099/s6.gif"><td>Erich Friedman
+<TR align=center><td>7<td>12<td><img src="1099/s7.gif"><td>Erich Friedman
+<TR align=center><td>8<td>13<td><img src="1099/s8.gif"><td>Erich Friedman
+<TR align=center><td>9<td>18<td><img src="1099/s9.gif"><td>Erich Friedman
+<TR align=center><td>10<td>20<td><img src="1099/s10.gif"><td>Joe DeVincentis
+<TR align=center><td>11<td>24<td><img src="1099/s11.gif"><td>Joe DeVincentis
+<TR align=center><td>12<td>29<td><img src="1099/s12.gif"><td>Joe DeVincentis
+<TR align=center><td>13<td>32<td><img src="1099/s13.gif"><td>Joe DeVincentis
+<TR align=center><td>14<td>39<td><img src="1099/s14.gif"><td>Joe DeVincentis
+<TR align=center><td>15<td>47<td><img src="1099/s15.gif"><td>Joe DeVincentis
+<TR align=center><td>16<td>51<td><img src="1099/s16.gif"><td>Joe DeVincentis
+<TR align=center><td>17<td>57<td><img src="1099/s17.gif"><td>Joe DeVincentis
+<TR align=center><td>18<td>59<td><img src="1099/s18.gif"><td>Joe DeVincentis
+<TR align=center><td>19<td>64<td><img src="1099/s19.gif"><td>Joe DeVincentis
+<TR align=center><td>20<td>81<td><img src="1099/s20.gif"><td>Erich Friedman
+<TR align=center><td>21<td>81<td><img src="1099/s20.gif"><td>Erich Friedman
+<TR align=center><td>22<td>84<td><img src="1099/s22.gif"><td>Joe DeVincentis
+<TR align=center><td>23<td>87<td><img src="1099/s23.gif"><td>Joe DeVincentis
+<TR align=center><td>24<td>95<td><img src="1099/s24.gif"><td>Joe DeVincentis
+<TR align=center><td>25<td>107<td><img src="1099/s25.gif"><td>Joe DeVincentis
+<TR align=center><td>26<td>118<td><img src="1099/s26.gif"><td>Joe DeVincentis
+<TR align=center><td>27<td>130<td><img src="1099/s27.gif"><td>Joe DeVincentis
+<TR align=center><td>28<td>130<td><img src="1099/s27.gif"><td>Joe DeVincentis
+<TR align=center><td>29<td>135<td><img src="1099/s29.gif"><td>Joe DeVincentis
+<TR align=center><td>30<td>147<td><img src="1099/s30.gif"><td>Joe DeVincentis
+</TABLE>
+
+<P><hr><p>
+<h3>Question #2:</h3><p>There were no responses, except to note that for n=1, 1 square is symmetric, and that there is a solution if the squares don't have to placed with lattice points as corners.<p>
+
+<P><hr><p>
+<h3>Question #3:</h3><p>There were no responses, though there was progress on this problem in 2004, 2009, and 2010.  Here are the best known packings:<p>
+
+<table cellpadding=5 align=center><tr align=center>
+<td><img src="1099/1.gif"><br>s(1)=1
+<td><img src="1099/2.gif"><br>s(2)=3
+<td><img src="1099/3.gif"><br>s(3)=5
+<td><img src="1099/4.gif"><br>s(4)=7<td><img src="1099/5.gif"><br>s(5)=9<td><img src="1099/6.gif"><br>s(6)=11<td><img src="1099/7.gif"><br>s(7)=13<td><img src="1099/8.gif"><br>s(8)=15<td><img src="1099/9.gif"><br>s(9)=18<td><img src="1099/10.gif"><br>s(10)=21</table><p>
+<table cellpadding=5 align=center><tr align=center>
+<td><img src="1099/11.gif"><br>s(11)=24<td><img src="1099/12.gif"><br>s(12)=27<td><img src="1099/13.gif"><br>s(13)=30<td><img src="1099/14.gif"><br>s(14)=33<td><img src="1099/15.gif"><br>s(15)=36<td><img src="1099/16.gif"><br>s(16)=39</table><p>
+<table cellpadding=5 align=center><tr align=center>
+<td><img src="1099/17.gif"><br>s(17)=43<td><img src="1099/18.gif"><br>s(18)=47<td><img src="1099/19.gif"><br>s(19)=50<td><img src="1099/20.gif"><br>s(20)=54<td><img src="1099/21.gif"><br>s(21)=58</table><p>
+<table cellpadding=5 align=center><tr align=center>
+<td><img src="1099/22.gif"><br>s(22)=62<td><img src="1099/23.gif"><br>s(23)=66<td><img src="1099/24.gif"><br>s(24)=71<td><img src="1099/25.gif"><br>s(25)=75</table><p>
+<table cellpadding=5 align=center><tr align=center>
+<td><img src="1099/26.gif"><br>s(26)=80<td><img src="1099/27.gif"><br>s(27)=84<td><img src="1099/28.gif"><br>s(28)&le;89<td><img src="1099/29.gif"><br>s(29)=93</table><p>
+<table cellpadding=5 align=center><tr align=center>
+<td><img src="1099/30.gif"><br>s(30)=98<td><img src="1099/31.gif"><br>s(31)=103<td><img src="1099/32.gif"><br>s(32)=108</table><p>
+<table cellpadding=5 align=center><tr align=center>
+<td><img src="1099/33.gif"><br>s(33)=113<td><img src="1099/34.gif"><br>s(34)=118<td><img src="1099/35.gif"><br>s(35)=123</table><p>
+<table cellpadding=5 align=center><tr align=center>
+<td><img src="1099/36.gif"><br>s(36)=128<td><img src="1099/37.gif"><br>s(37)=133<td><img src="1099/38.gif"><br>s(38)&le;139</table><p>
+<table cellpadding=5 align=center><tr align=center>
+<td><img src="1099/39.gif"><br>s(39)=144<td><img src="1099/40.gif"><br>s(40)&le;150<td><img src="1099/41.gif"><br>s(41)=155</table><p>
+
+<P><hr><p>If you can extend any of these results, please <a href="mailto:erich.friedman@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 10/10/10.<font>
+
+</BODY></HTML>

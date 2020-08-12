@@ -1,0 +1,596 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (February 2007)</H1></CENTER>
+
+This month we investigate chess positions containing two types of pieces A and B subject to the condition: each A attacks exactly n B's (and no A's), and each B attacks exactly m A's (and no B's).  Can you find smaller solutions?  Can you solve one of the unsolved cases?  What are the smallest solutions for other pairs of pieces?<p>
+
+Given a collection of chess pieces, here are more questions we can ask: What is the smallest arrangement so that each piece attacks exactly one piece of each type, including its own?  What is the smallest arrangement so that each piece attacks one piece of each other type, not including its own?  How about two of each piece?  Given a cycle of pieces, what is the smallest arrangement so that each piece attacks only one of the piece next in the cycle?  How about two of the next piece?<p>
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Here are the smallest known solutions for 2 pieces A and B (possibly equal) where A attacks exactly n B's (and no A's), and each B attacks exactly m A's (and no B's).  <p>
+
+<table bgcolor=DDFFDD border=3 align=center><tr><td>
+<center><font size=+3>Bishops and Knights</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>B=1<th><font size=+1>B=2<th><font size=+1>B=3<th><font size=+1>B=4
+<TR align=center><th><font size=+1>N=1<TD><img src="0207/B1N1.gif"><TD><img src="0207/B2N1.gif">
+<TD><img src="0207/B3N1.gif"><TD><img src="0207/B4N1.gif">
+<TR align=center><th><font size=+1>N=2<TD><img src="0207/B1N2.gif"><TD><img src="0207/B2N2.gif">
+<TD><font size=+1><b>see below</b></font><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>N=3<TD><img src="0207/B1N3.gif"><TD><font size=+3>?</font>
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>N=4<TD><img src="0207/B1N4.gif"><TD><img src="0207/no.gif">
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+</tr></table>
+<hr><center><font size=+1><b>B=3 N=2</b></font><br><img src="0207/B3N2.gif"></center><br>
+</table><p>
+
+
+<table bgcolor=DDFFDD border=3 align=center><tr><td>
+<center><font size=+3>Bishops and Kings</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>B=1<th><font size=+1>B=2<th><font size=+1>B=3<th><font size=+1>B=4
+<TR align=center><th><font size=+1>K=1<TD><img src="0207/B1K1.gif"><TD><img src="0207/B2K1.gif">
+<TD><img src="0207/B3K1.gif"><TD><img src="0207/B4K1.gif">
+<TR align=center><th><font size=+1>K=2<TD><img src="0207/B1K2.gif"><TD><img src="0207/B2K2.gif">
+<TD><img src="0207/B3K2.gif"><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>K=3<TD><img src="0207/B1K3.gif"><TD><img src="0207/B2K3.gif">
+<TD><img src="0207/no.gif"><br>(proved by<br>Joe DeVincentis)<TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>K=4<TD><img src="0207/B1K4.gif"><TD><font size=+3>?</font>
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>K=5<TD><img src="0207/B1K5.gif"><TD><img src="0207/no.gif">
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+</tr></table></table><p>
+
+
+<table bgcolor=DDFFDD border=3 align=center><tr><td>
+<center><font size=+3>Bishops and Rooks</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>B=1<th><font size=+1>B=2<th><font size=+1>B=3<th><font size=+1>B=4
+<TR align=center><th><font size=+1>R=1<TD><img src="0207/B1R1.gif"><TD><img src="0207/B2R1.gif">
+<TD><img src="0207/B3R1.gif"><TD><font size=+1><b>see below</b></font>
+<TR align=center><th><font size=+1>R=2<TD><img src="0207/B1R2.gif"><TD><img src="0207/B2R2.gif">
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>R=3<TD><img src="0207/B1R3.gif"><TD><img src="0207/no.gif">
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>R=4<TD><font size=+1><b>see below</b></font><TD><img src="0207/no.gif">
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+</tr></table>
+<hr><center><font size=+1><b>B=4 R=1</b></font><br><img src="0207/B4R1.gif"></center><br>
+<center><font size=+1><b>B=1 R=4</b></font><br><img src="0207/B1R4.gif"></center><br>
+</table><p>
+
+
+<table bgcolor=DDFFDD border=3 align=center><tr><td>
+<center><font size=+3>Bishops and Queens</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>B=1<th><font size=+1>B=2<th><font size=+1>B=3<th><font size=+1>B=4
+<TR align=center><th><font size=+1>Q=1<TD><img src="0207/B1Q1.gif"><TD><img src="0207/B2Q1.gif">
+<TD><img src="0207/B3Q1.gif"><TD><img src="0207/B4Q1.gif">
+<TR align=center><th><font size=+1>Q=2<TD><img src="0207/B1Q2.gif"><TD><img src="0207/B2Q2.gif">
+<TD><img src="0207/B3Q2.gif"><TD><font size=+1><b>see below</b></font>
+<TR align=center><th><font size=+1>Q=3<TD><img src="0207/B1Q3.gif"><TD><img src="0207/B2Q3.gif">
+<TD><font size=+1><b>see below</b></font><TD><font size=+3>?</font>
+<TR align=center><th><font size=+1>Q=4<TD><img src="0207/B1Q4.gif"><TD><img src="0207/B2Q4.gif">
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>Q=5<TD><img src="0207/B1Q5.gif"><br>(James Wilson)<TD><font size=+3>?</font>
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>Q=6<TD><img src="0207/B1Q6.gif"><TD><img src="0207/no.gif">
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>Q=7<TD><img src="0207/B1Q7.gif"><TD><img src="0207/no.gif">
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>Q=8<TD><font size=+1><b>see below</b></font><TD><img src="0207/no.gif">
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+</tr></table>
+<hr><center><font size=+1><b>B=4 Q=2</b></font><br><img src="0207/B4Q2.gif"></center><br>
+<center><font size=+1><b>B=3 Q=3</b></font><br><img src="0207/B3Q3.gif"></center><br>
+<center><font size=+1><b>B=1 Q=8</b></font><br><img src="0207/B1Q8.gif"></center><br>
+</table><p>
+
+
+<table bgcolor=DDFFDD border=3 align=center><tr><td>
+<center><font size=+3>Kings and Knights</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>K=1<th><font size=+1>K=2<th><font size=+1>K=3
+<TR align=center><th><font size=+1>N=1<TD><img src="0207/K1N1.gif"><TD><img src="0207/K2N1.gif">
+<TD><img src="0207/K3N1.gif"><br>(Johan de Ruiter)
+<TR align=center><th><font size=+1>N=2<TD><img src="0207/K1N2.gif"><TD><img src="0207/K2N2.gif">
+<TD><img src="0207/K3N2.gif"><br>(James Wilson)
+</tr></table></table><p>
+
+
+<table bgcolor=DDFFDD border=3 align=center><tr><td>
+<center><font size=+3>Kings and Queens</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>K=1<th><font size=+1>K=2
+<TR align=center><th><font size=+1>Q=1<TD><img src="0207/K1Q1.gif"><TD><img src="0207/K2Q1.gif">
+<TR align=center><th><font size=+1>Q=2<TD><img src="0207/K1Q2.gif"><TD><img src="0207/K2Q2.gif">
+<TR align=center><th><font size=+1>Q=3<TD><img src="0207/K1Q3.gif"><TD><img src="0207/K2Q3.gif">
+<TR align=center><th><font size=+1>Q=4<TD><img src="0207/K1Q4.gif"><TD><img src="0207/K2Q4.gif">
+<TR align=center><th><font size=+1>Q=5<TD><img src="0207/K1Q5.gif"><TD><font size=+3>?</font>
+<TR align=center><th><font size=+1>Q=6<TD><img src="0207/K1Q6.gif"><TD><img src="0207/no.gif">
+</tr></table></table><p>
+
+
+<table bgcolor=DDFFDD border=3 align=center><tr><td>
+<center><font size=+3>Kings and Rooks</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>K=1<th><font size=+1>K=2<th><font size=+1>K=3<th><font size=+1>K=4
+<TR align=center><th><font size=+1>R=1<TD><img src="0207/K1R1.gif"><TD><img src="0207/K2R1.gif">
+<TD><img src="0207/K3R1.gif"><TD><img src="0207/K4R1.gif">
+<TR align=center><th><font size=+1>R=2<TD><img src="0207/K1R2.gif"><TD><img src="0207/K2R2.gif">
+<TD><img src="0207/no.gif"><br>(proved by<br>Joe DeVincentis)<TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>R=3<TD><img src="0207/K1R3.gif"><TD><img src="0207/no.gif"><br>(proved by<br>Joe DeVincentis)
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+</tr></table></table><p>
+
+
+<table bgcolor=DDFFDD border=3 align=center><tr><td>
+<center><font size=+3>Knights and Rooks</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>N=1<th><font size=+1>N=2<th><font size=+1>N=3<th><font size=+1>N=4
+<TR align=center><th><font size=+1>R=1<TD><img src="0207/N1R1.gif"><TD><img src="0207/N2R1.gif">
+<TD><img src="0207/N3R1.gif"><TD><img src="0207/N4R1.gif">
+<TR align=center><th><font size=+1>R=2<TD><img src="0207/N1R2.gif"><TD><img src="0207/N2R2.gif">
+<TD><font size=+1><b>see below</b></font><TD><font size=+3>?</font>
+<TR align=center><th><font size=+1>R=3<TD><img src="0207/N1R3.gif"><br>(George Sicherman)<TD><img src="0207/N2R3.gif">
+<TD><font size=+3>?</font><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>R=4<TD><img src="0207/N1R4.gif"><TD><img src="0207/N2R4.gif">
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+</tr></table>
+<hr><center><font size=+1><b>N=3 R=2</b></font><br><img src="0207/N3R2.gif"><br>(George Sicherman)</center>
+</table><p>
+
+<table bgcolor=DDFFDD border=3 align=center><tr><td>
+<center><font size=+3>Knights and Queens</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>N=1<th><font size=+1>N=2<th><font size=+1>N=3
+<TR align=center><th><font size=+1>Q=1<TD><img src="0207/N1Q1.gif"><TD><img src="0207/N2Q1.gif">
+<TD><font size=+1><b>see below</b></font>
+<TR align=center><th><font size=+1>Q=2<TD><img src="0207/N1Q2.gif"><TD><font size=+1><b>see below</b></font>
+<TD><font size=+3>?</font>
+<TR align=center><th><font size=+1>Q=3<TD><img src="0207/N1Q3.gif"><br>(George Sicherman)<TD><img src="0207/N2Q3.gif">
+<TD><font size=+3>?</font>
+<TR align=center><th><font size=+1>Q=4<TD><img src="0207/N1Q4.gif"><TD><font size=+1><b>see below</b></font>
+<TD><img src="0207/no.gif">
+</tr></table>
+<hr><center><font size=+1><b>N=2 Q=2</b></font><br><img src="0207/N2Q2.gif"></center><br>
+<center><font size=+1><b>N=2 Q=4</b></font><br><img src="0207/N2Q4.gif"></center><br>
+<center><font size=+1><b>N=3 Q=1</b></font><br><img src="0207/N3Q1.gif"><br>(James Wilson)</center><br>
+</table><p>
+
+
+<table bgcolor=DDFFDD border=3 align=center><tr><td>
+<center><font size=+3>Queens and Rooks</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>R=1<th><font size=+1>R=2<th><font size=+1>R=3<th><font size=+1>R=4
+<TR align=center><th><font size=+1>Q=1<TD><img src="0207/Q1R1.gif"><TD><img src="0207/Q1R2.gif">
+<TD><img src="0207/Q1R3.gif"><TD><img src="0207/Q1R4.gif">
+<TR align=center><th><font size=+1>Q=2<TD><img src="0207/Q2R1.gif"><TD><img src="0207/Q2R2.gif">
+<TD><img src="0207/Q2R3.gif"><TD><font size=+1><b>see below</b></font>
+<TR align=center><th><font size=+1>Q=3<TD><img src="0207/Q3R1.gif"><TD><img src="0207/Q3R2.gif">
+<TD><img src="0207/Q3R3.gif"><TD><font size=+3>?</font>
+<TR align=center><th><font size=+1>Q=4<TD><img src="0207/Q4R1.gif"><TD><img src="0207/Q4R2.gif">
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>Q=5<TD><img src="0207/Q5R1.gif"><TD><font size=+1><b>see below</b></font>
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>Q=6<TD><img src="0207/Q6R1.gif"><TD><img src="0207/no.gif">
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>Q=7<TD><img src="0207/Q7R1.gif"><TD><img src="0207/no.gif">
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>Q=8<TD><font size=+1><b>see below</b></font><TD><img src="0207/no.gif">
+<TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+</tr></table>
+<hr><center><font size=+1><b>Q=2 R=4</b></font><br><img src="0207/Q2R4.gif"></center><br>
+<center><font size=+1><b>Q=5 R=2</b></font><br><img src="0207/Q5R2.gif"><br>(James Wilson)</center><br>
+<center><font size=+1><b>Q=8 R=1</b></font><br><img src="0207/Q8R1.gif"></center><br>
+</table><p>
+
+
+<table bgcolor=DDFFDD border=3 align=center><tr><td>
+<center><font size=+3>Bishops and Bishops</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>B=1<th><font size=+1>B=2
+<TR align=center><th><font size=+1>B=1<TD><img src="0207/B1B1.gif">
+<TR align=center><th><font size=+1>B=2<TD><img src="0207/B1B2.gif"><TD><img src="0207/B2B2.gif">
+<TR align=center><th><font size=+1>B=3<TD><img src="0207/B1B3.gif"><TD><img src="0207/B2B3.gif">
+<TR align=center><th><font size=+1>B=4<TD><img src="0207/B1B4.gif"><TD><img src="0207/no.gif">
+</tr></table>
+</table><p>
+
+
+<table bgcolor=DDFFDD border=3 align=center><tr><td>
+<center><font size=+3>Kings and Kings</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>K=1<th><font size=+1>K=2<th>
+<TR align=center><th><font size=+1>K=1<TD><img src="0207/K1K1.gif">
+<TR align=center><th><font size=+1>K=2<TD><img src="0207/K1K2.gif"><TD><img src="0207/K2K2.gif">
+<TR align=center><th><font size=+1>K=3<TD><img src="0207/K1K3.gif"><TD><img src="0207/K2K3.gif">
+<TR align=center><th><font size=+1>K=4<TD><img src="0207/K1K4.gif"><TD><img src="0207/no.gif">
+</tr></table></table><p>
+
+
+<table bgcolor=DDFFDD border=3 align=center><tr><td>
+<center><font size=+3>Knights and Knights</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>N=1<th><font size=+1>N=2<th><font size=+1>N=3<th><font size=+1>N=4
+<TR align=center><th><font size=+1>N=1<TD><img src="0207/N1N1.gif">
+<TR align=center><th><font size=+1>N=2<TD><img src="0207/N1N2.gif"><TD><img src="0207/N2N2.gif">
+<TR align=center><th><font size=+1>N=3<TD><img src="0207/N1N3.gif"><TD><img src="0207/N2N3.gif"><TD><img src="0207/N3N3.gif">
+<TR align=center><th><font size=+1>N=4<TD><img src="0207/N1N4.gif"><TD><img src="0207/N2N4.gif"><br>(Johan de Ruiter)<TD><img src="0207/N3N4.gif"><TD><img src="0207/N4N4.gif">
+<TR align=center><th><font size=+1>N=5<TD><img src="0207/N1N5.gif"><TD><img src="0207/N2N5.gif"><TD><a href="0207/knight35.gif">shown here</a><br>(Johannes Waldmann)<TD><a href="0207/knight45.gif">shown here</a><br>(Johannes Waldmann)
+<TR align=center><th><font size=+1>N=6<TD><img src="0207/N1N6.gif"><TD><img src="0207/N2N6.gif"><TD><font size=+3>?</font><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>N=7<TD><img src="0207/N1N7.gif"><TD><font size=+3>?</font><TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>N=8<TD><img src="0207/N1N8.gif"><TD><img src="0207/no.gif"><TD><img src="0207/no.gif"><TD><img src="0207/no.gif">
+</tr></table></table><p>
+
+
+<table bgcolor=DDFFDD border=3 align=center><tr><td>
+<center><font size=+3>Queens and Queens</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>Q=1<th><font size=+1>Q=2<th><font size=+1>Q=3<th><font size=+1>Q=4
+<TR align=center><th><font size=+1>Q=1<TD><img src="0207/Q1Q1.gif">
+<TR align=center><th><font size=+1>Q=2<TD><img src="0207/Q1Q2.gif"><TD><img src="0207/Q2Q2.gif">
+<TR align=center><th><font size=+1>Q=3<TD><img src="0207/Q1Q3.gif"><TD><img src="0207/Q2Q3.gif"><TD><img src="0207/Q3Q3.gif">
+<TR align=center><th><font size=+1>Q=4<TD><img src="0207/Q1Q4.gif"><TD><img src="0207/Q2Q4.gif"><TD><img src="0207/Q3Q4.gif"><TD><img src="0207/Q4Q4.gif">
+<TR align=center><th><font size=+1>Q=5<TD><img src="0207/Q1Q5.gif"><TD><img src="0207/Q2Q5.gif"><TD><font size=+3>?</font><TD><font size=+3>?</font>
+<TR align=center><th><font size=+1>Q=6<TD><img src="0207/Q1Q6.gif"><TD><img src="0207/Q2Q6.gif"><TD><font size=+3>?</font><TD><font size=+3>?</font>
+<TR align=center><th><font size=+1>Q=7<TD><img src="0207/Q1Q7.gif"><br>(James Wilson)<TD><b>see below<TD><font size=+3>?</font><TD><font size=+3>?</font>
+<TR align=center><th><font size=+1>Q=8<TD><img src="0207/Q1Q8.gif"><br>(James Wilson)<TD><font size=+3>?</font><TD><font size=+3>?</font><TD><font size=+3>?</font>
+</tr></table>
+<hr><br>
+<center><font size=+1><b>Q=2 Q=7</b></font><br><img src="0207/Q2Q7.gif"><br>(George Sicherman)</center><br>
+</table><p>
+
+
+<table bgcolor=DDFFDD border=3 align=center><tr><td>
+<center><font size=+3>Rooks and Rooks</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>R=1<th><font size=+1>R=2
+<TR align=center><th><font size=+1>R=1<TD><img src="0207/R1R1.gif">
+<TR align=center><th><font size=+1>R=2<TD><img src="0207/R1R2.gif"><TD><img src="0207/R2R2.gif">
+<TR align=center><th><font size=+1>R=3<TD><img src="0207/R1R3.gif"><TD><img src="0207/R2R3.gif">
+<TR align=center><th><font size=+1>R=4<TD><img src="0207/R1R4.gif"><TD><img src="0207/no.gif">
+</tr></table>
+</table><p>
+
+
+
+
+
+
+<hr>Here are the smallest known solutions for collections of pieces (possibly repeated) where each piece attacks exactly 1 of every other type of piece.<p>
+
+<table bgcolor=FFDDFF border=3 align=center><tr><td>
+<center><font size=+3>2 Pieces</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>B<th><font size=+1>K<th><font size=+1>N<th><font size=+1>Q<th><font size=+1>R
+<TR align=center><th><font size=+1>B<TD><img src="0207/B1B1.gif">
+<TR align=center><th><font size=+1>K<TD><img src="0207/B1K1.gif"><TD><img src="0207/K1K1.gif">
+<TR align=center><th><font size=+1>N<TD><img src="0207/B1N1.gif"><TD><img src="0207/K1N1.gif">
+<TD><img src="0207/N1N1.gif">
+<TR align=center><th><font size=+1>Q<TD><img src="0207/B1Q1.gif"><TD><img src="0207/K1Q1.gif">
+<TD><img src="0207/N1Q1.gif"><TD><img src="0207/Q1Q1.gif">
+<TR align=center><th><font size=+1>R<TD><img src="0207/B1R1.gif"><TD><img src="0207/K1R1.gif">
+<TD><img src="0207/N1R1.gif"><TD><img src="0207/Q1R1.gif"><TD><img src="0207/R1R1.gif">
+</tr></table></table><p>
+
+<table bgcolor=FFDDFF border=3 align=center><tr><td>
+<center><font size=+3>3 Pieces Without Repetition</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>no B<th><font size=+1>no K<th><font size=+1>no N<th><font size=+1>no Q
+<TR align=center><th><font size=+1>no K<TD><img src="0207/NQR.gif">
+<TR align=center><th><font size=+1>no N<TD><img src="0207/KQR.gif"><TD><img src="0207/BQR.gif">
+<TR align=center><th><font size=+1>no Q<TD><img src="0207/KNR.gif"><TD><img src="0207/BNR.gif">
+<TD><img src="0207/BKR.gif">
+<TR align=center><th><font size=+1>no R<TD><img src="0207/KNQ.gif"><TD><img src="0207/BNQ.gif">
+<TD><img src="0207/BKQ.gif"><TD><img src="0207/BKN.gif">
+</tr></table></table><p>
+
+<table bgcolor=FFDDFF border=3 align=center><tr><td>
+<center><font size=+3>3 Pieces With Repetition</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>B<th><font size=+1>K<th><font size=+1>N<th><font size=+1>Q<th><font size=+1>R
+<TR align=center><th><font size=+1>BB<TD><img src="0207/BBB.gif"><TD><img src="0207/BBK.gif">
+<TD><img src="0207/BBN.gif"><TD><img src="0207/BBQ.gif"><TD><img src="0207/BBR.gif">
+<TR align=center><th><font size=+1>KK<TD><img src="0207/KKB.gif"><TD><img src="0207/KKK.gif">
+<TD><img src="0207/KKN.gif"><br>(James Wilson)<TD><img src="0207/KKQ.gif"><TD><img src="0207/KKR.gif">
+<TR align=center><th><font size=+1>NN<TD><img src="0207/NNB.gif"><TD><img src="0207/NNK.gif">
+<TD><img src="0207/NNN.gif"><TD><img src="0207/NNQ.gif"><TD><img src="0207/NNR.gif">
+<TR align=center><th><font size=+1>QQ<TD><img src="0207/QQB.gif"><TD><img src="0207/QQK.gif">
+<TD><img src="0207/QQN.gif"><TD><img src="0207/QQQ.gif"><TD><img src="0207/QQR.gif">
+<TR align=center><th><font size=+1>RR<TD><img src="0207/RRB.gif"><TD><img src="0207/RRK.gif">
+<TD><img src="0207/RRN.gif"><TD><img src="0207/RRQ.gif"><TD><img src="0207/RRR.gif">
+</tr></table></table><p>
+
+
+<table bgcolor=FFDDFF border=3 align=center><tr><td>
+<center><font size=+3>4 Pieces All Alike</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><font size=+1>BBBB</font><br><img src="0207/no.gif">
+<th><font size=+1>KKKK</font><br><img src="0207/KKKK.gif">
+<th><font size=+1>NNNN</font><br><img src="0207/NNNN.gif">
+<th><font size=+1>QQQQ</font><br><img src="0207/QQQQ.gif">
+<th><font size=+1>RRRR</font><br><img src="0207/no.gif">
+</table></TABLE><p>
+
+
+
+
+
+<hr>Here are the smallest known solutions for collections of pieces (possibly repeated) where each piece attacks exactly 1 of each type of piece, including its own.<p>
+
+<table bgcolor=FFFFDD border=3 align=center><tr><td>
+<center><font size=+3>2 Pieces</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>B<th><font size=+1>K<th><font size=+1>N<th><font size=+1>Q<th><font size=+1>R
+<TR align=center><th><font size=+1>B<TD><img src="0207/+BB.gif">
+<TR align=center><th><font size=+1>K<TD><img src="0207/+BK.gif"><TD><img src="0207/+KK.gif">
+<TR align=center><th><font size=+1>N<TD><img src="0207/+BN.gif"><TD><img src="0207/+KN.gif">
+<TD><img src="0207/+NN.gif">
+<TR align=center><th><font size=+1>Q<TD><img src="0207/+BQ.gif"><TD><img src="0207/+KQ.gif">
+<TD><img src="0207/+NQ.gif"><TD><img src="0207/+QQ.gif">
+<TR align=center><th><font size=+1>R<TD><img src="0207/+BR.gif"><TD><img src="0207/+KR.gif">
+<TD><img src="0207/+NR.gif"><TD><img src="0207/+QR.gif"><TD><img src="0207/+RR.gif">
+</tr></table></table><p>
+
+<table bgcolor=FFFFDD border=3 align=center><tr><td>
+<center><font size=+3>3 Pieces Without Repetition</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>no B<th><font size=+1>no K<th><font size=+1>no N<th><font size=+1>no Q
+<TR align=center><th><font size=+1>no K<TD><img src="0207/+NQR.gif">
+<TR align=center><th><font size=+1>no N<TD><img src="0207/+KQR.gif"><TD><img src="0207/+BQR.gif">
+<TR align=center><th><font size=+1>no Q<TD><font size=+3>?</font><TD><font size=+3>?</font>
+<TD><img src="0207/+BKR.gif">
+<TR align=center><th><font size=+1>no R<TD><img src="0207/+KNQ.gif"><TD><img src="0207/+BNQ.gif">
+<TD><font size=+1><b>see below</b></font><TD><font size=+3>?</font>
+</tr></table>
+<hr><center><font size=+1><b>no N, no R</b></font><br><img src="0207/+BKQ.gif"></center><br>
+</table><p>
+
+<table bgcolor=FFFFDD border=3 align=center><tr><td>
+<center><font size=+3>3 Pieces With Repetition</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>B<th><font size=+1>K<th><font size=+1>N<th><font size=+1>Q<th><font size=+1>R
+<TR align=center><th><font size=+1>BB<TD><img src="0207/no.gif"><TD><img src="0207/+BBK.gif">
+<TD><font size=+3>?</font><TD><img src="0207/+BBQ.gif"><TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>KK<TD><img src="0207/+KKB.gif"><TD><img src="0207/no.gif">
+<TD><font size=+1><b>see below</b></font><TD><img src="0207/+KKQ.gif"><br>(James Wilson)<TD><font size=+1><b>see below</b></font>
+<TR align=center><th><font size=+1>NN<TD><font size=+3>?</font><TD><img src="0207/+NNK.gif">
+<TD><img src="0207/+NNN.gif"><TD><img src="0207/+NNQ.gif"><TD><font size=+3>?</font>
+<TR align=center><th><font size=+1>QQ<TD><img src="0207/+QQB.gif"><TD><img src="0207/+QQK.gif">
+<TD><img src="0207/+QQN.gif"><TD><img src="0207/+QQQ.gif"><TD><img src="0207/+QQR.gif">
+<TR align=center><th><font size=+1>RR<TD><img src="0207/no.gif"><TD><img src="0207/+RRK.gif">
+<TD><font size=+3>?</font><TD><img src="0207/+RRQ.gif"><TD><img src="0207/no.gif">
+</tr></table>
+<hr>
+<table align=center cellpadding=10><tr align=center><td><font size=+1><b>KKN</b></font><br><img src="0207/+KKN.gif">
+<td><font size=+1><b>KKR</b></font><br><img src="0207/+KKR.gif"></table></table><p>
+
+<table bgcolor=FFFFDD border=3 align=center><tr><td>
+<center><font size=+3>4 Pieces All Alike</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><font size=+1>BBBB</font><br><img src="0207/no.gif">
+<th><font size=+1>KKKK</font><br><img src="0207/no.gif">
+<th><font size=+1>NNNN</font><br><img src="0207/+NNNN.gif">
+<th><font size=+1>QQQQ</font><br><img src="0207/+QQQQ.gif">
+<th><font size=+1>RRRR</font><br><img src="0207/no.gif">
+</table></table><p>
+
+
+
+
+
+
+<hr>Here are the smallest known solutions for collections of pieces (possibly equal) where each piece attacks exactly 2 of each type of piece, including its own.<p>
+
+<table bgcolor=FFDDDD border=3 align=center><tr><td>
+<center><font size=+3>1 Piece</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center><tr align=center>
+<th><font size=+1>B</font><br><img src="0207/++B.gif">
+<th><font size=+1>K</font><br><img src="0207/++K.gif">
+<th><font size=+1>N</font><br><img src="0207/++N.gif">
+<th><font size=+1>Q</font><br><img src="0207/++Q.gif">
+<th><font size=+1>R</font><br><img src="0207/++R.gif">
+</tr></table></table><p>
+
+<table bgcolor=FFDDDD border=3 align=center><tr><td>
+<center><font size=+3>2 Pieces</font></center><hr>
+<TABLE BORDER=0 cellspacing=10 align=center>
+<TR><th><th><font size=+1>B<th><font size=+1>K<th><font size=+1>N<th><font size=+1>Q<th><font size=+1>R
+<TR align=center><th><font size=+1>B<TD><img src="0207/no.gif">
+<TR align=center><th><font size=+1>K<TD><img src="0207/no.gif"><br>(proved by<br>James Wilson)<TD><img src="0207/no.gif"><br>(proved by<br>James Wilson)
+<TR align=center><th><font size=+1>N<TD><font size=+3>?</font><TD><font size=+3>?</font>
+<TD><img src="0207/++NN.gif">
+<TR align=center><th><font size=+1>Q<TD><img src="0207/++BQ.gif"><TD><img src="0207/++KQ.gif">
+<TD><font size=+3>?</font><TD><img src="0207/++QQ.gif">
+<TR align=center><th><font size=+1>R<TD><img src="0207/no.gif"><TD><img src="0207/++KR.gif">
+<TD><font size=+3>?</font><TD><img src="0207/++QR.gif"><TD><img src="0207/no.gif">
+</tr></table></table><p>
+
+
+
+
+
+<hr>Here are the smallest known solutions for cycles of 3 or more pieces where each piece attacks exactly 1 piece of the next type in the cycle (and no others of any type).<p>
+
+<table bgcolor=DDFFFF border=3 align=center><tr><td>
+<center><font size=+3>3 Pieces Without Repetition</font></center><hr>
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center><td><font size=+1>B &rarr; K &rarr; N &rarr;</font><br><img src="0207/B1K1N1.gif">
+<td><font size=+1>B &rarr; K &rarr; R &rarr;</font><br><img src="0207/B1K1R1.gif">
+<td><font size=+1>B &rarr; N &rarr; K &rarr;</font><br><img src="0207/B1N1K1.gif">
+<td><font size=+1>B &rarr; N &rarr; R &rarr;</font><br><img src="0207/B1N1R1.gif">
+</table>
+
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center><td><font size=+1>B &rarr; R &rarr; K &rarr;</font><br><img src="0207/B1R1K1.gif">
+<td><font size=+1>B &rarr; R &rarr; N &rarr;</font><br><img src="0207/B1R1N1.gif">
+<td><font size=+1>K &rarr; N &rarr; R &rarr;</font><br><img src="0207/K1N1R1.gif">
+<td><font size=+1>K &rarr; R &rarr; N &rarr;</font><br><img src="0207/K1R1N1.gif">
+</table>
+
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center><td><font size=+1>N &rarr; Q &rarr; B &rarr;</font><br><img src="0207/N1Q1B1.gif">
+<td><font size=+1>N &rarr; Q &rarr; K &rarr;</font><br><img src="0207/N1Q1K1.gif">
+<td><font size=+1>N &rarr; Q &rarr; R &rarr;</font><br><img src="0207/N1Q1R1.gif">
+</table>
+</table><p>
+
+<table bgcolor=DDFFFF border=3 align=center><tr><td>
+<center><font size=+3>4 Pieces Without Repetition</font></center><hr>
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center><td><font size=+1>B &rarr; K &rarr; N &rarr; R &rarr;</font><br><img src="0207/B1K1N1R1.gif">
+<td><font size=+1>B &rarr; K &rarr; R &rarr; N &rarr;</font><br><img src="0207/B1K1R1N1.gif">
+<td><font size=+1>B &rarr; N &rarr; K &rarr; R &rarr;</font><br><img src="0207/B1N1K1R1.gif"><br>(Johan de Ruiter)
+<td><font size=+1>B &rarr; N &rarr; R &rarr; K &rarr;</font><br><img src="0207/B1N1R1K1.gif"><br>(Johan de Ruiter)
+</table>
+
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center><td><font size=+1>B &rarr; R &rarr; K &rarr; N &rarr;</font><br><img src="0207/B1R1K1N1.gif">
+<td><font size=+1>B &rarr; R &rarr; N &rarr; K &rarr;</font><br><img src="0207/B1R1N1K1.gif">
+<td><font size=+1>N &rarr; Q &rarr; B &rarr; K &rarr;</font><br><img src="0207/N1Q1B1K1.gif">
+<td><font size=+1>N &rarr; Q &rarr; B &rarr; R &rarr;</font><br><img src="0207/N1Q1B1R1.gif">
+</table>
+
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center><td><font size=+1>N &rarr; Q &rarr; K &rarr; B &rarr;</font><br><img src="0207/N1Q1K1B1.gif">
+<td><font size=+1>N &rarr; Q &rarr; K &rarr; R &rarr;</font><br><img src="0207/N1Q1K1R1.gif">
+<td><font size=+1>N &rarr; Q &rarr; R &rarr; B &rarr;</font><br><img src="0207/N1Q1R1B1.gif">
+<td><font size=+1>N &rarr; Q &rarr; R &rarr; K &rarr;</font><br><img src="0207/N1Q1R1K1.gif">
+</table>
+</table><p>
+
+<table bgcolor=DDFFFF border=3 align=center><tr><td>
+<center><font size=+3>4 Pieces With Repetition</font></center><hr>
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center>
+<td><font size=+1>B &rarr; K &rarr; B &rarr; K &rarr;</font><br><img src="0207/BKBK.gif">
+<td><font size=+1>B &rarr; K &rarr; B &rarr; N &rarr;</font><br><img src="0207/BKBN.gif">
+<td><font size=+1>B &rarr; K &rarr; B &rarr; R &rarr;</font><br><img src="0207/BKBR.gif">
+<td><font size=+1>B &rarr; N &rarr; B &rarr; N &rarr;</font><br><img src="0207/BNBN.gif">
+</table>
+
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center>
+<td><font size=+1>B &rarr; N &rarr; B &rarr; R &rarr;</font><br><img src="0207/BNBR.gif">
+<td><font size=+1>B &rarr; R &rarr; B &rarr; R &rarr;</font><br><img src="0207/BRBR.gif">
+<td><font size=+1>K &rarr; B &rarr; K &rarr; N &rarr;</font><br><img src="0207/KBKN.gif">
+<td><font size=+1>K &rarr; B &rarr; K &rarr; R &rarr;</font><br><img src="0207/KBKR.gif">
+</table>
+
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center>
+<td><font size=+1>K &rarr; N &rarr; K &rarr; N &rarr;</font><br><img src="0207/KNKN.gif">
+<td><font size=+1>K &rarr; N &rarr; K &rarr; R &rarr;</font><br><img src="0207/KNKR.gif">
+<td><font size=+1>K &rarr; R &rarr; K &rarr; R &rarr;</font><br><img src="0207/KRKR.gif">
+</table>
+
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center>
+<td><font size=+1>N &rarr; B &rarr; N &rarr; K &rarr;</font><br><img src="0207/NBNK.gif">
+<td><font size=+1>N &rarr; B &rarr; N &rarr; R &rarr;</font><br><img src="0207/NBNR.gif">
+<td><font size=+1>N &rarr; K &rarr; N &rarr; R &rarr;</font><br><img src="0207/NKNR.gif">
+<td><font size=+1>N &rarr; R &rarr; N &rarr; R &rarr;</font><br><img src="0207/NRNR.gif">
+</table>
+
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center>
+<td><font size=+1>N &rarr; Q &rarr; N &rarr; B &rarr;</font><br><img src="0207/NQNB.gif">
+<td><font size=+1>N &rarr; Q &rarr; N &rarr; K &rarr;</font><br><img src="0207/NQNK.gif">
+<td><font size=+1>N &rarr; Q &rarr; N &rarr; R &rarr;</font><br><img src="0207/NQNR.gif">
+<td><font size=+1>N &rarr; Q &rarr; N &rarr; Q &rarr;</font><br><img src="0207/NQNQ.gif">
+</table>
+
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center>
+<td><font size=+1>R &rarr; B &rarr; R &rarr; K &rarr;</font><br><img src="0207/RBRK.gif">
+<td><font size=+1>R &rarr; B &rarr; R &rarr; N &rarr;</font><br><img src="0207/RBRN.gif">
+<td><font size=+1>R &rarr; K &rarr; R &rarr; N &rarr;</font><br><img src="0207/RKRN.gif">
+</table>
+</table><p>
+
+
+<table bgcolor=DDFFFF border=3 align=center><tr><td>
+<center><font size=+3>5 Pieces Without Repetition</font></center><hr>
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center><td><font size=+1>N &rarr; Q &rarr; B &rarr; K &rarr; R &rarr;</font><br><img src="0207/N1Q1B1K1R1.gif">
+<td><font size=+1>N &rarr; Q &rarr; B &rarr; R &rarr; K &rarr;</font><br><img src="0207/N1Q1B1R1K1.gif"><br>(Johan de Ruiter)
+<td><font size=+1>N &rarr; Q &rarr; K &rarr; B &rarr; R &rarr;</font><br><img src="0207/N1Q1K1B1R1.gif"><br>(Johan de Ruiter)
+</table>
+
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center><td><font size=+1>N &rarr; Q &rarr; K &rarr; R &rarr; B &rarr;</font><br><img src="0207/N1Q1K1R1B1.gif">
+<td><font size=+1>N &rarr; Q &rarr; R &rarr; B &rarr; K &rarr;</font><br><img src="0207/N1Q1R1B1K1.gif">
+<td><font size=+1>N &rarr; Q &rarr; R &rarr; K &rarr; B &rarr;</font><br><img src="0207/N1Q1R1K1B1.gif"><br>(Johan de Ruiter)
+</table></table><p>
+
+
+
+
+
+
+
+<hr>Here are the smallest known solutions for cycles of 3 or more pieces where each piece attacks exactly 2 pieces of the next type in the cycle (and no others of any type).<p>
+
+<table bgcolor=DDDDFF border=3 align=center><tr><td>
+<center><font size=+3>3 Pieces Without Repetition</font></center><hr>
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center><td><font size=+1>B &rarr; K &rarr; N &rarr;</font><br><img src="0207/B2K2N2.gif">
+<td><font size=+1>B &rarr; K &rarr; R &rarr;</font><br><font size=+3>?</font>
+<td><font size=+1>B &rarr; N &rarr; K &rarr;</font><br><img src="0207/no.gif">
+<td><font size=+1>B &rarr; N &rarr; R &rarr;</font><br><img src="0207/B2N2R2.gif">
+</table>
+
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center><td><font size=+1>B &rarr; R &rarr; K &rarr;</font><br><font size=+3>?</font>
+<td><font size=+1>B &rarr; R &rarr; N &rarr;</font><br><img src="0207/B2R2N2.gif">
+<td><font size=+1>K &rarr; N &rarr; R &rarr;</font><br><font size=+3>?</font>
+<td><font size=+1>K &rarr; R &rarr; N &rarr;</font><br><img src="0207/no.gif">
+<td><font size=+1>N &rarr; Q &rarr; B &rarr;</font><br><img src="0207/B2N2Q2.gif">
+</table>
+
+<TABLE BORDER=0 cellspacing=20 align=center>
+<tr align=center>
+<td><font size=+1>N &rarr; Q &rarr; K &rarr;</font><br><img src="0207/N2Q2K2.gif">
+<td><font size=+1>N &rarr; Q &rarr; R &rarr;</font><br><img src="0207/N2Q2R2.gif">
+</table>
+</table><p>
+
+<table bgcolor=DDDDFF border=3 align=center><tr><td>
+<center><font size=+3>4 Pieces Without Repetition</font></center><hr>
+<TABLE BORDER=0 cellspacing=20 align=center><tr align=center>
+<td><font size=+1>B &rarr; K &rarr; N &rarr; R &rarr;</font><br><font size=+3>?</font>
+<td><font size=+1>B &rarr; K &rarr; R &rarr; N &rarr;</font><br><font size=+3>?</font>
+<td><font size=+1>B &rarr; N &rarr; K &rarr; R &rarr;</font><br><font size=+3>?</font>
+</table>
+
+<TABLE BORDER=0 cellspacing=20 align=center><tr align=center>
+<td><font size=+1>B &rarr; N &rarr; R &rarr; K &rarr;</font><br><font size=+3>?</font>
+<td><font size=+1>B &rarr; R &rarr; K &rarr; N &rarr;</font><br><font size=+3>?</font>
+<td><font size=+1>B &rarr; R &rarr; N &rarr; K &rarr;</font><br><font size=+3>?</font>
+</table>
+
+<TABLE BORDER=0 cellspacing=20 align=center><tr align=center>
+<td><font size=+1>N &rarr; Q &rarr; B &rarr; K &rarr;</font><br><font size=+3>?</font>
+<td><font size=+1>N &rarr; Q &rarr; B &rarr; R &rarr;</font><br><img src="0207/B2R2N2Q2.gif">
+</table>
+
+<TABLE BORDER=0 cellspacing=20 align=center><tr align=center>
+<td><font size=+1>N &rarr; Q &rarr; K &rarr; B &rarr;</font><br><font size=+3>?</font>
+<td><font size=+1>N &rarr; Q &rarr; K &rarr; R &rarr;</font><br><font size=+3>?</font>
+<td><font size=+1>N &rarr; Q &rarr; R &rarr; K &rarr;</font><br><font size=+3>?</font>
+</table>
+
+<TABLE BORDER=0 cellspacing=20 align=center><tr align=center>
+<td><font size=+1>N &rarr; Q &rarr; R &rarr; B &rarr;</font><br><img src="0207/B2N2Q2R2.gif">
+</table>
+</table><p>
+
+
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 3/11/15.<font>
+
+</BODY></HTML>
+

@@ -1,0 +1,74 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+
+<CENTER><H1>Problem of the Month (January 2016)</H1></CENTER>
+
+This month we concern ourselves with survival probabilities in the video game of Seven Seas.  You control a ship (shown in green) that is trying to sink a collection of enemy ships (shown in red).  This battle takes place on a square grid, and you take turns against the computer.  During your turn you can move to any adjacent (horizontal, vertical, or diagonal) space, or fire your guns broadside, perpendicular to the most recent movement of your ship, which destroys the closest ships in those directions.  During the computer's turn, every enemy ship moves randomly to a square that decreases the number of moves it is away from your ship.  You win if you destroy all the enemy ships.  The computer wins if any of the enemy ships ram your ship.<p>
+
+For example, consider the position A shown below on a 3&times;3 board, with the computer to move.  There are 3 equally likely enemy moves, labeled A, 0, and 1.  These represent your probabilities of surviving this position.  You will lose if the enemy moves to 0 regardless of your next action.  You can win if the enemy moves to 1, since you can fire your guns and destroy the enemy ship.  And if the enemy moves to A, you can move south east, which essentially gives the same position rotated.  Thus the law of total probability says A = (A + 0 + 1) / 3, or A = 1/2.<p>
+
+<table align=center bgcolor=white><tr align=center>
+<td><img src="0116/3x3.gif"><br>1/2</table><p>
+
+The survival probabilities of every possible position in the 3&times;3 game with one enemy ship are shown below.  The numbers indicate the probabilities of survival if the enemy ship starts there, with the computer to move.  Blank squares indicate no chance of survival.<p>
+
+<table align=center bgcolor=white><tr>
+<td><img src="0116/3x3p1.gif"><td width=20>
+<td><img src="0116/3x3p2.gif"><td width=20>
+<td><img src="0116/3x3p3.gif"><td width=20>
+<td><img src="0116/3x3p4.gif"><td width=20>
+<td><img src="0116/3x3p5.gif">
+</table><p>
+
+What are the survival probabilities on a 3&times;4 board?  How about 2&times;n boards?  What about larger boards?<p>
+
+When there are multiple enemy ships, this additional information is needed.  Ships that are destroyed become wreckage squares that can not be visited by either you or enemy ships, but can still be fired over.  Only one enemy ship can be on a square at one time, so enemy ships choose moves uniformly to maximize the number of ships that move closer to your ship.  What are your chances of survival against multiple enemies on some small boards?<p>
+
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+There are no cycles allowed on 2&times;n boards, so the analysis is easy.  The survival probabilities once your ship is horizontal continue in this pattern:<p>
+
+<table align=center bgcolor=white><tr align=center>
+<td><img src="0116/2x5.gif"></table><p>
+
+On a 3&times;4 board, the critical cycle probabilities are these 5 positions:<p>
+
+<table align=center bgcolor=white><tr align=center>
+<td><img src="0116/3x4a.gif"><br>19/37<td width=20>
+<td><img src="0116/3x4b.gif"><br>20/37<td width=20>
+<td><img src="0116/3x4c.gif"><br>23/37<td width=20>
+<td><img src="0116/3x4d.gif"><br>56/111<td width=20>
+<td><img src="0116/3x4e.gif"><br>40/111
+</table><p>
+
+On a 4&times;4 board, the critical cycle probabilities are these 5 positions:<p>
+
+<table align=center bgcolor=white><tr align=center>
+<td><img src="0116/4x4a.gif"><br>9/16<td width=20>
+<td><img src="0116/4x4b.gif"><br>11/16<td width=20>
+<td><img src="0116/4x4c.gif"><br>31/48<td width=20>
+<td><img src="0116/4x4d.gif"><br>25/48<td width=20>
+<td><img src="0116/4x4e.gif"><br>5/12
+</table><p>
+
+On a 3&times;5 board, the critical cycle probabilities are these 7 positions:<p>
+
+<table align=center bgcolor=white><tr align=center>
+<td><img src="0116/3x5a.gif"><br>1/2<td width=20>
+<td><img src="0116/3x5b.gif"><br>1/2<td width=20>
+<td><img src="0116/3x5c.gif"><br>26/57<td width=20>
+<td><img src="0116/3x5d.gif"><br>7/19<td width=20>
+<td><img src="0116/3x5e.gif"><br>21/38<td width=20>
+<td><img src="0116/3x5f.gif"><br>25/38<td width=20>
+<td><img src="0116/3x5g.gif"><br>59/114
+</table><p>
+
+For 2&times;n boards with 2 enemy ships, the situation is more complicated.  If the distances to the two ships are the same, one can easily be shot, which reduces the problem to the one enemy case.  If the distances to the two ships differ by more than 1, the farther ship can always be shot when it is squeezing past the wreckage of the first ship, so the survival probabilities are the same as those involving only the closest enemy.  If the distances to the two ships differ by 1, there are many cases to consider, but if your ship is horizontal, and the enemies are distance k and k+1 about to move (for k&ge;1), your probability of survival is (4<sup>k</sup>&ndash;6&times;2<sup>k</sup>+8)/4<sup>k</sup>.<p>
+
+What about the case of 3 or more enemy ships on a 2&times;n board?<p>
+
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 1/1/16.<font></BODY></HTML>
+

@@ -1,0 +1,153 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month<br>(November 2008)</H1></CENTER>
+
+<font size=+2>1.</font> Let's play a game.  There are 2 spinners in front of you, A and B.  Both spinners are equally divided into regions labeled with positive integers.  You will repeatedly choose a spinner, spin it, and add the number indicated to your running total.  If your total hits exactly T you win, otherwise you lose.  Obviously, your best choice of spinner depends on how the spinners are labeled, and what your goal T is.<p> 
+
+For example, consider the case if spinner A is labeled with 1 and 4, and spinner B is labeled with 2 and 3.  If T = 1, you should choose spinner A first (and your probability of winning is <sup>1</sup>/<sub>2</sub> ).  If T = 2, you should choose spinner B first (and your probability of winning is <sup>1</sup>/<sub>2</sub> ).  If T = 3, you should choose spinner B first (and your probability of winning is <sup>3</sup>/<sub>4</sub> ).  If T = 4, you should choose spinner A first (and your probability of winning is <sup>7</sup>/<sub>8</sub> ).  Which spinner should you choose for larger T?<p>
+
+The spinners above yield the preference sequence ABBA....  Given a finite sequence of A's and B's, is there some way to label the spinners to give that preference sequence?  What spinners use as few numbers as possible?  What spinners make the sum of the numbers as small as possible?  What spinners make the winning probabilities as large as possible?  What if we allow A's, B's, and E's (for equal probabilities of winning either way)?  What if there are 3 or more spinners?<p><hr><p>
+
+<font size=+2>2.</font> We have several players, each with their own spinners equally divided into regions labeled with positive integers.  For each pair of players, we know who is favored to spin the largest number.  Can we design spinners with small numbers to meet these conditions?<p>
+
+For example, for the tournament <img src="1108/210.gif" align=center>, we want P(A>B)>&frac12;, P(A>C)>&frac12;, and P(B>C)>&frac12;.  The labeling A=3, B=2, and C=1 will suffice.<p>
+
+For the non-transitive tournament <img src="1108/111.gif" align=center>, we want P(A>B)>&frac12;, P(B>C)>&frac12;, and P(C>A)>&frac12;.  The labeling A=5/2/2, B=4/4/1, and C=3 works.  Is this the smallest one?<p>
+
+What are the smallest labelings of the possible tournaments of 4 players?  How about larger numbers of players?  In particular, what is the smallest labeling of spinners for n players in a non-transitive loop?
+
+<P><hr color=black><p><center><h1>ANSWERS</h1></center>
+
+
+
+<font size=+2>1.</font> Here are spinner labelings for each of the preference sequences of length 1-4 that contain one or more E's.  When the labelings that minimize the sum and minimize the number of digits used differ, both are given.<p>
+
+<table align=center border=2 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>preference<br>sequence<th>A<th>B
+<tr align=center><td>A<td>1<td>2
+<tr align=center><td>E<td>1<td>1
+</tr></table><p>
+
+<table align=center border=2 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>preference<br>sequence<th>A<th>B
+<tr align=center><td>AA<td>1<td>3
+<tr align=center><td>AB<td>1, 2<td>2
+<tr align=center><td>AE<td>1<td>2
+<tr align=center><td>EA<td>2<td>3
+<tr align=center><td>EE<td>1<td>1
+</tr></table><p>
+
+<table align=center border=2 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>preference<br>sequence<th>A<th>B
+<tr align=center><td>AAA<td>1<td>4
+<tr align=center><td>AAB<td>1, 2<td>3
+<tr align=center><td>AAE<td>1<td>3
+<tr align=center><td>ABA<td>1, 2<td>2
+<tr align=center><td>ABB<td>1, 4<br>1, 1, 4<td>2, 3<br>1, 2
+<tr align=center><td>ABE<td>1, 4<td>2
+<tr align=center><td>AEA<td>1, 2<td>2, 2, 2, 4
+<tr align=center><td>AEB<td>1, 1, 2, 3<td>2, 3
+<tr align=center><td>AEE<td>1<td>2
+<tr align=center><td>EAA<td>2, 3<br>1, 2<td>4<br>1, 4
+<tr align=center><td>EAB<td>2<td>3
+<tr align=center><td>EAE<td>2<td>4
+<tr align=center><td>EEA<td>3<td>4
+<tr align=center><td>EEE<td>1<td>1
+</tr></table><p>
+
+<table align=center border=2 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>preference<br>sequence<th>A<th>B
+<tr align=center><td>AAAA<td>1<td>5
+<tr align=center><td>AAAB<td>1, 2<td>4
+<tr align=center><td>AAAE<td>1<td>4
+<tr align=center><td>AABA<td>1, 2<td>3
+<tr align=center><td>AABB<td>1, 5<br>1, 1, 5<td>3, 4<br>1, 3
+<tr align=center><td>AABE<td>1, 5<td>3
+<tr align=center><td>AAEA<td>1, 2<td>2, 3, 3, 5
+<tr align=center><td>AAEB<td>1, 1, 2, 3<td>1, 3, 3, 4
+<tr align=center><td>AAEE<td>1<td>3
+<tr align=center><td>ABAA<td>1, 3<br>1, 3<td>2, 5<br>1, 2, 3
+<tr align=center><td>ABAB<td>1, 2<td>2
+<tr align=center><td>ABAE<td>1, 2, 3<td>2, 2, 3
+<tr align=center><td>ABBA<td>1, 4<br>1, 1, 4<td>2, 3<br>1, 2
+<tr align=center><td>ABBB<td>1, 5<br>1, 1, 5<td>2, 3<br>1, 2
+<tr align=center><td>ABBE<td>1, 1, 3, 5<br>1, 1, 1, 1, 1, 4<td>2, 3<br>1, 2
+<tr align=center><td>ABEA<td>1, 3<td>2, 3
+<tr align=center><td>ABEB<td>1, 4<td>2
+<tr align=center><td>ABEE<td>1, 2, 4<td>1, 2, 2, 2, 4
+<tr align=center><td>AEAA<td>1, 2<td>2, 2, 2, 5
+<tr align=center><td>AEAB<td>1, 2<td>2, 2, 2, 4
+<tr align=center><td>AEAE<td>1, 3<td>2, 4, 4, 5
+<tr align=center><td>AEBA<td>1, 1, 2, 3<td>2, 3
+<tr align=center><td>AEBB<td>1, 5<br>1, 1, 2, 5<td>2, 3, 3, 4<br>1, 2, 3
+<tr align=center><td>AEBE<td>1, 1, 2, 5<td>2, 3
+<tr align=center><td>AEEA<td>1, 3<td>2, 3, 3, 5
+<tr align=center><td>AEEB<td>1, 4<td>2, 4, 4, 4
+<tr align=center><td>AEEE<td>1<td>2
+<tr align=center><td>EAAA<td>2, 3<br>1, 2<td>5<br>1, 5
+<tr align=center><td>EAAB<td>2<br>1, 2<td>3, 4<br>1, 4
+<tr align=center><td>EAAE<td>2, 2, 3, 4<br>1, 1, 2, 3<td>4, 5<br>1, 1, 4, 5
+<tr align=center><td>EABA<td>2<td>3
+<tr align=center><td>EABB<td>2, 5<br>1, 1, 2, 5<td>3, 4<br>1, 3
+<tr align=center><td>EABE<td>1, 1, 2, 3<td>1, 3
+<tr align=center><td>EAEA<td>2<td>5
+<tr align=center><td>EAEB<td>2, 4<td>4
+<tr align=center><td>EAEE<td>2<td>4
+<tr align=center><td>EEAA<td>3, 4<br>1, 3<td>5<br>1, 5
+<tr align=center><td>EEAB<td>3<td>4
+<tr align=center><td>EEAE<td>3<td>5
+<tr align=center><td>EEEA<td>4<td>5
+<tr align=center><td>EEEE<td>1<td>1
+</tr></table><p>
+
+
+And here are spinner labelings for each of the preference sequences of length 5 that contain no E's:<p>
+
+<table align=center border=0 cellpadding=15><tr><td>
+
+<table align=center border=2 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>preference<br>sequence<th>A<th>B
+<tr align=center><td>AAAAA<td>1<td>6
+<tr align=center><td>AAAAB<td>1, 2<td>5
+<tr align=center><td>AAABA<td>1, 2<td>4
+<tr align=center><td>AAABB<td>1, 6<br>1, 1, 3<td>4, 5<br>1, 4
+<tr align=center><td>AABAA<td>1, 2<td>3
+<tr align=center><td>AABAB<td>1, 2<td>2, 2, 3
+<tr align=center><td>AABBA<td>1, 5<br>1, 1, 5<td>3, 4<br>1, 3
+<tr align=center><td>AABBB<td>1, 1, 6<td>1, 3
+</tr></table>
+
+</td><td>
+
+<table align=center border=2 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>preference<br>sequence<th>A<th>B
+<tr align=center><td>ABAAA<td>1, 3<td>2, 6
+<tr align=center><td>ABAAB<td>1, 3<br>1, 3<td>2, 5<br>1, 2, 3
+<tr align=center><td>ABABA<td>1, 2<td>2
+<tr align=center><td>ABABB<td>1, 1, 3<td>1, 2
+<tr align=center><td>ABBAA<td>1, 4<td>2, 3
+<tr align=center><td>ABBAB<td>1, 1, 4<td>1, 2
+<tr align=center><td>ABBBA<td>1, 5<br>1, 1, 5<td>2, 3<br>1, 2
+<tr align=center><td>ABBBB<td>1, 6<br>1, 1, 6<td>2, 3<br>1, 2
+</tr></table>
+
+</tr></table><p>
+
+<a href="mailto:jgalvagni@mohawkschools.org">Jeremy Galvagni</a> and <a href="mailto:green@math.usask.ca">Trevor Green</a> both showed that the spinner sequence with A = {1,4} and B = {2,3} is eventually periodic with period 8:
+(ABBAA BEABEBAE BEABEBAE ...) and that the probability of winning converges to 49/60.<hr><p>
+
+
+<font size=+2>2.</font> Here are the possible tournaments for 3 or 4 players, and the smallest known labelings for spinners that represent them in head-to-head competitions:<p>
+
+<table align=center border=1 cellpadding=10 bgcolor=FFFFDD>
+<tr align=center bgcolor=DDFFFF><th>Tournament<th>Spinner Labels
+<tr align=center><td><img src="1108/210.gif" align=center><td>A = 3<br>B = 2<br>C = 1
+<tr align=center><td><img src="1108/111.gif" align=center><td>A = 5/2/2<br>B = 4/4/1<br>C = 3
+<tr align=center><td><img src="1108/3210.gif" align=center><td>A = 4<br>B = 3<br>C = 2<br>D = 1
+<tr align=center><td><img src="1108/2220.gif" align=center><td>A = 5/2/2<br>B = 4/4/1<br>C = 3<br>D = 1
+<tr align=center><td><img src="1108/3111.gif" align=center><td>A = 5<br>B = 5/2/2<br>C = 4/4/1<br>D = 3<br>
+<tr align=center><td><img src="1108/2211.gif" align=center><td>A = 6/2/2<br>B = 5/5/1<br>C = 4<br>D = 3
+
+</table>
+<p><hr color=black><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 11/17/08.<font></BODY></HTML>
+

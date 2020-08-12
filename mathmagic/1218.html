@@ -1,0 +1,408 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+
+<CENTER><H1>Problem of the Month (December 2018)</H1></CENTER>
+
+This month we investigate miscellaneous polyomino problems.  We say P &sube; Q if P can be packed inside Q.  We say P &sub; Q if P &sube; Q and P &ne; Q.<p>
+
+<font size=+2>1.</font><p>
+Fix a polyomino P.  We say a finite polyomino Q is <b>critical</b> if P &nsub; Q, and Q &sub; R implies P &sub; R.  In other words, P won't fit inside Q, but if you add any square to Q then P will fit.  Given P, is there a critical Q?  If so, what is the smallest such Q?  Is there a largest such Q, or are there arbitrarily large Q?  What if P is a collection of polyominoes, none of which fit in Q, but any larger polyomino contains some polyomino from P?<p>
+
+<font size=+2>2.</font><p>
+Fix a n-omino P.  Is there an infinite polyomino Q with the property that the only n-omino P with P &sub; Q is P?  What if P is a collection of polyominoes, which are the only n-ominoes that are subsets of Q?<p>
+
+<font size=+2>3.</font><p>
+What is the smallest polyomino that can be surround by exactly n copies of itself, with each of those copies being surrounded by exactly m copies of itself? Here "surrounded" means all the edges, but not necessarily the corner points.<p>
+
+<font size=+2>4.</font><p>
+How many ways are there to tile a rectangle with a set of polyominoes?  In general, this is a hard problem.  But the problem of how many ways an n&times;k rectangle can be tiled for fixed k with a fixed set of polyominoes can be solved by recurrence relations.  For example, the number of ways a<sub>n</sub> an n&times;1 rectangle can be tiled with 1&times;1 and 2&times;1 rectangles clearly satisfies the recurrence formula a<sub>n</sub> = a<sub>n-1</sub> + a<sub>n-2</sub>.  What are the recurrence formulas for other small cases?<p>
+
+<font size=+2>5.</font><p>
+Given a polyomino, what is the shortest linear absolute value inequality in two variables whose solution set is that polyomino?  Are such inequalities always possible?<p>
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+George Sicherman, Michael Peake, Gordon Atkinson, Kang Jin Cho, and Maurizio Morandi sent results.<p>
+
+<font size=+2>1.</font><p>
+
+Here are the best known results.  Here "AL" stands for arbitrarily large finite polyominoes.<p>
+
+<TABLE align=center cellpadding=10><TR align=center><TD>
+
+<center><font size=+2>Small Polyominoes</font></center>
+<table border=1 bgcolor=FFFFDD cellpadding=5 align=center><tr bgcolor=DDDDFF align=center>
+<th>Polyominoes<th>Smallest<br>Critical<th>Largest<br>Critical
+<tr align=center><td><img src="1218/p2.gif"><td colspan=2><img src="1218/b1.gif">
+<tr align=center><td><img src="1218/p3I.gif"><td colspan=2><img src="1218/b3.gif">
+<tr align=center><td><img src="1218/p3L.gif"><td colspan=2>none
+<tr align=center><td><img src="1218/p3I.gif"> &nbsp;<img src="1218/p3L.gif"><td colspan=2><img src="1218/b2.gif">
+</table>
+
+<TD>
+
+<center><font size=+2>Tetrominoes</font></center>
+<table border=1 bgcolor=FFFFDD cellpadding=5 align=center><tr bgcolor=DDDDFF align=center>
+<th>Polyominoes<th>Smallest<br>Critical<th>Largest<br>Critical
+<tr align=center><td><img src="1218/p4I.gif"><td><img src="1218/b4.gif"><td>AL
+<tr align=center><td><img src="1218/p4L.gif"><td><img src="1218/b3.gif"><td><img src="1218/b5.gif">
+<tr align=center><td><img src="1218/p4T.gif"><td><img src="1218/b3.gif"><td>AL
+<tr align=center><td><img src="1218/p4S.gif"><td colspan=2><img src="1218/b3.gif">
+<tr align=center><td><img src="1218/p4O.gif"><td colspan=2>none
+
+<tr align=center><td><img src="1218/p4I.gif"> &nbsp;<img src="1218/p4L.gif"><td><img src="1218/b3.gif"><td><img src="1218/b5.gif">
+<tr align=center><td><img src="1218/p4I.gif"> &nbsp;<img src="1218/p4T.gif"><td><img src="1218/b3.gif"><td>AL
+<tr align=center><td><img src="1218/p4I.gif"> &nbsp;<img src="1218/p4S.gif"><td><img src="1218/b3.gif"><td>AL (GS)
+<tr align=center><td><img src="1218/p4I.gif"> &nbsp;<img src="1218/p4O.gif"><td colspan=2><img src="1218/b5.gif">
+<tr align=center><td><img src="1218/p4L.gif"> &nbsp;<img src="1218/p4T.gif"><td colspan=2><img src="1218/b3.gif">
+<tr align=center><td><img src="1218/p4L.gif"> &nbsp;<img src="1218/p4S.gif"><td><img src="1218/b3.gif"><td><img src="1218/b5.gif">
+<tr align=center><td><img src="1218/p4L.gif"> &nbsp;<img src="1218/p4O.gif"><td colspan=2><img src="1218/b5.gif">
+<tr align=center><td><img src="1218/p4T.gif"> &nbsp;<img src="1218/p4S.gif"><td><img src="1218/b3.gif"><td>AL
+<tr align=center><td><img src="1218/p4T.gif"> &nbsp;<img src="1218/p4O.gif"><td><img src="1218/b6.gif"><td>AL
+<tr align=center><td><img src="1218/p4S.gif"> &nbsp;<img src="1218/p4O.gif"><td colspan=2>none
+
+<tr align=center><td><img src="1218/p4I.gif"> &nbsp;<img src="1218/p4L.gif">&nbsp;<img src="1218/p4T.gif">
+<td><img src="1218/b7.gif"> (GS)<td><img src="1218/b3.gif"> (GS)
+<tr align=center><td><img src="1218/p4I.gif"> &nbsp;<img src="1218/p4L.gif">&nbsp;<img src="1218/p4S.gif">
+<td><img src="1218/b3.gif"> (GS)<td><img src="1218/b5.gif"> (GS)
+<tr align=center><td><img src="1218/p4I.gif"> &nbsp;<img src="1218/p4L.gif">&nbsp;<img src="1218/p4O.gif">
+<td colspan=2><img src="1218/b5.gif"> (GS)
+<tr align=center><td><img src="1218/p4I.gif"> &nbsp;<img src="1218/p4T.gif">&nbsp;<img src="1218/p4S.gif">
+<td><img src="1218/b3.gif"> (GS)<td><img src="1218/b6.gif"> (GS)
+</table>
+
+<TD>
+
+<center><font size=+2>Pentominoes</font></center>
+<table border=1 bgcolor=FFFFDD cellpadding=5 align=center><tr bgcolor=DDDDFF align=center>
+<th>Polyominoes<th>Smallest<br>Critical<th>Largest<br>Critical
+<tr align=center><td><img src="1218/p5I.gif"><td><img src="1218/b11.gif"> (GA)<td> AL (GA)
+<tr align=center><td><img src="1218/p5L.gif"><td><img src="1218/b8.gif"> (GS)<td><img src="1218/b9.gif"> (GS)
+<tr align=center><td><img src="1218/p5P.gif"><td colspan=2><img src="1218/b3.gif"> (GS)
+<tr align=center><td><img src="1218/p5R.gif"><td>?<td>?
+<tr align=center><td><img src="1218/p5S.gif"><td><img src="1218/b8.gif"> (GS)<td> <img src="1218/b10.gif"> (GS)
+<tr align=center><td><img src="1218/p5T.gif"><td>?<td>?
+<tr align=center><td><img src="1218/p5U.gif"><td colspan=2> none (GA)
+<tr align=center><td><img src="1218/p5V.gif"><td>?<td>?
+<tr align=center><td><img src="1218/p5W.gif"><td>?<td>?
+<tr align=center><td><img src="1218/p5X.gif"><td colspan=2> none (GA)
+<tr align=center><td><img src="1218/p5Y.gif"><td><img src="1218/b4.gif"> (GS)<td> AL (GS)
+<tr align=center><td><img src="1218/p5Z.gif"><td>?<td>?
+
+<tr align=center><td><img src="1218/p5L.gif"> &nbsp;<img src="1218/p5R.gif"><td><img src="1218/b12.gif"> (GA)<td> AL (GS)
+<tr align=center><td><img src="1218/p5P.gif"> &nbsp;<img src="1218/p5T.gif"><td><img src="1218/b5.gif"> (GA) <td> ?
+<tr align=center><td><img src="1218/p5P.gif"> &nbsp;<img src="1218/p5Y.gif"><td><img src="1218/b5.gif"> (GA) <td> ?
+<tr align=center><td><img src="1218/p5R.gif"> &nbsp;<img src="1218/p5S.gif"><td colspan=2><img src="1218/b12.gif"> (GA) (GS)
+<tr align=center><td><img src="1218/p5R.gif"> &nbsp;<img src="1218/p5T.gif"><td><img src="1218/b5.gif"> (GA)<td> <img src="1218/b13.gif">
+<tr align=center><td><img src="1218/p5R.gif"> &nbsp;<img src="1218/p5Y.gif"><td><img src="1218/b5.gif"> (GA) <td> AL (GS)
+</table>
+
+</TABLE><p>
+
+
+
+
+<hr><font size=+2>2.</font><p>
+
+Here are the known results.<p>
+
+<TABLE align=center cellpadding=10><TR align=center><TD>
+
+<center><font size=+2>Triominoes</font></center>
+<table border=1 bgcolor=FFFFDD cellpadding=5 align=center>
+<th align=center bgcolor=DDDDFF>Polyominoes<th align=center bgcolor=DDDDFF>Infinite Polyomino
+<tr align=center><td><img src="1218/p3I.gif"><td><img src="1218/i3I.gif">
+<tr align=center><td><img src="1218/p3L.gif"><td><img src="1218/i3L.gif">
+<tr align=center><td><img src="1218/p3I.gif"> &nbsp;<img src="1218/p3L.gif"><td><img src="1218/i3IL.gif">
+</table><p>
+
+<center><font size=+2>Tetrominoes</font></center>
+<table border=1 bgcolor=FFFFDD cellpadding=5 align=center>
+<th align=center bgcolor=DDDDFF>Polyominoes<th align=center bgcolor=DDDDFF>Infinite Polyomino
+<tr align=center><td><img src="1218/p4I.gif"><td><img src="1218/i3I.gif">
+<tr align=center><td><img src="1218/p4S.gif"><td><img src="1218/i3L.gif">
+<tr align=center><td><img src="1218/p4L.gif"><td><img src="1218/i4L.gif">
+<tr align=center><td><img src="1218/p4I.gif"> &nbsp;<img src="1218/p4L.gif"><td><img src="1218/i4IL.gif">
+<tr align=center><td><img src="1218/p4L.gif"> &nbsp;<img src="1218/p4S.gif"><td><img src="1218/i4LS.gif">
+<tr align=center><td><img src="1218/p4L.gif"> &nbsp;<img src="1218/p4T.gif"><td><img src="1218/i4LT.gif"> (GS)
+<tr align=center><td><img src="1218/p4I.gif"> &nbsp;<img src="1218/p4L.gif"> &nbsp;<img src="1218/p4T.gif"> <td><img src="1218/i3IL.gif">
+<tr align=center><td><img src="1218/p4I.gif"> &nbsp;<img src="1218/p4L.gif"> &nbsp;<img src="1218/p4S.gif"> <td><img src="1218/i4ILS.gif">
+<tr align=center><td><img src="1218/p4L.gif"> &nbsp;<img src="1218/p4T.gif"> &nbsp;<img src="1218/p4S.gif"> <td><img src="1218/i4LTS.gif">
+</table>
+
+<TD>
+
+<center><font size=+2>1 or 2 Pentominoes</font></center>
+<table border=1 bgcolor=FFFFDD cellpadding=5 align=center>
+<th align=center bgcolor=DDDDFF>Polyominoes<th align=center bgcolor=DDDDFF>Infinite Polyomino
+<tr align=center><td><img src="1218/p5I.gif"><td><img src="1218/i3I.gif">
+<tr align=center><td><img src="1218/p5W.gif"><td><img src="1218/i3L.gif">
+<tr align=center><td><img src="1218/p5L.gif"> &nbsp;<img src="1218/p5S.gif"><td><img src="1218/i5LS.gif">
+<tr align=center><td><img src="1218/p5L.gif"> &nbsp;<img src="1218/p5V.gif"><td><img src="1218/i5LV.gif">
+<tr align=center><td><img src="1218/p5L.gif"> &nbsp;<img src="1218/p5Z.gif"><td><img src="1218/i5LZ.gif">
+<tr align=center><td><img src="1218/p5S.gif"> &nbsp;<img src="1218/p5U.gif"><td><img src="1218/i4LS.gif">
+<tr align=center><td><img src="1218/p5S.gif"> &nbsp;<img src="1218/p5Z.gif"><td><img src="1218/i5SZ.gif">
+<tr align=center><td><img src="1218/p5I.gif"> &nbsp;<img src="1218/p5L.gif"><td><img src="1218/i5IL.gif"> (GS)
+<tr align=center><td><img src="1218/p5W.gif"> &nbsp;<img src="1218/p5S.gif"><td><img src="1218/i5WS.gif"> (GS)
+</table>
+
+<TD>
+
+<center><font size=+2>3 Pentominoes</font></center>
+<table border=1 bgcolor=FFFFDD cellpadding=5 align=center>
+<th align=center bgcolor=DDDDFF>Polyominoes<th align=center bgcolor=DDDDFF>Infinite Polyomino
+<tr align=center><td><img src="1218/p5I.gif"> &nbsp;<img src="1218/p5L.gif"> &nbsp;<img src="1218/p5S.gif"><td><img src="1218/i4ILS.gif">
+<tr align=center><td><img src="1218/p5I.gif"> &nbsp;<img src="1218/p5L.gif"> &nbsp;<img src="1218/p5T.gif"><td><img src="1218/i5ILT.gif"> (GS)
+<tr align=center><td><img src="1218/p5I.gif"> &nbsp;<img src="1218/p5L.gif"> &nbsp;<img src="1218/p5V.gif"><td><img src="1218/i5ILV.gif">
+<tr align=center><td><img src="1218/p5I.gif"> &nbsp;<img src="1218/p5L.gif"> &nbsp;<img src="1218/p5Y.gif"><td><img src="1218/i3IL.gif">
+<tr align=center><td><img src="1218/p5L.gif"> &nbsp;<img src="1218/p5S.gif"> &nbsp;<img src="1218/p5T.gif"><td><img src="1218/i5LST.gif"> (GS)
+<tr align=center><td><img src="1218/p5L.gif"> &nbsp;<img src="1218/p5S.gif"> &nbsp;<img src="1218/p5U.gif"><td><img src="1218/i5LSU.gif">
+<tr align=center><td><img src="1218/p5L.gif"> &nbsp;<img src="1218/p5S.gif"> &nbsp;<img src="1218/p5V.gif"><td><img src="1218/i5LSV.gif"> (GS)
+<tr align=center><td><img src="1218/p5L.gif"> &nbsp;<img src="1218/p5S.gif"> &nbsp;<img src="1218/p5W.gif"><td><img src="1218/i5LSW.gif">
+<tr align=center><td><img src="1218/p5L.gif"> &nbsp;<img src="1218/p5S.gif"> &nbsp;<img src="1218/p5Z.gif"><td><img src="1218/i5LSZ.gif">
+<tr align=center><td><img src="1218/p5L.gif"> &nbsp;<img src="1218/p5T.gif"> &nbsp;<img src="1218/p5V.gif"><td><img src="1218/i5LTV.gif"> (GS)
+<tr align=center><td><img src="1218/p5L.gif"> &nbsp;<img src="1218/p5U.gif"> &nbsp;<img src="1218/p5V.gif"><td><img src="1218/i5LUV.gif">
+<tr align=center><td><img src="1218/p5L.gif"> &nbsp;<img src="1218/p5V.gif"> &nbsp;<img src="1218/p5Z.gif"><td><img src="1218/i5LVZ.gif">
+<tr align=center><td><img src="1218/p5R.gif"> &nbsp;<img src="1218/p5S.gif"> &nbsp;<img src="1218/p5W.gif"><td><img src="1218/i5RSW.gif"> (GS)
+<tr align=center><td><img src="1218/p5S.gif"> &nbsp;<img src="1218/p5U.gif"> &nbsp;<img src="1218/p5V.gif"><td><img src="1218/i5SUV.gif"> (GS)
+<tr align=center><td><img src="1218/p5S.gif"> &nbsp;<img src="1218/p5U.gif"> &nbsp;<img src="1218/p5W.gif"><td><img src="1218/i5SUW.gif">
+<tr align=center><td><img src="1218/p5S.gif"> &nbsp;<img src="1218/p5U.gif"> &nbsp;<img src="1218/p5Z.gif"><td><img src="1218/i5SUZ.gif">
+<tr align=center><td><img src="1218/p5S.gif"> &nbsp;<img src="1218/p5V.gif"> &nbsp;<img src="1218/p5Z.gif"><td><img src="1218/i5SVZ.gif"> (GS)
+<tr align=center><td><img src="1218/p5S.gif"> &nbsp;<img src="1218/p5W.gif"> &nbsp;<img src="1218/p5Z.gif"><td><img src="1218/i5SWZ.gif">
+<tr align=center><td><img src="1218/p5U.gif"> &nbsp;<img src="1218/p5V.gif"> &nbsp;<img src="1218/p5Z.gif"><td><img src="1218/i4L.gif">
+</table>
+
+</TABLE>
+
+
+
+
+
+<hr><font size=+2>3.</font><p>
+
+Here are the best known results.<p>
+
+<table align=center border=1 bgcolor=EEFFEE cellpadding=5>
+<tr align=center bgcolor=CCFFCC><th>n \ m<th>4<th>5<th>6<th>7<th>8
+<tr align=center><th bgcolor=CCFFCC>3
+<td><img src="1218/3,4.gif">
+<td><img src="1218/3,5.gif">
+<td><img src="1218/3,6.gif">
+<td><img src="1218/3,7.gif">
+<td><img src="1218/3,8.gif"><br>(MM)
+<tr align=center><th bgcolor=CCFFCC>4
+<td><img src="1218/4,4.gif">
+<td><img src="1218/4,5.gif"><br>(GS)
+<td><img src="1218/4,6.gif">
+<td><img src="1218/4,7.gif"><br>(MM)
+<td><img src="1218/4,8.gif"><br>(GS)
+<tr align=center><th bgcolor=CCFFCC>5
+<td><img src="1218/5,4.gif"><br>(GS)
+<td><img src="1218/5,5.gif"><br>(GS)
+<td><img src="1218/5,6.gif">
+<td><img src="1218/5,7.gif"><br>(MM)
+<td><img src="1218/5,8.gif"><br>(GS)
+<tr align=center><th bgcolor=CCFFCC>6
+<td><img src="1218/6,4.gif"><br>(MM)
+<td><img src="1218/6,5.gif"><br>(GS)
+<td><img src="1218/6,6.gif">
+<td><img src="1218/6,7.gif">
+<td><img src="1218/6,8.gif"><br>(MM)
+<tr align=center><th bgcolor=CCFFCC>7
+<td><img src="1218/7,4.gif"><br>(GS)
+<td><img src="1218/7,5.gif">
+<td><img src="1218/7,6.gif"><br>(GS)
+<td><img src="1218/7,7.gif"><br>(MM)
+<td>
+<tr align=center><th bgcolor=CCFFCC>8
+<td><img src="1218/8,4.gif"><br>(GS)
+<td><img src="1218/8,5.gif"><br>(MM)
+<td><img src="1218/8,6.gif"><br>(MM)
+<td><img src="1218/8,7.gif"><br>(GS)
+<td>
+<tr align=center><th bgcolor=CCFFCC>9
+<td>
+<td><img src="1218/9,5.gif"><br>(MM)
+<td><img src="1218/9,6.gif"><br>(GS)
+<td>
+<td>
+<tr align=center><th bgcolor=CCFFCC>10
+<td>
+<td><img src="1218/10,5.gif"><br>(MM)
+<td><img src="1218/10,6.gif"><br>(GS)
+<td>
+<td>
+</table><p>
+
+
+
+
+
+
+<hr><font size=+2>4.</font><p>
+
+Here are the known results.<p>
+
+<TABLE align=center cellpadding=10><TR align=center><TD>
+
+<center><font size=+2>Width 1</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>Polyominoes<th>Coefficients<th>Sequence
+<tr align=center><td><img src="1218/p1.gif"> &nbsp; <img src="1218/p2.gif">
+<td>1 1<td>1, 2, 3, 5, 8, 13, 21
+<tr align=center><td><img src="1218/p1.gif"> &nbsp; <img src="1218/p3I.gif">
+<td>1 0 1<td>1, 1, 2, 3, 4, 6, 9
+<tr align=center><td><img src="1218/p2.gif"> &nbsp; <img src="1218/p3I.gif">
+<td>0 1 1<td>0, 1, 1, 1, 2, 2, 3
+<tr align=center><td><img src="1218/p1.gif"> &nbsp; <img src="1218/p2.gif"> &nbsp; <img src="1218/p3I.gif">
+<td>1 1 1<td>1, 2, 4, 7, 13, 24, 44
+<tr align=center><td><img src="1218/p1.gif"> &nbsp; <img src="1218/p4I.gif">
+<td>1 0 0 1<td>1, 1, 1, 2, 3, 4, 5
+<tr align=center><td><img src="1218/p2.gif"> &nbsp; <img src="1218/p4I.gif">
+<td>0 1 0 1<td>0, 1, 0, 2, 0, 3, 0
+<tr align=center><td><img src="1218/p1.gif"> &nbsp; <img src="1218/p2.gif"> &nbsp; <img src="1218/p4I.gif">
+<td>1 1 0 1<td>1, 2, 3, 6, 10, 18, 31
+<tr align=center><td><img src="1218/p3I.gif"> &nbsp; <img src="1218/p4I.gif">
+<td>0 0 1 1<td>0, 0, 1, 1, 0, 1, 2
+<tr align=center><td><img src="1218/p1.gif"> &nbsp; <img src="1218/p3I.gif"> &nbsp; <img src="1218/p4I.gif">
+<td>1 0 1 1<td>1, 1, 2, 4, 6, 9, 15
+<tr align=center><td><img src="1218/p2.gif"> &nbsp; <img src="1218/p3I.gif"> &nbsp; <img src="1218/p4I.gif">
+<td>0 1 1 1<td>0, 1, 1, 2, 2, 4, 5
+<tr align=center><td><img src="1218/p1.gif"> &nbsp; <img src="1218/p2.gif"> &nbsp; <img src="1218/p3I.gif"> &nbsp; <img src="1218/p4I.gif">
+<td>1 1 1 1<td>1, 2, 4, 8, 15, 29, 56
+</table>
+
+<TD>
+
+<center><font size=+2>Width 2</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>Polyominoes<th>Coefficients<th>Sequence
+<tr align=center><td><img src="1218/p2.gif">
+<td>1 1<td>1, 2, 3, 5, 8, 13, 21
+<tr align=center><td><img src="1218/p1.gif"> &nbsp; <img src="1218/p2.gif">
+<td>3 1 &ndash;1<td>2, 7, 22, 71, 228, 733, 2356
+<tr align=center><td><img src="1218/p1.gif"> &nbsp; <img src="1218/p3I.gif">
+<td>1 1 3 1 &ndash;1 &ndash;1<td>1, 1, 4, 9, 16, 36, 81
+<tr align=center><td><img src="1218/p2.gif"> &nbsp; <img src="1218/p3I.gif">
+<td>2 0 1 &ndash;2 1 &ndash;1<td>1, 2, 4, 7, 11, 26, 52
+<tr align=center><td><img src="1218/p3L.gif">
+<td>0 0 2<td>0, 0, 2, 0, 0, 4, 0
+<tr align=center><td><img src="1218/p1.gif"> &nbsp; <img src="1218/p3L.gif">
+<td>1 4 2<td>1, 5, 11, 33, 87, 241, 655
+<tr align=center><td><img src="1218/p2.gif"> &nbsp; <img src="1218/p3L.gif">
+<td>2 0 1<td>1, 2, 5, 11, 24, 53, 117
+<tr align=center><td><img src="1218/p3I.gif"> &nbsp; <img src="1218/p3L.gif">
+<td>0 0 3<td>0, 0, 3, 0, 0, 9, 0
+
+<tr align=center><td><img src="1218/p1.gif"> &nbsp; <img src="1218/p4O.gif">
+<td>1 1<td>1, 2, 3, 5, 8, 13, 21
+<tr align=center><td><img src="1218/p2.gif"> &nbsp; <img src="1218/p4O.gif">
+<td>1 2<td>1, 3, 5, 11, 21, 43, 85
+<tr align=center><td><img src="1218/p3I.gif"> &nbsp; <img src="1218/p4O.gif">
+<td>0 1 1<td>0, 1, 1, 1, 2, 2, 3
+<tr align=center><td><img src="1218/p3L.gif"> &nbsp; <img src="1218/p4O.gif">
+<td>0 1 2<td>0, 1, 2, 1, 4, 5, 6
+
+<tr align=center><td><img src="1218/p1.gif"> &nbsp; <img src="1218/p4I.gif">
+<td>1 1 0 3 1 &ndash;2 &ndash;2 &ndash;1 0 1<td>1, 1, 1, 4, 9, 16, 25
+<tr align=center><td><img src="1218/p2.gif"> &nbsp; <img src="1218/p4I.gif">
+<td>1 2 &ndash;1 2 0 &ndash;1<td>1, 2, 3, 8, 14, 30, 55
+<tr align=center><td><img src="1218/p3I.gif"> &nbsp; <img src="1218/p4I.gif">
+<td>0 1 2 2 &ndash;1 &ndash;3 0 &ndash;1 &ndash;1 1<td>0, 0, 1, 1, 0, 1, 4
+<tr align=center><td><img src="1218/p3L.gif"> &nbsp; <img src="1218/p4I.gif">
+<td>0 0 2 2 0 0 0 &ndash;1<td>0, 0, 2, 1, 0, 4, 6
+
+<tr align=center><td><img src="1218/p4L.gif">
+<td>0 0 0 2<td>0, 0, 0, 2, 0, 0, 0
+<tr align=center><td><img src="1218/p1.gif"> &nbsp; <img src="1218/p4L.gif">
+<td>1 0 4 2 2<td>1, 1, 5, 11, 19, 43, 99
+<tr align=center><td><img src="1218/p2.gif"> &nbsp; <img src="1218/p4L.gif">
+<td>1 1 4 2<td>1, 2, 7, 15, 32, 79, 185
+<tr align=center><td><img src="1218/p3I.gif"> &nbsp; <img src="1218/p4L.gif">
+<td>0 0 2 1 0 &ndash;1<td>0, 0, 1, 2, 0, 1, 6
+<tr align=center><td><img src="1218/p3L.gif"> &nbsp; <img src="1218/p4L.gif">
+<td>0 0 2 2<td>0, 0, 2, 2, 0, 4, 8
+
+<tr align=center><td><img src="1218/p1.gif"> &nbsp; <img src="1218/p4T.gif">
+<td>1 1 1 <td>1, 1, 3, 5, 9, 17, 31
+<tr align=center><td><img src="1218/p2.gif"> &nbsp; <img src="1218/p4T.gif">
+<td>1 1<td>1, 2, 3, 5, 8, 13, 21
+<tr align=center><td><img src="1218/p3I.gif"> &nbsp; <img src="1218/p4T.gif">
+<td>0 0 1<td>0, 0, 1, 0, 0, 1, 0
+<tr align=center><td><img src="1218/p3L.gif"> &nbsp; <img src="1218/p4T.gif">
+<td>0 1 2<td>0, 0, 2, 0, 2, 4, 2
+</table>
+
+</TABLE><p>
+
+<hr><font size=+2>5.</font><p>
+
+Gordon Atkinson and Kang Jin Cho explained why every polyomino has a solution.  The best known solutions are shown below:<p>
+
+<TABLE align=center cellpadding=10><TR align=center><TD>
+
+<center><font size=+2>Small Polyominoes</font></center>
+<TABLE border=1 align=center cellpadding=10>
+<TR align=center><td><img src="1218/p1.gif"><td>|x| + |x&ndash;1| + |y| + |y&ndash;1| = 2
+<TR align=center><td><img src="1218/p2.gif"><td>|x| + |x&ndash;2| + |y| + |y&ndash;1| = 3
+<TR align=center><td><img src="1218/p3I.gif"><td>|x| + |x&ndash;3| + |y| + |y&ndash;1| = 4
+
+<TR align=center><td><img src="1218/p3L.gif"><td> a+b = |a&ndash;b|, where<br>
+a = |x&ndash;2| + |x| + |y&ndash;1| + |y| &ndash; 3<br>
+and b = |x&ndash;1| + |x| + |y&ndash;2| + |y| &ndash; 3<br>(MP) (GA)
+
+<TR align=center><td><img src="1218/p4I.gif"><td>|x| + |x&ndash;4| + |y| + |y&ndash;1| = 5
+<TR align=center><td><img src="1218/p4O.gif"><td>|x| + |x&ndash;2| + |y| + |y&ndash;2| = 4
+
+<TR align=center><td><img src="1218/p4T.gif"><td>a+b = |a&ndash;b|, where<br>
+a = |x&ndash;3| + |x| + |y&ndash;1| + |y| &ndash; 4<br>
+and b = |x&ndash;2| + |x&ndash;1| + |y&ndash;2| + |y| &ndash; 3<br>(MP) (GA)
+
+<TR align=center><td><img src="1218/p4L.gif"><td>a+b = |a&ndash;b|, where<br>
+a = |x&ndash;3| + |x| + |y&ndash;1| + |y| &ndash; 4<br>
+and b = |x&ndash;1| + |x| + |y&ndash;2| + |y| &ndash; 3<br>(MP) (GA)
+
+<TR align=center><td><img src="1218/p4S.gif"><td>a+b = |a&ndash;b|, where<br>
+a = |x&ndash;2| + |x| + |y&ndash;1| + |y| &ndash; 3<br>
+and b = |x&ndash;3| + |x&ndash;1| +|y&ndash;2| + |y&ndash;1| &ndash; 3<br>(GA)
+</table>
+
+<TD>
+
+<center><font size=+2>Pentominoes</font></center>
+<TABLE border=1 align=center cellpadding=10>
+<TR align=center><td><img src="1218/p5I.gif"><td>|x| + |x&ndash;5| + |y| + |y&ndash;1| = 6
+<TR align=center><td><img src="1218/p5L.gif"><td>a+b = |a&ndash;b|, where<br>
+a = |x&ndash;4| + |x| + |y&ndash;1| + |y| &ndash; 5<br>
+and b = |x&ndash;1| + |x| + |y&ndash;2| + |y| &ndash; 3
+<TR align=center><td><img src="1218/p5P.gif"><td>a+b = |a&ndash;b|, where<br>
+a = |x&ndash;2| + |x| + |y&ndash;2| + |y| &ndash; 4<br>
+and b = |x&ndash;3| + |x| + |y&ndash;1| + |y| &ndash; 4
+<TR align=center><td><img src="1218/p5R.gif"><td><img src="1218/eqR.png"><br>(KJC)
+<TR align=center><td><img src="1218/p5S.gif"><td>a+b = |a&ndash;b|, where<br>
+a = |x&ndash;2| + |x| + |y&ndash;2| + |y&ndash;1| &ndash; 3<br>
+and b = |x&ndash;4| + |x&ndash;1| +|y&ndash;1| + |y| &ndash; 4
+<TR align=center><td><img src="1218/p5T.gif"><td>a+b = |a&ndash;b|, where<br>
+a = |x&ndash;2| + |x&ndash;1| + |y&ndash;3| + |y| &ndash; 4<br>
+and b = |x&ndash;3| + |x| +|y&ndash;1| + |y| &ndash; 4
+<TR align=center><td><img src="1218/p5U.gif"><td>|x| + |x&ndash;3| + |y| + |y&ndash;2| &ndash; 5 = a &ndash;|a|, where<br>
+a = |2x+y&ndash;5| +|2x&ndash;y&ndash;1| &ndash; 2<br>(MP)
+<TR align=center><td><img src="1218/p5V.gif"><td>a+b = |a&ndash;b|, where<br>
+a = |x&ndash;1| + |x| + |y&ndash;3| + |y| &ndash; 4<br>
+and b = |x&ndash;3| + |x| +|y&ndash;1| + |y| &ndash; 4
+<TR align=center><td><img src="1218/p5W.gif"><td><img src="1218/eqW.png"><br>(KJC)
+<TR align=center><td><img src="1218/p5X.gif"><td>a+b = |a&ndash;b|, where<br>
+a = |x&ndash;1| + |x&ndash;2| + |y&ndash;3| + |y| &ndash; 4<br>
+and b = |x&ndash;3| + |x| + |y&ndash;1| + |y&ndash;2| &ndash; 4
+<TR align=center><td><img src="1218/p5Y.gif"><td>a+b = |a&ndash;b|, where<br>
+a = |x&ndash;4| + |x| + |y&ndash;1| + |y| &ndash; 5<br>
+and b = |x&ndash;2| + |x&ndash;1| + |y&ndash;2| + |y| &ndash; 3
+<TR align=center><td><img src="1218/p5Z.gif"><td><img src="1218/eqZ.png"><br>(KJC)
+</TABLE>
+
+</TABLE><p>
+
+Alex Rower also did <a href="1218/Hex.txt">hexominoes</a>.
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 12/16/18.<font></BODY></HTML>
+

@@ -1,0 +1,126 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (December 2017)</H1></CENTER>
+
+One model that has been used for understanding the choosing of political platforms is the following.  One at a time, players (political parties) choose a number in [0,1] (a platform of how liberal to conservative they are).  After the players are done choosing their numbers, they are awarded a score (percentage of the vote) equal to the length of the interval of points that are closer to them than their opponents (since we assume voters are uniformly distributed on [0,1], and vote for the party closest to their own positions).<p>
+
+This model is easy to analyze for 2 players.  If player 1 chooses <font color=red>x</font>&le;1/2, player 2 chooses <font color=red>x+2&epsilon;</font>, and the scores are x+&epsilon; and 1&ndash;x&ndash;&epsilon; respectively.  If player 1 chooses <font color=red>x</font>&ge;1/2, player 2 chooses <font color=red>x&ndash;2&epsilon;</font>, and the scores will be <font color=green>1&ndash;x+&epsilon;</font> and <font color=green>x&ndash;&epsilon;</font> respectively.  Thus player 1 chooses <font color=red>1/2</font> and player 2 chooses <font color=red>1/2&pm;2&epsilon;</font>, and the scores will be <font color=green>1/2+&epsilon;</font> and <font color=green>1/2&ndash;&epsilon;</font>.<p>
+
+The 3 player case is more complicated.  If player 1 chooses <font color=red>x</font>&le;1/4, player 2 chooses <font color=red>(1&ndash;x)/3</font>, and player 3 chooses any number between them in the interval <font color=red>(x, (1&ndash;x)/3)</font>.  In this case the average scores will be <font color=green>(5x+1)/6</font>, <font color=green>(1&ndash;x)/3</font>, and <font color=green>(1&ndash;x)/2</font> respectively.  If player 1 chooses 1/4&lt;<font color=red>x</font>&le;1/2, then player 2 chooses <font color=red>1&ndash;x+2&epsilon;</font> and player 3 chooses <font color=red>x&ndash;2&epsilon;</font>.  In this case the scores will be <font color=green>1/2&ndash;x+2&epsilon;</font>, <font color=green>1/2-&epsilon;</font>, and <font color=green>x&ndash;&epsilon;</font> respectively.  The cases where player 1 chooses <font color=red>x</font>&ge;1/2 are similar by symmetry.  Thus player 1 chooses <font color=red>1/4</font>, player 2 chooses <font color=red>3/4</font>, and player 3 chooses something between in the interval <font color=red>(1/4,3/4)</font>, giving average scores of <font color=green>3/8</font>, <font color=green>3/8</font>, and <font color=green>1/4</font>.  What are the best strategies for more than 3 players?<p>
+
+This game is also interesting where players get multiple turns in a specified order.  For example, for the order 112, player 1 chooses <font color=red>1/4</font> and <font color=red>3/4</font>, and player 2 chooses any number between them in the interval <font color=red>(1/4, 3/4)</font>, and the scores will be <font color=green>3/4</font> and <font color=green>1/4</font> respectively.  What are the best strategies for any order of players?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+<center><font size=+2>Players Play Only Once</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>Order<th>Optimal Plays<th>Optimal Scores<th>Author
+<tr align=center><td>1<td>[0,1]<td>1<td>&nbsp;
+<tr align=center><td>12<td>1/2 &nbsp; 1/2+2&epsilon;<td>1/2+&epsilon; &nbsp; 1/2&ndash;&epsilon;<td>&nbsp;
+<tr align=center><td>123<td>1/4 &nbsp; 3/4 &nbsp; (1/4,3/4)<td>3/8 &nbsp; 3/8 &nbsp; 1/4<td>&nbsp;
+<tr align=center><td>1234<td>1/6 &nbsp; 5/6 &nbsp; 1/2 &nbsp; (1/6,5/6)<td>7/24 &nbsp; 7/24 &nbsp; 1/4 &nbsp; 1/6<td>Joe DeVincentis
+<tr align=center><td>12345<td>1/8 &nbsp; 7/8 &nbsp; 3/8 &nbsp; 5/8 &nbsp; (1/8,7/8)<td>11/48 &nbsp; 11/48 &nbsp; 5/24 &nbsp; 5/24 &nbsp; 1/8<td>Dan Dima
+</table><p>
+
+In fact, Dan Dima gives a convincing argument that for larger number of players n, the first (n&ndash;1) player will pick odd multiples of 1/(2n&ndash;2), with the first two players picking 1/(2n&ndash;2) and (2n&ndash;1)/(2n&ndash;2), leaving the last player to choose any number between them.  This leads to scores (4n&ndash;9)/4(n&ndash;1)(n&ndash;2) for the first two players, (2n&ndash;5)/2(n&ndash;1)(n&ndash;2) for most of the players, and 1/2(n&ndash;1) for the last player.<p>
+
+<center><font size=+2>2 Players Make 3 Moves</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>Order<th>Optimal Plays<th>Optimal Scores
+<tr align=center><td>112<td>1/4 &nbsp; 3/4 &nbsp; (1/4,3/4)<td>3/4 &nbsp; 1/4
+<tr align=center><td>121<td>1/2 &nbsp; 5/6 &nbsp; 5/6&ndash;2&epsilon;<td>5/6&ndash;&epsilon; &nbsp; 1/6+&epsilon;
+<tr align=center><td>122<td>1/2 &nbsp; 1/2&ndash;&epsilon; &nbsp; 1/2+&epsilon;<td>&epsilon; &nbsp; 1&ndash;&epsilon;
+</table><p>
+
+<center><font size=+2>2 Players Make 4 Moves</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>Order<th>Optimal Plays<th>Optimal Scores
+<tr align=center><td>1112<td>1/6 &nbsp; 1/2 &nbsp; 5/6 &nbsp; (1/2,5/6)<td>5/6 &nbsp; 1/6
+<tr align=center><td>1121<td>3/10 &nbsp; 7/10 &nbsp; 9/10 &nbsp; 9/10&ndash;2&epsilon;<td>9/10&ndash;&epsilon; &nbsp; 1/10+&epsilon;
+<tr align=center><td>1122<td>1/4 &nbsp; 3/4 &nbsp; 1/4+&epsilon; &nbsp; 3/4&ndash;&epsilon;<td>1/2+2&epsilon; &nbsp; 1/2&ndash;&epsilon;
+<tr align=center><td>1211<td>1/2 &nbsp; x &nbsp; x&ndash;&epsilon; &nbsp; x+&epsilon;<td>1&ndash;&epsilon; &nbsp; &epsilon;
+<tr align=center><td>1212<td>1/4 &nbsp; 3/4 &nbsp; 3/4+3&epsilon; &nbsp; 1/4&ndash;&epsilon;<td>1/2&ndash;&epsilon; &nbsp; 1/2+&epsilon;
+<tr align=center><td>1221<td>1/4 &nbsp; 3/4 &nbsp; 1/4&ndash;3&epsilon; &nbsp; 3/4+&epsilon;<td>1/2+&epsilon; &nbsp; 1/2&ndash;&epsilon;
+<tr align=center><td>1222<td>x &nbsp; x&ndash;&epsilon; &nbsp; x+&epsilon; &nbsp; y<td>&epsilon; &nbsp; 1&ndash;&epsilon;
+</table><p>
+
+<center><font size=+2>3 Players Make 4 Moves</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>Order<th>Optimal Plays<th>Optimal Scores
+<tr align=center><td>1123<td>1/6 &nbsp; 5/6 &nbsp; 1/2 &nbsp; (1/6,5/6)<td>7/12 &nbsp; 1/4 &nbsp; 1/6
+<tr align=center><td>1213<td>?<td>?
+<tr align=center><td>1223<td>?<td>?
+<tr align=center><td>1231<td>?<td>?
+<tr align=center><td>1232<td>?<td>?
+<tr align=center><td>1233<td>1/4 &nbsp; 3/4 &nbsp; 1/4&ndash;2&epsilon; &nbsp; (1/4,3/4)<td>1/4+&epsilon; &nbsp; 1/4+&epsilon; &nbsp; 1/2&ndash;2&epsilon;
+</table><p>
+
+<center><font size=+2>2 Players Make 5 Moves</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>Order<th>Optimal Plays<th>Optimal Scores<th>Author
+<tr align=center><td>11112<td>1/8 &nbsp; 3/8 &nbsp; 5/8 &nbsp; 7/8 &nbsp; (5/8,7/8)<td>7/8 &nbsp; 1/8<td>
+<tr align=center><td>11121<td>3/14 &nbsp; 1/2 &nbsp; 11/14 &nbsp; 13/14 &nbsp; 13/14&ndash;2&epsilon;<td>13/14&ndash;&epsilon; &nbsp; 1/14+&epsilon;<td>
+<tr align=center><td>11122<td>1/6 &nbsp; 1/2 &nbsp; 5/6 &nbsp; (1/6,1/2) &nbsp; (1/2,5/6)<td>2/3 &nbsp; 1/3<td>
+<tr align=center><td>11211<td>x &nbsp; y &nbsp; z &nbsp; z&ndash;&epsilon; &nbsp; z+&epsilon;<td>&epsilon; &nbsp; 1&ndash;&epsilon;<td>
+<tr align=center><td>11212<td>?<td>?<td>?
+<tr align=center><td>11221<td>?<td>?<td>?
+<tr align=center><td>11222<td>1/4 &nbsp; 3/4 &nbsp; 1/4&ndash;&epsilon; &nbsp; 3/4+&epsilon; &nbsp; (1/4,3/4)<td>1/4+2&epsilon; &nbsp; 3/4&ndash;2&epsilon;<td>
+<tr align=center><td>12111<td>x &nbsp; y &nbsp; y&ndash;&epsilon; &nbsp; y+&epsilon; &nbsp; z<td>&epsilon; &nbsp; 1&ndash;&epsilon;<td>
+<tr align=center><td>12112<td>?<td>?<td>?
+<tr align=center><td>12121<td>?<td>?<td>?
+<tr align=center><td>12122<td>?<td>?<td>?
+<tr align=center><td>12211<td>5/6 &nbsp; 1/6 &nbsp; 1/2 &nbsp; 1/6&ndash;2&epsilon; &nbsp; (1/6,1/2)<td>5/6&ndash;&epsilon; &nbsp; 1/6+&epsilon;<td>Joe DeVincentis
+<tr align=center><td>12212<td>?<td>?<td>?
+<tr align=center><td>12221<td>1/2 &nbsp; 1/6 &nbsp; 1/2+3&epsilon; &nbsp; 5/6 &nbsp; 1/6&ndash;&epsilon;<td>2/3&ndash;&epsilon; &nbsp; 1/3+&epsilon;<td>
+<tr align=center><td>12222<td>x &nbsp; x&ndash;&epsilon; &nbsp; x+&epsilon; &nbsp; y &nbsp; z<td>&epsilon; &nbsp; 1&ndash;&epsilon;<td>
+</table><p>
+
+<center><font size=+2>3 Players Make 5 Moves</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>Order<th>Optimal Plays<th>Optimal Scores
+<tr align=center><td>11123<td>?<td>?
+<tr align=center><td>11213<td>?<td>?
+<tr align=center><td>11223<td>?<td>?
+<tr align=center><td>11231<td>?<td>?
+<tr align=center><td>11232<td>?<td>?
+<tr align=center><td>11233<td>?<td>?
+<tr align=center><td>12113<td>?<td>?
+<tr align=center><td>12123<td>?<td>?
+<tr align=center><td>12131<td>?<td>?
+<tr align=center><td>12132<td>?<td>?
+<tr align=center><td>12133<td>?<td>?
+<tr align=center><td>12213<td>?<td>?
+<tr align=center><td>12223<td>?<td>?
+<tr align=center><td>12231<td>?<td>?
+<tr align=center><td>12232<td>?<td>?
+<tr align=center><td>12233<td>?<td>?
+<tr align=center><td>12311<td>?<td>?
+<tr align=center><td>12312<td>?<td>?
+<tr align=center><td>12313<td>?<td>?
+<tr align=center><td>12321<td>?<td>?
+<tr align=center><td>12322<td>?<td>?
+<tr align=center><td>12323<td>?<td>?
+<tr align=center><td>12331<td>?<td>?
+<tr align=center><td>12332<td>?<td>?
+<tr align=center><td>12333<td>?<td>?
+</table><p>
+
+<center><font size=+2>4 Players Make 5 Moves</font></center>
+<table align=center border=1 cellpadding=5>
+<tr align=center bgcolor=FFFFDD><th>Order<th>Optimal Plays<th>Optimal Scores
+<tr align=center><td>12234<td>?<td>?
+<tr align=center><td>12134<td>?<td>?
+<tr align=center><td>12234<td>?<td>?
+<tr align=center><td>12314<td>?<td>?
+<tr align=center><td>12324<td>?<td>?
+<tr align=center><td>12334<td>?<td>?
+<tr align=center><td>12341<td>?<td>?
+<tr align=center><td>12342<td>?<td>?
+<tr align=center><td>12343<td>?<td>?
+<tr align=center><td>12344<td>?<td>?
+</table>
+
+<HR><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 12/1/17.<font>
+
+
+</BODY></HTML>

@@ -1,0 +1,14 @@
+<HTML>
+<CENTER>n=5 players, N=9 games:</CENTER>
+<pre>
+A plays B (assume A wins), C plays D (assume C wins), and A plays C (assume A wins)
+C plays E
+IF C WINS, A plays C twice
+   IF A WINS TWICE, D plays E, and the winner plays A twice (A wins ties)
+   IF THEY SPLIT, A plays C best-of-3
+   IF C WINS TWICE, A plays B, and the winner plays C twice (C wins ties)
+IF E WINS, A plays E twice
+   IF A WINS TWICE, A plays D 3 times, and D needs to win all 3
+   IF THEY SPLIT, A plays E best-of-3
+   IF E WINS TWICE, A plays D, and the winner plays E twice (E wins ties)
+</pre>

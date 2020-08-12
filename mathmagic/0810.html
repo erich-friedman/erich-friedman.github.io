@@ -1,0 +1,1084 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+
+<CENTER><H1>Problem of the Month (August 2010)</H1></CENTER>
+
+This month we examine 4 related tiling problems:<p>
+
+<font size=+2>1.</font> Given two polyominoes, what is the smallest (by area) rectangle that they tile, using at least one copy of each?<p>
+
+<font size=+2>2.</font> Given a polyomino reptile P, how many copies of P can be used to tile P?<p>
+
+<font size=+2>3.</font> Which polykings (vertex-connected unions of unit squares) are rectifiable (can tile a rectangle)?<p>
+
+<font size=+2>4.</font> Which polykings are reptiles?  What are their orders?  Are there polykings that are reptiles but not rectifiable?<p>
+
+
+
+<P><hr color=black><p><center><h1>ANSWERS</h1></center>
+
+Solvers this month include Mike Reid, George Sicherman, Joe DeVincentis, Bryce Herdt, Anti S&otilde;lg, Rodolfo Kurchan, Maurizio Morandi, Patrick Hamlyn, Livio Zucca, George Sicherman, Toshihiro Shirakawa, and Helmut Postl.<p>
+
+
+<font size=+2>1.</font><p>
+
+Rodolfo Kurchan let me know that this problem has been studied before, with most solutions by Mike Reid.<p>
+
+Below are the smallest-known rectangles containing pairs of polyominoes:
+
+<center><font size=+2>Tetrominoes and Tetrominoes</font></center>
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center bgcolor=EEEEEE><th>
+<th><img src="0810/4S.png">
+<th><img src="0810/4T.png">
+<th><img src="0810/4O.png">
+<th><img src="0810/4L.png">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4I.png">
+<td><img src="0810/4I4S.gif"><td><img src="0810/4I4T.gif"><td><img src="0810/4I4O.gif"><td><img src="0810/4I4L.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4L.png">
+<td><img src="0810/4L4S.gif"><td><img src="0810/4L4T.gif"><td><img src="0810/4L4O.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4O.png">
+<td>none<td><img src="0810/4O4T.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4T.png">
+<td><img src="0810/4S4T.gif">
+</table><p>
+
+
+<center><font size=+2>Tetrominoes and Pentominoes</font></center>
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center bgcolor=EEEEEE><th>
+<th><img src="0810/5Z.png">
+<th><img src="0810/5Y.png">
+<th><img src="0810/5X.png">
+<th><img src="0810/5W.png">
+<th><img src="0810/5V.png">
+<th><img src="0810/5U.png"> 
+<th><img src="0810/5T.png">
+<th><img src="0810/5S.png">
+<th><img src="0810/5R.png">
+<th><img src="0810/5P.png">
+<th><img src="0810/5L.png">
+<th><img src="0810/5I.png">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4I.png">
+<td><img src="0810/4I5Z.gif"><td><img src="0810/4I5Y.png"><br>(GS)<td>?<td><img src="0810/4I5W.png"><br>(GS)<td><img src="0810/4I5V.gif"><td><img src="0810/4I5U.gif"><td><img src="0810/4I5T.gif"><td><img src="0810/4I5S.gif"><td><img src="0810/4I5R.gif"><td><img src="0810/4I5P.gif"><td><img src="0810/4I5L.gif"><td><img src="0810/4I5I.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4L.png">
+<td><img src="0810/4L5Z.gif"><td><img src="0810/4L5Y.gif"><td><img src="0810/4L5X.gif"><td><img src="0810/4L5W.gif"><td><img src="0810/4L5V.gif"><td><img src="0810/4L5U.gif"><td><img src="0810/4L5T.gif"><td><img src="0810/4L5S.gif"><td><img src="0810/4L5R.gif"><td><img src="0810/4L5P.gif"><td><img src="0810/4L5L.gif"><td><img src="0810/4L5I.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4O.png">
+<td><img src="0810/4O5Z.png"><br>(GS)<td><img src="0810/4O5Y.gif"><td>none<td>none<td><img src="0810/4O5V.gif"><td>none<br>(GS)<td><img src="0810/4O5T.png"><br>(GS)<td><img src="0810/4O5S.png"><br>(GS)<td>none<td><img src="0810/4O5P.gif"><td><img src="0810/4O5L.gif"><td><img src="0810/4O5I.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4T.png">
+<td><img src="0810/4T5Z.gif"><td><img src="0810/4T5Y.gif"><td><img src="0810/4T5X.gif"><td><img src="0810/4T5W.gif"><td><img src="0810/4T5V.gif"><td><img src="0810/4T5U.gif"><td><img src="0810/4T5T.gif"><td><img src="0810/4T5S.gif"><td><img src="0810/4T5R.gif"><td><img src="0810/4T5P.gif"><td><img src="0810/4T5L.gif"><td><img src="0810/4T5I.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4S.png">
+<td>none<td><img src="0810/4S5Y.gif"><td>none<td>none<td><img src="0810/4S5V.gif"><td><img src="0810/4S5U.gif"><td><img src="0810/4S5T.gif"><td>none<td>none<td><img src="0810/4S5P.gif"><td><img src="0810/4S5L.gif"><td><img src="0810/4S5I.gif">
+</table><p>
+
+
+<center><font size=+2>Pentominoes and Pentominoes</font></center>
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center bgcolor=EEEEEE><th>
+<th><img src="0810/5Z.png">
+<th><img src="0810/5Y.png">
+<th><img src="0810/5X.png">
+<th><img src="0810/5W.png">
+<th><img src="0810/5V.png">
+<th><img src="0810/5U.png"> 
+<th><img src="0810/5T.png">
+<th><img src="0810/5S.png">
+<th><img src="0810/5R.png">
+<th><img src="0810/5P.png">
+<th><img src="0810/5L.png">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/5I.png">
+<td><img src="0810/5I5Z.gif"><td><img src="0810/5I5Y.gif"><td>?<td><img src="0810/5I5W.png"><br>(GS)<td><img src="0810/5I5V.gif"><td><img src="0810/5I5U.png"><br>(GS)<td><img src="0810/5I5T.gif"><td><img src="0810/5I5S.gif"><td><img src="0810/5I5R.gif"><td><img src="0810/5I5P.gif"><td><img src="0810/5I5L.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/5L.png">
+<td><img src="0810/5L5Z.gif"><td><img src="0810/5L5Y.gif"><td><img src="0810/5L5X.gif"><td><img src="0810/5L5W.gif"><td><img src="0810/5L5V.gif"><td><img src="0810/5L5U.gif"><td><img src="0810/5L5T.gif"><td><img src="0810/5L5S.gif"><td><img src="0810/5L5R.gif"><td><img src="0810/5L5P.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/5P.png">
+<td><img src="0810/5P5Z.gif"><td><img src="0810/5P5Y.gif"><td><img src="0810/5P5X.gif"><td><img src="0810/5P5W.gif"><td><img src="0810/5P5V.gif"><td><img src="0810/5P5U.gif"><td><img src="0810/5P5T.gif"><td><img src="0810/5P5S.gif"><td><img src="0810/5P5R.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/5R.png">
+<td>none<td><img src="0810/5R5Y.gif"><td>none<td>none<td><img src="0810/5R5V.gif"><td><img src="0810/5R5U.gif"><td>none<td>none
+<tr align=center><th bgcolor=EEEEEE><img src="0810/5S.png">
+<td>none<td><img src="0810/5S5Y.gif"><td>none<td>none<td><img src="0810/5S5V.gif"><td><img src="0810/5S5U.gif"><td><img src="0810/5S5T.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/5T.png">
+<td>none<td><img src="0810/5T5Y.gif"><td>none<td><img src="0810/5T5W.gif"><td>none<td><img src="0810/5T5U.gif"><br>(Mike Reid)
+<tr align=center><th bgcolor=EEEEEE><img src="0810/5U.png">
+<td>none<td><img src="0810/5U5Y.gif"><td><img src="0810/5U5X.gif"><td>none<td><img src="0810/5U5V.gif"><br>(Mike Reid)
+<tr align=center><th bgcolor=EEEEEE><img src="0810/5V.png">
+<td><img src="0810/5V5Z.gif"><td><img src="0810/5V5Y.gif"><td>none<td><img src="0810/5V5W.gif"><br>(Mike Reid)
+<tr align=center><th bgcolor=EEEEEE><img src="0810/5W.png">
+<td>none<td><img src="0810/5W5Y.gif"><td>none
+<tr align=center><th bgcolor=EEEEEE><img src="0810/5X.png">
+<td>none<td><img src="0810/5X5Y.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/5Y.png">
+<td><img src="0810/5Y5Z.gif">
+</table><p>
+
+
+
+<center><font size=+2>Tetrominoes and Hexominoes</font></center>
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center bgcolor=EEEEEE><th>
+<th><img src="0810/6A.png">
+<th><img src="0810/6B.png">
+<th><img src="0810/6C.png">
+<th><img src="0810/6D.png">
+<th><img src="0810/6E.png">
+<th><img src="0810/6F.png">
+<th><img src="0810/6G.png">
+<th><img src="0810/6H.png">
+<th><img src="0810/6I.png">
+<th><img src="0810/6J.png">
+<th><img src="0810/6K.png">
+<th><img src="0810/6K'.png">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4I.png">
+<td><img src="0810/4I6A.gif"><td><img src="0810/4I6B.gif"><td><img src="0810/4I6C.gif"><td><img src="0810/4I6D.gif"><td><img src="0810/4I6E.png"><br>(GS)<td><img src="0810/4I6F.gif"><td><img src="0810/4I6G.png"><br>(GS)<td><img src="0810/4I6H.gif"><td><img src="0810/4I6I.gif"><td><img src="0810/4I6J.gif"><td><img src="0810/4I6K.gif"><td><img src="0810/4I6K'.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4L.png">
+<td><img src="0810/4L6A.gif"><td><img src="0810/4L6B.gif"><td><img src="0810/4L6C.gif"><td><img src="0810/4L6D.gif"><td><img src="0810/4L6E.gif"><td><img src="0810/4L6F.gif"><td><img src="0810/4L6G.gif"><td><img src="0810/4L6H.gif"><td><img src="0810/4L6I.gif"><td><img src="0810/4L6J.gif"><td><img src="0810/4L6K.gif"><td><img src="0810/4L6K'.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4O.png">
+<td><img src="0810/4O6A.gif"><td><img src="0810/4O6B.gif"><td><img src="0810/4O6C.gif"><td><img src="0810/4O6D.gif"><td>none<br>(JD)<td><img src="0810/4O6F.gif"><td>none<br>(MR)<td>none<br>(MR)<td><img src="0810/4O6I.gif"><td>none<br>(MR)<td>none<br>(JD)<td>none<br>(MR)
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4T.png">
+<td><img src="0810/4T6A.gif"><td><img src="0810/4T6B.gif"><td><img src="0810/4T6C.gif"><td><img src="0810/4T6D.gif"><td><img src="0810/4T6E.gif"><td><img src="0810/4T6F.gif"><td><img src="0810/4T6G.gif"><td><img src="0810/4T6H.gif"> <td><img src="0810/4T6I.gif"><td><img src="0810/4T6J.gif"><td><img src="0810/4T6K.gif"><td><img src="0810/4T6K'.png"><br>(GS)
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4S.png">
+<td><img src="0810/4S6A.gif"><td><img src="0810/4S6B.gif"><td><img src="0810/4S6C.gif"><td><img src="0810/4S6D.gif"><td>none<br>(JD)<td><img src="0810/4S6F.gif"><td><img src="0810/4S6G.gif"><td><img src="0810/4S6H.gif"><td><img src="0810/4S6I.png"><br>(GS)<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)
+</table><p>
+
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center bgcolor=EEEEEE><th>
+<th><img src="0810/6L.png">
+<th><img src="0810/6M.png">
+<th><img src="0810/6N.png">
+<th><img src="0810/6O.png">
+<th><img src="0810/6P.png">
+<th><img src="0810/6Q.png">
+<th><img src="0810/6R.png">
+<th><img src="0810/6R'.png">
+<th><img src="0810/6S.png">
+<th><img src="0810/6S'.png">
+<th><img src="0810/6T.png">
+<th><img src="0810/6T'.png">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4I.png">
+<td><img src="0810/4I6L.gif"><td><img src="0810/4I6M.gif"><td><img src="0810/4I6N.gif"><td><img src="0810/4I6O.gif"><td><img src="0810/4I6P.gif"><td><img src="0810/4I6Q.gif"><td><img src="0810/4I6R.gif"><td><img src="0810/4I6R'.gif"><td><img src="0810/4I6S.gif"><td><img src="0810/4I6S'.gif"><td><img src="0810/4I6T.gif"><td><img src="0810/4I6T'.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4L.png">
+<td><img src="0810/4L6L.gif"><td><img src="0810/4L6M.gif"><td><img src="0810/4L6N.gif"><td><img src="0810/4L6O.gif"><td><img src="0810/4L6P.gif"><td><img src="0810/4L6Q.gif"><td><img src="0810/4L6R.gif"><td><img src="0810/4L6R'.gif"><td><img src="0810/4L6S.gif"><td><img src="0810/4L6S'.gif"><td><img src="0810/4L6T.png"><br>(GS)<td><img src="0810/4L6T'.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4O.png">
+<td><img src="0810/4O6L.gif"><td>none<br>(MR)<td>none<br>(MR)<td><img src="0810/4O6O.gif"><td><img src="0810/4O6P.gif"><td>none<br>(MR)<td>none<br>(MR)<td>none<br>(MR)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/4O6T.gif"><td><img src="0810/4O6T'.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4T.png">
+<td><img src="0810/4T6L.gif"><td><img src="0810/4T6M.gif"><td><img src="0810/4T6N.png"><br>(GS)<td><img src="0810/4T6O.gif"><td><img src="0810/4T6P.gif"><td><img src="0810/4T6Q.gif"><td><img src="0810/4T6R.gif"><td><img src="0810/4T6R'.gif"><td><img src="0810/4T6S.gif"><td><img src="0810/4T6S'.gif"><td><img src="0810/4T6T.gif"><td><img src="0810/4T6T'.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4S.png">
+<td><img src="0810/4S6L.gif"><td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/4S6O.png"><br>(GS)<td><img src="0810/4S6P.gif"><td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/4S6T.png"><br>(GS)<td><img src="0810/4S6T'.gif">
+</table><p>
+
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center bgcolor=EEEEEE><th>
+<th><img src="0810/6U.png">
+<th><img src="0810/6V.png">
+<th><img src="0810/6V'.png">
+<th><img src="0810/6W.png">
+<th><img src="0810/6W'.png">
+<th><img src="0810/6X.png">
+<th><img src="0810/6X'.png">
+<th><img src="0810/6Y.png">
+<th><img src="0810/6Y'.png">
+<th><img src="0810/6Z.png">
+<th><img src="0810/6Z'.png">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4I.png">
+<td><img src="0810/4I6U.gif"><td><img src="0810/4I6V.gif"><td><img src="0810/4I6V'.gif"><td><img src="0810/4I6W.gif"><td><img src="0810/4I6W'.gif"><td><img src="0810/4I6X.png"><br>(MR)<td><img src="0810/4I6X'.png"><br>(MR)<td><img src="0810/4I6Y.gif"><td><img src="0810/4I6Y'.gif"><td><img src="0810/4I6Z.gif"><td><img src="0810/4I6Z'.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4L.png">
+<td><img src="0810/4L6U.gif"><td><img src="0810/4L6V.gif"><td><img src="0810/4L6V'.gif"><td><img src="0810/4L6W.gif"><td><img src="0810/4L6W'.gif"><td><img src="0810/4L6X.gif"><td><img src="0810/4L6X'.gif"><td><img src="0810/4L6Y.gif"><td><img src="0810/4L6Y'.gif"><td><img src="0810/4L6Z.gif"><td><img src="0810/4L6Z'.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4O.png">
+<td><img src="0810/4O6U.gif"><td><img src="0810/4O6V.gif"><td><img src="0810/4O6V'.png"><br>(GS)<td>none<br>(MR)<td>none<br>(MR)<td>none<br>(MR)<td>none<br>(MR)<td><img src="0810/4O6Y.gif"><td><img src="0810/4O6Y'.gif"><td>none<br>(MR)<td><img src="0810/4O6Z'.gif">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4T.png">
+<td><img src="0810/4T6U.gif"><td><img src="0810/4T6V.gif"><td><img src="0810/4T6V'.gif"><td><img src="0810/4T6W.gif"><td><img src="0810/4T6W'.gif"><td><img src="0810/4T6X.png"><br>(GS)<td>?<td><img src="0810/4T6Y.gif"><td><img src="0810/4T6Y'.gif"><td><img src="0810/4T6Z.png"><br>(GS)<td><img src="0810/4T6Z'.png"><br>(GS)
+<tr align=center><th bgcolor=EEEEEE><img src="0810/4S.png">
+<td><img src="0810/4S6U.gif"><td><img src="0810/4S6V.gif"><td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/4S6Y.gif"><td><img src="0810/4S6Y'.gif"><td>none<br>(JD)<td>none<br>(JD)
+</table><p>
+
+<center><font size=+2>Pentominoes and Hexominoes</font></center>
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center bgcolor=EEEEEE><th>
+<th><img src="0810/5Z.png">
+<th><img src="0810/5Y.png">
+<th><img src="0810/5X.png">
+<th><img src="0810/5W.png">
+<th><img src="0810/5V.png">
+<th><img src="0810/5U.png"> 
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6A.png">
+<td><img src="0810/5Z6A.png"><br>(GS)<td><img src="0810/5Y6A.gif"><td><img src="0810/5X6A.png"><br>(MR)<td><img src="0810/5W6A.gif"><td><img src="0810/5V6A.gif"><td><img src="0810/5U6A.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6B.png">
+<td><img src="0810/5Z6B.png"><br>(GS)<td><img src="0810/5Y6B.gif"><td><img src="0810/5X6B.png"><br>(GS)<td><img src="0810/5W6B.gif"><td><img src="0810/5V6B.gif"><td><img src="0810/5U6B.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6C.png">
+<td><img src="0810/5Z6C.png"><br>(GS)<td><img src="0810/5Y6C.gif"><td>none<br>(GS)<td><img src="0810/5W6C.png"><br>(GS)<td><img src="0810/5V6C.png"><br>(GS)<td><img src="0810/5U6C.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6D.png">
+<td><img src="0810/5Z6D.png"><br>(GS)<td><img src="0810/5Y6D.gif"><td><img src="0810/5X6D.png"><br>(GS)<td><img src="0810/5W6D.gif"><td><img src="0810/5V6D.gif"><td><img src="0810/5U6D.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6E.png">
+<td>none<br>(JD)<td><img src="0810/5Y6E.gif"><td>none<br>(JD)<td>none<br>(JD)<td>none<br>(GS)<td>none<br>(JD)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6F.png">
+<td><img src="0810/5Z6F.png"><br>(MR)<td><img src="0810/5Y6F.gif"><td><img src="0810/5X6F.gif"><td><img src="0810/5W6F.gif"><td><img src="0810/5V6F.gif"><td><img src="0810/5U6F.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6G.png">
+<td><img src="0810/5Z6G.png"><br>(MR)<td><img src="0810/5Y6G.gif"><td>none<br>(GS)<td>none<br>(GS)<td><img src="0810/5V6G.png"><br>(MR)<td>none<br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6H.png">
+<td>none<br>(GS)<td><img src="0810/5Y6H.gif"><td>none<br>(JD)<td>none<br>(GS)<td><img src="0810/5V6H.gif"><td>none<br>(JD)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6I.png">
+<td><img src="0810/5Z6I.png"><br>(GS)<td><img src="0810/5Y6I.gif"><td>?<td><img src="0810/5W6I.png"><br>(GS)<td><img src="0810/5V6I.png"><br>(MR)<td><img src="0810/5U6I.png"><br>(MR)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6J.png">
+<td>none<br>(JD)<td><img src="0810/5Y6J.gif"><td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5V6J.png"><br>(GS)<td><img src="0810/5U6J.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6K.png">
+<td>none<br>(JD)<td><img src="0810/5Y6K.gif"><td>none<br>(GS)<td>none<br>(JD)<td>none<br>(GS)<td><img src="0810/5U6K.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6K'.png">
+<td>none<br>(JD)<td><img src="0810/5Y6K'.gif"><td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5V6K'.png"><br>(GS)<td>none<br>(JD)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6L.png">
+<td><img src="0810/5Z6L.png"><br>(MR)<td><img src="0810/5Y6L.gif"><td><img src="0810/5X6L.png"><br>(GS)<td><img src="0810/5W6L.gif"><td><img src="0810/5V6L.gif"><td><img src="0810/5U6L.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6M.png">
+<td>none<br>(JD)<td><img src="0810/5Y6M.gif"><td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5V6M.png"><br>(GS)<td>none<br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6N.png">
+<td>none<br>(JD)<td><img src="0810/5Y6N.gif"><td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5V6N.png"><br>(MR)<td>none<br>(JD)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6O.png">
+<td><img src="0810/5Z6O.gif"><td><img src="0810/5Y6O.gif"><td>none<br>(JD)<td><img src="0810/5W6O.gif"><td><img src="0810/5V6O.gif"><td><img src="0810/5U6O.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6P.png">
+<td><img src="0810/5Z6P.gif"><td><img src="0810/5Y6P.gif"><td><img src="0810/5X6P.png"><br>(GS)<td><img src="0810/5W6P.gif"><td><img src="0810/5V6P.gif"><td><img src="0810/5U6P.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6Q.png">
+<td>none<br>(JD)<td><img src="0810/5Y6Q.gif"><td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5V6Q.gif"><td>none<br>(JD)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6R.png">
+<td>none<br>(JD)<td><img src="0810/5Y6R.gif"><td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5V6R.gif"><td><img src="0810/5U6R.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6R'.png">
+<td>none<br>(JD)<td><img src="0810/5Y6R'.gif"><td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5V6R'.png"><br>(GS)<td><img src="0810/5U6R'.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6S.png">
+<td>none<br>(JD)<td><img src="0810/5Y6S.gif"><td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5V6S.png"><br>(GS)<td><img src="0810/5U6S.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6S'.png">
+<td>none<br>(JD)<td><img src="0810/5Y6S'.gif"><td>none<br>(JD)<td>none<br>(JD)<td>none<br>(GS)<td>none<br>(JD)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6T.png">
+<td>none<br>(GS)<td><img src="0810/5Y6T.gif"><td>none<br>(JD)<td><img src="0810/5W6T.gif"><td>none<br>(GS)<td><img src="0810/5U6T.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6T'.png">
+<td><img src="0810/5Z6T'.png"><br>(GS)<td><img src="0810/5Y6T'.gif"><td>none<br>(GS)<td><img src="0810/5W6T'.png"><br>(GS)<td>none<br>(GS)<td><img src="0810/5U6T'.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6U.png">
+<td><img src="0810/5Z6U.gif"><td><img src="0810/5Y6U.gif"><td>none<br>(MR)<td><img src="0810/5W6U.gif"><td><img src="0810/5V6U.gif"><td><img src="0810/5U6U.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6V.png">
+<td><img src="0810/5Z6V.png"><br>(GS)<td><img src="0810/5Y6V.gif"><td>none<br>(GS)<td><img src="0810/5W6V.gif"><td><img src="0810/5V6V.gif"><td><img src="0810/5U6V.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6V'.png">
+<td>none<br>(JD)<td><img src="0810/5Y6V'.gif"><td>none<br>(JD)<td>none<br>(JD)<td>none<br>(GS)<td><img src="0810/5U6V'.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6W.png">
+<td>none<br>(JD)<td><img src="0810/5Y6W.gif"><td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5V6W.png"><br>(GS)<td>none<br>(JD)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6W'.png">
+<td>none<br>(JD)<td><img src="0810/5Y6W'.gif"><td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5V6W'.png"><br>(GS)<td>none<br>(JD)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6X.png">
+<td>none<br>(JD)<td><img src="0810/5Y6X.gif"><td>none<br>(JD)<td>none<br>(JD)<td>none<br>(GS)<td>none<br>(JD)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6X'.png">
+<td>none<br>(GS)<td><img src="0810/5Y6X'.png"><br>(GS)<td>none<br>(JD)<td>none<br>(GS)<td>none<br>(GS)<td><img src="0810/5U6X'.png"><br>(MR)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6Y.png">
+<td><img src="0810/5Z6Y.gif"><td><img src="0810/5Y6Y.gif"><td><img src="0810/5X6Y.png"><br>(GS)<td><img src="0810/5W6Y.gif"><td><img src="0810/5V6Y.gif"><td><img src="0810/5U6Y.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6Y'.png">
+<td><img src="0810/5Z6Y'.png"><br>(MR)<td><img src="0810/5Y6Y'.gif"><td>none<br>(GS)<td><img src="0810/5W6Y'.png"><br>(GS)<td><img src="0810/5V6Y'.png"><br>(GS)<td><img src="0810/5U6Y'.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6Z.png">
+<td>none<br>(JD)<td><img src="0810/5Y6Z.png"><br>(GS)<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(GS)<td>none<br>(JD)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6Z'.png">
+<td>none<br>(GS)<td><img src="0810/5Y6Z'.gif"><td>none<br>(GS)<td>none<br>(GS)<td><img src="0810/5V6Z'.gif"><td><img src="0810/5U6Z'.png"><br>(GS)
+</table><p>
+
+
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center bgcolor=EEEEEE><th>
+<th><img src="0810/5T.png">
+<th><img src="0810/5S.png">
+<th><img src="0810/5R.png">
+<th><img src="0810/5P.png">
+<th><img src="0810/5L.png">
+<th><img src="0810/5I.png">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6A.png">
+<td><img src="0810/5T6A.png"><br>(GS)<td><img src="0810/5S6A.gif"><td><img src="0810/5R6A.gif"><td><img src="0810/5P6A.gif"><td><img src="0810/5L6A.gif"><td><img src="0810/5I6A.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6B.png">
+<td><img src="0810/5T6B.png"><br>(GS)<td><img src="0810/5S6B.gif"><td><img src="0810/5R6B.png"><br>(GS)<td><img src="0810/5P6B.gif"><td><img src="0810/5L6B.gif"><td><img src="0810/5I6B.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6C.png">
+<td>none<br>(JD)<td><img src="0810/5S6C.gif"><td><img src="0810/5R6C.gif"><td><img src="0810/5P6C.gif"><td><img src="0810/5L6C.gif"><td><img src="0810/5I6C.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6D.png">
+<td><img src="0810/5T6D.png"><br>(GS)<td><img src="0810/5S6D.gif"><td><img src="0810/5R6D.gif"><td><img src="0810/5P6D.gif"><td><img src="0810/5L6D.gif"><td><img src="0810/5I6D.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6E.png">
+<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5P6E.gif"><td><img src="0810/5L6E.gif"><td><img src="0810/5I6E.png"><br>(JD)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6F.png">
+<td><img src="0810/5T6F.png"><br>(GS)<td><img src="0810/5S6F.gif"><td><img src="0810/5R6F.gif"><td><img src="0810/5P6F.gif"><td><img src="0810/5L6F.gif"><td><img src="0810/5I6F.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6G.png">
+<td>none<br>(JD)<td><img src="0810/5S6G.png"><br>(GS)<td><img src="0810/5R6G.gif"><td><img src="0810/5P6G.gif"><td><img src="0810/5L6G.gif"><td><img src="0810/5I6G.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6H.png">
+<td>none<br>(JD)<td><img src="0810/5S6H.gif"><td>none<br>(JD)<td><img src="0810/5P6H.gif"><td><img src="0810/5L6H.gif"><td><img src="0810/5I6H.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6I.png">
+<td><img src="0810/5T6I.gif"><td><img src="0810/5S6I.gif"><td><img src="0810/5R6I.gif"><td><img src="0810/5P6I.gif"><td><img src="0810/5L6I.gif"><td><img src="0810/5I6I.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6J.png">
+<td><img src="0810/5T6J.gif"><td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5P6J.gif"><td><img src="0810/5L6J.gif"><td><img src="0810/5I6J.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6K.png">
+<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5P6K.gif"><td><img src="0810/5L6K.gif"><td><img src="0810/5I6K.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6K'.png">
+<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5P6K'.gif"><td><img src="0810/5L6K'.gif"><td><img src="0810/5I6K'.png"><br>(MR)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6L.png">
+<td><img src="0810/5T6L.gif"><td><img src="0810/5S6L.gif"><td><img src="0810/5R6L.gif"><td><img src="0810/5P6L.gif"><td><img src="0810/5L6L.gif"><td><img src="0810/5I6L.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6M.png">
+<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5P6M.gif"><td><img src="0810/5L6M.gif"><td><img src="0810/5I6M.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6N.png">
+<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5P6N.gif"><td><img src="0810/5L6N.gif"><td><img src="0810/5I6N.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6O.png">
+<td><img src="0810/5T6O.gif"><td><img src="0810/5S6O.gif"><td><img src="0810/5R6O.gif"><td><img src="0810/5P6O.gif"><td><img src="0810/5L6O.gif"><td><img src="0810/5I6O.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6P.png">
+<td><img src="0810/5T6P.gif"><td><img src="0810/5S6P.gif"><td><img src="0810/5R6P.gif"><td><img src="0810/5P6P.gif"><td><img src="0810/5L6P.gif"><td><img src="0810/5I6P.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6Q.png">
+<td><img src="0810/5T6Q.png"><br>(GS)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5P6Q.gif"><td><img src="0810/5L6Q.gif"><td><img src="0810/5I6Q.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6R.png">
+<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5P6R.gif"><td><img src="0810/5L6R.gif"><td><img src="0810/5I6R.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6R'.png">
+<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5P6R'.gif"><td><img src="0810/5L6R'.gif"><td><img src="0810/5I6R'.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6S.png">
+<td><img src="0810/5T6S.gif"><td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5P6S.gif"><td><img src="0810/5L6S.gif"><td><img src="0810/5I6S.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6S'.png">
+<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5P6S'.gif"><td><img src="0810/5L6S'.gif"><td><img src="0810/5I6S'.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6T.png">
+<td>none<br>(JD)<td><img src="0810/5S6T.gif"><td>none<br>(JD)<td><img src="0810/5P6T.gif"><td><img src="0810/5L6T.gif"><td><img src="0810/5I6T.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6T'.png">
+<td>none<br>(JD)<td><img src="0810/5S6T'.gif"><td><img src="0810/5R6T'.png"><br>(GS)<td><img src="0810/5P6T'.gif"><td><img src="0810/5L6T'.gif"><td><img src="0810/5I6T'.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6U.png">
+<td><img src="0810/5T6U.gif"><td><img src="0810/5S6U.gif"><td><img src="0810/5R6U.gif"><td><img src="0810/5P6U.gif"><td><img src="0810/5L6U.gif"><td><img src="0810/5I6U.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6V.png">
+<td><img src="0810/5T6V.gif"><td><img src="0810/5S6V.gif"><td><img src="0810/5R6V.gif"><td><img src="0810/5P6V.gif"><td><img src="0810/5L6V.gif"><td><img src="0810/5I6V.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6V'.png">
+<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5P6V'.gif"><td><img src="0810/5L6V'.gif"><td><img src="0810/5I6V'.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6W.png">
+<td><img src="0810/5T6W.png"><br>(GS)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5P6W.gif"><td><img src="0810/5L6W.gif"><td><img src="0810/5I6W.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6W'.png">
+<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5P6W'.gif"><td><img src="0810/5L6W'.gif"><td><img src="0810/5I6W'.png"><br>(GS)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6X.png">
+<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5P6X.gif"><td><img src="0810/5L6X.gif"><td>?
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6X'.png">
+<td>none<br>(JD)<td>none<br>(GS)<td>none<br>(GS)<td><img src="0810/5P6X'.gif"><td><img src="0810/5L6X'.gif"><td><img src="0810/5I6X'.png"><br>(MR)
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6Y.png">
+<td><img src="0810/5T6Y.gif"><td><img src="0810/5S6Y.gif"><td><img src="0810/5R6Y.gif"><td><img src="0810/5P6Y.gif"><td><img src="0810/5L6Y.gif"><td><img src="0810/5I6Y.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6Y'.png">
+<td><img src="0810/5T6Y'.png"><br>(GS)<td><img src="0810/5S6Y'.gif"><td><img src="0810/5R6Y'.gif"><td><img src="0810/5P6Y'.gif"><td><img src="0810/5L6Y'.gif"><td><img src="0810/5I6Y'.gif">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6Z.png">
+<td>none<br>(JD)<td>none<br>(JD)<td>none<br>(JD)<td><img src="0810/5P6Z.gif"><td><img src="0810/5L6Z.gif"><td>?
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/6Z'.png">
+<td>none<br>(JD)<td>none<br>(GS)<td>none<br>(GS)<td><img src="0810/5P6Z'.gif"><td><img src="0810/5L6Z'.gif"><td><img src="0810/5I6Z'.gif">
+</table><p>
+
+George Sicherman and Patrick Hamlyn sent hex-hex and hept-hept pictures.  George has more pictures, which are color-coded and have areas, while Patrick's tilings are all minimal.  George's hex-hex pictures are <a href="0810/hex.png">here</a> and <a href="0810/hex2.png">here</a>, while Patrick's are <a href="0810/hex.gif">here</a>.  George's hept-hept pictures are <a href="0810/hept1.png">here</a>, <a href="0810/hept2.png">here</a>, and <a href="0810/hept3.png">here</a>, while Patrick's are <a href="0810/hept.gif">here</a>.<p>
+
+George Sicherman also sent <a href="0810/tet-hept.png">1</a> tet-hept picture, <a href="0810/pent-hept1.png">1</a> <a href="0810/pent-hept2.png">2</a> pent-hept pictures, <a href="0810/pent-oct1.png">1</a> <a href="0810/pent-oct2.png">2</a> <a href="0810/pent-oct3.png">3</a> <a href="0810/pent-oct4.png">4</a> <a href="0810/pent-oct5.png">5</a> <a href="0810/pent-oct6.png">6</a> <a href="0810/pent-oct7.png">7</a> <a href="0810/pent-oct8.png">8</a> pent-oct pictures, and <a href="0810/hex-hept1.png">1</a> <a href="0810/hex-hept2.png">2</a> <a href="0810/hex-hept3.png">3</a> <a href="0810/hex-hept4.png">4</a> <a href="0810/hex-hept5.png">5</a> hex-hept pictures.<p>
+
+George Sicherman also investigated tiling tilted rectangles with two different polyominoes:<p>
+
+<center><font size=+2>Tetrominoes and Tetrominoes</font></center>
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center>
+<td><img src="0810/norp44.png">
+</table><p>
+
+<center><font size=+2>Tetrominoes and Pentominoes</font></center>
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center>
+<td><img src="0810/norp45.png">
+</table><p>
+
+<center><font size=+2>Tetrominoes and Hexominoes</font></center>
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center>
+<td><img src="0810/norp46.png">
+</table><p>
+
+<center><font size=+2>Pentominoes and Pentominoes</font></center>
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center>
+<td><img src="0810/norp55.png">
+</table><p>
+
+<center><font size=+2>Pentominoes and Hexominoes</font></center>
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center>
+<td><img src="0810/norp56.png">
+</table><p>
+
+<center><font size=+2>Hexominoes and Hexominoes</font></center>
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center>
+<td><img src="0810/norp66.png">
+</table><p>
+
+George Sicherman also investigated tiling a rectangle with two different polyaboloes:<p>
+
+<center><font size=+2>Small Polyaboloes and Small Polyaboloes</font></center>
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center bgcolor=EEEEEE><th>
+<th><img src="0810/a3o.png">
+<th><img src="0810/a3u.png">
+<th><img src="0810/a3j.png">
+<th><img src="0810/a3i.png">
+<th><img src="0810/a2o.png">
+<th><img src="0810/a2i.png">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a2a.png">
+<td><img src="0810/a2a3o.png"><p><img src="0810/a2a3oa.png">
+<td><img src="0810/a2a3u.png"><p><img src="0810/a2a3ua.png">
+<td><img src="0810/a2a3j.png"><p><img src="0810/a2a3ja.png">
+<td><img src="0810/a2a3i.png"><p><img src="0810/a2a3ia.png">
+<td><img src="0810/a2a2o.png"><p><img src="0810/a2a2oa.png">
+<td><img src="0810/a2a2i.png"><p><img src="0810/a2a2ia.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a2i.png">
+<td><img src="0810/a2i3o.png">
+<td>none
+<td><img src="0810/a2i3ja.png">
+<td>none
+<td>none
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a2o.png">
+<td><img src="0810/a2o3o.png">
+<td><img src="0810/a2o3ua.png">
+<td><img src="0810/a2o3ja.png">
+<td>none
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a3i.png">
+<td><img src="0810/a3i3o.png"><p><img src="0810/a3i3oa.png">
+<td><img src="0810/a3i3ua.png">
+<td><img src="0810/a3i3ja.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a3j.png">
+<td><img src="0810/a3j3o.png"><p><img src="0810/a3j3oa.png">
+<td><img src="0810/a3j3ua.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a3u.png">
+<td><img src="0810/a3o3u.png"><p><img src="0810/a3o3ua.png">
+</table><p>
+
+
+
+<center><font size=+2>Small Polyaboloes and Tetraboloes</font></center>
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center bgcolor=EEEEEE><th>
+<th><img src="0810/a3o.png">
+<th><img src="0810/a3u.png">
+<th><img src="0810/a3j.png">
+<th><img src="0810/a3i.png">
+<th><img src="0810/a2o.png">
+<th><img src="0810/a2i.png">
+<th><img src="0810/a2a.png">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4a.png">
+<td><img src="0810/a3o4a.png"><p><img src="0810/a3o4aa.png">
+<td>?
+<td><img src="0810/a3j4a.png"><p><img src="0810/a3j4aa.png">
+<td><img src="0810/a3i4a.png"><p><img src="0810/a3i4aa.png">
+<td><img src="0810/a2o4a.png"><p><img src="0810/a2o4aa.png">
+<td><img src="0810/a2i4a.png"><p><img src="0810/a2i4aa.png">
+<td><img src="0810/a2a4a.png"><p><img src="0810/a2a4aa.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4c.png">
+<td><img src="0810/a3o4c.png">
+<td>?
+<td><img src="0810/a3j4ca.png">
+<td>?
+<td>none
+<td>none
+<td><img src="0810/a2a4c.png"><p><img src="0810/a2a4ca.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4d.png">
+<td><img src="0810/a3o4d.png">
+<td>?
+<td><img src="0810/a3j4d.png"><p><img src="0810/a3j4da.png">
+<td>?
+<td><img src="0810/a2o4d.png">
+<td>none
+<td><img src="0810/a2a4d.png"><p><img src="0810/a2a4da.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4g.png">
+<td><img src="0810/a3o4g.png">
+<td><img src="0810/a3u4ga.png">
+<td><img src="0810/a3j4ga.png">
+<td><img src="0810/a3i4ga.png">
+<td>none
+<td><img src="0810/a2i4ga.png">
+<td><img src="0810/a2a4g.png"><p><img src="0810/a2a4ga.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4i.png">
+<td><img src="0810/a3o4i.png">
+<td>?
+<td><img src="0810/a3j4ia.png">
+<td>?
+<td><img src="0810/a2o4i.png">
+<td>none
+<td><img src="0810/a2a4i.png"><p><img src="0810/a2a4ia.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4j.png">
+<td><img src="0810/a3o4j.png"><p><img src="0810/a3o4ja.png">
+<td><img src="0810/a3u4ja.png">
+<td><img src="0810/a3j4ja.png">
+<td><img src="0810/a3i4ja.png">
+<td>none
+<td><img src="0810/a2i4ja.png">
+<td><img src="0810/a2a4j.png"><p><img src="0810/a2a4ja.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4k.png">
+<td><img src="0810/a3o4k.png">
+<td><img src="0810/a3u4k.png">
+<td><img src="0810/a3j4k.png"><p><img src="0810/a3j4ka.png">
+<td><img src="0810/a3i4k.png"><p><img src="0810/a3i4ka.png">
+<td><img src="0810/a2o4k.png">
+<td><img src="0810/a2i4k.png">
+<td><img src="0810/a2a4k.png"><p><img src="0810/a2a4ka.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4l.png">
+<td><img src="0810/a3o4l.png">
+<td>?
+<td><img src="0810/a3j4la.png">
+<td>?
+<td>none
+<td>none
+<td><img src="0810/a2a4l.png"><p><img src="0810/a2a4la.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4o.png">
+<td><img src="0810/a3o4o.png">
+<td>?
+<td><img src="0810/a3j4oa.png">
+<td><img src="0810/a3i4oa.png">
+<td>none
+<td>none
+<td><img src="0810/a2a4o.png"><p><img src="0810/a2a4oa.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4r.png">
+<td><img src="0810/a3o4r.png"><p><img src="0810/a3o4ra.png">
+<td><img src="0810/a3u4ra.png">
+<td><img src="0810/a3j4ra.png">
+<td><img src="0810/a3i4ra.png">
+<td><img src="0810/a2o4r.png"><p><img src="0810/a2o4ra.png">
+<td><img src="0810/a2i4ra.png">
+<td><img src="0810/a2a4r.png"><p><img src="0810/a2a4ra.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4s.png">
+<td><img src="0810/a3o4s.png">
+<td>?
+<td><img src="0810/a3j4sa.png">
+<td><img src="0810/a3i4sa.png">
+<td>none
+<td>none
+<td>none
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4v.png">
+<td><img src="0810/a3o4v.png">
+<td>?
+<td><img src="0810/a3j4va.png">
+<td>?
+<td>none
+<td>none
+<td><img src="0810/a2a4v.png"><p><img src="0810/a2a4va.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4y.png">
+<td><img src="0810/a3o4y.png">
+<td>?
+<td><img src="0810/a3j4ya.png">
+<td>?
+<td>none
+<td>none
+<td><img src="0810/a2a4y.png"><p><img src="0810/a2a4ya.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4z.png">
+<td><img src="0810/a3o4z.png">
+<td>?
+<td><img src="0810/a3j4za.png">
+<td>?
+<td>none
+<td>none
+<td><img src="0810/a2a4z.png"><p><img src="0810/a2a4za.png">
+</table><p>
+
+
+
+
+<center><font size=+2>Tetraboloes and Tetraboloes</font></center>
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center bgcolor=EEEEEE><th>
+<th><img src="0810/a4z.png">
+<th><img src="0810/a4y.png">
+<th><img src="0810/a4v.png">
+<th><img src="0810/a4s.png">
+<th><img src="0810/a4r.png">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4a.png">
+<td><img src="0810/a4a4z.png"><p><img src="0810/a4a4za.png">
+<td><img src="0810/a4a4y.png"><p><img src="0810/a4a4ya.png">
+<td><img src="0810/a4a4v.png"><p><img src="0810/a4a4va.png">
+<td>?
+<td><img src="0810/a4a4r.png"><p><img src="0810/a4a4ra.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4c.png">
+<td>none<td>?<td>?<td>none<td><img src="0810/a4c4ra.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4d.png">
+<td>?<td>?<td>?<td>?<td><img src="0810/a4d4r.png"><p><img src="0810/a4d4ra.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4g.png">
+<td>?
+<td><img src="0810/a4g4ya.png">
+<td><img src="0810/a4g4va.png">
+<td><img src="0810/a4g4sa.png">
+<td><img src="0810/a4g4ra.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4i.png">
+<td>none<td>?<td>?<td>?<td><img src="0810/a4i4r.png"><p><img src="0810/a4i4ra.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4j.png">
+<td><img src="0810/a4j4za.png">
+<td><img src="0810/a4j4ya.png">
+<td><img src="0810/a4j4va.png">
+<td><img src="0810/a4j4sa.png">
+<td><img src="0810/a4j4ra.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4k.png">
+<td>?<td><img src="0810/a4k4y.png"><td><img src="0810/a4k4v.png"><td>?<td><img src="0810/a4k4r.png"><p><img src="0810/a4k4ra.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4l.png">
+<td>?<td>?<td>?<td>?<td><img src="0810/a4l4ra.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4o.png">
+<td>?<td>?<td>?<td>?<td><img src="0810/a4o4ra.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4r.png">
+<td>?<td><img src="0810/a4r4ya.png"><td><img src="0810/a4r4va.png"><td><img src="0810/a4r4sa.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4s.png">
+<td>?<td>?<td>?
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4v.png">
+<td>?<td>?
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4y.png">
+<td>?
+</table><p>
+
+
+<table align=center border=1 cellpadding=7 bgcolor=white>
+<tr align=center bgcolor=EEEEEE><th>
+<th><img src="0810/a4o.png">
+<th><img src="0810/a4l.png">
+<th><img src="0810/a4k.png">
+<th><img src="0810/a4j.png">
+<th><img src="0810/a4i.png">
+<th><img src="0810/a4g.png">
+<th><img src="0810/a4d.png">
+<th><img src="0810/a4c.png">
+
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4a.png">
+<td><img src="0810/a4a4o.png"><p><img src="0810/a4a4oa.png">
+<td><img src="0810/a4a4l.png"><p><img src="0810/a4a4la.png">
+<td><img src="0810/a4a4k.png"><p><img src="0810/a4a4ka.png">
+<td><img src="0810/a4a4j.png"><p><img src="0810/a4a4ja.png">
+<td><img src="0810/a4a4i.png"><p><img src="0810/a4a4ia.png">
+<td><img src="0810/a4a4g.png"><p><img src="0810/a4a4ga.png">
+<td><img src="0810/a4a4d.png"><p><img src="0810/a4a4da.png">
+<td><img src="0810/a4a4c.png"><p><img src="0810/a4a4ca.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4c.png">
+<td>?<td>?<td><img src="0810/a4c4k.png"><td><img src="0810/a4c4ja.png"><td>?<td><img src="0810/a4c4ga.png"><td><img src="0810/a4c4d.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4d.png">
+<td>?<td>?<td><img src="0810/a4d4k.png"><td><img src="0810/a4d4j.png"><p><img src="0810/a4d4ja.png"><td>?<td>?
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4g.png">
+<td><img src="0810/a4g4oa.png">
+<td><img src="0810/a4g4la.png">
+<td><img src="0810/a4g4k.png"><p><img src="0810/a4g4ka.png">
+<td><img src="0810/a4g4ja.png">
+<td>?
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4i.png">
+<td>none<td>none<td>?<td>?
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4j.png">
+<td><img src="0810/a4j4oa.png">
+<td><img src="0810/a4j4la.png">
+<td><img src="0810/a4j4k.png"><p><img src="0810/a4j4ka.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4k.png">
+<td>?<td><img src="0810/a4k4l.png">
+<tr align=center><th bgcolor=EEEEEE><img src="0810/a4l.png">
+
+<td>?</table><p>
+
+
+
+
+
+<hr><font size=+2>2.</font><p>
+
+Here are the best-known impossible values for n for reptile polyominoes of area 6 or less:<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0810/O1.gif" align=center> 
+<td><img src="0810/I3.gif" align=center> 
+<td><img src="0810/I4.gif" align=center> 
+<td><img src="0810/O4.gif" align=center> 
+<td><img src="0810/I5.gif" align=center>
+<td><img src="0810/I6.gif" align=center>
+<td><img src="0810/O6.gif" align=center>
+<td>2, 3, 5
+<td>4<br><img src="0810/O1-4.gif">
+<td>6<br><img src="0810/O1-6.gif">
+<td>8<br><img src="0810/O1-8.gif">
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0810/I2.gif" align=center><td>2, 3
+<td>4<br><img src="0810/I2-4.gif">
+<td>5<br><img src="0810/I2-5.gif">
+<td>6<br><img src="0810/I2-6.gif">
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0810/L3.gif" align=center>
+<td><img src="0810/P6.gif" align=center>
+<td>2, 3, 5, 8
+<td>4<br><img src="0810/L3-4.gif">
+<td>6<br><img src="0810/L3-6.gif">
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0810/L4.gif" align=center><td>2, 3, 5, 6
+<td>4<br><img src="0810/L4-4.gif"><br>&nbsp;
+<td>8<br><img src="0810/L4-8.gif"><br>(AS)
+<td>9<br><img src="0810/L4-9.gif"><br>&nbsp;
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0810/T4.gif" align=center><td>2-15, 17, 18, 21
+<td>16<br><img src="0810/T4-16.gif"><br>&nbsp;
+<td>19<br><img src="0810/T4-19.gif"><br>(JD)
+<td>20<br><img src="0810/T4-20.gif"><br>(JD)
+<td>22<br><img src="0810/T4-22.gif"><br>(JD)
+<td>24<br><img src="0810/T4-24.gif"><br>(JD)
+<td>25<br><img src="0810/T4-25.gif"><br>(JD)
+<td>29<br><img src="0810/T4-29.gif"><br>(MM)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0810/P5.gif" align=center><td>2, 3, 5, 8
+<td>4<br><img src="0810/P5-4.gif">
+<td>6<br><img src="0810/P5-6.gif">
+<td>11<br><img src="0810/P5-11.gif">
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0810/L5.gif" align=center><td>2-9, 11, 12
+<td>10<br><img src="0810/L5-10.gif"><br>&nbsp;
+<td>13<br><img src="0810/L5-13.gif"><br>(JD)
+<td>14<br><img src="0810/L5-14.gif"><br>(MM)
+<td>15<br><img src="0810/L5-15.gif"><br>(AS)
+<td>17<br><img src="0810/L5-17.gif"><br>(MM)
+<td>18<br><img src="0810/L5-18.gif"><br>&nbsp;
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0810/L6.gif" align=center><td>2-11
+<td>12<br><img src="0810/L6-12.gif"><br>(JD)
+<td>13<br><img src="0810/L6-13.gif"><br>&nbsp;
+<td>14<br><img src="0810/L6-14.gif"><br>&nbsp;
+<td>15<br><img src="0810/L6-15.gif"><br>(AS)
+<td>16<br><img src="0810/L6-16.gif"><br>(MM)
+<td>17<br><img src="0810/L6-17.gif"><br>(AS)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0810/V6.gif" align=center><td>2-8, 10, 12
+<td>9<br><img src="0810/V6-9.gif"><br>&nbsp;
+<td>11<br><img src="0810/V6-11.gif"><br>(AS)
+<td>13<br><img src="0810/V6-13.gif"><br>(GS)
+<td>14<br><img src="0810/V6-14.gif"><br>(AS)
+<td>16<br><img src="0810/V6-16.gif"><br>(AS)
+<td>18<br><img src="0810/V6-18.gif"><br>&nbsp;
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0810/J6.gif" align=center><td>2-17, 20-21, 25
+<td>18<br><img src="0810/J6-18.gif"><br>&nbsp;
+<td>19<br><img src="0810/J6-19.gif"><br>(GS)
+<td>22<br><img src="0810/J6-22.gif"><br>&nbsp;
+<td>23<br><img src="0810/J6-23.gif"><br>&nbsp;
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0810/W6.gif" align=center><td>2-7, 9-13, 16, 17
+<td>8<br><img src="0810/W6-8.gif"><br>&nbsp;
+<td>19<br><img src="0810/W6-19.gif"><br>(JD)
+<td>23<br><img src="0810/W6-23.gif"><br>(MM)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0810/D6.gif" align=center><td>2-29, 33, 35, 39, 42
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>30<br><img src="0810/D6-30.gif"><br>(GS)
+<td>31<br><img src="0810/D6-31.gif"><br>(AS)
+<td>32<br><img src="0810/D6-32.gif"><br>&nbsp;
+<td>34<br><img src="0810/D6-34.gif"><br>(MM)
+<td>36<br><img src="0810/D6-36.gif"><br>&nbsp;
+<td>37<br><img src="0810/D6-37.gif"><br>(MM)
+<td>38<br><img src="0810/D6-38.gif"><br>(MM)
+<td>40<br><img src="0810/D6-40.gif"><br>&nbsp;
+<td>41<br><img src="0810/D6-41.gif"><br>(MM)
+<td>45<br><img src="0810/D6-45.gif"><br>(JD)
+<td>47<br><img src="0810/D6-47.gif"><br>(JD)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0810/F6.gif" align=center><td>2-21, 23-25, 27, 29, 31, 35
+<td>22<br><img src="0810/F6-22.gif"><br>&nbsp;
+<td>26<br><img src="0810/F6-26.gif"><br>(JD)
+<td>30<br><img src="0810/F6-30.gif"><br>(MM)
+<td>33<br><img src="0810/F6-33.gif"><br>(JD)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0810/Y5.gif" align=center><td>2-39, 41, 42, 45, 47, 48, 50, 51, 53, 54, 57</table><p>
+
+<table align=center cellpadding=10>
+<tr align=center>
+<td>40<br><img src="0810/Y5-40.gif"><br>&nbsp;
+<td>43<br><img src="0810/Y5-43.gif"><br>(JD)
+<td>44<br><img src="0810/Y5-44.gif"><br>(JD)
+<td>46<br><img src="0810/Y5-46.gif"><br>(JD)
+<td>49<br><img src="0810/Y5-49.gif"><br>(JD)
+<td>56<br><img src="0810/Y5-56.gif"><br>(MM)
+<td>59<br><img src="0810/Y5-59.gif"><br>(MM)
+<td>60<br><img src="0810/Y5-60.gif"><br>(JD)
+<td>62<br><img src="0810/Y5-62.gif"><br>(JD)
+<td>63<br><img src="0810/Y5-63.gif"><br>(JD)
+<td>71<br><img src="0810/Y5-71.gif"><br>(MM)
+<td>81<br><img src="0810/Y5-81.gif"><br>(MR)
+</table><p>
+
+<center><img src="0810/G6.gif" align=center> &nbsp; 2-62, 64, 65, 67, 68, 70, 71, 73, 74, 76, 77, 79, 80, 82-124, 126, 127, 129, 130, 132, 133, 135,<br>136, 138, 139, 142, 145, 148, 151, 154, 160, 173, 175, 179, 185, 191, 197</center>
+<table align=center cellpadding=10><tr align=center>
+<td>141<br><img src="0810/G6-141.gif"><br>(JD)
+<td>144<br><img src="0810/G6-144.gif"><br>(MM)
+<td>146<br><img src="0810/G6-146.gif"><br>(AS)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>147<br><img src="0810/G6-147.gif"><br>&nbsp;
+<td>162<br><img src="0810/G6-162.gif"><br>(AS)
+<td>163<br><img src="0810/G6-163.gif"><br>(AS)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>164<br><img src="0810/G6-164.gif"><br>(AS)
+<td>165<br><img src="0810/G6-165.gif"><br>(AS)
+<td>167<br><img src="0810/G6-167.gif"><br>(AS)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>63<br><img src="0810/G6-63.gif"><br>(LZ)
+<td>66<br><img src="0810/G6-66.png"><br>(MR)
+<td>69<br><img src="0810/G6-69.png"><br>(MR)
+<td>72<br><img src="0810/G6-72.png"><br>(MR)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>75<br><img src="0810/G6-75.png"><br>(MR)
+<td>78<br><img src="0810/G6-78.png"><br>(MR)
+<td>81<br><img src="0810/G6-81.gif"><br>(MR)
+<td>169<br><img src="0810/G6-169.gif"><br>(MR)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0810/Y6.gif" align=center><td>?
+<td>888<br><img src="0810/Y6-888.png"><br>(JD)
+</table><p>
+
+<center><img src="0810/P7.gif" align=center> &nbsp; 2-16, 18, 21</center>
+<table align=center cellpadding=10><tr align=center>
+<td>17<br><img src="0810/P7-17.png"><br>(MR)
+<td>19<br><img src="0810/P7-19.png"><br>(MR)
+<td>20<br><img src="0810/P7-20.png"><br>(MR)
+<td>22<br><img src="0810/P7-22.png"><br>(MR)
+<td>23<br><img src="0810/P7-23.png"><br>(MR)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>24<br><img src="0810/P7-24.png"><br>(MR)
+<td>25<br><img src="0810/P7-25.png"><br>(MR)
+<td>26<br><img src="0810/P7-26.png"><br>(MR)
+<td>27<br><img src="0810/P7-27.png"><br>(MR)
+<td>28<br><img src="0810/P7-28.png"><br>(MR)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>29<br><img src="0810/P7-29.png"><br>(MR)
+<td>30<br><img src="0810/P7-30.png"><br>(MR)
+<td>31<br><img src="0810/P7-31.png"><br>(MR)
+<td>32<br><img src="0810/P7-32.png"><br>(MR)
+<td>34<br><img src="0810/P7-34.png"><br>(MR)
+</table><p>
+
+<center><img src="0810/P10.gif" align=center> &nbsp; 2-16, 18, 19, 21, 24</center>
+<table align=center cellpadding=10><tr align=center>
+<td>17<br><img src="0810/P10-17.png"><br>(MR)
+<td>20<br><img src="0810/P10-20.png"><br>(MR)
+<td>22<br><img src="0810/P10-22.png"><br>(MR)
+<td>23<br><img src="0810/P10-23.png"><br>(MR)
+<td>25<br><img src="0810/P10-25.png"><br>(MR)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>26<br><img src="0810/P10-26.png"><br>(MR)
+<td>27<br><img src="0810/P10-27.png"><br>(MR)
+<td>28<br><img src="0810/P10-28.png"><br>(MR)
+<td>29<br><img src="0810/P10-29.png"><br>(MR)
+<td>30<br><img src="0810/P10-30.png"><br>(MR)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>31<br><img src="0810/P10-31.png"><br>(MR)
+<td>32<br><img src="0810/P10-32.png"><br>(MR)
+<td>34<br><img src="0810/P10-34.png"><br>(MR)
+<td>35<br><img src="0810/P10-35.png"><br>(MR)
+<td>37<br><img src="0810/P10-37.png"><br>(MR)
+<td>40<br><img src="0810/P10-40.png"><br>(MR)
+</table><p>
+
+<hr><font size=+2>3.</font><p>
+
+Here are the known rectifiable polykings (most by George Sicherman):<p>
+
+<center><font size=+2>4-Kings</font></center>
+<center><img src="0810/k4rect.png"></center><p>
+
+<center><font size=+2>5-Kings</font></center>
+<center><img src="0810/k5rect.png"></center><p>
+
+
+
+<hr><font size=+2>4.</font><p>
+
+Here are the smallest known orders for non-polyomino reptile polykings:<p>
+
+<table align=center border=1 bgcolor=white cellpadding=10>
+<tr align=center>
+<td><img src="0810/k2I.gif"><br> order 4
+<td><img src="0810/k3J.gif"><br>order 10 (BH)
+<td><img src="0810/k3V.gif"><br>order 18
+</table><p>
+
+<table align=center border=1 bgcolor=white cellpadding=10>
+<tr align=center>
+<td><img src="0810/k4I.gif"><br>order 4
+<td><img src="0810/k4J.gif"><br>order 10
+<td><img src="0810/k4C.gif"><br>order 10
+<tr align=center>
+<td><img src="0810/k4K.gif"><br>order 10 (MM) (AS)
+<td><img src="0810/k4U.gif"><br>order 10 (MM) (AS)
+<td><img src="0810/k4L.gif"><br>order 16 (MM) (AS)
+<tr align=center>
+<td><img src="0810/k4M.gif"><br>order 16 (MM) (AS)
+<td><img src="0810/k4Z.gif"><br>order 16 (MM) (AS)
+<td><img src="0810/k4N.gif" width=200><br>order 104 (GS)
+<tr align=center>
+<td colspan=3><img src="0810/k4R.png"><br>order 193 (GS)
+<tr align=center>
+<td colspan=3><img src="0810/k4T.png"><br>order 432 (GS)
+</table><p>
+
+<table align=center border=1 bgcolor=white cellpadding=10>
+<tr align=center>
+<td><img src="0810/k5Q.gif"><br>order 13 (MM)
+<td><img src="0810/k5I.gif"><br>order 18 (MM)
+<td><img src="0810/k5J.gif"><br>order 17 (GS)
+<tr align=center>
+<td><img src="0810/k5P.gif"><br>order 26 (MM)
+<td><img src="0810/k5W.gif"><br>order 26 (MM)
+<td><img src="0810/k5U.gif"><br>order 28 (AS)
+<tr align=center>
+<td><img src="0810/k5V.gif"><br>order 28 (AS)
+<td><img src="0810/k5S.gif"><br>order 28 (AS)
+<td><img src="0810/k5F.gif"><br>order 34 (AS)
+<tr align=center>
+<td><img src="0810/k5D.gif"><br>order 34 (AS)
+<td><img src="0810/k5E.gif"><br>order 40 (AS)
+<td><img src="0810/k5H.gif"><br>order 88 (MM)
+<tr align=center>
+<td><img src="0810/k5G.gif"><br>order 104 (MM)
+<td><img src="0810/k5C.gif"><br>order 136 (MM)
+<td><img src="0810/k5B.gif" width=200><br>order 56 (BH)
+<tr align=center>
+<td colspan=3><img src="0810/k5A.png"><br>order 136 (GS)
+<tr align=center>
+<td colspan=3><img src="0810/k5K.png"><br>order 116 (BH)
+<tr align=center>
+<td colspan=3><img src="0810/k5L.png"><br>order 280 (GS)
+<tr align=center>
+<td colspan=3><img src="0810/k5M.png"><br>order 280 (GS)
+<tr align=center>
+<td colspan=3><img src="0810/k5G.png"><br>order 1360 (GS)
+</table><p>
+
+George Sicherman also investigated polymings:<p>
+
+<table align=center border=1 bgcolor=white cellpadding=10>
+<tr align=center>
+<td><img src="0810/q1-1.png"><br>order 4
+<td><img src="0810/q2-1.png"><br>order 4
+<td><img src="0810/q2-2.png"><br>order 10
+<td><img src="0810/q3-1.png"><br>order 4
+<td><img src="0810/q3-2.png"><br>order 9
+<td><img src="0810/q3-3.png"><br>order 9
+<td><img src="0810/q3-9.png"><br>order 9
+<td><img src="0810/q3-5.png"><br>order 20
+<td><img src="0810/q3-10.png"><br>order 38 (BH)
+</table><p>
+
+<table align=center border=1 bgcolor=white cellpadding=10>
+<tr align=center>
+<td><img src="0810/q4-66.png"><br>order 4
+<td><img src="0810/q4-1.png"><br>order 4
+<td><img src="0810/q4-3.png"><br>order 15
+<td><img src="0810/q4-2.png"><br>order 18
+<td><img src="0810/q4-8.png"><br>order 36 (BH)
+</table><p>
+
+<table align=center border=1 bgcolor=white cellpadding=10>
+<tr align=center>
+<td><img src="0810/q4-32.png"><br>order 44
+<td><img src="0810/q5-1.png"><br>order 10
+</table><p>
+<p><hr color=black><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 3/28/17.<font></BODY></HTML>
+

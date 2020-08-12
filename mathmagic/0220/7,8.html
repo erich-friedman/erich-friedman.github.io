@@ -1,0 +1,19 @@
+<HTML>
+<CENTER>n=7 players, N=8 games:</CENTER>
+<pre>
+A plays B.  By symmetry, assume A wins.  A plays C
+IF A WINS, D vs E, F vs G, winners play, and winner plays A best-of-3
+IF C WINS, C plays D
+   IF C WINS, E plays F.  By symmetry, assume E wins.  E plays G
+      IF E WINS, C plays E best-of-3
+      IF G WINS, C plays G
+         IF C WINS, C plays E twice (C wins ties)
+         IF G WINS, C plays G twice (G wins ties)
+   IF D WINS, A plays E
+      IF A WINS, A plays C
+         IF A WINS, F plays G, the winner plays D, and the winner plays A
+         IF C WINS, F plays G, the winner plays C, and the winner plays D
+      IF E WINS, D plays E
+         IF D WINS, D plays F, D plays G, and the winners play
+         IF E WINS, B plays F, the winner plays G, and the winner plays E
+</pre>

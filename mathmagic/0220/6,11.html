@@ -1,0 +1,50 @@
+<HTML>
+<CENTER>n=5 players, N=11 games:</CENTER>
+<pre>
+A plays B, say A wins by symmetry.  C plays D, say C wins by symmetry.  A plays C, say A wins by symmetry.
+A plays E
+IF A WINS, A plays C
+  IF A WINS, A plays F
+    IF A WINS, A plays D
+      IF A WINS, B plays E, and winner plays A 3 times and needs to win them all
+      IF D WINS, D plays A 4 times (A wins ties)
+    IF F WINS, A plays F twice more
+      IF A WINS BOTH, D plays A 3 times and needs to win them all
+      IF THEY SPLIT, A plays F best-of-3
+      IF F WINS BOTH, A plays D, and winner plays F twice (F wins ties)
+  IF C WINS, C plays F
+    IF C WINS, C plays A best-of-5
+    IF F WINS, A plays C
+      IF A WINS, A plays F
+        IF A WINS, D plays F and winner plays A twice (A wins ties)
+        IF F WINS, A plays F best-of-3
+      IF C WINS, A plays C again
+        IF A WINS, A plays F
+          IF A WINS, C plays A twice (A wins ties)
+          IF F WINS, A plays F twice (F wins ties)
+        IF C WINS, C plays F best-of-3
+IF E WINS, A plays F
+  IF A WINS, C plays E
+    IF C WINS, A plays C
+      IF A WINS, C plays E
+        IF C WINS, C plays E, and winner plays A twice (A wins ties)
+        IF E WINS, A plays E best-of-3
+      IF C WINS, A plays E
+        IF A WINS, A plays C best-of-3
+        IF E WINS, C plays E
+          IF C WINS, A plays C twice (C wins ties)
+          IF E WINS, C plays E twice (E wins ties)
+    IF E WINS, A plays E twice
+      IF A WINS BOTH, D plays E, and winner plays A twice (A wins ties)
+      IF THEY SPLIT, A plays E best-of-3
+      IF E WINS BOTH, D plays E 3 times and needs to win them all
+  IF F WINS, E plays F.  Assume E wins by symmetry.  C plays F
+    IF C WINS, A plays C
+      IF A WINS, A plays E
+        IF A WINS, E plays A twice (A wins ties)
+        IF E WINS, C plays E twice (E wins ties)
+      IF C WINS, C plays E best-of-3
+    IF F WINS, E plays F
+      IF E WINS, A plays F, and winner plays E twice (E wins ties)
+      IF F WINS, E plays F best-of-3
+</pre>

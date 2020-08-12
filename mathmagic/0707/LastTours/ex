@@ -1,0 +1,19 @@
+<HTML>
+<body><form>Most of the examples are taken from the Friedman's 
+<a href=http://www.stetson.edu/~efriedma/mathmagic/0707.html>MathMagic</a> page, where one can also find a starting position of the pieces for the non-attacking tour. The examples for Kings and Queens are due to <a href="mailto:dbevan@emtex.com">David Bevan</a>.<hr> 
+<table><tr><td><B>#&nbsp;Pieces&nbsp;</B></td><td><B>board</B></td><td><B>code</B></td></tr>
+<tr><td>2&nbsp;Rooks</td><td>2X6</td><td>666662444448</td></tr>
+<tr><td>2&nbsp;Rooks</td><td>3X4</td><td>666224842488</td></tr>
+<tr><td>3&nbsp;Rooks</td><td>3X6</td><td>666662248424842488</td></tr>
+<tr><td>2&nbsp;Rooks</td><td>3X8</td><td>666268666224842444842488</td></tr>
+<tr><td>4&nbsp;Rooks</td><td>4Xn</td><td>6666662444442666662444444888</td></tr>
+<tr><td colspan=3><hr></td></tr>
+<tr><td>3&nbsp;Kings</td><td>3X5</td><td>662961624444867</td></tr>
+<tr><td>5&nbsp;Kings</td><td>4X6</td><td>383862929222727248181888</td></tr>
+<tr><td colspan=3><hr></td></tr>
+<tr><td>2&nbsp;Queens</td><td>3X8</td><td>383838629292922444444488</td></tr>
+<tr><td>6&nbsp;Queens</td><td>6X12</td><td>631697663244996334489661367961622243447694413448944432449744361449488867
+<tr><td colspan=3><hr></td></tr>
+<tr><td></td><td></td><td><button type="button" onclick="javascript:history.go(-1)">BACK</button></td></tr>
+</table></form></body></html>
+

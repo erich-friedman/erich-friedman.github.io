@@ -1,0 +1,176 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (August 2007)</H1></CENTER>
+
+In <a href="http://www.stetson.edu/~efriedma/mathmagic/1099.html">October 1999</a>, we investigated stacking vertical squares.  This month we investigate 2 problems involving stacking horizontal squares.<p>
+
+<font size=+2>Problem #1:</font><p> Assume we have squares with sides 1, 2, 3, . . . n of fixed thickness 1.  By stacking them flat, what is the largest connected area A<sub>k</sub>(n) of height k that we can produce?  Each square must either be on the lowest level or be fully supported by one or more squares below.  What are the values of A<sub>k</sub>(n) for large k and n?<p>
+
+<font size=+2>Problem #2:</font><p> Assume we have a bunch of cubes of side 1.  We want to stack them so that for every i, the boundary of level i+1 is contained within the interior of the boundary of level i.  What is the fewest number of cubes C<sub>k</sub>(n) that we need to have n cubes on level k?  What are the values of C<sub>k</sub>(n) for large k and n?
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+<font size=+2>Problem #1:</font><p>
+
+Since the combined area of squares of sides 1 through n is n(n+1)(2n+1)/6, an upper bound is A<sub>k</sub>(n) &le; S<sub>k</sub>(n) = n(n+1)(2n+1)/6k.<p>
+
+David Bevan defined the waste w<sub>2</sub>(n)=2[S<sub>2</sub>(n)&ndash;A<sub>2</sub>(n)], the area of the lower layer not covered by the upper layer.  He showed how to build a cell, 8 consecutive squares placed so that the waste is exactly 16.  From this he gets the lower bound A<sub>2</sub>(n) &ge; S(n)&ndash;n+4 for n&ge;8.<p>
+
+He improves this by showing how to build a supercell, 40 consecutive squares made from 5 cells with a waste of exactly 48.  From this he gets a better lower bound A<sub>2</sub>(n) &ge; S<sub>2</sub>(n)&ndash;(3n+48)/5 for n&ge;40.<p>
+
+<center><font size=+2>Best Known Lower Bounds for A<sub>k</sub>(n)</font></center>
+<TABLE BORDER=1 cellpadding=5 align=center bgcolor=FFFFDD>
+<TR bgcolor=99FF99><th>k \ n<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12<th>13<th>14<th>15
+<TR align=center><th bgcolor=99FF99>2<td>0<td>1<td>5<td>10<td>21<td>41<td>65<td>98<td>138<td>187<td>247<td>318<td>403<td>500<td>611
+<TR align=center><th bgcolor=99FF99>3<td>0<td>0<td>1<td>5<td>10<td>17<td>30<td>52<td>74<td>106<td>146<td><td><td><td>
+<TR align=center><th bgcolor=99FF99>4<td>0<td>0<td>0<td>1<td>5<td>10<td>17<td>26<td>41<td>65<td>89<td><td><td><td>
+</tr></table><p>
+
+<TABLE align=center cellpadding=5><TR align=center>
+<TD><img src="0807/ss21.gif"><br>A<sub>2</sub>(1)=0
+<TD><img src="0807/ss22.gif"><br>A<sub>2</sub>(2)=1
+<TD><img src="0807/ss23.gif"><br>A<sub>2</sub>(3)=5
+<TD><img src="0807/ss24.gif"><br>A<sub>2</sub>(4)=10
+<TD><img src="0807/ss25.gif"><br>A<sub>2</sub>(5)=21
+<TD><img src="0807/ss26.gif"><br>A<sub>2</sub>(6)=41
+</TABLE><TABLE align=center cellpadding=5><TR align=center>
+<TD><img src="0807/ss27.gif"><br>A<sub>2</sub>(7)&ge;65
+<TD><img src="0807/ss28.gif"><br>A<sub>2</sub>(8)&ge;98<br>(David Cantrell)
+<TD><img src="0807/ss29.gif"><br>A<sub>2</sub>(9)&ge;138
+</TABLE><TABLE align=center cellpadding=5><TR align=center>
+<TD><img src="0807/ss210.gif"><br>A<sub>2</sub>(10)&ge;187
+<TD><img src="0807/ss211.gif"><br>A<sub>2</sub>(11)&ge;247
+</TABLE><TABLE align=center cellpadding=5><TR align=center>
+<TD><img src="0807/ss212.gif"><br>A<sub>2</sub>(12)&ge;318<br>(David Bevan)
+<TD><img src="0807/ss213.gif"><br>A<sub>2</sub>(13)&ge;403<br>(David Bevan)
+</TABLE><TABLE align=center cellpadding=5><TR align=center>
+<TD><img src="0807/ss214.gif"><br>A<sub>2</sub>(14)&ge;500<br>(David Bevan)
+</TABLE><TABLE align=center cellpadding=5><TR align=center>
+<TD><img src="0807/ss215.gif"><br>A<sub>2</sub>(15)&ge;611<br>(David Bevan)
+</TABLE><TABLE align=center cellpadding=5><TR align=center>
+<TD><img src="0807/ss240.gif"><br>A<sub>2</sub>(40)&ge;22116<br>(David Bevan)
+</TABLE>
+
+
+
+<TABLE align=center cellpadding=5><TR align=center>
+<TD><img src="0807/ss31.gif"><br>A<sub>3</sub>(1)=0
+<TD><img src="0807/ss32.gif"><br>A<sub>3</sub>(2)=0
+<TD><img src="0807/ss33.gif"><br>A<sub>3</sub>(3)=1
+<TD><img src="0807/ss34.gif"><br>A<sub>3</sub>(4)=5
+<TD><img src="0807/ss35.gif"><br>A<sub>3</sub>(5)=10
+<TD><img src="0807/ss36.gif"><br>A<sub>3</sub>(6)=17
+<TD><img src="0807/ss37.gif"><br>A<sub>3</sub>(7)=30
+</TABLE><TABLE align=center cellpadding=5><TR align=center>
+<TD><img src="0807/ss38.gif"><br>A<sub>3</sub>(8)&ge;52
+<TD><img src="0807/ss39.gif"><br>A<sub>3</sub>(9)&ge;74
+<TD><img src="0807/ss310.gif"><br>A<sub>3</sub>(10)&ge;106
+</TABLE><TABLE align=center cellpadding=5><TR align=center>
+<TD><img src="0807/ss311.gif"><br>A<sub>3</sub>(11)&ge;146
+</TABLE>
+
+<TABLE align=center cellpadding=5><TR align=center>
+<TD><img src="0807/ss41.gif"><br>A<sub>4</sub>(1)=0
+<TD><img src="0807/ss42.gif"><br>A<sub>4</sub>(2)=0
+<TD><img src="0807/ss43.gif"><br>A<sub>4</sub>(3)=0
+<TD><img src="0807/ss44.gif"><br>A<sub>4</sub>(4)=1
+<TD><img src="0807/ss45.gif"><br>A<sub>4</sub>(5)=5
+<TD><img src="0807/ss46.gif"><br>A<sub>4</sub>(6)=10
+<TD><img src="0807/ss47.gif"><br>A<sub>4</sub>(7)=17
+<TD><img src="0807/ss48.gif"><br>A<sub>4</sub>(8)=26
+</TABLE><TABLE align=center cellpadding=5><TR align=center>
+<TD><img src="0807/ss49.gif"><br>A<sub>4</sub>(9)=41
+<TD><img src="0807/ss410.gif"><br>A<sub>4</sub>(10)&ge;65
+<TD><img src="0807/ss411.gif"><br>A<sub>4</sub>(11)&ge;89
+</TABLE>
+
+<p><hr><p><font size=+2>Problem #2:</font><p>
+
+David Cantrell and Berend van der Zwaag sent several solutions.<p>
+
+By building pyramids in which every level is a square, we get the upper bound C<sub>k</sub>(n<sup>2</sup>) &le; n<sup>2</sup> + (n+1)<sup>2</sup> + . . . + (n+k-1)<sup>2</sup> = kn(n+k-1) + k(k&ndash;1)(2k&ndash;1)/6.<p>
+
+<center><font size=+2>Best Known Upper Bounds for C<sub>k</sub>(n)</font></center>
+<TABLE BORDER=1 cellpadding=5 align=center bgcolor=FFFFDD>
+<TR bgcolor=99FF99><th>k \ n<th>1<th>2<th>3<th>4<th>5<th>6<th>7<th>8<th>9<th>10<th>11<th>12
+<TR align=center><th bgcolor=99FF99>2<td>4<td>6<td>9<td>11<td>13<td>15<td>17<td>20<td>22<td>24<td>26<td>28
+<TR align=center><th bgcolor=99FF99>3<td>10<td>13<td>19<td>21<td>26<td>29<td>31<td><td><td><td><td>
+<TR align=center><th bgcolor=99FF99>4<td>20<td>24<td>33<td>35<td><td><td><td><td><td><td><td>
+</tr></table><p>
+
+<TABLE align=center cellpadding=6><TR align=center>
+<TD><img src="0807/s21.gif"><br>C<sub>2</sub>(1)=4
+<TD><img src="0807/s22.gif"><br>C<sub>2</sub>(2)=6<br>Berend van<br>der Zwaag
+<TD><img src="0807/s23.gif"><br>C<sub>2</sub>(3)&le;9
+<TD><img src="0807/s24.gif"><br>C<sub>2</sub>(4)&le;11<br>Berend van<br>der Zwaag
+<TD><img src="0807/s25.gif"><br>C<sub>2</sub>(5)&le;13<br>David Cantrell
+</TABLE>
+
+<TABLE align=center cellpadding=5><TR align=center>
+<TD><img src="0807/s26.gif"><br>C<sub>2</sub>(6)&le;15
+<TD><img src="0807/s27.gif"><br>C<sub>2</sub>(7)&le;17<br>Berend van<br>der Zwaag
+<TD><img src="0807/s28.gif"><br>C<sub>2</sub>(8)&le;20<br>David Cantrell
+<TD><img src="0807/s29.gif"><br>C<sub>2</sub>(9)&le;22
+</TABLE><TABLE align=center cellpadding=5><TR align=center><p>
+
+<TABLE align=center cellpadding=5><TR align=center>
+<TD><img src="0807/s210.gif"><br>C<sub>2</sub>(10)&le;24
+<TD><img src="0807/s211.gif"><br>C<sub>2</sub>(11)&le;26
+<TD><img src="0807/s212.gif"><br>C<sub>2</sub>(12)&le;28
+</TABLE><TABLE align=center cellpadding=5><TR align=center><p>
+
+<TABLE align=center cellpadding=6><TR align=center>
+<TD><img src="0807/s31.gif"><br>C<sub>3</sub>(1)&le;10<br>David Cantrell
+<TD><img src="0807/s32.gif"><br>C<sub>3</sub>(2)&le;13<br>David Cantrell
+<TD><img src="0807/s33.gif"><br>C<sub>3</sub>(3)&le;19<br>Berend van<br>der Zwaag
+<TD><img src="0807/s34.gif"><br>C<sub>3</sub>(4)&le;21<br>Berend van<br>der Zwaag
+</TABLE><TABLE align=center cellpadding=5><TR align=center><p>
+
+<TABLE align=center cellpadding=6><TR align=center>
+<TD><img src="0807/s35.gif"><br>C<sub>3</sub>(5)&le;26<br>David Cantrell
+<TD><img src="0807/s36.gif"><br>C<sub>3</sub>(6)&le;29<br>David Cantrell
+<TD><img src="0807/s37.gif"><br>C<sub>3</sub>(7)&le;31
+</TABLE><TABLE align=center cellpadding=5><TR align=center><p>
+
+<TABLE align=center cellpadding=6><TR align=center>
+<TD><img src="0807/s41.gif"><br>C<sub>4</sub>(1)&le;20<br>Berend van<br>der Zwaag
+<TD><img src="0807/s42.gif"><br>C<sub>4</sub>(2)&le;24<br>Berend van<br>der Zwaag
+<TD><img src="0807/s44.gif"><br>C<sub>4</sub>(4)&le;35
+</TABLE><TABLE align=center cellpadding=5><TR align=center><p>
+
+Claudio Baiocchi thought this problem would be interesting for equilateral triangles, tans, hexagons, and other shapes that tile the plane.  Here are the best known solutions for tans T<sub>k</sub>(n).  Is it possible that T<sub>2</sub>(n)=2n+1 for all n?<p>
+
+<center><font size=+2>Best Known Upper Bounds for T<sub>k</sub>(n)</font></center>
+<TABLE BORDER=1 cellpadding=5 align=center bgcolor=FFFFDD>
+<TR bgcolor=99FF99><th>k \ n<th>1<th>2<th>3<th>4<th>5<th>6
+<TR align=center><th bgcolor=99FF99>2<td>3<td>5<td>7<td>9<td>11<td>13
+<TR align=center><th bgcolor=99FF99>3<td>6<td>9<td>12<td>15<td><td>
+<TR align=center><th bgcolor=99FF99>4<td>10<td>14<td><td><td><td>
+</tr></table><p>
+
+
+<TABLE align=center cellpadding=6><TR align=center>
+<TD><img src="0807/t21.gif"><br>T<sub>2</sub>(1)=3
+<TD><img src="0807/t22.gif"><br>T<sub>2</sub>(2)=5
+<TD><img src="0807/t23.gif"><br>T<sub>2</sub>(3)=7
+<TD><img src="0807/t24.gif"><br>T<sub>2</sub>(4)=9
+<TD><img src="0807/t25.gif"><br>T<sub>2</sub>(5)=11
+<TD><img src="0807/t26.gif"><br>T<sub>2</sub>(6)=13
+</TABLE><TABLE align=center cellpadding=5><TR align=center><p>
+
+<TABLE align=center cellpadding=6><TR align=center>
+<TD><img src="0807/t31.gif"><br>T<sub>3</sub>(1)=6
+<TD><img src="0807/t32.gif"><br>T<sub>3</sub>(2)=9
+<TD><img src="0807/t33.gif"><br>T<sub>3</sub>(3)=12<br>David Cantrell
+<TD><img src="0807/t34.gif"><br>T<sub>3</sub>(4)=15<br>David Cantrell
+</TABLE><TABLE align=center cellpadding=5><TR align=center><p>
+
+<TABLE align=center cellpadding=6><TR align=center>
+<TD><img src="0807/t41.gif"><br>T<sub>4</sub>(1)=10<br>David Cantrell
+<TD><img src="0807/t42.gif"><br>T<sub>4</sub>(2)=14<br>David Cantrell
+</TABLE><TABLE align=center cellpadding=5><TR align=center><p>
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 8/30/07.<font>
+</BODY></HTML>
+

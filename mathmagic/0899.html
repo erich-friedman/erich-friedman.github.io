@@ -1,0 +1,53 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1><CENTER><H1> Problem of the Month (August 1999)</H1></CENTER>This month we investigate 3 problems involving rectangles in squares.<p><h3>Question #1:</h3> Tile a square with area n(n+1)/2 with rectangles with area 1, 2, 3, . . . n so that the rectangles are as "square as possible".  This is made precise below.<p>Define the <b>aspect ratio</b> of a rectangle to be the ratio of the smaller side to the bigger side.  So the aspect ratio of a square is 1, and all other rectangles have aspect ratios smaller than 1.  We want to tile a square with rectangles with areas 1, 2, 3, . . . n so that the smallest aspect ratio of the rectangles is as large as possible.  Call this ratio <b>R(n)</b>.<p>The sequence R(n) starts 1, 1/3, 1/2, . . . .  What are the values of R(n) for larger n?  Can you show that R(n) converges to 1 as n &rarr; &infin;?<p><h3>Question #2:</h3> Pack n integer-sided rectangles in the smallest possible square so that no sides of rectangles are the same.  Let <b>S(n)</b> be the side of the smallest square.<p>The sequence S(n) starts 2, 4, 6, 8, 11, . . . .  What are the values of S(n) for larger n?  Does S(n) / n<sup>3/2</sup> converge as n &rarr; &infin;?<p><h3>Question #3:</h3> Choose n points in a unit square so that the area of the largest unrotated rectangle that intersects none of the points is minimized.  Let this minimum area be <b>T(n)</b>.<p>The sequence T(n) starts 1/2, (3-&radic;5) / 2, . . .   What are the values of T(n) for larger n?  How fast does T(n)->0 as n &rarr; &infin;?<p>
+
+
+<p><hr><P><center><h1>ANSWERS</h1></center><h3>Question #1:</h3>Trevor Green gives these partial results:<p><b>Lemma:</b> If R(n) &ge;&radic;(k/(k+1)), the rectangles 1,2, . . . , k do not share a complete edge with any other rectangle.<p><b>Corollary 1:</b> If rectangle k shares a complete edge with another rectangle,R(n) &lt; &radic;(k/(k+1)).<p>He uses these to get upper bounds on R(n) under the simplifying assumption that any time a rectangle is surrounded by 4 other rectangles, in such a way that none of them share an edge (he calls these windmills), these 5 rectangles form a rectangle.  These upper bounds increase to 1 as n gets large.<p>Here are the best solutions found so far for R(n):<p><p><CENTER><H2>Largest Aspect Ratios</H2></CENTER>
+<TABLE cellpadding=10 align=center><TR align=center>
+<TD><img src="0899/R1.gif"><br>1<br>Trivial
+<TD><img src="0899/R2.gif"><br>1/3 = .333+<br>Trivial
+<TD><img src="0899/R3.gif"><br>1/2 = .5<br>Trivial
+</TR><TR align=center>
+<TD><img src="0899/R4.gif"><br>8/15 = .533+<br>Joe DeVincentis
+<TD><img src="0899/R5.gif"><br>64/135 = .474+<br>Erich Friedman
+<TD><img src="0899/R6.gif"><br>64/105 = .609+<br>Erich Friedman
+</TR><TR align=center>
+<TD><img src="0899/R7.png"><br>.614+<br>Maurizio Morandi
+<TD><img src="0899/R8.png"><br>.620+<br>Maurizio Morandi
+<TD><img src="0899/R9.png"><br>.675+<br>Erich Friedman
+</TR><TR align=center>
+<TD><img src="0899/R10.png"><br>.671+<br>Maurizio Morandi
+<TD><img src="0899/R11.png"><br>361/528 = .683+<br>Maurizio Morandi
+<TD><img src="0899/R12.gif"><br>147/208 = .706+<br>Erich Friedman
+</TR><TR align=center>
+<TD><img src="0899/R13.gif"><br>2548/3721 = .684+<br>Erich Friedman
+<TD><img src="0899/R14.png"><br>16384/23625 = .693+<br>Maurizio Morandi
+<TD><img src="0899/R15.png"><br>8281/12000 = .690+<br>Maurizio Morandi
+</TR></TABLE><P>
+
+<hr><p><h3>Question #2:</h3> From area considerations, S(n)<sup>2</sup> must be at least A(n) = (1)(2n)+(2)(2n-1)+ . . . (n)(n+1) = n(n+1)(2n+1)/3.  So S(n) &ge; &radic; <img src="lceil.gif" align="abscenter">n(n+1)(2n+1)/3<img src="rceil.gif" align="abscenter">.  In many small cases, this bound can be attained.  It appears that S(n) &le; &radic; <img src="lceil.gif" align="abscenter">n(n+1)(2n+1)/3<img src="rceil.gif" align="abscenter"> + 1.  Trevor Green makes the following conjecture, which holds for n&le;12.<p><b>Conjecture:</b> Let S<sup>*</sup>(n) = &radic; <img src="lceil.gif" align="abscenter">A(n)<img src="rceil.gif" align="abscenter">.  Then S(n) is equal to S<sup>*</sup>(n) when S<sup>*</sup>(n)<sup>2</sup> - S<sup>*</sup>(n) &ge; A(n) (and when n=4), and S<sup>*</sup>(n)+1 otherwise.<p>If this is true, A(n) = 2/3 &times; n<sup>3</sup> + O(n<sup>2</sup>), S(n) = &radic;(2/3) &times; n<sup>3/2</sup> + O(n), so S(n) / n<sup>3/2</sup> goes to &radic;(2/3) as n gets large.<p>Here are the best known results for small n:<p><p><CENTER><H2>Smallest Square with n Rectangles</H2></CENTER><TABLE cellpadding=5 align=center><TR align=center><td><img src="0899/S1.gif"><br>S(1)=2<br>Trivial<td><img src="0899/S2.gif"><br>S(2)=4<br>Trivial<td><img src="0899/S3.gif"><br>S(3)=6<br>Erich Friedman<td><img src="0899/S4.gif"><br>S(4)=8<br>Erich Friedman</TR><TR align=center>
+<td><img src="0899/S5.gif"><br>S(5)=11<br>Erich Friedman
+<td><img src="0899/S6.gif"><br>S(6)=14<br>Erich Friedman<td><img src="0899/S7.gif"><br>S(7)=18?<br>Erich Friedman<td><img src="0899/S8.gif"><br>S(8)=21<br>Erich Friedman</TR><TR align=center>
+<td><img src="0899/S9.gif"><br>S(9)=25?<br>Erich Friedman<td><img src="0899/S10.gif"><br>S(10)=29?<br>Erich Friedman<td><img src="0899/S11.gif"><br>S(11)=33?<br>Erich Friedman<td><img src="0899/S12.gif"><br>S(12)=37<br>Erich Friedman</TR><TR align=center>
+<td><img src="0899/S13.gif"><br>S(13)=42?<br>Erich Friedman<td><img src="0899/S14.gif"><br>S(14)=46<br>Erich Friedman<td><img src="0899/S15.gif"><br>S(15)=51<br>Erich Friedman</TABLE><P>
+
+
+
+<hr><p><h3>Question #3:</h3>Here are the best solutions found so far:<p>
+
+<p><CENTER><H2>Smallest Areas of Largest Rectangles</H2></CENTER><TABLE align=center cellpadding=10><TR align=center>
+<td><img src="0899/T1.gif"><br>T(1) = 1/2 = .5<br>Trivial
+<td><img src="0899/T2.gif"><br>T(2) = (3-&radic;5)/2 = .382+<br>Proved by Erich Friedman
+<td><img src="0899/T3.gif"><br>T(3) = .308+<br>Proved by Sasha Ravsky
+<td><img src="0899/T4.gif"><br>T(4) = 1/4 = .25<br>Proved by Sasha Ravsky
+</TR><TR align=center>
+<td><img src="0899/T5.gif"><br>.211+ &le; T(5) &le; 2/9 = .222+<br>Found by Erich Friedman
+<td><img src="0899/T6.gif"><br>.179+ &le; T(6) &le; .196+<br>Found by Erich Friedman
+<td><img src="0899/T7.gif"><br>.174+ &le; T(7) &le; .173+<br>Found by Erich Friedman
+<td><img src="0899/T8.gif"><br>.159+ &le; T(8) &le; .158+<br>Found by Erich Friedman
+</TR><TR align=center>
+<td><img src="0899/T9.gif"><br>.146+ &le; T(9) &le; .145+<br>Found by Erich Friedman
+<td>.129+ &le; T(10) &le; .146+<br>Found by Sasha Ravsky
+<td>.105+ &le; T(11) &le; .146+<br>Found by Sasha Ravsky
+<td>.083+ &le; T(12) &le; .125+<br>Found by Sasha Ravsky
+</TABLE>
+In 2007, I received the paper <a href="0899/ravsky.ps">On Subsets Avoiding Large Rectangles</a> by Sasha Ravsky.  He proves several inequalities including 1/n &le; T(n) and T(k2<sup>k-1</sup>) &le; 1/2<sup>k</sup>.<p><hr>If you can extend any of these results, please <a href="mailto:erich.friedman@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 7/9/07.<font></BODY></HTML>

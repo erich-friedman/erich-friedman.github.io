@@ -1,0 +1,17 @@
+15:
+"fifteen"
+18:
+"twice nine"
+30:
+"one times thirty"
+38:
+"nineteen plus nineteen"
+40:
+"forty plus zero"
+56:
+"thrice a dozen plus twenty"
+68:
+"fifteen plus three plus fifty"
+70:
+"fifty plus zero more than twenty"
+"fifty minus zero added to twenty"

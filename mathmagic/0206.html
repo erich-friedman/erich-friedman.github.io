@@ -1,0 +1,138 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+<CENTER><H1>Problem of the Month (February 2006)</H1></CENTER>
+
+This month we consider four graph theory problems, two that concern straight line planar graphs, and two that concern the farthest vertices from a given vertex.<p>
+
+<font size=+2>Problem #1:</font> A <b>straight line planar graph</b> is a graph with non-intersecting straight lines as edges.  The <b>diameter</b> of a graph is the longest distance between a pair of vertices in the graph.  What is the smallest diameter of a straight line planar graph with vertices in an m&times;n rectangle?  Can you find a 13&times;13 graph with diameter 4?  What are the minimal diameters for other rectangular graphs?  What about triangular graphs?<p>
+
+<font size=+2>Problem #2:</font> Given a set of lengths (possibly repeated), what is the smallest straight line planar graph where every vertex is incident to edges of exactly those lengths?<p>
+
+<font size=+2>Problem #3:</font> A <b>degree-distance graph</b> is a graph where the degree of every vertex is equal to the number of vertices in the graph that are maximally distant from it.  What are the small degree-distance graphs?  For what sets do distance-degree graphs exist?<p>
+
+<font size=+2>Problem #4:</font> A vertex v<sub>2</sub> is called the <b>antipode</b> of vertex v<sub>1</sub> if v<sub>2</sub> is the unique farthest vertex from v<sub>1</sub>.  An <b>antipode chain</b> {v<sub>1</sub>, v<sub>2</sub>, . . . v<sub>n</sub>} is a list of vertices where v<sub>i+1</sub> is the antipode of v<sub>i</sub>.  What is the smallest graph with an antipode chain of length n?  Do such graphs exist for every n?<p>
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+
+
+<font size=+2>Problem #1:</font><p>
+
+This problem ended up being too easy.  Jeremy Galvagni showed that any rectangular or triangular graph can have diameter no larger than 4.<p>
+
+Joseph DeVincentis found the size 4 triangular graph with diameter 2, and a size 13 triangular graph with diameter 3.<p>
+
+Joseph Cooper found a 13&times;13 graph with diameter 4.<p>
+
+<center><font size=+3>Largest Known Straight Line Planar<br>
+Rectangular Graphs of a Given Diameter</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=10>
+<tr bgcolor=palegreen><th>Diameter<th>Size<th>Graph
+<tr align=center><td>1<td>1&times;2<td><img src="0206/a1x2.gif">
+<tr align=center><td>2<td>3&times;3<td><img src="0206/a3x3.gif">
+<tr align=center><td>3<td>5&times;n<td><img src="0206/a5xn.gif">
+<tr align=center><td>4<td>m&times;n<td><img src="0206/amxn.gif"><br>(Jeremy Galvagni)
+</table></center><p>
+
+<center><font size=+3>Largest Known Straight Line Planar<br>
+Triangular Graphs of a Given Diameter</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=10>
+<tr bgcolor=palegreen><th>Diameter<th>Size<th>Graphs
+<tr align=center><td>1<td>2<td><img src="0206/at2.gif">
+<tr align=center><td>2<td>4<td><img src="0206/at4.gif">
+<tr align=center><td>3<td>14<td><img src="0206/at14.gif">
+<tr align=center><td>4<td>n<td><img src="0206/atn.gif"><br>(Jeremy Galvagni)
+</table></center><p>
+
+
+<hr>
+<font size=+2>Problem #2:</font><p>
+
+Joseph DeVincentis found the minimal {a,a,b} graphs for b&lt;2a.<p>
+
+Joseph DeVincentis also noted that the solutions for {1}, {1,1}, {1,1,1}, and {1,1,1,1} can be found in the Math Magic <a href="http://www.stetson.edu/~efriedma/mathmagic/1205.html">two months ago</a>.<p>
+
+<center><font size=+3>Smallest Known Straight Line Planar<br>
+Graphs With Given Incidences</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=10>
+<tr bgcolor=palegreen><th>Incidence Set<th>Graph
+<tr align=center><td>{a}<td><img src="0206/b1.gif">
+<tr align=center><td>{a,a}<td><img src="0206/b11.gif">
+<tr align=center><td>{a,b}<td><img src="0206/b12.gif">
+<tr align=center><td>{a,a,a}<td><img src="0206/b111.gif">
+<tr align=center><td>{a,a,b}<br>b &lt; 2a<td><img src="0206/b223.gif">
+<tr align=center><td>{a,a,b}<br>b &ge; 2a<td><img src="0206/b112.gif"><br>(Gavin Theobald)
+<tr align=center><td>{a,b,c}<br>a+b &gt; c<td><img src="0206/b234.gif">
+<tr align=center><td>{a,b,c}<br>a+b &le; c<br>a &lt;&lt; b<td><img src="0206/b123.gif">
+<tr align=center><td>{a,b,c}<br>2ac &lt; a<sup>2</sup>+b<sup>2</sup> &lt; 2bc<td><img src="0206/babc.gif"><br>(Gavin Theobald)
+<tr align=center><td>{a,a,a,b}<br>b = &radic;3 a<td><img src="0206/b1112.gif"><br>(Gavin Theobald)
+<tr align=center><td>{a,a,b,b}<br>b = 1.985 a<td><img src="0206/b1122.gif">
+<tr align=center><td>{a,a,b,b}<br>b = 1.358 a<td><img src="0206/b1222.gif"><br>(Gavin Theobald)
+</table></center><p>
+
+
+<hr>
+<font size=+2>Problem #3:</font><p>
+
+Joseph DeVincentis noted that the complete graph K<sub>n+1</sub> is a {n} degree-distance graph, and that by joining two copies of K<sub>n+1</sub> at a vertex, we get a {n, 2n} degree-distance graph.<p>
+
+Joseph DeVincentis also proved that {1} and {1,2} are the only sets possible that contain 1, and that {n,n+1} degree-distance graphs always exist.<p>
+
+<center><font size=+3>Known Degree-Distance Graphs</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=10>
+<tr bgcolor=palegreen><th>Degree Set<th>Graphs
+<tr align=center><td>{1}<td><img src="0206/c1.gif" align=middle>
+<tr align=center><td>{2}<td><img src="0206/c2a.gif" align=middle><img src="0206/c2b.gif" align=middle> <b>. . .</b>
+<tr align=center><td>{3}<td><img src="0206/c3a.gif" align=middle><img src="0206/c3b.gif" align=middle><img src="0206/c3c.gif" align=middle> 
+<tr align=center><td>{4}<td><img src="0206/c4a.gif" align=middle><img src="0206/c4b.gif" align=middle><img src="0206/c4c.gif" align=middle> <b>. . .</b> <img src="0206/c4d.gif" align=middle>
+<tr align=center><td>{1,2}<td><img src="0206/c12.gif" align=middle>
+<tr align=center><td>{2,3}<td><img src="0206/c23.gif" align=middle>
+<tr align=center><td>{2,4}<td><img src="0206/c24a.gif" align=middle><img src="0206/c24b.gif" align=middle> <b>. . .</b> <img src="0206/c24c.gif" align=middle>
+<tr align=center><td>{2,5}<td><img src="0206/c25.gif" align=middle>
+<tr align=center><td>{3,4}<td><img src="0206/c34a.gif" align=middle><img src="0206/c34b.gif" align=middle>
+<tr align=center><td>{3,6}<td><img src="0206/c36a.gif" align=middle><img src="0206/c36b.gif" align=middle>
+<tr align=center><td>{3,7}<td>?
+<tr align=center><td>{4,5}<td><img src="0206/c45.gif" align=middle><br>(Joe DeVincentis)
+<tr align=center><td>{4,6}<td><img src="0206/c46.gif" align=middle>
+<tr align=center><td>{4,7}<td>?
+<tr align=center><td>{4,8}<td><img src="0206/c48a.gif" align=middle><img src="0206/c48b.gif" align=middle><img src="0206/c48c.gif" align=middle> <b>. . .</b>
+</table></center><p>
+
+
+
+<hr>
+<font size=+2>Problem #4:</font><p>
+
+Corey Plover found antipode chains for n&ge;5, using 2n &ndash; 5 + <img src="lfloor.gif" align=abscenter>(n+1)/2<img src="rfloor.gif" align=abscenter> <img src="lceil.gif" align=abscenter>(n+5)/2<img src="rceil.gif" align=abscenter> vertices.<p>
+
+<center><font size=+3>Smallest Known Graphs With<br>Length n Antipode Chain</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=10>
+<tr bgcolor=palegreen><th>Length<th>Graph
+<tr align=center><td>2<td><img src="0206/d2.gif">
+<tr align=center><td>3<td><img src="0206/d3.gif">
+<tr align=center><td>4<td><img src="0206/d4.gif">
+<tr align=center><td>5<td><img src="0206/d5.gif"><br>(Gavin Theobald)
+<tr align=center><td>6<td><img src="0206/d6.gif"><br>(Gavin Theobald)
+<tr align=center><td>7<td><img src="0206/d7.gif"><br>(Gavin Theobald)
+<tr align=center><td>8<td><img src="0206/d8.gif"><br>(Gavin Theobald)
+</table></center><p>
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 2/14/06.<font>
+
+<!-- Stats Script Start -->
+<script type="text/javascript">
+<!--
+var FCS_Account="580";
+var FCS_Server="http://www.statisfy.com/";
+var FCS_Page="DetectName";
+var FCS_Url="DetectUrl";
+var FCS_Offset="0";
+var FCS_Interval="24";
+var FCS_Cntimg="100";
+// -->
+</script>
+<script type="text/javascript" src="http://www.statisfy.com//js.php?usr=580">
+</script>
+<noscript>
+<a href="http://www.statisfy.com/" target="_blank">
+<img src="http://www.statisfy.com//stat.php?usr=580&offset=0&interval=24&cntimg=100" border="0" title="Statisfy Free Web Stats!" alt="Statisfy Free Web Stats!" /></a>
+</noscript>
+<!-- Stats Script  End  --></BODY></HTML>

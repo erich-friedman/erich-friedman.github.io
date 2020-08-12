@@ -1,0 +1,57 @@
+12:
+"twelve"
+17:
+"ten plus seven"
+18:
+"ten plus eight"
+"nine added to nine"
+26:
+"nineteen added to seven"
+"seventeen added to nine"
+27:
+"nineteen added to eight"
+28:
+"fourteen plus fourteen"
+"thirteen plus fifteen"
+29:
+"twice nine plus eleven"
+30:
+"twelve plus eighteen"
+31:
+"twice nine plus thirteen"
+33:
+"thirty more than three"
+"twenty-two plus eleven"
+34:
+"twice nine plus sixteen"
+"seventeen added to nine"
+35:
+"ten plus seven plus eighteen"
+"twenty-two plus thirteen"
+36:
+"ten plus eight plus eighteen"
+37:
+"fourteen plus twenty-three"
+"thrice four plus thirteen"
+38:
+"twelve plus two times fourteen"
+"twenty-two plus sixteen"
+39:
+"fourteen plus fifty halves"
+40:
+"twenty-two added to eighteen"
+41:
+"twelve more than twenty-nine"
+45:
+"twelve more than thirty-three:
+46:
+"twenty-three plus twenty-three"
+48:
+"twenty-three plus fifty halves"
+"twenty-two added to two times fourteen"
+50:
+"fifty halves plus fifty halves"
+51:
+"twelve plus twelve plus thrice nine"
+54:
+"nine plus nine plus nine plus nine plus nine plus nine"

@@ -1,0 +1,220 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month<br>(November 2015)</H1></CENTER>
+
+The U.S. presidential election is a year away, but the <a href="http://en.wikipedia.org/wiki/Electoral_College_(United_States)">Electoral College</a> is already in the news.  This month we investigate power indices, measures of how much power voters have when they have different numbers of votes.  There are two widely-known power indices, due to <a href="http://en.wikipedia.org/wiki/Banzhaf_power_index">Banzahf</a> and <a href="https://en.wikipedia.org/wiki/Shapley-Shubik_power_index">Shapley-Shubik</a>.<p>
+
+For a given index and number of votes of each voter, it is fairly easy to compute the corresponding power indices.  We only consider cases in which a simple majority is needed in any vote, and there are an odd number of total votes so that no ties are possible.  For example, with 1 voter, regardless of how many votes he has, the voter has all the power.  With 2 voters, the voter with the larger number of votes has all the power.  With 3 voters, either one voter with the majority of votes has all the power, or the voters have equal power.  (To avoid the fractions, we say the power indices in these two cases are 0, 0, 1 and 1, 1, 1.)<p>
+
+The number of different power indices with n voters, all of which have some power, 1, 0, 1, 1, 4, 14, 114, 2335, ... is <a href="http://oeis.org/A003184">sequence 3184</a> of the <a href="http://oeis.org">OEIS</a>.<p>
+
+<font size=+2>1.</font> When are the power indices of the voters the same as the number of votes?<p>
+
+<font size=+2>2.</font> For a given number of voters n, consider the ratio of the power of the most and least powerful voter who has power.  What is the largest and smallest possible ratio?<p>
+
+<font size=+2>3.</font> For a positive integer R, what is the smallest number of voters so that the ratio between the power of two of the voters is R?<p>
+
+<font size=+2>4.</font> What are the power indices with a small number of voters where each voter has a distinct amount of power? <p>
+
+<font size=+2>5.</font> If two voters decide to collude and lump their votes together, their total power might change.  What is the largest and smallest ratio of their combined power when colluding to when not colluding? <p>
+
+<font size=+2>6.</font> For 3 voters, the possible power indices can be naturally represented by an equilateral triangle.  Each vertex represents that voter having all the votes, and each other point in the triangle represents some mixture of votes using <a href="http://en.wikipedia.org/wiki/Barycentric_coordinate_system_(mathematics)">barycentric coordinates</a>.  Coloring each point with its power index gives the following picture:<p>
+
+<center><img src="1115/3.gif"></center><p>
+
+What do the tetrahedral pictures (or sets of triangular slices) for 4 voters look like for the two methods?<p>
+
+<font size=+2>7.</font> If you are one of n voters with proportion p of the votes, what is your expected proportion of power?  For 3 voters, the answer can be seen from the picture above: if p>1/2 then your expected proportion of power is 1, and if p<1/2 then your expected proportion of power is (0)(1&ndash;2p)/(1&ndash;p)+(1/3)p/(1&ndash;p)=p/(3&ndash;3p).  What is your expected proportion of power for 4 or more voters?<p>
+
+<font size=+2>8.</font> What other interesting questions are there about power indices?
+
+<P><hr color=black><p><center><h1>ANSWERS</h1></center>
+
+Submissions were received from Rosalie Fay.<p>
+
+Throughout, vectors surrounded by parentheses are votes, and those without are power indices.<p>
+
+<p><font size=+2>1.</font><p>
+We only list the power indices when all voters have some power.  Equal power ratios are shown in <font color=red>red</font>.<p>
+
+<center><font size=+2>Known Equal Power Indices</font></center>
+<table align=center border=1 bgcolor=white cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>Votes<th>Banzhaf<br>Power Ratios<th>Shapley-Shubik<br>Power Ratios
+
+<tr align=center bgcolor=FFFFDD><td>(1)<td><font color=red>1<td><font color=red>1
+
+<tr align=center><td>(1,1,1)<td><font color=red>1,1,1<td><font color=red>1,1,1
+
+<tr align=center bgcolor=FFFFDD><td>(1,1,1,1,1)<td><font color=red>1,1,1,1,1<td><font color=red>1,1,1,1,1
+<tr align=center bgcolor=FFFFDD><td>(1,1,1,2,2)<td><font color=red>1,1,1,2,2<td>4,4,4,9,9
+<tr align=center bgcolor=FFFFDD><td>(1,1,3,3,5)<td><font color=red>1,1,3,3,5<td>2,2,7,7,12
+
+<tr align=center><td>(1,2,2,3,3,4)<td><font color=red>1,2,2,3,3,4<td><font color=red>1,2,2,3,3,4
+<tr align=center><td>(2,2,2,2,2,5)<td><font color=red>2,2,2,2,2,5<td><font color=red>2,2,2,2,2,5
+
+<tr align=center bgcolor=FFFFDD><td>(1,1,1,1,1,1,1)<td><font color=red>1,1,1,1,1,1,1<td><font color=red>1,1,1,1,1,1,1
+<tr align=center bgcolor=FFFFDD><td>(1,1,1,2,2,2,2)<td><font color=red>1,1,1,2,2,2,2<td>6,6,6,13,13,13,13
+<tr align=center bgcolor=FFFFDD><td>(1,1,1,2,2,4,4)<td><font color=red>1,1,1,2,2,4,4<td>12,12,12,26,26,61,61
+<tr align=center bgcolor=FFFFDD><td>(1,1,1,2,6,6,10)<td><font color=red>1,1,1,2,6,6,10<td>6,6,6,13,48,48,83
+<tr align=center bgcolor=FFFFDD><td>(1,1,3,3,5,8,8)<td><font color=red>1,1,3,3,5,8,8<td>3,3,10,10,17,31,31
+<tr align=center bgcolor=FFFFDD><td>(1,1,3,4,4,7,9)<td><font color=red>1,1,3,4,4,7,9<td>6,6,20,27,27,55,69
+<tr align=center bgcolor=FFFFDD><td>(1,2,4,4,6,7,7)<td><font color=red>1,2,4,4,6,7,7<td>6,13,27,27,41,48,48
+<tr align=center bgcolor=FFFFDD><td>(1,2,4,5,5,6,8)<td><font color=red>1,2,4,5,5,6,8<td>6,13,27,34,34,41,55
+<tr align=center bgcolor=FFFFDD><td>(1,3,3,4,6,6,8)<td><font color=red>1,3,3,4,6,6,8<td>6,20,20,27,41,41,55
+<tr align=center bgcolor=FFFFDD><td>(2,2,3,4,5,7,8)<td><font color=red>2,2,3,4,5,7,8<td>13,13,20,27,34,48,55
+<tr align=center bgcolor=FFFFDD><td>(2,2,4,4,4,6,9)<td><font color=red>2,2,4,4,4,6,9<td>13,13,27,27,27,41,62
+<tr align=center bgcolor=FFFFDD><td>(3,3,3,3,3,8,8)<td><font color=red>3,3,3,3,3,8,8<td>3,3,3,3,3,10,10
+<tr align=center bgcolor=FFFFDD><td>(3,3,4,5,5,6,7)<td><font color=red>3,3,4,5,5,6,7<td>18,18,25,32,32,39,46
+<tr align=center bgcolor=FFFFDD><td>(3,3,3,3,3,10,10)<td>3,3,3,3,3,8,8<td><font color=red>3,3,3,3,3,10,10
+
+</table>
+
+
+<p><font size=+2>2.</font><p>
+
+The smallest possible ratio for n&ge;3 voters is 1 for both methods, when n is odd.<p>
+
+The largest possible ratio in power for n&ge;3 voters is 2<sup>n&ndash;1</sup>&ndash;1 for the Banzhaf Power Ratios.<p>
+
+Rosalie Fay conjectured the smallest possible ratio for the Banzhaf Power Ratios for n=4k voters is smaller than k<sup>2k+1</sup> / (k+1)<sup>2k-1</sup>, and for n=4k+2 voters is smaller than k<sup>2k+3</sup> / (k+1)<sup>2k-1</sup>.<p>
+
+<center><font size=+2>Power Ratios of<br>Most to Least Powerful</font></center>
+<table align=center border=1 bgcolor=white cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>&nbsp;<th colspan=2>Banzhaf<br>Power Ratios<th colspan=2>Shapley-Shubik<br>Power Ratios
+<tr align=center bgcolor=DDFFFF><th>n<th>Min<th>Max<th>Min<th>Max
+
+<tr align=center><td>3<td>1<td>1<td>1<td>1
+<tr align=center><td>4<td>3<td>3<td>3<td>3
+<tr align=center><td>5<td>1<td>7<td>1<td>6
+<tr align=center><td>6<td>7/3<td>15<td>5/2<td>13
+<tr align=center><td>7<td>1<td>31<td>1<td>36
+<tr align=center><td>8<td>25/13<br>(RF)<td>63<td>?<td>?
+<tr align=center><td>9<td>1<td>127<td>1<td>?
+<tr align=center><td>10<td>91/51<br>(RF)<td>255<td>?<td>?
+<tr align=center><td>11<td>1<td>511<td>1<td>?
+<tr align=center><td>12<td>301/181<br>(RF)<td>1023<td>?<td>?
+</table>
+
+
+<p><font size=+2>3.</font><p>
+
+<center><font size=+2>Two Voters with Power Ratio R<br>with Smallest Number of Voters</font></center>
+<table align=center border=1 bgcolor=white cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>R<th>Banzhaf<br>Power Ratios<th>Shapley-Shubik<br>Power Ratios
+
+<tr align=center><td>1<td>1,1,1<td>1,1,1
+<tr align=center><td>2<td>1,1,1,2,2<td>1,2,2,3,3,4<br>1,1,1,1,2,4<br>1,1,3,6,6,13<br>1,3,3,5,8,10<br>2,2,2,6,9,9<br>2,2,4,4,7,11
+<tr align=center><td>3<td>1,1,1,3<td>1,1,1,3
+<tr align=center><td>4<td>1,1,1,3,3,4<td>1,1,1,1,2,4<br>1,1,4,4,4,16<br>1,2,2,3,3,4
+<tr align=center><td>5<td>1,1,3,3,5<td>1,3,3,5,8,10<br>1,5,5,5,7,7
+<tr align=center><td>6<td>1,1,1,2,2,6<td>1,1,1,1,6<br>2,2,7,7,12
+<tr align=center><td>7<td>1,1,1,1,7<td>1,5,5,5,7,7<br>2,2,2,5,5,14
+<tr align=center><td>8<td>1,1,4,4,5,7,8<br>1,3,3,4,6,6,8<br>1,2,3,3,6,7,8
+<br>1,1,1,1,7,8,8<br>1,2,4,5,5,6,8<br>1,1,3,3,5,8,8
+<br>1,2,2,2,7,7,8<td>1,1,1,8,8,11<br>1,3,3,5,8,10
+<tr align=center><td>9<td>1,1,1,7,7,9<br>1,3,3,5,7,9<br>3,3,5,5,5,9<td>1,2,3,4,5,6,9
+<tr align=center><td>10<td>1,1,2,3,5,6,10<br>1,2,3,3,4,6,10<br>1,3,3,4,4,5,10
+<br>1,1,1,2,6,6,10<br>1,2,2,4,5,5,10<td>1,1,1,1,1,10
+<tr align=center><td>11<td>1,1,3,5,5,11<br>3,3,3,3,5,11<td>1,1,1,8,8,11
+<tr align=center><td>12<td>1,2,2,3,3,4,12<br>1,1,1,3,4,4,12<td>1,2,2,3,4,6,12
+<tr align=center><td>13<td>1,1,3,3,3,13<td>1,1,3,6,6,13
+<tr align=center><td>14<td>1,1,1,2,2,2,14<td>1,1,1,3,5,5,14
+<tr align=center><td>15<td>1,1,1,1,1,15<td>1,1,1,1,1,1,15<br>2,2,2,2,30,30,37
+<br>3,3,10,17,45,45,87<br>3,3,38,38,38,45,45<br>3,7,24,24,45,45,52<br>3,10,31,31,38,45,52
+<br>3,17,17,24,24,45,80<br>4,4,4,11,11,11,60<br>4,11,25,25,39,46,60<br>4,11,11,11,46,60,67
+<br>6,6,13,13,41,41,90
+<tr align=center><td>16<td>1,1,1,1,1,15,16,16 (RF)<td>1,1,4,4,4,16
+<tr align=center><td>17<td>1,5,7,9,11,11,17<br>
+1,1,1,1,15,15,17<br>
+1,3,7,7,11,13,17<br>
+1,1,7,7,9,15,17<br>
+1,3,5,5,11,15,17<br>
+1,3,3,3,13,15,17<td>?
+<tr align=center><td>18<td>1,4,6,6,6,11,11,18 (RF)<td>?
+<tr align=center><td>19<td>1,7,7,9,9,9,19<br>
+1,3,5,7,9,13,19<br>
+1,1,3,3,13,13,19<br>
+1,1,5,5,11,13,19<br>
+1,5,5,9,9,11,19<td>?
+<tr align=center><td>20<td>1,1,7,7,8,8,9,20 (RF)<td>?
+<tr align=center><td>21<td>1,7,7,7,7,9,21 (RF)<td>?
+<tr align=center><td>22<td>1,1,6,6,6,7,9,22 (RF)<td>?
+<tr align=center><td>23<td>1,5,5,5,7,9,23 (RF)<td>?
+<tr align=center><td>24<td>1,1,1,1,7,8,8,24 (RF)<td>?
+<tr align=center><td>25<td>1,1,1,7,7,7,25 (RF)<td>?
+<tr align=center><td>26<td>1,4,4,4,4,5,5,26 (RF)<td>?
+<tr align=center><td>27<td>1,1,3,5,5,5,27 (RF)<td>?
+<tr align=center><td>28<td>1,1,1,3,4,4,4,28 (RF)<td>?
+<tr align=center><td>29<td>1,1,3,3,3,3,29 (RF)<td>?
+<tr align=center><td>30<td>1,1,1,2,2,2,2,30 (RF)<td>?
+<tr align=center><td>31<td>1,1,1,1,1,1,31 (RF)<td>?
+<tr align=center><td>32<td>1,1,1,1,1,1,31,32,32 (RF)<td>?
+<tr align=center><td>33<td>1,1,1,1,1,31,31,33 (RF)<td>?
+</table>
+
+<p><font size=+2>4.</font><p>
+
+<center><font size=+2>Smallest Known<br>Distinct Power Indicies</font></center>
+<table align=center border=1 bgcolor=white cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>n<th>Banzhaf<br>Power Ratios<th>Shapley-Shubik<br>Power Ratios
+
+<tr align=center><td>1<td>1<td>1
+<tr align=center><td>7<td>(1,2,3,4,5,6,8) 1,2,3,4,5,6,9 (RF)<br>
+(1,2,3,4,5,7,9) 1,3,5,7,9,13,19 (RF)<br>
+(2,3,4,5,6,7,8) 3,5,7,9,11,13,15 (RF)
+<td>1,2,3,4,5,6,9<br>
+3,10,17,24,31,52,73<br>
+9,16,23,30,37,44,51
+</table><p>
+
+For Banzhaf power indices, Rosalie Fay found 267 cases for 8 voters, and 52,410 cases for 9 voters!<p>
+
+Rosalie Fay also pointed out that for 5 voters with (1,2,3,4,5) votes and 9 votes necessary to pass a measure, then the Banzhaf power indices are 1,3,5,7,9.
+
+<p><font size=+2>5.</font><p>
+
+<center><font size=+2>Smallest and Largest Known Ratios when Colluding</font></center>
+<table align=center border=1 bgcolor=white cellpadding=5>
+<tr align=center bgcolor=DDFFFF><th>&nbsp;<th colspan=2>Banzhaf<br>Power Ratios<th colspan=2>Shapley-Shubik<br>Power Ratios
+<tr align=center bgcolor=DDFFFF><th>n<th>Min<th>Max<th>Min<th>Max
+
+<tr align=center><td>3
+<td>1<br>(1,1,3)&rarr;(1,4)<br>0,0,1&rarr;0,1
+<td>3/2<br>(1,1,1)&rarr;(1,2)<br>1,1,1&rarr;0,1
+<td>1<br>(1,1,3)&rarr;(1,4)<br>0,0,1&rarr;0,1
+<td>3/2<br>(1,1,1)&rarr;(1,2)<br>1,1,1&rarr;0,1
+
+<tr align=center><td>4
+<td>1<br>(1,1,1,4)&rarr;(1,1,5)<br>0,0,0,1&rarr;0,0,1
+<td>3/2<br>(1,2,2,2)&rarr;(1,2,4)<br>0,1,1,1&rarr;0,0,1
+<td>1<br>(1,1,1,4)&rarr;(1,1,5)<br>0,0,0,1&rarr;0,0,1
+<td>3/2<br>(1,2,2,2)&rarr;(1,2,4)<br>0,1,1,1&rarr;0,0,1
+
+<tr align=center><td>5
+<td>11/12<br>(1,1,1,1,3)&rarr;(1,1,2,3)<br>1,1,1,1,7&rarr;1,1,1,3
+<td>7/4<br>(1,1,1,2,2)&rarr;(1,1,1,4)<br>1,1,1,2,2&rarr;0,0,0,1
+<td>5/6<br>(1,1,1,1,3)&rarr;(1,1,2,3)<br>1,1,1,1,6&rarr;1,1,1,3
+<td>5/3<br>(1,1,1,2,2)&rarr;(1,1,1,4)<br>4,4,4,9,9&rarr;0,0,0,1
+
+<tr align=center><td>6
+<td>10/11<br>(1,1,1,1,1,4)&rarr;(1,1,1,2,4)<br>1,1,1,1,1,15&rarr;1,1,1,1,7
+<td>7/4<br>(1,2,2,2,4,4)&rarr;(1,2,2,2,8)<br>0,1,1,1,2,2&rarr;0,0,0,0,1
+<td>3/4<br>(1,1,1,1,1,4)&rarr;(1,1,1,2,4)<br>1,1,1,1,1,10&rarr;1,1,1,1,6
+<td>5/3<br>(1,1,1,1,2,3)&rarr;(1,1,1,1,5)<br>1,1,1,1,2,4&rarr;0,0,0,0,1
+
+<tr align=center><td>7
+<td>7/8<br>(2,2,2,2,3,3,9)&rarr;(2,2,2,2,6,9)<br>3,3,3,3,5,5,27&rarr;3,3,3,3,5,11
+<td>31/16<br>(1,1,1,1,1,3,3)&rarr;(1,1,1,1,1,6)<br>3,3,3,3,3,8,8&rarr;0,0,0,0,0,1
+<td>7/10<br>(1,1,1,1,1,1,6)&rarr;(1,1,1,1,2,6)<br>1,1,1,1,1,1,15&rarr;1,1,1,1,1,10
+<td>7/4<br>(1,1,1,1,1,3,3)&rarr;(1,1,1,1,1,6)<br>3,3,3,3,3,10,10&rarr;0,0,0,0,0,1
+
+<tr align=center><td>8
+<td>?
+<td>?
+<td>?
+<td>?
+
+</table>
+
+<p><hr color=black><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 11/1/15.<font></BODY></HTML>
+

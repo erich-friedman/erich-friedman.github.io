@@ -1,0 +1,92 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+<CENTER><H1>Problem of the Month (March 2005)</H1></CENTER>
+The problem of placing 8 non-attacking queens on an 8&times;8 chessboard is well known.  Less known is the problem of placing different colored queens on a chessboard so that no queen attacks one of a different color.  Mario Velucchi found many interesting results on this problem years ago.  For example, here are 2 sets of 7 non-attacking queens on a 7&times;7 chessboard and 4 sets of 3 non-attacking queens on an 8&times;8 chessboard:<p>
+
+<center><table cellpadding=10><tr><td><img src="0305/Q27.gif"><td><img src="0305/Q48.gif"></table></center><p>
+
+Unfortunately, the problem of placing different colored rooks on a chessboard is not as interesting.  It is not hard to show that the maximum number of rooks of C different colors on an N&times;N chessboard so that none attacks a rook of a different color is <img src="lfloor.gif"> <img src="lfloor.gif"> 2N/C <img src="rfloor.gif"> /2 <img src="rfloor.gif"> &times; <img src="lceil.gif"> <img src="lfloor.gif"> 2N/C <img src="rfloor.gif"> /2 <img src="rceil.gif">.  For example, here are 3 sets of 6 non-attacking rooks on an 8&times;8 chessboard:<p>
+
+<center><img src="0305/R38.gif"></center><p>
+
+This month we consider the problem of placing the maximum number of bishops or knights of C different colors each on an N&times;N chessboard so that no bishop or knight attacks one of a different color.  Let B(C,N) be the maximum number of bishops, and K(C,N) be the maximum number of knights.<p>
+
+Clearly B(1,N) = K(1,N) = N<sup>2</sup> and B(2,N) = <img src="lfloor.gif"> N<sup>2</sup>/2 <img src="rfloor.gif">.  Can you show B(3,5)=5?  or B(3,6)=8?  Can you find a formula or bounds for B(3,N)?  How about B(C,N)?  Can you show K(3,4)=4?  or K(5,5)=3?  Can you find a formula for K(2,N)?  What are the other values of K(C,N)?<p>
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Joseph DeVincentis and Emilio Schiavi proved that B(C,N)=0 for C &gt; 2N&ndash;2.<p>
+
+Joseph DeVincentis proved and B(N&ndash;1,N)=4.<p>
+
+Emilio Schiavi proved that B(2N&ndash;2,N)=1 and B(N,N)=2.  He also proved the following. Let C be even and let K = <img src="lfloor.gif"> 2N/C <img src="rfloor.gif">.  Then if C divides 2N, then B(C,N) &ge; <img src="lfloor.gif"> K<sup>2</sup>/2 <img src="rfloor.gif">, and if not, then B(C,N) &ge; <img src="lfloor.gif"> K(K+1)/2 <img src="rfloor.gif">.<p>
+
+Philippe Fondanaiche conjectured that B(3,N)=2N&ndash;4 if N is even and B(3,N)=2N&ndash;5 if N is odd, and B(4,N)=2N&ndash;6, but these fail for large N.<p>
+
+Corey Plover noticed that B(C,N) &ge; a B(aC,N), and conjectured that B(4,2N) = <img src="lfloor.gif"> (N+1)<sup>2</sup>/2 <img src="rfloor.gif"> &ndash; 2.<p>
+
+Sasha Ravsky showed that B(C,N) &le; ((2N&ndash;1)/C)<sup>2</sup>. <p>
+
+Joseph DeVincentis, Philippe Fondanaiche, Corey Plover, and Claudio Baiocchi found many of the small configurations below.<p>
+
+<center><font size=+2>Best-Known Lower Bounds for B(C,N)</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=2><tr><th bgcolor=CCFFCC>N \ C<th bgcolor=CCFFCC>1<th bgcolor=CCFFCC>2<th bgcolor=CCFFCC>3<th bgcolor=CCFFCC>4<th bgcolor=CCFFCC width=15>5<th bgcolor=CCFFCC width=15>6<th bgcolor=CCFFCC width=15>7<th bgcolor=CCFFCC width=15>8<th bgcolor=CCFFCC width=15>9</tr>
+<tr align=center><th bgcolor=CCFFCC>1<td><b>1</tr>
+<tr align=center><th bgcolor=CCFFCC>2<td><b>4<td><b>2</tr>
+<tr align=center><th bgcolor=CCFFCC>3<td><b>9<td><b>4<td><b>2<td><b>1</tr>
+<tr align=center><th bgcolor=CCFFCC>4<td><b>16<td><b>8<td><b>4<td><b>2<td><b>1<td><b>1</tr>
+<tr align=center><th bgcolor=CCFFCC>5<td><b>25<td><b>12<td>5<td><b>4<td><b>2<td>1<td>1<td><b>1</tr>
+<tr align=center><th bgcolor=CCFFCC>6<td><b>36<td><b>18<td>8<td>6<td><b>4<td><b>2<td>1<td>1<td>1</tr>
+<tr align=center><th bgcolor=CCFFCC>7<td><b>49<td><b>24<td>10<td>8<td>4<td><b>4<td><b>2<td>1<td>1</tr>
+<tr align=center><th bgcolor=CCFFCC>8<td><b>64<td><b>32<td>14<td>10<td>6<td>4<td><b>4<td><b>2<td>1</tr>
+<tr align=center><th bgcolor=CCFFCC>9<td><b>81<td><b>40<td>17<td>13<td>8<td>6<td>4<td><b>4<td><b>2</tr>
+</table></center><p>
+
+<center><table cellpadding=5>
+<tr><td><img src="0305/B35.gif"></tr>
+<tr><td><img src="0305/B36.gif"><td><img src="0305/B46.gif"></tr>
+<tr><td><img src="0305/B37.gif"><td><img src="0305/B47.gif"></tr>
+<tr><td><img src="0305/B38.gif"><td><img src="0305/B48.gif"><td><img src="0305/B58.gif"></tr>
+</table></center><p>
+
+<hr>
+
+Joseph DeVincentis and Corey Plover proved that K(3,4)=4.<p>
+
+Philippe Fondanaiche and Claudio Baiocchi showed that K(2,2n) &ge; 2n(n-1) for n &gt; 2 and K(2,2n+1) &ge; 2n<sup>2</sup> for n &ge; 2.<p>
+
+Joseph DeVincentis noticed that by placing the knights all on the black squares of the checkerboard, we have K(2,N) &ge; <img src="lfloor.gif"> <img src="lceil.gif">N<sup>2</sup> /2<img src="rceil.gif"> /C <img src="rfloor.gif">.  Claudio Baiocchi noted that often some knights can be placed on white squares to improve this bound.<p>
+
+Corey Plover noticed that K(C,N) &ge; a K(aC,N).<p>
+
+Claudio Baiocchi showed that K(4,2n) &ge; 1+(n&ndash;1)<sup>2</sup> and K(4,2n+1) &ge; n+(n&ndash;1)<sup>2</sup>.  He notes these are not sharp for 5&times;5 or 6&times;6 boards, but expects they are for larger n.<p>
+
+Sasha Ravsky showed that K(C,N) &ge; N (<img src="lfloor.gif">(N+2)/C<img src="rfloor.gif"> &ndash; 2) by placing knights of different colors in different rows separated by 2 blank rows. <p>
+
+Joseph DeVincentis, Philippe Fondanaiche, and Claudio Baiocchi found many of the small configurations below.<p>
+
+<center><font size=+2>Best-Known Lower Bounds for K(C,N)</font></center>
+<center><table border=1 bgcolor=lightyellow cellpadding=2><tr><th bgcolor=CCFFCC>N \ C<th bgcolor=CCFFCC>1<th bgcolor=CCFFCC>2<th bgcolor=CCFFCC>3<th bgcolor=CCFFCC>4<th bgcolor=CCFFCC width=15>5<th bgcolor=CCFFCC width=15>6<th bgcolor=CCFFCC width=15>7<th bgcolor=CCFFCC width=15>8<th bgcolor=CCFFCC width=15>9</tr>
+<tr align=center><th bgcolor=CCFFCC>1<td><b>1</tr>
+<tr align=center><th bgcolor=CCFFCC>2<td><b>4<td><b>2<td><b>1<td><b>1</tr>
+<tr align=center><th bgcolor=CCFFCC>3<td><b>9<td bgcolor=FFDDDD><b>3<td bgcolor=FFDDDD><b>2<td><b>1<td><b>1</tr>
+<tr align=center><th bgcolor=CCFFCC>4<td><b>16<td>6<td><b>4<td>2<td>1<td>1<td><b>1<td><b>1</tr>
+<tr align=center><th bgcolor=CCFFCC>5<td><b>25<td bgcolor=FFDDDD>10<td>5<td bgcolor=FFCCFF>4<td>3<td>2<td>2<td>1<td>1</tr>
+<tr align=center><th bgcolor=CCFFCC>6<td><b>36<td bgcolor=FFEEBB>14<td>8<td>6<td>4<td>3<td>3<td>3<td>2</tr>
+<tr align=center><th bgcolor=CCFFCC>7<td><b>49<td>18<td>11<td>7<td>5<td>4<td>4<td>3<td>3</tr>
+<tr align=center><th bgcolor=CCFFCC>8<td><b>64<td>24<td bgcolor=DDFFFF>14<td><font color=darkgreen>10<td>7<td>6<td>5<td>4<td>3</tr>
+</table>
+<font color=red>Joe DeVincentis</font><br>
+<font color=purple>Philippe Fondanaiche</font><br>
+<font color=orange>Claudio Baiocchi</font><br>
+<font color=blue>Luis Urban</font></center><p>
+
+<center><table cellpadding=5>
+<tr><td><img src="0305/K23.gif"><td><img src="0305/K33.gif"></tr>
+<tr><td><img src="0305/K24.gif"><td><img src="0305/K34.gif"><td><img src="0305/K44.gif"></tr>
+<tr><td><img src="0305/K25.gif"><td><img src="0305/K35.gif"><td><img src="0305/K45.gif"><td><img src="0305/K55.gif"><td><img src="0305/K75.gif"></tr>
+<tr><td><img src="0305/K26.gif"><td><img src="0305/K36.gif"><td><img src="0305/K46.gif"><td><img src="0305/K56.gif"></tr>
+<tr><td><img src="0305/K27.gif"><td><img src="0305/K37.gif"><td><img src="0305/K47.gif"><td><img src="0305/K57.gif"></tr>
+<tr><td><img src="0305/K28.gif"><td><img src="0305/K38.gif"><td><img src="0305/K48.gif"><td><img src="0305/K58.gif"><td><img src="0305/K68.gif"><td><img src="0305/K78.gif"></tr>
+</table></center><p>
+
+<p><hr>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 4/26/05.<font></BODY></HTML>

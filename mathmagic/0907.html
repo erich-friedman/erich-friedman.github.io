@@ -1,0 +1,117 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (September 2007)</H1></CENTER>
+
+We say that two shapes in the plane can "see each other" if there is a horizontal or vertical line segment that intersects the interior of both shapes and no other shape.  This month we are interested in the problem of placing squares so that each square sees the same number of other squares.  In particular, let S<sub>k</sub>(n) be the maximum number of non-overlapping integer sided squares that can be placed (on a square grid) in a square of side n so that each square sees exactly k other squares.  And let M<sub>k</sub> be the minimum value of n for which S<sub>k</sub>(n)>0.  <p>
+
+What are the small values of S<sub>3</sub>(n)?  Is there a formula for S<sub>3</sub>(n)?  How about S<sub>k</sub>(n)?  What are the small values of M<sub>k</sub>?  Is there a formula for M<sub>k</sub>?  What about placing squares in a rectangle?  How do these values change if we allow the squares to be rotated or placed off the square grid?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Konstantin Knop found an error in one of my diagrams, and provided a figure proving S<sub>5</sub>(30)&ge;24.<p>
+
+David Bevan noticed S<sub>k</sub>(n) &le; <img src="lfloor.gif">n/<img src="lceil.gif">k/4<img src="rceil.gif"><img src="rfloor.gif"><sup>2</sup>, since a square can't see k other squares if it is perimeter is less than k.<p>
+
+David Bevan also showed S<sub>5</sub>(n) &ge; (n<sup>2</sup>&ndash;12n+27)/4 for n&ge;18, S<sub>6</sub>(n) &ge; (n<sup>2</sup>&ndash;30n+181)/4 for n&ge;29, and S<sub>8</sub>(n) &ge; (n<sup>2</sup>&ndash;103n+2687)/5 for n=40r+6 and r&ge;2.<p>
+
+David Bevan was interested in the limiting density of solutions L(k).  It is fairly easy to see that L(0)=0, L(1)=0, L(2)=0, L(3)=0, L(4)=1, L(5)=1/4, and L(6)=1/4.  He thinks L(7)=2/9, L(8)=1/5, L(9)=2/25, L(10)=1/14, L(11)=1/18, and L(12)=1/20, since these are the best on an infinite grid.  Are these correct?  Is there any solution at all for n&ge;9 ?<p>
+
+David Bevan also made the following graph-theoretic observation: if k is odd, then S<sub>k</sub>(n) is even.<p>
+
+Here are the values of S<sub>k</sub>(n) for k&le;2:<p>
+
+<table align=center cellspacing=10>
+<tr><td><font size=+1>S<sub>0</sub>(n) = n
+<td><img src="0907/s01.gif" align=center>
+<td><img src="0907/s02.gif" align=center>
+<td><img src="0907/s03.gif" align=center>
+<td><img src="0907/s04.gif" align=center>
+<td><img src="0907/s05.gif" align=center>
+<td><font size=+1>M<sub>0</sub> = 1
+<tr><td colspan=2><font size=+1>S<sub>1</sub>(n) = <img src="lfloor.gif" align=center>4n/3<img src="rfloor.gif" align=center>
+<td><img src="0907/s12.gif" align=center>
+<td><img src="0907/s13.gif" align=center>
+<td><img src="0907/s14.gif" align=center>
+<td><img src="0907/s15.gif" align=center>
+<td><font size=+1>M<sub>1</sub> = 2
+<tr><td colspan=2><font size=+1>S<sub>2</sub>(n) = 2n
+<td><img src="0907/s22.gif" align=center>
+<td><img src="0907/s23.gif" align=center>
+<td><img src="0907/s24.gif" align=center>
+<td><img src="0907/s25.gif" align=center>
+<td><font size=+1>M<sub>2</sub> = 2
+</table><p>
+
+Here are the best known values of S<sub>k</sub>(n) for other small k:<p>
+
+<table align=center cellspacing=10>
+<tr align=center><td><font size=+1>S<sub>3</sub>(n) &ge; 4n-14
+<td><img src="0907/s35.gif" align=center><br>S<sub>3</sub>(5)=6
+<td><img src="0907/s36.gif" align=center><br>S<sub>3</sub>(6)&ge;10
+<td><img src="0907/s37.gif" align=center><br>S<sub>3</sub>(7)&ge;14
+<td><img src="0907/s38.gif" align=center><br>S<sub>3</sub>(8)&ge;18
+<td><font size=+1>M<sub>3</sub> = 5
+</table>
+
+<table align=center cellspacing=10>
+<tr align=center><td><font size=+1>S<sub>4</sub>(2n) = 4n<sup>2</sup>-12n+4
+<td><img src="0907/s48.gif" align=center><br>S<sub>4</sub>(8)=20
+<td><img src="0907/s410.gif" align=center><br>S<sub>4</sub>(10)=44
+<td><img src="0907/s412.gif" align=center><br>S<sub>4</sub>(12)=76
+<td><font size=+1>M<sub>4</sub> = 8
+</table>
+
+<table align=center cellspacing=10><tr align=center>
+<td><img src="0907/s513.gif" align=center><br>S<sub>5</sub>(13)&ge;6
+<td><img src="0907/s516.gif" align=center><br>S<sub>5</sub>(16)&ge;8
+</table>
+
+<table align=center cellspacing=10><tr align=center>
+<td><img src="0907/s519.gif" align=center><br>S<sub>5</sub>(19)&ge;54<br>(David Bevan)
+<td><img src="0907/s523.gif" align=center><br>S<sub>5</sub>(23)&ge;88<br>(David Bevan)
+<td><font size=+1>M<sub>5</sub> &le; 13
+</table>
+
+<table align=center cellspacing=10><tr align=center>
+<td><img src="0907/s620.gif" align=center><br>S<sub>6</sub>(20)&ge;8
+<td><img src="0907/s630.gif" align=center><br>S<sub>6</sub>(30)&ge;82<br>(David Bevan)
+<td><font size=+1>M<sub>6</sub> &le; 20
+</table>
+
+<table align=center cellspacing=10><tr align=center>
+<td><img src="0907/s731.gif" align=center><br>S<sub>7</sub>(31)&ge;8<br>(Trevor Green)
+<td><font size=+1>M<sub>7</sub> &le; 31
+</table>
+
+<table align=center cellspacing=10><tr align=center>
+<td><img src="0907/s886.gif" align=center><br>S<sub>8</sub>(86)&ge;245<br>(David Bevan)
+<td><font size=+1>M<sub>8</sub> &le; 86
+</table>
+
+Trevor Green was interested in this problem without the restriction of placing squares on the grid.  Here are some of the best solutions in this case.<p>
+
+<table align=center cellspacing=10><tr align=center>
+<td><img src="0907/s32+e.gif" align=center><br>S<sup>*</sup><sub>3</sub>(2+&epsilon;)=4<br>(Trevor Green)
+<td><font size=+1>M<sup>*</sup><sub>3</sub> = 2 + &epsilon;
+</table>
+
+<table align=center cellspacing=10><tr align=center>
+<td><img src="0907/s43+e.gif" align=center><br>S<sup>*</sup><sub>4</sub>(3+&epsilon;)=9<br>(David Bevan)
+<td><img src="0907/s44+e.gif" align=center><br>S<sup>*</sup><sub>4</sub>(4+&epsilon;)=16<br>(David Bevan)
+<td><img src="0907/s46+e.gif" align=center><br>S<sup>*</sup><sub>4</sub>(6+&epsilon;)=36<br>(David Bevan)
+<td><font size=+1>M<sup>*</sup><sub>4</sub> = 3 + &epsilon;
+</table>
+
+<table align=center cellspacing=10><tr align=center>
+<td><img src="0907/s54+e.gif" align=center><br>S<sup>*</sup><sub>5</sub>(4+&epsilon;)=16<br>(David Bevan)
+<td><font size=+1>M<sup>*</sup><sub>5</sub> &le; 4 + &epsilon;
+</table>
+
+<table align=center cellspacing=10><tr align=center>
+<td><img src="0907/s64+e.gif" align=center><br>S<sup>*</sup><sub>6</sub>(4+&epsilon;)=16<br>(David Bevan)
+<td><font size=+1>M<sup>*</sup><sub>6</sub> &le; 4 + &epsilon;
+</table>
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 9/21/07.<font>
+</BODY></HTML>
+

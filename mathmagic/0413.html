@@ -1,0 +1,717 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (April 2013)</H1></CENTER>
+
+Say we have a chessboard filled with white chess pieces and a cyclical order in which the pieces are to be moved.  In turn, we move each piece as far as it can be moved (measured in number of squares), as long as that square is unique.  (If no move is possible, or the longest move is not unique, we stop.)  Some positions eventually repeat themselves.  It is not hard to find positions where each piece moves only twice each period, or crowded positions where the pieces have to cycle around.  It is harder to find more interesting examples.<p>
+
+What positions can you find that repeat?  What periods are possible with a given number of pieces?  What are the smallest boards (in terms of area) that accomplish this?  Positions like this that contain kings and knights are harder to find, because of all of their moves are the same length.  What positions using kings or knights can you find?  What periods are possible with those pieces?  What combinations of pieces have repeating positions?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Here are the known periods 7 or fewer pieces, on the smallest-known boards:<p>
+
+
+
+<table align=center cellpadding=20><tr align=center><td><font size=+2>1 Piece:<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="70"
+        height="50" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/2x1R.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/2x1R.mov" width="70" height="50" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 2
+
+</table>
+
+
+
+
+
+<table align=center cellpadding=20><tr align=center><td><font size=+2>2 Pieces:<td>
+
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="70"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/2x2BB.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/2x2BB.mov" width="70" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 4
+
+</table>
+
+
+
+
+<table align=center cellpadding=20><tr align=center><td><font size=+2>3 Pieces:<td>
+
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="70"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/2x2RRR.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/2x2RRR.mov" width="70" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 4
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="100"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/3x2BBR.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/3x2BBR.mov" width="100" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 6
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="130"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/4x2QQQ.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/4x2QQQ.mov" width="130" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 10
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="70"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/2x2RRQ.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/2x2RRQ.mov" width="70" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 12
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="160"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/5x2RNN.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/5x2RNN.mov" width="160" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 18<br>Andrew Bayly
+
+</table>
+
+
+
+
+
+<table align=center cellpadding=20><tr align=center><td><font size=+2>4 Pieces:<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="130"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/4x2BBRR.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/4x2BBRR.mov" width="130" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 8
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="160"
+        height="170" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/5x5BBBB.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/5x5BBBB.mov" width="160" height="170" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 12
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="220"
+        height="170" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/7x5BBBB.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/7x5BBBB.mov" width="220" height="170" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 14<br>Joe DeVincentis
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="100"
+        height="110" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/3x3BBBR.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/3x3BBBR.mov" width="100" height="110" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 16
+
+</table>
+
+
+
+
+
+<table align=center cellpadding=20><tr align=center>
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="250"
+        height="200" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/8x6BBBB.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/8x6BBBB.mov" width="250" height="200" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 20<br>Joe DeVincentis
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="160"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/5x2RRNN.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/5x2RRNN.mov" width="160" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 24<br>Andrew Bayly
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="280"
+        height="170" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/9x5BBBB.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/9x5BBBB.mov" width="280" height="170" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 40<br>Joe DeVincentis
+
+</table>
+
+
+
+
+
+<table align=center cellpadding=20><tr align=center><td><font size=+2>5 Pieces:<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="100"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/3x2RRRRR.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/3x2RRRRR.mov" width="100" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 6
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="100"
+        height="110" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/3x3NNNNNb.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/3x3NNNNNb.mov" width="100" height="110" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 8<BR>Jon Palin
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="160"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/5x2BBBBR.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/5x2BBBBR.mov" width="160" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 10
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="160"
+        height="170" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/5x5BBBBB.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/5x5BBBBB.mov" width="160" height="170" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 12<BR>Jon Palin
+
+</table>
+
+
+
+
+
+<table align=center cellpadding=20><tr align=center>
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="190"
+        height="140" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/6x4BBBBB.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/6x4BBBBB.mov" width="190" height="140" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 16
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="100"
+        height="110" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/3x3BBBBB.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/3x3BBBBB.mov" width="100" height="110" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 20
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="100"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/3x2RRRRQ.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/3x2RRRRQ.mov" width="100" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 30
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="100"
+        height="110" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/3x3NNNNN.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/3x3NNNNN.mov" width="100" height="110" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 40<BR>George Sicherman
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="220"
+        height="170" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/7x5BBBBB.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/7x5BBBBB.mov" width="220" height="170" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 70<br>Joe DeVincentis
+
+</table>
+
+
+
+
+<table align=center cellpadding=20><tr align=center><td><font size=+2>6 Pieces:<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="130"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/4x2RRRRRRb.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/4x2RRRRRRb.mov" width="130" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 8
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="190"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/6x2BBBBRR.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/6x2BBBBRR.mov" width="190" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 12
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="100"
+        height="110" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/3x3NNNNNN.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/3x3NNNNNN.mov" width="100" height="110" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 16<br>Andrew Bayly
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="220"
+        height="170" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/7x5BBBBBB.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/7x5BBBBBB.mov" width="220" height="170" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 20<br>Joe DeVincentis
+
+</table>
+
+
+
+
+
+<table align=center cellpadding=20><tr align=center>
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="130"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/4x2RRRRRR.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/4x2RRRRRR.mov" width="130" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 24
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="160"
+        height="170" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/5x5BBBBBB.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/5x5BBBBBB.mov" width="160" height="170" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 36<BR>Jon Palin
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="100"
+        height="110" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/3x3NNNNNNb.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/3x3NNNNNNb.mov" width="100" height="110" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 48<br>Jon Palin
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="220"
+        height="170" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/7x5BBBBBBc.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/7x5BBBBBBc.mov" width="220" height="170" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 60<br>Joe DeVincentis
+
+</table>
+
+
+
+
+
+<table align=center cellpadding=20><tr align=center>
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="160"
+        height="170" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/5x5BBBBBBc.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/5x5BBBBBBc.mov" width="160" height="170" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 72<BR>Jon Palin
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="220"
+        height="170" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/7x5BBBBBBd.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/7x5BBBBBBd.mov" width="220" height="170" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 84<br>Joe DeVincentis
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="190"
+        height="140" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/6x4BBBBBB.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/6x4BBBBBB.mov" width="190" height="140" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 96<br>Andrew Bayly
+
+</table>
+
+
+
+
+
+<table align=center cellpadding=20><tr align=center><td><font size=+2>7 Pieces:<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="130"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/4x2RRRRRRR.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/4x2RRRRRRR.mov" width="130" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 8
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="220"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/7x2RRRBBBB.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/7x2RRRBBBB.mov" width="220" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 14
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="160"
+        height="170" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/5x5BBBBBBBb.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/5x5BBBBBBBb.mov" width="160" height="170" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 28<BR>Jon Palin
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="130"
+        height="80" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/4x2RRRRRRQ.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/4x2RRRRRRQ.mov" width="130" height="80" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 56
+
+</table>
+
+
+
+
+
+<table align=center cellpadding=20><tr align=center>
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="220"
+        height="170" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/7x5BBBBBBBc.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/7x5BBBBBBBc.mov" width="220" height="170" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 70<br>Joe DeVincentis
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="160"
+        height="170" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/5x5BBBBBBB.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/5x5BBBBBBB.mov" width="160" height="170" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 84<br>Andrew Bayly
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="220"
+        height="170" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/7x5BBBBBBB.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/7x5BBBBBBB.mov" width="220" height="170" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 98<br>Joe DeVincentis
+
+<td>
+
+<OBJECT classid='clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B' width="190"
+        height="140" codebase='http://www.apple.com/qtactivex/qtplugin.cab'>
+        <param name='src' value="0413/6x4BBBBBBB.mov">
+        <param name='autoplay' value="false">
+        <param name='controller' value="true">
+        <param name='loop' value="true">
+        <EMBED src="0413/6x4BBBBBBB.mov" width="190" height="140" autoplay="false" 
+        controller="true" loop="true" pluginspage='http://www.apple.com/quicktime/download/'>
+        </EMBED>
+        </OBJECT><br>period 112<br>Andrew Bayly
+
+</table><hr>
+
+All the known periods are even.  Bryce Herdt asks whether there are any odd periods.<p>
+
+Here are the known periods using 3 or fewer pieces:<p>
+
+<TABLE align=center cellspacing=20><TR><TD>
+
+<table align=center bgcolor=white border=1 cellpadding=2><tr align=center><th>Pieces<th>Period<th>Rectangles
+<tr align=center><td><img src="0413/B.gif"><td>2<td>n&times;m, m&le;3n-4
+<tr align=center><td><img src="0413/K.gif"><td>2<td>1&times;2
+<tr align=center><td><img src="0413/N.gif"><td>2<td>2&times;3, 2&times;4, 2&times;5
+<tr align=center><td><img src="0413/Q.gif"><td>2<td>m&times;n, except 1&times;1 and 2&times;2 (JD)
+<tr align=center><td><img src="0413/R.gif"><td>2<td>m&times;n, except 1&times;1 and 2&times;2 (JD)
+<tr align=center><td><img src="0413/B.gif"><img src="0413/B.gif"><td>4<td>n&times;m, n&le;m&le;3n-4
+<tr align=center><td><img src="0413/B.gif"><img src="0413/K.gif"><td colspan=2>none
+<tr align=center><td><img src="0413/B.gif"><img src="0413/N.gif"><td>4<td>2&times;3, 2&times;4
+<tr align=center><td><img src="0413/B.gif"><img src="0413/Q.gif"><td>4<td>n&times;m, n&le;m&le;3n-4
+<tr align=center><td><img src="0413/B.gif"><img src="0413/R.gif"><td>4<td>n&times;m, n&le;m&le;3n-4
+<tr align=center><td><img src="0413/K.gif"><img src="0413/K.gif"><td colspan=2>none
+<tr align=center><td><img src="0413/K.gif"><img src="0413/N.gif"><td colspan=2>none
+<tr align=center><td><img src="0413/K.gif"><img src="0413/Q.gif"><td colspan=2>none
+<tr align=center><td><img src="0413/K.gif"><img src="0413/R.gif"><td colspan=2>none
+<tr align=center><td><img src="0413/N.gif"><img src="0413/N.gif"><td>4<td>2&times;3, 2&times;4, 2&times;5
+<tr align=center><td><img src="0413/N.gif"><img src="0413/Q.gif"><td>4<td>2&times;4, 2&times;5, 2&times;6
+<tr align=center><td><img src="0413/N.gif"><img src="0413/R.gif"><td>4<td>2&times;4, 2&times;5, 2&times;6
+<tr align=center><td><img src="0413/Q.gif"><img src="0413/Q.gif"><td>4<td>m&times;n, 2&le;m&le;n, except 2&times;2 (JD)
+<tr align=center><td><img src="0413/Q.gif"><img src="0413/R.gif"><td>4<td>m&times;n, 2&le;m&le;n, except 2&times;2 (JD)
+<tr align=center><td><img src="0413/R.gif"><img src="0413/R.gif"><td>4<td>m&times;n, 2&le;m&le;n, except 2&times;2 (JD)
+</table>
+
+<TD>
+
+<table align=center bgcolor=white border=1 cellpadding=2><tr align=center><th>Pieces<th>Period<th>Rectangles
+<tr align=center><td><img src="0413/B.gif"><img src="0413/B.gif"><img src="0413/B.gif"><td>4<br>6<br>10<td>(2n+1)&times;(2n+1), except 1&times;1<br>3&times;4, n&times;m, 4&le;n&le;m&le;3n-5 (JD)<br>n&times;(3n-6), n&ge;5 (JD)
+<tr align=center><td><img src="0413/B.gif"><img src="0413/B.gif"><img src="0413/K.gif"><td colspan=2>none
+<tr align=center><td><img src="0413/B.gif"><img src="0413/B.gif"><img src="0413/N.gif"><td>6<td>2&times;3 (JP)
+<tr align=center><td><img src="0413/B.gif"><img src="0413/B.gif"><img src="0413/Q.gif"><td>6<td>n&times;m, 3&le;n&le;m&le;4n-4 (JD)
+<tr align=center><td><img src="0413/B.gif"><img src="0413/B.gif"><img src="0413/R.gif"><td>6<br>12<td>2&times;3, n&times;m, 3&le;n&le;m&le;4n-4 (JD)<br>4&le;n&le;m&le;3n-5 (JD)
+<tr align=center><td><img src="0413/B.gif"><img src="0413/K.gif"><img src="0413/K.gif"><td colspan=2>none
+<tr align=center><td><img src="0413/B.gif"><img src="0413/K.gif"><img src="0413/N.gif"><td colspan=2>none
+<tr align=center><td><img src="0413/B.gif"><img src="0413/K.gif"><img src="0413/Q.gif"><td colspan=2>none
+<tr align=center><td><img src="0413/B.gif"><img src="0413/K.gif"><img src="0413/R.gif"><td colspan=2>none
+<tr align=center><td><img src="0413/B.gif"><img src="0413/N.gif"><img src="0413/N.gif"><td>6<td>2&times;4 (JP)
+<tr align=center><td><img src="0413/B.gif"><img src="0413/N.gif"><img src="0413/Q.gif"><td>6<td>3&times;3 (JP), 2&times;5, 2&times;6 (JD)
+<tr align=center><td><img src="0413/B.gif"><img src="0413/N.gif"><img src="0413/R.gif"><td>6<td>2&times;5 (JP), 3&times;3 (AB), 2&times;4, 2&times;6 (JD)
+<tr align=center><td><img src="0413/B.gif"><img src="0413/Q.gif"><img src="0413/Q.gif"><td>6<td>3&times;3, 3&times;5, 3&times;6, n&times;m, 4&le;n&le;m&le;3n-2 (JD)
+<tr align=center><td><img src="0413/B.gif"><img src="0413/Q.gif"><img src="0413/R.gif"><td>6<br>12<td>3&times;3, 3&times;5, 3&times;6, n&times;m, 4&le;n&le;m&le;4n-5 (JD)<br>7&le;n&le;m&le;2n-6 (JD)
+<tr align=center><td><img src="0413/B.gif"><img src="0413/R.gif"><img src="0413/R.gif"><td>6<br>12<td>3&times;3, 3&times;5, 3&times;6, n&times;m, 4&le;n&le;m&le;4n-5 (JD)<br>7&le;n&le;m&le;2n-6 (JD)
+
+</table>
+
+<TD>
+
+<table align=center bgcolor=white border=1 cellpadding=2><tr align=center><th>Pieces<th>Period<th>Rectangles
+<tr align=center><td><img src="0413/K.gif"><img src="0413/K.gif"><img src="0413/K.gif"><td>4<td>2&times;2
+<tr align=center><td><img src="0413/K.gif"><img src="0413/K.gif"><img src="0413/N.gif"><td colspan=2>none
+<tr align=center><td><img src="0413/K.gif"><img src="0413/K.gif"><img src="0413/Q.gif"><td>12<td>2&times;2
+<tr align=center><td><img src="0413/K.gif"><img src="0413/K.gif"><img src="0413/R.gif"><td>12<td>2&times;2
+<tr align=center><td><img src="0413/K.gif"><img src="0413/N.gif"><img src="0413/N.gif"><td colspan=2>none
+<tr align=center><td><img src="0413/K.gif"><img src="0413/N.gif"><img src="0413/Q.gif"><td colspan=2>none
+<tr align=center><td><img src="0413/K.gif"><img src="0413/N.gif"><img src="0413/R.gif"><td colspan=2>none
+<tr align=center><td><img src="0413/K.gif"><img src="0413/Q.gif"><img src="0413/Q.gif"><td>12<td>2&times;2
+<tr align=center><td><img src="0413/K.gif"><img src="0413/Q.gif"><img src="0413/R.gif"><td>12<td>2&times;2
+<tr align=center><td><img src="0413/K.gif"><img src="0413/R.gif"><img src="0413/R.gif"><td>12<td>2&times;2
+<tr align=center><td><img src="0413/N.gif"><img src="0413/N.gif"><img src="0413/N.gif"><td>6<td>2&times;4 (JP)
+<tr align=center><td><img src="0413/N.gif"><img src="0413/N.gif"><img src="0413/Q.gif"><td>6<br>18<td>2&times;6, 2&times;7, 2&times;8 (JD)<br>2&times;5
+<tr align=center><td><img src="0413/N.gif"><img src="0413/N.gif"><img src="0413/R.gif"><td>6<br>18<td>2&times;3, 2&times;4, 2&times;5 (JP), 2&times;6, 2&times;7, 2&times;8 (JD)<br>2&times;5
+<tr align=center><td><img src="0413/N.gif"><img src="0413/Q.gif"><img src="0413/Q.gif"><td>6<td>3&times;3 (JP)
+<tr align=center><td><img src="0413/N.gif"><img src="0413/Q.gif"><img src="0413/R.gif"><td>6<br>12<td>3&times;3 (JD)<br>2&times;6 (JD)
+<tr align=center><td><img src="0413/N.gif"><img src="0413/R.gif"><img src="0413/R.gif"><td>12<td>2&times;6 (JD)
+<tr align=center><td><img src="0413/Q.gif"><img src="0413/Q.gif"><img src="0413/Q.gif"><td>4<br>6<br>10<td>n&times;m, 2&le;n&le;m&le;3n-4 (JD)<br>n&times;m, 3&le;n&le;m (AB)<br>2&times;n, n&ge;4 (JD)
+<tr align=center><td><img src="0413/Q.gif"><img src="0413/Q.gif"><img src="0413/R.gif"><td>6<br>12<td>n&times;m, 3&le;n&le;m (AB), 2&times;n, n&ge;4 (JD)
+<br>n&times;n, except 1&times;1
+<tr align=center><td><img src="0413/Q.gif"><img src="0413/R.gif"><img src="0413/R.gif"><td>6<br>12<td>n&times;m, 3&le;n&le;m (AB), 2&times;n, n&ge;4 (JD)
+<br>n&times;n, except 1&times;1
+<tr align=center><td><img src="0413/R.gif"><img src="0413/R.gif"><img src="0413/R.gif"><td>4<br>6<td>n&times;n, except 1&times;1<br>n&times;m, 3&le;n&le;m (AB), 2&times;n, n&ge;4 (JD)
+</table>
+
+</TABLE>
+<center>JP = Jon Palin<br>JD = Joe DeVincentis<br>AB = Andrew Bayly</center>
+
+
+<hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 4/18/13.<font>
+
+</BODY></HTML>

@@ -1,0 +1,5510 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (April 2014)</H1></CENTER>
+
+This month we explore approximations of the constants &pi; and e using logarithms.  We allow expressions to use the four arithmetic operations (&times; / + &ndash;) and the ln function.  We measure the complexity of an expression as the number of integer digits used plus the number of logarithms used.  Among all expressions using only one digit and logarithms with a given complexity, which one best approximates these constants?  What if any digits can be used?<p>
+
+What if we are allowed to use square roots instead of logarithms?  What if we are allowed to use decimal points instead?  What if the logarithms, square roots, or decimals were not counted in the complexity?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Solutions were sent by Hakan Summako&#287;lu and Joe DeVincentis.<p>
+
+Here are the best known results.<p>
+
+<center><font size=+2>Best Known Approximations Using 1's and ln's</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>1<td>&pi; &ndash; 2.14<td>&nbsp;<td>1<td>e &ndash; 1.72<td>&nbsp;
+<tr align=center><td>2<td>1 + 1<td>&pi; &ndash; 1.14<td>&nbsp;<td>1 + 1<td>e &ndash; .718<td>&nbsp;
+<tr align=center><td>3<td>1 + 1 + 1<td>&pi; &ndash; .142<td>&nbsp;<td>1 + 1 + 1<td>e + .282<td>&nbsp;
+<tr align=center><td>4<td>1&times;1 + 1 + 1<td>&pi; &ndash; .142<td>&nbsp;<td>ln[11 + 1]<td>e &ndash; .233<td>&nbsp;
+<tr align=center><td>5<td>ln[ (1 + 1) &times; 11]<td>&pi; &ndash; .0506<td>&nbsp;<td>1 + 1 + ln[1 + 1]<td>e &ndash; .0251<td>&nbsp;
+<tr align=center><td>6<td>ln[ (1 + 1) &times; 11 + 1]<td>&pi; &ndash; .00610<td>&nbsp;<td>ln[111] &ndash; 1 &ndash; 1<td>e &ndash; .00875<td>&nbsp;
+<tr align=center><td>7<td>1 + 1 + 1 / ln[ ln[11] ] <td>&pi; + .00180<td>&nbsp;<td>ln[111 + 1] &ndash; 1 &ndash; 1<td>e + .000217<td>&nbsp;
+<tr align=center><td>8<td>1 + ln[11 &ndash; ln[11 + 1] ] <td>&pi; + .000248<td>&nbsp;<td>ln[111 + 1] &ndash; 1 &ndash; 1&times;1<td>e + .000217<td>&nbsp;
+<tr align=center><td>9<td>ln[111 / (1+1) ln[11] ]<td>&pi; + .000199<td>&nbsp;<td>(1 + 1) / (1 &ndash; ln[1 + 1] ) ln[11]<td>e &ndash; .000155<td>&nbsp;
+<tr align=center><td>10<td>ln[11 &times; (1 + ln[111 + 1] ) ] &ndash; 1<td>&pi; + .00000896<td>&nbsp;<td>1 + ln[ ln[ (111 &ndash; 1) ln[11] ] ]<td>e + .0000234<td>&nbsp;
+<tr align=center><td>11<td>1 + 11 &times; 11 / (111 / (1+1) + 1) <td>&pi; + .000000267<td>&nbsp;<td>ln[ 11 / ln[1 + 1] &ndash; 1 / (ln[11] &ndash; 1) ]<td>e + .00000145<td>&nbsp;
+<tr align=center><td>12<td>1 &times; 1 + 11 &times; 11 / (111 / (1+1) + 1) <td>&pi; + .000000267<td>JD<td>ln[11&times;ln[ln[ln(1+1)&times;111]]&ndash;1]<td>e + .0000000275<td>JD
+</table><p>
+
+
+<center><font size=+2>Best Known Approximations Using 2's and ln's</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>2<td>&pi; &ndash; 1.14<td>&nbsp;<td>2<td>e &ndash; .718<td>&nbsp;
+<tr align=center><td>2<td>2 + 2<td>&pi; + .858<td>&nbsp;<td>2 + 2<td>e + 1.28<td>&nbsp;
+<tr align=center><td>3<td>ln[22]<td>&pi; &ndash; .0506<td>&nbsp;<td>2 + ln[2]<td>e &ndash; .0251<td>&nbsp;
+<tr align=center><td>4<td>ln[22 + 2]<td>&pi; + .0365<td>&nbsp;<td>(2 + 2) ln[2]<td> e + .0543<td>&nbsp;
+<tr align=center><td>5<td>ln[22 + 2/2]<td>&pi; &ndash; .00610<td>&nbsp;<td>ln[22 ln[2] ]<td>e + .00625<td>&nbsp;
+<tr align=center><td>6<td>ln[22 + 2 &ndash; 2/2]<td>&pi; &ndash; .00610<td>&nbsp;<td>2 + 2 / (2 &times; 2 ln[2] )<td>e + .00307<td>&nbsp;
+<tr align=center><td>7<td>ln[22 + ln[ ln[22] ] ]<td>&pi; &ndash; .000527<td>&nbsp;<td>(2 + ln[2] ) / (ln[2 + ln[2] ] )<td>e + .000118<td>&nbsp;
+<tr align=center><td>8<td>(2 &ndash; 2/22) &times; (2 + ln[2] ) &ndash; 2<td>&pi; &ndash; .000130<td>&nbsp;<td>2 + 2 / (ln[2 &times; 22] &ndash; 2/2)<td>e + .0000600<td>&nbsp;
+<tr align=center><td>9<td>ln[22 + ln[2 + ln[ ln[22] ] ] ]<td>&pi; &ndash; .00000589<td>&nbsp;<td>2 + (ln[22 &ndash; 2] &ndash; 2) / (2 ln[2] )<td>e &ndash; .0000128<td>&nbsp;
+<tr align=center><td>10<td>(2 + (2 + 2 &ndash; ln[2] / 2) ln[2] ) ln[2]<td>&pi; + .00000144<td>&nbsp;<td>(2+ln[2])&times;(2/2&ndash;ln[ln[2+ln[2]]])<td>e + .000000364<td>JD
+</table><p>
+
+
+<center><font size=+2>Best Known Approximations Using 3's and ln's</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>3<td>&pi; &ndash; .142<td>&nbsp;<td>3<td>e + .282<td>&nbsp;
+<tr align=center><td>2<td>ln[3]<td>&pi; &ndash; 2.04<td>&nbsp;<td>ln[3]<td>e &ndash; 1.62<td>&nbsp;
+<tr align=center><td>3<td>3 + 3 &ndash; 3<td>&pi; &ndash; .142<td>&nbsp;<td>3 / ln[3]<td>e + .0124<td>&nbsp;
+<tr align=center><td>4<td>3 + ln[ ln[3] ]<td>&pi; &ndash; .0475<td>&nbsp;<td>3 &ndash; (3 / (3&times;3) )<td>e &ndash; .0516<td>&nbsp;
+<tr align=center><td>5<td>(3 + 3) / (3 &ndash; ln[3] )<td>&pi; + .0140<td>&nbsp;<td>3 &ndash; 3 ln[ ln[3] ]<td>e &ndash; .000425<td>&nbsp;
+<tr align=center><td>6<td>3 + 3 / (3 &times; (3+3) + 3)<td>&pi; + .00126<td>&nbsp;<td>3 &times; (3/3 &ndash; 3 ln[ ln[3] ] )<td>e &ndash; .000425<td>&nbsp;
+<tr align=center><td>7<td>3 + 3/3 &ndash; 3 / ln[33]<td>&pi; + .000408<td>&nbsp;<td>3 / ln[3] ln[3 / ln[3] ]<td>e + .0000282<td>&nbsp;
+<tr align=center><td>8<td>3 + (3 &ndash; 3 / ln[3] ) / (3 &ndash; ln[3] )<td>&pi; + .0000314<td>&nbsp;<td>(3 + 3) / ln[3&times;3 + 3/33]<td>e + .00000214<td>&nbsp;
+<tr align=center><td>9<td>ln[3] &times; ln[ (3+3) &times; (3 &ndash; 3/33) ]<td>&pi; &ndash; .000000844<td>&nbsp;<td>(3 &ndash; 3 ln[ ln[3 / ln[3] ] ] ) / ln[3]<td>e &ndash; .0000000430<td>&nbsp;
+<tr align=center><td>10<td>ln[3&ndash;(33&ndash;3)/3/(3&ndash;ln[33])]<td>&pi; &ndash; .000000538<td>JD<td>3&times;(3/3&ndash;ln[ln[3/ln[3]]])/ln[3]<td>e &ndash; .0000000430<td>JD
+</table><p>
+
+
+<center><font size=+2>Best Known Approximations Using 4's and ln's</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>4<td>&pi; + .858<td>&nbsp;<td>4<td>e + 1.28<td>&nbsp;
+<tr align=center><td>2<td>ln[4]<td>&pi; &ndash; 1.76<td>&nbsp;<td>ln[4]<td>e &ndash; 1.33<td>&nbsp;
+<tr align=center><td>3<td>4 &ndash; 4/4<td>&pi; &ndash; .142<td>&nbsp;<td>ln[4 &times; 4]<td>e &ndash; .0543<td>&nbsp;
+<tr align=center><td>4<td>(4 + 4 + 4) / 4<td>&pi; &ndash; .142<td>&nbsp;<td>44 / (4 &times; 4)<td>e + .0317<td>&nbsp;
+<tr align=center><td>5<td>ln[4&times;4 + 4 + 4]<td>&pi; + .0365<td>&nbsp;<td>ln[4 ln[44] ]<td>e &ndash; .00116<td>&nbsp;
+<tr align=center><td>6<td>ln[4 &times; (4+4) / ln[4] ]<td>&pi; &ndash; .00249<td>&nbsp;<td>ln[4] + ln[ ln[44] ]<td>e &ndash; .00116<td>&nbsp;
+<tr align=center><td>7<td>ln[4 + 4 + 4 ln[44] ]<td>&pi; &ndash; .000170<td>&nbsp;<td>(4 + 4) / (4 &ndash; 4/ln[44] )<td>e + .0000600<td>&nbsp;
+<tr align=center><td>8<td>4 &ndash; ln[4 &times; (4+4) &ndash; 4/4] / 4<td>&pi; &ndash; .0000894<td>&nbsp;<td>4 / ln[ (4 &times; 4) / (4 &ndash; ln[ ln[4] ] ) ]<td>e + .0000691<td>&nbsp;
+<tr align=center><td>9<td>ln[4 &times; 4 ln[4] + ln[4 &ndash; ln[4] ] ]<td>&pi; + .0000340<td>&nbsp;<td>ln[ (4 + (4 + 4/4) ln[4] ) ln[4] ]<td>e &ndash; .00000162<td>&nbsp;
+<tr align=center><td>10<td>ln[(4+4&ndash;ln[4])/ln[ln[ln[44]]]]<td>&pi; + .0000000426<td>JD<td>4/ln[4+(4+ln[4])/(4ln[44])]<td>e &ndash; .000000308<td>JD
+</table><p>
+
+
+<center><font size=+2>Best Known Approximations Using 5's and ln's</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>5<td>&pi; + 1.86<td>&nbsp;<td>5<td>e + 2.28<td>&nbsp;
+<tr align=center><td>2<td>ln[5]<td>&pi; &ndash; 1.53<td>&nbsp;<td>ln[5]<td>e &ndash; 1.11<td>&nbsp;
+<tr align=center><td>3<td>5 / ln[5]<td>&pi; &ndash; .0349<td>&nbsp;<td>5 / ln[5]<td>e + .388<td>&nbsp;
+<tr align=center><td>4<td>ln[5] + ln[5]<td>&pi; + .0773<td>&nbsp;<td>ln[5 + 5 + 5]<td>e &ndash; .0102<td>&nbsp;
+<tr align=center><td>5<td>ln[25 &ndash; ln[5] ]<td>&pi; + .0107<td>&nbsp;<td>ln[5&times;5 &ndash; 5 &ndash; 5]<td>e &ndash; .0102<td>&nbsp;
+<tr align=center><td>6<td>5 / ln[5 &ndash; 5/55 ]<td>&pi; + .000910<td>&nbsp;<td>ln[5 &times; 5] &ndash; 5 / (5+5)<td>e + .000594<td>&nbsp;
+<tr align=center><td>7<td>5 / (ln[5] &ndash; 5 / (5 &times; 55) )<td>&pi; + .000579<td>&nbsp;<td>(5 + 5) / (5 &ndash; (5 + ln[5] ) / 5)<td>e + .000504<td>&nbsp;
+<tr align=center><td>8<td>5 &ndash; ln[ ln[555 + 55] ]<td>&pi; + .00000860<td>&nbsp;<td>5 / ln[5] &ndash; ln[5 / (5 &ndash; ln[5] ) ]<td>e &ndash; .0000493<td>&nbsp;
+<tr align=center><td>9<td>ln[5&times;5 &ndash; 5 / (5&times;5 &ndash; 5) &ndash; ln[5] ]<td>&pi; &ndash; .00000564<td>&nbsp;<td>5 + (5 &ndash; (5 + 5) / (ln[5] &ndash; 5/5) ) / 5<td>e + .00000570<td>&nbsp;
+<tr align=center><td>10<td>ln[55]&ndash;5/(5&ndash;ln[ln[5+5]/5])<td>&pi; + .000000450<td>JD<td>ln[5+5ln[5+5&ndash;5ln[ln[5]]]]<td>e &ndash; .000000204<td>JD
+</table><p>
+
+
+<center><font size=+2>Best Known Approximations 6's and ln's</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>6<td>&pi; + 2.86<td>&nbsp;<td>6<td>e + 3.28<td>&nbsp;
+<tr align=center><td>2<td>ln[6]<td>&pi; &ndash; 1.35<td>&nbsp;<td>ln[6]<td>e &ndash; .927<td>&nbsp;
+<tr align=center><td>3<td>6 / ln[6]<td>&pi; + .207<td>&nbsp;<td>ln[6 + 6]<td>e &ndash; .233<td>&nbsp;
+<tr align=center><td>4<td>ln[6] &times; ln[6]<td>&pi; + .0688<td>&nbsp;<td>6 &ndash; 6 / ln[6]<td>e &ndash; .0669<td>&nbsp;
+<tr align=center><td>5<td>6 &ndash; ln[6 + 6 + 6]<td>&pi; &ndash; .0320<td>&nbsp;<td>ln[6 ln[6 + 6] ]<td>e &ndash; .0163<td>&nbsp;
+<tr align=center><td>6<td>6 &ndash; (6 + 6) / ln[66] <td>&pi; &ndash; .00579<td>&nbsp;<td>(6 + 6 / ln[ ln[6] ] ) / 6<td>e &ndash; .00360<td>&nbsp;
+<tr align=center><td>7<td>6 / (6/6 + ln[ ln[6 + 6] ] ) <td>&pi; &ndash; .000618<td>&nbsp;<td>ln[ (6 + 6) / (ln[6] &ndash; 6/6) ]<td>e + .000122<td>&nbsp;
+<tr align=center><td>8<td>6 / ln[6] &ndash; ln[6 + 6] / (6 + 6) <td>&pi; &ndash; .00000445<td>&nbsp;<td>ln[6 ln[6 + 6 + 6/(6+6) ] ]<td>e + .00000723<td>&nbsp;
+<tr align=center><td>9<td>ln[(6 &ndash; ln[6 + 6] ) &times; (6 + ln[ ln[6] ] ) ] <td>&pi; &ndash; .00000591<td>&nbsp;<td>6 / ln[ (666 &ndash; 66) / 66]<td>e + .00000214<td>&nbsp;
+<tr align=center><td>10<td>ln[6&times;6]&ndash;(ln[6+6]+6/(6&times;6))/6<td>&pi; &ndash; .00000260<td>JD<td>(6+6&ndash;(6+6)&times;(ln[ln[66]/6]))/6 <td>e + .000000450<td>JD
+</table><p>
+
+
+<center><font size=+2>Best Known Approximations Using 7's and ln's</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>7<td>&pi; + 3.86<td>&nbsp;<td>7<td>e + 4.28<td>&nbsp;
+<tr align=center><td>2<td>ln[7]<td>&pi; &ndash; 1.20<td>&nbsp;<td>ln[7]<td>e &ndash; .772<td>&nbsp;
+<tr align=center><td>3<td>7 / ln[7]<td>&pi; + .456<td>&nbsp;<td>ln[7 + 7]<td>e &ndash; .0792<td>&nbsp;
+<tr align=center><td>4<td>7 &ndash; ln[7 &times; 7]<td>&pi; &ndash; .0334<td>&nbsp;<td>7 &ndash; ln[77]<td>e &ndash; .0621<td>&nbsp;
+<tr align=center><td>5<td>7 &ndash; ln[7] &ndash; ln[7] <td>&pi; &ndash; .0334<td>&nbsp;<td>ln[7 + 7 + 7/7]<td>e &ndash; .0102<td>&nbsp;
+<tr align=center><td>6<td>(7 + 7 + 7 + 7/7) / 7 <td>&pi; + .00126<td>&nbsp;<td>(7 + 7 + 7 &ndash; ln[7] ) / 7<td>e + .00373<td>&nbsp;
+<tr align=center><td>7<td>ln[7 ln[ (7+7) ln[7] ] ] <td>&pi; &ndash; .000310<td>&nbsp;<td>(7+7) ln[ ln[7 + 7] ] / 7<td>e &ndash; .000528<td>&nbsp;
+<tr align=center><td>8<td>7 &ndash; ln[7&times;7 &ndash; 7 / ln[77] ] <td>&pi; + .0000276<td>&nbsp;<td>7 &times; (ln[ (7 + 7 + 7) &times; 77] &ndash; 7)<td>e + .0000132<td>&nbsp;
+<tr align=center><td>9<td>ln[7 + 7 + (7+7) / ln[7] + ln[7] ] <td>&pi; &ndash; .00000889<td>&nbsp;<td>7 / (7 &ndash; ln[77 + 7 &ndash; 7/(7+7) ] )<td>e + .00000287<td>&nbsp;
+<tr align=center><td>10<td>7&ndash;ln[7&times;7&ndash;7/(7&ndash;7/ln[7+7])]<td>&pi; &ndash; .00000164<td>JD<td>ln[7]&ndash;(ln[7&ndash;ln[7+7/7]]&ndash;7)/7<td>e + .00000287<td>JD
+</table><p>
+
+
+<center><font size=+2>Best Known Approximations Using 8's and ln's</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>8<td>&pi; + 4.86<td>&nbsp;<td>8<td>e + 5.28<td>&nbsp;
+<tr align=center><td>2<td>ln[8]<td>&pi; &ndash; 1.06<td>&nbsp;<td>ln[8]<td>e &ndash; .639<td>&nbsp;
+<tr align=center><td>3<td>ln[8 + 8]<td>&pi; &ndash; .369<td>&nbsp;<td>ln[8 + 8]<td>e + .0543<td>&nbsp;
+<tr align=center><td>4<td>ln[8 + 8 + 8] <td>&pi; + .0364<td>&nbsp;<td>ln[8 ln[8] ]<td>e + .0933<td>&nbsp;
+<tr align=center><td>5<td>8 &ndash; ln[8 &times; (8+8) ] <td>&pi; + .00638<td>&nbsp;<td>ln[8 + 8 &ndash; 8/8]<td>e &ndash; .0102<td>&nbsp;
+<tr align=center><td>6<td>ln[8 &times; 8 / ln[8 + 8] ] <td>&pi; &ndash; .00249<td>&nbsp;<td>8 / ln[88/8 + 8]<td>e &ndash; .00130<td>&nbsp;
+<tr align=center><td>7<td>ln[88] / ln[ ln[8 &times; 8] ] <td>&pi; &ndash; .000145<td>&nbsp;<td>ln[88/8 + ln[8 &times; 8] ]<td>e + .000305<td>&nbsp;
+<tr align=center><td>8<td>ln[8 &times; (88 &ndash; ln[8] ) ] / ln[8] <td>&pi; + .0000512<td>&nbsp;<td>ln[8 + ln[ (8+8)&times;(88&ndash;8) ] ]<td>e + .0000233<td>&nbsp;
+<tr align=center><td>9<td>8 &ndash; (8 + 8) / ln [(8&times;8 &ndash; 8) / ln[8] ] <td>&pi; &ndash; .0000118<td>&nbsp;<td>(8 &ndash; ln[8] ) / (ln[8 + 8 + 8] &ndash; 8/8)<td>e &ndash; .00000261<td>&nbsp;
+<tr align=center><td>10<td>ln[8+8+8&ndash;8/(ln[8]&times;ln[88])]<td>&pi; + .00000214<td>JD<td>ln[8]+8/(8+8+8/8&ndash;ln[88])<td>e + .00000146<td>JD
+</table><p>
+
+
+<center><font size=+2>Best Known Approximations Using 9's and ln's</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>9<td>&pi; + 5.86<td>&nbsp;<td>9<td>e + 6.28<td>&nbsp;
+<tr align=center><td>2<td>ln[9]<td>&pi; &ndash; .944<td>&nbsp;<td>ln[9]<td>e &ndash; .521<td>&nbsp;
+<tr align=center><td>3<td>ln[9 + 9]<td>&pi; &ndash; .251<td>&nbsp;<td>ln[9 + 9]<td>e + .172<td>&nbsp;
+<tr align=center><td>4<td>9 / ln[9 + 9]<td>&pi; &ndash; .0278<td>&nbsp;<td>ln[9 ln[9] ]<td>e + .266<td>&nbsp;
+<tr align=center><td>5<td>9 / ln[9] &ndash; 9/9 <td>&pi; &ndash; .0455<td>&nbsp;<td>9 / ln[9 + 9 + 9]<td>e + .0124<td>&nbsp;
+<tr align=center><td>6<td>ln[999]/ ln[9] <td>&pi; + .00181<td>&nbsp;<td>ln[9 + 9 &ndash; ln[9 + 9] ]<td>e &ndash; .00295<td>&nbsp;
+<tr align=center><td>7<td>9 &ndash; 9 ln[ ln[9 &ndash; ln[9] ] ] <td>&pi; + .00000182<td>&nbsp;<td>ln[9] + ln[99 + 9] / 9<td>e &ndash; .000820<td>&nbsp;
+<tr align=center><td>8<td>9 &times;(9/9 ln[ ln[9 &ndash; ln[9] ] ] ) <td>&pi; + .00000182<td>&nbsp;<td>ln[9] / ln[ (9 + 9 + ln[9] ) / 9]<td>e &ndash; .0000231<td>&nbsp;
+<tr align=center><td>9<td>9 &ndash; 9 ln[ ln[9 &ndash; ln[9] ] ] &times; 9/9 <td>&pi; + .00000182<td>&nbsp;<td>ln[9 + 9 &ndash; ln[9 + 9 &ndash; ln[ ln[9] ] ] ]<td>e + .00000555<td>&nbsp;
+<tr align=center><td>10<td>9&times;(9&ndash;9) + 9 &ndash; 9 ln[ ln[9 &ndash; ln[9] ] ]<td>&pi; + .00000182<td>JD<td>(9+99)/ln[9+9/99]/(9+9)<td>e + .00000214<td>JD
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using Any Digits and ln's.</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDFFDD><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>3<td>&pi; &ndash; .142<td>&nbsp;<td>3<td>e + .282<td>&nbsp;
+<tr align=center><td>2<td>3 + 0<td>&pi; &ndash; .142<td>&nbsp;<td>8 / 3<td>e &ndash; .0516<td>&nbsp;
+<tr align=center><td>3<td>22 / 7<td>&pi; + .00126<td>&nbsp;<td>19 / 7<td>e &ndash; .00400<td>&nbsp;
+<tr align=center><td>4<td>3 + 9 / 64<td>&pi; &ndash; .000968<td>&nbsp;<td>87 / 32<td>e &ndash; .000468<td>&nbsp;
+<tr align=center><td>5<td>3 &times; (5 ln[5] &ndash; 7)<td>&pi; &ndash; .0000240<td>&nbsp;<td>4 &ndash; (7 ln[3] / 6)<td>e &ndash; .00000383<td>&nbsp;
+<tr align=center><td>6<td>3 + 7 / (45 ln[3] )<td>&pi; + .000000115<td>JD<td>2 ln[894] / 5<td>e + .000000482<td>HS
+</table><p>
+
+
+
+
+
+<hr><p>
+
+
+
+
+
+
+<center><font size=+2>Best Known Approximations Using 1's and Unlimited ln's</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>1<td>&pi; &ndash; 2.14<td>&nbsp;<td>1<td>e &ndash; 1.72<td>&nbsp;
+<tr align=center><td>2<td>ln[11]<td>&pi; &ndash; .744<td>&nbsp;<td>ln[11]<td>e &ndash; .320<td>&nbsp;
+<tr align=center><td>3<td>1 + 1 + 1<td>&pi; &ndash; .142<td>&nbsp;<td>ln[11 + 1]<td>e &ndash; .233<td>&nbsp;
+<tr align=center><td>4<td>ln[11] + ln[1 + 1]<td>&pi; &ndash; .0506<td>&nbsp;<td>ln[1] &ndash; 1 / ln[ ln[2] ]<td>e + .0101<td>&nbsp;
+<tr align=center><td>5<td>1 + 1 + 1 / ln[ ln[11] ]<td>&pi; + .00180<td>&nbsp;<td>ln[11] &times; (1 &ndash; ln[ ln[ ln[11] ] ] )<td>e + .000928<td>&nbsp;
+<tr align=center><td>6<td>1+ln[11&ndash;ln[1+11]]<td>&pi; + .000248<td>HS<td>1+1&ndash;ln[ln[1+ln[1+ln[ln[11]]]]]<td>e &ndash; .00000601<td>HS
+<tr align=center><td>7<td>1&ndash;ln[ln[ln[1+1]&ndash;ln[ln[ln[1+1+1]]]]&ndash;1]<td>&pi; + .0000101<td>JD<td>(ln[ln[(ln[1]&ndash;1)/(ln[ln[1+1]])]]&ndash;1)/ln[ln[1+1]]<td>e &ndash; .0000000233<td>JD
+<tr align=center><td>8<td>ln[1]&ndash;ln[1&ndash;(ln[1+1])]/ln[1&ndash;ln[1+ln[ln[1+1]]]]<td>&pi; &ndash; .00000102<td>JD<td>1&times;(ln[ln[(ln[1]&ndash;1)/(ln[ln[1+1]])]]&ndash;1)/ln[ln[1+1]]<td>e &ndash; .0000000233<td>JD
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 2's and Unlimited ln's</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>2<td>&pi; &ndash; 1.14<td>&nbsp;<td>2<td>e &ndash; .718<td>&nbsp;
+<tr align=center><td>2<td>ln[22]<td>&pi; &ndash; .0506<td>&nbsp;<td>2 + ln[2]<td>e &ndash; .0251<td>&nbsp;
+<tr align=center><td>3<td>2 + ln[ ln[22] ]<td>&pi; &ndash; .0131<td>&nbsp;<td>ln[22] + ln [ ln[2] ]<td>e + .00625<td>&nbsp;
+<tr align=center><td>4<td>ln[22+ln[ln[22]]]<td>&pi; &ndash; .000527<td>HS<td>2/ln[ln[2]]/ln[ln[ln[2]]&times;ln[ln[2]]]<td>e + .0000188 <td>JD
+<tr align=center><td>5<td>ln[22+ln[2+ln[ln[22]]]]<td>&pi; &ndash; .00000589<td>HS<td>(ln[2]&times;ln[2])&ndash;(2&times;ln[ln[ln[2+2]]])<td>e &ndash; .000000404<td>HS
+<tr align=center><td>5<td>2+ln[2/ln[ln[ln[222]]]&ndash;ln[2]]<td>&pi; + .000000524<td>JD<td>2+ln[2]&ndash;(ln[2]+2)&times;ln[ln[ln[2]+2]]<td>e + .000000364<td>JD
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 3's and Unlimited ln's</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>3<td>&pi; &ndash; .142<td>&nbsp;<td>3<td>e + .281<td>&nbsp;
+<tr align=center><td>2<td>3 + ln[ ln[3] ]<td>&pi; &ndash; .0475<td>&nbsp;<td>3 / ln[3]<td>e + .0124<td>&nbsp;
+<tr align=center><td>3<td>ln[ ln[3] + ln[3] ] &ndash; ln[ ln[ ln[3] ] ]<td>&pi; + .00955<td>&nbsp;<td>3 &ndash; 3 ln[ ln[3] ]<td>e &ndash; .000425<td>&nbsp;
+<tr align=center><td>4<td>ln[3/(ln[ln[3]&ndash;ln[ln[3]]/ln[ln[ln[3]]]])]<td>&pi; + .000163<td>HS<td>(3/ln[3/ln[3]])/ln[3]<td>e + .0000282<td>HS
+<tr align=center><td>5<td>ln[3]&ndash;ln[ln[ln[3/ln[ln[3]]]]]/ln[ln[ln[ln[3]/ln[ln[3]]]]]<td>&pi; + .00000203<td>HS<td>(3&ndash;3&times;ln[ln[3/ln[3]]])/ln[3]<td>e &ndash; .0000000430<td>HS
+<tr align=center><td>6<td>ln[3]+ln[ln[ln[ln[3&ndash;ln[ln[ln[3]]]]]]+ln[ln[3&times;3]]/ln[ln[3]]] <td>&pi; + .00000000534<td>JD<td>(3&ndash;3ln[ln[3]])/ln[3&ndash;3ln[ln[3]]]<td>e + .0000000333<td>JD
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 4's and Unlimited ln's</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>4<td>&pi; + .858<td>&nbsp;<td>4<td>e + 1.28<td>&nbsp;
+<tr align=center><td>2<td>4 / ln[4]<td>&pi; &ndash; .256<td>&nbsp;<td>ln[4] + ln[4]<td>e + .0543<td>&nbsp;
+<tr align=center><td>3<td>ln[4] / ln [ ln[4] ] + ln[ ln[ ln[4] ] ]<td>&pi; &ndash; .0163<td>&nbsp;<td>ln[4] + ln[ ln[44] ]<td>e &ndash; .00116<td>&nbsp;
+<tr align=center><td>4<td>4+ln[4&ndash;ln[4]]/ln[ln[ln[4]]]<td>&pi; &ndash; .000255<td>HS<td>ln[ln[ln[ln[4]]]/ln[ln[ln[(ln[ln[4]]+4/ln[ln[4]])]]]]<td>e &ndash; .00000745<td>HS
+<tr align=center><td>5<td>ln[(4+4&ndash;ln[4])/ln[ln[ln[44]]]]<td>&pi; + .00000000426<td>HS<td>4&ndash;(4&ndash;ln[4])&times;ln[ln[4&ndash;ln[ln[ln[4]]]]]<td>e + .0000000300<td>HS
+<tr align=center><td>6<td>4ln[4/ln[4]&ndash;(ln[ln[4]]&ndash;ln[ln[ln[4]]]&times;ln[ln[4]])]<td>&pi; + .000000105<td>JD<td>ln[4ln[44]&ndash;ln[ln[ln[4&times;4]]]/ln[ln[ln[4]]]]<td>e + .000000188<td>JD
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 5's and Unlimited ln's</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>ln[5]<td>&pi; &ndash; 1.53<td>&nbsp;<td>ln[5]<td>e &ndash; 1.11<td>&nbsp;
+<tr align=center><td>2<td>5 / ln[5]<td>&pi; &ndash; .0349<td>&nbsp;<td>ln[5] &times; ln[5]<td>e &ndash; .128<td>&nbsp;
+<tr align=center><td>3<td>5 + ln[ ln[ ln[ ln[5] + ln[5] ] ] ]<td>&pi; + .00164<td>&nbsp;<td>ln[5 / ln[ ln[ ln[55] ] ] ]<td>e + .00604<td>&nbsp;
+<tr align=center><td>4<td>ln[5&times;5+ln[ln[ln[ln[5&times;5]]]]]]<td>&pi; + .000110<td>HS<td>ln[ln[ln[5]]]/ln[ln[ln[5&times;ln[5+ln[ln[5]]]]]]<td>e &ndash; .000289<td>HS
+<tr align=center><td>5<td>ln[ln[ln[5&ndash;ln[5]]]]&times;ln[ln[ln[ln[ln[ln[5]]/5]/ln[ln[ln[5]]]]]]<td>&pi; &ndash; .00000104<td>HS<td>ln[ln[5&times;55]]&ndash;ln[ln[ln[5+ln[ln[ln[5]]]]]]<td>e &ndash; .00000475<td>HS
+<tr align=center><td>6<td>(ln[ln[5]&ndash;(ln[5]/ln[ln[ln[5]]])])&times;(ln[ln[ln[5]]]+5/ln[5])<td>&pi; + .0000000218<td>JD<td>ln[ln[5]]&ndash;ln[5]/ln[ln[ln[5&ndash;(ln[ln[ln[5]+ln[5ln[ln[5]]]]])]]]<td>e &ndash; .000000122<td>JD
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 6's and Unlimited ln's</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>ln[6]<td>&pi; &ndash; 1.35<td>&nbsp;<td>ln[6]<td>e &ndash; .927<td>&nbsp;
+<tr align=center><td>2<td>ln[6] &times; ln[6]<td>&pi; + .0688<td>&nbsp;<td>ln[6 + 6]<td>e &ndash; .233<td>&nbsp;
+<tr align=center><td>3<td>6 ln[ ln[6 &ndash; ln[ ln[6] ] ] ]<td>&pi; + .00502<td>&nbsp;<td>ln[6]&ndash;ln[ln[ln[6]]]/ln[ln[6]]<td>e &ndash; .00192<td>HS
+<tr align=center><td>4<td>ln[6]&times;ln[6&ndash;ln[ln[6&times;ln[ln[6]]]]]<td>&pi; + .000275<td>HS<td>ln[ln[6]+(6+ln[6])/ln[ln[6]]]<td>e &ndash; .000139<td>HS
+<tr align=center><td>5<td>6+ln[ln[ln[6]]]&ndash;ln[6&times;ln[6]&ndash;ln[ln[6]]]<td>&pi; &ndash; .00000351<td>HS<td>ln[ln[66]/ln[ln[ln[6+6&times;6]]]]<td>e + .00000339<td>HS
+<tr align=center><td>6<td>6/ln[6&ndash;(ln[ln[ln[ln[6]]&ndash;(ln[ln[ln[ln[ln[ln[6]]+66]]]])]])]<td>&pi; &ndash; .0000000779<td>JD<td>ln[ln[ln[ln[ln[ln[6]]]&times;ln[ln[ln[6]]]]&times;ln[ln[ln[6]]]/6]/ln[ln[ln[ln[6]]+ln[6]]]] <td>e + .000000000530<td>JD
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 7's and Unlimited ln's</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>ln[7]<td>&pi; &ndash; 1.20<td>&nbsp;<td>ln[7]<td>e &ndash; .772<td>&nbsp;
+<tr align=center><td>2<td>ln[7] / ln[ ln[7] ]<td>&pi; &ndash; .219<td>&nbsp;<td>ln[7 + 7]<td>e &ndash; .0792<td>&nbsp;
+<tr align=center><td>3<td>ln[ ln[7] / 7] / ln[ ln[ ln[7] ] ]<td>&pi; + .00481<td>&nbsp;<td>7 ln[ ln[7] ] &ndash; ln[7]<td>e &ndash; .00408<td>&nbsp;
+<tr align=center><td>4<td>ln[7]&times;ln[ln[7]]+ln[7&ndash;ln[ln[7]]]<td>&pi; &ndash; .000168<td>HS<td>ln[ln[ln[ln[7+ln[ln[ln[7]]]]]]/ln[ln[ln[7+7]]]]<td>e &ndash; .0000841<td>HS
+<tr align=center><td>5<td>ln[7]&times;ln[7&ndash;ln[7]/ln[ln[7]]]&ndash;ln[ln[ln[7]]]<td>&pi; &ndash; .00000125<td>HS<td>ln[7+ln[7]]&ndash;ln[ln[ln[7]]]&times;ln[ln[7]]&times;ln[7]<td>e &ndash; .00000367<td>JD
+<tr align=center><td>6<td>ln[ln[7]]/ln[ln[ln[ln[ln[ln[7&ndash;ln[7ln[7]]]]]/ln[ln[ln[7+7]]]]]]<td>&pi; &ndash; .0000000307<td>JD<td>ln[7]+ln[ln[7+ln[ln[7]]&ndash;ln[ln[ln[ln[7&times;(7+ln[7])]]]]]]<td>e + .00000000709<td>JD
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 8's and Unlimited ln's</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>ln[8]<td>&pi; &ndash; 1.06<td>&nbsp;<td>ln[8]<td>e &ndash; .639<td>&nbsp;
+<tr align=center><td>2<td>ln[8] / ln[ ln[8] ]<td>&pi; &ndash; .301<td>&nbsp;<td>ln[8 + 8]<td>e + .0543<td>&nbsp;
+<tr align=center><td>3<td>ln[(ln[ln[8]]&ndash;8)/ln[ln[ln[8]]]]<td>&pi; + .00714<td>HS<td>ln[ ln[8] ] &ndash; ln[8 &ndash; ln[ ln[8] ] ]<td>e &ndash; .00271<td>&nbsp;
+<tr align=center><td>4<td>ln[ln[8&ndash;ln[ln[ln[8]]]]/(ln[ln[8]]/8)]<td>&pi; + .00000948<td>HS<td>ln[8]/ln[ln[8+ln[ln[8&ndash;ln[8]]] ]]<td>e + .0000385<td>HS
+<tr align=center><td>5<td>ln[8ln[8ln[8]]&ndash;ln[ln[ln[8]]]&times;ln[8]]
+<td>&pi; + .00000370<td>HS<td>ln[8+ln[ln[ln[ln[8&times;8]]+ln[ln[ln[8]]]]]/ln[ln[ln[8]]]]<td>e &ndash; .00000365<td>HS
+<tr align=center><td>6<td>ln[8&ndash;(8+8)/ln[ln[ln[ln[8]+ln[ln[ln[ln[8]]]+8]]]]]
+<td>&pi; + .00000000155<td>JD<td>ln[8ln[ln[ln[ln[8]]]+8+ln[ln[ln[8&ndash;8/ln[8]]]]]]<td>e &ndash; .0000000234<td>JD
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 9's and Unlimited ln's</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>ln[9]<td>&pi; &ndash; .944<td>&nbsp;<td>ln[9]<td>e &ndash; .521<td>&nbsp;
+<tr align=center><td>2<td>ln[9] + ln[ ln[9] ]<td>&pi; &ndash; .157<td>&nbsp;<td>ln[9] / ln[ ln[9] ]<td>e + .0729<td>&nbsp;
+<tr align=center><td>3<td>ln[9 / ln[ ln[ ln[9] + ln[9] ] ] ]<td>&pi; &ndash; .00857<td>&nbsp;<td>ln[9]&ndash;ln[ln[ln[9]]]&times;ln[9]<td>e + .00511<td>JD
+<tr align=center><td>4<td>9&ndash;9&times;ln[ln[9&ndash;ln[9]]]<td>&pi; + .00000182<td>HS<td>ln[ln[ln[9]]] + ln[9+ln[ln[ln[9]]]] + ln[ln[9]]<td>e &ndash; .0000879<td>HS
+<tr align=center><td>5<td>ln[ln[9]/ln[ln[ln[9]+ln[ln[ln[9+ln[ln[9]]]]]/ln[ln[ln[9]]]]]]<td>&pi; + .00000106<td>HS<td>ln[9]/ln[ln[9]+ln[ln[ln[9+9]]]&times;ln[ln[9]]]<td>e &ndash; .00000135<td>HS
+<tr align=center><td>6<td>ln[9ln[9&ndash;ln[9]&ndash;ln[ln[ln[ln[ln[ln[ln[ln[9]]&ndash;ln[ln[ln[9]]]]]/ln[ln[ln[9]]]]]]]]]<td>&pi; + .0000000478<td>JD<td>ln[9&ndash;ln[ln[ln[9]/ln[ln[ln[ln[ln[9]]]+ln[9]&times;ln[9]]]]]]/ln[ln[9]]<td>e &ndash; .0000000466<td>JD
+</table><p>
+
+
+<center><font size=+2>Best Known Approximations Using Any Digits and Unlimited ln's</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=DDDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>3<td>&pi; &ndash; .142<td>JD<td>ln[9]<td>e &ndash; .282<td>JD
+<tr align=center><td>2<td>ln[23]<td>&pi; &ndash; .00610<td>HS<td>ln[5/ln[ln[4]]]<td>e + .0101<td>JD
+<tr align=center><td>3<td>ln[ln[2]&ndash;7/ln[ln[ln[8]]]]<td>&pi; &ndash; .00000287<td>JD<td>ln[ln[ln[8]+ln[8]]]-ln[ln[ln[3]]]<td>e + .0000148<td>JD
+<tr align=center><td>4<td>ln[(8&ndash;ln[4])/ln[ln[ln[44]]]]<td>&pi; + .00000000426<td>HS<td>1&ndash;ln[ln[ln[ln[7]+ln[4&ndash;ln[ln[3]]]]]]<td>e &ndash; .0000000122<td>JD
+</table><p>
+
+<hr><p>
+
+<center><font size=+2>Best Known Approximations Using 1's and &radic;'s</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=FFDDDD><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        1
+      </td>
+      <td>
+        &pi; &ndash; 2.142<td>HS
+      </td>
+      <td>
+        1
+      </td>
+      <td>
+        e &ndash; 1.718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        1+1
+      </td>
+      <td>
+        &pi; &ndash; 1.142<td>HS
+      </td>
+      <td>
+        1+1
+      </td>
+      <td>
+        e &ndash; .718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        1+1+1
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        1+1+1
+      </td>
+      <td>
+        e + .282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        &radic;[11&ndash;1]
+      </td>
+      <td>
+        &pi; + .0207<td>HS
+      </td>
+      <td>
+        1+1+&radic;1
+      </td>
+      <td>
+        e + .282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        &radic;[11&ndash;&radic;1]
+      </td>
+      <td>
+        &pi; + .0207<td>HS
+      </td>
+      <td>
+        1+&radic;[1+1+1]
+      </td>
+      <td>
+        e + .0138<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        &radic;[11&ndash;&radic;&radic;1]
+      </td>
+      <td>
+        &pi; + .0207<td>HS
+      </td>
+      <td>
+        1+1+&radic;[1/(1+1)]
+      </td>
+      <td>
+        e &ndash; .0112<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        &radic;[1+1+1]+&radic;[1+1]
+      </td>
+      <td>
+        &pi; + .00467<td>HS
+      </td>
+      <td>
+        (11&ndash;1&ndash;1)/&radic;11
+      </td>
+      <td>
+        e &ndash; .00468<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        &radic;[1+1]&times;(11&ndash;1)&ndash;11
+      </td>
+      <td>
+        &pi; + .000543<td>HS
+      </td>
+      <td>
+        &radic;[11&ndash;&radic;[1+1+11]]
+      </td>
+      <td>
+        e + .000992<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        1+1+1&ndash;&radic;[1+1]/(1&ndash;11)
+      </td>
+      <td>
+        &pi; &ndash; .000171<td>HS
+      </td>
+      <td>
+        (1+11)/(1+1+1+&radic;[1+1])
+      </td>
+      <td>
+        e + .000209<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        1+1+&radic;&radic;[1+1&ndash;1/&radic;11]
+      </td>
+      <td>
+        &pi; + .0000118<td>JD
+      </td>
+      <td>
+        1+1+11/(&radic;11+1+11)
+      </td>
+      <td>
+        e &ndash; .000108<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        11
+      </td>
+      <td>
+        1+11&times;11/(1+111/(1+1))
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        &radic;&radic;[1+1]&times;(1+&radic;111)-11
+      </td>
+      <td>
+        e &ndash; .000000309<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        12
+      </td>
+      <td>
+        1&times;1+11&times;11/(1+111/(1+1))
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        1&times;&radic;&radic;[1+1]&times;(1+&radic;111)-11
+      </td>
+      <td>
+        e &ndash; .000000309<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+
+<center><font size=+2>Best Known Approximations Using 2's and &radic;'s</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=FFDDDD><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        2
+      </td>
+      <td>
+        &pi; &ndash; 1.142<td>HS
+      </td>
+      <td>
+        2
+      </td>
+      <td>
+        e &ndash; .0718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        2+2
+      </td>
+      <td>
+        &pi; + .858<td>HS
+      </td>
+      <td>
+        2+2
+      </td>
+      <td>
+        e + 1.282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        1+2/2
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        2&radic;2
+      </td>
+      <td>
+        e + .11<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        2+&radic;&radic;2
+      </td>
+      <td>
+        &pi; + .0476<td>HS
+      </td>
+      <td>
+        2+&radic;2/2
+      </td>
+      <td>
+        e &ndash; .0112<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        &radic;[(22&ndash;2)/2]
+      </td>
+      <td>
+        &pi; + .0207<td>HS
+      </td>
+      <td>
+        2+&radic;[2/(2+2)]
+      </td>
+      <td>
+        e &ndash; .0112<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        2+&radic;[2&ndash;&radic;2/2]
+      </td>
+      <td>
+        &pi; &ndash; .00454<td>HS
+      </td>
+      <td>
+        2&radic;&radic;[2+&radic;2]
+      </td>
+      <td>
+        e + .000364<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        2/&radic;[(2&ndash;&radic;&radic;2)/2]
+      </td>
+      <td>
+        &pi; &ndash; .000433<td>HS
+      </td>
+      <td>
+        (2+2)/&radic;&radic;&radic;22
+      </td>
+      <td>
+        e &ndash;. 000234<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        2+&radic;&radic;[2&ndash;&radic;[2/22]]
+      </td>
+      <td>
+        &pi; + .0000118<td>HS
+      </td>
+      <td>
+        2+(&radic;[2+&radic;2/22])/2
+      </td>
+      <td>
+        e +. 0000987<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        2&ndash;2/(2&times;22&ndash;2)+&radic;&radic;2
+      </td>
+      <td>
+        &pi; &ndash; .00000459<td>HS
+      </td>
+      <td>
+        &radic;[(22/(2+2))/(2&ndash;&radic;2)&ndash;2]
+      </td>
+      <td>
+        e + .00000574<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        2+&radic;[2&ndash;&radic;&radic;[&radic;2/(2+2&times;2)]]
+      </td>
+      <td>
+        &pi; &ndash; .00000271<td>JD
+      </td>
+      <td>
+        &radic;2+&radic;&radic;&radic;[2+2/22]
+      </td>
+      <td>
+        e &ndash; .00000280<td>JD
+      </td>
+    </tr>
+   <tr align=center>
+      <td>
+        11
+      </td>
+      <td>
+        (2+22&times;(22/(2+222/2)))/2
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        (2+&radic;2)/2+&radic;&radic;[(2+2/22)/2]
+      </td>
+      <td>
+        e &ndash; .000000129<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 3's and &radic;'s</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=FFDDDD><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        3
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        3
+      </td>
+      <td>
+        e + .282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        &radic;3
+      </td>
+      <td>
+        &pi; &ndash; 1.41<td>HS
+      </td>
+      <td>
+        &radic;3
+      </td>
+      <td>
+        e &ndash; .986<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        &radic;[3&times;3]
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        &radic;[3+3]
+      </td>
+      <td>
+        e &ndash; .269<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        3+3/33
+      </td>
+      <td>
+        &pi; &ndash; .0507<td>HS
+      </td>
+      <td>
+        3/3+&radic;3
+      </td>
+      <td>
+        e +. 0138<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        &radic;&radic;[3&times;33]
+      </td>
+      <td>
+        &pi; + .0127<td>HS
+      </td>
+      <td>
+        3&ndash;(&radic;3/(3+3))
+      </td>
+      <td>
+        e &ndash; .00696<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        3&ndash;((&radic;3&ndash;3)/(3&times;3))
+      </td>
+      <td>
+        &pi; &ndash; .000709<td>HS
+      </td>
+      <td>
+        &radic;[((3+3)&times;&radic;3)&ndash;3]
+      </td>
+      <td>
+        e + .000598<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        3+3/(3+&radic;333)
+      </td>
+      <td>
+        &pi; &ndash; .000405<td>HS
+      </td>
+      <td>
+        (3+(&radic;3/3))/&radic;&radic;3
+      </td>
+      <td>
+        e &ndash; .0000834<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        &radic;3+&radic;&radic;[3&radic;&radic;3]
+      </td>
+      <td>
+        &pi; + .0000728<td>HS
+      </td>
+      <td>
+        &radic;[33&ndash;&radic;[3/33]]&ndash;3
+      </td>
+      <td>
+        e &ndash; .0000226<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        &radic;[3&times;3+3/(&radic;[3+3]+3/3)]
+      </td>
+      <td>
+        &pi; + .0000142<td>HS
+      </td>
+      <td>
+        3&ndash;(3&times;3)/33&ndash;3/333
+      </td>
+      <td>
+        e &ndash; .0000181<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        3-3/(3&ndash;&radic;[3&times;((3+3)&times;33&ndash;3)])
+      </td>
+      <td>
+        &pi; + .00000512<td>JD
+      </td>
+      <td>
+        3&ndash;&radic;[(3+3/3/3)/(3&times;3+33)]
+      </td>
+      <td>
+        e + .0000000866<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 4's and &radic;'s</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=FFDDDD><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        4
+      </td>
+      <td>
+        &pi; + .858<td>HS
+      </td>
+      <td>
+        4
+      </td>
+      <td>
+        e + 1.282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        &radic;4
+      </td>
+      <td>
+        &pi; &ndash; 1.142<td>HS
+      </td>
+      <td>
+        &radic;4
+      </td>
+      <td>
+        e &ndash; .718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        4 &ndash; 4/4
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        &radic;[4+4]
+      </td>
+      <td>
+        e + .11<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        4&ndash;&radic;[4/4]
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        44/(4&times;4)
+      </td>
+      <td>
+        e +. 0317<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        &radic;[(44&ndash;4)/4]
+      </td>
+      <td>
+        &pi; + .0207<td>HS
+      </td>
+      <td>
+        4&ndash;((4+4/4)/4)
+      </td>
+      <td>
+        e + .0317<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        44/(4&times;4&ndash;&radic;4)
+      </td>
+      <td>
+        &pi; &ndash; .00126<td>HS
+      </td>
+      <td>
+        4&ndash;&radic;[&radic;44/4]
+      </td>
+      <td>
+        e &ndash; .00604<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        4&ndash;&radic;[4/(4+&radic;&radic;4)]
+      </td>
+      <td>
+        &pi; &ndash; .00113<td>HS
+      </td>
+      <td>
+        (44&ndash;&radic;4/4)/(4&times;4)
+      </td>
+      <td>
+        e + .000468<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        4&ndash;(&radic;&radic;44/(4&ndash;4/4)
+      </td>
+      <td>
+        &pi; &ndash; .0000958<td>HS
+      </td>
+      <td>
+        &radic;[(44&ndash;4)/(4+&radic;&radic;4)]
+      </td>
+      <td>
+        e &ndash; .000201<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        4/(4/(4&times;4)&ndash;4/(4/44&ndash;4))
+      </td>
+      <td>
+        &pi; &ndash; .0000401<td>HS
+      </td>
+      <td>
+        4&ndash;&radic;[4/(4&ndash;&radic;&radic;[4+&radic;4])]
+      </td>
+      <td>
+        e + .0000132<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+       &radic;[4&radic;[4+44/&radic;[444]]]
+      </td>
+      <td>
+        &pi; + .0000102<td>JD
+      </td>
+      <td>
+        (&radic;[4+4&times;44]&ndash;4)/&radic;[4&times;4&ndash;4]
+      </td>
+      <td>
+        e + .000000979<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        11
+      </td>
+      <td>
+       4/(4&ndash;44/(4&times;4+(4+&radic;4)/44))
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+       &radic;[&radic;&radic;4+4+&radic;(4+4/(4&ndash;44))]
+      </td>
+      <td>
+        e &ndash; .000000142<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 5's and &radic;'s</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=FFDDDD><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        5
+      </td>
+      <td>
+        &pi; + 1.858<td>HS
+      </td>
+      <td>
+        5
+      </td>
+      <td>
+        e + 2.282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        &radic;5
+      </td>
+      <td>
+        &pi; &ndash; .906<td>HS
+      </td>
+      <td>
+        &radic;5
+      </td>
+      <td>
+        e &ndash; .482<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        &radic;[5+5]
+      </td>
+      <td>
+        &pi; + .0207<td>HS
+      </td>
+      <td>
+        5&ndash;&radic;5
+      </td>
+      <td>
+        e + .0457<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        5/5+&radic;5
+      </td>
+      <td>
+        &pi; + .0945<td>HS
+      </td>
+      <td>
+        &radic;&radic;55
+      </td>
+      <td>
+        e + .00499<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        &radic;[(55&ndash;5)/5]
+      </td>
+      <td>
+        &pi; + .0207<td>HS
+      </td>
+      <td>
+        5/(5&ndash;&radic;[5+5])
+      </td>
+      <td>
+        e + .00248<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        5&ndash;5/(&radic;[5+&radic;5])
+      </td>
+      <td>
+        &pi; &ndash; .000333<td>HS
+      </td>
+      <td>
+        5&ndash;&radic;[5+5/(5&times;5)]
+      </td>
+      <td>
+        e + .00137<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        5&ndash;&radic;[5&times;5/(5+&radic;5)]
+      </td>
+      <td>
+        &pi; &ndash; .000333<td>HS
+      </td>
+      <td>
+        &radic;&radic;5+&radic;&radic;&radic;5
+      </td>
+      <td>
+        e &ndash; .0000885<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        5/&radic;&radic;[&radic;55&ndash;5/5]
+      </td>
+      <td>
+        &pi; + .00000495<td>HS
+      </td>
+      <td>
+        5/&radic;&radic;[(55+&radic;5)/5]
+      </td>
+      <td>
+        e + .0000036<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        5/&radic;&radic;[&radic;55&ndash;&radic;[5/5]]
+      </td>
+      <td>
+        &pi; + .00000495<td>HS
+      </td>
+      <td>
+        5&radic;[5/&radic;[5&times;(55+&radic;5)]]
+      </td>
+      <td>
+        e + .0000036<td>HS
+      </td>
+    </tr>
+   <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        5&ndash;&radic;&radic;[5&radic;[5+5/(5+&radic;5)]]
+      </td>
+      <td>
+        &pi; + .00000000606<td>JD
+      </td>
+      <td>
+        &radic;[55&ndash;5]&ndash;5+(&radic;5+5/5)/5
+      </td>
+      <td>
+        e &ndash; .000000421<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 6's and &radic;'s</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=FFDDDD><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        6
+      </td>
+      <td>
+        &pi; + 2.858<td>HS
+      </td>
+      <td>
+        6
+      </td>
+      <td>
+        e + 3.282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        &radic;6
+      </td>
+      <td>
+        &pi; &ndash; .692<td>HS
+      </td>
+      <td>
+        &radic;6
+      </td>
+      <td>
+        e &ndash; .269<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        &radic;[6+6]
+      </td>
+      <td>
+        &pi; + .323<td>HS
+      </td>
+      <td>
+        6/&radic;6
+      </td>
+      <td>
+        e &ndash; .269<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        (6+6+6)/6
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        &radic;[6+6/6]
+      </td>
+      <td>
+        e &ndash;. 0725<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        6&ndash;&radic;&radic;66
+      </td>
+      <td>
+        &pi; + .00814<td>HS
+      </td>
+      <td>
+        6&radic;6&ndash;6&ndash;6
+      </td>
+      <td>
+        e &ndash; .0213<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        6&ndash;&radic;6/6&ndash;&radic;6
+      </td>
+      <td>
+        &pi; &ndash; .000669<td>HS
+      </td>
+      <td>
+        &radic;[6+(6+&radic;6)/6]
+      </td>
+      <td>
+        e + .00353<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        (6&times;6&ndash;6)/(6+6&ndash;&radic;6)
+      </td>
+      <td>
+        &pi; &ndash; .000399<td>HS
+      </td>
+      <td>
+        &radic;[(66&ndash;6)/&radic;66]
+      </td>
+      <td>
+        e &ndash; .000656<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        6/6+&radic;[6&ndash;&radic;[(6+6)/6]]
+      </td>
+      <td>
+        &pi; &ndash; .000148<td>HS
+      </td>
+      <td>
+        6&ndash;(&radic;[666&ndash;6]&ndash;6)/6
+      </td>
+      <td>
+        e &ndash; .000026<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        &radic;[6&radic;[(6+6)/(6&ndash;&radic;&radic;6)]]
+      </td>
+      <td>
+        &pi; &ndash; .00000196<td>HS
+      </td>
+      <td>
+        &radic;[6+&radic;[66+&radic;[6+6]]/6]
+      </td>
+      <td>
+        e + .0000054<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        &radic;[6&radic;[6+6]/&radic;[6&ndash;&radic;&radic;6]]
+      </td>
+      <td>
+        &pi; &ndash; .00000196<td>JD
+      </td>
+      <td>
+        6&ndash;&radic;&radic;[66&times;(6&ndash;&radic;[6+6+6])]
+      </td>
+      <td>
+        e + .00000118<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 7's and &radic;'s</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=FFDDDD><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        7
+      </td>
+      <td>
+        &pi; + 3.858<td>HS
+      </td>
+      <td>
+        7
+      </td>
+      <td>
+        e + 4.282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        &radic;7
+      </td>
+      <td>
+        &pi; &ndash; .496<td>HS
+      </td>
+      <td>
+        &radic;7
+      </td>
+      <td>
+        e &ndash; .0725<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        7/&radic;7
+      </td>
+      <td>
+        &pi; &ndash; .496<td>HS
+      </td>
+      <td>
+        7/&radic;7
+      </td>
+      <td>
+        e &ndash; .0725<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        &radic;[7+&radic;7]
+      </td>
+      <td>
+        &pi; &ndash; .0358<td>HS
+      </td>
+      <td>
+        &radic;&radic;[7&times;7]
+      </td>
+      <td>
+        e &ndash; .0725<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        7/(7+7)+&radic;7
+      </td>
+      <td>
+        &pi; + .00416<td>HS
+      </td>
+      <td>
+        &radic;[7+&radic;7/7]
+      </td>
+      <td>
+        e &ndash; .00204<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        (77+77)/7&times;7
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        7/((7+7)&times;7)+&radic;7
+      </td>
+      <td>
+        e &ndash; .0011<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        &radic;&radic;[7+7+7]+7/7
+      </td>
+      <td>
+        &pi; &ndash; .000898<td>HS
+      </td>
+      <td>
+        &radic;[7+7/(77/7+7)]
+      </td>
+      <td>
+        e &ndash; .0000308<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        &radic;[7+7/7+7/&radic;[7+7]]
+      </td>
+      <td>
+        &pi; + .000195<td>HS
+      </td>
+      <td>
+        &radic;[7+7/((77+7&times;7)/7)]
+      </td>
+      <td>
+        e &ndash; .0000308<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        &radic;7+&radic;[&radic;&radic;&radic;77/7]
+      </td>
+      <td>
+        &pi; + .0000159<td>HS
+      </td>
+      <td>
+        &radic;7+((7&times;7)/77)/&radic;77
+      </td>
+      <td>
+        e &ndash; .0000102<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        &radic;[7&ndash;7/(7+7)+&radic;[7+7&ndash;&radic;7]]
+      </td>
+      <td>
+        &pi; + .000000351<td>JD
+      </td>
+      <td>
+        7/(7/7/7+&radic;&radic;[7&times;7&ndash;7&ndash;7])
+      </td>
+      <td>
+        e &ndash; .000000352<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 8's and &radic;'s</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=FFDDDD><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        8
+      </td>
+      <td>
+        &pi; + 4.858<td>HS
+      </td>
+      <td>
+        8
+      </td>
+      <td>
+        e + 5.282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        &radic;8
+      </td>
+      <td>
+        &pi; &ndash; .313<td>HS
+      </td>
+      <td>
+        &radic;8
+      </td>
+      <td>
+        e + .11<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        8/&radic;8
+      </td>
+      <td>
+        &pi; &ndash; .313<td>HS
+      </td>
+      <td>
+        8/&radic;8
+      </td>
+      <td>
+        e + .11<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        &radic;&radic;88
+      </td>
+      <td>
+        &pi; &ndash; .0788<td>HS
+      </td>
+      <td>
+        &radic;[8&ndash;8/8]
+      </td>
+      <td>
+        e &ndash; .0725<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        &radic;&radic;[88+8]
+      </td>
+      <td>
+        &pi; &ndash; .0114<td>HS
+      </td>
+      <td>
+        &radic;8&ndash;8/(8&times;8)
+      </td>
+      <td>
+        e &ndash; .0149<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        &radic;[&radic;8&ndash;8/8+8]
+      </td>
+      <td>
+        &pi; &ndash; .00656<td>HS
+      </td>
+      <td>
+        &radic;8&ndash;8/((8&times;8)+8)
+      </td>
+      <td>
+        e &ndash; .000966<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        &radic;&radic;[88+&radic;88]
+      </td>
+      <td>
+        &pi; &ndash; .000228<td>HS
+      </td>
+      <td>
+        &radic;[(88&ndash;8)/(8+&radic;8)]
+      </td>
+      <td>
+        e &ndash; .000201<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        &radic;[(8&ndash;&radic;&radic;8)&times;&radic;8&ndash;8]
+      </td>
+      <td>
+        &pi; + .000157<td>HS
+      </td>
+      <td>
+        88/(8+&radic;&radic;8/8)&ndash;8
+      </td>
+      <td>
+        e +. 0000614<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        8/(&radic;8&ndash;&radic;8/8)&ndash;8/88
+      </td>
+      <td>
+        &pi; &ndash; .0000136<td>HS
+      </td>
+      <td>
+        8/&radic;[8+&radic;[(8&ndash;8/8)/(8+8)]]
+      </td>
+      <td>
+        e +. 00000319<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        &radic;[88/&radic;[88&ndash;8&ndash;8/(8+8)]]
+      </td>
+      <td>
+        &pi; &ndash; .00000231<td>JD
+      </td>
+      <td>
+        &radic;[8&times;8/(8+&radic;[(8&ndash;8/8)/(8+8)])]
+      </td>
+      <td>
+        e +. 000000400<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 9's and &radic;'s</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=FFDDDD><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        9
+      </td>
+      <td>
+        &pi; + 5.858<td>HS
+      </td>
+      <td>
+        9
+      </td>
+      <td>
+        e + 6.282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        &radic;9
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        &radic;9
+      </td>
+      <td>
+        e + .282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        9/&radic;9
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        9/&radic;9
+      </td>
+      <td>
+        e + .282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        &radic;&radic;99
+      </td>
+      <td>
+        &pi; + .0127<td>HS
+      </td>
+      <td>
+        &radic;[9&ndash;9/9]
+      </td>
+      <td>
+        e +. 11<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        &radic;[(99&ndash;9)/9]
+      </td>
+      <td>
+        &pi; + .0207<td>HS
+      </td>
+      <td>
+        9&radic;[9/99]
+      </td>
+      <td>
+        e &ndash; .00468<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        &radic;[9&ndash;(9/9&ndash;9)/9]
+      </td>
+      <td>
+        &pi; + .00307<td>HS
+      </td>
+      <td>
+        9&radic;9/&radic;99
+      </td>
+      <td>
+        e &ndash; .00468<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        &radic;[9+(9/&radic;[9+99])]
+      </td>
+      <td>
+        &pi; &ndash; .00057<td>HS
+      </td>
+      <td>
+        &radic;[&radic;[9+99]&ndash;&radic;9]
+      </td>
+      <td>
+        e + .00598<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        &radic;[9+9/(9+(9+&radic;9)/9)]
+      </td>
+      <td>
+        &pi; + .000217<td>HS
+      </td>
+      <td>
+        &radic;[9&ndash;(9+99/(9+9))/9]
+      </td>
+      <td>
+        e &ndash; .0000308<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        9&radic;[9+9]/(9+&radic;&radic;99)
+      </td>
+      <td>
+        &pi; &ndash; .0000186<td>HS
+      </td>
+      <td>
+        &radic;[9&ndash;9/9&ndash;99/(9&times;(9+9))]
+      </td>
+      <td>
+        e &ndash; .0000308<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        &radic;[9+9/(9+&radic;&radic;&radic;[99/9])]
+      </td>
+      <td>
+        &pi; + .000000400<td>JD
+      </td>
+      <td>
+        &radic;[9+9&ndash;&radic;9]&ndash;&radic;[9+99]/9
+      </td>
+      <td>
+        e + .000000979<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using Any Digits and &radic;'s.</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+<tr align=center bgcolor=FFDDDD><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+<tr align=center><td>1<td>3<td>&pi; &ndash; .142<td>HS<td>3<td>e + .282<td>HS
+<tr align=center><td>2<td>&radic;9<td>&pi; &ndash; .142<td>HS<td>8 / 3<td>e &ndash; .0516<td>HS
+<tr align=center><td>3<td>22 / 7<td>&pi; + .00126<td>HS<td>19 / 7<td>e &ndash; .00400<td>HS
+<tr align=center><td>4<td>&radic;51 &ndash; 4<td>&pi; &ndash; .000164<td>HS<td>87 / 32<td>e &ndash; .000468<td>HS
+<tr align=center><td>5<td>(9 + &radic;45) / 5<td>&pi; + .0000481<td>HS<td>3 &ndash; &radic;[5 / 63]<td>e + .0000000866<td>HS
+<tr align=center><td>6<td>9 / (2 + 9 / 52) &ndash; 1<td>&pi; + .000000267<td>HS<td>9 &ndash; 6 &ndash; &radic;[5 / 63]<td>e + .0000000866<td>HS
+<tr align=center><td>7<td>&radic;&radic;[97 + 9 / 22]<td>&pi; &ndash; .00000000101<td>HS<td>2 + &radic;[7 / (8 + &radic;31)]<td>e &ndash; .00000000945<td>HS
+</table><p>
+
+<hr><p>
+
+<center><font size=+2>Best Known Approximations Using 1's and Decimal Points</font></center>
+
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=DDFFFF><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        1
+      </td>
+      <td>
+        &pi; &ndash; 2.142<td>HS
+      </td>
+      <td>
+        1
+      </td>
+      <td>
+        e &ndash; 1.718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        1+1
+      </td>
+      <td>
+        &pi; &ndash; 1.142<td>HS
+      </td>
+      <td>
+        1+1
+      </td>
+      <td>
+        e &ndash; .718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        1+1+1
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        1+1+1
+      </td>
+      <td>
+        e + .282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        1&times;(1+1+1)
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        1&times;(1+1+1)
+      </td>
+      <td>
+        e + .282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        1+1+1.1
+      </td>
+      <td>
+        &pi; &ndash; .0416<td>HS
+      </td>
+      <td>
+        1&ndash;.1+1+1
+      </td>
+      <td>
+        e + .182<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        1+1&ndash;1/(.1&ndash;1)
+      </td>
+      <td>
+        &pi; &ndash; .0305<td>HS
+      </td>
+      <td>
+        (1+1+1)/1.1
+      </td>
+      <td>
+        e + .00899<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        1+1+1/(1&ndash;.11)
+      </td>
+      <td>
+        &pi; &ndash; .0180<td>HS
+      </td>
+      <td>
+        (1+1+1)&times;(1/1.1)
+      </td>
+      <td>
+        e + .00899<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        11/(11/(1+1)&ndash;1&ndash;1)
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        (1+1)/1.1+1&ndash;.1
+      </td>
+      <td>
+        e &ndash; .000100<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        11&times;(1/(11/(1+1)&ndash;1&ndash;1))
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        ((1+1)/.1)/11+1&ndash;.1
+      </td>
+      <td>
+        e &ndash; .000100<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        (1&ndash;.1+1+1)&times;(1/(1+11)+1)
+      </td>
+      <td>
+        &pi; + .0000740<td>HS
+      </td>
+      <td>
+        (1+1+1)/1.1&ndash;1/111
+      </td>
+      <td>
+        e &ndash; .0000181<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        11
+      </td>
+      <td>
+        1+11&times;11/(1+111/(1+1))
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        (1+1)/(1.1)+1/(1.111)
+      </td>
+      <td>
+        e &ndash; .0000100<td>JD
+      </td>
+    </tr>
+   <tr align=center>
+      <td>
+        12
+      </td>
+      <td>
+        1&times;1+11&times;11/(1+111/(1+1))
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        (1+1+1/(1&ndash;.1))/1.1&ndash;.11
+      </td>
+      <td>
+        e + .00000100<td>JD
+      </td>
+  <tr align=center>
+      <td>
+        13
+      </td>
+      <td>
+        1&times;1&times;1+11&times;11/(1+111/(1+1))
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        1+(1+1)/1.1&ndash;(1&ndash;.1)&times;.111
+      </td>
+      <td>
+        e &ndash; .0000000103<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 2's and Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=DDFFFF><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        2
+      </td>
+      <td>
+        &pi; &ndash; 1.142<td>HS
+      </td>
+      <td>
+        2
+      </td>
+      <td>
+        e &ndash; .718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        2+2
+      </td>
+      <td>
+        &pi; + .858<td>HS
+      </td>
+      <td>
+        2+2
+      </td>
+      <td>
+        e + 1.282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        2+2/2
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        2+2/2
+      </td>
+      <td>
+        e + .282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        (2+2+2)/2
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        2+2/(2+2)
+      </td>
+      <td>
+        e &ndash; .218<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        2&ndash;2/(.2&ndash;2)
+      </td>
+      <td>
+        &pi; &ndash; .0305<td>HS
+      </td>
+      <td>
+        22/(2&times;(2+2))
+      </td>
+      <td>
+        e + .0317<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        2+2/(2&ndash;.22)
+      </td>
+      <td>
+        &pi; &ndash; .0180<td>HS
+      </td>
+      <td>
+        (2+2+2)/2.2
+      </td>
+      <td>
+        e + .00899<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        2&ndash;2/(2/(2&times;(2+2))&ndash;2)
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        2/(2+2)+2.22
+      </td>
+      <td>
+        e + .00172<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        22&times;(2/(22&ndash;2&times;(2+2)))
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        2+2+2/(2&times;.22&ndash;2)
+      </td>
+      <td>
+        e &ndash; .000333<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        2+(2/(2+22)+2.2)/2
+      </td>
+      <td>
+        &pi; + .0000740<td>HS
+      </td>
+      <td>
+        2&ndash;(.2&ndash;2)/2&ndash;(2+2)/22
+      </td>
+      <td>
+        e &ndash; .000100<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        (2.2+2+2+2/(2+22))/2
+      </td>
+      <td>
+        &pi; + .0000740<td>HS
+      </td>
+      <td>
+        (2+2+2)/2.2&ndash;2/222
+      </td>
+      <td>
+        e &ndash; .0000181<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        11
+      </td>
+      <td>
+        (2+22&times;22/(2+222/2))/2
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        2+(22&ndash;2)/(22&ndash;.22)-.2
+      </td>
+      <td>
+        e &ndash; .00000818<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        12
+      </td>
+      <td>
+        2+22&times;22/(2&times;2+222)&ndash;2/2
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        2&ndash;2/(2&times;2&times;2&ndash;2/2.22)+2/2
+      </td>
+      <td>
+        e &ndash; .00000772<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+
+<center><font size=+2>Best Known Approximations Using 3's and Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=DDFFFF><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        3
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        3
+      </td>
+      <td>
+        e + .282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        3/3
+      </td>
+      <td>
+        &pi; &ndash; 2.142<td>HS
+      </td>
+      <td>
+        3/3
+      </td>
+      <td>
+        e &ndash; 1.718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        3+3&ndash;3
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        3&ndash;.3
+      </td>
+      <td>
+        e &ndash; .0183<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        3+.3/3
+      </td>
+      <td>
+        &pi; &ndash; .0416<td>HS
+      </td>
+      <td>
+        .3&times;3&times;3
+      </td>
+      <td>
+        e &ndash; .0183<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        3+3/(3&times;(3+3))
+      </td>
+      <td>
+        &pi; + .0251<td>HS
+      </td>
+      <td>
+        3&times;3/3.3
+      </td>
+      <td>
+        e + .00899<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        3+3/(3+3&times;(3+3))
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        3&times;(3/3&ndash;3/33)
+      </td>
+      <td>
+        e + .00899<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        (33/(3+3/(3+3)))/3
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        3&ndash;(.3+3&times;3)/33
+      </td>
+      <td>
+        e &ndash; .000100<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        3+3/(3+(3+3)/.33)
+      </td>
+      <td>
+        &pi; + .0000382<td>HS
+      </td>
+      <td>
+        3&ndash;(3+3+3.3)/33
+      </td>
+      <td>
+        e &ndash; .000100<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        3+3/(3+(3&times;3&ndash;3&times;3)/.33)
+      </td>
+      <td>
+        &pi; + .0000382<td>HS
+      </td>
+      <td>
+        3&times;3/3.3&ndash;3/333
+      </td>
+      <td>
+        e &ndash; .0000181<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        3&ndash;33/(333&times;(.3&ndash;3/3))
+      </td>
+      <td>
+        &pi; &ndash; .0000225<td>HS
+      </td>
+      <td>
+        3&times;(3/(3+3/333)&ndash;3/33)
+      </td>
+      <td>
+        e + .00000886<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        11
+      </td>
+      <td>
+        (3+33&ndash;3/(3+3))/(.3+33/3)
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        3&ndash;.3&times;.333&ndash;(3+3)/33
+      </td>
+      <td>
+        e &ndash; .0000000103<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+
+<center><font size=+2>Best Known Approximations Using 4's and Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+ <tr align=center bgcolor=DDFFFF><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        4
+      </td>
+      <td>
+        &pi; + .858<td>HS
+      </td>
+      <td>
+        4
+      </td>
+      <td>
+        e + 1.282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        4/4
+      </td>
+      <td>
+        &pi; &ndash; 2.142<td>HS
+      </td>
+      <td>
+        4/4
+      </td>
+      <td>
+        e &ndash; 1.718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        4 &ndash; 4/4
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        4 &ndash; 4/4
+      </td>
+      <td>
+        e + .282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        .4&times;(4+4)
+      </td>
+      <td>
+        &pi; + .0584<td>HS
+      </td>
+      <td>
+        44/(4&times;4)
+      </td>
+      <td>
+        e + .0317<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        4+(.4&ndash;4)/4
+      </td>
+      <td>
+        &pi; &ndash; .0416<td>HS
+      </td>
+      <td>
+        4&ndash;(4+4/4)/4
+      </td>
+      <td>
+        e + .0317<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        44/(4+4/.4)
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        (44&ndash;.4)/(4&times;4)
+      </td>
+      <td>
+        e + .00672<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        4/(4/4&ndash;.44)&ndash;4
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        (44&ndash;4/(4+4))/(4&times;4)
+      </td>
+      <td>
+        e + .000468<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        .4/(4+.4&times;4)&times;44
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        4+(4+4/4)/(.4/4&ndash;4)
+      </td>
+      <td>
+        e &ndash; .000333<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        4/(4/(4&times;4)&ndash;4/(4/44&ndash;4))
+      </td>
+      <td>
+        &pi; &ndash; .0000401<td>HS
+      </td>
+      <td>
+        ((4+44)/.4&ndash;.4)/44
+      </td>
+      <td>
+        e &ndash; .000100<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        4&ndash;4/(4.4/4+4&ndash;.44)
+      </td>
+      <td>
+        &pi; + .0000382<td>HS
+      </td>
+      <td>
+        4/(4+444/(.4&ndash;4&times;44))
+      </td>
+      <td>
+        e &ndash; .0000156<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        11
+      </td>
+      <td>
+        (4+44/(4+(4+4/4)/4.4))/4
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        4+(4+4/4)/(4/(44.4&ndash;4)&ndash;4)
+      </td>
+      <td>
+        e &ndash; .00000772<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+
+<center><font size=+2>Best Known Approximations Using 5's and Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=DDFFFF><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        5
+      </td>
+      <td>
+        &pi; + 1.858<td>HS
+      </td>
+      <td>
+        5
+      </td>
+      <td>
+        e + 2.282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        5/5
+      </td>
+      <td>
+        &pi; &ndash; 2.142<td>HS
+      </td>
+      <td>
+        5/5
+      </td>
+      <td>
+        e &ndash; 1.718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        .5&times;5
+      </td>
+      <td>
+        &pi; &ndash; .642<td>HS
+      </td>
+      <td>
+        .5&times;5
+      </td>
+      <td>
+        e &ndash; .218<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        (5+5+5)/5
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        .55&times;5
+      </td>
+      <td>
+        e + .0317<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        (55/5+5)/5
+      </td>
+      <td>
+        &pi; + .0584<td>HS
+      </td>
+      <td>
+        .5&times;5.5
+      </td>
+      <td>
+        e + .0317<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        5&ndash;55/(5&times;5+5)
+      </td>
+      <td>
+        &pi; + .0251<td>HS
+      </td>
+      <td>
+        (5+5+5)/5.5
+      </td>
+      <td>
+        e + .00899<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        55/(5+.5&times;5&times;5)
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        .5&ndash;(5+5)/(.5&ndash;5)
+      </td>
+      <td>
+        e + .00394<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        5/(.5+(5+55)/55)
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        (5/.55&ndash;.5+5)/5
+      </td>
+      <td>
+        e &ndash; .000100<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        5&ndash;(5/(5&times;5)+5/.55)/5
+      </td>
+      <td>
+        &pi; &ndash; .000226<td>HS
+      </td>
+      <td>
+        .5&times;5+((5+55)/5)/55)
+      </td>
+      <td>
+        e &ndash; .000100<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        (5+5.5)/5&ndash;5/(5/(5&times;5)&ndash;5)
+      </td>
+      <td>
+        &pi; + .0000740<td>HS
+      </td>
+      <td>
+        5/((55+(5+5)/55)/(5+5&times;5))
+      </td>
+      <td>
+        e + .00000483<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        11
+      </td>
+      <td>
+        (5+55/(5+(5+5&times;.5)/55))/5
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        5&times;(5/(5+5/555)&ndash;5&times;5/55)
+      </td>
+      <td>
+        e &ndash; .00000191<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        12
+      </td>
+      <td>
+        5&ndash;(5+5.5)/(5.55+.5/5)
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        5&times;(5/(5+5/555)&ndash;5/(5+5+5/5))
+      </td>
+      <td>
+        e &ndash; .00000191<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+
+<center><font size=+2>Best Known Approximations Using 6's and Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=DDFFFF><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        6
+      </td>
+      <td>
+        &pi; + 2.858<td>HS
+      </td>
+      <td>
+        6
+      </td>
+      <td>
+        e + 3.282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        6/6
+      </td>
+      <td>
+        &pi; &ndash; 2.142<td>HS
+      </td>
+      <td>
+        6/6
+      </td>
+      <td>
+        e &ndash; 1.718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        .6&times;6
+      </td>
+      <td>
+        &pi; + .458<td>HS
+      </td>
+      <td>
+        (6+6)/6
+      </td>
+      <td>
+        e &ndash; .718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        (6+6+6)/6
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        (6+6+6)/6
+      </td>
+      <td>
+        e + .282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        6/.66&ndash;6
+      </td>
+      <td>
+        &pi; &ndash; .0507<td>HS
+      </td>
+      <td>
+        (6+6/.6)/6
+      </td>
+      <td>
+        e &ndash; .0516<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        6&times;(6/(6&ndash;.6+6))
+      </td>
+      <td>
+        &pi; + .0163<td>HS
+      </td>
+      <td>
+        6&ndash;6&times;6/66&times;6
+      </td>
+      <td>
+        e + .00899<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        6/(6/6+6/6.6)
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        (6+6)/(6+6/6)+6/6
+      </td>
+      <td>
+        e &ndash; .00400<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        6&times;(6/(6&ndash;.66)&ndash;.6)
+      </td>
+      <td>
+        &pi; &ndash; .0000196<td>HS
+      </td>
+      <td>
+        (6&times;(6&times;6&ndash;6)&ndash;.6)/66
+      </td>
+      <td>
+        e &ndash; .000100<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        6/((6&ndash;.66)/6)&ndash;.6&times;6
+      </td>
+      <td>
+        &pi; &ndash; .0000196<td>HS
+      </td>
+      <td>
+        6&ndash;6&times;((.6/6+6&times;6)/66)
+      </td>
+      <td>
+        e &ndash; .000100<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        6&times;(6+6/(6&ndash;.66)&ndash;6.6)
+      </td>
+      <td>
+        &pi; &ndash; .0000196<td>HS
+      </td>
+      <td>
+        (6+6/(.6&ndash;(6+6)/666))/6
+      </td>
+      <td>
+        e &ndash; .0000156<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        11
+      </td>
+      <td>
+        6/6/(.6&ndash;(6+6)/(6.6+6&times;6))
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        6&times;(6/(6+6/666)&ndash;6&times;6/66)
+      </td>
+      <td>
+        e &ndash; .00000460<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+
+<center><font size=+2>Best Known Approximations Using 7's and Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=DDFFFF><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        7
+      </td>
+      <td>
+        &pi; + 3.858<td>HS
+      </td>
+      <td>
+        7
+      </td>
+      <td>
+        e + 4.282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        7/7
+      </td>
+      <td>
+        &pi; &ndash; 2.142<td>HS
+      </td>
+      <td>
+        7/7
+      </td>
+      <td>
+        e &ndash; 1.718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        (7+7)/7
+      </td>
+      <td>
+        &pi; &ndash; 1.142<td>HS
+      </td>
+      <td>
+        (7+7)/7
+      </td>
+      <td>
+        e &ndash; .718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        7/.7&ndash;7
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        7/.7&ndash;7
+      </td>
+      <td>
+        e + .282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        7+7&ndash;77/7
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        .7+(7+7)/7
+      </td>
+      <td>
+        e &ndash; .0183<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        (77+77)/(7&times;7)
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        7&times;(7/(7+77/7))
+      </td>
+      <td>
+        e + .00394<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        (7+.7/7)/.7&ndash;7
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        7&ndash;77/(7+77/7)
+      </td>
+      <td>
+        e + .00394<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        7+7&ndash;77/(7+7/77)
+      </td>
+      <td>
+        &pi; &ndash; .000567<td>HS
+      </td>
+      <td>
+        .777/(((7+7)/7)/7)
+      </td>
+      <td>
+        e + .00122<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        (7+77/777)/.7&ndash;7
+      </td>
+      <td>
+        &pi; &ndash; .0000225<td>HS
+      </td>
+      <td>
+        (7+7)/7.7&ndash;(.7&ndash;7)/7
+      </td>
+      <td>
+        e &ndash; .000100<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        ((77+77)/7&ndash;7/777)/7
+      </td>
+      <td>
+        &pi; &ndash; .0000225<td>HS
+      </td>
+      <td>
+        7/((7+(77+(7+7)/77)/7)/7)
+      </td>
+      <td>
+        e + .0000179<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        11
+      </td>
+      <td>
+        7&ndash;(7&times;7&ndash;.77)/(7+77/(7+7))
+      </td>
+      <td>
+        &pi; + .00000735<td>JD
+      </td>
+      <td>
+        (7+7)/(7/7+7&times;.77&times;.77)
+      </td>
+      <td>
+        e + .00000642<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+
+<center><font size=+2>Best Known Approximations Using 8's and Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=DDFFFF><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        8
+      </td>
+      <td>
+        &pi; + 4.858<td>HS
+      </td>
+      <td>
+        8
+      </td>
+      <td>
+        e + 5.282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        8/8
+      </td>
+      <td>
+        &pi; &ndash; 2.142<td>HS
+      </td>
+      <td>
+        8/8
+      </td>
+      <td>
+        e &ndash; 1.718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        (8+8)/8
+      </td>
+      <td>
+        &pi; &ndash; 1.142<td>HS
+      </td>
+      <td>
+        (8+8)/8
+      </td>
+      <td>
+        e &ndash; .718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        88/8&ndash;8
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        88/8&ndash;8
+      </td>
+      <td>
+        e + .282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        (88&ndash;8&times;8)/8
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        8/(88/8&ndash;8)
+      </td>
+      <td>
+        e &ndash; .0516<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        (88+8/8)/8&ndash;8
+      </td>
+      <td>
+        &pi; &ndash; .0166<td>HS
+      </td>
+      <td>
+        (8+8+8)/8.8
+      </td>
+      <td>
+        e + .00899<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        (8+8)/8&ndash;8/(8/8&ndash;8)
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        (8+88/(.8&times;8))/8
+      </td>
+      <td>
+        e + .000468<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        (88+(8+8/8)/8)/8&ndash;8
+      </td>
+      <td>
+        &pi; &ndash; .000968<td>HS
+      </td>
+      <td>
+        (.8+88/(8&times;8))/.8
+      </td>
+      <td>
+        e + .000468<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        (88+8/(8&times;.88))/8&ndash;8
+      </td>
+      <td>
+        &pi; + .000453<td>HS
+      </td>
+      <td>
+        (8+8)/8&ndash;(.8&ndash;8&times;8)/88
+      </td>
+      <td>
+        e &ndash; .000100<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        (.8+88+8/(8+8+8))/8&ndash;8
+      </td>
+      <td>
+        &pi; + .0000740<td>HS
+      </td>
+      <td>
+        (8+8+8)/8.8&ndash;8/888
+      </td>
+      <td>
+        e &ndash; .0000181<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        11
+      </td>
+      <td>
+        88/8&ndash;8/(8&ndash;8&times;8&ndash;8/(8+8))&ndash;8
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        (8+8)/8.8+8/8.888
+      </td>
+      <td>
+        e &ndash; .0000100<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+
+<center><font size=+2>Best Known Approximations Using 9's and Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=DDFFFF><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        9
+      </td>
+      <td>
+        &pi; + 5.858<td>HS
+      </td>
+      <td>
+        9
+      </td>
+      <td>
+        e + 6.282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        9/9
+      </td>
+      <td>
+        &pi; &ndash; 2.142<td>HS
+      </td>
+      <td>
+        9/9
+      </td>
+      <td>
+        e &ndash; 1.718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        (9+9)/9
+      </td>
+      <td>
+        &pi; &ndash; 1.142<td>HS
+      </td>
+      <td>
+        (9+9)/9
+      </td>
+      <td>
+        e &ndash; .718<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        (9+9+9)/9
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        (9+9+9)/9
+      </td>
+      <td>
+        e + .282<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        (9+99)/9&ndash;9
+      </td>
+      <td>
+        &pi; &ndash; .142<td>HS
+      </td>
+      <td>
+        .9+(9+9)/9
+      </td>
+      <td>
+        e + .182<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        ((9+9)+9/.9)/9
+      </td>
+      <td>
+        &pi; &ndash; .0305<td>HS
+      </td>
+      <td>
+        (9+9+9)/9.9
+      </td>
+      <td>
+        e + .00899<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        .9&times;(9&ndash;99/(9+9))
+      </td>
+      <td>
+        &pi; + .00841<td>HS
+      </td>
+      <td>
+        .9+(9+9)/9.9
+      </td>
+      <td>
+        e &ndash; .000100<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        (99/(9&ndash;99/(9+9)))/9
+      </td>
+      <td>
+        &pi; + .00126<td>HS
+      </td>
+      <td>
+        .9+(99+9&times;9)/99
+      </td>
+      <td>
+        e &ndash; .000100<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+        (9+9/(9&times;9))/(.9+(9+9)/9)
+      </td>
+      <td>
+        &pi; + .000170<td>HS
+      </td>
+      <td>
+        9/.9&ndash;9&times;(.9&ndash;9/99)
+      </td>
+      <td>
+        e &ndash; .000100<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        99/(9&ndash;99/(9+9+99))&ndash;9
+      </td>
+      <td>
+        &pi; &ndash; .0000832<td>HS
+      </td>
+      <td>
+        (9+9+9)/9.9&ndash;9/999
+      </td>
+      <td>
+        e &ndash; .0000181<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        11
+      </td>
+      <td>
+        (9+99)/(9&ndash;(9&ndash;9/(9+9))/9/9)&ndash;9
+      </td>
+      <td>
+        &pi; &ndash; .0000243<td>JD
+      </td>
+      <td>
+        .9+.99+(9&times;9+9/9)/99
+      </td>
+      <td>
+        e + .00000100<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using Any Digits and Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=DDFFFF><th>Complexity<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        3
+      </td>
+      <td>
+        &pi; &ndash; .142<td>JD
+      </td>
+      <td>
+        3
+      </td>
+      <td>
+        e + .282<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        3+0
+      </td>
+      <td>
+        &pi; &ndash; .142<td>JD
+      </td>
+      <td>
+        8/3
+      </td>
+      <td>
+        e &ndash; .0516<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        22/7
+      </td>
+      <td>
+        &pi; + .00126<td>JD
+      </td>
+      <td>
+        19/7
+      </td>
+      <td>
+        e &ndash; .00400<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        3+9/64
+      </td>
+      <td>
+        &pi; &ndash; .000968<td>JD
+      </td>
+      <td>
+        3&ndash;9/32
+      </td>
+      <td>
+        e + .000468<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        3+.85/6
+      </td>
+      <td>
+        &pi; + .0000740<td>HS
+      </td>
+      <td>
+        3&ndash;2/7.1
+      </td>
+      <td>
+        e + .0000280<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        5/(1+6/(9+8/7))
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        2+5/(7&ndash;3/77)
+      </td>
+      <td>
+        e + .00000175<td>HS
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        6/(5/6+8/(9+4))&ndash;1
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        2/77+35/13
+      </td>
+      <td>
+        e &ndash; .000000110<td>HS
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+
+
+
+<hr><p>
+
+
+
+
+<center><font size=+2>Best Known Approximations Using 1's and Unlimited Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=FFDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        1
+      </td>
+      <td>
+        &pi; &ndash; 2.142<td>JD
+      </td>
+      <td>
+        1
+      </td>
+      <td>
+        e &ndash; 1.718<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        1+1
+      </td>
+      <td>
+        &pi; &ndash; 1.142<td>JD
+      </td>
+      <td>
+        1+1
+      </td>
+      <td>
+        e &ndash; .718<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        1+1+1
+      </td>
+      <td>
+        &pi; &ndash; .142<td>JD
+      </td>
+      <td>
+        1+1+1
+      </td>
+      <td>
+        e + .282<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        1+1+1.1
+      </td>
+      <td>
+        &pi; &ndash; .0416<td>JD
+      </td>
+      <td>
+        1+1+1&ndash;.1
+      </td>
+      <td>
+        e + .182<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        1+1+1/(1&ndash;.1)
+      </td>
+      <td>
+        &pi; &ndash; .0305<td>JD
+      </td>
+      <td>
+        (1+1+1)/1.1
+      </td>
+      <td>
+         e + .00899<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        1/(.1+.1+.1)&ndash;.1&ndash;.1
+      </td>
+      <td>
+        &pi; &ndash; .00826<td>JD
+      </td>
+      <td>
+        1+(.1+.1)/.11&ndash;.1
+      </td>
+      <td>
+        e &ndash; .000100<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        11/((1&ndash;.1)/(.1+.1)&ndash;1)
+      </td>
+      <td>
+        &pi; &ndash; .00126<td>JD
+      </td>
+      <td>
+        1&times;1+(.1+.1)/.11&ndash;.1
+      </td>
+      <td>
+        e &ndash; .000100<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        (.1+(.1+.1+.1)/.11)/(1&ndash;.1)
+      </td>
+      <td>
+        &pi; &ndash; .000179<td>JD
+      </td>
+      <td>
+        (.1+.1+.1/(1+.1&times;.1))/.11
+      </td>
+      <td>
+        e &ndash; .0000100<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+       1/(.1+.1+.1)&ndash;1/(11&ndash;.1)&ndash;.1
+      </td>
+      <td>
+        &pi; &ndash; .00000244<td>JD
+      </td>
+      <td>
+        (.1+.1+.1/(1&ndash;.1))/.11&ndash;.11
+      </td>
+      <td>
+        e &ndash; .00000100<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+        1&times;1/(.1+.1+.1)&ndash;1/(11&ndash;.1)&ndash;.1
+      </td>
+      <td>
+        &pi; &ndash; .00000244<td>JD
+      </td>
+      <td>
+        1&ndash;.1&times;(1&ndash;.1&times;.1&times;.1&ndash;(1+1)/.11)
+      </td>
+      <td>
+        e &ndash; .0000000103<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 2's and Unlimited Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=FFDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        2
+      </td>
+      <td>
+        &pi; &ndash; 1.142<td>JD
+      </td>
+      <td>
+        2
+      </td>
+      <td>
+        e &ndash; .718<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        2+2
+      </td>
+      <td>
+        &pi; + .858<td>JD
+      </td>
+      <td>
+        2.2
+      </td>
+      <td>
+        e &ndash; .518<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        2+2/2
+      </td>
+      <td>
+        &pi; &ndash; .142<td>JD
+      </td>
+      <td>
+        2+2/2
+      </td>
+      <td>
+        e + .282<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        2+2/(2&ndash;.2)
+      </td>
+      <td>
+        &pi; &ndash; .0305<td>JD
+      </td>
+      <td>
+        2+.2&times;2&times;2
+      </td>
+      <td>
+        e + .0817<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        2/(.2+.2+.2)&ndash;.2
+      </td>
+      <td>
+        &pi; &ndash; .00826<td>JD
+      </td>
+      <td>
+        2+(2&ndash;.2)&times;(.2+.2)
+      </td>
+      <td>
+         e + .00172<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        22/((2&ndash;.2)/.2&ndash;2)
+      </td>
+      <td>
+        &pi; + .00126<td>JD
+      </td>
+      <td>
+        2&times;(2+.2&times;(2&ndash;.2))&ndash;2
+      </td>
+      <td>
+        e + .000172<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        .2+2/.2/(2&times;(2&ndash;.2)&ndash;.2)
+      </td>
+      <td>
+        &pi; &ndash; .000416<td>JD
+      </td>
+      <td>
+        2+(2&ndash;.2)/(2&ndash;.2&times;.2)&ndash;.2
+      </td>
+      <td>
+        e + .0000855<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        2+2/.2/.2/(2&times;22&ndash;.2)
+      </td>
+      <td>
+        &pi; &ndash; .0000401<td>JD
+      </td>
+      <td>
+        (.2+.2/.22)/(2+.2&times;.2)/.2
+      </td>
+      <td>
+        e + .0000782<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+       .22&times;(.2+2/.2)&times;(2&ndash;.2&ndash;.2&ndash;.2)
+      </td>
+      <td>
+        &pi; + .00000735<td>JD
+      </td>
+      <td>
+        2&times;(.2+2.2/(2&ndash;.2/(2&ndash;.2&times;.2)))
+      </td>
+      <td>
+        e &ndash; .00000226<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+
+<center><font size=+2>Best Known Approximations Using 3's and Unlimited Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=FFDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        3
+      </td>
+      <td>
+        &pi; &ndash; .142<td>JD
+      </td>
+      <td>
+        3
+      </td>
+      <td>
+        e + .282<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        3.3
+      </td>
+      <td>
+        &pi; + .158<td>JD
+      </td>
+      <td>
+        3&ndash;.3
+      </td>
+      <td>
+        e &ndash; .0183<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        3+.3/3
+      </td>
+      <td>
+        &pi; &ndash; .158<td>JD
+      </td>
+      <td>
+        3&times;3&times;.3
+      </td>
+      <td>
+        e &ndash; .0183<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        3+.3/(3&ndash;.3)
+      </td>
+      <td>
+        &pi; &ndash; .0305<td>JD
+      </td>
+      <td>
+        3&times;.3/.33
+      </td>
+      <td>
+        e + .00899<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        3+.3/(3&ndash;3&times;.3)
+      </td>
+      <td>
+        &pi; + .00126<td>JD
+      </td>
+      <td>
+        3+.3&times;.3&times;.3&ndash;.3
+      </td>
+      <td>
+         e + .00872<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        3+.3/(3.&ndash;3&ndash;.3&ndash;.3)
+      </td>
+      <td>
+        &pi; + .00126<td>JD
+      </td>
+      <td>
+        .3&times;3+(.3+.3)/.33
+      </td>
+      <td>
+        e &ndash; .000100<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        3+3/(3+(3+3)/.33)
+      </td>
+      <td>
+        &pi; + .0000382<td>JD
+      </td>
+      <td>
+        .3&times;(3/.33&ndash;.3&times;.3/3)
+      </td>
+      <td>
+        e &ndash; .00000910<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        3/(.3&ndash;33)&ndash;(.3&ndash;3/.3)/3
+      </td>
+      <td>
+        &pi; &ndash; .00000244<td>JD
+      </td>
+      <td>
+        .3/3&times;(3&times;3/.33&ndash;.3&times;.3)
+      </td>
+      <td>
+        e &ndash; .00000910<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+       (.3+3/(.3+(.3+3)/.3))/(.3+.3)/.3
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        .3&times;((3+.3/3)/.33&ndash;.333)
+      </td>
+      <td>
+        e &ndash; .0000000103<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 4's and Unlimited Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=FFDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        4
+      </td>
+      <td>
+        &pi; + .858<td>JD
+      </td>
+      <td>
+        4
+      </td>
+      <td>
+        e + 1.282<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        4&ndash;.4
+      </td>
+      <td>
+        &pi; + .458<td>JD
+      </td>
+      <td>
+        4&ndash;.4
+      </td>
+      <td>
+        e + .882<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        4&ndash;.4&ndash;.4
+      </td>
+      <td>
+        &pi; &ndash; .058<td>JD
+      </td>
+      <td>
+        4/4/.4
+      </td>
+      <td>
+        e &ndash; .218<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        4&ndash;.4&ndash;.44
+      </td>
+      <td>
+        &pi; + .0184<td>JD
+      </td>
+      <td>
+        .44/.4/.4
+      </td>
+      <td>
+        e &ndash; .0317<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        4/(.4+.4&times;.4)&ndash;4
+      </td>
+      <td>
+        &pi; + .00126<td>JD
+      </td>
+      <td>
+        4&ndash;.4&times;.4&times;(4+4)
+      </td>
+      <td>
+         e + .00172<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        4/.4/(.4+4/4)&ndash;4
+      </td>
+      <td>
+        &pi; + .00126<td>JD
+      </td>
+      <td>
+        4/.4/(4&ndash;.4&times;(.4+.4))
+      </td>
+      <td>
+        e &ndash; .000891<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        4&ndash;.4&ndash;4.4/(4/.4&ndash;.4)
+      </td>
+      <td>
+        &pi; + .0000740<td>JD
+      </td>
+      <td>
+        ((4+44)/.4&ndash;.4)/44
+      </td>
+      <td>
+        e &ndash; .000100<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+        4&ndash;.44+4/(.44&ndash;4/.4)
+      </td>
+      <td>
+        &pi; &ndash; .00000269<td>JD
+      </td>
+      <td>
+        4&ndash;4/(4&ndash;.4&times;.4)&ndash;.4+.4&times;.4
+      </td>
+      <td>
+        e + .0000515<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+       4&ndash;.44+.4&times;4/(.4&times;.44&ndash;4)
+      </td>
+      <td>
+        &pi; &ndash; .00000269<td>JD
+      </td>
+      <td>
+        4/(.44&ndash;4/(.44/(4&ndash;.4)&ndash;4))
+      </td>
+      <td>
+        e &ndash; .00000159<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 5's and Unlimited Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=FFDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        5
+      </td>
+      <td>
+        &pi; + 1.85<td>JD
+      </td>
+      <td>
+        5
+      </td>
+      <td>
+        e + 2.28<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        .5&times;5
+      </td>
+      <td>
+        &pi; &ndash; .642<td>JD
+      </td>
+      <td>
+        .5&times;5
+      </td>
+      <td>
+        e &ndash; .218<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        .5+5&times;.5
+      </td>
+      <td>
+        &pi; &ndash; .142<td>JD
+      </td>
+      <td>
+        .5&times;5.5
+      </td>
+      <td>
+        e + .0317<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        5.5+.55
+      </td>
+      <td>
+        &pi; &ndash; .0916<td>JD
+      </td>
+      <td>
+        .5&times;(5&ndash;.5)+.5
+      </td>
+      <td>
+        e + .0317<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        .5+.5&times;(5+.5&times;.5)
+      </td>
+      <td>
+        &pi; &ndash; .0166<td>JD
+      </td>
+      <td>
+        .5+(5+5)/(5&ndash;.5)
+      </td>
+      <td>
+         e + .00394<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        .5/(.5&times;.5&ndash;5/55)
+      </td>
+      <td>
+        &pi; + .00126<td>JD
+      </td>
+      <td>
+        (5/.55+5&ndash;.5)/5
+      </td>
+      <td>
+        e &ndash; .000100<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        .5&times;(5&ndash;5/(5.5/5&ndash;5))
+      </td>
+      <td>
+        &pi; &ndash; .000567<td>JD
+      </td>
+      <td>
+        5&ndash;(.5+5&times;5&times;5)/55
+      </td>
+      <td>
+        e &ndash; .000100<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+       (.5+5/(5&ndash;.5))&times;(5&times;.5&ndash;.55)
+      </td>
+      <td>
+        &pi; + .0000740<td>JD
+      </td>
+      <td>
+        5&times;(.5+5/(55/.5+5&ndash;.5))
+      </td>
+      <td>
+        e + .000000587<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+       5&ndash;(5+5+.5)/(.5/5+5+.55)
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        .5+5/(.5&times;(5&ndash;.5)+.5/5/5/5)
+      </td>
+      <td>
+        e &ndash; .00000321<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        10
+      </td>
+      <td>
+       (5+5)/(.5&times;.5+5/(5+.5/(5&ndash;.5)))&ndash;5
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        ((5&ndash;5/(5&ndash;.5))/.5/.55&ndash;.55)/5
+      </td>
+      <td>
+        e + .000000100<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 6's and Unlimited Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=FFDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        .6
+      </td>
+      <td>
+        &pi; &ndash; 2.54<td>JD
+      </td>
+      <td>
+        .6
+      </td>
+      <td>
+        e &ndash; 2.12<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        .6&times;6
+      </td>
+      <td>
+        &pi; + .458<td>JD
+      </td>
+      <td>
+        .6&times;6
+      </td>
+      <td>
+        e + .882<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        .6&times;(6&ndash;.6)
+      </td>
+      <td>
+        &pi; &ndash; .0984<td>JD
+      </td>
+      <td>
+        .6&times;6&ndash;.6
+      </td>
+      <td>
+        e + .282<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        6/.66&ndash;6
+      </td>
+      <td>
+        &pi; &ndash; .0507<td>JD
+      </td>
+      <td>
+        6&ndash;.6&times;(6&ndash;.6)
+      </td>
+      <td>
+        e + .0417<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        .6&times;(6&ndash;.6)&ndash;.6/6
+      </td>
+      <td>
+        &pi; &ndash; .00159<td>JD
+      </td>
+      <td>
+        6/(.6+.6+6/6)
+      </td>
+      <td>
+         e + .00899<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        6&times;(6/(6&ndash;.66)&ndash;.6)
+      </td>
+      <td>
+        &pi; &ndash; .0000196<td>JD
+      </td>
+      <td>
+        (6/.6/.6&ndash;.6&times;.6)/6
+      </td>
+      <td>
+        e &ndash; .000504<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        6&times;6/(6&ndash;.66)&ndash;6&times;.6
+      </td>
+      <td>
+        &pi; &ndash; .0000196<td>JD
+      </td>
+      <td>
+        6&ndash;(.6+6&times;6&times;6)/66
+      </td>
+      <td>
+        e &ndash; .000100<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+       6&ndash;.6&times;(.6+.6+.66&times;(6&ndash;.6))
+      </td>
+      <td>
+        &pi; &ndash; .00000735<td>JD
+      </td>
+      <td>
+        .6&times;(6&ndash;.6&ndash;6/((6&ndash;.6)/6+6))
+      </td>
+      <td>
+        e &ndash; .0000210<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+       .6/(.6&times;.6+6/(.6&ndash;6&times;6&ndash;.6/6))
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        ((.6+.6+6/.6)/.66&ndash;.66)/6
+      </td>
+      <td>
+        e + .00000100<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+
+<center><font size=+2>Best Known Approximations Using 7's and Unlimited Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=FFDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        .7
+      </td>
+      <td>
+        &pi; &ndash; 2.44<td>JD
+      </td>
+      <td>
+        .7
+      </td>
+      <td>
+        e &ndash; 2.02<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        .7+.7
+      </td>
+      <td>
+        &pi; &ndash; 1.74<td>JD
+      </td>
+      <td>
+        .7+.7
+      </td>
+      <td>
+        e &ndash; 1.32<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+        7/.7&ndash;7
+      </td>
+      <td>
+        &pi; &ndash; .142<td>JD
+      </td>
+      <td>
+        7/.7&ndash;7
+      </td>
+      <td>
+        e + .282<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        (7&ndash;.7)&times;.7&times;.7
+      </td>
+      <td>
+        &pi; &ndash; .0546<td>JD
+      </td>
+      <td>
+        7&times;.7&times;.7&ndash;.7
+      </td>
+      <td>
+        e + .0117<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+        (7+.7/7)/.7&ndash;7
+      </td>
+      <td>
+        &pi; + .00126<td>JD
+      </td>
+      <td>
+        7&ndash;(7/.7&ndash;7))/.7
+      </td>
+      <td>
+         e &ndash; .00400<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        7/(.7+(.7+7/.7)/7)
+      </td>
+      <td>
+        &pi; &ndash; .000567<td>JD
+      </td>
+      <td>
+        7/(.7+7/7)&ndash;.7&ndash;.7
+      </td>
+      <td>
+        e &ndash; .000635<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        .7&times;.7&times;(7&ndash;.7+.7/(7&ndash;.7))
+      </td>
+      <td>
+        &pi; &ndash; .000148<td>JD
+      </td>
+      <td>
+        ((7+7)/.7&ndash;.7)/(7+.7/7)
+      </td>
+      <td>
+        e + .0000280<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+       (.7+7&times;7)/(7+(.7+.7)&times;(7&ndash;.7))
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        7/.7&ndash;7&ndash;(7+7)/(.7+7&times;7)
+      </td>
+      <td>
+        e + .0000280<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+       7/(7&times;(.7&ndash;(7+7)/(.7+7&times;7))&ndash;.7)
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        (7&ndash;.7)&times;(.7&times;.77&ndash;.7/(7&ndash;.7&times;.7))
+      </td>
+      <td>
+        e &ndash; .00000118<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+<center><font size=+2>Best Known Approximations Using 8's and Unlimited Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=FFDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        .8
+      </td>
+      <td>
+        &pi; &ndash; 2.34<td>JD
+      </td>
+      <td>
+        .8
+      </td>
+      <td>
+        e &ndash; 1.92<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        .8+.8
+      </td>
+      <td>
+        &pi; &ndash; 1.54<td>JD
+      </td>
+      <td>
+        .8+.8
+      </td>
+      <td>
+        e &ndash; 1.12<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+       .8+.8+.8
+      </td>
+      <td>
+        &pi; &ndash; .742<td>JD
+      </td>
+      <td>
+        .8+.8+.8
+      </td>
+      <td>
+        e &ndash; .318<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        .8+.8+.8+.8
+      </td>
+      <td>
+        &pi; + .0584<td>JD
+      </td>
+      <td>
+        .8+(8+8)/8
+      </td>
+      <td>
+        e + .0817<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+       (8+8)/.8/.8/8
+      </td>
+      <td>
+        &pi; &ndash; .0166<td>JD
+      </td>
+      <td>
+        .8+.8&times;(.8+.8+.8)
+      </td>
+      <td>
+         e + .00172<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        8.8/(.8+8/.8&ndash;8)
+      </td>
+      <td>
+        &pi; + .00126<td>JD
+      </td>
+      <td>
+        (.8+.88/.8/.8)/.8
+      </td>
+      <td>
+        e + .000468<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        8&ndash;.88&times;(.8&times;8&ndash;.88)
+      </td>
+      <td>
+        &pi; + .000807<td>JD
+      </td>
+      <td>
+        .8+(.8+.888)/.88
+      </td>
+      <td>
+        e &ndash; .000100<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+       (.88+.8+8/(.8+8.8))/.8
+      </td>
+      <td>
+        &pi; + .0000740<td>JD
+      </td>
+      <td>
+        8&ndash;(8&ndash;.8)/(.8+.8&times;.8&times;.88)
+      </td>
+      <td>
+        e + .0000280<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+       .88&times;(.8+.88&times;8&times;8)/(8+8)
+      </td>
+      <td>
+        &pi; + .00000735<td>JD
+      </td>
+      <td>
+       (8&times;8&ndash;.8)/((8+8)/.8/.8/.8&ndash;8)
+      </td>
+      <td>
+        e &ndash; .00000226<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+
+<center><font size=+2>Best Known Approximations Using 9's and Unlimited Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=FFDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        .9
+      </td>
+      <td>
+        &pi; &ndash; 2.24<td>JD
+      </td>
+      <td>
+        .9
+      </td>
+      <td>
+        e &ndash; 1.82<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        .9+.9
+      </td>
+      <td>
+        &pi; &ndash; 1.34<td>JD
+      </td>
+      <td>
+        .9+.9
+      </td>
+      <td>
+        e &ndash; .918<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+       .9+.9+.9
+      </td>
+      <td>
+        &pi; &ndash; .442<td>JD
+      </td>
+      <td>
+        .9+.9+.9
+      </td>
+      <td>
+        e &ndash; .0183<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        (.9+.9)&times;(.9+.9)
+      </td>
+      <td>
+        &pi; + .0984<td>JD
+      </td>
+      <td>
+        .9+.9+.99
+      </td>
+      <td>
+        e + .0717<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+       .9+(9+9)/(9&ndash;.9)
+      </td>
+      <td>
+        &pi; &ndash; .0194<td>JD
+      </td>
+      <td>
+        .9+(.9+.9)/.99
+      </td>
+      <td>
+         e &ndash; .000100<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        6
+      </td>
+      <td>
+        (.9+.9)&times;(.9+.9)&ndash;.9/9
+      </td>
+      <td>
+        &pi; &ndash; .00159<td>JD
+      </td>
+      <td>
+        .9+.9+9/(9+.9&times;.9)
+      </td>
+      <td>
+        e &ndash; .000851<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        7
+      </td>
+      <td>
+        (9&ndash;(9/.9/.9/(.9+.9)))/.9
+      </td>
+      <td>
+        &pi; &ndash; .000303<td>JD
+      </td>
+      <td>
+        .9+.9+9/.99/9.9
+      </td>
+      <td>
+        e &ndash; .00000818<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        8
+      </td>
+      <td>
+       .9&ndash;((.9+9)/(.9&times;(.9+.9)&ndash;9)&ndash;.9)
+      </td>
+      <td>
+        &pi; &ndash; .000129<td>JD
+      </td>
+      <td>
+        .9+.9+(9+.9/(.9+9))/(.9+9)
+      </td>
+      <td>
+        e &ndash; .00000818<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        9
+      </td>
+      <td>
+       .9+(.99+9/(.9+9/.9))/.9/.9
+      </td>
+      <td>
+        &pi; &ndash; .00000244<td>JD
+      </td>
+      <td>
+       .9+.9+9/(9+.9&times;.9&ndash;.9/99)
+      </td>
+      <td>
+        e + .000000334<td>JD
+      </td>
+    </tr>
+  </tbody>
+</table><p>
+
+
+<center><font size=+2>Best Known Approximations Using Any Digits and Unlimited Decimal Points</font></center>
+<table align=center border=1 bgcolor=FFFFDD cellpadding=5>
+  <tbody>
+<tr align=center bgcolor=FFDDFF><th>Digits<th>Expression for &pi;<th>Value<th>Author<th>Expression for e<th>Value<th>Author
+    <tr align=center>
+      <td>
+        1
+      </td>
+      <td>
+        3
+      </td>
+      <td>
+        &pi; &ndash; .142<td>JD
+      </td>
+      <td>
+        3
+      </td>
+      <td>
+        e + .282<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        2
+      </td>
+      <td>
+        3.1
+      </td>
+      <td>
+        &pi; &ndash; .0416<td>JD
+      </td>
+      <td>
+        2.7
+      </td>
+      <td>
+        e &ndash; .0183<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        3
+      </td>
+      <td>
+       22/7
+      </td>
+      <td>
+        &pi; + .00126<td>JD
+      </td>
+      <td>
+        2.72
+      </td>
+      <td>
+        e + .0172<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        4
+      </td>
+      <td>
+        (.9+7/.6)/4
+      </td>
+      <td>
+        &pi; + .0000740<td>JD
+      </td>
+      <td>
+        3&ndash;2/(8&ndash;.9)
+      </td>
+      <td>
+        e + .0000280<td>JD
+      </td>
+    </tr>
+    <tr align=center>
+      <td>
+        5
+      </td>
+      <td>
+       1/(.6&ndash;2/(8&ndash;.9))
+      </td>
+      <td>
+        &pi; + .000000267<td>JD
+      </td>
+      <td>
+        2.9/.93&ndash;.4
+      </td>
+      <td>
+         e &ndash; .00000226<td>JD
+      </td>
+    </tr>
+   </tbody>
+</table><p>
+
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 4/10/14.<font>
+</BODY></HTML>
+

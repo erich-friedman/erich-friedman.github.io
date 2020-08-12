@@ -1,0 +1,42 @@
+F13 H7
+F14 I7
+E14 J7
+E15 K7
+D15 L7
+D16 L6
+C16 M6
+C17 N6
+B17 N7
+B18 (starves A19) N8
+A18 M8 (starves M7)
+A19 N5
+G12 O6
+H12 P6
+H11 A12
+I11 A11
+I10 A10
+J10 A9
+J9 A8
+K9 L1
+K8 K1
+L8 (starves itself) J1
+S2 I1
+R2 H1
+R3 H19
+Q3 I19
+Q4 J19
+P4 K19
+P5 L19
+O5 (starves itself) L18
+F1 M18
+F2 N18
+E2 N19 (starves M19)
+E3 S8
+D3 S9
+D4 S10
+C4 S11
+C5 S12
+B5 R12
+B6 (starves A7) R13
+A6 R14
+A7 (starves itself) S14 (starves S13)

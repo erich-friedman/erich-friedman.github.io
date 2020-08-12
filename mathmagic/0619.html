@@ -1,0 +1,1132 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (June 2019)</H1></CENTER>
+
+Several times, the problem of the month has been something to do with <a href="https://www2.stetson.edu/~efriedma/mathmagic/0800.html">Friedman Numbers</a>, whether it be <a href="https://www2.stetson.edu/~efriedma/mathmagic/0803.html">S-Numbers</a>, <a href="https://www2.stetson.edu/~efriedma/mathmagic/0412.html">Self-Reproducing Numbers</a>, or <a href="https://www2.stetson.edu/~efriedma/mathmagic/0713.html">Fractional, Redundant, Almost, and Approximate  Friedman Numbers</a>.  This month we consider a few other variations.<p>
+
+<font size=+2>Problem #1: </font>A number is an <b>anti-Friedman number</b> if it has no repeated digits and it can be formed using one of each digit NOT in the number, together with addition, subtraction, multiplication, division, exponentiation, and concatenation.  For example, 592710 = 84<sup>3</sup> + 6.  There are finitely many anti-Friedman numbers, and it might be possible to find them all.  What is the largest one you can find?  What are the smallest numbers that are NOT anti-Friedman numbers?<p>
+
+<font size=+2>Problem #2: </font>A number is a <b>k-shifted Friedman number</b> if it can be written using its digits shifted by some constant k.  The constant k can be positive or negative as long as the shifted digits are all between 0 and 9.  For example, with k=1, 108 = 12 &times; 9.  If the shifted digits can be used in order, we call the number a <b>nice k-shifted Friedman number</b>.  For example, with k=1, <font color=red>178 = 2 &times; 89</font>.  What are the small k-shifted Friedman numbers?  Which of them are nice?  
+
+<font size=+2>Problem #3: </font>A pair of numbers is a <b>Friedman pair</b> if the digits of the first can make the second, and the digits of the second can make the first.  For example, 27 = 2<sup>8</sup> &ndash; 1 and 128 = 2<sup>7</sup>.  If the digits can be used in order, we call the pair a <b>nice Friedman pair</b>.  If only one of them can be written with the digits in order, we call it a <b>semi-nice Friedman pair</b>.  What are the small Friedman pairs?  Which of them are semi-nice or nice?  We can also ask for Friedman triplets, 3 numbers which can be formed by the digits of either of the other two.<p>
+
+
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Submissions were received from Joe DeVincentis, Alex Rower, Gordon Atkinson, and Marc Lapierre.<p>
+
+<font size=+2>Problem #1: </font><p>
+
+Marc Lapierre confirmed that all numbers with 3 or fewer digits are anti-Friedman numbers.  Are all numbers with 4 digits anti-Friedman numbers?<p>
+
+Here are the known Anti-Friedman numbers with 5 or more digits:<p>
+
+<center><font size=+2>Largest Anti-Friedman Numbers</font></center>
+<TABLE align=center cellpadding=5 border=1 bgcolor=FFFFDD>
+
+<tr align=center>
+<td>10246 = 7<sup>5</sup> &ndash; (9 / 3)<sup>8</sup>
+<td>10273 = 6<sup>4</sup> &times; 8 &ndash; 95
+<td>10275 = 6<sup>4</sup> &times; 8 &ndash; 93
+<td>10276 = (8<sup>3</sup> &times; 5 + 9) &times; 4
+<td>10293 = 6<sup>4</sup> &times; 8 &ndash; 75
+<tr align=center>
+<td>10295 = 6<sup>4</sup> &times; 8 &ndash; 73
+<td>10352 = 6<sup>4</sup> &times; 8 &ndash; 9 &ndash; 7
+<td>10357 = 6<sup>4</sup> &times; 8 &ndash; 9 &ndash; 2
+<td>10359 = 6<sup>4</sup> &times; 8 &ndash; 7 &ndash; 2
+<td>10368 = 4<sup>5</sup> &times; 9 + 2<sup>7</sup>
+<tr align=center>
+<td>10372 = 6<sup>4</sup> &times; 8 + 9 &ndash; 5
+<td>10375 = 6<sup>4</sup> &times; 8 + 9 &ndash; 2
+<td>10379 = (6<sup>4</sup> + 2) &times; 8 &ndash; 5
+<td>10395 = 6<sup>4</sup> &times; 8 + 27
+<td>10467 = (59<sup>2</sup> + 8) &times; 3
+<tr align=center>
+<td>10496 = 2<sup>7</sup> &times; (85 &ndash; 3)
+<td>10584 = 6<sup>3</sup> &times; 7 &times; (9 &ndash; 2)
+<td>10632 = 5<sup>4</sup> &times; (9 + 8) + 7
+<td>10648 = (2 + 9) &times; (7 &ndash; 5)<sup>3</sup>
+<td>10657 = (8 &times; 2)<sup>3</sup> + 9<sup>4</sup>
+<tr align=center>
+<td>10752 = 896 &times; 4 &times; 3
+<td>10764 = (5<sup>3</sup> &ndash; 8) &times; 92
+<td>10792 = 6<sup>4</sup> &times; 8 + 53
+<td>10845 = (9 + 6) &times; 723
+<td>10923 = (4<sup>8</sup> + 7 &ndash; 5) / 6
+<tr align=center>
+<td>10925 = (4<sup>6</sup> &times; 8 + 7) / 3
+<td>10943 = (6 / 2)<sup>7</sup> &times; 5 + 8
+<td>10952 = (6<sup>4</sup> + 73) &times; 8
+<td>10956 = 37<sup>2</sup> &times; 8 + 4
+<td>10976 = (2 + 5)<sup>3</sup> &times; 8 &times; 4
+<tr align=center>
+<td>12036 = (7<sup>4</sup> + 8) &times; 5 &ndash; 9
+<td>12039 = (7<sup>4</sup> + 8) &times; 5 &ndash; 6
+<td>12096 = 7 &times; (4 &times; 3)<sup>8&ndash;5</sup>
+<td>12098 = 6 &times; 3<sup>7</sup> &ndash; 4<sup>5</sup>
+<td>12309 = (4<sup>6</sup> + 7) &times; (8 &ndash; 5)
+<tr align=center>
+<td>12780 = 639 &times; 5 &times; 4
+<td>13056 = 2<sup>7</sup> &times; (98 + 4)
+<td>13092 = (4<sup>8</sup> &ndash; 76) / 5
+<td>13098 = ((5 &ndash; 2)<sup>7</sup> &ndash; 4) &times; 6
+<td>14580 = 9<sup>3</sup> &times; (2 &times; 7 + 6)
+<tr align=center>
+<td>14760 = 328 &times; 9 &times; 5
+<td>14820 = 76 &times; 39 &times; 5
+<td>15092 = 7<sup>3</sup> &times; (8 &times; 6 &ndash; 4)
+<td>15628 = 3907 &times; 4
+<td>15678 = 402 &times; 39
+<tr align=center>
+<td>15709 = (2 + 3)<sup>6</sup> + 84
+<td>16038 = 297 &times; 54
+<td>16082 = 7<sup>5</sup> &ndash; 9<sup>3</sup> + 4
+<td>16093 = (48<sup>2</sup> &ndash; 5) &times; 7
+<td>16308 = 4<sup>7</sup> &ndash; 9<sup>2</sup> + 5
+<tr align=center>
+<td>16349 = (8<sup>5</sup> &ndash; 70) / 2
+<td>16350 = 4<sup>7</sup> &ndash; 2 &times; (8 + 9)
+<td>16375 = 4<sup>(8&ndash;2<sup>0</sup>)</sup> &ndash; 9
+<td>16379 = 4<sup>(8&ndash;2<sup>0</sup>)</sup> &ndash; 5
+<td>16384 = (9 &ndash; 5)<sup>7</sup> + 2 &times; 0
+<tr align=center>
+<td>16385 = 4<sup>7</sup> + 29<sup>0</sup>
+<td>16389 = 4<sup>7</sup> + 5 + 2 &times; 0</sup>
+<td>16390 = 4<sup>7</sup> + 2 &times; (8 &ndash; 5)</sup>
+<td>16392 = 4<sup>7</sup> + 8 + 5 &times; 0</sup>
+<td>16407 = (3<sup>8</sup> &times; 5 + 9) / 2
+<tr align=center>
+<td>16704 = 58 &times; 32 &times; 9
+<td>16802 = 49<sup>3</sup> / 7 &ndash; 5
+<td>16804 = 7<sup>5</sup> &ndash; 4 + 3 &times; 2
+<td>16805 = 49<sup>3</sup> / 7 &ndash; 2
+<td>16807 = (9 + 4 &ndash; 2 &times; 3)<sup>5</sup>
+<tr align=center>
+<td>16809 = 7<sup>5</sup> &ndash; 9 + 3 &times; 2
+<td>16830 = 7<sup>5</sup> + 92 / 4
+<td>16840 = 7<sup>5</sup> + (2 + 9) &times; 3 
+<td>16890 = 7<sup>5</sup> + 3<sup>4</sup> + 2
+<td>16903 = 7<sup>5</sup> + 2 &times; 48
+<tr align=center>
+<td>17082 = 5694 &times; 3
+<td>17280 = 4<sup>3</sup> &times; 9 &times; 6 &times; 5
+<td>17490 = 3<sup>2+5</sup> &times; 8 &ndash; 6
+<td>17496 = 8 &times; 3<sup>2+5</sup> + 0
+<td>17502 = 9<sup>4</sup> &times; 8 / 3 + 6
+<tr align=center>
+<td>17504 = 9<sup>2</sup> &times; 6<sup>3</sup> + 8
+<td>17508 = (9<sup>3</sup> &times; 4 + 2) &times; 6
+<td>17560 = ((9 + 4)<sup>3</sup> &ndash; 2) &times; 8
+<td>17580 = 26<sup>9/3</sup> + 4
+<td>17640 = (3<sup>5</sup> + 2) &times; 8 &times; 9
+<tr align=center>
+<td>17820 = 396 &times; 45
+<td>17920 = 64 &times; 35 &times; 8
+<td>18026 = 5<sup>9&ndash;3</sup> + 7<sup>4</sup>
+<td>18029 = 5<sup>6</sup> + 7<sup>4</sup> + 3
+<td>18270 = (4<sup>5</sup> &ndash; 9) &times; 6 &times; 3
+<tr align=center>
+<td>18306 = (4<sup>5</sup> &ndash; 7) &times; 9 &times; 2
+<td>18504 = (7<sup>3</sup> &times; 6 &ndash; 2) &times; 9
+<td>18540 = (7<sup>3</sup> &times; 6 + 2) &times; 9
+<td>18720 = 936 &times; 5 &times; 4
+<td>18750 = 6 &times; (3 + 2)<sup>9&ndash;4</sup> 
+<tr align=center>
+<td>19084 = 367 &times; 52
+<td>19205 = 8 &times; 7<sup>4</sup> &ndash; 6 + 3
+<td>19206 = 8 &times; 7<sup>4</sup> &ndash; 5 + 3
+<td>19208 = (56 / 4)<sup>3</sup> &times; 7
+<td>19240 = 65 &times; 37 &times; 8
+<tr align=center>
+<td>19682 = 3<sup>4+5</sup> &ndash; 7<sup>0</sup>
+<td>19683 = (2 + 7<sup>0</sup>)<sup>4+5</sup>
+<td>19684 = 27<sup>3</sup> + 5<sup>0</sup>
+<td>20169 = 3<sup>5</sup> &times; (87 &ndash; 4)
+<td>20416 = (7<sup>3</sup> + 9) &times; 58
+<tr align=center>
+<td>20451 = 3<sup>9</sup> + 768
+<td>20457 = 6819 &times; 3
+<td>20574 = 381 &times; 9 &times; 6
+<td>20731 = (8 &times; 9 / 6)<sup>4</sup> &ndash; 5
+<td>20735 = (8 &times; 9 / 6)<sup>4</sup> &ndash; 1
+<tr align=center>
+<td>20736 = (8 + 4)<sup>9&ndash;5</sup> &times; 1
+<td>20754 = 6918 &times; 3
+<td>21450 = (8<sup>3</sup> &times; 7 &ndash; 9) &times; 6
+<td>21504 = 8<sup>9/3</sup> &times; 7 &times; 6
+<td>21609 = 7<sup>4</sup> &times; 3 &times; (8 &ndash; 5)
+<tr align=center>
+<td>21658 = 3094 &times; 7
+<td>21870 = 3<sup>4</sup> &times; 9 &times; 6 &times; 5
+<td>21950 = (7 &times; 4)<sup>3</sup> &ndash; 8 + 6
+<td>21958 = (7 &times; 4)<sup>3</sup> + 6 + 0
+<td>21970 = (8 + 5)<sup>3</sup> &times; (6 + 4)
+<tr align=center>
+<td>24056 = 97 &times; 31 &times; 8
+<td>24507 = 8169 &times; 3
+<td>24701 = (6 + 8)<sup>3</sup> &times; 9 + 5
+<td>24705 = ((6 + 8)<sup>3</sup> + 1) &times; 9
+<td>25803 = 61 &times; 47 &times; 9
+<tr align=center>
+<td>25960 = (3<sup>8</sup> &ndash; 71) &times; 4
+<td>26039 = (5<sup>7</sup> &ndash; 8) / (4 &ndash; 1)
+<td>26048 = (5<sup>7</sup> + 19) / 3
+<td>26180 = 935 &times; 7 &times; 4
+<td>26487 = 109 &times; 3<sup>5</sup>
+<tr align=center>
+<td>26510 = (7<sup>4</sup> + 9) &times; (8 + 3)
+<td>26910 = 345 &times; 78
+<td>27504 = 9168 &times; 3
+<td>27810 = (4<sup>5</sup> + 6) &times; 9 &times; 3
+<td>28035 = (4<sup>6</sup> &ndash; 91) &times; 7
+<tr align=center>
+<td>28156 = 7039 &times; 4
+<td>28507 = 13<sup>4</sup> &ndash; 9 &times; 6
+<td>28560 = (9 + 7 &ndash; 3)<sup>4</sup> &ndash; 1
+<td>28561 = (7 + 9 &ndash; 3)<sup>4</sup> + 0
+<td>28570 = (16 &ndash; 3)<sup>4</sup> + 9
+<tr align=center>
+<td>28591 = (7 + 6)<sup>4</sup> + 30
+<td>28651 = 4093 &times; 7
+<td>29104 = (3<sup>6</sup> &times; 5 &ndash; 7) &times; 8
+<td>30296 = 541 &times; 8 &times; 7
+<td>30576 = 91 &times; 42 &times; 8
+<tr align=center>
+<td>30618 = 9<sup>2</sup> &times; 54 &times; 7
+<td>30712 = (6<sup>5</sup> &ndash; 98) &times; 4
+<td>30752 = 961 &times; 8 &times; 4
+<td>31074 = ((8 &times; 9)<sup>2</sup> &ndash; 5) &times; 6
+<td>31087 = (6<sup>5</sup> &ndash; 2) &times; 4 &ndash; 9
+<tr align=center>
+<td>31089 = (6<sup>5</sup> &ndash; 2) &times; 4 &ndash; 7
+<td>31094 = (5<sup>6</sup> &ndash; 78) &times; 2
+<td>31408 = (5<sup>6</sup> + 79) &times; 2
+<td>31920 = 84 &times; 76 &times; 5
+<td>32018 = 4<sup>7</sup> + 5<sup>6</sup> + 9
+<tr align=center>
+<td>32701 = (4<sup>6</sup> &ndash; 9) &times; 8 + 5 
+<td>32710 = 8<sup>5</sup> &ndash; 9 &times; 6 &ndash; 4 
+<td>32714 = 8<sup>5</sup> &ndash; 9 &times; 6 + 0 
+<td>32760 = 8<sup>5</sup> + 1<sup>4</sup> &ndash; 9
+<td>32768 = (9 &ndash; 1)<sup>5</sup> + 4 &times; 0</sup>
+<tr align=center>
+<td>32769 = 8<sup>5</sup> + 1<sup>40</sup>
+<td>32780 = (9<sup>4</sup> &ndash; 6 + 1) &times; 5
+<td>32805 = (6 + 9) &times; (4 &ndash; 1)<sup>7</sup>
+<td>32806 = 5 &times; 9<sup>4</sup> + 1<sup>7</sup>
+<td>32810 = (9<sup>4</sup> + 7 &ndash; 6) &times; 5
+<tr align=center>
+<td>32890 = 715 &times; 46
+<td>34902 = 5817 &times; 6
+<td>35904 = (67<sup>2</sup> &ndash; 1) &times; 8 
+<td>36015 = 49<sup>2</sup> &times; (8 + 7)
+<td>36508 = 9127 &times; 4 
+<tr align=center>
+<td>37908 = 52 &times; (4 &ndash; 1)<sup>6</sup> 
+<td>38410 = (2 &times; 7)<sup>9&ndash;5</sup> &ndash; 6
+<td>38416 = (2 &times; 7)<sup>9&ndash;5</sup> + 0
+<td>39062 = (5<sup>7</sup> &ndash; 1) &times; 4 / 8
+<td>41067 = ((5 + 8) &times; 9)<sup>2</sup> &times; 3
+<tr align=center>
+<td>41503 = (69 + 8)<sup>2</sup> &times; 7
+<td>43681 = 209<sup>7&ndash;5</sup> 
+<td>45801 = (3<sup>6</sup> &ndash; 2) &times; 7 &times; 9
+<td>45901 = 3<sup>8</sup> &times; 7 &ndash; 26
+<td>45906 = (3<sup>8</sup> &ndash; 1 &ndash; 2) &times; 7
+<tr align=center>
+<td>45920 = 7 &times; 3<sup>8</sup> &ndash; 6 &ndash; 1
+<td>45921 = 7 &times; 3<sup>8</sup> &ndash; 6 + 0
+<td>45926 = 7 &times; 3<sup>8</sup> &ndash; 1 + 0
+<td>45927 = 7 &times; 3<sup>8</sup> + 1 &times; 0
+<td>46095 = (3<sup>7</sup> + 8) &times; 21
+<tr align=center>
+<td>47089 = (651 / 3)<sup>2</sup> 
+<td>47320 = 91 &times; 65 &times; 8 
+<td>48015 = (73<sup>2</sup> + 6) &times; 9 
+<td>49170 = (2<sup>8+5</sup> + 3) &times; 6
+<td>50176 = (4 &times; 2)<sup>3</sup> &times; 98
+<tr align=center>
+<td>50421 = 7<Sup>8&ndash;3</sup> &times; (9 &ndash; 6)
+<td>50429 = 7<sup>6&ndash;1</sup> &times; 3 + 8
+<td>50617 = (2 &times; 9 &ndash; 3)<sup>4</sup> &ndash; 8
+<td>50618 = (2 &times; 9 &ndash; 3)<sup>4</sup> &ndash; 7
+<td>50619 = (8 + 7)<sup>4</sup> &ndash; 2 &times; 3
+<tr align=center>
+<td>50628 = (9 + 7 &ndash; 1)<sup>4</sup> + 3
+<td>50629 = (8 + 7)<sup>4</sup> + 3 + 1
+<td>50784 = 6 &times; (93 &ndash; 1)<sup>2</sup>
+<td>51840 = (3<sup>6</sup> &ndash; 9) &times; 72
+<td>51870 = (93<sup>2</sup> &ndash; 4) &times; 6
+<tr align=center>
+<td>51980 = (76 &times; 3)<sup>2</sup> &ndash; 4
+<td>51984 = (76 &times; 3)<sup>2</sup> + 0
+<td>58401 = 927 &times; 63
+<td>59041 = (6 + 3)<sup>7&ndash;2</sup> &ndash; 8
+<td>59042 = 81 &times; 3<sup>6</sup> &ndash; 7
+<tr align=center>
+<td>59043 = (8 + 1)<sup>7&ndash;2</sup> &ndash; 6
+<td>59046 = (8 + 1)<sup>7&ndash;2</sup> &ndash; 3
+<td>59047 = 81 &times; 3<sup>6</sup> &ndash; 2
+<td>59048 = 3<sup>7+6/2</sup> &ndash; 1
+<td>60418 = 9<sup>5</sup> + 37<sup>2</sup>
+<tr align=center>
+<td>61054 = 7<sup>3</sup> &times; 89 &times; 2
+<td>65031 = 4<sup>8</sup> &ndash; 2<sup>9</sup> + 7
+<td>65128 = 9304 &times; 7
+<td>65821 = 9403 &times; 7
+<td>67081 = ((9 &ndash; 5)<sup>4</sup> + 3)<sup>2</sup>
+<tr align=center>
+<td>69120 = (8 &times; 3)<sup>7&ndash;4</sup> &times; 5
+<td>71680 = 2<sup>9</sup> &times; 35 &times; 4
+<td>72105 = (9<sup>4</sup> &ndash; 6) &times; (8 + 3)
+<td>74082 = (51 &ndash; 9)<sup>3</sup> &ndash; 6
+<td>74086 = (51 &ndash; 9)<sup>3</sup> &ndash; 2
+<tr align=center>
+<td>74089 = ((5 + 2) &times; 6)<sup>3</sup> + 1
+<td>76830 = ((9 + 5)<sup>4</sup> &ndash; 1) &times; 2
+<td>78061 = 5<sup>9&ndash;2</sup> &ndash; 4<sup>3</sup>
+<td>78125 = (9 &ndash; 4)<sup>(6+3<sup>0</sup>)</sup> 
+<td>78126 = 5<sup>4+3</sup> + 9<sup>0</sup>
+<tr align=center>
+<td>78129 = 5<sup>(6+3<sup>0</sup>)</sup> + 4
+<td>78134 = 5<sup>(6+2<sup>0</sup>)</sup> + 9
+<td>79508 = 43<sup>6/2</sup> + 1
+<td>80352 = 6<sup>4</sup> &times; (71 &ndash; 9)
+<td>80659 = (71 &times; 4)<sup>2</sup> + 3
+<tr align=center>
+<td>81902 = 4<sup>7</sup> &times; 5 &ndash; 6 &times; 3
+<td>81920 = (7 &ndash; 3)<sup>6</sup> &times; 5 &times; 4
+<td>81950 = (4<sup>7</sup> + 2<sup>3</sup>) &times; 5
+<td>81960 = (4<sup>7</sup> + 6) &times; (2 + 3)
+<td>83509 = 17<sup>4</sup> &ndash; 6 &times; 2
+<tr align=center>
+<td>83521 = (9 + 7 + 6<sup>0</sup>)<sup>4</sup>
+<td>92160 = 4<sup>5</sup> &times; (87 + 3)
+<td>93750 = 6 &times; (4 + 1)<sup>8&ndash;2</sup> 
+<td>96032 = (5 &times; 7<sup>4</sup> &ndash; 1) &times; 8
+<td>98260 = 4 &times; 5 &times; 17<sup>3</sup>
+<tr align=center>
+<td>98301 = 6 &times; 4<sup>7</sup> &ndash; 5 + 2
+<td>98304 = (5 + 1) &times; (6 &ndash; 2)<sup>7</sup> 
+<td>98305 = 6 &times; 4<sup>7</sup> + 2 &ndash; 1
+<td>98306 = (5 + 1) &times; 4<sup>7</sup> + 2 
+<td>201684 = (3 + 9) &times; 7<sup>5</sup>
+<tr align=center>
+<td>327680 = 5 &times; 4<sup>9&ndash;1</sup>
+<td>390617 = 5<sup>8</sup> &ndash; 2 &times; 4
+<td>390618 = 5<sup>2&times;4</sup> &ndash; 7
+<td>390625 = (1<sup>7</sup> + 4)<sup>8</sup>
+<td>390642 = 5<sup>8</sup> + 17
+<tr align=center>
+<td>592710 = 84<sup>3</sup> + 6
+</table><p>
+
+
+
+
+<hr><font size=+2>Problem #2: </font><p>
+
+Here are the smallest known ordinary shifted Friedman numbers, usually those with with 4 or fewer digits, and the nice shifted Friedman numbers with 5 or fewer digits:<p>
+
+<CENTER><font size=+2>Shift of &ndash;8</font></CENTER>
+<TABLE align=center cellpadding=10 border=1 bgcolor=FFEEFF>
+<tr align=center>
+<td>99999988 = 10<sup>10&ndash;1</sup> &ndash; 11 &times; 1 (JD)
+<td>99999989 = 10<sup>11&ndash;1&ndash;1</sup> &ndash; 11 
+<td>999999988 = 10<sup>10&ndash;1</sup> &ndash; 11 &ndash; 1 &times; 1
+<tr align=center>
+<td>999999989 = 10<sup>11&ndash;1&ndash;1</sup> &ndash; 11 &times; 1
+<td>999999998 = 10<sup>11&ndash;1&ndash;1</sup> &ndash; 1 &times; 1 &ndash; 1 (JD)
+<td><font color=red>999999999 = (11 &ndash; 1)<sup>11&ndash;1&ndash;1</sup> &ndash; 1 &times; 1</font> (JD)
+</table><p>
+
+<CENTER><font size=+2>Shift of &ndash;7</font></CENTER>
+<TABLE align=center cellpadding=10 border=1 bgcolor=FFEEFF>
+<tr align=center>
+<td>99999988 = (12 &ndash; 2)<sup>2&times;2&times;2</sup> &ndash; 12 (JD)
+<td>99999998 = (12 &ndash; 2)<sup>2+2+2+2</sup> &ndash; 2 (JD)
+<td><font color=red>9999999998 = (2 &times; 2 &times; 2 + 2)<sup>2&times;2&times;2+2</sup> &ndash; 2 &times; 1</font> 
+<td><font color=red>9999999999 = (2 &times; 2 &times; 2 + 2)<sup>2&times;2&times;2+2</sup> &ndash; 2 / 2</font> 
+</table><p>
+
+<CENTER><font size=+2>Shift of &ndash;6</font></CENTER>
+<TABLE align=center cellpadding=10 border=1 bgcolor=FFEEFF>
+<tr align=center>
+<td>999997 = (3 &times; 3 + 1)<sup>3+3</sup> &ndash; 3 (GA)
+<td><font color=red>999999998 = (3 &times; 3 + 3 / 3)<sup>3&times;3</sup> + 3 &ndash; 3 &ndash; 2</font> (GA)
+</table><p>
+
+<CENTER><font size=+2>Shift of &ndash;5</font></CENTER>
+<TABLE align=center cellpadding=10 border=1 bgcolor=FFEEFF>
+<tr align=center>
+<td>99999988 = (4 + 3 + 3)<sup>4+4</sup> &ndash; 4 &ndash; 4 &ndash; 4
+<td>99999997 = (4 + 4 + 2)<sup>4+4</sup> &ndash; 4 + 4 / 4 
+<td><font color=red>99999999 = ( (44 &ndash; 4) / 4)<sup>4+4</sup> &ndash; 4 / 4 
+</table><p>
+
+<CENTER><font size=+2>Shift of &ndash;4</font></CENTER>
+<TABLE align=center cellpadding=10 border=1 bgcolor=FFEEFF>
+<tr align=center>
+<td><font color=red>7776 = (3 + 3)<sup>3+2</sup>
+<td><font color=red>7779 = 3 + (3 + 3)<sup>5</sup>
+<td><font color=red>99995 = &ndash;5 + (5 + 5)<sup>5</sup> &times; 1
+<td><font color=red>99999 = (5 + 5)<sup>5</sup> &ndash; 5 / 5
+</table><p>
+
+<CENTER><font size=+2>Shift of &ndash;3</font></CENTER>
+<TABLE align=center cellpadding=10 border=1 bgcolor=FFEEFF>
+<tr align=center>
+<td>6559 = 3<sup>2+6</sup> &ndash; 2
+<td>6859 = (5<sup>2</sup> &ndash; 6)<sup>3</sup>
+<td>7569 = (3<sup>4</sup> + 6)<sup>2</sup>
+<td><font color=red>46656 = (1 &times; 3 + 3)<sup>2&times;3</sup>
+<td><font color=red>46657 = 1 + (3 + 3)<sup>2+4</sup>
+<tr align=center>
+<td><font color=red>46659 = 1 &times; 3 + (3 &times; 2)<sup>6</sup>
+<td><font color=red>46669 = 13 + (3 + 3)<sup>6</sup>
+<td><font color=red>46875 = 1 &times; 3 &times; 5<sup>4+2</sup>
+<td><font color=red>46899 = 1 &times; 3<sup>5</sup> + 6<sup>6</sup>
+<td><font color=red>69984 = (3 + 6) &times; 5<sup>6</sup> &times; 1
+</table><p>
+
+<CENTER><font size=+2>Shift of &ndash;2</font></CENTER>
+<TABLE align=center cellpadding=10 border=1 bgcolor=FFEEFF>
+<tr align=center>
+<td>49 = 7<sup>2</sup>
+<td>648 = 6<sup>4</sup> / 2
+<td><font color=red>3375 = 1 &times; 15<sup>3</sup>
+<td><font color=red>3844 = 1 &times; 62<sup>2</sup>
+<td>3997 = 571 &times; 7
+<tr align=center>
+<td>6478 = 5 &times; 6<sup>4</sup> &ndash; 2
+<td>6557 = 3<sup>5+3</sup> &ndash; 4
+<td>6558 = (3 + 6)<sup>4</sup> &ndash; 3
+<td>6565 = (3 &times; 3)<sup>4</sup> + 4
+<td>6859 = (76 / 4)<sup>3</sup>
+<tr align=center>
+<td>7776 = (5 + 5 &ndash; 4)<sup>5</sup>
+<td>8464 = (46 &times; 2)<sup>2</sup>
+<td><font color=red>36855 = (&ndash;1 + 4<sup>6</sup>) &times; 3 &times; 3
+<td><font color=red>36864 = ( (&ndash;1 + 4) &times; 64)<sup>2</sup>
+<td><font color=red>38876 = (&ndash;1 + 6) &times; 6<sup>5</sup> &ndash; 4
+<tr align=center>
+<td><font color=red>42875 = ( (2<sup>0</sup> + 6) &times; 5)<sup>3</sup>
+<td><font color=red>46648 = &ndash;2 &times; 4 + (4 + 2)<sup>6</sup>
+<td><font color=red>46649 = (2 + 4)<sup>4+2</sup> &ndash; 7
+<td><font color=red>46688 = 2 &times; 4 &times; 4 + 6<sup>6</sup>
+<td><font color=red>65534 = 4<sup>3&times;3&ndash;1</sup> &ndash; 2
+<tr align=center>
+<td><font color=red>65536 = 4<sup>3&times;3</sup> &times; 1 / 4
+<td><font color=red>87876 = 6 &times; (5 + (6 + 5)<sup>4</sup>)
+</table><p>
+
+<CENTER><font size=+2>Shift of &ndash;1</font></CENTER>
+<TABLE align=center cellpadding=10 border=1 bgcolor=FFEEFF>
+<tr align=center>
+<td><font color=red>255 = &ndash;1 + 4<sup>4</sup>
+<td>256 = (5 &ndash; 1)<sup>4</sup>
+<td><font color=red>384 = 2<sup>7</sup> &times; 3
+<td><font color=red>625 = 5<sup>1&times;4</sup>
+<td>3584 = 7 &times; (2 &times; 4)<sup>3</sup>
+<tr align=center>
+<td>3645 = 5 &times; 3<sup>2+4</sup>
+<td><font color=red>3647 = 2 + 5 &times; 3<sup>6</sup>
+<td>3721 = 61<sup>2</sup> + 0
+<td>3722 = 61<sup>2</sup> + 1
+<td>3723 = 61<sup>2</sup> + 2
+<tr align=center>
+<td>3724 = 61<sup>2</sup> + 3
+<td>3725 = 61<sup>2</sup> + 4
+<td>3726 = 61<sup>2</sup> + 5
+<td>3727 = 61<sup>2</sup> + 6
+<td>3728 = 61<sup>2</sup> + 7
+<tr align=center>
+<td>3729 = 61<sup>2</sup> + 8
+<td>3837 = 62<sup>2</sup> &ndash; 7
+<td>4278 = 713 &times; 6
+<td>4374 = 3 &times; 2 &times; 3<sup>6</sup>
+<td>4388 = (3<sup>7</sup> + 7) &times; 2
+<tr align=center>
+<td>4588 = 7<sup>4</sup> + 3<sup>7</sup>
+<td>5928 = 741 &times; 8
+<td><font color=red>6556 = (5 + 4)<sup>4</sup> &ndash; 5
+<td>7389 = 86<sup>2</sup> &ndash; 7
+<td>7689 = 6<sup>5</sup> &ndash; 87
+<tr align=center>
+<td>7698 = 6<sup>5</sup> &ndash; 78
+<td><font color=red>7776 = (6 + 6 &ndash; 6)<sup>5</sup>
+<td><font color=red>7777 = (6<sup>6</sup> + 6) / 6
+<td>8754 = 4 &times; 3<sup>7</sup> + 6
+<td><font color=red>16379 = 0 &ndash; 5 + 2<sup>6+8</sup>
+<tr align=center>
+<td><font color=red>19683 = (0 + 8 &ndash; 5)<sup>7+2</sup>
+<td><font color=red>24577 = 1<sup>3</sup> + 4<sup>6</sup> &times; 6
+<td><font color=red>28556 = (17 &ndash; 4)<sup>4</sup> &ndash; 5
+<td><font color=red>32758 = 2 &times; (1 &ndash; 6 + 4<sup>7</sup>)
+<td><font color=red>32768 = 2 &times; (&ndash;1<sup>6</sup> + 5)<sup>7</sup>
+<tr align=center>
+<td><font color=red>32896 = (2 &times; 1)<sup>7</sup> + 8<sup>5</sup>
+<td><font color=red>46793 = 3 &times; 5<sup>6</sup> &ndash; 82
+<td><font color=red>46868 = 3 &times; 5<sup>7</sup> / 5 &ndash; 7
+<td><font color=red>58368 = 4<sup>7&ndash;2</sup> &times; 57
+<td><font color=red>65531 = &ndash;5 + 4<sup>4&times;2</sup> + 0
+<tr align=center>
+<td><font color=red>65532 = &ndash;5 + 4<sup>4&times;2</sup> + 1
+<td><font color=red>65533 = &ndash;5 + 4<sup>4&times;2</sup> + 2
+<td><font color=red>65534 = &ndash;5 + 4<sup>4&times;2</sup> + 3
+<td><font color=red>65535 = &ndash;5 + 4<sup>4&times;2</sup> + 4
+<td><font color=red>65536 = &ndash;5 + 4<sup>4&times;2</sup> + 5
+<tr align=center>
+<td><font color=red>65537 = &ndash;5 + 4<sup>4&times;2</sup> + 6
+<td><font color=red>65538 = &ndash;5 + 4<sup>4&times;2</sup> + 7
+<td><font color=red>65539 = &ndash;5 + 4<sup>4&times;2</sup> + 8
+<td><font color=red>82944 = (7 &ndash; 1) &times; (8 &times; 3)<sup>3</sup>
+<td><font color=red>85536 = (7 + 4) &times; (4 + 2)<sup>5</sup>
+<tr align=center>
+<td><font color=red>99936 = &ndash;8 &times; 8 + (8 + 2)<sup>5</sup>
+</table><p>
+
+<CENTER><font size=+2>Shift of +1</font></CENTER>
+<TABLE align=center cellpadding=10 border=1 bgcolor=FFEEFF>
+<tr align=center>
+<td><font color=red>18 = 2 &times; 9
+<td><font color=red>81 = 9<sup>2</sup>
+<td>108 = 12 &times; 9
+<td><font color=red>178 = 2 &times; 89
+<td>216 = 3 &times; 72
+<tr align=center>
+<td><font color=red>241 = 3<sup>5</sup> &ndash; 2
+<td>376 = 47 &times; 8
+<td><font color=red>512 = (6 + 2)<sup>3</sup>
+<td><font color=red>518 = 6 + 2<sup>9</sup>
+<td>1008 = 112 &times; 9
+<tr align=center>
+<td>1023 = 4<sup>2+3</sup> &ndash; 1
+<td>1024 = (2 + 3 &ndash; 1)<sup>5</sup>
+<td>1064 = 152 &times; 7
+<td>1152 = 32 &times; 6<sup>2</sup>
+<td>1184 = 592 &times; 2
+<tr align=center>
+<td>1248 = 39 &times; 2<sup>5</sup>
+<td>1302 = 42 &times; 31
+<td>1458 = 6 &times; 9<sup>5/2</sup>
+<td>1518 = 22 &times; 69
+<td>1521 = (6<sup>2</sup> + 3)<sup>2</sup>
+<tr align=center>
+<td>1526 = 763 &times; 2
+<td>1652 = 236 &times; 7
+<td>1716 = 22 &times; 78
+<td>1720 = 12<sup>3</sup> &ndash; 8
+<td>1728 = 3 &times; 9 &times; 8<sup>2</sup>
+<tr align=center>
+<td>1736 = 248 &times; 7
+<td>1756 = (6 &times; 7)<sup>2</sup> &ndash; 8
+<td><font color=red>1778 = 2 &times; 889
+<td>2116 = (7<sup>2</sup> &ndash; 3)<sup>2</sup>
+<td>2163 = 3<sup>7</sup> &ndash; 24
+<tr align=center>
+<td>2183 = 3<sup>9&ndash;2</sup> &ndash; 4
+<td>2187 = 9<sup>8/2</sup> / 3
+<td>2261 = 323 &times; 7
+<td>2365 = 7<sup>4</sup> &ndash; 36
+<td>2401 = (5 + 2)<sup>3+1</sup>
+<tr align=center>
+<td>2406 = 7<sup>3+1</sup> + 5
+<td>2436 = 7<sup>4</sup> + 35
+<td>2532 = 633 &times; 4
+<td><font color=red>2576 = 368 &times; 7 
+<td>2601 = (3 &times; 17)<sup>2</sup>
+<tr align=center>
+<td>2786 = 398 &times; 7
+<td>2874 = 958 &times; 3
+<td>3128 = 92 &times; 34
+<td>3136 = 4 &times; (4 &times; 7)<sup>2</sup>
+<td>3164 = 452 &times; 7
+<tr align=center>
+<td>3168 = 792 &times; 4
+<td>3372 = 843 &times; 4
+<td>3402 = 14 &times; 3<sup>5</sup>
+<td>3456 = (5 + 7)<sup>4</sup> / 6
+<td>3481 = 59<sup>4&ndash;2</sup>
+<tr align=center>
+<td>3645 = 5 &times; (7 &ndash; 4)<sup>6</sup>
+<td>3804 = 951 &times; 4
+<td>3827 = 89 &times; 43
+<td><font color=red>3852 = 4 &times; 963 
+<td>4067 = 581 &times; 7
+<tr align=center>
+<td>4087 = 8<sup>5&ndash;1</sup> &ndash; 9
+<td><font color=red>4101 = 5 + 2<sup>12</sup>
+<td>4176 = 72 &times; 58
+<td>4361 = (5<sup>4</sup> &ndash; 2) &times; 7
+<td><font color=red>4367 = 5<sup>4</sup> &times; 7 &ndash; 8
+<tr align=center>
+<td>4376 = 547 &times; 8
+<td>4506 = 751 &times; 6
+<td>4580 = 916 &times; 5
+<td>4655 = 665 &times; 7
+<td>4805 = 961 &times; 5
+<tr align=center>
+<td>4865 = 695 &times; 7
+<td>5178 = (8 &times; 9)<sup>2</sup> &ndash; 6
+<td>5324 = 4 &times; (6 + 5)<sup>3</sup>
+<td>5748 = 958 &times; 6
+<td>5832 = 9<sup>4</sup> &ndash; 3<sup>6</sup>
+<tr align=center>
+<td>5856 = 976 &times; 6
+<td>6176 = 772 &times; 8
+<td>6638 = 9<sup>4</sup> + 77
+<td>6776 = 77 &times; 88
+<td>7203 = 3 &times; (8 &ndash; 1)<sup>4</sup>
+<tr align=center>
+<td>8183 = 2<sup>9+4</sup> &ndash; 9
+<td>8201 = 2<sup>13</sup> + 9
+<td>8836 = 94<sup>9&ndash;7</sup>
+<td><font color=red>12167 = 23<sup>2&ndash;7+8</sup>
+<td><font color=red>13822 = &ndash;2 + (4 &times; (9 &ndash; 3) )<sup>3</sup>
+<tr align=center>
+<td><font color=red>14336 = 2<sup>5+4</sup> &times; 4 &times; 7
+<td><font color=red>14346 = 2 &times; (5 + 4<sup>5</sup> &times; 7)
+<td><font color=red>15540 = 2 &times; (&ndash;6 + 6<sup>5</sup>) &times; 1
+<td><font color=red>15550 = 2 &times; (6<sup>6</sup> / 6 &ndash; 1)
+<td><font color=red>15552 = &ndash;2 + (6<sup>6</sup> + 6) / 3
+<tr align=center>
+<td><font color=red>15554 = 2 &times; (6 / 6 + 6<sup>5</sup>)
+<td><font color=red>15625 = (26 &ndash; 7 &times; 3)<sup>6</sup>
+<td><font color=red>16367 = &ndash;2 &ndash; 7 + 4<sup>7</sup> &ndash; 8
+<td><font color=red>16370 = &ndash;2 &times; 7 + 4<sup>8&ndash;1</sup>
+<td><font color=red>16384 = 2<sup>7&times;4&ndash;9&ndash;5</sup>
+<tr align=center>
+<td><font color=red>16462 = &ndash;2 + 7<sup>5</sup> &ndash; 7<sup>3</sup>
+<td><font color=red>16536 = 2 &times; 76 + 4<sup>7</sup>
+<td><font color=red>17064 = 2<sup>8</sup> + 1 + 7<sup>5</sup>
+<td><font color=red>17152 = 2<sup>8</sup> &times; (2<sup>6</sup> + 3)
+<td><font color=red>17778 = 2 &times; 8889
+<tr align=center>
+<td><font color=red>18225 = (&ndash;2 + 9 &times; 3) &times; 3<sup>6</sup>
+<td><font color=red>20733 = &ndash;3 + (1 &times; 8 + 4)<sup>4</sup>
+<td><font color=red>25281 = &ndash;3 + (6 &times; 3 &times; 9)<sup>2</sup>
+<td><font color=red>25466 = (3<sup>6</sup> &times; 5 &ndash; 7) &times; 7
+<td><font color=red>27648 = (&ndash;3 + 8 + 7)<sup>5</sup> / 9
+<tr align=center>
+<td><font color=red>27702 = 38&times; (8 + 1)<sup>3</sup>
+<td><font color=red>28561 = (3 &times; 9 &times; 6 + 7)<sup>2</sup>
+<td><font color=red>31104 = 4 &times; (2 &times; (2 + 1) )<sup>5</sup>
+<td><font color=red>32704 = &ndash;4<sup>3</sup> + 8<sup>1&times;5</sup>
+<td><font color=red>32761 = &ndash;4 &ndash; 3 + 8<sup>7&ndash;2</sup>
+<tr align=center>
+<td><font color=red>32772 = 4 + (3 &times; 8 + 8)<sup>3</sup>
+<td><font color=red>35152 = (&ndash;4 + 6) &times; 26<sup>3</sup>
+<td><font color=red>35721 = ( (&ndash;4 + 6) &times; 8 + 3)<sup>2</sup>
+<td><font color=red>36828 = (&ndash;4 + (7 + 9)<sup>3</sup>) &times; 9
+<td><font color=red>38420 = 4 + (9 + 5)<sup>3+1</sup>
+<tr align=center>
+<td><font color=red>45355 = &ndash; 5 + 6<sup>4</sup> + 6<sup>6</sup>
+<td><font color=red>45360 = 5 &times; 6<sup>4</sup> &times; 7 &times; 1
+<td><font color=red>47223 = 583 &times; 3<sup>4</sup>
+<td><font color=red>50420 = (6 + 1)<sup>5</sup> &times; 3 &ndash; 1
+<td><font color=red>54432 = 6<sup>5</sup> &times; (&ndash; 5 + 4 &times; 3)
+<tr align=center>
+<td><font color=red>54463 = (6<sup>5</sup> + 5) &times; 7 &ndash; 4
+<td><font color=red>54516 = (6<sup>5</sup> + 6 &times; 2) &times; 7 
+<td><font color=red>54872 = (6 + (&ndash;5 + 9) &times; 8)<sup>3</sup>
+<td><font color=red>65537 = 7<sup>6&ndash;6</sup> + 4<sup>8</sup>
+<td><font color=red>73728 = 8 &times; 4<sup>8&ndash;3</sup> &times; 9
+<tr align=center>
+<td><font color=red>73776 = 848 &times; 87
+<td><font color=red>78036 = &ndash;89 + (1 + 4)<sup>7</sup>
+<td><font color=red>78126 = &ndash;8 + 9 + (2 + 3)<sup>7</sup>
+<td><font color=red>84402 = 9 &times; (5<sup>5</sup> + 1) &times; 3
+<td><font color=red>86436 = 9 &times; 7<sup>5</sup> &times; 4 / 7
+<tr align=center>
+<td><font color=red>88210 = (99 &times; 3)<sup>2</sup> + 1
+<td><font color=red>88211 = (99 &times; 3)<sup>2</sup> + 2
+<td><font color=red>88212 = (99 &times; 3)<sup>2</sup> + 3
+<td><font color=red>88213 = (99 &times; 3)<sup>2</sup> + 4
+<td><font color=red>88214 = (99 &times; 3)<sup>2</sup> + 5
+<tr align=center>
+<td><font color=red>88215 = (99 &times; 3)<sup>2</sup> + 6
+<td><font color=red>88216 = (99 &times; 3)<sup>2</sup> + 7
+<td><font color=red>88217 = (99 &times; 3)<sup>2</sup> + 8
+<td><font color=red>88218 = (99 &times; 3)<sup>2</sup> + 9
+</table><p>
+
+<CENTER><font size=+2>Shift of +2</font></CENTER>
+<TABLE align=center cellpadding=10 border=1 bgcolor=FFEEFF>
+<tr align=center>
+<td><font color=red>12 = 3 &times; 4
+<td><font color=red>24 = 4 &times; 6
+<td><font color=red>35 = 5 &times; 7
+<td><font color=red>56 = 7 &times; 8
+<td><font color=red>117 = 3 &times; 39
+<tr align=center>
+<td>235 = 47 &times; 5
+<td>260 = 2<sup>8</sup> + 4
+<td><font color=red>324 = 54 &times; 6
+<td>1020 = 32<sup>2</sup> &ndash; 4
+<td>1021 = 4<sup>3+2</sup> &ndash; 3
+<tr align=center>
+<td><font color=red>1023 = &ndash;3 + 2 + 4<sup>5</sup>
+<td>1024 = 32<sup>6&ndash;4</sup>
+<td>1026 = 4<sup>8&ndash;3</sup> + 2
+<td>1032 = 4<sup>5</sup> + 2<sup>3</sup>
+<td><font color=red>1167 = 3 &times; 389 
+<tr align=center>
+<td>1243 = 6<sup>4</sup> &ndash; 53
+<td>1352 = (7<sup>3</sup> &ndash; 5) &times; 4
+<td>1456 = (6<sup>3</sup> &ndash; 8) &times; 7
+<td>1470 = (9<sup>3</sup> + 6) &times; 2
+<td><font color=red>1554 = 377 &times; 6
+<tr align=center>
+<td>1600 = (38 + 2)<sup>2</sup>
+<td>1603 = (8 &times; 5)<sup>2</sup> + 3
+<td>1664 = (6<sup>3</sup> &ndash; 8) &times; 8
+<td><font color=red>1764 = 3 &times; 98 &times; 6
+<td>2043 = 4<sup>6</sup> / 2 &ndash; 5
+<tr align=center>
+<td>2050 = 2<sup>4+7</sup> + 2
+<td>2051 = 2<sup>4+7</sup> + 3
+<td>2052 = 2<sup>4+7</sup> + 4
+<td>2053 = 2<sup>4+7</sup> + 5
+<td>2054 = 2<sup>4+7</sup> + 6
+<tr align=center>
+<td>2055 = 2<sup>4+7</sup> + 7
+<td>2056 = 2<sup>4+7</sup> + 8
+<td>2057 = 2<sup>4+7</sup> + 9
+<td>2064 = 86 &times; 24
+<td>2205 = 47<sup>2</sup> &ndash; 4
+<tr align=center>
+<td>2235 = 447 &times; 5
+<td>2256 = 48 &times; 47
+<td>2304 = (54 &ndash; 6)<sup>2</sup>
+<td>2345 = 7<sup>4</sup> &ndash; 56
+<td>2401 = (46 + 3)<sup>2</sup>
+<tr align=center>
+<td>2405 = 7<sup>4</sup> + 6 &ndash; 2
+<td>2407 = 49<sup>2</sup> + 6
+<td>2425 = 7<sup>4</sup> + 6 &times; 4
+<td>2601 = (48 + 3)<sup>2</sup>
+<td>3025 = (5 &times; (4 + 7))<sup>2</sup>
+<tr align=center>
+<td>3053 = 5<sup>5</sup> &ndash; 72
+<td>3125 = (3 &times; 4 &ndash; 7)<sup>5</sup>
+<td>3130 = 5<sup>5</sup> + 3 + 2
+<td>3131 = 5<sup>5</sup> + 3 + 3
+<td>3132 = 5<sup>5</sup> + 3 + 4
+<tr align=center>
+<td><font color=red>3133 = 5 + 3 + 5<sup>5</sup>
+<td>3134 = 5<sup>5</sup> + 3 + 6
+<td>3135 = 5<sup>5</sup> + 3 + 7
+<td>3136 = 5<sup>5</sup> + 3 + 8
+<td>3137 = 5<sup>5</sup> + 3 + 9
+<tr align=center>
+<td>3143 = 5<sup>5</sup> + 6 &times; 3
+<td>3163 = 5<sup>5</sup> + 38
+<td>3240 = 6<sup>4</sup> &times; 5 / 2
+<td>3275 = (4<sup>7</sup> &ndash; 9) / 5
+<td><font color=red>3324 = 554 &times; 6
+<tr align=center>
+<td><font color=red>3341 = 5<sup>5</sup> + 6<sup>3</sup>
+<td>3375 = 75 &times; 9 &times; 5
+<td>3525 = 75 &times; 47
+<td>3600 = (58 + 2)<sup>2</sup>
+<td>3672 = 459 &times; 8
+<tr align=center>
+<td>4102 = 4<sup>6</sup> + 3 &times; 2
+<td>4350 = 725 &times; 6
+<td>4536 = 567 &times; 8
+<td>4620 = 68<sup>2</sup> &ndash; 4
+<td>4624 = 68<sup>6&ndash;4</sup>
+<tr align=center>
+<td>4770 = 69<sup>2</sup> + 9
+<td>6075 = 78<sup>2</sup> &ndash; 9
+<td>6144 = 8<sup>3</sup> &times; (6 + 6)
+<td>6147 = 683 &times; 9
+<td>6174 = 98 &times; 63
+<tr align=center>
+<td>6561 = 3<sup>8</sup> &times; (8 &ndash; 7)
+<td>7056 = 98 &times; 72
+<td>7560 = 87<sup>2</sup> &ndash; 9
+<td>7632 = 954 &times; 8
+<td><font color=red>10000 = ( (3 + 2) &times; 2)<sup>2+2</sup>
+<tr align=center>
+<td><font color=red>10032 = 32 + (2 &times; 5)<sup>4</sup>
+<td><font color=red>10131 = 3 &times; (2 + (3 &times; 5)<sup>3</sup>)
+<td><font color=red>10240 = (3 + 2 &times; 4)<sup>6</sup> / 2
+<td><font color=red>10750 = 3 &times; 2<sup>9</sup> &times; 7 &ndash; 2
+<td><font color=red>11667 = 3 &times; 3889
+<tr align=center>
+<td><font color=red>12423 = 3 &times; (4<sup>6</sup> + 45)
+<td><font color=red>12456 = 3 &times; (4<sup>6</sup> + 7 &times; 8)
+<td><font color=red>12503 = 3 + 4 &times; (7 &ndash; 2)<sup>5</sup> 
+<td><font color=red>13116 = (&ndash;3 + 5) &times; (&ndash;3 + 3<sup>8</sup>)
+<td><font color=red>13122 = (&ndash;3 + 5) &times; 3<sup>4+4</sup>
+<tr align=center>
+<td><font color=red>14337 = (&ndash;3 + 6)<sup>5</sup> &times; 59
+<td><font color=red>15645 = 3<sup>7</sup> + 8 &times; 6 &times; 7
+<td><font color=red>16134 = &ndash;3 + 8<sup>3</sup> + 5<sup>6</sup>
+<td><font color=red>16464 = 3 &times; 8 &times; 686
+<td><font color=red>17514 = 3 &times; 973 &times; 6
+<tr align=center>
+<td><font color=red>20412 = 42 &times; 6 &times; 3<sup>4</sup>
+<td><font color=red>20732 = &ndash;4 + (&ndash;2 + 9 + 5)<sup>4</sup>
+<td><font color=red>23120 = 4 &times; 5 &times; 34<sup>2</sup>
+<td><font color=red>23704 = 4 &times; 5926
+<td><font color=red>24477 = 4<sup>6</sup> &times; 6 &ndash; 99
+<tr align=center>
+<td><font color=red>24576 = 4<sup>6</sup> &times; (7 &ndash; 9 + 8)
+<td><font color=red>25600 = 4 &times; (78 + 2)<sup>2</sup>
+<td><font color=red>26170 = 4<sup>8</sup> &ndash; 3<sup>9</sup> &times; 2
+<td><font color=red>31250 = 5<sup>3&ndash;4+7</sup> &times; 2
+<td><font color=red>33324 = 5554 &times; 6
+<tr align=center>
+<td><font color=red>46647 = (6 + 8 &ndash; 8)<sup>6</sup> &ndash; 9
+<td><font color=red>46752 = 6 &times; 8 &times; 974
+<td><font color=red>50632 = 7 + (2 + 8 + 5)<sup>4</sup>
+<td><font color=red>54320 = 7 &times; (6<sup>5</sup> &ndash; 4<sup>2</sup>)
+<td><font color=red>54355 = 7 &times; 6<sup>5</sup> &ndash; 77
+<tr align=center>
+<td><font color=red>54367 = 7 &times; (6<sup>5</sup> &ndash; 8) &ndash; 9
+<td><font color=red>54425 = 7 &times; 6 &times; 6<sup>4</sup> &ndash; 7 
+<td><font color=red>54432 = 7 &times; 6<sup>6&ndash;5+4</sup>
+<td><font color=red>55741 = 7 &times; 7963
+<td><font color=red>60516 = 82 &times; 738
+<tr align=center>
+<td><font color=red>62210 = (8 + 4)<sup>4</sup> &times; 3 + 2
+<td><font color=red>62211 = (8 + 4)<sup>4</sup> &times; 3 + 3
+<td><font color=red>62212 = (8 + 4)<sup>4</sup> &times; 3 + 4
+<td><font color=red>62213 = (8 + 4)<sup>4</sup> &times; 3 + 5
+<td><font color=red>62214 = (8 + 4)<sup>4</sup> &times; 3 + 6
+<tr align=center>
+<td><font color=red>62215 = (8 + 4)<sup>4</sup> &times; 3 + 7
+<td><font color=red>62216 = (8 + 4)<sup>4</sup> &times; 3 + 8
+<td><font color=red>62217 = (8 + 4)<sup>4</sup> &times; 3 + 9
+<td><font color=red>64672 = 86 &times; 8 &times; 94
+<td><font color=red>65536 = ( (&ndash; 8 + 7)<sup>7</sup> + 5)<sup>8</sup>
+<tr align=center>
+<td><font color=red>66032 = 8 &times; 8254
+</table><p>
+
+<CENTER><font size=+2>Shift of +3</font></CENTER>
+<TABLE align=center cellpadding=10 border=1 bgcolor=FFEEFF>
+<tr align=center>
+<td>342 = 57 &times; 6
+<td><font color=red>1000 = (4 + 3 + 3)<sup>3</sup>
+<td>1003 = (4 + 6)<sup>3</sup> + 3
+<td>1004 = (3 + 7)<sup>3</sup> + 4
+<td><font color=red>1012 = &ndash;4 &times; 3 + 4<sup>5</sup>
+<tr align=center>
+<td>1022 = 4<sup>5</sup> &ndash; 5 + 3
+<td>1024 = 4<sup>3+7&ndash;5</sup>
+<td>1260 = 35 &times; 9 &times; 4
+<td>2106 = 54 &times; 39
+<td><font color=red>2106 = 54 &times; 39
+<tr align=center>
+<td>2401 = 7<sup>5+3&ndash;4</sup>
+<td>2404 = 7<sup>5</sup> / 7 + 3
+<td>2431 = 7<sup>4</sup> + 6 &times; 5
+<td>2530 = (8<sup>3</sup> &ndash; 6) &times; 5
+<td>2560 = 5 &times; 8<sup>9/3</sup>
+<tr align=center>
+<td>2605 = 5 &times; (8<sup>3</sup> + 9)
+<td>3504 = 73 &times; 8 &times; 6
+<td>4145 = 8<sup>4</sup> + 7 &times; 7
+<td>4201 = (7<sup>5</sup> &ndash; 3) / 4
+<td>5120 = 5 &times; 4<sup>8&ndash;3</sup>
+<tr align=center>
+<td>6502 = 3<sup>8</sup> &ndash; 59
+<td>6513 = 9<sup>4</sup> &ndash; 8 &times; 6
+<td>6521 = 9<sup>4</sup> &ndash; 8 &times; 5
+<td>6552 = (8 &ndash; 5)<sup>8</sup> &ndash; 9
+<td>6553 = (9 &ndash; 6)<sup>8</sup> &ndash; 8
+<tr align=center>
+<td>6560 = 3<sup>8</sup> &ndash; 9 / 9
+<td><font color=red>6561 = 9<sup>8</sup> / 9<sup>4</sup>
+<td><font color=red>10234 = (4 + 3<sup>5</sup> &times; 6) &times; 7
+<td><font color=red>12360 = (4<sup>5</sup> + 6) &times; (9 + 3)
+<td><font color=red>14641 = (4 + 7)<sup>(9+7)/4</sup>
+<tr align=center>
+<td><font color=red>15613 = &ndash;4 &ndash; 8 + (9 &ndash; 4)<sup>6</sup>
+<td><font color=red>20510 = 5 &times; (3 + 8<sup>4</sup> + 3)
+<td><font color=red>22064 = (5<sup>5</sup> + 3 &times; 9) &times; 7
+<td><font color=red>22344 = (5<sup>5</sup> + 67) &times; 7
+<td><font color=red>24000 = (5 &times; (7 &ndash; 3) )<sup>3</sup> &times; 3
+<tr align=center>
+<td><font color=red>31220 = (6 + 4) &times; (5<sup>5</sup> &ndash; 3)
+<td><font color=red>31250 = (6 + 4) &times; 5<sup>8&ndash;3</sup>
+<td><font color=red>33152 = 6 &times; 64 + 8<sup>5</sup>
+<td><font color=red>35034 = 6 &times; (8 &times; 3<sup>6</sup> + 7)
+<td><font color=red>46151 = 7 &times; (9<sup>4</sup> + 8 &times; 4)
+<tr align=center>
+<td><font color=red>46305 = 7 &times; (9 &times; 6 + 3<sup>8</sup>)
+<td><font color=red>50420 = 8 + 3 &times; (7<sup>5</sup> &ndash; 3)
+<td><font color=red>50423 = 8 + 3 &times; 7<sup>5</sup> &ndash; 6
+<td><font color=red>50616 = (8 &times; 3 &ndash; 9)<sup>4</sup> &ndash; 9
+<td><font color=red>54432 = (8 &ndash; 7) &times; 7 &times; 6<sup>5</sup>
+<tr align=center>
+<td><font color=red>60502 = 9<sup>3</sup> &times; 83 &ndash; 5
+<td><font color=red>64512 = 9 &times; 7 &times; (8 &ndash; 4)<sup>5</sup>
+<td><font color=red>65015 = &ndash;9 &ndash; 8<sup>3</sup> + 4<sup>8</sup>
+</table><p>
+
+<CENTER><font size=+2>Shift of +4</font></CENTER>
+<TABLE align=center cellpadding=10 border=1 bgcolor=FFEEFF>
+<tr align=center>
+<td><font color=red>120 = 5 &times; 6 &times; 4
+<td>125 = 5<sup>9&ndash;6</sup>
+<td><font color=red>315 = 7 &times; 5 &times; 9
+<td><font color=red>513 = 9 &times; 57
+<td>1023 = 4<sup>5</sup> &ndash; 7 + 6
+<tr align=center>
+<td>1024 = 8<sup>5&times;4/6</sup>
+<td><font color=red>1100 = 5 &times; 5 &times; 44
+<td><font color=red>1120 = 5 &times; 56 &times; 4
+<td>1215 = 5 &times; (9 &ndash; 6)<sup>5</sup>
+<td>1235 = 95 &times; (6 + 7)
+<tr align=center>
+<td>1445 = 85 &times; (8 + 9)
+<td>2305 = 7<sup>4</sup> &ndash; 96
+<td>2401 = (56 / 8)<sup>4</sup>
+<td>2403 = 7<sup>4</sup> + 8 &ndash; 6
+<td><font color=red>3112 = &ndash;7 + 5<sup>5</sup> &ndash; 6
+<tr align=center>
+<td>3140 = 785 &times; 4
+<td>3402 = 486 &times; 7
+<td><font color=red>4051 = 8<sup>4</sup> &ndash; 9 &times; 5
+<td><font color=red>4224 = 8 &times; 66 &times; 8
+<td>5313 = 759 &times; 7
+<tr align=center>
+<td>5432 = 679 &times; 8
+<td><font color=red>10000 = (54 &ndash; 44)<sup>4</sup>
+<td><font color=red>10020 = 5 &times; 4 + (4 + 6)<sup>4</sup>
+<td><font color=red>10240 = 5 &times; 4<sup>6</sup> / 8 &times; 4
+<td><font color=red>11120 = 5 &times; 556 &times; 4
+<tr align=center>
+<td><font color=red>12500 = 5<sup>6</sup> / (9 &ndash; 4) &times; 4
+<td><font color=red>15040 = 5 &times; 94 &times; 8 &times; 4
+<td><font color=red>21120 = 6 &times; 55 &times; 64
+<td><font color=red>22500 = 6 &times; 6 &times; (9 &ndash; 4)<sup>4</sup>
+<td><font color=red>52110 = 965 &times; 54
+<tr align=center>
+<td><font color=red>52421 = &ndash; 9 + (6 + 8<sup>6</sup>) / 5
+</table><p>
+
+<CENTER><font size=+2>Shift of +5</font></CENTER>
+<TABLE align=center cellpadding=10 border=1 bgcolor=FFEEFF>
+<tr align=center>
+<td><font color=red>210 = 7 &times; 6 &times; 5
+<td>1024 = (6 + 7 &ndash; 9)<sup>5</sup>
+<td>1032 = 86 &times; (5 + 7)
+<td>1140 = 95 &times; (6 + 6)
+<td>1304 = 6<sup>9&ndash;5</sup> + 8
+<tr align=center>
+<td><font color=red>2030 = 7 &times; 58 &times; 5
+<td>2304 = 9 &times; (7 &ndash; 5)<sup>8</sup> 
+<td>4221 = 67 &times; 9 &times; 7
+<td><font color=red>11204 = (&ndash;6 + 6 &times; 7<sup>5</sup>) / 9
+<td><font color=red>20000 = ( (7 &ndash; 5) &times; 5)<sup>5</sup> / 5
+<tr align=center>
+<td><font color=red>20230 = 7 &times; 578 &times; 5
+<td><font color=red>30200 = 8 &times; 5 &times; 755
+<td><font color=red>31103 = (&ndash;8 + (6 + 6)<sup>5</sup>) / 8
+<td><font color=red>
+</table><p>
+
+<CENTER><font size=+2>Shift of +6</font></CENTER>
+<TABLE align=center cellpadding=10 border=1 bgcolor=FFEEFF>
+<tr align=center>
+<td>103 = 97 + 6
+<td><font color=red>112 = (7 + 7) &times; 8
+<td><font color=red>1000000 = (7 + 6 / 6 + (6 + 6) / 6)<sup>6</sup></font> (GA)
+</table><p>
+
+<CENTER><font size=+2>Shift of +7</font></CENTER>
+<TABLE align=center cellpadding=10 border=1 bgcolor=FFEEFF>
+<tr align=center>
+<td>1000000 = ((77 &ndash; 7) / 7)<sup>7+7&ndash;8</sup> (JD)
+<td><font color=red>10000000 = (8 + 7 / 7 +  7 / 7)<sup>7</sup> &ndash; 7 + 7</font> (GA)
+<td><font color=red>10000001 = (8 + 7 / 7 +  7 / 7)<sup>7</sup> &ndash; 7 + 8</font> (GA)
+<td><font color=red>10000002 = (8 + 7 / 7 +  7 / 7)<sup>7</sup> &ndash; 7 + 9</font> (GA)
+<td><font color=red>20000000 = (9 + 7 / 7)<sup>7</sup> &times; (7 / 7 + 7 / 7)</font> (GA)
+</table><p>
+
+<CENTER><font size=+2>Shift of +8</font></CENTER>
+<TABLE align=center cellpadding=10 border=1 bgcolor=FFEEFF>
+<tr align=center>
+<td><font color=red>1000000 = (9 + 8 / 8)<sup>8&ndash;(8+8)/8</sup></font> (JD)
+<td><font color=red>10000000 = (9 + 8 / 8)<sup>8&ndash;8/8</sup> &ndash; 8 + 8</font> (JD)
+<td><font color=red>10000001 = (9 + 8 / 8)<sup>8&ndash;8/8</sup> &ndash; 8 + 9 </font> 
+<tr align=center>
+<td><font color=red>100000000 = (9 + 8 / 8)<sup>8</sup> + 8 &times; (8 + 8 &ndash; 8 &ndash; 8)</font> 
+<td><font color=red>100000001 = (9 + 8 / 8)<sup>8</sup> + 8 &times; (8 &ndash; 8) &ndash; 8 + 9</font> 
+<td><font color=red>100000010 = (9 + 8 / 8)<sup>8</sup> + 8 + 8 / 8 + 9 &ndash; 8</font> 
+<tr align=center>
+<td><font color=red>100000011 = (9 + 8 / 8)<sup>8</sup> &ndash; 8 + 8 / 8 + 9 + 9</font> 
+<td>100000100 = (9 + 8 / 8)<sup>8</sup> + 98 + (8 + 8) / 8
+<td>100000101 = (9 + 8 / 8)<sup>8</sup> + 99 + (8 + 8) / 8
+<td><font color=red>111111111 = ((9 + 9 / 9)<sup>9</sup> &ndash; 9 / 9 &ndash; 9 + 9) / 9</font> (JD)
+</table><p>
+
+
+
+
+<hr><font size=+2>Problem #3: </font><p>
+
+Here are the known Friedman pairs, both of which have 3 or fewer digits, and the nice Friedman pairs, both of which have 4 or fewer digits. <p>
+
+
+<center><font size=+2>Friedman Pairs</font></center>
+<table style="font-size:20}" border=1  align=center cellpadding=5 bgcolor=EEFFFF><TR>
+<TD>53 = 51 + 2 <br> <font color=red> 125 = 5<sup>3</sup>
+<TD><font color=red>27 = &ndash; 1 + 28 <br> 128 = 2<sup>7</sup>
+<TD><font color=red>128 = 2<sup>6+1</sup> <br> 162 = 81 &times; 2
+<TD><font color=red>128 = 16 &times; 8</font> <br> 168 = 21 &times; 8
+<TD>36 = 6<sup>2&times;1</sup> <br> 216 = 6<sup>3</sup>
+<TR>
+<TD>63 = 62 + 1 <br> <font color=red>216 = 6<sup>3</sup>
+<TD><font color=red>126 = 21 &times; 6</font> <br> 216 = 6<sup>2+1</sup>
+<TD><font color=red>28 = &ndash; 2 + 5 &times; 6 <br> 256 = 2<sup>8</sup>
+<TD><font color=red>192 = 2<sup>5</sup> &times; 6</font> <br> 256 = 2<sup>9&ndash;1</sup>
+<TD>216 = 6<sup>5&ndash;2</sup> <br> 256 = 16<sup>2</sup>
+<TR>
+<TD>144 = (7 + 5)<sup>2</sup> <br> <font color=red>257 = 1 + 4<sup>4</sup>
+<TD><font color=red>174 = 2 &times; 87</font> <br> 287 = 41 &times; 7
+<TD><font color=red>128 = 32 &times; 4</font> <br> 324 = 18<sup>2</sup>
+<TD>184 = 23 &times; 8 <br> 328 = 41 &times; 8
+<TD><font color=red>37 = 34 + 3</font> <br> 343 = 7<sup>3</sup>
+<TR>
+<TD><font color=red>175 = 35 &times; 5</font> <br> 355 = 71 &times; 5
+<TD>243 = (1 + 2)<sup>5</sup> <br> <font color=red>512 = (2 &times; 4)<sup>3</sup>
+<TD>546 = 91 &times; 6 <br> <font color=red>619 = 5<sup>4</sup> &ndash; 6
+<TD>54 = 56 &ndash; 2 <br> <font color=red>625 = 5<sup>4</sup> 
+<TD><font color=red>243 = (6 / 2)<sup>5</sup></font> <br> 625 = (3 + 2)<sup>4</sup> 
+<TR>
+<TD>364 = 52 &times; 7 <br> <font color=red>725 = 3<sup>6</sup> &ndash; 4
+<TD>136 = 2<sup>7</sup> + 8 <br> 728 = 3<sup>6</sup> &ndash; 1
+<TD><font color=red>36 = 7 + 29 <br> 729 = 3<sup>6</sup>
+<TD><font color=red>63 = 72 &ndash; 9</font> <br> 729 = 3<sup>6</sup>
+<TD><font color=red>126 = 7 &times; 2 &times; 9 <br> 729 = (1+2)<sup>6</sup>
+<TR>
+<td><font color=red>137 = 2<sup>7</sup> + 9</font> <br> 729 = 3<sup>7&ndash;1</sup>
+<td>194 = 97 &times; 2 <br> 729 = 9<sup>4&ndash;1</sup>
+<td>243 = 27 &times; 9 <br> 729 = 3<sup>4+2</sup>
+<td>256 = (9 + 7)<sup>2</sup> <br> <font color=red>729 = (&ndash;2 + 5)<sup>6</sup>
+<td><font color=red>346 = 7<sup>3</sup> +3 </font><br> 733 = 3<sup>6</sup> + 4
+<TR>
+<td><font color=red>625 = (10/2)<sup>4</sup> <br> 1024 = (6&ndash;2)<sup>5</sup>
+<td><font color=red>174 = 1 &times; 29 &times; 6 <br> 1296 = (&ndash;1+7)<sup>4</sup>
+<td><font color=red>648 = 12 &times; 9 &times; 6 <br> 1296 = 6<sup>&ndash;4+8</sup>
+<td><font color=red>1164 = 12 &times; 97 <br> 1297 = 1&times;1 + 6<sup>4</sup>
+<td><font color=red>263 = 1&times;7 + 2<sup>8</sup> <br> 1728 = (2&times;6)<sup>3</sup>
+<TR>
+<td><font color=red>393 = 1 + 7<sup>2</sup> &times; 8 <br> 1728 = (3+9)<sup>3</sup>
+<td><font color=red>256 = (&ndash;2+0+4)<sup>8</sup> <br> 2048 = 2<sup>5+6</sup>
+<td><font color=red>1632 = 204 &times; 8 <br> 2048 = 16<sup>3</sup> / 2
+<td><font color=red>2178 = (2+1)<sup>7</sup> &ndash; 9 <br> 2179 = (2+1)<sup>7</sup> &ndash; 8
+<td><font color=red>1827 = 21 &times; 87 <br> 2187 = (1<sup>8</sup> + 2)<sup>7</sup>
+<TR>
+<td><font color=red>502 = 2 + 500 <br> 2500 = 50<sup>2</sup>
+<td><font color=red>2736 = (2&times;7)<sup>3</sup> &ndash; 8 <br> 2738 = (2&times;7)<sup>3</sup> &ndash; 6
+<td><font color=red>2735 = (2&times;7)<sup>3</sup> &ndash; 9 <br> 2739 = (2&times;7)<sup>3</sup> &ndash; 5
+<td><font color=red>2536 = 2<sup>9&ndash;1</sup> &times; 6 <br> 2916 = (&ndash;1+5) &times; 3<sup>6</sup>
+<td><font color=red>1832 = 2 &times; 916 <br> 2916 = 18<sup>3</sup> / 2
+<TR>
+<td><font color=red>1836 = 306 &times; 6 <br> 3066 = (&ndash;1 + 8<sup>3</sup>) &times; 6
+<td><font color=red>145 = (31&ndash;2)&times;5 <br> 3125 = (1+4)<sup>5</sup>
+<td><font color=red>165 = (31+2) &times; 5 <br> 3125 = (&ndash;1+6)<sup>5</sup>
+<td><font color=red>1536 = 3 &times; (3/6)<sup>&ndash;9</sup> <br> 3369 = 15<sup>3</sup> &ndash; 6
+<td><font color=red>2187 = 3<sup>&ndash;5+8+4</sup> <br> 3584 = 2<sup>1+8</sup> &times; 7
+<TR>
+<td><font color=red>2916 = 3<sup>5</sup> &times; (8+4) <br> 3584 = 2<sup>9</sup> &times; (1+6)
+<td><font color=red>1935 = 3&times;645 <br>3645 = 1 &times; 9<sup>3</sup> &times; 5
+<td><font color=red>3645 = (&ndash;3+6)<sup>6</sup> &times; 5 <br> 3665 = (3<sup>6</sup> + 4) &times; 5
+<td><font color=red>3645 = (&ndash;3+8) &times; 9<sup>3</sup> <br> 3893 = 3 &times; 6<sup>4</sup> + 5
+<td><font color=red>3648 = 38 &times; 96 <br> 3896 = 3 &times; 6<sup>4</sup> + 8
+<TR>
+<td><font color=red>972 = 3 + 969 <br> 3969 = (9&times;7)<sup>2</sup>
+<td><font color=red>2592 = 3 &times; 96 &times; 9 <br> 3969 = ((2+5) &times; 9)<sup>2</sup>
+<td><font color=red>136 = 40 + 96 <br> 4096 = (1+3)<sup>6</sup>
+<td><font color=red>354 = 40 &times; 9 &ndash; 6 <br> 4096 = (3+5)<sup>4</sup>
+<td><font color=red>415 = 409 + 6 <br> 4096 = 4<sup>1+5</sup>
+<TR>
+<td><font color=red>1728 = (4&times;3)<sup>5&ndash;2</sup> <br> 4352 = 17 &times; 2<sup>8</sup>
+<td><font color=red>2394 = &ndash; 4 &ndash; 3 + 7<sup>4</sup> <br> 4374 = 2 / 3 &times; 9<sup>4</sup>
+<td><font color=red>3182 = 43 &times; 74 <br> 4374 = 3<sup>&ndash;1+7</sup> &times; 2
+<td><font color=red>1692 = 47 &times; 6<sup>2</sup> <br> 4762 = 1 + 69<sup>2</sup>
+<td><font color=red>2744 = 4 &times; 7 &times; 98 <br> 4798 = 2 &times; 7<sup>4</sup> &ndash; 4
+<TR>
+<td><font color=red>3125 = (4 + 8<sup>0</sup>)<sup>5</sup> <br> 4805 = 31<sup>2</sup> &times; 5
+<td><font color=red>1944 = 486 &times; 4 <br> 4864 = 19 &times; 4<sup>4</sup>
+<td><font color=red>4284 = 51 &times; 84 <br> 5184 = 4 &times; (&ndash;2+8)<sup>4</sup>
+<td><font color=red>6435 = (6<sup>4</sup> &ndash; 9) &times; 5 <br> 6495 = (6<sup>4</sup> + 3) &times; 5
+<td><font color=red>4994 = &ndash; 6 + 5<sup>4</sup> &times; 8 <br> 6548 = &ndash; 4 &ndash; 9 + 9<sup>4</sup>
+<TR>
+<td><font color=red>3138 = 6 + 5<sup>5</sup> + 7 <br> 6557 = &ndash; 3 &ndash; 1 + 3<sup>8</sup>
+<td><font color=red>338 = 6 &times; 55 + 8 <br> 6558 = &ndash; 3 + 3<sup>8</sup>
+<td><font color=red>3835 = 65 &times; 59 <br> 6559 = 3<sup>8</sup> + 3 &ndash; 5
+<td><font color=red>335 = 6 &times; 56 &ndash; 1 <br> 6561 = 3<sup>3+5</sup>
+<td><font color=red>337 = 6 &times; 56 + 1 <br> 6561 = 3 / 3<sup>&ndash;7</sup>
+<TR>
+<td><font color=red>342 = 6 &times; (56+1) <br> 6561 = 3<sup>4&times;2</sup>
+<td><font color=red>391 = 65 &times; 6 + 1 <br> 6561 = 3<sup>9&ndash;1</sup>
+<td><font color=red>3119 = &ndash; 6 + 5<sup>6&ndash;1</sup> <br> 6561 = 3<sup>&ndash;1+9&times;1</sup>
+<td><font color=red>3965 = 65 &times; 61 <br> 6561 = 3<sup>9&ndash;6+5</sup>
+<td><font color=red>1294 = 6<sup>5</sup> / 6 &ndash; 2 <br> 6562 = &ndash; 1 + 2 + 9<sup>4</sup>
+<TR>
+<td><font color=red>3844 = (6+56)<sup>2</sup> <br> 6562 = 3<sup>8</sup> + 4/4
+<td><font color=red>394 = 65 &times; 6 + 4 <br> 6564 = 3 + 9<sup>4</sup>
+<td><font color=red>386 = &ndash; 6 + 56 &times; 7 <br> 6567 = 3<sup>8</sup> + 6
+<td><font color=red>3438 = 6 &times; 573 <br> 6573 = 3&times;4 + 3<sup>8</sup>
+<td><font color=red>3882 = &ndash; 6 + 6<sup>4</sup> &times; 3 <br> 6643 = 3<sup>8</sup> + 82
+<TR>
+<td><font color=red>3891 = (6 + 6<sup>5</sup>) / 2 <br> 6652 = 3<sup>8</sup> + 91
+<td><font color=red>2193 = 6 + (8&ndash;5)<sup>7</sup> <br> 6857 = &ndash; 2 + 19<sup>3</sup>
+<td><font color=red>4656 = 776 &times; 6 <br> 7766 = &ndash; 4 + 6<sup>5</sup> &ndash; 6
+<td><font color=red>5159 = 77 &times; 67 <br> 7767 = (5+1)<sup>5</sup> &ndash; 9
+<td><font color=red>1554 = 777 &times; 2 <br> 7772 = (1+5)<sup>5</sup> &ndash; 4
+<TR>
+<td><font color=red>2352 = &ndash; 7&times;7 + 7<sup>4</sup> <br> 7774 = (2&times;3)<sup>5</sup> &ndash; 2
+<td><font color=red>1715 = 7 &times; 7 &times; 7 &times; 5 <br> 7775 = &ndash; 1 + (7&ndash;1)<sup>5</sup>
+<td><font color=red>245 = 7 &times; (&ndash; 7 + 7 &times; 6) <br> 7776 = (2+4)<sup>5</sup>
+<td><font color=red>1556 = 778 &times; 2 <br> 7782 = (1+5)<sup>5</sup> + 6
+<td><font color=red>6468 = 77 &times; 84 <br> 7784 = 6<sup>4</sup> &times; 6 + 8
+<TR>
+<td><font color=red>6545 = 77 &times; 85 <br> 7785 = 6<sup>5</sup> + 4 + 5
+<td><font color=red>1562 = 781 &times; 2 <br> 7812 = (&ndash; 1 + 5<sup>6</sup>) / 2
+<td><font color=red>6562 = 7 &ndash; 8 + 3<sup>8</sup> <br> 7838 = 6<sup>5</sup> + 62
+<td><font color=red>1458 = 81 &times; 9 &times; 2 <br> 8192 = 1 &times; 4<sup>5</sup> &times; 8
+<td><font color=red>2888 = 8 &times; 19<sup>2</sup> <br> 8192 = (2/8)<sup>&ndash;8</sup> / 8
+<TR>
+<td><font color=red>6553 = &ndash; 9 + 3<sup>8</sup> + 1 <br> 9381 = 6 + 5<sup>5</sup> &times; 3
+<td><font color=red>2744 = (9+5)<sup>9&ndash;6</sup> <br> 9596 = (&ndash; 2 + 7<sup>4</sup>) &times; 4
+<td><font color=red>4374 = 9 &times; 9 &times; 9 &times; 6 <br> 9996 = &ndash; 4 + (3+7)<sup>4</sup>
+</TABLE><P>
+
+Alex Rower was interested in consecutive Friedman pairs:<p>
+
+<center><font size=+2>Consecutive Friedman Pairs</font></center>
+<table style="font-size:20}" border=1  align=center cellpadding=5 bgcolor=EEFFFF><TR>
+<TD>2915 = (9 + 6)<sup>2</sup> &ndash; 1 <br> 2916 = (9 &times; (5 + 1))<sup>2</sup> (AR)
+<TD>4095 = 4<sup>6</sup> &ndash; 9<sup>0</sup> <br> 4096 = (9 &ndash; 5<sup>0</sup>)<sup>4</sup> (AR)
+<TD>4096 = (7 + 9<sup>0</sup>)<sup>4</sup> <br> 4097 = 4<sup>6</sup> + 9<sup>0</sup> (AR)
+<TD>6495 = 9<sup>4</sup> &ndash; 66 <br> 6496 = 9<sup>4</sup> &ndash; 65 (AR)
+<TD>9215 = 96<sup>2</sup> &ndash; 1 <br> 9216 = (95 + 1)<sup>2</sup> (AR)
+<TR>
+<TD>9216 = (97 &ndash; 1)<sup>2</sup> <br> 9217 = 96<sup>2</sup> + 1 (AR)
+</TABLE><P>
+
+Alex Rower was also interested in Friedman triple loops.  Are there other 3-digit triples?<p>
+
+<center><font size=+2>Friedman Triple Loops</font></center>
+<table style="font-size:20}" border=1  align=center cellpadding=5 bgcolor=EEFFFF><TR>
+<TD>216 = 6<sup>5&ndash;2</sup> <br> <font color=red>126 = 21 &times; 6</font> <br> 256 = 16<sup>2</sup> (AR)
+<TD><font color=red>126 = 7 &times; 2 &times; 9</font> <br> 256 = 6<sup>2+1</sup> <br> <font color=red>729 = (-2+5)<sup>6</sup></font> (AR)
+</TABLE><P>
+
+
+<HR><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 6/26/19.<font>
+
+</BODY></HTML>

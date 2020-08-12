@@ -1,0 +1,49 @@
+Triangular Numbers:
+
+
+Cycle Graphs:
+
+3-cycle: 0, 6, 15
+4-cycle: 0, 1, 9, 6
+5-cycle: 0, 0, 1, 9, 6
+6-cycle: 0, 0, 1, 9, 12, 3
+7-cycle: 0, 0, 1, 2, 4, 11, 10
+8-cycle: 0, 0, 1, 14, 14, 7, 3, 3
+9-cycle: 0, 0, 1, 5, 5, 10, 18, 18, 3
+
+
+Grid Graphs
+
+2x2 grid:
+
+Row 1: 0, 1
+Row 2: 6, 9
+
+3x2 grid:
+
+Row 1: 1, 0, 3
+Row 2: 5, 10, 18
+
+3x3 grid:
+
+Row 1: 12, 3, 18
+Row 2: 66, 0, 10
+Row 3: 54, 1, 35
+
+4x2 grid:
+
+Row 1: 1, 0, 0, 3
+Row 2: 5, 10, 45, 33
+
+4x3 grid:
+
+Row 1: 0, 1, 135, 55
+Row 2: 6, 9, 36, 0
+Row 3: 22, 69, 84, 21
+
+4x4 grid:
+
+Row 1: 3, 0, 0, 36
+Row 2: 63, 15, 105, 195
+Row 3: 147, 6, 85, 240
+Row 4: 24, 4, 51, 225

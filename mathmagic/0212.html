@@ -1,0 +1,345 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (February 2012)</H1></CENTER>
+ 
+We call a tiling of integer squares an <b>ascending</b> tiling if the number of squares of side n is non-decreasing in n (up to the maximum n involved in the tiling).  We call a tiling a <b>(a,b) ascending tiling</b> if it contains only squares with sides between a and b, with at least one square of each side.  We call such a tiling <b>minimal</b> if it has the smallest area of such a tiling.  What are the minimum (a,b) tilings of rectangles?  What about minimum (a,b) tilings of squares?  Equilateral triangles with smaller equilateral triangles?  Other small polyominoes or polyiamonds?<p>
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+George Sicherman noted that the first 6 tilings could have bi-rotary symmetry.  And he showed that there are solutions for all cases.<p>
+
+Jeremy Galvagni showed that the minimal (n,n+1) rectangle tiling is (3n+2) &times; n(n+1), and the minimal (n,n+1) square tiling is n(n+2) &times; n(n+2) for large n.<p>
+
+Bryce Herdt sent some domino tilings.<p>
+
+Brian Trial found and improved many of the largest best-known tilings.<p>
+
+<CENTER><font size=+3>Smallest Known Ascending Tilings of Squares in Rectangles</font></CENTER>
+<TABLE align=center cellpadding=5><TR align=center>
+<TH><font size=+3>b \ a<TH><font size=+3>1<th><font size=+3>2<th><font size=+3>3<th><font size=+3>4<th><font size=+3>5
+
+<TR align=center><TH><font size=+3>2
+<TD><img src="0212/r12.gif"><br>2 &times; 5
+
+<TR align=center><TH><font size=+3>3
+<TD><img src="0212/r13.gif"><br>7 &times; 8
+<TD><img src="0212/r23.gif"><br>6 &times; 8
+
+<TR align=center><TH><font size=+3>4
+<TD><img src="0212/r14.gif"><br>10 &times; 11
+<TD><img src="0212/r24.gif"><br>8 &times; 14
+<TD><img src="0212/r34.gif"><br>11 &times; 12
+
+<TR align=center><TH><font size=+3>5
+<TD><img src="0212/r15.gif"><br>10 &times; 21
+<TD><img src="0212/r25.gif"><br>13 &times; 22
+<TD><img src="0212/r35.gif"><br>13 &times; 14
+<TD><img src="0212/r45.gif"><br>14 &times; 20 
+
+<TR align=center><TH><font size=+3>6
+<TD><img src="0212/r16.gif"><br>11 &times; 22
+<TD><img src="0212/r26.gif"><br>11 &times; 16
+<TD><img src="0212/r36.gif"><br>16 &times; 26
+<TD><img src="0212/r46.gif"><br>22 &times; 28 (GS)
+<TD><img src="0212/r56.gif"><br>17 &times; 30 
+
+<TR align=center><TH><font size=+3>7
+<TD><img src="0212/r17.gif"><br>18 &times; 25
+<TD><img src="0212/r27.gif"><br>19 &times; 26
+<TD><img src="0212/r37.gif"><br>20 &times; 27
+<TD><img src="0212/r47.gif"><br>20 &times; 37 (GS)
+<TD><img src="0212/r57.gif"><br>19 &times; 27
+
+<TR align=center><TH><font size=+3>8
+<TD><img src="0212/r18.gif"><br>23 &times; 27
+<TD><img src="0212/r28.gif"><br>26 &times; 29
+<TD><img src="0212/38.gif"><br>29 &times; 29
+<TD><img src="0212/r48.gif"><br>22 &times; 56 (GS)
+<TD><img src="0212/r58.gif"><br>37 &times; 38 (GS)
+
+<TR align=center><TH><font size=+3>9
+<TD><img src="0212/r19.gif"><br>25 &times; 32
+<TD><img src="0212/r29.gif"><br>24 &times; 41
+<TD><img src="0212/r39.gif"><br>30 &times; 39
+<TD><img src="0212/r49.gif"><br>26 &times; 60 (GS)
+<TD><img src="0212/r59.gif"><br>34 &times; 48 (GS)
+
+<TR align=center><TH><font size=+3>10
+<TD><img src="0212/r110.gif"><br>29 &times; 35
+<TD><img src="0212/r210.gif"><br>32 &times; 36
+<TD><img src="0212/r310.gif"><br>30 &times; 49 (GS)
+<TD><img src="0212/r410.gif"><br>28 &times; 53 (GS)
+<TD><img src="0212/r510.gif"><br>40 &times; 53 (GS)
+
+<TR align=center><TH><font size=+3>11
+<TD><img src="0212/r111.gif"><br>31 &times; 48 (GS)
+<TD><img src="0212/r211.gif"><br>32 &times; 51 (BT)
+<TD><img src="0212/r311.gif"><br>39 &times; 51 (BT)
+<TD><img src="0212/r411.gif"><br>40 &times; 48 (GS)
+<TD><img src="0212/r511.gif"><br>43 &times; 57 (GS)
+
+<TR align=center><TH><font size=+3>12
+<TD><img src="0212/r112.gif"><br>35 &times; 37 (GS)
+<TD><img src="0212/r212.gif"><br>27 &times; 67 (BT)
+<TD><img src="0212/r312.gif"><br>44 &times; 55 (BT)
+<TD><img src="0212/r412.gif"><br>46 &times; 53 (BT)
+<TD><img src="0212/r512.gif"><br>45 &times; 62 (BT)
+
+<TR align=center><TH><font size=+3>13
+<TD><img src="0212/r113.gif"><br>37 &times; 56 (BT)
+<TD><img src="0212/r213.gif"><br>40 &times; 59 (BT)
+<TD><img src="0212/r313.gif"><br>44 &times; 59 (BT)
+<TD><img src="0212/r413.gif"><br>44 &times; 69 (BT)
+<TD><img src="0212/r513.gif"><br>49 &times; 70 (BT)
+
+<TR align=center><TH><font size=+3>14
+<TD><img src="0212/r114.png"><br>37 &times; 70 (BT)
+<TD><img src="0212/r214.png"><br>46 &times; 63 (BT)
+<TD><img src="0212/r314.png"><br>57 &times; 63 (BT)
+<TD><img src="0212/r414.png"><br>61 &times; 62 (BT)
+<TD><img src="0212/r514.png"><br>40 &times; 93 (GS)
+
+<TR align=center><TH><font size=+3>15
+<TD><img src="0212/r115.png"><br>40 &times; 62 (BT)
+<TD><img src="0212/r215.png"><br>39 &times; 93 (BT)
+<TD><img src="0212/r315.png"><br>48 &times; 77 (BT)
+<TD><img src="0212/r415.png"><br>37 &times; 118 (BT)
+<TD><img src="0212/r515.png"><br>59 &times; 81 (BT)
+
+<TR align=center><TH><font size=+3>16
+<TD><img src="0212/r116.png"><br>44 &times; 68 (BT)
+<TD><font size=+4>?
+<TD><font size=+4>?
+<TD><font size=+4>?
+<TD><font size=+4>?
+
+</TABLE><P>
+
+
+
+<CENTER><font size=+3>Smallest Known Ascending Tilings of Squares in Squares</font></CENTER>
+<TABLE align=center cellpadding=5><TR align=center>
+<TH><font size=+3>b \ a<TH><font size=+3>1<th><font size=+3>2<th><font size=+3>3<th><font size=+3>4<th><font size=+3>5
+
+<TR align=center><TH><font size=+3>2
+<TD><img src="0212/12.gif"><br>6 &times; 6
+
+<TR align=center><TH><font size=+3>3
+<TD><img src="0212/13.gif"><br>11 &times; 11
+<TD><img src="0212/23.gif"><br>12 &times; 12
+
+<TR align=center><TH><font size=+3>4
+<TD><img src="0212/14.gif"><br>14 &times; 14
+<TD><img src="0212/24.gif"><br>16 &times; 16
+<TD><img src="0212/34.gif"><br>15 &times; 15
+
+<TR align=center><TH><font size=+3>5
+<TD><img src="0212/15.gif"><br>18 &times; 18
+<TD><img src="0212/25.gif"><br>18 &times; 18 (GS)
+<TD><img src="0212/35.gif"><br>25 &times; 25
+<TD><img src="0212/45.gif"><br>24 &times; 24
+
+<TR align=center><TH><font size=+3>6
+<TD><img src="0212/16.gif"><br>20 &times; 20
+<TD><img src="0212/26.gif"><br>24 &times; 24
+<TD><img src="0212/36.gif"><br>23 &times; 23
+<TD><img src="0212/46.gif"><br>28 &times; 28 (GS)
+<TD><img src="0212/56.gif"><br>35 &times; 35
+
+<TR align=center><TH><font size=+3>7
+<TD><img src="0212/17.gif"><br>23 &times; 23
+<TD><img src="0212/27.gif"><br>24 &times; 24
+<TD><img src="0212/37.gif"><br>33 &times; 33
+<TD><img src="0212/47.gif"><br>39 &times; 39 (GS)
+<TD><img src="0212/57.gif"><br>45 &times; 45 (GS)
+
+<TR align=center><TH><font size=+3>8
+<TD><img src="0212/18.gif"><br>26 &times; 26
+<TD><img src="0212/28.gif"><br>31 &times; 31
+<TD><img src="0212/38.gif"><br>29 &times; 29
+<TD><img src="0212/48.gif"><br>41 &times; 41 (GS)
+<TD><img src="0212/58.gif"><br>46 &times; 46 (GS)
+
+<TR align=center><TH><font size=+3>9
+<TD><img src="0212/19.gif"><br>31 &times; 31
+<TD><img src="0212/29.gif"><br>39 &times; 39 (BT)
+<TD><img src="0212/39.gif"><br>39 &times; 39 (BT)
+<TD><img src="0212/49.gif"><br>48 &times; 48 (BT)
+<TD><img src="0212/59.gif"><br>47 &times; 47 (GS)
+
+<TR align=center><TH><font size=+3>10
+<TD><img src="0212/110.gif"><br>48 &times; 48
+<TD><img src="0212/210.gif"><br>42 &times; 42 (BT)
+<TD><img src="0212/310.png"><br>45 &times; 45 (BT)
+<TD><img src="0212/410.gif"><br>55 &times; 55 (GS)
+<TD><img src="0212/510.gif"><br>47 &times; 47 (GS)
+
+<TR align=center><TH><font size=+3>11
+<TD><img src="0212/111.gif"><br>42 &times; 42 (BT)
+<TD><img src="0212/211.gif"><br>48 &times; 48 (BT)
+<TD><img src="0212/311.gif"><br>46 &times; 46 (BT)
+<TD><img src="0212/411.png"><br>55 &times; 55 (BT)
+<TD><img src="0212/511.png"><br>60 &times; 60 (BT)
+
+<TR align=center><TH><font size=+3>12
+<TD><img src="0212/112.gif"><br>44 &times; 44 (BT)
+<TD><img src="0212/212.gif"><br>48 &times; 48 (BT)
+<TD><img src="0212/312.gif"><br>53 &times; 53 (BT)
+<TD><img src="0212/412.gif"><br>54 &times; 54 (BT)
+<TD><img src="0212/512.gif"><br>60 &times; 60 (BT)
+
+<TR align=center><TH><font size=+3>13
+<TD><img src="0212/113.gif"><br>49 &times; 49 (BT)
+<TD><img src="0212/213.gif"><br>57 &times; 57 (BT)
+<TD><img src="0212/313.gif"><br>56 &times; 56 (BT)
+<TD><img src="0212/413.png"><br>60 &times; 60 (BT)
+<TD><img src="0212/513.png"><br>61 &times; 61 (BT)
+
+<TR align=center><TH><font size=+3>14
+<TD><img src="0212/114.png"><br>56 &times; 56 (BT)
+<TD><img src="0212/214.png"><br>55 &times; 55 (BT)
+<TD><font size=+4>?
+<TD><font size=+4>?
+<TD><font size=+4>?
+
+</TABLE><P>
+
+George Sicherman showed that there are solutions for all the triangular cases as well.<p>
+
+<CENTER><font size=+3>Smallest Known Ascending Tilings of Triangles</font></CENTER>
+<TABLE align=center cellpadding=5><TR align=center>
+<TH><font size=+3>b \ a<TH><font size=+3>1<th><font size=+3>2<th><font size=+3>3<th><font size=+3>4<th><font size=+3>5
+
+<TR align=center><TH><font size=+3>2
+<TD><img src="0212/t12.gif"><br>6
+
+<TR align=center><TH><font size=+3>3
+<TD><img src="0212/t13.gif"><br>11 (GS)
+<TD><img src="0212/t23.gif"><br>12 (GS)
+
+<TR align=center><TH><font size=+3>4
+<TD><img src="0212/t14.gif"><br>14 (GS)
+<TD><img src="0212/t24.gif"><br>16 (GS)
+<TD><img src="0212/t34.gif"><br>15 (GS)
+
+<TR align=center><TH><font size=+3>5
+<TD><img src="0212/t15.gif"><br>18 (GS)
+<TD><img src="0212/t25.gif"><br>18 (GS)
+<TD><img src="0212/t35.gif"><br>25 (GS)
+<TD><img src="0212/t45.gif"><br>24 (GS)
+
+<TR align=center><TH><font size=+3>6
+<TD><img src="0212/t16.gif"><br>20 (GS)
+<TD><img src="0212/t26.gif"><br>24 (GS)
+<TD><img src="0212/t36.gif"><br>23 (GS)
+<TD><img src="0212/t46.gif"><br>28 (GS)
+<TD><img src="0212/t56.gif"><br>35 (GS)
+
+<TR align=center><TH><font size=+3>7
+<TD><img src="0212/t17.gif"><br>26 (GS)
+<TD><img src="0212/t27.gif"><br>35 (GS)
+<TD><img src="0212/t37.gif"><br>25 (GS)
+<TD><img src="0212/t47.gif"><br>38 (GS)
+<TD><img src="0212/t57.gif"><br>45 (GS)
+
+<TR align=center><TH><font size=+3>8
+<TD><img src="0212/t18.png"><br>28 (GS)
+<TD><img src="0212/t28.png"><br>31 (GS)
+<TD><img src="0212/t38.gif"><br>42 (GS)
+<TD><img src="0212/t48.gif"><br>48 (GS)
+<TD><img src="0212/t58.gif"><br>56 (GS)
+
+</TABLE><P>
+
+
+
+
+<CENTER><font size=+3>Smallest Known Ascending Tilings of Dominoes in Rectangles</font></CENTER>
+<TABLE align=center cellpadding=5><TR align=center>
+<TH><font size=+3>b \ a<TH><font size=+3>1<th><font size=+3>2<th><font size=+3>3<th><font size=+3>4<th><font size=+3>5
+
+<TR align=center><TH><font size=+3>2
+<TD><img src="0212/d12.gif"><br>2 &times; 5
+
+<TR align=center><TH><font size=+3>3
+<TD><img src="0212/d13.gif"><br>7 &times; 8 (GS)
+<TD><img src="0212/d23.gif"><br>6 &times; 13 (GS)
+
+<TR align=center><TH><font size=+3>4
+<TD><img src="0212/d14.gif"><br>10 &times; 11 (GS)
+<TD><img src="0212/d24.gif"><br>12 &times; 15 (GS)
+<TD><img src="0212/d34.gif"><br>11 &times; 12 (BH)
+
+<TR align=center><TH><font size=+3>5
+<TD><img src="0212/d15.gif"><br>10 &times; 21 (GS)
+<TD><img src="0212/d25.gif"><br>14 &times; 23 (GS)
+<TD><img src="0212/d35.gif"><br>13 &times; 14 (GS)
+<TD><img src="0212/d45.gif"><br>20 &times; 23 (GS)
+
+<TR align=center><TH><font size=+3>6
+<TD><img src="0212/d16.gif"><br>14 &times; 26 (GS)
+<TD><img src="0212/d26.gif"><br>16 &times; 22 (GS)
+<TD><img src="0212/d36.gif"><br>16 &times; 39 (GS)
+<TD><img src="0212/d46.gif"><br>22 &times; 28 (GS)
+<TD><img src="0212/d56.gif"><br>17 &times; 30 (GS)
+
+<TR align=center><TH><font size=+3>7
+<TD><img src="0212/d17.gif"><br>22 &times; 25 (GS)
+<TD><img src="0212/d27.gif"><br>19 &times; 34 (GS)
+<TD><img src="0212/d37.gif"><br>20 &times; 27 (GS)
+<TD><img src="0212/d47.gif"><br>28 &times; 36 (GS)
+<TD><img src="0212/d57.gif"><br>27 &times; 38 (GS)
+
+<TR align=center><TH><font size=+3>8
+<TD><img src="0212/d18.gif"><br>27 &times; 28 (GS)
+<TD><img src="0212/d28.gif"><br>14 &times; 58 (GS)
+<TD><img src="0212/d38.gif"><br>28 &times; 45 (GS)
+<TD><img src="0212/d48.gif"><br>35 &times; 38 (GS)
+<TD><img src="0212/d58.gif"><br>38 &times; 51 (GS)
+
+<TR align=center><TH><font size=+3>9
+<TD><img src="0212/d19.gif"><br>32 &times; 35 (GS)
+<TD><img src="0212/d29.gif"><br>24 &times; 47 (GS)
+<TD><img src="0212/d39.gif"><br>34 &times; 45 (GS)
+<TD><img src="0212/d49.gif"><br>38 &times; 53 (BT)
+<TD><img src="0212/d59.gif"><br>34 &times; 52 (GS)
+
+<TR align=center><TH><font size=+3>10
+<TD><img src="0212/d110.gif"><br>36 &times; 42 (GS)
+<TD><img src="0212/d210.gif"><br>32 &times; 48 (GS)
+<TD><img src="0212/d310.gif"><br>34 &times; 55 (GS)
+<TD><img src="0212/d410.gif"><br>28 &times; 53 (GS)
+<TD><img src="0212/d510.png"><br>52 &times; 56 (GS)
+
+<TR align=center><TH><font size=+3>11
+<TD><img src="0212/d111.png"><br>38 &times; 53 (BT)
+<TD><img src="0212/d211.png"><br>38 &times; 58 (BT)
+<TD><img src="0212/d311.png"><br>42 &times; 64 (BT)
+<TD><img src="0212/d411.png"><br>46 &times; 62 (BT)
+<TD><img src="0212/d511.png"><br>44 &times; 81 (BT)
+
+<TR align=center><TH><font size=+3>12
+<TD><img src="0212/d112.png"><br>37 &times; 70 (GS)
+<TD><img src="0212/d212.png"><br>44 &times; 59 (BT)
+<TD><img src="0212/d312.png"><br>42 &times; 82 (BT)
+<TD><img src="0212/d412.png"><br>48 &times; 71 (BT)
+<TD><img src="0212/d512.png"><br>60 &times; 62 (BT)
+
+<TR align=center><TH><font size=+3>13
+<TD><img src="0212/d113.png"><br>48 &times; 67 (BT)
+<TD><img src="0212/d213.png"><br>32 &times; 102 (BT)
+<TD><img src="0212/d313.png"><br>44 &times; 74 (BT)
+<TD><img src="0212/d413.png"><br>62 &times; 76 (BT)
+<TD><img src="0212/d513.png"><br>61 &times; 74 (BT)
+
+<TR align=center><TH><font size=+3>14
+<TD><img src="0212/d114.png"><br>60 &times; 63 (GS)
+<TD><img src="0212/d214.png"><br>47 &times; 84 (BT)
+<TD><img src="0212/d314.png"><br>35 &times; 114 (BT)
+<TD><img src="0212/d414.png"><br>58 &times; 82 (BT)
+<TD><img src="0212/d514.png"><br>38 &times; 114 (GS)
+
+</TABLE><P>
+
+<HR><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 2/10/12.<font>
+</BODY></HTML>

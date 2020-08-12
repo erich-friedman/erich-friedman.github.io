@@ -1,0 +1,99 @@
+Honest Numbers in other Languages
+
+German Honest numbers
+
+4 - "vier"
+11 - "zehn plus ein", "elf plus null"
+12 - "vier plus acht", "neun plus drei", "zweimal sechs"
+13 - "Backer Dutzend"
+15 - "zwolfte plus drei", "Dutzend plus drei"
+16 - "dreizehn plus drei", "vierzehn plus zwei", "funfzehn plus eins", "zwanzig minus vier", "sechzehn plus null", "vier mehr als zwolf"
+17 - "achtzehn minus eins", "neunzehn minus zwei"
+19 - "zehn plus ein plus acht", "elf plus null plus acht", "vier plus elf plus vier"
+20 - "vier plus acht plus acht", "neun plus drei plus acht", "zweimal sechs plus acht"
+21 - "Backer Dutzend plus acht", "einundzwanzig plus null"
+22 - "zweiundzwangig plus null", "vier plus zwolf plus sechs"
+23 - "zwolfre plus drei plus acht", "Dutzend plus zwei plus acht", "zwolf mehr als zehn plus ten", "zwolf mehr als elf plus null"
+24 - "dreizehn plus drei plus acht", "vierzehn plus zwei plus acht" "funfzehn plus eins plus acht", "zwanzig minus vier plus acht", "sechzehn plus null plus acht",
+"zwolf mehr als vier plus acht", "zwolf mehr als neun plus drei", "zwolf mehr als zweimal sechs"
+25 - "achtzehn minus eins plus acht", "zwolf mehr als Backer Dutzend"
+26 - "zehn plus ein plus elf plus vier", "elf plus null plus elf plus vier"
+27 - "zehn plus ein plus acht plus acht", "elf plus null plus acht plus acht", "zweimal sechs plus elf plus vier", "zwolf mehr als zwolfte plus drei"
+28 - "vier plus ein plus acht plus acht", "neun plus drei plus acht plus acht", "zweimal sechs plus acht plus acht", "Backer Dutzend plus elf plus vier"
+29 - "Backer Dutzend plus acht plus acht", "einundzwanzig plus null plus acht", "zehn plus ein plus zwolf plus sechs", "elf plus null plus zwolf plus sechs"
+30 - "einundzwanzig minus zero plus neun", "zweiundzwanzig plus null plus acht", "vier plus acht plus zwolf plus sechs", "neun plus drei plus zwolf plus sechs",
+"zweimal sechs plus zwolf plus sechs"
+
+French Honest numbers
+
+10 - "neuf plus un"
+16 - "dix-huit moins deux", "vingt moins quatre"
+18 - "neuf plus un plus huit"
+20 - "deux fois neuf plus deux"
+21 - "dix-sept plus quatre"
+22 - "neuf plus un plus douzaine"
+24 - "dix-huit moins deux plus huit", "vingt moins quatre plus huit"
+25 - "quinze de plus que neuf plus un"
+26 - "neuf plus un plus huit plus huit", "neuf plus un plus sept plus neuf", 'neuf plus un plus un plus quinze"
+28 - "deux fous neuf plus deux plus huit"
+29 - "dix-sept plus quatre plus huit"
+30 - "neuf plus un plus huit plus douzaine"
+
+Italian Honest numbers
+
+3 - "tre"
+9 - "tre plu sei"
+10 - "otto plu due", "nove plu uno"
+11 - "dieci plu uno"
+12 - "undici plu uno", "tre plu di nove"
+13 - "dozzina plu uno"
+15 - "tre plu sei plu sei", "diciotto meno tre"
+16 - "otto plu due plu sei", "nove plu uno plu sei",
+17 - "tredici plu quattro", "dieci plu uno plu sei", "diciannove meno due", "tre plu quattordici"
+18 - "undici plu uno plu sei", "tre plu dodici plu tre", "tre plu di nove plu sei", "tre plu sette plu otto"
+19 - "dozzina plu uno plu sei", "tre plu tredici plu tre", "nove plu di otto plu due", "nove plu di nove plu uno"
+22 - "tre plu tredici plu tre plu sei", "otto plu due plu sei plu sei", "nove plu uno plu sei plu sei", "nove plu di dieci plu uno"
+23 - "tredici plu quattro plu sei", "dieci plu uno plu sei plu sei", "diciannove meno due plu sei", "tre plu quattordici plu sei"
+24 - "tre volte quattro plu dodici", "tre plu dodici plu tre plu sei", "undici plu uno plu sei plu sei"
+25 - "dozzina plu uno plu sei plu sei", "tre plu tredici plu tre plu sei", "tre plu dodici plu otto plu due", "tre plu dodici plu nove plu uno"
+26 - "tre plu dodici plu dieci plu uno", "tre plu tredici plu otto plu due", "tre plu tredici plu nove plu uno", "tre plu quattordici plu di nove"
+27 - "tre plu dodici plu undici plu uno", "tre plu tredici plu dieci plu uno"
+28 - "tre plu dodici plu dozzina plu uno", "tre plu tredici plu undici plu uno", "otto plu due plu sei plu sei plu sei", "nove plu uno plu sei plu sei plu sei",
+29 - "tre plu tredici plu dozzina plu uno", "tredici plu quattro plu sei plu sei", "dieci plu uno plu sei plu sei plu sei", "diciannove meno due plu sei plu sei"
+30 - "tre plu sei plu dodici plu tre", "tre volte quattro plu dodici plu sei", "undici plu uno plu sei plu sei plu sei"
+
+Spanish Honest numbers
+
+5 - "cinco"
+10 - "ocho mas dos"
+11 - "ocho mas tres"
+12 - "dos veces seis"
+15 - "cinco mas que diez"
+18 - "veintiuno menos tres"
+20 - "ocho mas dos mas que diez", "cinco mas siete mas ocho", "cinco mas cinco mas diez", "cinco mas nueve mas siete"
+21 - "ocho mas tres mas que diez" 
+22 - "dos veces sies mas que diez"
+28 - "diez mas que veintiuno menos tres"
+30 - "cinco mas cinco mas diez mas cinco mas diez", "cinco mas cinco mas diez mas nueve mas siete", "cinco mas nueve mas siete mas nueve mas siete"
+
+Dutch Honest numbers
+
+4 - "vier"
+9 - "twee plus zeven"
+11 - "tien plus een"
+12 - "vier plus acht", "tien plus twee"
+13 - "vier plus negen", "twaalf plus een"
+14 - "zeven plus zeven", "elf meer dan drie", "dertien plus een"
+17 - "twee plus zeven plus acht"
+18 - "twee plus zeven plus negen"
+19 - "tien plus een plus acht"
+20 - "vier plus acht plus acht", "tien plus twee plus acht", "tien plus een plus negen"
+21 - "vier plus acht plus negen", "twaalf plus een plus acht", "tien plus twee plus negen"
+22 - "zeven plus zeven plus acht", "elf meer dan drie plus acht", "dertien plus een plus acht", "vier plus negen plus negen", "twaalf plus een plus negen"
+23 - "zeven plus zeven plus negen", "elf meer dan drie plus negen", "dertien plus een plus negen"
+25 - "twee plus zeven plus acht plus acht"
+26 - "twee plus zeven plus acht plus negen"
+27 - "twee plus zeven plus negen plus negen", "tien plus een plus acht plus acht"
+28 - "vier plus acht plus acht plus acht", "tien plus twee plus acht plus acht", "tien plus een plus acht plus negen"
+29 - "vier plus acht plus negen plus negen", "tien plus twee plus acht plus negen", "tien plus een plus negen plus negen", "twaalf plus een plus acht plus acht"
+30 - "zeven plus zeven plus acht plus acht", "elf meer dan drie plus acht plus acht", "dertien plus een plus acht plus acht", "vier plus acht plus negen plus negen", "twaalf plus een plus acht plus negen", "tien plus twee plus negen plus negen"

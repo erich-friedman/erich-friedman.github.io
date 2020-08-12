@@ -1,0 +1,177 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+
+<CENTER><H1>Problem of the Month (August 2008)</H1></CENTER>
+
+This month we consider tiling the lines of an n&times;m grid using the ten digits, as they usually appear on a digital clock.  We are interested in the possible totals of the digits for a given m and n.  Digits can intersect, and be rotated.  Digits can not overlap, or be reflected.  For small grids, what are the possible digit totals?  For large grids, what are the smallest and largest possible totals?
+
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Here is a table of the smallest and largest possible totals for various m&times;n grids:<p>
+
+<center><font size=+2>Smallest and Largest Known Totals for n&times;m Grids</font></center>
+<table align=center border=1 bgcolor=lightyellow cellpadding=5>
+<tr bgcolor=DDFFDD><th><font size=+1>n \ m<th width=60>0<th width=60>1<th width=60>2<th width=60>3<th width=60>4<th width=60>5<tr align=center><th bgcolor=DDFFDD>0<td>0 / 0
+<tr align=center><th bgcolor=DDFFDD>1<td><font color=red>&phi;<td><font color=red>&phi;
+<tr align=center><th bgcolor=DDFFDD>2<td>1 / 1<td>4 / 8<td>6 / 18
+<tr align=center><th bgcolor=DDFFDD>3<td><font color=red>&phi;<td><font color=red>&phi;<td>9 / 31<td>17 / 46<br>(BH/AS)
+<tr align=center><th bgcolor=DDFFDD>4<td>2 / 2<td><font color=red>&phi;<td>5 / 44<br>(/DB)<td><td>
+<tr align=center><th bgcolor=DDFFDD>5<td><font color=red>&phi;<td>14 / 20<td>8 / 47<td><td><td>
+<tr align=center><th bgcolor=DDFFDD>6<td>3 / 3<td><font color=red>&phi;<td>10 / 57<td><td><td>
+<tr align=center><th bgcolor=DDFFDD>7<td><font color=red>&phi;<td>16 / 34<td>13 / 70<td><td><td>
+<tr align=center><th bgcolor=DDFFDD>8<td>4 / 4<td>21 / 27<td>15 / 87<td><td><td>
+<tr align=center><th bgcolor=DDFFDD>9<td><font color=red>&phi;<td>20 / 48<td>18 / 90<td><td><td>
+</table><p>
+
+<a href="mailto:antisolg@gmail.com">Anti Solg</a> and <a href="mailto:mathidentity@yahoo.com">Bruce Herdt</a> sent many 3&times;3 grids.<p>
+
+<a href="mailto:luke.pebody@gmail.com">Luke Pebody</a> showed that the smallest totals for large 1&times;n grids depend on n mod 3, and that the largest totals for large 1&times;n grids depend on n mod 2:<p>
+
+<table border=1 cellpadding=10 align=center bgcolor=EEEEFF><tr><td>
+
+<center><font size=+1>(3k)&times;1 grid with total 4k+8</font></center>
+<center><img src="0808/min-3nx1.gif"></center><p>
+<center><font size=+1>(3k+1)&times;1 grid with total 4k+8</font></center>
+<center><img src="0808/min-3n+1x1.gif"></center><p>
+<center><font size=+1>(3k+2)&times;1 grid with total 4k+12</font></center>
+<center><img src="0808/min-3n+2x1.gif"></center><p>
+<hr>
+<center><font size=+1>(2k)&times;1 grid with total 7k-29</font></center>
+<center><img src="0808/max-2nx1.gif"></center><p>
+<center><font size=+1>(2k+1)&times;1 grid with total 7k-8</font></center>
+<center><img src="0808/max-2n+1x1.gif"></center>
+</table><p>
+
+<a href="mailto:rikki3@blueyonder.co.uk">Richard Sabey</a> gave this small total tiling:<p>
+
+<table border=1 cellpadding=10 align=center bgcolor=EEEEFF><tr><td>
+<center><font size=+1>(4j+1)&times;(4k+2) grid with total 4jk+11j+28k+4</font></center>
+<center><img src="0808/min-(4n+1)x(4n+2).gif"></center>
+</table><p>
+
+<a href="mailto:luke.pebody@gmail.com">Luke Pebody</a> found this group of 7's that tiles the plane, giving him hope that for large m&times;n grids, a total on the order of 7(2mn+m+n)/3 is possible:
+
+<table border=1 cellpadding=10 align=center bgcolor=EEEEFF><tr><td>
+<center><font size=+1>repeatable tile built with 7's</font></center>
+<center><img src="0808/max-7.gif"></center>
+</table><p>
+
+<a href="mailto:dbevan@emtex.com">David Bevan</a> found the largest totals for 2n&times;4 and 4n&times;6 grids:<p>
+
+<table border=1 cellpadding=10 align=center bgcolor=EEEEFF><tr><td>
+<center><font size=+1>2n&times;4 grid with total 42n+2</font></center>
+<center><img src="0808/max-4x2n.gif"></center><p>
+<center><font size=+1>4n&times;6 grid with total 114n+14</font></center>
+<center><img src="0808/max-6x4n.gif"></center>
+</table><p>
+
+
+<p><hr><p>
+
+The 0&times;n solutions are trivial.  Here are the known 1&times;n solutions for small n:<p>
+
+<center><font size=+2>1&times;2</font></center>
+<table border=3 border color=black align=center bgcolor=DDFFDD><tr><td>
+<table cellpadding=10>
+<tr align=center>
+<td><img src="0808/1x2-4.gif"><br>4
+<td><img src="0808/1x2-8.gif"><br>8
+</table>
+</table><p>
+
+<center><font size=+2>1&times;5</font></center>
+<table border=3 border color=black align=center bgcolor=DDFFDD><tr><td>
+<table cellpadding=10 align=center>
+<tr align=center>
+<td><img src="0808/1x5-14,17,20.gif"><br>14, 17, 20
+</table>
+</table><p>
+
+<center><font size=+2>1&times;7</font></center>
+<table border=3 border color=black align=center bgcolor=DDFFDD><tr><td>
+<table cellpadding=10 align=center>
+<tr align=center>
+<td><img src="0808/1x7-16.gif"><br>16
+<td><img src="0808/1x7-20.gif"><br>20
+</table><table cellpadding=10><tr align=center>
+<td><img src="0808/1x7-22,25.gif"><br>22, 25
+<td><img src="0808/1x7-24.gif"><br>24
+</table><table cellpadding=10><tr align=center>
+<td><img src="0808/1x7-26,29.gif"><br>26, 29
+<td><img src="0808/1x7-28,31,34.gif"><br>28, 31, 34
+</table>
+</table><p>
+
+<center><font size=+2>1&times;8</font></center>
+<table border=3 border color=black align=center bgcolor=DDFFDD><tr><td>
+<table cellpadding=10 align=center>
+<tr align=center>
+<td><img src="0808/1x8-21,24,27.gif"><br>21, 24, 27
+</table>
+</table><p>
+
+<center><font size=+2>1&times;9</font></center>
+<table border=3 border color=black align=center bgcolor=DDFFDD><tr><td>
+<table cellpadding=10 align=center>
+<tr align=center>
+<td><img src="0808/1x9-20,23.gif"><br>20, 23
+<td><img src="0808/1x9-24,27.gif"><br>24, 27
+</table><table cellpadding=10><tr align=center>
+<td><img src="0808/1x9-26,29,32.gif"><br>26, 29, 32
+<td><img src="0808/1x9-30.gif"><br>30
+</table><table cellpadding=10><tr align=center>
+<td><img src="0808/1x9-34.gif"><br>34
+<td><img src="0808/1x9-36,39.gif"><br>36, 39
+</table><table cellpadding=10><tr align=center>
+<td><img src="0808/1x9-38.gif"><br>38
+<td><img src="0808/1x9-40,43.gif"><br>40, 43
+</table><table cellpadding=10 align=center><tr align=center>
+<td><img src="0808/1x9-42,45,48.gif"><br>42, 45, 48
+</table>
+</table><p>
+
+<a href="mailto:luke.pebody@gmail.com">Luke Pebody</a> gave a full analysis of the 1&times;n possibilities, essentially agreeing with the following directed graph of mine:<p>
+
+<center><img src="0808/map.gif"></center>
+
+
+
+<p><hr><p>
+
+Here are the known 2&times;n solutions for small n:<p>
+
+<center><font size=+2>2&times;2</font></center>
+<table border=3 border color=black align=center bgcolor=DDFFDD><tr><td>
+<table cellpadding=10>
+<tr align=center>
+<td><img src="0808/2x2-6.gif"><br>6
+<td><img src="0808/2x2-7.gif"><br>7
+<td><img src="0808/2x2-10.gif"><br>10
+<td><img src="0808/2x2-11.gif"><br>11
+<td><img src="0808/2x2-12,15,18.gif"><br>12, 15, 18
+<td><img src="0808/2x2-17.gif"><br>17 (AS) (BH)
+</table>
+</table><p>
+
+<center><font size=+2>2&times;3</font></center>
+<table border=3 border color=black align=center bgcolor=DDFFDD><tr><td>
+<table cellpadding=10 align=center>
+<tr align=center>
+<td><img src="0808/2x3-9.gif"><br>9
+<td><img src="0808/2x3-10.gif"><br>10
+<td><img src="0808/2x3-13.gif"><br>13
+<td><img src="0808/2x3-14.gif"><br>14
+</table><table cellpadding=10 align=center><tr align=center>
+<td><img src="0808/2x3-15,18,21.gif"><br>15, 18, 21
+<td><img src="0808/2x3-17,20,23.gif"><br>17, 20, 23
+<td><img src="0808/2x3-24.gif"><br>24
+<td><img src="0808/2x3-27.gif"><br>27
+</table><table cellpadding=10 align=center><tr align=center>
+<td><img src="0808/2x3-28,31.gif"><br>28, 31
+</table>
+</table><p>
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 8/12/08.<font></BODY></HTML>
+

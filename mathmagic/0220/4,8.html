@@ -1,0 +1,17 @@
+<HTML>
+<CENTER>n=4 players, N=8 games:</CENTER>
+<pre>
+Below, (W,X > Y,Z) means there are 2 players W and X that are suspected 
+of being better than the other 2 players Y and Z, with 5 games left.
+In this case, W plays X twice.
+If one player (say W) wins both, Y and Z play, 
+   and the winner plays 2 games against W (W wins ties). 
+If W and X split their two games, they play again best-of-3.  
+
+A plays B, the winner (say A) plays C and then D
+IF A WINS BOTH, B plays C and the winner (say B) plays A
+   IF A WINS, D plays A 3 times and has to win all 3
+   IF B WINS, B plays A best-of-3 
+IF A WINS EXACTLY ONE (say C), (A,D > B,C)
+IF A LOSES BOTH, (C,D > A,B)
+</pre>

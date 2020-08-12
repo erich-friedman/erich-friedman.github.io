@@ -1,0 +1,389 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (September 2006)</H1></CENTER>
+
+In the 2002 World Puzzle Championship, there was a puzzle in the form of a rectangular grid containing several 1&times;1 and 2&times;2 squares.  The puzzle was to find the unique path from the top left to the bottom right of the grid that intersected each 2&times;2 square in exactly one square and didn't pass through any of the dark 1&times;1 squares.   Can you solve this puzzle?<p>
+
+<center><img src="0906/demo.gif"></center><p>
+
+Although not a terribly hard puzzle, it got me (as a puzzle designer) thinking about how hard it was to produce such a puzzle without those pesky dark squares.  In particular, given a polyomino P, and a non-negative integer n no greater than the area of P, what is the smallest rectangular puzzle containing some non-overlapping copies of P that has a unique path connecting opposite corners that intersects each copy of P in exactly n squares?  We do not allow the path to start or end inside a copy of P.<p>  
+
+What are the answers for the tetrominoes?  Can you prove that many of the cases, especially with large n, are impossible?  What about larger polyominoes?  Is there a solution for every polyomino and n=1?  Can you classify the polyominoes that have solutions where n is equal to the area of the polyomino?  Can you classify the polyominoes that fail to have solutions for n=0?
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Sam Collins wrote a C++ program to solve the World Championship puzzle:<p>
+
+<center><img src="0906/demos.gif"></center><p>
+
+Here are the smallest known solutions for polyominoes of area 5 or less.<p>
+
+<center><font size=+2>Small Polyominoes</font></center>
+<center><table border=1 bgcolor=FFFFDD cellpadding=10>
+<tr bgcolor=DDDDFF>
+<th align=center>P \ n
+<th align=center>0
+<th align=center>1
+<th align=center>2
+<th align=center>3
+<tr>
+<th bgcolor=DDDDFF align=center><img src="0906/I1.gif">
+<td align=center><img src="0906/I1-0.gif">
+<td align=center><img src="0906/I1-1.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/I2.gif">
+<td align=center><img src="0906/I2-0.gif">
+<td align=center><img src="0906/I2-1.gif">
+<td align=center><img src="0906/I2-2.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/I3.gif">
+<td align=center><img src="0906/I3-0.gif">
+<td align=center><img src="0906/I3-1.gif">
+<td align=center><img src="0906/I3-2.gif"><br>(George Sicherman)
+<td align=center><img src="0906/I3-3.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/L3.gif">
+<td align=center><img src="0906/L3-0.gif">
+<td align=center><img src="0906/L3-1.gif">
+<td align=center><img src="0906/L3-2.gif">
+<td align=center><img src="0906/L3-3.gif">
+</table></center><p>
+
+<center><font size=+2>Tetrominoes</font></center>
+<center><table border=1 bgcolor=FFFFDD cellpadding=10>
+<tr bgcolor=DDDDFF>
+<th align=center>P \ n
+<th align=center>0
+<th align=center>1
+<th align=center>2
+<th align=center>3
+<th align=center>4
+<tr>
+<th bgcolor=DDDDFF align=center><img src="0906/I4.gif">
+<td align=center><img src="0906/I4-0.gif">
+<td align=center><img src="0906/I4-1.gif">
+<td align=center><img src="0906/I4-2.gif">
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><img src="0906/I4-4.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/L4.gif">
+<td align=center><img src="0906/L4-0.gif">
+<td align=center><img src="0906/L4-1.gif">
+<td align=center><img src="0906/L4-2.gif">
+<td align=center><img src="0906/L4-3.gif">
+<td align=center><img src="0906/no.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/T4.gif">
+<td align=center><img src="0906/T4-0.gif">
+<td align=center><img src="0906/T4-1.gif">
+<td align=center><img src="0906/T4-2.gif">
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><img src="0906/T4-4.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/S4.gif">
+<td align=center><img src="0906/S4-0.gif">
+<td align=center><img src="0906/S4-1.gif">
+<td align=center><img src="0906/S4-2.gif">
+<td align=center><img src="0906/S4-3.gif">
+<td align=center><img src="0906/S4-4.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/O4.gif">
+<td align=center><img src="0906/O4-0.gif">
+<td align=center><img src="0906/O4-1.gif">
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><img src="0906/no.gif">
+</table></center><p>
+
+<center><font size=+2>Pentominoes</font></center>
+<center><table border=1 bgcolor=FFFFDD cellpadding=10>
+<tr bgcolor=DDDDFF>
+<th align=center>
+<th align=center>0
+<th align=center>1
+<th align=center>2
+<th align=center>3
+<th align=center>4
+<th align=center>5
+<tr>
+<th bgcolor=DDDDFF align=center><img src="0906/I5.gif">
+<td align=center><img src="0906/I5-0.gif">
+<td align=center><img src="0906/I5-1.gif">
+<td align=center><img src="0906/I5-2.gif">
+<td align=center><img src="0906/I5-3.gif">
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><img src="0906/I5-5.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/L5.gif">
+<td align=center><img src="0906/L5-0.gif">
+<td align=center><img src="0906/L5-1.gif">
+<td align=center><img src="0906/L5-2.gif">
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><img src="0906/no.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/P5.gif">
+<td align=center><img src="0906/P5-0.gif">
+<td align=center><img src="0906/P5-1.gif">
+<td align=center><img src="0906/P5-2.gif">
+<td align=center><img src="0906/P5-3.png"><br>(George Sicherman)
+<td align=center><img src="0906/P5-4.png"><br>(George Sicherman)
+<td align=center><img src="0906/P5-5.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/R5.gif">
+<td align=center><img src="0906/R5-0.gif">
+<td align=center><img src="0906/R5-1.gif">
+<td align=center><img src="0906/R5-2.png"><br>(George Sicherman)
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><img src="0906/no.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/S5.gif">
+<td align=center><img src="0906/S5-0.gif">
+<td align=center><img src="0906/S5-1.gif">
+<td align=center><img src="0906/S5-2.gif">
+<td align=center><img src="0906/S5-3.png"><br>(George Sicherman)
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><img src="0906/S5-5.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/T5.gif">
+<td align=center><img src="0906/T5-0.gif"><br>(Sune Kristian Jakobsen)
+<td align=center><img src="0906/T5-1.gif">
+<td align=center><img src="0906/T5-2.png"><br>(George Sicherman)
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><img src="0906/no.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/U5.gif">
+<td align=center><img src="0906/U5-0.gif">
+<td align=center><img src="0906/U5-1.gif">
+<td align=center><img src="0906/U5-2.gif">
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><img src="0906/no.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/V5.gif">
+<td align=center><img src="0906/V5-0.gif">
+<td align=center><img src="0906/V5-1.gif">
+<td align=center><img src="0906/V5-2.gif">
+<td align=center><img src="0906/V5-3.png"><br>(George Sicherman)
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><img src="0906/no.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/W5.gif">
+<td align=center><img src="0906/W5-0.gif">
+<td align=center><img src="0906/W5-1.gif">
+<td align=center><img src="0906/W5-2.gif">
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><img src="0906/no.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/X5.gif">
+<td align=center><img src="0906/no.gif">
+<td align=center><img src="0906/X5-1.png"><br>(George Sicherman)
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><img src="0906/no.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/Y5.gif">
+<td align=center><img src="0906/Y5-0.gif">
+<td align=center><img src="0906/Y5-1.gif">
+<td align=center><img src="0906/Y5-2.gif">
+<td align=center><img src="0906/Y5-3.gif">
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><img src="0906/Y5-5.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/Z5.gif">
+<td align=center><img src="0906/Z5-0.gif"><br>(Sune Kristian Jakobsen)
+<td align=center><img src="0906/Z5-1.gif">
+<td align=center><img src="0906/Z5-2.png"><br>(George Sicherman)
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><b><font size=+4>?</font></b>
+<td align=center><img src="0906/no.gif">
+</table></center><p>
+
+<b>Hexominoes:</b><p>
+
+All of the hexominoes have puzzles for n=0 using either 1 or 2 copies of P.  Sune Kristian Jakobsen found the last case.  They also all have solutions for n=1 using 1 or 2 copies of P.  Most of them have solutions for n=2, but I couldn't find solutions for one of them.  Gabriele Carelli found one of these.  I found 14 hexominoes that needed more than 2 copies of P.  In 2011, George Sicherman found one more.  Can you improve any of them?<p>
+
+<table align=center cellpadding=10><tr align=center><td><img src="0906/K6.gif"><td><img src="0906/Y6-2.gif"><td><img src="0906/U6-2.gif"><td><img src="0906/H6-2.png"><br>(George Sicherman)<td><img src="0906/Z6-2.png"><br>(George Sicherman)</table>
+
+<table align=center cellpadding=10><tr align=center><td><img src="0906/S6-2.gif"><td><img src="0906/Q6-2.png"><br>(George Sicherman)<td><img src="0906/T6-2.gif"><td><img src="0906/W6-2.gif"><td><img src="0906/X6-2.gif"></table>
+
+<table align=center cellpadding=10><tr align=center><td><img src="0906/L6-2.gif"><td><img src="0906/QQ6-2.gif"><td><img src="0906/SS6-2.gif"><td><img src="0906/Z6-2.gif"><td><img src="0906/R6-2.gif"><td><img src="0906/V6-2.gif"></table>
+
+<b>Heptominoes:</b><p>
+
+Sune Kristian Jakobsen found there are 9 heptominoes that need more than 2 copies of P, and 2 that have no solutions for n=0.  Here are the smallest known solutions.  Can you improve any of them?<p>
+
+<table align=center cellpadding=10><tr align=center><td><img src="0906/J7.gif"><td><img src="0906/K7.gif"><td><img src="0906/H7-0.gif"><br>(Sune Kristian Jakobsen)<td><img src="0906/A7-0.png"><br>(George Sicherman)<td><img src="0906/I7-0.gif"></table>
+
+<table align=center cellpadding=10><tr align=center><td><img src="0906/C7-0.gif"><br>(Sune Kristian Jakobsen)<td><img src="0906/D7-0.gif"><br>(Sune Kristian Jakobsen)<td><img src="0906/F7-0.png"><br>(George Sicherman)</table><p>
+
+<table align=center cellpadding=10><tr align=center><td><img src="0906/E7-0.gif"><td><img src="0906/B7-0.png"><br>(George Sicherman)<td><img src="0906/G7-0.png"><br>(George Sicherman)</table><p>
+
+George Sicherman found that for n=1, all the heptominoes have solutions with no more than 3 tiles.  For n=2, he found solutions for most of them, except for these:<p>
+
+<center><img src="0906/n7uns2.png"></center><p>
+
+<b>Octominoes:</b><p>
+
+George Sicherman looked at octominoes for n=0, and found 8 that apparently need 6 copies, shown below.  Can you improve any of these?<p>
+
+<table align=center cellpadding=10><tr align=center><td><img src="0906/8-3420.png"><td><img src="0906/8-1420.png"><br>(George Sicherman)<td><img src="0906/8-1410.png"><br>(George Sicherman)</table><p>
+
+<table align=center cellpadding=10><tr align=center><td><img src="0906/8-3240.png"><br>(George Sicherman)<td><img src="0906/8-3560.png"><br>(George Sicherman)<td><img src="0906/8-3660.png"><br>(George Sicherman)</table><p>
+
+<table align=center cellpadding=10><tr align=center><td><img src="0906/8-3640.png"><br>(George Sicherman)<td><img src="0906/8-1670.png"><br>(George Sicherman)</table><p>
+
+Here is the list of unsolved octominoes for n=0:<p>
+
+<center><img src="0906/n8uns0.png"></center><p>
+
+Sune Kristian Jakobsen found that this polyomino had no unique paths for any value of n.<p>
+
+<center><img src="0906/X9.gif"></center><p>
+
+<hr>
+
+We can also ask: what is the smallest puzzle for each polyomino that has a unique solution for two different values of n?  The smallest-known solutions are shown below.<p>
+
+<center><font size=+2>Unique Solutions for Multiple Values of n</font></center>
+
+<table border=1 bgcolor=FFFFDD cellpadding=10 align=center>
+<tr bgcolor=DDDDFF>
+<th align=center>polyomino
+<th align=center>n=0 and n=1 solutions
+<th align=center>n=1 and n=2 solutions
+<tr>
+<th bgcolor=DDDDFF align=center><img src="0906/I1.gif">
+<td align=center><img src="0906/I1-01.gif"> &nbsp; <img src="0906/I1-10.gif">
+<td align=center><img src="0906/no.gif">
+<tr>
+<th bgcolor=DDDDFF align=center><img src="0906/I2.gif">
+<td align=center><img src="0906/I2-01.gif"> &nbsp; <img src="0906/I2-10.gif">
+<td align=center><img src="0906/I2-12.gif"> &nbsp; <img src="0906/I2-21.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/I3.gif">
+<td align=center><img src="0906/I3-01.gif"> &nbsp; <img src="0906/I3-10.gif">
+<td align=center><img src="0906/I3-12.gif"> &nbsp; <img src="0906/I3-21.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/L3.gif">
+<td align=center><img src="0906/L3-01.gif"> &nbsp; <img src="0906/L3-10.gif">
+<td align=center><img src="0906/L3-12.gif"> &nbsp; <img src="0906/L3-21.gif">
+</table><p>
+
+
+<table border=1 bgcolor=FFFFDD cellpadding=10 align=center>
+<tr bgcolor=DDDDFF>
+<th align=center>polyomino
+<th align=center>n=0 and n=1 solutions
+<th align=center>n=1 and n=2 solutions
+<tr>
+<th bgcolor=DDDDFF align=center><img src="0906/I4.gif">
+<td align=center><img src="0906/I4-01.gif"> &nbsp; <img src="0906/I4-10.gif">
+<td align=center><b><font size=+4>?</font></b>
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/L4.gif">
+<td align=center><img src="0906/L4-01.gif"> &nbsp; <img src="0906/L4-10.gif">
+<td align=center><img src="0906/L4-12.gif"> &nbsp; <img src="0906/L4-21.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/T4.gif">
+<td align=center><img src="0906/T4-01.gif"> &nbsp; <img src="0906/T4-10.gif">
+<td align=center><img src="0906/T4-12.gif"> &nbsp; <img src="0906/T4-21.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/S4.gif">
+<td align=center><img src="0906/S4-01.gif"> &nbsp; <img src="0906/S4-10.gif">
+<td align=center><img src="0906/S4-12.gif"> &nbsp; <img src="0906/S4-21.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/O4.gif">
+<td align=center><img src="0906/O4-01.gif"> &nbsp; <img src="0906/O4-10.gif">
+<td align=center><b><font size=+4>?</font></b>
+</table><p>
+
+
+<table border=1 bgcolor=FFFFDD cellpadding=10 align=center>
+<tr bgcolor=DDDDFF>
+<th align=center>polyomino
+<th align=center>n=0 and n=1 solutions
+<th align=center>n=1 and n=2 solutions
+<tr>
+<th bgcolor=DDDDFF align=center><img src="0906/I5.gif">
+<td align=center><img src="0906/I5-01.gif"> &nbsp; <img src="0906/I5-10.gif">
+<td align=center><img src="0906/I5-12.png"><br>(George Sicherman)
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/L5.gif">
+<td align=center><img src="0906/L5-01.gif"> &nbsp; <img src="0906/L5-10.gif">
+<td align=center><img src="0906/L5-12.png"><br>(George Sicherman)
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/P5.gif">
+<td align=center><img src="0906/P5-01.gif"> &nbsp; <img src="0906/P5-10.gif">
+<td align=center><img src="0906/P5-12.gif"> &nbsp; <img src="0906/P5-21.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/R5.gif">
+<td align=center><img src="0906/R5-01.png"><br>(George Sicherman)
+<td align=center><img src="0906/R5-12.gif"> &nbsp; <img src="0906/R5-21.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/S5.gif">
+<td align=center><img src="0906/S5-01.png"><br>(George Sicherman)
+<td align=center><img src="0906/S5-12.gif"> &nbsp; <img src="0906/S5-21.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/T5.gif">
+<td align=center><img src="0906/T5-01.png"><br>(George Sicherman)
+<td align=center><b><font size=+4>?</font></b>
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/U5.gif">
+<td align=center><img src="0906/U5-01.gif"> &nbsp; <img src="0906/U5-10.gif">
+<td align=center><b><font size=+4>?</font></b>
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/V5.gif">
+<td align=center><img src="0906/V5-01.png"><br>(George Sicherman)
+<td align=center><b><font size=+4>?</font></b>
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/W5.gif">
+<td align=center><img src="0906/W5-01.gif"> &nbsp; <img src="0906/W5-10.gif">
+<td align=center><img src="0906/W5-12.png"><br>(George Sicherman)
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/X5.gif">
+<td align=center><img src="0906/no.gif">
+<td align=center><b><font size=+4>?</font></b>
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/Y5.gif">
+<td align=center><img src="0906/Y5-01.gif"> &nbsp; <img src="0906/Y5-10.gif">
+<td align=center><img src="0906/Y5-12.gif"> &nbsp; <img src="0906/Y5-21.gif">
+</tr><tr>
+<th bgcolor=DDDDFF align=center><img src="0906/Z5.gif">
+<td align=center><img src="0906/Z5-01.png"><br>(George Sicherman)
+<td align=center><img src="0906/Z5-12.png"><br>(George Sicherman)
+</table><p>
+
+George Sicherman found that every hexomino has a joint n=0 and n=1 solution.  He also found solutions for other pairs of n values:<p>
+
+<center><font size=+2>n=0 and n=2 solutions</font></center>
+<table border=0 cellpadding=5 align=center><tr><td><img src="0906/L3-02.png"><td><img src="0906/T4-02.png"></table><P>
+
+<center><font size=+2>n=2 and n=3 solutions</font></center>
+<table border=0 cellpadding=5 align=center><tr><td><img src="0906/I3-23.png"><td><img src="0906/L4-23.png"></table><P>
+
+<center><font size=+2>n=2 and n=4 solutions</font></center>
+<table border=0 cellpadding=5 align=center><tr><td><img src="0906/I4-24.png"><td><img src="0906/T4-24.png"></table><P>
+
+<center><font size=+2>n=2 and n=5 solutions</font></center>
+<table border=0 cellpadding=5 align=center><tr><td><img src="0906/Y5-25.png"><td><img src="0906/P5-25.png"></table><P>
+
+<center><font size=+2>n=3 and n=5 solutions</font></center>
+<table border=0 cellpadding=5 align=center><tr><td><img src="0906/Y5-35.png"><td><img src="0906/I5-35.png"></table><P>
+
+George Sicherman also found these puzzles for n=0, n=1, and n=2:<p>
+
+<center><font size=+2>n=0, n=1 and n=2 solutions</font></center>
+<table border=0 cellpadding=5 align=center><tr><td><img src="0906/L3-012.png"><td><img src="0906/T4-012.png"></table><P>
+<table border=0 cellpadding=5 align=center><tr><td><img src="0906/F6-012.png"><td><img src="0906/W6-012.png"></table><P>
+<table border=0 cellpadding=5 align=center><tr><td><img src="0906/Y5-012.png"></table><P>
+<table border=0 cellpadding=5 align=center><tr><td><img src="0906/A6-012.png"></table><P>
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 7/31/11.<font>
+
+</BODY></HTML>
+

@@ -1,0 +1,594 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+
+<CENTER><H1>Problem of the Month (November 2006)</H1></CENTER>
+
+This month we consider two problems about tiling polyominoes.<p>
+
+<font size=+2>Problem #1:</font> Given two polyominoes P<sub>1</sub> and P<sub>2</sub> with the same area, what is the smallest area of a polyomino S so that one copy of P<sub>1</sub> and S can tile the same shape as one copy of P<sub>2</sub> and S?  Most of the answers for pentominoes are small, but some of the answers are surprisingly large.  Can you find the polyominoes S for the largest cases?  Can you find a polyomino S that works for the unknown case?  What are the largest answers for hexominoes and larger polyominoes?  What about other polyforms, like polyhexes and polyiamonds?<p>
+
+<font size=+2>Problem #2:</font> Given two polyominoes P<sub>1</sub> and P<sub>2</sub> with the same area, and a positive integer n, what is the smallest shape S that can be tiled by P<sub>1</sub> in exactly n ways, and can be tiled by P<sub>2</sub> in exactly n ways?  Can you find smaller solutions for the triominoes?  What are best results for larger n?  What about the pairs of tetrominoes?  What about other polyforms, like polyhexes and polyiamonds?  What if we want S that can be tiled in n ways by P<sub>1</sub>, P<sub>2</sub>, or P<sub>3</sub>?<p>
+
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+<font size=+2>Problem #1:</font><br>  The polyomino addition solutions for tetrominoes are fairly trivial:<p>
+
+<center><font size=+3>Tetromino Solutions</font></center>
+<center><table border=1 bgcolor=FFFFDD cellpadding=5>
+<tr bgcolor=FFDDDD>
+<th align=center><font size=+2>
+<th align=center><img src="1106/L4.gif">
+<th align=center><img src="1106/T4.gif">
+<th align=center><img src="1106/S4.gif">
+<th align=center><img src="1106/O4.gif">
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/I4.gif">
+<td>1<td>1<td>2<td>2
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/L4.gif">
+<td><td>1<td>1<td>1
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/T4.gif">
+<td><td><td>1<td>1
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/S4.gif">
+<td><td><td><td>1
+</table></center><p>
+
+The solutions for pentominoes are more interesting.  There are several cases that require area 5 or more, one really huge solution, and one unsolved case.<p>
+
+<center><font size=+3>Pentomino Solutions</font></center>
+<center><table border=1 bgcolor=FFFFDD cellpadding=5>
+<tr bgcolor=FFDDDD>
+<th align=center><font size=+2>
+<th align=center><img src="1106/P5.gif">
+<th align=center><img src="1106/U5.gif">
+<th align=center><img src="1106/L5.gif">
+<th align=center><img src="1106/Y5.gif">
+<th align=center><img src="1106/S5.gif">
+<th align=center><img src="1106/V5.gif">
+<th align=center><img src="1106/W5.gif">
+<th align=center><img src="1106/T5.gif">
+<th align=center><img src="1106/R5.gif">
+<th align=center><img src="1106/Z5.gif">
+<th align=center><img src="1106/X5.gif">
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/I5.gif">
+<td>2<td>5<td>1<td>1<td>2<td>2<td>4<td>2<td>5<td>5<td>5
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/P5.gif">
+<td><td>1<td>1<td>1<td>1<td>1<td>1<td>1<td>1<td>1<td>1
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/U5.gif">
+<td><td><td>1<td>1<td>1<td>1<td>2<td>1<td>1<td>1<td><font color=red>23
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/L5.gif">
+<td><td><td><td>1<td>1<td>1<td>2<td>1<td>1<td>1<td>7
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/Y5.gif">
+<td><td><td><td><td>1<td>1<td>2<td>1<td>1<td>1<td>1
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/S5.gif">
+<td><td><td><td><td><td>1<td>1<td>1<td>1<td>1<td><font color=red>?
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/V5.gif">
+<td><td><td><td><td><td><td>1<td>1<td>1<td>1<td>5
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/W5.gif">
+<td><td><td><td><td><td><td><td>4<td>1<td>1<td>5
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/T5.gif">
+<td><td><td><td><td><td><td><td><td>1<td>1<td>1
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/R5.gif">
+<td><td><td><td><td><td><td><td><td><td>1<td>1
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/Z5.gif">
+<td><td><td><td><td><td><td><td><td><td><td>5
+</table></center>
+
+<table align=center cellpadding=12><tr>
+<td><font size=+2>5
+<td><img src="1106/IU5.gif">
+<td><img src="1106/IR5.gif">
+<td><img src="1106/IZ5.gif">
+<td><img src="1106/IX5.gif">
+<td><img src="1106/VX5.gif">
+<td><img src="1106/WX5.gif">
+<td><img src="1106/ZX5.gif">
+</table>
+<table align=center cellpadding=12><tr align=center>
+<td><font size=+2>7
+<td><img src="1106/LX5.gif">
+<td><font size=+2>23
+<td><img src="1106/XU5.gif"><br>(Corey Plover)
+</table><p>
+
+In 2012, George Sicherman studied the problem for triples of pentominoes, finding these results:<p>
+
+<table align=center cellpadding=20><tr><td><img src="1106/5-4-6-8.png"><td><img src="1106/5-3-5-9.png"><td><img src="1106/5-3-8-9.png"></table>
+
+<table align=center cellpadding=20><tr><td><img src="1106/5-4-5-8.png"><td><img src="1106/5-6-8-11.png"><td><img src="1106/5-3-9-10.png"></table><p>
+
+The largest solutions for hexominoes are below.<p>
+
+<center><font size=+3>Large Hexomino Solutions</font></center>
+<table align=center cellpadding=12><tr>
+<td><font size=+2>6
+<td><img src="1106/IC6.gif">
+<td><img src="1106/IR6.gif">
+<td><img src="1106/IZ6.gif">
+<td><img src="1106/IX6.gif">
+<td><img src="1106/IS6.gif">
+<td><img src="1106/DT6.gif">
+<td><img src="1106/LE6.gif">
+</table>
+<table align=center cellpadding=12><tr>
+<td><img src="1106/SY6.gif">
+<td><img src="1106/YE6.gif">
+<td><img src="1106/SX6.gif">
+<td><img src="1106/SS6.gif">
+<td><img src="1106/VX6.gif">
+</table>
+<table align=center cellpadding=12><tr>
+<td><font size=+2>7
+<td><img src="1106/IU6.gif">
+<td><img src="1106/OV6.gif">
+<td><img src="1106/FW6.gif">
+<td><img src="1106/DH6.gif">
+<td><img src="1106/DV6.gif">
+<td><img src="1106/NU6.gif">
+</table>
+<table align=center cellpadding=12><tr>
+<td><img src="1106/NZ6.gif">
+<td><img src="1106/CH6.gif">
+<td><img src="1106/CE6.gif">
+<td><img src="1106/YS6.gif">
+<td><img src="1106/SH6.gif">
+<td><img src="1106/HX6.gif">
+</table>
+<table align=center cellpadding=12><tr>
+<td><font size=+2>8
+<td><img src="1106/WX6.gif">
+</table>
+<table align=center cellpadding=12><tr align=center>
+<td><font size=+2>9
+<td><img src="1106/n6add9.gif"><br>(George Sicherman)
+<td><font size=+2>11
+<td><img src="1106/n6add11.gif"><br>(George Sicherman)
+</table><p>
+<table align=center cellpadding=12><tr align=center>
+<td><font size=+2>12+
+<td><img src="1106/n6addbig.png"><br>(George Sicherman)
+</table><p>
+
+Here are the unsolved cases for hexomino pairs.<p>
+
+<center>
+<img src="1106/un1.gif"><p>
+<img src="1106/un2.gif"><p>
+<img src="1106/un3.gif"><p>
+<img src="1106/un4.gif"><p>
+<img src="1106/un5.gif"><p>
+<img src="1106/un6.gif"><p>
+<img src="1106/un7.gif"><p>
+<img src="1106/un8.gif"><p>
+<img src="1106/un10.gif"><p>
+<img src="1106/un11.gif"><p>
+<img src="1106/un12.gif">
+</center><p>
+
+Here are some large cases for heptomino pairs:<p>
+
+<center><img src="1106/n7addc13.png"></center><p>
+
+
+
+Corey Plover is not a big fan of flipping polyominoes over, so he was interested in the solutions with this restriction.<p>
+
+<center><font size=+3>Non-Flip Pentomino Solutions</font></center>
+<center><table border=1 bgcolor=FFFFDD cellpadding=5>
+<tr bgcolor=FFDDDD>
+<th align=center><font size=+2>
+<th align=center><img src="1106/P5.gif">
+<th align=center><img src="1106/PP5.gif">
+<th align=center><img src="1106/U5.gif">
+<th align=center><img src="1106/L5.gif">
+<th align=center><img src="1106/LL5.gif">
+<th align=center><img src="1106/Y5.gif">
+<th align=center><img src="1106/YY5.gif">
+<th align=center><img src="1106/S5.gif">
+<th align=center><img src="1106/SS5.gif">
+<th align=center><img src="1106/V5.gif">
+<th align=center><img src="1106/W5.gif">
+<th align=center><img src="1106/T5.gif">
+<th align=center><img src="1106/R5.gif">
+<th align=center><img src="1106/RR5.gif">
+<th align=center><img src="1106/Z5.gif">
+<th align=center><img src="1106/ZZ5.gif">
+<th align=center><img src="1106/X5.gif">
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/I5.gif">
+<td>2<td>2<td><font color=red>7<td>1<td>1<td>1<td>1<td>2<td>2<td>2<td>4<td>2<td><font color=red>?<td><font color=red>?<td>5<td>5<td>5
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/P5.gif">
+<td><td>1<td>1<td>2<td>1<td>1<td>1<td>1<td>2<td>1<td>1<td>1<td>1<td>1<td>2<td>1<td>1
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/PP5.gif">
+<td><td><td>1<td>1<td>2<td>1<td>1<td>2<td>1<td>1<td>1<td>1<td>1<td>1<td>1<td>2<td>1
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/U5.gif">
+<td><td><td><td>1<td>1<td>1<td>1<td>1<td>1<td>1<td>2<td>1<td>1<td>1<td>1<td>1<td><font color=red>23
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/L5.gif">
+<td><td><td><td><td>1<td>1<td>1<td>2<td>1<td>1<td>2<td>1<td>2<td>1<td>1<td>2<td><font color=red>?
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/LL5.gif">
+<td><td><td><td><td><td>1<td>1<td>1<td>2<td>1<td>2<td>1<td>1<td>2<td>2<td>1<td><font color=red>?
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/Y5.gif">
+<td><td><td><td><td><td><td>1<td>1<td>2<td>1<td>2<td>1<td>1<td>1<td>2<td>1<td>1
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/YY5.gif">
+<td><td><td><td><td><td><td><td>2<td>1<td>1<td>2<td>1<td>1<td>1<td>1<td>2<td>1
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/S5.gif">
+<td><td><td><td><td><td><td><td><td>2<td>1<td>1<td>1<td>1<td>1<td>2<td>1<td><font color=red>?
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/SS5.gif">
+<td><td><td><td><td><td><td><td><td><td>1<td>1<td>1<td>1<td>1<td>1<td>2<td><font color=red>?
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/V5.gif">
+<td><td><td><td><td><td><td><td><td><td><td>1<td>1<td>1<td>1<td>1<td>1<td><font color=red>23
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/W5.gif">
+<td><td><td><td><td><td><td><td><td><td><td><td><font color=red>?<td>1<td>1<td>1<td>1<td><font color=red>23
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/T5.gif">
+<td><td><td><td><td><td><td><td><td><td><td><td><td>1<td>1<td>1<td>1<td>1
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/R5.gif">
+<td><td><td><td><td><td><td><td><td><td><td><td><td><td>1<td>2<td>1<td>1
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/RR5.gif">
+<td><td><td><td><td><td><td><td><td><td><td><td><td><td><td>1<td>2<td>1
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/Z5.gif">
+<td><td><td><td><td><td><td><td><td><td><td><td><td><td><td><td>2<td>5
+
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/ZZ5.gif">
+<td><td><td><td><td><td><td><td><td><td><td><td><td><td><td><td><td>5
+</table></center><p>
+
+Here are the largest known solutions:<p>
+
+<center><table cellpadding=10><tr align=center><td><img src="1106/I5U5.gif"><br>(George Sicherman)<td><img src="1106/V5X5.png"><br>(George Sicherman)<td><img src="1106/W5X5.png"><br>(George Sicherman)</table></center><p>
+
+Corey Plover noticed that there are smaller solutions if we allow king-connected polyominoes or disconnected polyominoes:<p>
+
+<table align=center cellpadding=12><tr align=center>
+<td><img src="1106/U5+X5.gif"><br>(Corey Plover)
+<td><img src="1106/S5+X5.gif"><br>(Corey Plover)
+</table><p>
+
+
+
+
+
+George Sicherman investigated pentahexes.  Here are the largest solutions.<p>
+
+<center><img src="1106/x5add4.gif"><p><img src="1106/x5add5.gif"><p><img src="1106/x5add8.gif"> &nbsp; &nbsp; &nbsp; <img src="1106/x5add9.gif"><p><img src="1106/x5addbig.gif"></center><p>
+
+Here are the unsolved pentahex pairs.<p>
+
+<center><img src="1106/x5add0.png"></center><p>
+
+
+George Sicherman also investigated polyiamonds.  Here are the largest solutions for the hexiamonds.<p>
+
+<center><img src="1106/m6add3+.gif"></center><p>
+
+And here are the largest solutions for heptiamonds.<p>
+
+<center><img src="1106/m7add5.gif"><p><img src="1106/m7add6.gif"><p><img src="1106/m7add7+.gif"></center><p>
+
+<center><table><tr><td><img src="1106/7-2.png"><td><img src="1106/7-1.png"><td><img src="1106/7-3.png"><td><img src="1106/7-4.png"><td><img src="1106/7-5.png"></table></center><p>
+
+Here are the unsolved heptiamond pairs.<p>
+
+<center><img src="1106/m7add0.png"></center><p>
+
+
+George Sicherman also investigated polyaboloes.  Here are the largest solutions for the triaboloes and tetraboloes.<p>
+
+<center><img src="1106/b3add3.gif"><p><img src="1106/b4add3.gif"><p><img src="1106/b4add4.gif"></center><p>
+
+Here are the unsolved tetrabolo pairs.<p>
+
+<center><img src="1106/b4add0.gif"></center><p>
+
+George Sicherman also investigated polylines.  Here are the largest solutions for tetralines.<p>
+
+<center><img src="1106/l4big.gif"></center><p>
+
+Here are the unsolved tetraline pairs.<p>
+
+<center><img src="1106/l4add0.gif"></center><p>
+
+George Sicherman also gave this tetraking example: <img src="1106/4-i-x.gif"><p>
+
+George Sicherman found that every pair of pentacubes is equable.  Here are the largest solutions:<p>
+
+<center><img src="1106/c5big.png"></center><p>
+
+George Sicherman also investigated pentapents.  Here are his solutions:<p>
+
+<table align=center>
+<tr align=center><td><img src="1106/p5add5.png">
+<tr align=center><td><img src="1106/p5add6.png">
+<tr align=center><td><img src="1106/p5add7.png">
+<tr align=center><td><img src="1106/p5add8.png">
+<tr align=center><td><img src="1106/p5add10.png">
+</table><p>
+
+Here are the unsolved cases:<p>
+
+<center><img src="1106/p5adduns.png"></center><p>
+
+<hr><font size=+2>Problem #2:</font>
+
+George Sicherman sent some solutions for this problem as well.<p>
+
+Here are the smallest known solutions for a domino and triomino:<p>
+
+<center><font size=+3>Domino and Triomino Solutions</font></center>
+<center><table border=1 bgcolor=FFFFDD cellpadding=5>
+<tr bgcolor=FFDDDD>
+<th align=center><font size=+2>
+<th align=center><img src="1106/-I2.gif">
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/-I3.gif">
+<td><table cellpadding=5><tr align=center><td><img src="1106/-I2I3-1.gif"><br>1
+<td><img src="1106/-I2I3-2.gif"><br>2
+<td><img src="1106/-I2I3-3.gif"><br>3<br>(GS)
+<td><img src="1106/-I2I3-4.gif"><br>4
+<td><img src="1106/-I2I3-5.gif"><br>5
+<td><img src="1106/-I2I3-6.gif"><br>6<br>(GS)
+<td><img src="1106/-I2I3-8.gif"><br>8
+<td><img src="1106/-I2I3-9.gif"><br>9
+</tr></table>
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/-L3.gif">
+<td><table cellpadding=5><tr align=center><td><img src="1106/-I2L3-1.gif"><br>1
+<td><img src="1106/-I2L3-2.gif"><br>2
+<td><img src="1106/-I2L3-3.gif"><br>3<br>(GS)
+<td><img src="1106/-I2L3-4.gif"><br>4
+<td><img src="1106/-I2L3-5.gif"><br>5<br>(GS)
+<td><img src="1106/-I2L3-6.gif"><br>6<br>(GS)
+<td><img src="1106/-I2L3-8.gif"><br>8<br>(GS)
+<td><img src="1106/-I2L3-12.gif"><br>12<br>(GS)
+<td><img src="1106/-I2L3-16.gif"><br>16<br>(GS)
+</tr></table>
+</table></center><p>
+
+
+Here are the smallest known solutions for triominoes:<p>
+
+<center><font size=+3>Triomino Solutions</font></center>
+<center><table border=1 bgcolor=FFFFDD cellpadding=5>
+<tr bgcolor=FFDDDD>
+<th align=center><font size=+2>
+<th align=center><img src="1106/-L3.gif">
+<tr align=center><th align=center bgcolor=FFDDDD rowspan=2><img src="1106/-I3.gif">
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/-I3L3-1.gif"><br>1
+<td><img src="1106/-I3L3-2.gif"><br>2
+<td><img src="1106/-I3L3-3.gif"><br>3<br>(GS)
+<td><img src="1106/-I3L3-4.gif"><br>4
+<td><img src="1106/-I3L3-5.gif"><br>5<br>(GS)
+<td><img src="1106/-I3L3-6.gif"><br>6<br>(GS)
+<td><img src="1106/-I3L3-7.gif"><br>7<br>(GS)
+<td><img src="1106/-I3L3-8.gif"><br>8<br>(GS)
+<td><img src="1106/-I3L3-9.gif"><br>9<br>(GS)
+</tr></table>
+<tr align=center>
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/-I3L3-10.gif"><br>10<br>(GS)
+<td><img src="1106/-I3L3-11.gif"><br>11<br>(GS)
+<td><img src="1106/-I3L3-12.gif"><br>12<br>(GS)
+<td><img src="1106/-I3L3-13.gif"><br>13<br>(GS)
+<td><img src="1106/-I3L3-16.gif"><br>16
+<td><img src="1106/-I3L3-18.gif"><br>18
+<td><img src="1106/-I3L3-20.gif"><br>20
+</tr></table>
+</table></center><p>
+
+Here are the smallest known solutions for tetrominoes:<p>
+
+<center><font size=+3>Tetromino Solutions</font></center>
+<center><table border=1 bgcolor=FFFFDD cellpadding=5>
+<tr bgcolor=FFDDDD>
+<th align=center><font size=+2>
+<th align=center><img src="1106/-I4.gif">
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/-L4.gif">
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/-I4L4-1.gif"><br>1
+<td><img src="1106/-I4L4-2.gif"><br>2
+<td><img src="1106/-I4L4-3.gif"><br>3<br>(GS)
+<td><img src="1106/-I4L4-5.gif"><br>5
+</tr></table>
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/-T4.gif">
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/-I4T4-1.gif"><br>1
+<td><img src="1106/-I4T4-2.gif"><br>2
+<td><img src="1106/-I4T4-3.gif"><br>3
+<td><img src="1106/-I4T4-5.gif"><br>5<br>(GS)
+<td><img src="1106/-I4T4-6.gif"><br>6<br>(GS)
+<td><img src="1106/-I4T4-7.gif"><br>7<br>(GS)
+<td><img src="1106/-I4T4-9.gif"><br>9<br>(GS)
+<td><img src="1106/-I4T4-10.gif"><br>10<br>(GS)
+</tr></table>
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/-S4.gif">
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/-I4S4-1.gif"><br>1
+<td><img src="1106/-I4S4-2.gif"><br>2
+</tr></table>
+</table></center><p>
+
+<center><table border=1 bgcolor=FFFFDD cellpadding=5>
+<tr bgcolor=FFDDDD>
+<th align=center><font size=+2>
+<th align=center><img src="1106/-L4.gif">
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/-T4.gif">
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/-L4T4-1.gif"><br>1
+<td><img src="1106/-L4T4-2.gif"><br>2
+<td><img src="1106/-L4T4-4.gif"><br>4<br>(GS)
+</tr></table>
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/-S4.gif">
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/-L4S4-1.gif"><br>1
+<td><img src="1106/-L4S4-2.gif"><br>2
+<td><img src="1106/-L4S4-3.gif"><br>3<br>(GS)
+<td><img src="1106/-L4S4-4.gif"><br>4<br>(GS)
+</tr></table>
+</table></center><p>
+
+<center><table border=1 bgcolor=FFFFDD cellpadding=5>
+<tr bgcolor=FFDDDD>
+<th align=center><font size=+2>
+<th align=center><img src="1106/-T4.gif">
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/-S4.gif">
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/-T4S4-1.gif"><br>1
+<td><img src="1106/-T4S4-2.gif"><br>2
+<td><img src="1106/-S4T4-4.gif"><br>4<br>(GS)
+<td><img src="1106/-S4T4-6.gif"><br>6<br>(GS)
+<td><img src="1106/-S4T4-8.gif"><br>8<br>(GS)
+</tr></table>
+</table></center><p>
+
+
+Here are the smallest known solutions for tetriamonds:<p>
+
+<center><font size=+3>Tetriamond Solutions</font></center>
+<center><table border=1 bgcolor=FFFFDD cellpadding=5>
+<tr bgcolor=FFDDDD>
+<th align=center><font size=+2>
+<th align=center><img src="1106/4-i.gif">
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/4-v.gif">
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/4-i-v-1.gif"><br>1<br>(GS)
+<td><img src="1106/4-i-v-2.gif"><br>2<br>(GS)
+<td><img src="1106/4-i-v-3.gif"><br>3<br>(GS)
+<td><img src="1106/4-i-v-5.gif"><br>5<br>(GS)
+</tr></table>
+</table></center><p>
+
+Here are the smallest known solutions for pentiamonds:<p>
+
+<center><font size=+3>Pentiamond Solutions</font></center>
+<center><table border=1 bgcolor=FFFFDD cellpadding=5>
+<tr bgcolor=FFDDDD>
+<th align=center><font size=+2>
+<th align=center><img src="1106/5-j.gif">
+<th align=center><img src="1106/5-q.gif">
+<th align=center><img src="1106/5-u.gif">
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/5-i.gif">
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/5-i-j-1.gif"><br>1<br>(GS)
+<td><img src="1106/5-i-j-2.gif"><br>2<br>(GS)
+</tr></table>
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/5-i-q-1.gif"><br>1<br>(GS)
+<td><img src="1106/5-i-q-2.gif"><br>2<br>(GS)
+</tr></table>
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/5-i-u-1.gif"><br>1<br>(GS)
+</tr></table>
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/5-j.gif">
+<td>
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/5-j-q-1.gif"><br>1<br>(GS)
+<td><img src="1106/5-j-q-2.gif"><br>2<br>(GS)
+<td><img src="1106/5-j-q-3.gif"><br>3<br>(GS)
+<td><img src="1106/5-j-q-4.gif"><br>4<br>(GS)
+<td><img src="1106/5-j-q-5.gif"><br>5<br>(GS)
+<td><img src="1106/5-j-q-6.gif"><br>6<br>(GS)
+</tr></table>
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/5-j-u-1.gif"><br>1<br>(GS)
+<td><img src="1106/5-j-u-2.gif"><br>2<br>(GS)
+</tr></table>
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/5-q.gif">
+<td>
+<td>
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/5-q-u-1.gif"><br>1<br>(GS)
+</tr></table>
+</table></center><p>
+
+Here are the smallest known solutions for dihexes and trihexes:<p>
+
+<center><font size=+3>Dihex and Trihex Solutions</font></center>
+<center><table border=1 bgcolor=FFFFDD cellpadding=5>
+<tr bgcolor=FFDDDD>
+<th align=center><font size=+2>
+<th align=center><img src="1106/2-i.gif">
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/3-i.gif">
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/2-i+3-i-1.gif"><br>1<br>(GS)
+<td><img src="1106/2-i+3-i-2.gif"><br>2<br>(GS)
+<td><img src="1106/2-i+3-i-4.gif"><br>4<br>(GS)
+</tr></table>
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/3-a.gif">
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/2-i+3-a-1.gif"><br>1<br>(GS)
+</tr></table>
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/3-v.gif">
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/2-i+3-v-1.gif"><br>1<br>(GS)
+<td><img src="1106/2-i+3-v-2.gif"><br>2<br>(GS)
+<td><img src="1106/2-i+3-v-3.gif"><br>3<br>(GS)
+<td><img src="1106/2-i+3-v-4.gif"><br>4<br>(GS)
+</tr></table>
+</table></center><p>
+
+
+Here are the smallest known solutions for trihexes:<p>
+
+<center><font size=+3>Trihex Solutions</font></center>
+<center><table border=1 bgcolor=FFFFDD cellpadding=5>
+<tr bgcolor=FFDDDD>
+<th align=center><font size=+2>
+<th align=center><img src="1106/3-v.gif">
+<th align=center><img src="1106/3-i.gif">
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/3-a.gif">
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/3-a-v-1.gif"><br>1<br>(GS)
+<td><img src="1106/3-a-v-2.gif"><br>2<br>(GS)
+</tr></table>
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/3-a-i-1.gif"><br>1<br>(GS)
+<td><img src="1106/3-a-i-2.gif"><br>2<br>(GS)
+<td><img src="1106/3-a-i-3.gif"><br>3<br>(GS)
+</tr></table>
+<tr align=center><th align=center bgcolor=FFDDDD><img src="1106/3-v.gif">
+<td>
+<td><table cellpadding=5><tr align=center>
+<td><img src="1106/3-i-v-1.gif"><br>1<br>(GS)
+<td><img src="1106/3-i-v-2.gif"><br>2<br>(GS)
+<td><img src="1106/3-i-v-3.gif"><br>3<br>(GS)
+<td><img src="1106/3-i-v-4.gif"><br>4<br>(GS)
+<td><img src="1106/3-i-v-5.gif"><br>5<br>(GS)
+<td><img src="1106/3-i-v-6.gif"><br>6<br>(GS)
+<td><img src="1106/3-i-v-7.gif"><br>7<br>(GS)
+<td><img src="1106/3-i-v-8.gif"><br>8<br>(GS)
+<td><img src="1106/3-i-v-9.gif"><br>9<br>(GS)
+<td><img src="1106/3-i-v-10.gif"><br>10<br>(GS)
+</tr></table>
+</table></center><p>
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 4/19/09.<font>
+</BODY></HTML>
+

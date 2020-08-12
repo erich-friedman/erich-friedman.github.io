@@ -1,0 +1,263 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+
+<CENTER><H1>Problem of the Month (September 2010)</H1></CENTER>
+
+This month we examine 3 problems related to sets of math puzzles that I have previously made:<p>
+
+<font size=+2>1.</font> An n-<b>fold blackout puzzle</b> is a string of digits and operations with the property that for each 1&le;k&le;n, there is a unique way to remove k symbols to leave a true mathematical statement.  What is the shortest n-fold blackout puzzle for various values of n?  For which n can you prove that n-fold blackout puzzles exist?  (These are related to the blackout puzzles <a href="http://www.stetson.edu/~efriedma/blackout">here</a>.)<p>
+
+<font size=+2>2.</font> An n-<b>fold number link</b> is a connected planar graph with n vertices which are either triangles, squares, pentagons, or hexagons.  A number link forms a valid <b>number link puzzle</b> if a the digits 1-n can be inserted into the shapes in a unique way so a way that:<p>
+
+1) numbers in triangles are the first digit of the product of neighboring vertices,<br>
+2) numbers in squares are the last digit of the product of neighboring vertices,<br>
+3) numbers in pentagons are the first digit of the sum of neighboring vertices, and<br>
+4) numbers in hexagons are the last digit of the sum of neighboring vertices.<p>
+
+(These are related to the number link puzzles <a href="http://www.stetson.edu/~efriedma/numlink">here</a>.)  Are there any 9-fold number link puzzles?  Are there any other n-fold number link puzzles for other n?<p>
+
+<font size=+2>3.</font> An n-<b>fold planar balance puzzle</b> is a collection of fulcrums on a square grid so that there is a unique way to insert the digits 1-n into some of the squares so that: <p>
+1) no row or column contains exactly one digit,<br>
+2) every row or column that contains 2 or more digits contains exactly one fulcrum,<br>
+3) each fulcrum is used horizontally or vertically, but not both, and<br>
+4) each fulcrum is located where those weights would balance, with equal torques on both sides.<p>
+
+(You can see some examples of planar balance puzzles <a href="http://www.stetson.edu/~efriedma/2Dweight">here</a>.)  What are the smallest n-fold planar balance puzzles for larger n?
+
+
+
+<P><hr color=black><p><center><h1>ANSWERS</h1></center>
+
+This month answers were received from Joshua Taylor, Bryce Herdt, Bojan Basic, Joe DeVincentis, and Giovanni Resta.<p>
+
+
+<font size=+2>1.</font><p>
+
+Here are the shortest known n-fold blackout puzzles.<p>
+
+<TABLE border=5 align=center>
+<TR align=center><TD>
+
+n=2<br>
+<table style="font-family: family_name1, family_name2; font-size:24;">
+<tr align=center><td>0<td>=<td>&ndash;<td>0<td>+
+<tr align=center><td>0<td>=<td>&ndash;<td>0<td>
+<tr align=center><td>0<td>=<td><td>0<td>
+</table>
+<br>Bojan Basic
+
+<TD>
+
+n=3<br>
+<table style="font-family: family_name1, family_name2; font-size:24;">
+<tr align=center><td>0<td>=<td>1<td>&times;<td>&ndash;<td>0
+<tr align=center><td>0<td>=<td>1<td>&times;<td><td>0
+<tr align=center><td>0<td>=<td><td><td>&ndash;<td>0
+<tr align=center><td>0<td>=<td><td><td><td>0
+</table>
+<br>Bojan Basic
+
+<TD>
+
+n=4<br>
+<table style="font-family: family_name1, family_name2; font-size:24;">
+<tr align=center><td>0<td>=<td>1<td>&times;<td>&ndash;<td>0<td>+
+<tr align=center><td>0<td>=<td>1<td>&times;<td>&ndash;<td>0<td>
+<tr align=center><td>0<td>=<td>1<td>&times;<td><td>0<td>
+<tr align=center><td>0<td>=<td><td><td>&ndash;<td>0<td>
+<tr align=center><td>0<td>=<td><td><td><td>0<td>
+</table>
+<br>Bojan Basic
+
+<TD>
+
+n=5<br>
+<table style="font-family: family_name1, family_name2; font-size:24;">
+<tr align=center><td>0<td>=<td>1<td>+<td>&ndash;<td>1<td>+<td>0
+<tr align=center><td>0<td>=<td>1<td><td>&ndash;<td>1<td>+<td>0
+<tr align=center><td>0<td>=<td>1<td>+<td>&ndash;<td>1<td><td>
+<tr align=center><td>0<td>=<td>1<td><td>&ndash;<td>1<td><td>
+<tr align=center><td>0<td>=<td><td><td>&ndash;<td><td><td>0
+<tr align=center><td>0<td>=<td><td><td><td><td><td>0
+</table>
+<br>Bojan Basic
+
+<TD>
+
+n=6<br>
+<table style="font-family: family_name1, family_name2; font-size:24;">
+<tr align=center><td>0<td>=<td>1<td>+<td>&ndash;<td>1<td>+<td>0<td>+
+<tr align=center><td>0<td>=<td>1<td>+<td>&ndash;<td>1<td>+<td>0<td>
+<tr align=center><td>0<td>=<td>1<td><td>&ndash;<td>1<td>+<td>0<td>
+<tr align=center><td>0<td>=<td>1<td>+<td>&ndash;<td>1<td><td><td>
+<tr align=center><td>0<td>=<td>1<td><td>&ndash;<td>1<td><td><td>
+<tr align=center><td>0<td>=<td><td><td>&ndash;<td><td><td>0<td>
+<tr align=center><td>0<td>=<td><td><td><td><td><td>0<td>
+</table>
+<br>Bojan Basic
+
+<TD>
+
+n=7<br>
+<table style="font-family: family_name1, family_name2; font-size:24;">
+<tr align=center><td>0<td>=<td>2<td>&divide;<td>&ndash;<td>1<td>2<td>+<td>1<td>0
+<tr align=center><td>0<td>=<td>2<td><td>&ndash;<td>1<td>2<td>+<td>1<td>0
+<tr align=center><td>0<td>=<td>2<td>&divide;<td>&ndash;<td><td>2<td>+<td>1<td>
+<tr align=center><td>0<td>=<td>2<td><td>&ndash;<td><td>2<td>+<td><td>0
+<tr align=center><td>0<td>=<td><td><td>&ndash;<td>1<td><td>+<td>1<td>
+<tr align=center><td>0<td>=<td>2<td><td>&ndash;<td><td>2<td><td><td>
+<tr align=center><td>0<td>=<td><td><td>&ndash;<td><td><td><td><td>0
+<tr align=center><td>0<td>=<td><td><td><td><td><td><td><td>0
+</table>
+<br>Bojan Basic
+
+<TD>
+
+n=8<br>
+<table style="font-family: family_name1, family_name2; font-size:24;">
+<tr align=center><td>0<td>=<td>1<td>+<td>&times;<td>1<td>+<td>&ndash;<td>2<td>+<td>0
+<tr align=center><td>0<td>=<td>1<td>+<td><td>1<td>+<td>&ndash;<td>2<td>+<td>0
+<tr align=center><td>0<td>=<td>1<td>+<td><td>1<td><td>&ndash;<td>2<td>+<td>0
+<tr align=center><td>0<td>=<td>1<td>+<td><td>1<td>+<td>&ndash;<td>2<td><td>
+<tr align=center><td>0<td>=<td>1<td>+<td><td>1<td><td>&ndash;<td>2<td><td>
+<tr align=center><td>0<td>=<td>1<td><td>&times;<td><td><td>&ndash;<td><td><td>0
+<tr align=center><td>0<td>=<td>1<td><td>&times;<td><td><td><td><td><td>0
+<tr align=center><td>0<td>=<td><td><td><td><td><td>&ndash;<td><td><td>0
+<tr align=center><td>0<td>=<td><td><td><td><td><td><td><td><td>0
+</table>
+<br>Bojan Basic
+
+</TABLE><p>
+
+<TABLE border=5 align=center>
+<TR align=center><TD>
+
+n=9<br>
+<table style="font-family: family_name1, family_name2; font-size:24;">
+<tr align=center><td>0<td>=<td>1<td>&divide;<td>2<td>+<td>&ndash;<td>2<td>&divide;<td>4<td>+<td>0
+<tr align=center><td>0<td>=<td>1<td>&divide;<td>2<td><td>&ndash;<td>2<td>&divide;<td>4<td>+<td>0
+<tr align=center><td>0<td>=<td>1<td>&divide;<td>2<td>+<td>&ndash;<td>2<td>&divide;<td>4<td><td>
+<tr align=center><td>0<td>=<td>1<td>&divide;<td>2<td><td>&ndash;<td>2<td>&divide;<td>4<td><td>
+<tr align=center><td>0<td>=<td><td><td>2<td>+<td>&ndash;<td>2<td><td><td>+<td>0
+<tr align=center><td>0<td>=<td><td><td>2<td><td>&ndash;<td>2<td><td><td>+<td>0
+<tr align=center><td>0<td>=<td><td><td>2<td>+<td>&ndash;<td>2<td><td><td><td>
+<tr align=center><td>0<td>=<td><td><td>2<td><td>&ndash;<td>2<td><td><td><td>
+<tr align=center><td>0<td>=<td><td><td><td><td>&ndash;<td><td><td><td><td>0
+<tr align=center><td>0<td>=<td><td><td><td><td><td><td><td><td><td>0
+</table>
+<br>Bojan Basic
+
+<TD>
+
+n=10<br>
+<table style="font-family: family_name1, family_name2; font-size:24;">
+<tr align=center><td>0<td>=<td>1<td>&divide;<td>2<td>+<td>&ndash;<td>2<td>&divide;<td>4<td>+<td>0<td>+
+<tr align=center><td>0<td>=<td>1<td>&divide;<td>2<td>+<td>&ndash;<td>2<td>&divide;<td>4<td>+<td>0
+<tr align=center><td>0<td>=<td>1<td>&divide;<td>2<td><td>&ndash;<td>2<td>&divide;<td>4<td>+<td>0
+<tr align=center><td>0<td>=<td>1<td>&divide;<td>2<td>+<td>&ndash;<td>2<td>&divide;<td>4<td><td>
+<tr align=center><td>0<td>=<td>1<td>&divide;<td>2<td><td>&ndash;<td>2<td>&divide;<td>4<td><td>
+<tr align=center><td>0<td>=<td><td><td>2<td>+<td>&ndash;<td>2<td><td><td>+<td>0
+<tr align=center><td>0<td>=<td><td><td>2<td><td>&ndash;<td>2<td><td><td>+<td>0
+<tr align=center><td>0<td>=<td><td><td>2<td>+<td>&ndash;<td>2<td><td><td><td>
+<tr align=center><td>0<td>=<td><td><td>2<td><td>&ndash;<td>2<td><td><td><td>
+<tr align=center><td>0<td>=<td><td><td><td><td>&ndash;<td><td><td><td><td>0
+<tr align=center><td>0<td>=<td><td><td><td><td><td><td><td><td><td>0
+</table>
+<br>Bojan Basic
+
+<TD>
+
+n=11<br>
+<table style="font-family: family_name1, family_name2; font-size:24;">
+<tr align=center><td>0<td>=<td>3<td>&divide;<td>2<td>&divide;<td>1<td>+<td>3<td>&divide;<td>6<td>&ndash;<td>2<td>0
+<tr align=center><td>0<td>=<td>3<td>&divide;<td>2<td>&divide;<td>1<td>+<td>3<td>&divide;<td>6<td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td>3<td>&divide;<td>2<td>&divide;<td>1<td>+<td>3<td>&divide;<td><td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td>3<td>&divide;<td>2<td><td><td>+<td>3<td>&divide;<td>6<td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td>3<td>&divide;<td>2<td><td><td>+<td>3<td>&divide;<td><td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td>3<td><td>2<td>&divide;<td>1<td><td><td><td>6<td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td><td><td>2<td>&divide;<td>1<td>+<td><td><td><td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td><td><td>2<td>&divide;<td>1<td><td><td><td><td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td><td><td>2<td><td><td>+<td><td><td><td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td><td><td>2<td><td><td><td><td><td><td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td><td><td><td><td><td><td><td><td><td>&ndash;<td><td>0
+<tr align=center><td>0<td>=<td><td><td><td><td><td><td><td><td><td><td><td>0
+</table>
+<br>Bojan Basic
+
+<TD>
+
+n=12<br>
+<table style="font-family: family_name1, family_name2; font-size:24;">
+<tr align=center><td>0<td>=<td>1<td>+<td>3<td>9<td>&divide;<td>9<td>&divide;<td>2<td>1<td>+<td>&ndash;<td>2<td>0
+<tr align=center><td>0<td>=<td>1<td>+<td>3<td>9<td><td>9<td>&divide;<td>2<td>1<td>+<td>&ndash;<td>2<td>0
+<tr align=center><td>0<td>=<td>1<td>+<td>3<td>9<td><td>9<td>&divide;<td>2<td>1<td><td>&ndash;<td>2<td>0
+<tr align=center><td>0<td>=<td>1<td>+<td><td>9<td>&divide;<td>9<td>&divide;<td><td>1<td>+<td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td>1<td>+<td><td>9<td>&divide;<td>9<td>&divide;<td><td>1<td><td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td>1<td>+<td><td>9<td>&divide;<td>9<td><td><td><td>+<td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td>1<td>+<td><td>9<td>&divide;<td>9<td><td><td><td><td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td>1<td>+<td><td><td><td><td><td><td>1<td>+<td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td>1<td>+<td><td><td><td><td><td><td>1<td><td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td><td><td><td><td><td><td><td>2<td><td>+<td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td><td><td><td><td><td><td><td>2<td><td><td>&ndash;<td>2<td>
+<tr align=center><td>0<td>=<td><td><td><td><td><td><td><td><td><td><td>&ndash;<td><td>0
+<tr align=center><td>0<td>=<td><td><td><td><td><td><td><td><td><td><td><td><td>0
+</table>
+<br>Bojan Basic
+
+</TABLE><p>
+
+
+
+<HR><font size=+2>2.</font><p>
+
+Joe Devincentis showed that all the 1-fold through 6-fold number link puzzles, aside from trivial changes between hexagons and pentagons, and connections with 1, have been found.<p>
+
+Giovanni Resta said his program found many solutions for n=7, 8, 9, and 10.  He only sent a sample.  Are there any other 7-fold number link puzzles?<p>
+
+<center><font size=+2>1-Fold Number Link Puzzle</font></center>
+<center><img src="0910/link1a.png"><br>(Joe DeVincentis)</center><p>
+
+<center><font size=+2>6-Fold Number Link Puzzles</font></center>
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0910/link6a.gif">
+<td><img src="0910/link6b.png"><br>(Joe DeVincentis)</table><p>
+
+<center><font size=+2>7-Fold Number Link Puzzles</font></center>
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0910/link7a.gif"><br>(Bryce Herdt)
+<td><img src="0910/pz7b.png"><br>(Giovanni Resta)
+<td><img src="0910/pz7c.png"><br>(Giovanni Resta)
+<td><img src="0910/pz7d.png"><br>(Giovanni Resta)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0910/pz7e.png"><br>(Giovanni Resta)
+<td><img src="0910/pz7f.png"><br>(Giovanni Resta)
+<td><img src="0910/pz7g.png"><br>(Giovanni Resta)
+<td><img src="0910/pz7h.png"><br>(Giovanni Resta)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td><img src="0910/pz7i.png"><br>(Giovanni Resta)
+<td><img src="0910/pz7j.png"><br>(Giovanni Resta)
+<td><img src="0910/pz7k.png"><br>(Giovanni Resta)
+</table><p>
+
+
+<HR><font size=+2>3.</font><p>
+
+Here are the smallest known n-fold planar Balance Puzzles:<p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=4<br><img src="0910/b4.gif">
+<td>n=6<br><img src="0910/b6.gif"><br>(Bryce Herdt)
+</table><p>
+
+<table align=center cellpadding=10><tr align=center>
+<td>n=7<br><img src="0910/b7.gif">
+<td>n=8<br><img src="0910/b8.gif">
+<td>n=9<br><img src="0910/b9.gif">
+</table><p>
+
+<p><hr color=black><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 9/25/10.<font></BODY></HTML>
+

@@ -1,0 +1,248 @@
+<html><head>
+<script language=JavaScript>
+rows=14
+cols=16
+
+offLeft=10; offTop=110   // offsets on the screen
+
+
+////////////////////////////////////// PRE-LOADING ////////////////////////
+
+// le misure sono falsate dal fatto che c'è un bordo per l'àncora!!
+
+var B0=new Image(); B0.src="b0.gif"  // Corners      20X20
+var B1=new Image(); B1.src="b1.gif"
+var B2=new Image(); B2.src="b2.gif"
+var B3=new Image(); B3.src="b3.gif"
+
+var T0=new Image(); T0.src="t0.gif"  // Sides        20X20
+var T1=new Image(); T1.src="t1.gif"
+var T2=new Image(); T2.src="t2.gif"
+var T3=new Image(); T3.src="t3.gif"
+
+var H0=new Image(); H0.src="h0.gif"  // Horizontal   20X10
+var H1=new Image(); H1.src="h1.gif"
+
+var V0=new Image(); V0.src="v0.gif"  // Vertical     10X20
+var V1=new Image(); V1.src="v1.gif"
+
+var X0=new Image(); X0.src="x0.gif"  // Crossing     20X20
+var X1=new Image(); X1.src="x1.gif"
+var X2=new Image(); X2.src="x2.gif"
+var X3=new Image(); X3.src="x3.gif"
+
+var W0=new Image(); W0.src="w0.gif"  // Center;      10X10
+var W1=new Image(); W1.src="w1.gif"
+var W2=new Image(); W2.src="w2.gif"
+var W3=new Image(); W3.src="w3.gif"
+
+
+////////////////////////////////////// VARIABLES ////////////////////////
+
+var x, y, z,   // used in cycles
+    row, col,  // used everywhere
+    path,      // to build when done             
+    visited=new Array(),      // how many in-out ways on a square
+    incR=new Array(0,1,1,1,0,0,0,-1,-1,-1),         // how to move horizontally
+    incC=new Array(0,-1,0,1,-1,0,1,-1,0,1)          // how to move vertically
+
+
+///////////////////////////////////// INITIALIZATION //////////////////////////////////
+
+
+function scrivi4(){var le=offLeft+30*col, up=offTop+30*row, t='R'+row+'C'+col, how=new Array(0,0,'',0), 
+ what=new Array('X0','H0','W0','V0') // 0, 1, 2 e 3 corrispondono a BigSq, Hor, SmallSq e Ver rispettivamente
+
+ if(col==0){if(row==0)stato=new Array();stato[row]=new Array()}
+ 
+ if(row==0){ what[0]=(col==0)?'B0':(col==cols)?'B1':'T0'; how[0]=5; how[1]=5 }
+ if(row==rows){what[3]='W0';what[0]=(col==0)?'B3':(col==cols)?'B2':'T2'}
+   // il vert. è invisibile; gli how sono inutili, grazie al test if(row<rows)...
+ if(col==0){how[0]=5;how[3]=5;if(row>0 && row<rows)what[0]='T3'}
+ if(col==cols){what[1]='W0';if(row>0 && row<rows)what[0]='T1'}
+   // l'orizz. è invisibile; gli how sono inutili, grazie al test if(row<rows)...
+ 
+ stato[row][col]=new Array();for(x=0;x<4;x++)stato[row][col][x]=how[x]
+
+ var s='<a href="javascript:cambia(\''+t+'\',0,'+row+','+col+')"><img id=\''+t+'0\' src='+eval(what[0]+'.src')
+ document.write(s+' style="position:absolute; top:'+up+'; left:'+le+'"></A>');
+ le+=20; s='<a href="javascript:cambia(\''+t+'\',1,'+row+','+col+')"><img id=\''+t+'1\' src='+eval(what[1]+'.src')
+ document.write(s+' style="position:absolute; top:'+up+'; left:'+le+'"></A>')
+ up+=20; s='<a href="javascript:cambia(\''+t+'\',2,'+row+','+col+')"><img id=\''+t+'2\' src='+eval(what[2]+'.src')
+ document.write(s+' style="position:absolute; top:'+up+'; left:'+le+'"></A>')
+ le-=20; s='<a href="javascript:cambia(\''+t+'\',3,'+row+','+col+')"><img id=\''+t+'3\' src='+eval(what[3]+'.src')
+ document.write(s+' style="position:absolute; top:'+up+'; left:'+le+'"></A>')
+}
+
+
+///////////////////////////////////////// RUNNING //////////////////////////////
+
+function cambia(id,tipo,row,col){
+  var totale=0, i=document.getElementById(id+tipo),s=++stato[row][col][tipo]
+ if(row==rows || col==cols || tipo==2 || s>4)return
+ if(tipo==0){
+  if(s==4){stato[row][col][tipo]=0;i.src=X0.src}
+  if(s==1)i.src=X1.src
+  if(s==2)i.src=X2.src
+  if(s==3)i.src=X3.src
+ }
+ if(tipo==1){
+  if(s==2){stato[row][col][tipo]=0;i.src=H0.src} else i.src=H1.src
+ }
+ if(tipo==3){
+  if(s==2){stato[row][col][tipo]=0;i.src=V0.src} else i.src=V1.src
+ }
+ for(var x=row-1;x<row+2;x++){for(var y=col-1;y<col+2;y++)conta(x,y)}
+}
+
+function conta(row,col){var r, c, s=''
+  function buono37(){
+   if(r<0 || r==rows || c<0 || c==cols) return false
+   if(stato[r][c][0]>4)return false
+   return (stato[r][c][0]&1)==1
+  }
+  function buono19(){
+   if(r<0 || r==rows || c<0 || c==cols) return false
+   return(stato[r][c][0]<5 && stato[r][c][0]>1)
+  }
+  function buono28(){
+   if(r<0 || r==rows || c<0 || c==cols) return false
+   return(stato[r][c][1]==1)
+  }
+  function buono46(){
+   if(r<0 || r==rows || c<0 || c==cols) return false
+   return(stato[r][c][3]==1)
+  }
+// XHWV
+ if(row==rows || row<0 || col==cols || col<0)return
+ var i=document.getElementById('R'+row+'C'+col+'2')
+// per dare 1,2,3 serve comunque row<rows; poi 1 vuole col>0, 3 vuole col<cols
+// per dare 4,6 serve col>0 e col<cols;
+// per dare 7,8,9 serve comunque row>0; poi 7 vuole col>0, 9 vuole col<cols
+
+ r=row; c=col        //               riquadro attuale
+ if(buono37())s+='7' // top-left 
+ if(buono28())s+='8' // top
+ if(buono46())s+='4' // left
+
+ r=row; c=col+1      //               riquadro a Est
+ if(buono19())s+='9' // top-right
+ if(buono46())s+='6' // right
+
+ r=row+1; c=col      //               riquadro a Sud
+ if(buono28())s+='2' // bottom
+ if(buono19())s+='1' // bottom-left
+
+ r=row+1; c=col+1    //               riquadro a SudEst
+ if(buono37())s+='3' // bottom-right
+
+ stato[row][col][2]=s
+ r=s.length
+ if(r>2)i.src=W2.src
+ if(r==2)i.src=W1.src
+ if(r==1)i.src=W3.src
+ if(r==0)i.src=W0.src
+}
+
+
+function search(forb){var s=stato[row][col][2], i=1-s.indexOf(forb)
+ if(i>-1)return s.charAt(i)
+}
+
+
+function done(){ var again=true, s, counter=0, maxR, maxC, minR=rows, minC=cols
+// if(stato[0][0][2].length!=2) return "not through the upper-left corner!"
+ for(row=0;row<rows;row++){
+  visited[row]=new Array();for(col=0;col<cols;col++){
+   visited[row][col]=0
+   var ss=stato[row][col][2].length
+   if(ss==1) return "found a non-closing line!"
+   if(ss>2) return "found a too visited square!"
+   if(ss==2){
+    counter++
+    if(row==minR && col<minC) minC=col
+    if(row<minR){minR=row; minC=col}
+ }}}
+ row=minR; col=minC; path=''; maxR=minR; maxC=minC
+// posso trovare, nell'ordine 78496312; solo 6312 in (minR,minC); quindi 63, 61,62, 31, 32, 12;
+ s=stato[row][col][2]
+ s=(s.indexOf('1')>=0)?1:((s.indexOf('2')>=0)?2:3) //se c'è 1, lo proibisco; sennò se c'è 2 proibisco 2; sennò proibisco 3
+ s=search(s); while(again){
+  if(row>maxR)maxR=row
+  if(col>maxC)maxC=col
+  if(++visited[row][col]==1){
+   path+=s;row+=incR[s];col+=incC[s];s=search(10-s)
+  } else again=false
+ }
+ if(path.length != counter){
+  alert('many closed paths!')
+ } else {
+  if( (maxR+1-minR)*(maxC+1-minC) != counter ){
+   alert('the path does not cover a rectangle!')
+  } else {
+   alert('O.K.')
+ }}
+ return path
+}
+
+
+for(row=0;row<=rows;row++){for(col=0;col<=cols;col++)scrivi4()}
+
+
+var names=new Array('king','rook','queen')
+var Piece, path="", w=null
+var fig=new Array()
+fig[0]=new Image(); fig[0].src="king.gif"
+fig[1]=new Image(); fig[1].src="rook.gif"
+fig[2]=new Image(); fig[2].src="queen.gif"
+
+var now=1
+
+function next(x){
+ now=(now==2)?0:now+1
+ Piece=names[now]
+ document.getElementById("choosen").src=fig[now].src
+}
+
+
+function go(){
+ Piece=names[now]
+ path=document.getElementById("Res").value
+ if(path.indexOf(' ') >= 0){alert('Path not ready!'); return}
+ if(null!=w){if(!w.closed)w.close()}
+ w=window.open("play");w.focus
+}
+
+function check(){
+ document.getElementById("Res").value=done()
+ go()
+}
+
+function clean(){
+ document.getElementById("Res").value="no closed tour"
+}
+
+
+</script>
+<style>
+td {valign:middle; align:center}
+</style>
+</head>
+
+<body vlink='FFFFFF' alink='FFFFFF' link='FFFFFF' onload="clean()">
+
+
+
+<small><form><center><table><tr>
+<td>Click on the picture</td>
+<td><a href="javascript:next()"><img id="choosen" src="rook.gif"></a></td>
+<td>to change selected piece</td>
+</tr><tr>
+<td colspan=2><table>
+<tr><td><button type=button onclick="check()">Check the current path</button></td></tr>
+<tr><td><button type=button onclick="go()">Accept this string as path</button></td></tr>
+</table></td><td><textarea rows=2 cols=20 id="Res">no closed tour</textarea></td>
+</tr></table>
+</form></center>
+
+</body></html>

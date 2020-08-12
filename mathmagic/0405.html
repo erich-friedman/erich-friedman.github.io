@@ -1,0 +1,106 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+<CENTER><H1>Problem of the Month (April 2005)</H1></CENTER>
+
+Start with a horizontal line called the <b>ground</b>.  We say a <b>tent</b> is a collection of unit line segments that are only joined to the top half of the ground and each other at their endpoints.  We call a tent <b>rigid</b> if its framework of segments is rigid in the plane as long as the connections to the ground are fixed.  We define the <b>area</b> of a tent to be the area enclosed by the tent and ground.<p>
+
+It is well-known that the tent made of n segments with the largest area is half a 2n-gon.  This month's problem is to investigate the rigid tent made from n segments with the largest area.  What are the best results for various n?  Can you give lower or upper bounds for the largest possible area?  Since I turn 40 this month, I'll give a special prize of $10 to the person who can enclose the largest area with 40 rigid unit segments.<p>
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+Clinton Weaver improved my area for n=5 to A = &radic;3 = 1.732+.<p>
+
+George Sicherman asks what the largest rigid tent is using n segments with no triangles.  Can this be done at all?<p>
+
+Guenter Stertenbrink wonders what the largest rigid structures are with no line to connect to.  I think the answers are usually collections of equilateral triangles, though for n=15 this is not the case! <p>
+
+Guenter Stertenbrink also gives an application of this month's problem.  A bacteria farmer wants to enclose the largest combined area against shore using n equal length planks that can only be fastened at the ends.<p>
+
+Claudio Baiocchi notes that for large n, trapezoid structures can have area at most 2n<sup>3/2</sup>/3&radic;3, but rectangle structures can have areas at least n<sup>2</sup>/(6+&radic;6).<p>
+
+Here are the maximum areas so far:<p>
+
+<center><font size=+2>Largest Areas of Rigid Tents Using n Unit Segments</font></center>
+<center><table border bgcolor=lightyellow cellpadding=4>
+<tr align=center><th bgcolor=CCFFCC>n</th><th bgcolor=CCFFCC>Largest Area</th><th bgcolor=CCFFCC>Author</th><th bgcolor=CCFFCC>Picture</th></tr>
+<tr align=center><td>2</td><td align=right>0.500</td><td>EF</td><td><img src="0405/2.gif"></td></tr>
+<tr align=center><td>4</td><td align=right>1.299</td><td>EF</td><td><img src="0405/4.gif"></td></tr>
+<tr align=center><td>5</td><td align=right>1.732</td><td>CW, DL</td><td><img src="0405/5a.gif"></td></tr>
+<tr align=center><td>6</td><td align=right>2.414</td><td>EF, CP, DL</td><td><img src="0405/6.gif"></td></tr>
+<tr align=center><td>7</td><td align=right>3.148</td><td rowspan="5">EF, JD, CP, DL, GS</td><td rowspan="5"><img src="0405/7.gif"></td></tr>
+<tr align=center><td>8</td><td align=right>4.116</td></tr>
+<tr align=center><td>9</td><td align=right>5.095</td></tr>
+<tr align=center><td>10</td><td align=right>6.080</td></tr>
+<tr align=center><td>11</td><td align=right>7.069</td></tr>
+<tr align=center><td>12</td><td align=right>8.096</td><td rowspan="8">CP</td><td rowspan="8"><img src="0405/12.gif"></td></tr>
+<tr align=center><td>13</td><td align=right>9.628</td></tr>
+<tr align=center><td>14</td><td align=right>11.148</td></tr>
+<tr align=center><td>15</td><td align=right>12.661</td></tr>
+<tr align=center><td>16</td><td align=right>14.171</td></tr>
+<tr align=center><td>17</td><td align=right>15.679</td></tr>
+<tr align=center><td>18</td><td align=right>17.184</td></tr>
+<tr align=center><td>19</td><td align=right>18.689</td></tr>
+<tr align=center><td>20</td><td align=right>20.472</td><td rowspan="8">EF, CP, BF</td><td rowspan="8"><img src="0405/20.gif"></td></tr>
+<tr align=center><td>21</td><td align=right>22.472</td></tr>
+<tr align=center><td>22</td><td align=right>24.472</td></tr>
+<tr align=center><td>23</td><td align=right>26.472</td></tr>
+<tr align=center><td>24</td><td align=right>28.472</td></tr>
+<tr align=center><td>25</td><td align=right>30.472</td></tr>
+<tr align=center><td>26</td><td align=right>32.472</td></tr>
+<tr align=center><td>27</td><td align=right>34.472</td></tr>
+<tr align=center><td>28</td><td align=right>36.518</td><td rowspan="9">BJ</td><td rowspan="9"><img src="0405/28.gif"></td></tr>
+<tr align=center><td>29</td><td align=right>39.016</td></tr>
+<tr align=center><td>30</td><td align=right>41.513</td></tr>
+<tr align=center><td>31</td><td align=right>44.011</td></tr>
+<tr align=center><td>32</td><td align=right>46.509</td></tr>
+<tr align=center><td>33</td><td align=right>49.007</td></tr>
+<tr align=center><td>34</td><td align=right>51.505</td></tr>
+<tr align=center><td>35</td><td align=right>54.004</td></tr>
+<tr align=center><td>36</td><td align=right>56.502</td></tr>
+<tr align=center><td>37</td><td align=right>59.084</td><td>GS</td><td><img src="0405/37.gif"></td></tr>
+<tr align=center><td>38</td><td align=right>61.937</td><td rowspan="13">BF, CP</td><td rowspan="13"><img src="0405/40.gif"></td></tr>
+<tr align=center><td>39</td><td align=right>64.937</td></tr>
+<tr align=center><td>40</td><td align=right>67.937</td></tr>
+<tr align=center><td>41</td><td align=right>70.937</td></tr>
+<tr align=center><td>42</td><td align=right>73.937</td></tr>
+<tr align=center><td>43</td><td align=right>76.937</td></tr>
+<tr align=center><td>44</td><td align=right>79.937</td></tr>
+<tr align=center><td>45</td><td align=right>82.937</td></tr>
+<tr align=center><td>46</td><td align=right>85.937</td></tr>
+<tr align=center><td>47</td><td align=right>88.937</td></tr>
+<tr align=center><td>48</td><td align=right>91.937</td></tr>
+<tr align=center><td>49</td><td align=right>94.937</td></tr>
+<tr align=center><td>50</td><td align=right>97.937</td></tr>
+</table></center><p>
+
+
+
+
+Here are the best areas that people managed to contain with 40 rigid segments:<p>
+
+<center><font size=+2>Largest Areas of Rigid Tent With n=40</font></center>
+<center><table border bgcolor=lightyellow cellpadding=4>
+<tr align=center><th bgcolor=CCFFCC>Name<th bgcolor=CCFFCC>Best Area
+<tr align=center><td>Bertram Felgenhauer<td>67.93
+<tr align=center><td>Brian J<td>67.93
+<tr align=center><td>Dan Dima<td>67.93
+<tr align=center><td>Dave Langers<td>67.93
+<tr align=center><td>Corey Plover<td>67.93
+<tr align=center><td>Guenter Stertenbrink<td>67.54
+<tr align=center><td>Emilio Schiavi<td>63.91
+<tr align=center><td>Erich Friedman<td>63.80
+<tr align=center><td>Andrew Bayly<td>63.80
+<tr align=center><td>David Cantrell<td>63.74
+<tr align=center><td>Gary Gerken<td>58.80
+<tr align=center><td>George Sicherman<td>56.14
+<tr align=center><td>Joseph DeVincentis<td>53.68
+</table></center><p>
+
+The best rigid tent for n=40 is the last picture shown above.  Bertram Felgenhauer wins the $10 prize.  Here are some of the other solutions I received:<p> 
+
+<center><table cellpadding=5><tr><td><img src="0405/andrew.gif"><td><img src="0405/bertrand.gif"><td><img src="0405/dan.gif"></table></center><p>
+
+<center><img src="0405/gary.jpg"></center><p>
+
+<center><img src="0405/corey.gif"></center><p>
+
+<p><hr>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 4/29/05.<font></BODY></HTML>

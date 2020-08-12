@@ -1,0 +1,460 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Math Magic</TITLE></HEAD><BODY background="formulas.gif"><font size=+1>
+
+<CENTER><H1>Problem of the Month (January 2007)</H1></CENTER>
+
+This month we examine three problems about overlapping polyominoes on a square lattice.<p>
+
+<font size=+3>Problem #1:</font> Consider a numbered polyomino P, a polyomino with positive integers in each square.  Can copies of P be arranged in the plane so that wherever two copies intersect: 1) the numbers in the squares agree, 2) the numbers indicate how many copies of P intersect there, and 3) no two copies of P lie exactly on top of one another?  If so, we call this a <b>numbered polyomino intersection</b>.  For example, the smallest possible numbered domino intersections are shown below.<br>
+
+<table align=center cellpadding=10><tr>
+<td><img src="0107/I2-12x.gif">
+<TD><img src="0107/I2-13x.gif">
+<TD><img src="0107/I2-22x.gif">
+<TD><img src="0107/I2-14x.gif">
+<TD><img src="0107/I2-23x.gif">
+</tr></table><p>
+
+What are the minimal arrangements for numbered triominoes?  numbered tetrominoes?  other polyforms?<p>
+
+<font size=+3>Problem #2:</font> Consider a polyomino P.  We say its <b>non-intersection set</b> is the set of areas that are impossible to achieve by intersecting 2 copies of P in the plane.  For a given n, what non-intersection sets are possible?  What about other polyforms?<p>
+
+<font size=+3>Problem #3:</font> An <b>intersecting plane cover</b> is a cover of the plane using copies of one polyomino so that every square is covered exactly twice, and different copies of the polyomino intersect in at most one square.  Which polyominoes have intersecting plane covers?  What about other polyforms?<p>
+<p>
+
+
+
+
+<P><hr><p><center><h1>ANSWERS</h1></center>
+
+<font size=+3>Problem #1:</font><p>
+
+Here are the known numbered intersections for small polyominoes.<p>
+
+<table bgcolor=EEFFEE border=3 align=center><tr><td>
+<center><font size=+3>Numbered Domino Intersections</font></center>
+<TABLE BORDER=0 cellspacing=20 align=center><TR align=center><TD><img src="0107/I2-12.gif"><br>12
+<TD><img src="0107/I2-13.gif"><br>13
+<TD><img src="0107/I2-22.gif"><br>22
+<TD><img src="0107/I2-14.gif"><br>14
+<TD><img src="0107/I2-23.gif"><br>23
+</tr></table></table><p>
+
+<table bgcolor=FFEEFF border=3 align=center><tr><td>
+<center><font size=+3>Numbered Straight Triomino Intersections</font></center>
+<TABLE BORDER=0 cellspacing=20 align=center><TR align=center><TD><img src="0107/I3-112.gif"><br>112
+<TD><img src="0107/I3-121.gif"><br>121
+<TD><img src="0107/I3-113.gif"><br>113
+<TD><img src="0107/I3-122.gif"><br>122
+<TD><img src="0107/I3-212.gif"><br>212
+<TD><img src="0107/I3-114.gif"><br>114
+</tr></table>
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/I3-213.gif"><br>213
+<TD><img src="0107/I3-222.gif"><br>222
+<TD><img src="0107/I3-133.gif"><br>133
+<TD><img src="0107/I3-144.gif"><br>144
+</tr></table>
+</table><p>
+
+
+
+<table bgcolor=FFFFEE border=3 align=center><tr><td>
+<center><font size=+3>Numbered Bent Triomino Intersections</font></center>
+<TABLE BORDER=0 cellspacing=20 align=center><TR align=center><TD><img src="0107/L3-112.gif"><br>112
+<TD><img src="0107/L3-121.gif"><br>121
+<TD><img src="0107/L3-113.gif"><br>113
+<TD><img src="0107/L3-122.gif"><br>122
+<TD><img src="0107/L3-212.gif"><br>212
+<TD><img src="0107/L3-114.gif"><br>114
+<TD><img src="0107/L3-123.gif"><br>123
+</tr></table>
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/L3-213.gif"><br>213
+<TD><img src="0107/L3-222.gif"><br>222
+<TD><img src="0107/L3-124.gif"><br>124
+<TD><img src="0107/L3-214.gif"><br>214
+<TD><img src="0107/L3-133.gif"><br>133
+<TD><img src="0107/L3-313.gif"><br>313
+<TD><img src="0107/L3-223.gif"><br>223
+</tr></table>
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/L3-232.gif"><br>232
+<TD><img src="0107/L3-224.gif"><br>224
+<TD><img src="0107/L3-242.gif"><br>242
+<TD><img src="0107/L3-233.gif"><br>233
+<TD><img src="0107/L3-144.gif"><br>144
+<TD><img src="0107/L3-225.gif"><br>225
+<TD><img src="0107/L3-333.gif"><br>333
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/L3-244.gif"><br>244
+<TD><img src="0107/L3-226.gif"><br>226
+<TD><img src="0107/L3-227.gif"><br>227
+<TD><img src="0107/L3-228.gif"><br>228
+<TD><img src="0107/L3-444.gif"><br>444
+</tr></table>
+</table><p>
+
+
+<table bgcolor=FFEEEE border=3 align=center><tr><td>
+<center><font size=+3>Numbered Square Tetromino Intersections</font></center>
+<TABLE BORDER=0 cellspacing=20 align=center><TR align=center><TD><img src="0107/O4-1112.gif"><br>1112
+<TD><img src="0107/O4-1122.gif"><br>1122
+<TD><img src="0107/O4-1222.gif"><br>1222
+<TD><img src="0107/O4-1232.gif"><br>1232
+<TD><img src="0107/O4-1242.gif"><br>1242
+</tr></table>
+</table><p>
+
+<table bgcolor=EEEEEE border=3 align=center><tr><td>
+<center><font size=+3>Numbered Straight Tetromino Intersections</font></center>
+<TABLE BORDER=0 cellspacing=20 align=center><TR align=center><TD><img src="0107/I4-1112.gif"><br>1112
+<TD><img src="0107/I4-1121.gif"><br>1121
+<TD><img src="0107/I4-1122.gif"><br>1122
+<TD><img src="0107/I4-1212.gif"><br>1212
+<TD><img src="0107/I4-1221.gif"><br>1221
+<TD><img src="0107/I4-2112.gif"><br>2112
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=20 align=center><TR align=center><TD><img src="0107/I4-1113.gif"><br>1113
+<TD><img src="0107/I4-1222.gif"><br>1222
+<TD><img src="0107/I4-2122.gif"><br>2122
+<TD><img src="0107/I4-1213.gif"><br>1213
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=20 align=center><TR align=center><TD><img src="0107/I4-2113.gif"><br>2113
+<TD><img src="0107/I4-1114.gif"><br>1114
+<TD><img src="0107/I4-2222.gif"><br>2222
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=20 align=center><TR align=center><TD><img src="0107/I4-1133.gif"><br>1133
+<TD><img src="0107/I4-1242.gif"><br>1242
+<TD><img src="0107/I4-1144.gif"><br>1144
+<TD><img src="0107/I4-1333.gif"><br>1333
+<TD><img src="0107/I4-1444.gif"><br>1444
+</tr></table>
+</table><p>
+
+
+Jeremy Galvagni noticed that any straight n-omino numbered with 1's and 2's has a polyomino intersection, by placing them at various locations in an n&times;n square.<p>
+
+<hr><font size=+3>Problem #2:</font><p>
+
+Here are the non-trivial non-intersection sets for small polyominoes.<p>
+
+<table bgcolor=EEFFFF border=3 align=center><tr><td>
+<center><font size=+3>Polyomino Non-Intersection Sets</font></center>
+
+<hr>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>4
+<TD><img src="0107/4-3.gif"><br>{3}
+</tr></table>
+
+<hr>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>5</font>
+<TD><img src="0107/5-34.gif"><br>{3,4}
+<TD width=30>
+<TD><img src="0107/5-4.gif"><br>{4}
+</tr></table>
+
+<hr>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>6
+<TD><img src="0107/6-5.gif"><br>{5}
+</tr></table>
+
+<hr>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>7</font>
+<TD><img src="0107/7-56.gif"><br>{5,6}
+<TD width=30>
+<TD><img src="0107/7-5.gif"><br>{5}
+<TD><img src="0107/7-6.gif"><br>{6}
+</tr></table>
+
+<hr>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>8</font>
+<TD><img src="0107/8-567.gif"><br>{5,6,7}
+<TD width=30>
+<TD><img src="0107/8-56.gif"><br>{5,6}
+<TD><img src="0107/8-57.gif"><br>{5,7}
+<TD><img src="0107/8-67.gif"><br>{6,7}
+<TD width=30>
+<TD><img src="0107/8-5.gif"><br>{5}
+<TD><img src="0107/8-6.gif"><br>{6}
+<TD><img src="0107/8-7.gif"><br>{7}
+</tr></table>
+
+<hr>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>9</font>
+<TD><img src="0107/9-5678.gif"><br>{5,6,7,8}
+<TD width=30>
+<TD><img src="0107/9-578.gif"><br>{5,7,8}
+<TD><img src="0107/9-678.gif"><br>{6,7,8}
+<TD width=30>
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/9-57.gif"><br>{5,7}
+<TD><img src="0107/9-58.gif"><br>{5,8}
+<TD><img src="0107/9-67.gif"><br>{6,7}
+<TD><img src="0107/9-68.gif"><br>{6,8}
+<TD><img src="0107/9-78.gif"><br>{7,8}
+<TD width=30>
+<TD><img src="0107/9-6.gif"><br>{6}
+<TD><img src="0107/9-7.gif"><br>{7}
+<TD><img src="0107/9-8.gif"><br>{8}
+</tr></table>
+
+<hr>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>10</font>
+<TD><img src="0107/10-5689.gif"><br>{5,6,8,9}
+<TD><img src="0107/10-5789.gif"><br>{5,7,8,9}
+<TD><img src="0107/10-6789.gif"><br>{6,7,8,9}
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/10-579.gif"><br>{5,7,9}
+<TD><img src="0107/10-589.gif"><br>{5,8,9}
+<TD><img src="0107/10-678.gif"><br>{6,7,8}
+<TD><img src="0107/10-679.gif"><br>{6,7,9}
+<TD><img src="0107/10-689.gif"><br>{6,8,9}
+<TD><img src="0107/10-789.gif"><br>{7,8,9}
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/10-58.gif"><br>{5,8}
+<TD><img src="0107/10-68.gif"><br>{6,8}
+<TD><img src="0107/10-69.gif"><br>{6,9}
+<TD><img src="0107/10-78.gif"><br>{7,8}
+<TD><img src="0107/10-79.gif"><br>{7,9}
+<TD><img src="0107/10-89.gif"><br>{8,9}
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/10-7.gif"><br>{7}
+<TD><img src="0107/10-8.gif"><br>{8}
+<TD><img src="0107/10-9.gif"><br>{9}
+</tr></table>
+
+<hr>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>11</font>
+<TD><img src="0107/11-678910.gif"><br>{6,7,8,9,10}
+<TD width=30>
+<TD><img src="0107/11-57810.gif"><br>{5,7,8,10}
+<TD><img src="0107/11-58910.gif"><br>{5,8,9,10}
+<TD><img src="0107/11-68910.gif"><br>{6,8,9,10}
+<TD><img src="0107/11-78910.gif"><br>{7,8,9,10}
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/11-5710.gif"><br>{5,7,10}
+<TD><img src="0107/11-5810.gif"><br>{5,8,10}
+<TD><img src="0107/11-5910.gif"><br>{5,9,10}
+<TD><img src="0107/11-6910.gif"><br>{6,9,10}
+<TD><img src="0107/11-789.gif"><br>{7,8,9}
+<TD><img src="0107/11-7810.gif"><br>{7,8,10}
+<TD><img src="0107/11-7910.gif"><br>{7,9,10}
+<TD><img src="0107/11-8910.gif"><br>{8,9,10}
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/11-59.gif"><br>{5,9}
+<TD><img src="0107/11-69.gif"><br>{6,9}
+<TD><img src="0107/11-78.gif"><br>{7,8}
+<TD><img src="0107/11-79.gif"><br>{7,9}
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/11-710.gif"><br>{7,10}
+<TD><img src="0107/11-89.gif"><br>{8,9}
+<TD><img src="0107/11-810.gif"><br>{8,10}
+<TD><img src="0107/11-910.gif"><br>{9,10}
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/11-7.gif"><br>{7}
+<TD><img src="0107/11-8.gif"><br>{8}
+<TD><img src="0107/11-9.gif"><br>{9}
+<TD><img src="0107/11-10.gif"><br>{10}
+</tr></table>
+
+<hr>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>12</font>
+<TD><img src="0107/12-35691011.gif"><br>{3,5,6,9,10,11}
+<TD><img src="0107/12-56891011.gif"><br>{5,6,8,9,10,11}
+<TD><img src="0107/12-57891011.gif"><br>{5,7,8,9,10,11}
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/12-568911.gif"><br>{5,6,8,9,11}
+<TD><img src="0107/12-5691011.gif"><br>{5,6,9,10,11}
+<TD><img src="0107/12-5791011.gif"><br>{5,7,9,10,11}
+<TD><img src="0107/12-6891011.gif"><br>{6,8,9,10,11}
+<TD><img src="0107/12-7891011.gif"><br>{7,8,9,10,11}
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/12-56911.gif"><br>{5,6,9,11}
+<TD><img src="0107/12-571011.gif"><br>{5,7,10,11}
+<TD><img src="0107/12-58911.gif"><br>{5,8,9,11}
+<TD><img src="0107/12-591011.gif"><br>{5,9,10,11}
+<TD><img src="0107/12-691011.gif"><br>{6,9,10,11}
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/12-78910.gif"><br>{7,8,9,10}
+<TD><img src="0107/12-78911.gif"><br>{7,8,9,11}
+<TD><img src="0107/12-781011.gif"><br>{7,8,10,11}
+<TD><img src="0107/12-791011.gif"><br>{7,9,10,11}
+<TD><img src="0107/12-891011.gif"><br>{8,9,10,11}
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/12-5910.gif"><br>{5,9,10}
+<TD><img src="0107/12-6811.gif"><br>{6,8,11}
+<TD><img src="0107/12-6911.gif"><br>{6,9,11}
+<TD><img src="0107/12-789.gif"><br>{7,8,9}
+<TD><img src="0107/12-7810.gif"><br>{7,8,10}
+<TD><img src="0107/12-7811.gif"><br>{7,8,11}
+<TD><img src="0107/12-7910.gif"><br>{7,9,10}
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/12-7911.gif"><br>{7,9,11}
+<TD><img src="0107/12-71011.gif"><br>{7,10,11}
+<TD><img src="0107/12-8910.gif"><br>{8,9,10}
+<TD><img src="0107/12-8911.gif"><br>{8,9,11}
+<TD><img src="0107/12-81011.gif"><br>{8,10,11}
+<TD><img src="0107/12-91011.gif"><br>{9,10,11}
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/12-78.gif"><br>{7,8}
+<TD><img src="0107/12-79.gif"><br>{7,9}
+<TD><img src="0107/12-710.gif"><br>{7,10}
+<TD><img src="0107/12-711.gif"><br>{7,11}
+<TD><img src="0107/12-89.gif"><br>{8,9}
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/12-810.gif"><br>{8,10}
+<TD><img src="0107/12-811.gif"><br>{8,11}
+<TD><img src="0107/12-910.gif"><br>{9,10}
+<TD><img src="0107/12-911.gif"><br>{9,11}
+<TD><img src="0107/12-1011.gif"><br>{10,11}
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/12-7.gif"><br>{7}
+<TD><img src="0107/12-8.gif"><br>{8}
+<TD><img src="0107/12-9.gif"><br>{9}
+<TD><img src="0107/12-10.gif"><br>{10}
+<TD><img src="0107/12-11.gif"><br>{11}
+</tr></table>
+
+</table><p>
+
+
+George Sicherman found non-intersection sets for small polyiamonds and polyhexes.<p>
+
+<table bgcolor=EEFFFF border=3 align=center><tr><td>
+<center><font size=+3>Polyiamond Non-Intersection Sets</font></center>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>4
+<TD><img src="0107/mlap4.gif">
+</tr></table>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>5
+<TD><img src="0107/mlap5.gif">
+</tr></table>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>6
+<TD><img src="0107/mlap6.gif">
+</tr></table>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>7
+<TD><img src="0107/mlap7.gif">
+</tr></table>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>8
+<TD><img src="0107/mlap8.gif">
+</tr></table>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>9
+<TD><img src="0107/mlap9.gif">
+</tr></table>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>10
+<TD><img src="0107/mlap10.gif">
+</tr></table>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>11
+<TD><img src="0107/mlap11.gif">
+</tr></table>
+</table><p>
+
+
+<table bgcolor=EEFFFF border=3 align=center><tr><td>
+<center><font size=+3>Polyhex Non-Intersection Sets</font></center>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>4
+<TD><img src="0107/xlap4.gif">
+</tr></table>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>5
+<TD><img src="0107/xlap5.gif">
+</tr></table>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>6
+<TD><img src="0107/xlap6.gif">
+</tr></table>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>7
+<TD><img src="0107/xlap7.gif">
+</tr></table>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>8
+<TD><img src="0107/xlap8.gif">
+</tr></table>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>9
+<TD><img src="0107/xlap9.gif">
+</tr></table>
+</table><p>
+
+
+
+<hr><font size=+3>Problem #3:</font><p>
+
+Sune Kristian Jakobsen found the covers for the pentominoes and showed that the others are impossible.  How many of the hexominoes are possible?<p>
+
+Here are the small intersecting plane covers. <p>
+
+<table bgcolor=EEEEFF border=3 align=center><tr><td>
+<center><font size=+3>Intersecting Plane Covers</font></center>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>2
+<TD><img src="0107/pI2.gif">
+</tr></table>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>3
+<TD><img src="0107/pI3.gif">
+<TD><img src="0107/pL3.gif">
+</tr></table>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>4
+<TD><img src="0107/pI4.gif">
+<TD><img src="0107/pL4.gif">
+<TD><img src="0107/pO4.gif">
+<TD><img src="0107/pS4.gif">
+<TD><img src="0107/pT4.gif">
+</tr></table>
+
+<hr><TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><font size=+2>5
+<TD><img src="0107/pI5.gif">
+<TD><img src="0107/pL5.gif">
+<TD><img src="0107/pV5.gif">
+<TD><img src="0107/pP5.gif">
+</tr></table>
+
+<TABLE BORDER=0 cellspacing=10 align=center><TR align=center><TD><img src="0107/pY5.gif">
+<TD><img src="0107/pZ5.gif">
+<TD><img src="0107/pT5.gif">
+<TD><img src="0107/pN5.gif">
+</tr></table>
+</table><p>
+
+
+
+<p><hr><p>If you can extend any of these results, please <a href="mailto:efriedma@stetson.edu">e-mail</a> me.  Click <a href="http://www.stetson.edu/~efriedma/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 1/15/07.<font>
+</BODY></HTML>
+
