@@ -8,13 +8,16 @@ We generalize this by looking for closed tours of rectangular chessboards by Kin
 
 <P><hr><p><center><h1>ANSWERS</h1></center>
 
-Let R(m,n), K(m,n), and Q(m,n) be the maximum number of the corresponding chess pieces that can be part of a closed non-threatening tour.  It is clear that R(m,n) &le; min{m,n} and Q(m,n) &le; min{m,n}, since no more than one piece can be in any row at any given time.  It is less obvious that K(m,n) &le; <sup><font size=+1>&lceil;</font></sup> m/2 <sup><font size=+1>&rceil;</font></sup> <sup><font size=+1>&lceil;</font></sup> n/2 <sup><font size=+1>&rceil;</font></sup>, because this is the maximum number of non-attacking Kings that will fit on such a chessboard.  This can be reduced by 1 when m or n is odd, and reduced by 2 when both are odd, but surely there is a better upper bound?  Corey Plover and Claudio Baiocchi noticed that K(m,n) &ge; Q(m,n), since the pieces have the same moves and the Queens are more restricted.<p>
+Let R(m,n), K(m,n), and Q(m,n) be the maximum number of the corresponding chess pieces that can be part of a closed non-threatening tour.  It is clear that R(m,n) &le; min{m,n} and Q(m,n) &le; min{m,n}, since no more than one piece can be in any row at any given time.  It is less obvious that K(m,n) &le; <img src="lceil.gif" valign=center> m/2 <img src="rceil.gif" valign=center> <img src="lceil.gif" valign=center> n/2 <img src="rceil.gif" valign=center>, because this is the maximum number of non-attacking Kings that will fit on such a chessboard.  This can be reduced by 1 when m or n is odd, and reduced by 2 when both are odd, but surely there is a better upper bound?  Corey Plover and Claudio Baiocchi noticed that K(m,n) &ge; Q(m,n), since the pieces have the same moves and the Queens are more restricted.<p>
 
 You can click on some of the tours below for an animation of the tour.<p>
 
-By generalizing the tour <a href="0707/R3x6.gif"><img src="0707/R3x6still.gif" align=center></a> we see that R(3,4n+2)=3.<p>
+I proved that R(3,4n+2)=3 and R(3,2n)&ge;2 by generalizing these tours:<p>
 
-By generalizing the tour <a href="0707/R3x4.gif"><img src="0707/R3x4still.gif" align=center></a> we see that R(3,2n)&ge;2.<p>
+<table align=center><tr align=center>
+<td><a href="0707/R3x6.gif"><img src="0707/R3x6still.gif" align=center></a><br>(animation)
+<td width=50>
+<td><a href="0707/R3x4.gif"><img src="0707/R3x4still.gif" align=center></a><br>(animation) </table><p>
 
 David Bush proved that R(2n,2m)=2min{m,n} by considering zig-zag tours like this: <img src="0707/R8x8.gif" align=center><p>
 
@@ -30,15 +33,11 @@ He showed these optimal values for K(3,n):<p>
 
 He showed these other lower bounds for K(3,n):<p>
 
-<center><img src="0707/K3x15.gif"></center><p>
-
-<center><img src="0707/K3x17.gif"></center><p>
+<center><img src="0707/K3x15.gif">&nbsp; &nbsp;<img src="0707/K3x17.gif"></center><p>
 
 And he showed K(3,2n)&ge;n by generalizing the tour:<p>
  
 <center><img src="0707/K3x10.gif"></center><p>
-
-
 
 He showed K(4,n)&ge;n-1 (and that K(4,n)=n-1 for 3&le;n&le;8) with a series of tours:<p>
 
@@ -58,21 +57,15 @@ He showed K(4,rs)&ge;8s for r&ge;13 odd by generalizing the tour:<p>
 
 <center><img src="0707/K4x13.gif"></center><p>
 
+He showed K(5,n)&ge;n for r&ge;3 by generalizing these tours:<p>
 
-
-He showed K(5,n)&ge;n for r&ge;3 by generalizing the tours:<p>
-
-<center><img src="0707/K5x10.gif" align=center> and <img src="0707/K5x11.gif" align=center></center><p>
-
-
+<center><img src="0707/K5x10.gif" align=center>&nbsp; &nbsp;<img src="0707/K5x11.gif" align=center></center><p>
 
 He showed these lower bounds for larger rectangles:<p>
 
-<center><img src="0707/K6x6.gif" align=center>&nbsp; &nbsp; <img src="0707/K6x7.gif" align=center>&nbsp; &nbsp; <img src="0707/K6x9.gif" align=center></center><p>
+<center><img src="0707/K6x6.gif" align=center>&nbsp; &nbsp; <img src="0707/K6x7.gif" align=center>&nbsp; &nbsp; <img src="0707/K6x9.gif" align=center>&nbsp; &nbsp; <img src="0707/K6x10.gif" align=center> </center><p>
 
-<center><img src="0707/K6x10.gif" align=center>&nbsp; &nbsp; <img src="0707/K7x7.gif" align=center></center><p>
-
-<center><img src="0707/K7x8.gif" align=center>&nbsp; &nbsp;<img src="0707/K8x8.gif" align=center></center><p>
+<center><img src="0707/K7x7.gif" align=center>&nbsp; &nbsp; <img src="0707/K7x8.gif" align=center>&nbsp; &nbsp;<img src="0707/K8x8.gif" align=center></center><p>
 
 Finally, he gave a very general tour that shows K(3n,4m)&ge;2mn:
 
@@ -95,41 +88,39 @@ Here are the best known bounds on K(n,m):<p>
 
 <hr>
 
-I showed Q(3,5)=1, and showed Q(3,4)=2, and Q(3,6)=3 with the tours below:<p>
+I showed Q(3,5)=1, and showed Q(3,4)=2 and Q(3,6)=3 with the tours below:<p>
 
-<center><a href="0707/Q3x4.gif"><img src="0707/Q3x4still.gif" align=center></a>&nbsp; &nbsp; <a href="0707/Q3x6.gif"><img src="0707/Q3x6still.gif" align=center></a></center><p>
+<table align=center><tr align=center>
+<td><a href="0707/Q3x4.gif"><img src="0707/Q3x4still.gif" align=center></a><br>(animation)
+<td width=50>
+<td><a href="0707/Q3x6.gif"><img src="0707/Q3x6still.gif" align=center></a><br>(animation)
+</table><p>
 
 David Bevan gave many great results for Q(n,m).  He showed Q(3,7)=1 with his computer program.<p>
 
 He showed Q(3,9)=2, Q(3,11)=2, and Q(3,13)&ge;2:<p>
 
-<center><img src="0707/Q3x9.gif" align=center>&nbsp; &nbsp;<img src="0707/Q3x11.gif" align=center></center><p>
+<center><img src="0707/Q3x9.gif" align=center>&nbsp; &nbsp;<img src="0707/Q3x11.gif" align=center>&nbsp; &nbsp;<img src="0707/Q3x13.gif" align=center></center><p>
 
-<center><img src="0707/Q3x13.gif" align=center></center><p>
+He showed Q(3,2n)&ge;2 for n&ge;4 by generalizing these tours:<p>
 
-He showed Q(3,2n)&ge;2; for n&ge;4 by generalizing the tours:<p>
+<center><img src="0707/Q3x8.gif" align=center>&nbsp; &nbsp;<img src="0707/Q3x10.gif" align=center></center><p>
 
-<center><img src="0707/Q3x8.gif" align=center> and <img src="0707/Q3x10.gif" align=center></center><p>
+He showed Q(3,3n)&ge;3 for n&ge;4 by generalizing these tours:<p>
 
-He showed Q(3,3n)&ge;3 for n&ge;4 by generalizing the tours:<p>
-
-<center><img src="0707/Q3x12.gif" align=center> and <img src="0707/Q3x15.gif" align=center></center><p>
+<center><img src="0707/Q3x12.gif" align=center>&nbsp; &nbsp;<img src="0707/Q3x15.gif" align=center></center><p>
 
 He showed these optimal values of Q(4,n):<p>
 
-<center><img src="0707/Q4x4.gif" align=center>&nbsp; &nbsp;<img src="0707/Q4x5.gif" align=center>&nbsp; &nbsp;<img src="0707/Q4x6.gif" align=center></center><p>
-
-<center><img src="0707/Q4x7.gif" align=center>&nbsp; &nbsp;<img src="0707/Q4x8.gif" align=center></center><p>
+<center><img src="0707/Q4x4.gif" align=center>&nbsp; &nbsp;<img src="0707/Q4x5.gif" align=center>&nbsp; &nbsp;<img src="0707/Q4x6.gif" align=center>&nbsp; &nbsp;<img src="0707/Q4x7.gif" align=center>&nbsp; &nbsp;<img src="0707/Q4x8.gif" align=center></center><p>
 
 He showed these lower bounds for Q(4,n):<p>
 
-<center><img src="0707/Q4x9.gif" align=center>&nbsp; &nbsp;<img src="0707/Q4x11.gif" align=center></center><p>
+<center><img src="0707/Q4x9.gif" align=center>&nbsp; &nbsp;<img src="0707/Q4x11.gif" align=center>&nbsp; &nbsp;<img src="0707/Q4x15.gif" align=center></center><p>
 
-<center><img src="0707/Q4x15.gif" align=center></center><p>
+He showed that Q(4,2n)=4 for n&ge;5 by generalizing these tours:<p>
 
-He showed that Q(4,2n)=4 for n&ge;5 by generalizing the tours<p>
-
-<center><img src="0707/Q4x10.gif" align=center> and <img src="0707/Q4x12.gif" align=center></center><p>
+<center><img src="0707/Q4x10.gif" align=center>&nbsp; &nbsp;<img src="0707/Q4x12.gif" align=center></center><p>
 
 He showed these optimal values of Q(5,n):<p>
 
@@ -141,17 +132,13 @@ He showed these lower bounds for Q(5,n):<p>
 
 <center><img src="0707/Q5x12.gif" align=center>&nbsp; &nbsp;<img src="0707/Q5x14.gif" align=center></center><p>
 
-<center><img src="0707/Q5x16.gif" align=center></center><p>
-
-<center><img src="0707/Q5x18.gif" align=center></center><p>
+<center><img src="0707/Q5x16.gif" align=center>&nbsp; &nbsp;<img src="0707/Q5x18.gif" align=center></center><p>
 
 He showed these lower bounds for Q(6,n):<p>
 
 <center><img src="0707/Q6x6.gif" align=center>&nbsp; &nbsp;<img src="0707/Q6x7.gif" align=center>&nbsp; &nbsp;<img src="0707/Q6x8.gif" align=center></center><p>
 
-<center><img src="0707/Q6x9.gif" align=center>&nbsp; &nbsp;<img src="0707/Q6x10.gif" align=center></center><p>
-
-<center><img src="0707/Q6x12.gif" align=center></center><p>
+<center><img src="0707/Q6x9.gif" align=center>&nbsp; &nbsp;<img src="0707/Q6x10.gif" align=center>&nbsp; &nbsp;<img src="0707/Q6x12.gif" align=center></center><p>
 
 Here are the best known bounds on Q(n,m):<p>
 
