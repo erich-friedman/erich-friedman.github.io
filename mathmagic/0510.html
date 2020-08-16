@@ -6,7 +6,7 @@ This month we consider several problems concerning numbers:<p><hr><p>
 
 <font size=+2>1.</font> Which positive integers n have a <b>multiplicative partition</b>, a partition with the property that there are exactly n subsets of the partition with product n, including one that contains any given summand?  For example, 18 = 3 + 3 + 3 + 3 + 2 + 2 + 2 has this property, since there are <sub>4</sub>C<sub>2</sub> = 6 ways to choose two factors of 3's, and <sub>3</sub>C<sub>1</sub> = 3 ways to choose one factor of 2.  What is the smallest odd number that has a multiplicative partition?<p>
 
-<font size=+2>2.</font> For a given non-negative integer n, what is the shortest <b>unique equation</b> for n, an equation in one variable that has unique integer solution n?  We allow well-known symbols of any kind (+, &ndash;, +, /, ^, !, &radic;, concatenation, etc.), but we do not allow constants.  For example, x + x = x has unique solution x = 0, and x<sup>x</sup> = x has unique solution x = 1.  What are the equations using the fewest symbols that uniquely identify the positive integers?<p>
+<font size=+2>2.</font> For a given non-negative integer n, what is the shortest <b>unique equation</b> for n, an equation in one variable that has unique integer solution n?  We allow well-known symbols of any kind (+, &ndash;, &times;, /, ^, !, &radic;, concatenation, etc.), but we do not allow constants.  For example, x + x = x has unique solution x = 0, and x<sup>x</sup> = x has unique solution x = 1.  What are the equations using the fewest symbols that uniquely identify the positive integers?<p>
 
 <font size=+2>3.</font> In <a href="https://erich-friedman.github.io/mathmagic/0601.html">June 2001</a>, we investigated printer's errors involving powers.  But if a subscript is used to denote a base, there are also strings of digits that evaluate to the same number for different sets of subscripted digits.  We call these <b>base printer errors</b>.  For example, 10<sub>89</sub> = 108<sub>9</sub>, as both evaluate to 89.  Can you find some other base printer errors?  What infinite families are there?  Are there strings that can be interpreted 3 different ways to give the same result? <p>
 
@@ -170,12 +170,11 @@ Below are the shortest known equations.  We count square brackets [ ] but not ro
 Here are the known base printer errors with 8 or fewer digits:<p>
 
 <table border=1 bgcolor=FFFFDD cellpadding=6 align=center>
-<th align=center bgcolor=DDDDFF colspan=3>4-Digit Printer Errors
+<th align=center bgcolor=DDDDFF colspan=6>4-Digit Printer Errors
 <tr align=center>
 <td>10<sub>89</sub> = 108<sub>9</sub> = 89
 <td>11<sub>78</sub> = 117<sub>8</sub> = 79
 <td>12<sub>24</sub> = 122<sub>4</sub> = 26
-<tr align=center>
 <td>12<sub>67</sub> = 126<sub>7</sub> = 69
 <td>13<sub>56</sub> = 135<sub>6</sub> = 59
 <td>14<sub>45</sub> = 144<sub>5</sub> = 49
@@ -183,7 +182,6 @@ Here are the known base printer errors with 8 or fewer digits:<p>
 <td>21<sub>89</sub> = 218<sub>9</sub> = 179
 <td>23<sub>78</sub> = 237<sub>8</sub> = 159
 <td>25<sub>67</sub> = 256<sub>7</sub> = 139
-<tr align=center>
 <td>32<sub>89</sub> = 328<sub>9</sub> = 269
 <td>35<sub>78</sub> = 357<sub>8</sub> = 239
 <td>43<sub>89</sub> = 438<sub>9</sub> = 359
@@ -191,31 +189,28 @@ Here are the known base printer errors with 8 or fewer digits:<p>
 <td>47<sub>78</sub> = 477<sub>8</sub> = 319
 <td>52<sub>68</sub> = 526<sub>8</sub> = 342
 <td>54<sub>89</sub> = 548<sub>9</sub> = 449
-<tr align=center>
 <td>65<sub>89</sub> = 658<sub>9</sub> = 539
 <td>76<sub>89</sub> = 768<sub>9</sub> = 629
 <td>87<sub>89</sub> = 878<sub>9</sub> = 719
 </table><p>
 
 <table border=1 bgcolor=FFFFDD cellpadding=6 align=center>
-<th align=center bgcolor=DDDDFF colspan=3>5-Digit Printer Errors
+<th align=center bgcolor=DDDDFF colspan=5>5-Digit Printer Errors
 <tr align=center>
 <td>11<sub>110</sub> = 111<sub>10</sub> = 111
 <td>11<sub>889</sub> = 1188<sub>9</sub> = 890
 <td>13<sub>114</sub> = 1311<sub>4</sub> = 117
-<tr align=center>
 <td>13<sub>419</sub> = 134<sub>19</sub> = 422
 <td>14<sub>623</sub> = 146<sub>23</sub> = 627
-<td>15<sub>416</sub> = 1541<sub>6</sub> = 421
 <tr align=center>
+<td>15<sub>416</sub> = 1541<sub>6</sub> = 421
 <td>15<sub>627</sub> = 1562<sub>7</sub> = 632
 <td>15<sub>928</sub> = 159<sub>28</sub> = 933
 <td>16<sub>212</sub> = 162<sub>12</sub> = 218
-<tr align=center>
 <td>18<sub>825</sub> = 188<sub>25</sub> = 833
+<tr align=center>
 <td>23<sub>889</sub> = 2388<sub>9</sub> = 1781
 <td>31<sub>779</sub> = 3177<sub>9</sub> = 2338
-<tr align=center>
 <td>34<sub>214</sub> = 342<sub>14</sub> = 646
 <td>35<sub>889</sub> = 3588<sub>9</sub> = 2672
 <td>36<sub>624</sub> = 366<sub>24</sub> = 1878
@@ -223,27 +218,24 @@ Here are the known base printer errors with 8 or fewer digits:<p>
 <td>44<sub>420</sub> = 444<sub>20</sub> = 1684
 <td>47<sub>522</sub> = 375<sub>22</sub> = 2095
 <td>47<sub>889</sub> = 4788<sub>9</sub> = 3563
-<tr align=center>
 <td>99<sub>930</sub> = 999<sub>30</sub> = 8379
-<td>&nbsp;
 <td>&nbsp;
 </table><p>
 
 <table border=1 bgcolor=FFFFDD cellpadding=6 align=center>
-<th align=center bgcolor=DDDDFF colspan=3>6-Digit Printer Errors
+<th align=center bgcolor=DDDDFF colspan=4>6-Digit Printer Errors
 <tr align=center>
 <td>10<sub>1010</sub> = 1010<sub>10</sub> = 1010
 <td>10<sub>2537</sub> = 10253<sub>7</sub> = 2537
 <td>11<sub>1110</sub> = 1111<sub>10</sub> = 1111
-<tr align=center>
 <td>12<sub>1210</sub> = 1212<sub>10</sub> = 1212
+<tr align=center>
 <td>12<sub>7719</sub> = 1277<sub>19</sub> = 7721
 <td>13<sub>1310</sub> = 1313<sub>10</sub> = 1313
-<tr align=center>
 <td>13<sub>3617</sub> = 13361<sub>7</sub> = 3620
 <td>13<sub>6918</sub> = 1369<sub>18</sub> = 6921
-<td>14<sub>1410</sub> = 1414<sub>10</sub> = 1414
 <tr align=center>
+<td>14<sub>1410</sub> = 1414<sub>10</sub> = 1414
 <td>15<sub>1510</sub> = 1515<sub>10</sub> = 1515
 <td>15<sub>8819</sub> = 1588<sub>19</sub> = 8824
 <td>16<sub>1610</sub> = 1616<sub>10</sub> = 1616
@@ -251,15 +243,14 @@ Here are the known base printer errors with 8 or fewer digits:<p>
 <td>17<sub>1710</sub> = 1717<sub>10</sub> = 1717
 <td>18<sub>1810</sub> = 1818<sub>10</sub> = 1818
 <td>18<sub>9919</sub> = 1899<sub>19</sub> = 9927
-<tr align=center>
 <td>19<sub>1910</sub> = 1919<sub>10</sub> = 1919
+<tr align=center>
 <td>20<sub>2467</sub> = 20246<sub>7</sub> = 4934
 <td>22<sub>1546</sub> = 22154<sub>6</sub> = 3094
-<tr align=center>
 <td>29<sub>4415</sub> = 2944<sub>15</sub> = 8839
 <td>42<sub>2607</sub> = 42260<sub>7</sub> = 10430
-<td>45<sub>1912</sub> = 4519<sub>12</sub> = 7653
 <tr align=center>
+<td>45<sub>1912</sub> = 4519<sub>12</sub> = 7653
 <td>80<sub>8020</sub> = 8080<sub>20</sub> = 64160
 <td>&nbsp;
 <td>&nbsp;
@@ -311,7 +302,7 @@ Joe DeVincentis found these 9 digit printer errors:<p>
 <td>62<sub>4973113</sub> = 6249731<sub>13</sub> = 29838680
 </table><p>
 
-Joe DeVincentis noticed that all but one of the 4-digit solutions are of the form ABCD with C=D-1 and B=(10-D)A-1.<p>
+Joe DeVincentis noticed that all but one of the 4-digit solutions are of the form ABCD with C=D-1 and B=(10&ndash;D)A&ndash;1.<p>
 
 Joe DeVincentis found two infinite families of solutions: 1N<sub>1N1N...1N10</sub> = 1N1N...1N<sub>10</sub> and 11<sub>11...10</sub> = 11...1<sub>10</sub>.<p>
 
@@ -359,13 +350,13 @@ Here are the smallest known Friedman numbers of order n:<p>
 <tr align=center><td><font size=+1>9<td><font size=+1>22,528,399,544,939,174,411,840,147,874,772,641<br>= 3<sup>72</sup> = 3<sup>72</sup> = (4-1)<sup>72</sup> = (4-1)<sup>76&ndash;4</sup> = 9<sup>9&times;4</sup><br>= 9<sup>40&ndash;4</sup> = 9<sup>8&times;4+4</sup> = 27<sup>5&times;5&ndash;1</sup> = 81<sup>18</sup><td>(JD)
 
 <tr align=center><td><font size=+1>10<td><font size=+1>147,808,829,414,345,923,316,083,210,206,383,297,601<br>= 
-3<sup>80</sup> = 3<sup>80</sup> = 3<sup>80</sup> = 3<sup>80</sup> = 3<sup>72+8</sup> = 3<sup>74+6</sup><br>= 9<sup>40</sup> = 9<sup>46&ndash;6</sup> = 9<sup>4&times;5&times;2&times;1</sup> = (11&ndash;2)<sup>(21&ndash;1)&times;2</sup><td>(JD)
+3<sup>80</sup> = 3<sup>80</sup> = 3<sup>80</sup> = 3<sup>80</sup> = 3<sup>72+8</sup> = 3<sup>74+6</sup><br>= 9<sup>40</sup> = 9<sup>46&ndash;6</sup> = 9<sup>4&times;5&times;2&times;1</sup> = (11&ndash;2)<sup>2(21&ndash;1)</sup><td>(JD)
 
 <tr align=center><td><font size=+1>11<td><font size=+1>1,427,247,692,705,959,881,058,285,969,449,495,136,382,746,624
 <br>= 4<sup>75</sup> = 4<sup>75</sup> = 4<sup>75</sup> = 8<sup>50</sup> = 8<sup>50</sup> = 4<sup>73+2</sup> = 4<sup>81&ndash;6</sup><br>= 4<sup>81&ndash;6</sup> = 4<sup>69+6</sup> = 2<sup>12<sup>2</sup>+6</sup> = 32<sup>9+9+9+9+9+2&ndash;9&ndash;8</sup><td>(JD)
 
 <tr align=center><td><font size=+1>12<td><font size=+1>91,343,852,333,181,432,387,730,302,044,767,688,728,495,783,936
-<br>= 4<sup>78</sup> = 4<sup>78</sup> = 4<sup>78</sup> = 4<sup>78</sup> = 4<sup>78</sup> = 8<sup>52</sup> = 8<sup>52</sup> = 16<sup>39</sup><br>= 16<sup>39</sup> = 16<sup>39</sup> = 2<sup>300/2+3+3</sup> = (7-3)<sup>3&times;(30&ndash;3)&ndash;3</sup><td>(JD)
+<br>= 4<sup>78</sup> = 4<sup>78</sup> = 4<sup>78</sup> = 4<sup>78</sup> = 4<sup>78</sup> = 8<sup>52</sup> = 8<sup>52</sup> = 16<sup>39</sup><br>= 16<sup>39</sup> = 16<sup>39</sup> = 2<sup>300/2+3+3</sup> = (7&ndash;3)<sup>3&times;(30&ndash;3)&ndash;3</sup><td>(JD)
 
 </table><p>
 
