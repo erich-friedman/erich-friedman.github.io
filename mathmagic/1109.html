@@ -10,9 +10,9 @@ We call a building <b>perfect</b> if each pair of floors is linked by exactly on
 
 It is easy to see f(e+1,s) &ge; f(e,s), since an extra elevator can't hurt, and f(e,s+1) &ge; f(e,s)+1, since the extra stop for each elevator can be a new floor.  It is harder to see that f(e,ks) &ge; k f(e,s). To do so, pile k copies of a convenient building with f(e,s) floors on top of one another, and link the corresponding elevators so that each stops at ks floors.<p>
 
-Another very useful upper bound for f(e,s) is given by f(e,s)<img src="lceil.gif" align=center>(f(e,s)-1)/(s-1)<img src="rceil.gif" align=center> &le; es.  This comes from the fact that we need at least (f(e,s)-1)/(s-1) elevators to visit each floor.<p>
+Another very useful upper bound for f(e,s) is given by f(e,s)<img src="lceil.gif" align=center>(f(e,s)&ndash;1)/(s&ndash;1)<img src="rceil.gif" align=center> &le; es.  This comes from the fact that we need at least (f(e,s)&ndash;1)/(s&ndash;1) elevators to visit each floor.<p>
 
-Jeremy Galvagni gave the lower bound f(e,s) &ge; 1/2 + &radic;(2es + 1/4) that comes from the fact that f(e,s)[f(e,s)-1]/2 &ge; es.<p>
+Jeremy Galvagni gave the lower bound f(e,s) &ge; 1/2 + &radic;(2es + 1/4) that comes from the fact that f(e,s)[f(e,s)&ndash;1]/2 &ge; es.<p>
 
 Jeremy Galvagni also noted that if x&lt;y, then f(x,y) &le; f(y,x).<p>
 
@@ -26,7 +26,7 @@ f(3,2k) = 3k<br>
 f(3,2k+1) = 3k+1<br>
 f(6,s) = 2s (for s&ge;2)<br>
 f(7,3k) = 7k<br>
-f(7,3k-1) = 7k-3<br>
+f(7,3k&ndash;1) = 7k&ndash;3<br>
 f(12,3k) = 9k<br>
 f(13,4k) = 13k<p>
 
@@ -78,7 +78,7 @@ The known specific results are summarized in the table below.  The results shown
 
 Jeremy Galvagni found perfect elevator designs for f(7,3) and f(12,3).  Joe DeVincentis found perfect elevator designs for f(7,3), f(12,3), and f(13,4).<p>
 
-Joe DeVincentis generalized the perfect f(7,3) and f(13,4) buildings to perfect f(s<sup>2</sup>-s+1,s) buildings for all s.  He also showed that e=f(f-1)/s(s-1) and (f-1)/(s-1) need to be integers for a perfect building.  Based on this, he conjectured that perfect f(s<sup>2</sup>+s,s)=s<sup>2</sup> buildings exist.  Both Evert Stenlund and Dave Langers then showed that omitting an elevator from a perfect f((s+1)<sup>2</sup>-(s+1)+1,s) building along with all floors that it visits constructs a perfect f(s<sup>2</sup>+s,s) building.<p>
+Joe DeVincentis generalized the perfect f(7,3) and f(13,4) buildings to perfect f(s<sup>2</sup>&ndash;s+1,s) buildings for all s.  He also showed that e=f(f&ndash;1)/s(s&ndash;1) and (f&ndash;1)/(s&ndash;1) need to be integers for a perfect building.  Based on this, he conjectured that perfect f(s<sup>2</sup>+s,s)=s<sup>2</sup> buildings exist.  Both Evert Stenlund and Dave Langers then showed that omitting an elevator from a perfect f((s+1)<sup>2</sup>&ndash;(s+1)+1,s) building along with all floors that it visits constructs a perfect f(s<sup>2</sup>+s,s) building.<p>
 
 Dave Langers noticed that if there are perfect f(d,s) and f(e,s) and these numbers are coprime, then there is some perfect f(c,s) = f(d,s) f(e,s).  Therefore if there is a perfect building with a prime p number of floors, there is a prefect building with p<sup>n</sup> floors for any number n.<p>
 

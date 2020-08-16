@@ -8,9 +8,9 @@ This month we investigate three problems involving products.<p>
 
 What about other bases?  What about non-rectangular grids?  What if each entry in the grid is k digits?<p><hr>
 
-<font size=+2>2.</font> Suppose k, m, and n are positive integers.  If we group the integers 1 through mn into m groups of n and multiply the numbers in each group, how close can the sum of k of these products be to the sum of the other m-k products?  For which k, m, and n can we achieve equality?  If not, how close can we get?<p><hr>
+<font size=+2>2.</font> Suppose k, m, and n are positive integers.  If we group the integers 1 through mn into m groups of n and multiply the numbers in each group, how close can the sum of k of these products be to the sum of the other m&ndash;k products?  For which k, m, and n can we achieve equality?  If not, how close can we get?<p><hr>
 
-<font size=+2>3.</font> For which integers n > 1 and m does the expression P = x<sup>n</sup> + x<sup>n-1</sup> + <sup>. . .</sup> + x<sup>2</sup> + x + m factor over the integers?  What infinite families are there?  Can you find any other polynomials of this form that factor over the integers without a linear factor, other than the ones below?<p>
+<font size=+2>3.</font> For which integers n > 1 and m does the expression P = x<sup>n</sup> + x<sup>n&ndash;1</sup> + <sup>. . .</sup> + x<sup>2</sup> + x + m factor over the integers?  What infinite families are there?  Can you find any other polynomials of this form that factor over the integers without a linear factor, other than the ones below?<p>
 
 <P><hr color=black><p><center><h1>ANSWERS</h1></center>
 
@@ -25,45 +25,35 @@ What about other bases?  What about non-rectangular grids?  What if each entry i
 
 <table align=center border=2 bgcolor=FFFFDD cellpadding=10><tr><td>
 <center><font size=+2>2 &times; 4</font><pre>
-1485   1584   1768   2368   2376
-1584   1485   2835   1743   1323
-
-2496   2736   2835   3828   5767
-2365   1281   1155   1798   3339
+1485   1584   1768   2368   2376   2496   2736   2835   3828   5767
+1584   1485   2835   1743   1323   2365   1281   1155   1798   3339
 </pre></center>
 </td></tr></table><p>
 
 <table align=center border=2 bgcolor=FFFFDD cellpadding=10><tr><td>
 <center><font size=+2>3 &times; 3</font><pre>
-114   117   118   118   119   124   124   126   128
-287   473   468   858   291   426   596   464   363
-325   328   385   245   648   285   285   414   646
+114   117   118   118   119   124   124   126   128   132   133
+287   473   468   858   291   426   596   464   363   426   597
+325   328   385   245   648   285   285   414   646   214   288
 
-132   133   133   147   164   216   216   216   232
-426   597   774   561   852   319   322   567   621
-214   288   212   624   366   273   261   225   126
+133   147   164   216   216   216   232   234   234   246   323
+774   561   852   319   322   567   621   441   846   561   429
+212   624   366   273   261   225   126   336   228   525   216
 
-234   234   246   323   324   342   342   342   357
-441   846   561   429   418   528   684   742   671
-336   228   525   216   264   235   183   148   624
+324   342   342   342   357   357   429   452   459   524   528
+418   528   684   742   671   836   738   982   891   364   442
+264   235   183   148   624   525   344   146   648   328   475
 
-357   429   452   459   524   528   532   533   722
-836   738   982   891   364   442   522   663   468
-525   344   146   648   328   475   144   198   168
-
-819   842   844   846   917   918   918   954      
-896   526   926   936   339   552   588   642      
-222   213   223   323   311   238   295   364      
+532   533   722   819   842   844   846   917   918   918   954
+522   663   468   896   526   926   936   339   552   588   642
+144   198   168   222   213   223   323   311   238   295   364    
 </pre></center>
 </td></tr></table><p>
 
 <table align=center border=2 bgcolor=FFFFDD cellpadding=10><tr><td>
 <center><font size=+2>2 &times; 5</font><pre>
-25758   27594   27783   34596   35856
-14931   13794   11715   12138   14384
-
-56576   58548   63984   83776   96558
-14235   13612   11468   12798   16575
+25758   27594   27783   34596   35856   56576   58548   63984   83776   96558
+14931   13794   11715   12138   14384   14235   13612   11468   12798   16575
 </pre></center>
 </td></tr></table><p>
 
@@ -95,17 +85,13 @@ Here are the small multiplicative grids in other small bases:<p>
 2772   4366   4378   5454   5676   8545
 1124   1643   2855   1145   3122   1573
 
-125   125   125   127   127   147   147   164   214
-327   372   423   351   677   615   732   873   645
-421   416   325   552   416   578   514   376   126
+125   125   125   127   127   147   147   164   214   227   236   268   314
+327   372   423   351   677   615   732   873   645   516   783   772   428
+421   416   325   552   416   578   514   376   126   358   367   746   154
 
-227   236   268   314   317   318   325   332   335
-516   783   772   428   376   336   565   512   673
-358   367   746   154   388   372   286   142   325
-
-448   456   516   626   628   633   754   846      
-578   862   325   428   818   831   683   712      
-748   436   261   372   252   134   376   372      
+317   318   325   332   335   448   456   516   626   628   633   754   846
+376   336   565   512   673   578   862   325   428   818   831   683   712
+388   372   286   142   325   748   436   261   372   252   134   376   372
 
 13488   13776   68468
 11846   12655   25186
@@ -140,13 +126,9 @@ Here are the small multiplicative grids in other small bases:<p>
 366   2256   2525
 543   1452   1155
 
-114   114   125   213   215   216
-223   246   353   316   255   265
-263   312   426   143   366   444
-
-236   422   426   426   624      
-434   514   534   624   426      
-523   112   312   252   252      
+114   114   125   213   215   216   236   422   426   426   624
+223   246   353   316   255   265   434   514   534   624   426
+263   312   426   143   366   444   523   112   312   252   252
 
 16665   22566
 31365   16665
@@ -542,7 +524,7 @@ Bryce Herdt, noted that sometimes we can do better with mn consecutive positive 
 <hr><font size=+2>3.</font> Here is what is known about the factorability of P = x<sup>n</sup> + x<sup>n-1</sup> + <sup>. . .</sup> + x<sup>2</sup> + x + m:<p>
 
 
-When m = &ndash; (k<sup>n</sup> + k<sup>n-1</sup> + <sup>. . .</sup> + k<sup>2</sup> + k), then there is a linear factor (x &ndash; k) of P.<p>
+When m = &ndash; (k<sup>n</sup> + k<sup>n&ndash;1</sup> + <sup>. . .</sup> + k<sup>2</sup> + k), then there is a linear factor (x &ndash; k) of P.<p>
 
 As special cases of this:<p>
 
@@ -565,5 +547,5 @@ Here are the known exceptional cases:<p>
 <tr align=center><td>x<sup>5</sup> + x<sup>4</sup> + x<sup>3</sup> + x<sup>2</sup> + x &ndash; 55 = (x<sup>2</sup> &ndash; x + 5)(x<sup>3</sup> + 2x<sup>3</sup> &ndash; 2x &ndash; 11)
 </table><p>
 
-Victor Miller gave this analysis: Consider a monic polynomial to have unknown coefficients, and use long division to find a factor with degree k with constant remainder m.  This gives k-1 equations in k unknowns, so there is some space curve that the coefficients satisfy.  If this is of genus > 1, by Falting's Theorem it will have only a finite number of rational points on the curve.  If this has genus 1, it might have an inifinite number of rational points, and if it has genus 0, it definitely does.  He calculates the curve has genus 0 for n=4 and k=2, genus 1 for n=5 and k=2, genus 2 for n=6 and k=2, genus 4 for n=6 and k=3, genus 4 for n=7 and k=2, and genus 11 for n=7 and k=3.<p>
+Victor Miller gave this analysis: Consider a monic polynomial to have unknown coefficients, and use long division to find a factor with degree k with constant remainder m.  This gives k&ndash;1 equations in k unknowns, so there is some space curve that the coefficients satisfy.  If this is of genus > 1, by Falting's Theorem it will have only a finite number of rational points on the curve.  If this has genus 1, it might have an infinite number of rational points, and if it has genus 0, it definitely does.  He calculates the curve has genus 0 for n=4 and k=2, genus 1 for n=5 and k=2, genus 2 for n=6 and k=2, genus 4 for n=6 and k=3, genus 4 for n=7 and k=2, and genus 11 for n=7 and k=3.<p>
 <HR><p>If you can extend any of these results, please <a href="mailto:erichfriedman68@gmail.com">e-mail</a> me.  Click <a href="https://erich-friedman.github.io/mathmagic/">here</a> to go back to Math Magic.  <font size=-1>Last updated 8/1/09.<font></BODY></HTML>
