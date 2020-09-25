@@ -1,0 +1,191 @@
+3 players and 6 games: 928/2187
+
+C plays B
+if C wins
+  C plays A
+  if C wins
+    B plays A
+    if B wins
+      C plays B
+      if C wins
+        B plays A
+        if B wins
+          C plays B
+          if C wins, guess A < B < C
+          else if B wins, guess A < B < C
+        else if A wins
+          A plays B
+          if A wins, guess B < A < C
+          else if B wins, guess A < B < C
+      else if B wins
+        C plays B
+        if C wins
+          C plays B
+          if C wins, guess A < B < C
+          else if B wins, guess A < B < C
+        else if B wins
+          B plays C
+          if B wins, guess A < C < B
+          else if C wins, guess A < B < C
+    else if A wins
+      C plays A
+      if C wins
+        A plays B
+        if A wins
+          C plays A
+          if C wins, guess B < A < C
+          else if A wins, guess B < A < C
+        else if B wins
+          B plays A
+          if B wins, guess A < B < C
+          else if A wins, guess B < A < C
+      else if A wins
+        C plays A
+        if C wins
+          C plays A
+          if C wins, guess B < A < C
+          else if A wins, guess B < A < C
+        else if A wins
+          C plays B
+          if C wins, guess B < C < A
+          else if B wins, guess B < C < A
+  else if A wins
+    C plays B
+    if C wins
+      C plays A
+      if C wins
+        C plays A
+        if C wins
+          A plays B
+          if A wins, guess B < A < C
+          else if B wins, guess A < B < C
+        else if A wins
+          C plays A
+          if C wins, guess B < A < C
+          else if A wins, guess B < C < A
+      else if A wins
+        C plays B
+        if C wins
+          A plays C
+          if A wins, guess B < C < A
+          else if C wins, guess B < A < C
+        else if B wins
+          C plays B
+          if C wins, guess B < C < A
+          else if B wins, guess C < B < A
+    else if B wins
+      B plays C
+      if B wins
+        B plays A
+        if B wins
+          A plays C
+          if A wins, guess C < A < B
+          else if C wins, guess A < C < B
+        else if A wins
+          B plays C
+          if B wins, guess C < B < A
+          else if C wins, guess B < C < A
+      else if C wins
+        C plays B
+        if C wins
+          C plays A
+          if C wins, guess B < A < C
+          else if A wins, guess B < C < A
+        else if B wins
+          B plays C
+          if B wins, guess C < A < B
+          else if C wins, guess B < C < A
+else if B wins
+  A plays C
+  if A wins
+    B plays A
+    if B wins
+      A plays C
+      if A wins
+        B plays A
+        if B wins
+          A plays C
+          if A wins, guess C < A < B
+          else if C wins, guess C < A < B
+        else if A wins
+          A plays B
+          if A wins, guess C < B < A
+          else if B wins, guess C < A < B
+      else if C wins
+        C plays A
+        if C wins
+          B plays C
+          if B wins, guess A < C < B
+          else if C wins, guess A < B < C
+        else if A wins
+          A plays C
+          if A wins, guess C < A < B
+          else if C wins, guess A < C < B
+    else if A wins
+      B plays C
+      if B wins
+        A plays B
+        if A wins
+          B plays C
+          if B wins, guess C < B < A
+          else if C wins, guess C < B < A
+        else if B wins
+          B plays A
+          if B wins, guess C < A < B
+          else if A wins, guess C < B < A
+      else if C wins
+        C plays B
+        if C wins
+          C plays B
+          if C wins, guess B < C < A
+          else if B wins, guess B < C < A
+        else if B wins
+          B plays C
+          if B wins, guess C < B < A
+          else if C wins, guess B < C < A
+  else if C wins
+    B plays C
+    if B wins
+      C plays A
+      if C wins
+        B plays C
+        if B wins
+          C plays A
+          if C wins, guess A < C < B
+          else if A wins, guess C < A < B
+        else if C wins
+          C plays B
+          if C wins, guess A < B < C
+          else if B wins, guess A < C < B
+      else if A wins
+        A plays C
+        if A wins
+          B plays A
+          if B wins, guess C < A < B
+          else if A wins, guess C < B < A
+        else if C wins
+          C plays A
+          if C wins, guess A < C < B
+          else if A wins, guess C < A < B
+    else if C wins
+      C plays B
+      if C wins
+        B plays A
+        if B wins
+          C plays B
+          if C wins, guess A < B < C
+          else if B wins, guess A < B < C
+        else if A wins
+          C plays A
+          if C wins, guess B < A < C
+          else if A wins, guess B < A < C
+      else if B wins
+        B plays C
+        if B wins
+          C plays A
+          if C wins, guess A < C < B
+          else if A wins, guess C < A < B
+        else if C wins
+          C plays B
+          if C wins, guess A < B < C
+          else if B wins, guess A < C < B

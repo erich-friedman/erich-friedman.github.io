@@ -1,0 +1,511 @@
+4 players and 7 games: 1136/6561
+
+D plays C
+if D wins
+  D plays A
+  if D wins
+    A plays C
+    if A wins
+      A plays B
+      if A wins
+        D plays A
+        if D wins
+          B plays C
+          if B wins
+            A plays B
+            if A wins
+              The order is: C < B < A < D
+            else if B wins
+              The order is: C < A < B < D
+          else if C wins
+            C plays B
+            if C wins
+              The order is: B < C < A < D
+            else if B wins
+              The order is: C < B < A < D
+        else if A wins
+          B plays C
+          if B wins
+            D plays B
+            if D wins
+              The order is: C < B < D < A
+            else if B wins
+              The order is: C < D < B < A
+          else if C wins
+            C plays B
+            if C wins
+              The order is: B < C < D < A
+            else if B wins
+              The order is: C < B < D < A
+      else if B wins
+        D plays B
+        if D wins
+          B plays A
+          if B wins
+            A plays C
+            if A wins
+              The order is: C < A < B < D
+            else if C wins
+              The order is: A < C < B < D
+          else if A wins
+            B plays C
+            if B wins
+              The order is: C < B < A < D
+            else if C wins
+              The order is: B < C < A < D
+        else if B wins
+          B plays D
+          if B wins
+            D plays A
+            if D wins
+              The order is: C < A < D < B
+            else if A wins
+              The order is: C < D < A < B
+          else if D wins
+            D plays B
+            if D wins
+              The order is: C < A < B < D
+            else if B wins
+              The order is: C < A < D < B
+    else if C wins
+      B plays C
+      if B wins
+        C plays A
+        if C wins
+          D plays B
+          if D wins
+            B plays C
+            if B wins
+              The order is: A < C < B < D
+            else if C wins
+              The order is: A < B < C < D
+          else if B wins
+            D plays C
+            if D wins
+              The order is: A < C < D < B
+            else if C wins
+              The order is: A < D < C < B
+        else if A wins
+          D plays B
+          if D wins
+            B plays A
+            if B wins
+              The order is: C < A < B < D
+            else if A wins
+              The order is: C < B < A < D
+          else if B wins
+            B plays D
+            if B wins
+              The order is: C < A < D < B
+            else if D wins
+              The order is: C < A < B < D
+      else if C wins
+        B plays A
+        if B wins
+          C plays B
+          if C wins
+            D plays C
+            if D wins
+              The order is: A < B < C < D
+            else if C wins
+              The order is: A < B < D < C
+          else if B wins
+            D plays B
+            if D wins
+              The order is: A < C < B < D
+            else if B wins
+              The order is: A < C < D < B
+        else if A wins
+          D plays C
+          if D wins
+            C plays A
+            if C wins
+              The order is: B < A < C < D
+            else if A wins
+              The order is: B < C < A < D
+          else if C wins
+            C plays D
+            if C wins
+              The order is: B < A < D < C
+            else if D wins
+              The order is: B < A < C < D
+  else if A wins
+    B plays D
+    if B wins
+      D plays C
+      if D wins
+        A plays B
+        if A wins
+          B plays D
+          if B wins
+            D plays C
+            if D wins
+              The order is: C < D < B < A
+            else if C wins
+              The order is: D < C < B < A
+          else if D wins
+            B plays C
+            if B wins
+              The order is: C < B < D < A
+            else if C wins
+              The order is: B < C < D < A
+        else if B wins
+          A plays D
+          if A wins
+            B plays A
+            if B wins
+              The order is: C < D < A < B
+            else if A wins
+              The order is: C < D < B < A
+          else if D wins
+            B plays D
+            if B wins
+              The order is: C < A < D < B
+            else if D wins
+              The order is: C < A < B < D
+      else if C wins
+        A plays B
+        if A wins
+          B plays C
+          if B wins
+            C plays D
+            if C wins
+              The order is: D < C < B < A
+            else if D wins
+              The order is: C < D < B < A
+          else if C wins
+            B plays D
+            if B wins
+              The order is: D < B < C < A
+            else if D wins
+              The order is: B < D < C < A
+        else if B wins
+          A plays C
+          if A wins
+            B plays A
+            if B wins
+              The order is: D < C < A < B
+            else if A wins
+              The order is: D < C < B < A
+          else if C wins
+            B plays C
+            if B wins
+              The order is: D < A < C < B
+            else if C wins
+              The order is: D < A < B < C
+    else if D wins
+      B plays C
+      if B wins
+        D plays B
+        if D wins
+          D plays A
+          if D wins
+            B plays C
+            if B wins
+              The order is: C < B < A < D
+            else if C wins
+              The order is: B < C < A < D
+          else if A wins
+            B plays C
+            if B wins
+              The order is: C < B < D < A
+            else if C wins
+              The order is: B < C < D < A
+        else if B wins
+          A plays B
+          if A wins
+            B plays D
+            if B wins
+              The order is: C < D < B < A
+            else if D wins
+              The order is: C < B < D < A
+          else if B wins
+            A plays D
+            if A wins
+              The order is: C < D < A < B
+            else if D wins
+              The order is: C < A < D < B
+      else if C wins
+        A plays D
+        if A wins
+          D plays C
+          if D wins
+            C plays B
+            if C wins
+              The order is: B < C < D < A
+            else if B wins
+              The order is: C < B < D < A
+          else if C wins
+            D plays B
+            if D wins
+              The order is: B < D < C < A
+            else if B wins
+              The order is: D < B < C < A
+        else if D wins
+          A plays C
+          if A wins
+            D plays A
+            if D wins
+              The order is: B < C < A < D
+            else if A wins
+              The order is: B < C < D < A
+          else if C wins
+            D plays C
+            if D wins
+              The order is: B < A < C < D
+            else if C wins
+              The order is: B < A < D < C
+else if C wins
+  C plays A
+  if C wins
+    A plays D
+    if A wins
+      A plays B
+      if A wins
+        C plays A
+        if C wins
+          B plays D
+          if B wins
+            A plays B
+            if A wins
+              The order is: D < B < A < C
+            else if B wins
+              The order is: D < A < B < C
+          else if D wins
+            D plays B
+            if D wins
+              The order is: B < D < A < C
+            else if B wins
+              The order is: D < B < A < C
+        else if A wins
+          B plays D
+          if B wins
+            C plays B
+            if C wins
+              The order is: D < B < C < A
+            else if B wins
+              The order is: D < C < B < A
+          else if D wins
+            D plays B
+            if D wins
+              The order is: B < D < C < A
+            else if B wins
+              The order is: D < B < C < A
+      else if B wins
+        C plays B
+        if C wins
+          B plays A
+          if B wins
+            A plays D
+            if A wins
+              The order is: D < A < B < C
+            else if D wins
+              The order is: A < D < B < C
+          else if A wins
+            B plays D
+            if B wins
+              The order is: D < B < A < C
+            else if D wins
+              The order is: B < D < A < C
+        else if B wins
+          B plays C
+          if B wins
+            C plays A
+            if C wins
+              The order is: D < A < C < B
+            else if A wins
+              The order is: D < C < A < B
+          else if C wins
+            C plays B
+            if C wins
+              The order is: D < A < B < C
+            else if B wins
+              The order is: D < A < C < B
+    else if D wins
+      B plays D
+      if B wins
+        D plays A
+        if D wins
+          C plays B
+          if C wins
+            B plays D
+            if B wins
+              The order is: A < D < B < C
+            else if D wins
+              The order is: A < B < D < C
+          else if B wins
+            C plays D
+            if C wins
+              The order is: A < D < C < B
+            else if D wins
+              The order is: A < C < D < B
+        else if A wins
+          C plays B
+          if C wins
+            B plays A
+            if B wins
+              The order is: D < A < B < C
+            else if A wins
+              The order is: D < B < A < C
+          else if B wins
+            B plays C
+            if B wins
+              The order is: D < A < C < B
+            else if C wins
+              The order is: D < A < B < C
+      else if D wins
+        B plays A
+        if B wins
+          D plays B
+          if D wins
+            D plays C
+            if D wins
+              The order is: A < B < C < D
+            else if C wins
+              The order is: A < B < D < C
+          else if B wins
+            C plays B
+            if C wins
+              The order is: A < D < B < C
+            else if B wins
+              The order is: A < D < C < B
+        else if A wins
+          C plays D
+          if C wins
+            D plays A
+            if D wins
+              The order is: B < A < D < C
+            else if A wins
+              The order is: B < D < A < C
+          else if D wins
+            D plays C
+            if D wins
+              The order is: B < A < C < D
+            else if C wins
+              The order is: B < A < D < C
+  else if A wins
+    B plays C
+    if B wins
+      D plays C
+      if D wins
+        A plays B
+        if A wins
+          B plays D
+          if B wins
+            D plays C
+            if D wins
+              The order is: C < D < B < A
+            else if C wins
+              The order is: D < C < B < A
+          else if D wins
+            B plays C
+            if B wins
+              The order is: C < B < D < A
+            else if C wins
+              The order is: B < C < D < A
+        else if B wins
+          A plays D
+          if A wins
+            B plays A
+            if B wins
+              The order is: C < D < A < B
+            else if A wins
+              The order is: C < D < B < A
+          else if D wins
+            B plays D
+            if B wins
+              The order is: C < A < D < B
+            else if D wins
+              The order is: C < A < B < D
+      else if C wins
+        A plays B
+        if A wins
+          B plays C
+          if B wins
+            C plays D
+            if C wins
+              The order is: D < C < B < A
+            else if D wins
+              The order is: C < D < B < A
+          else if C wins
+            B plays D
+            if B wins
+              The order is: D < B < C < A
+            else if D wins
+              The order is: B < D < C < A
+        else if B wins
+          A plays C
+          if A wins
+            B plays A
+            if B wins
+              The order is: D < C < A < B
+            else if A wins
+              The order is: D < C < B < A
+          else if C wins
+            B plays C
+            if B wins
+              The order is: D < A < C < B
+            else if C wins
+              The order is: D < A < B < C
+    else if C wins
+      B plays D
+      if B wins
+        C plays B
+        if C wins
+          C plays A
+          if C wins
+            B plays D
+            if B wins
+              The order is: D < B < A < C
+            else if D wins
+              The order is: B < D < A < C
+          else if A wins
+            B plays D
+            if B wins
+              The order is: D < B < C < A
+            else if D wins
+              The order is: B < D < C < A
+        else if B wins
+          A plays B
+          if A wins
+            B plays C
+            if B wins
+              The order is: D < C < B < A
+            else if C wins
+              The order is: D < B < C < A
+          else if B wins
+            A plays C
+            if A wins
+              The order is: D < C < A < B
+            else if C wins
+              The order is: D < A < C < B
+      else if D wins
+        A plays C
+        if A wins
+          D plays C
+          if D wins
+            C plays B
+            if C wins
+              The order is: B < C < D < A
+            else if B wins
+              The order is: C < B < D < A
+          else if C wins
+            D plays B
+            if D wins
+              The order is: B < D < C < A
+            else if B wins
+              The order is: D < B < C < A
+        else if C wins
+          A plays D
+          if A wins
+            C plays A
+            if C wins
+              The order is: B < D < A < C
+            else if A wins
+              The order is: B < D < C < A
+          else if D wins
+            C plays D
+            if C wins
+              The order is: B < A < D < C
+            else if D wins
+              The order is: B < A < C < D
