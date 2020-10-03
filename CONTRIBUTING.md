@@ -6,3 +6,5 @@ I forked Erich Friedman's repository strictly only for the What's Special About 
 * Pull requests pertaining to best practices for repositories, such as excluding files that are specific to a particular operating system.
 
 I make no guarantee whatsoever that Erich Friedman will even consider the changes you or I or anyone else proposes.
+
+Also be aware that this is a large repository, adding up to several megabytes.
