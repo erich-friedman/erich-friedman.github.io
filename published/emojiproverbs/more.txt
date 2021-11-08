@@ -1,0 +1,80 @@
+<TD><font size=+2>1.</font> 
+<img SRC="4.png" align=center height=40> 
+<img SRC="runner.png" align=center height=40> 
+<TD><font size=+2>3.</font> 
+<img SRC="air.png" align=center height=40><img SRC="o.png" align=center height=40><img SRC="star.png" align=center height=40><TD><font size=+2>4.</font> 
+<img SRC="air.png" align=center height=40>
+<img SRC="stream.png" align=center height=40> 
+<TD><font size=+2>5.</font> 
+<img SRC="alp.png" align=center height=40> 
+<img SRC="pine.png" align=center height=40><TD><font size=+2>12.</font> 
+<img SRC="black.png" align=center height=40>
+<img SRC="wood.png" align=center height=40>
+<TD><font size=+2>18.</font> 
+<img SRC="mountain.png" align=center height=40><img SRC="mountain.png" align=center height=40><TD><font size=+2>19.</font> 
+<img SRC="truck1.png" align=center height=40><img SRC="truck2.png" align=center height=40><TD><font size=+2>21.</font> 
+<img SRC="ok.png" align=center height=40>
+<img SRC="left.png" align=center height=40> 
+<img SRC="man.png" align=center height=40>
+<TD><font size=+2>22.</font> 
+<img SRC="100.png" align=center height=40>
+<img SRC="day.png" align=center height=40>
+<TD><font size=+2>27.</font> 
+<img SRC="club.png" align=center height=40>
+<img SRC="man.png" align=center height=40>
+<TD><font size=+2>32.</font> 
+<img SRC="cross.png" align=center height=40> 
+<img SRC="fire.png" align=center height=40>
+<TD><font size=+2>37.</font> 
+<img SRC="day.png" align=center height=40> 
+<img SRC="note.png" align=center height=40><img SRC="a.png" align=center height=40>
+<TD><font size=+2>43.</font> 
+<img SRC="continental.png" align=center height=40><img SRC="left.png" align=center height=40><TD><font size=+2>44.</font> 
+<img SRC="euro.png" align=center height=40> 
+<img SRC="truck2.png" align=center height=40> 
+<TD><font size=+2>47.</font> 
+<img SRC="5.png" align=center height=40>
+<img SRC="avenue.png" align=center height=40>
+<TD><font size=+2>48.</font> 
+<img SRC="fire.png" align=center height=40>
+<img SRC="bird.png" align=center height=40>
+<TD><font size=+2>55.</font> 
+<img SRC="man.png" align=center height=40>
+<img SRC="bow.png" align=center height=40>
+<TD><font size=+2>68.</font> 
+<img SRC="new.png" align=center height=40> 
+<img SRC="port.png" align=center height=40>
+<TD><font size=+2>70.</font> 
+<img SRC="stream.png" align=center height=40><img SRC="avenue.png" align=center height=40>
+<TD><font size=+2>71.</font> 
+<img SRC="pass.png" align=center height=40><img SRC="sat.png" align=center height=40>
+<TD><font size=+2>72.</font> 
+<img SRC="pass.png" align=center height=40><img SRC="port.png" align=center height=40>
+<TD><font size=+2>78.</font> 
+<img SRC="ram.png" align=center height=40>
+<img SRC="battery.png" align=center height=40><TD><font size=+2>79.5.</font> 
+<img SRC="ram.png" align=center height=40>
+<img SRC="page.png" align=center height=40>
+<TD><font size=+2>82.5.</font> 
+<img SRC="santa.png" align=center height=40>
+<img SRC="cruise.png" align=center height=40>
+<TD><font size=+2>94.</font> 
+<img SRC="sun.png" align=center height=40><img SRC="bird.png" align=center height=40><TD><font size=+2>95.</font> 
+<img SRC="sun.png" align=center height=40><img SRC="dance.png" align=center height=40>
+<TD><font size=+2>96.</font> 
+<img SRC="sun.png" align=center height=40><img SRC="fire.png" align=center height=40>
+<TD><font size=+2>99.</font> 
+<img SRC="bolt.png" align=center height=40><img SRC="thunder.png" align=center height=40><img SRC="bird.png" align=center height=40>
+<TD><font size=+2>100.</font> 
+<img SRC="city.png" align=center height=40><img SRC="car.png" align=center height=40>
+<TD><font size=+2>106.</font> 
+<img SRC="air.png" align=center height=40><img SRC="star.png" align=center height=40>
+
+
+
+
+
+
+
+
+
