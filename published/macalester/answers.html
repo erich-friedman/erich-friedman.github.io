@@ -64,4 +64,19 @@ So the probability that the best players wins the tournament described is (5/9)(
 Place coins labeled 1, 2, ..., 17 in one pan and 19, 20,...,25 in the other.  The two weights are 153 and 154. Bob knows that 17 coins will weigh at least 153 ounces.  The only way to get six coins that weigh more than 153 is to use 19 through 25. These total 154 so the 17 coins weigh 153 and therefore must be 1 through 17.  So Bob learns that the missing coin, labeled 18, weighs 18 ounces.
 
 <p><hr>
+
+<font size=+3 color=brown>8.</font><p>
+
+The #2 seed has to beat two lesser teams to be in the finals, and then will face the #1 seed with probability p<sup>2</sup> (and win that game with probability 1&ndash;p) and a lesser team with probability (1&ndash;p<sup>2</sup>) (and win that game with probability p).  Thus the probability that the #2 seed wins the tournament is p<sup>2</sup>[(p^2 (1&ndash;p) + (1&ndash;p<sup>2</sup>) p) ].  By taking a derivative and setting to 0, this is maximized when p=(2+&radic;34)/10 &approx; .783.<p>
+
+Similarly, the probabilities the other seeds win the tournament are:<br>
+P(#3 wins)=p (2 p (1&ndash;p)) [p<sup>2</sup> (1&ndash;p) + (1&ndash;p<sup>2</sup>) p], maximized at at p=(1+&radic;17)/8 &approx; .640<br>
+P(#4 wins)=p (2 p (1&ndash;p)) [p<sup>2</sup> (1&ndash;p) + 4 p<sup>2</sup> (1&ndash;p)<sup>2</sup> + p (1&ndash;p)<sup>2</sup>], maximized at p &approx; .584<br>
+P(#5 wins)=(1&ndash;p) [2 p (1&ndash;p)) (p<sup>2</sup> (1&ndash;p) + 4 p<sup>2</sup>) (1&ndash;p)<sup>2</sup> + p (1&ndash;p)<sup>2</sup>]<br>
+P(#6 wins)=(1&ndash;p) [2 p (1&ndash;p)) (p (1&ndash;p)<sup>2</sup> + (1&ndash;(1&ndash;p)<sup>2</sup>) (1&ndash;p)]<br>
+P(#7 wins)=(1&ndash;p)<sup>2</sup> [p (1&ndash;p)<sup>2</sup> + (1&ndash;(1&ndash;p)<sup>2</sup>) (1&ndash;p)]<br>
+P(#8 wins)=(1&ndash;p)<sup>3</sup>, all of which are maximized at the endpoint p=1/2.
+
+
+<p><hr>
 </body></html>
