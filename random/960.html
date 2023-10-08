@@ -1,0 +1,20 @@
+<!doctype html public "-//IETF//DTD HTML//EN"><HTML><HEAD><TITLE>Backgammon 960</TITLE></HEAD><CENTER><Font size=+4>Backgammon 960</font></center><hr>
+
+<font size=+2>
+In Backgammon 960, there are 960 equally likely starting arrangements for the checkers.  The rest of the game proceeds as normal.  Here is how to decide how to set up the pieces.<p>
+
+First, start with 1 checker on the 24-point and 8-point, and 3 checkers on the 6-point and 13-point.  The remaining 7 checkers will be placed randomly on these points.<p>
+
+We need to randomly pick 3 different numbers from 1 to 10.  To generate a number, first roll one die until you don't get a 6.  Then roll another die.  If it is high (4, 5, or 6), add 5 to the first die.  Repeat this process until 3 different numbers from 1 to 10 have been rolled.<p>
+
+The numbers you have generated partition the 7 other numbers 1 to 10 into 4 groups.  This is how many additional checkers are placed on the 6-, 8-, 13-, and 24- points respectively.  For example, if the 3 numbers randomly generated are 2, 7, and 10, then this partitions the other numbers into (1)(3 4 5 6)(8 9)(), and so 1 extra checker is placed on the 6-point, 4 extra checkers are placed on the 8-point, and the last 2 extra checkers are placed on the 13-point.<p>
+
+Finally, some of these stacks might be moved up one space.  Roll a die.  If it is high, then the stack on the 6-point starts on the 5-point instead.  Roll another die.  If it is high, then the stack on the 8-point starts on the 7-point instead.  Roll another die.  If it is high, then the stack on the 13-point starts on the 12-point instead.<p>
+
+Continuing the example above, if only the 13 point is shifted forward, then this would be the starting position:<p>
+
+<center><img src="start.png"></center>
+
+<hr>
+
+</html>
