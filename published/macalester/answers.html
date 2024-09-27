@@ -77,6 +77,18 @@ P(#6 wins)=(1&ndash;p) [2 p (1&ndash;p)) (p (1&ndash;p)<sup>2</sup> + (1&ndash;(
 P(#7 wins)=(1&ndash;p)<sup>2</sup> [p (1&ndash;p)<sup>2</sup> + (1&ndash;(1&ndash;p)<sup>2</sup>) (1&ndash;p)]<br>
 P(#8 wins)=(1&ndash;p)<sup>3</sup>, all of which are maximized at the endpoint p=1/2.
 
+<p><hr>
+
+<font size=+3 color=brown>9.</font><p>
+
+The best strategy is to put aside 5-of-a-kind or a full house (obviously), and if that is not possible put aside 2 pair, and if that is not possible put aside 1 pair, and if that is not possible put aside nothing.  In particular, you should never put aside 3-of-a-kind or 4-of-a-kind.<p>
+
+The expected waiting time for a geometric random variable is the reciprocal of the success probability.  This means the expected waiting time from 2 pair is 1/(2/6)=3 and the waiting time from either 3-of-a-kind or 4-of-a-kind is 1/(1/6)=6.<p>
+
+When 1 pair is set aside, of the 216 rolls, 1 leads to 5-of-a-kind, 20 lead to a full house, 60 lead to 2 pair, and the rest give no progress, so the expected value E solves the equation 
+<center>E = 1 + [ (21)(0) + (60)(3) + (135)(E) ] / 6<sup>3</sup>, or E = 44/9.</center><p>
+
+A similar calculation shows the expected waiting time E at the beginning of the game solves the equation <center>E = 1 + [ (306)(0) + (1800)(3) + (4950)(44/9) + (720)(E) ] / 6<sup>5</sup>, or E = 2336/441 ≈ 5.297.</center>
 
 <p><hr>
 </body></html>
