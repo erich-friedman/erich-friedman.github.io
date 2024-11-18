@@ -91,4 +91,50 @@ When 1 pair is set aside, of the 216 rolls, 1 leads to 5-of-a-kind, 20 lead to a
 A similar calculation shows the expected waiting time E at the beginning of the game solves the equation <center>E = 1 + [ (306)(0) + (1800)(3) + (4950)(44/9) + (720)(E) ] / 6<sup>5</sup>, or E = 2336/441 ≈ 5.297.</center>
 
 <p><hr>
+
+<font size=+3 color=brown>10.</font><p>
+
+The best strategy is to pick door #2 (or by symmetry, door #5).  
+If you are shown donkeys behind doors #3 and #4, you switch to door #5.  
+If you are shown donkeys behind doors #5 and #6, you switch to door #4.  
+If you are shown donkeys behind doors #4 and #5, you switch your pick to door #3 (or door #6).<p>
+
+Here are the possible initial choices of door, placements of the car and which doors might be shown to you.  To make the numbers nice, we assume there are 72 trials of each.<p>
+
+<pre>
+PICK DOOR #1 INITIALLY
+	2&3		3&4		4&5		5&6
+car 1	3		3		3		3
+car 2			4		4		4
+car 3					6		6
+car 4	6						6
+car 5	6		6		
+car 6	4		4		4
+
+PICK DOOR #2 INITIALLY
+	3&4		4&5		5&6
+car 1	4		4		4
+car 2	4		4		4
+car 3			6		6
+car 4	 				12
+car 5	12		
+car 6	6		6
+
+PICK DOOR #3 INITIALLY
+	1&2		4&5		5&6
+car 1	 		6		6
+car 2	 		6		6
+car 3	4		4		4
+car 4	6 				6
+car 5	12		
+car 6	6		6
+</pre>
+
+The column sums in the tables are the proportions that you are shown those pairs of donkeys.  The row of the largest entry in each column indicates your best strategy for switching.  This explain the switching strategy given above.  And we have:<p>
+
+<center>P(initial pick of door #1 wins) = (6+6+6+6) / 72 = 1/3,<br>
+P(initial pick of door #2 wins) = (12+6+12) / 72 = 5/12,<br>
+P(initial pick of door #3 wins) = (12+6+6) / 72 = 1/3,</center><p>
+
+confirming that door #2 is the best initial pick.
 </body></html>
