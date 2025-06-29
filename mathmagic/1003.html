@@ -4,9 +4,9 @@ What is the fewest number of powers of 2 that we can arrange in n columns, each 
 Joseph DeVincentis and Philippe Fondanaiche considered the problem of finding which sums are possible using distinct powers and n columns.  Here is what they found.<p>
 
 <p><CENTER><font size=+2>Possible Column Sums with n Columns</font></CENTER>
-<CENTER><TABLE border=1 bgcolor=FFFFDD cellpadding=5><TR align=center bgcolor=lightgreen><th>n</th><th>Column Sums</th></TR><TR align=center><th>1</th><td>1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15</td></TR><TR align=center><th>2</th><td>3, 4, 6, 7, 8, 9, 10, 11, 12, 14, 15, 18</td></TR><TR align=center><th>3</th><td>4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 20, 23</td></TR><TR align=center><th>4</th><td>5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24</td></TR><TR align=center><th>5</th><td>8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 32</td></TR><TR align=center><th>6</th><td>8, 10, 11, 12, 14, 15, 16, 18, 19, 20, 22, 23, 24, 28, 32, 44</td></TR></TABLE></CENTER><p>
+<CENTER><TABLE border=1 bgcolor=FFFFDD cellpadding=5><TR align=center bgcolor=lightgreen><th>n</th><th>Column Sums</th></TR><TR align=center><th>1</th><td>1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15</td></TR><TR align=center><th>2</th><td>3, 4, 6, 7, 8, 9, 10, 11, 12, 14, 15, 18</td></TR><TR align=center><th>3</th><td>4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 20, 23</td></TR><TR align=center><th>4</th><td>5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24</td></TR><TR align=center><th>5</th><td>8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 32</td></TR><TR align=center><th>6</th><td>7, 8, 10, 11, 12, 14, 15, 16, 18, 19, 20, 22, 23, 24, 28, 32, 44</td></TR></TABLE></CENTER><p>
 
-Jeremy Galvagni and Bill Clagett considered the values of <b>M(n,s)</b>, the the fewest number of powers of 2 that can be arranged in n columns with sum s.  Here is Bill's data:<p>
+Jeremy Galvagni and Bill Clagett considered the values of <b>M(n,s)</b>, the fewest number of powers of 2 that can be arranged in n columns with sum s.  Here is Bill's data:<p>
 <CENTER><font size=+2>Values of M(n,s)</font></CENTER><CENTER><table border=1 bgcolor=FFFFDD cellpadding=5>
 <tr bgcolor=lightgreen><th>n \ s</th><th>&nbsp;1</th><th>&nbsp;2</th><th>&nbsp;3</th><th>&nbsp;4</th><th>&nbsp;5</th><th>&nbsp;6</th><th>&nbsp;7</th><th>&nbsp;8</th><th>&nbsp;9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th><th>20</th></tr>
 <tr><th bgcolor=lightgreen>1</th><td>1<td>1<td>2<td>1<td>2<td>2<td>3<td>1<td>2<td>2<td>3<td>2<td>3<td>3<td>4<td>2<td>3<td>3<td>4<td>3
@@ -36,7 +36,7 @@ Jeremy Galvagni conjectured that M(n,s) &ge; n, and that M(n,s) is increasing in
 
 Jeremy Galvagni also conjectured that M(n,8s)=ns, but then he found a counterexample M(3,16)=5.  But he did manage to prove that M(an,s) &le; a M(n,s) by noting that we can repeat the pattern, and possibly do better.<p>
 
-Here are the smallest towers known that include given powers of 2:<p>
+Here are the smallest towers known that include a given power of 2:<p>
 
 <center><pre>
 1   2   4   8   16   32   64   128   256   512   1024   2048
